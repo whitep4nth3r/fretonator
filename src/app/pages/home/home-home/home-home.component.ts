@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { testFretMap as fretMap } from '../testFretMap';
-import { NoteSymbol } from './symbol-to-note-obj.pipe';
+import { NoteSymbol, Mode } from './symbol-to-note-obj.pipe';
 
 @Component({
   selector: 'app-home-home',
@@ -10,7 +10,7 @@ import { NoteSymbol } from './symbol-to-note-obj.pipe';
 export class HomeHomeComponent implements OnInit {
   fretMap = fretMap;
   note: NoteSymbol = NoteSymbol.c;
-  mode = 'ionian';
+  mode: Mode = Mode.ionian;
 
   ngOnInit(): void {}
 }
