@@ -1,3 +1,5 @@
+@import './styles/vars';
+
 :root {
   --background-color-base: #f9f9f9;
   --font-family-main: 'Montserrat', sans-serif;
@@ -29,8 +31,6 @@
   --font-weight-display: 500;
   --letter-spacing-display: 2px;
 }
-
-$grid-unit: 8 !default;
 
 body {
   margin: 0;
