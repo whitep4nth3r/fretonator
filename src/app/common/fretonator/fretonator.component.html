@@ -1,0 +1,51 @@
+<p>fretonator works!</p>
+
+<ng-template #string let-stringName="stringName" let-string="string">
+  <ng-container *ngFor="let fret of frets">
+    <div
+      class="fretboard__cell"
+      [class.fretboard__cell--string]="fret === 0"
+      [class.fretboard__cell--selected]="fretMap | getNoteFromMap: string:fret"
+      [attr.data-string-name]="fret === 0 ? stringName : null"
+      [attr.data-string]="string"
+      [attr.data-fret]="fret"
+      [attr.data-display-note]="fretMap | getNoteFromMap: string:fret"
+    ></div>
+  </ng-container>
+</ng-template>
+
+<div class="fretboard__container">
+  <div data-fretboard class="fretboard">
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'e', string: 'E' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'B', string: 'B' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'G', string: 'G' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'D', string: 'D' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'A', string: 'A' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'E', string: 'E' }"
+    ></ng-container>
+  </div>
+</div>
+
+<pre>{{ fretMap | json }}</pre>

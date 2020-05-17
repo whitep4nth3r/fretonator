@@ -1,0 +1,19 @@
+@import '../../../styles/functions';
+
+.header {
+  background-color: var(--black);
+  height: pxToRem(160);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.header__siteLogo {
+  text-align: center;
+}
+
+.header__siteLogoImage {
+  height: 100%;
+  object-fit: contain;
+}
