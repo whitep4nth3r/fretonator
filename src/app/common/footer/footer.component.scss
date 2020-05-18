@@ -1,0 +1,21 @@
+@import '../../../styles/vars';
+@import '../../../styles/functions';
+
+.footer {
+  background-color: var(--peach);
+  height: pxToRem(80);
+  padding: pxToRem($grid-unit * 2);
+  box-sizing: border-box;
+  margin-top: pxToRem($grid-unit * 10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__copyright {
+  color: var(--black);
+  font-size: pxToRem(12);
+  letter-spacing: var(--letter-spacing-display);
+  font-weight: var(--font-weight-display);
+  text-transform: uppercase;
+}
