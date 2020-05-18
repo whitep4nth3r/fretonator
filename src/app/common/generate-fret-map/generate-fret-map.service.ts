@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NoteObject, Fret } from '../../util/types';
+import { NoteObject, Fret, ModeMap } from '../../util/types';
 import {
   Octave,
   ModePatterns,
@@ -164,9 +164,9 @@ export class GenerateFretMapService {
 
   generateMode = (startingNote: NoteObject, mode: string) => {
     let currentNote = startingNote;
-    let newNote;
+    let newNote: NoteObject;
 
-    const newMode = [];
+    const newMode: ModeMap = [];
     newMode.push(currentNote);
 
     const modePattern = ModePatterns[mode];
