@@ -1,6 +1,8 @@
 {
   "name": "fretonator",
-  "version": "0.0.0",
+  "description": "The missing tool for guitarists that want to learn modes and scale theory.",
+  "homepage": "https://github.com/salmawhitepanther/fretonator",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
