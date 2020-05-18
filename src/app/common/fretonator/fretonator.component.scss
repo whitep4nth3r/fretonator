@@ -33,6 +33,16 @@
     font-size: pxToRem(16);
   }
 
+  &:nth-child(-n + 13):after {
+    transform: translate(0, 20%); //I feel like this is a weird number
+  }
+
+  &:nth-last-child(-n + 13):after {
+    bottom: 0;
+    top: unset;
+    transform: translate(0, 50%); //also weird
+  }
+
   &.fretboard__cell--selected {
     &:after {
       content: attr(data-display-note);
