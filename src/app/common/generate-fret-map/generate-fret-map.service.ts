@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { NoteObject, Fret } from '../../util/types';
-import { Octave, ModePatterns, NoteToStringAndFretMap } from '../../util/constants';
+import {
+  Octave,
+  ModePatterns,
+  NoteToStringAndFretMap,
+} from '../../util/constants';
 
 @Injectable({
   providedIn: 'root',
@@ -67,11 +71,17 @@ export class GenerateFretMapService {
       doubleSharp: false,
     };
 
-    nextNote.name = currentNote.name === 'g' ? 'a' : Octave[Octave.indexOf(currentNote.name) + 1];
+    nextNote.name =
+      currentNote.name === 'g'
+        ? 'a'
+        : Octave[Octave.indexOf(currentNote.name) + 1];
 
     switch (interval) {
       case 1:
-        if (this.isNatural(currentNote, 'b') || this.isNatural(currentNote, 'e')) {
+        if (
+          this.isNatural(currentNote, 'b') ||
+          this.isNatural(currentNote, 'e')
+        ) {
           return nextNote;
         }
 
@@ -104,7 +114,10 @@ export class GenerateFretMapService {
         }
         break;
       case 2:
-        if (this.isNatural(currentNote, 'b') || this.isNatural(currentNote, 'e')) {
+        if (
+          this.isNatural(currentNote, 'b') ||
+          this.isNatural(currentNote, 'e')
+        ) {
           nextNote.sharp = true;
           return nextNote;
         }
@@ -183,7 +196,7 @@ export class GenerateFretMapService {
     }
 
     if (note.doubleFlat) {
-      return note.name.toUpperCase() + '♭♭';
+      return note.name.toUpperCase() + '𝄫';
     }
 
     return note.name.toUpperCase();
@@ -213,12 +226,15 @@ export class GenerateFretMapService {
     const modeMap = this.generateMode(startingNote, mode);
 
     modeMap.forEach((NoteObject) => {
-      NoteObject.displayName = this.convertNoteObjectToHumanReadable(NoteObject);
+      NoteObject.displayName = this.convertNoteObjectToHumanReadable(
+        NoteObject
+      );
     });
 
     const newFretMap = modeMap
       .map((note) => {
-        const newNotes = NoteToStringAndFretMap[this.convertNoteToFretMapKey(note)];
+        const newNotes =
+          NoteToStringAndFretMap[this.convertNoteToFretMapKey(note)];
 
         newNotes.forEach((thisNote: NoteObject) => {
           thisNote.displayName = note.displayName;
