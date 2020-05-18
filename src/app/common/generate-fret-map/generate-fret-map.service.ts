@@ -149,10 +149,8 @@ export class GenerateFretMapService {
         }
         break;
       case 3:
-        if (
-          this.isNatural(currentNote, currentNote.name) ||
-          this.isFlat(currentNote, currentNote.name)
-        ) {
+        if (this.isNatural(currentNote, currentNote.name)) {
+          //I removed the isFlat here to fix C harmonic minor - need to check the tests
           nextNote.sharp = true;
           return nextNote;
         }
