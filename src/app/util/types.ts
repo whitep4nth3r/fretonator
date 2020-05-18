@@ -44,3 +44,9 @@ export interface NoteObject {
   doubleSharp: boolean;
   displayName?: string;
 }
+
+export type ModeMap = NoteObject[];
+
+export type ScaleNote = string;
+
+export type Scale = ScaleNote[];

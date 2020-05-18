@@ -37,4 +37,7 @@
   </div>
 </div>
 
-<app-fretonator [fretMap]="note | symbolToNoteObj | generateFretMap: mode"></app-fretonator>
+<app-fretonator
+  [scale]="note | symbolToNoteObj | getScaleFromModeMap: mode"
+  [fretMap]="note | symbolToNoteObj | generateFretMap: mode"
+></app-fretonator>

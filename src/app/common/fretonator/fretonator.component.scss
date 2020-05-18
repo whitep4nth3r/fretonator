@@ -1,3 +1,6 @@
+@import "../../../styles/vars";
+@import "../../../styles/functions";
+
 .fretboard__container {
   margin-top: 50px;
   max-width: 980px;
@@ -41,7 +44,7 @@
   height: var(--string-height-base);
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 50%;
     left: calc(var(--fret-width-base) * -1);
@@ -81,24 +84,24 @@
     }
   }
 
-  &[data-string='G'][data-fret='3'],
-  &[data-string='G'][data-fret='5'],
-  &[data-string='G'][data-fret='7'],
-  &[data-string='G'][data-fret='9'],
-  &[data-string='B'][data-fret='12'],
-  &[data-string='D'][data-fret='12'] {
+  &[data-string="G"][data-fret="3"],
+  &[data-string="G"][data-fret="5"],
+  &[data-string="G"][data-fret="7"],
+  &[data-string="G"][data-fret="9"],
+  &[data-string="B"][data-fret="12"],
+  &[data-string="D"][data-fret="12"] {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%2373eedc' /%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center calc(var(--string-height-base) - 15px);
     background-size: 30px 30px;
   }
 
-  &[data-string='D'][data-fret='3'],
-  &[data-string='D'][data-fret='5'],
-  &[data-string='D'][data-fret='7'],
-  &[data-string='D'][data-fret='9'],
-  &[data-string='G'][data-fret='12'],
-  &[data-string='A'][data-fret='12'] {
+  &[data-string="D"][data-fret="3"],
+  &[data-string="D"][data-fret="5"],
+  &[data-string="D"][data-fret="7"],
+  &[data-string="D"][data-fret="9"],
+  &[data-string="G"][data-fret="12"],
+  &[data-string="A"][data-fret="12"] {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%2373eedc' /%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center -15px;
@@ -139,4 +142,21 @@
     text-align: center;
     font-size: 80px;
   }
+}
+
+.scaleDisplay {
+  text-align: center;
+  margin-top: pxToRem($grid-unit * 8);
+}
+
+.scaleDisplay__title {
+  letter-spacing: var(--letter-spacing-display);
+  font-size: pxToRem(14);
+  text-transform: uppercase;
+  margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.scaleDisplay__note {
+  display: inline;
+  font-size: pxToRem(32);
 }

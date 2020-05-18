@@ -3,11 +3,13 @@
     <div
       class="fretboard__cell"
       [class.fretboard__cell--string]="fret === 0"
-      [class.fretboard__cell--selected]="fretMap | getNoteFromMap: string:fret"
+      [class.fretboard__cell--selected]="
+        fretMap | getNoteFromFretMap: string:fret
+      "
       [attr.data-string-name]="fret === 0 ? stringName : null"
       [attr.data-string]="string"
       [attr.data-fret]="fret"
-      [attr.data-display-note]="fretMap | getNoteFromMap: string:fret"
+      [attr.data-display-note]="fretMap | getNoteFromFretMap: string:fret"
     ></div>
   </ng-container>
 </ng-template>
@@ -44,4 +46,11 @@
       [ngTemplateOutletContext]="{ stringName: 'E', string: 'E' }"
     ></ng-container>
   </div>
+</div>
+
+<div class="scaleDisplay">
+  <h4 class="scaleDisplay__title">Scale:</h4>
+  <p class="scaleDisplay__note" *ngFor="let scaleNote of scale; let i = index">
+    {{ scaleNote }}<span *ngIf="i < scale.length - 1">, </span>
+  </p>
 </div>

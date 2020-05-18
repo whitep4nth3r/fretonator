@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FretonatorComponent } from './fretonator.component';
-import { GetNoteFromMapPipe } from './get-note-from-map.pipe';
+import { GetNoteFromFretMapPipe } from './get-note-from-fret-map.pipe';
 
 @NgModule({
-  declarations: [FretonatorComponent, GetNoteFromMapPipe],
+  declarations: [FretonatorComponent, GetNoteFromFretMapPipe],
   imports: [CommonModule],
   exports: [FretonatorComponent],
 })
