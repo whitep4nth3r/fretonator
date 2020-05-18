@@ -16,7 +16,6 @@ export class GetScaleFromModeMapPipe implements PipeTransform {
         this.generateFretMapService.convertNoteObjectToHumanReadable(note)
       );
     }
-    console.log(returnScale);
 
     return returnScale;
   }
