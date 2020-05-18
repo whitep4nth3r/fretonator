@@ -1,4 +1,4 @@
-@import '../../../styles/functions';
+@import "../../../styles/functions";
 
 .header {
   background-color: var(--black);
@@ -11,6 +11,7 @@
 
 .header__siteLogo {
   text-align: center;
+  width: 100%;
 }
 
 .header__siteLogoImage {
