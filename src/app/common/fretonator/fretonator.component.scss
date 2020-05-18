@@ -147,6 +147,7 @@
 .scaleDisplay {
   text-align: center;
   margin-top: pxToRem($grid-unit * 8);
+  height: pxToRem($grid-unit * 10);
 }
 
 .scaleDisplay__title {
