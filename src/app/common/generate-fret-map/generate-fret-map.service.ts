@@ -171,8 +171,8 @@ export class GenerateFretMapService {
 
     const modePattern = ModePatterns[mode];
 
-    for (let i = 0; i < modePattern.length - 1; i++) {
-      newNote = this.generateNextNote(currentNote, modePattern[i]);
+    for (let interval of modePattern) {
+      newNote = this.generateNextNote(currentNote, interval);
       newMode.push(newNote);
       currentNote = newNote;
     }
