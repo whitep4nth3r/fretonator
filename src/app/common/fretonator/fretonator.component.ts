@@ -1,12 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
-export interface fret {
-  string: string;
-  fret: number;
-  displayName: string;
-}
-
-export type FretMap = fret[];
+import { FretMap } from '../../util/types';
 
 @Component({
   selector: 'app-fretonator',

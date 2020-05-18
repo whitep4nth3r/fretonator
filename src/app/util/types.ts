@@ -1,4 +1,10 @@
-import { Pipe, PipeTransform } from '@angular/core';
+export interface Fret {
+  string: string;
+  fret: number;
+  displayName: string;
+}
+
+export type FretMap = Fret[];
 
 export enum NoteSymbol {
   aFlat = 'a_',
@@ -37,19 +43,4 @@ export interface NoteObject {
   doubleFlat: boolean;
   doubleSharp: boolean;
   displayName?: string;
-}
-
-@Pipe({
-  name: 'symbolToNoteObj',
-})
-export class SymbolToNoteObjPipe implements PipeTransform {
-  transform(note: NoteSymbol): NoteObject {
-    return {
-      name: note.charAt(0),
-      flat: note.charAt(1) === '_',
-      sharp: note.charAt(1) === '#',
-      doubleFlat: false,
-      doubleSharp: false,
-    };
-  }
 }

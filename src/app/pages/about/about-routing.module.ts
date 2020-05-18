@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Route } from '@angular/router';
-import { AboutHomeComponent } from './about-home/about-home.component';
+import { AboutIndexComponent } from './about-index/about-index.component';
 
 const home: Route = {
   path: '',
   pathMatch: 'full',
-  component: AboutHomeComponent,
+  component: AboutIndexComponent,
 };
 
 const routes: Routes = [home];

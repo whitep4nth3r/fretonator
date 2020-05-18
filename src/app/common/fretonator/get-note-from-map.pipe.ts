@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { FretMap } from './fretonator.component';
+import { FretMap } from '../../util/types';
 
 @Pipe({
   name: 'getNoteFromMap',

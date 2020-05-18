@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { HomeRoutingModule } from './home-routing.module';
-import { HomeHomeComponent } from './home-home/home-home.component';
+import { HomeIndexComponent } from './home-index/home-index.component';
 import { FretonatorModule } from 'src/app/common/fretonator/fretonator.module';
-import { SymbolToNoteObjPipe } from './home-home/symbol-to-note-obj.pipe';
-import { GenerateFretMapPipe } from './home-home/generate-fret-map.pipe';
+import { SymbolToNoteObjPipe } from './home-index/symbol-to-note-obj.pipe';
+import { GenerateFretMapPipe } from './home-index/generate-fret-map.pipe';
 
 @NgModule({
-  declarations: [HomeHomeComponent, SymbolToNoteObjPipe, GenerateFretMapPipe],
+  declarations: [HomeIndexComponent, SymbolToNoteObjPipe, GenerateFretMapPipe],
   imports: [CommonModule, FormsModule, HomeRoutingModule, FretonatorModule],
 })
 export class HomeModule {}
