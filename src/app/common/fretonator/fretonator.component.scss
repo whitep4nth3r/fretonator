@@ -2,7 +2,7 @@
 @import "../../../styles/functions";
 
 .fretboard__container {
-  margin-top: 50px;
+  margin-top: pxToRem($grid-unit * 12);
   max-width: 980px;
   margin-left: auto;
   margin-right: auto;
