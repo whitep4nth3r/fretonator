@@ -39,7 +39,6 @@
 
   &:nth-last-child(-n + 13):after {
     bottom: 0;
-    top: unset;
     transform: translate(0, 50%); //also weird
   }
 
