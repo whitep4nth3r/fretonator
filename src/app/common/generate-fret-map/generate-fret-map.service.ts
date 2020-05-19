@@ -160,7 +160,7 @@ export class GenerateFretMapService {
     }
 
     return nextNote;
-  };
+  };  
 
   generateMode = (startingNote: NoteObject, mode: string) => {
     let currentNote = startingNote;
