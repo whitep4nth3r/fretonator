@@ -395,6 +395,26 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
       doubleSharp: false,
     });
   });
+
+  it('returns an aug 2nd higher when the current note is f sharp', () => {
+    const result = service.generateNextNote(
+      {
+        name: 'f',
+        sharp: true,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false,
+      },
+      3
+    );
+    expect(result).toEqual({
+      name: 'g',
+      sharp: false,
+      flat: false,
+      doubleFlat: false,
+      doubleSharp: true,
+    });
+  });
 });
 
 describe('GenerateFretMapService:isNatural', () => {
