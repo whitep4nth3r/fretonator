@@ -149,22 +149,36 @@ export class GenerateFretMapService {
         }
         break;
       case 3:
-        if (this.isNatural(currentNote, currentNote.name)) {
-          //I removed the isFlat here to fix C harmonic minor - need to check the tests
+        if (this.isFlat(currentNote, 'e') || this.isFlat(currentNote, 'b')) {
           nextNote.sharp = true;
           return nextNote;
         }
+
+        if (this.isFlat(currentNote, currentNote.name)) {
+          return nextNote;
+        }
+
+        if (this.isNatural(currentNote, currentNote.name)) {
+          nextNote.sharp = true;
+          return nextNote;
+        }
+
+        if (this.isSharp(currentNote, currentNote.name)) {
+          nextNote.doubleSharp = true;
+          return nextNote;
+        }
+
         break;
       default:
         throw new Error('No interval provided!');
     }
 
     return nextNote;
-  };  
+  };
 
   generateMode = (startingNote: NoteObject, mode: string) => {
     let currentNote = startingNote;
-    let newNote: NoteObject;
+    let newNote;
 
     const newMode: ModeMap = [];
     newMode.push(currentNote);
