@@ -12,13 +12,12 @@ const about: Route = {
   loadChildren: () => import('./pages/about/about.module').then((mod) => mod.AboutModule),
 };
 
-// always make this the last one
-const other: Route = {
+const notFound: Route = {
   path: '**',
-  redirectTo: '/',
+  loadChildren: () => import('./pages/not-found/not-found.module').then((mod) => mod.NotFoundModule),
 };
 
-const routes: Routes = [home, about, other];
+const routes: Routes = [home, about, notFound];
 
 @NgModule({
   imports: [

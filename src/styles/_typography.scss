@@ -14,3 +14,17 @@
     line-height: pxToRem(44);
   }
 }
+
+@mixin font_medium() {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-normal);
+  font-size: pxToRem(24);
+  line-height: pxToRem(38);
+}
+
+@mixin font_bodyCopy {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-normal);
+  font-size: pxToRem(18);
+  line-height: pxToRem(30);
+}
