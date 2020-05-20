@@ -1,0 +1,8 @@
+<div class="videoLoader">
+    <app-video-server *ngIf="!isBrowser"
+                      [youTubeId]="youTubeId"
+                      class="videoLoader__content"></app-video-server>
+    <app-video-browser *ngIf="isBrowser"
+                       [youTubeId]="youTubeId"
+                      class="videoLoader__content"></app-video-browser>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NoteSymbol, Mode } from '../../../util/types';
+import { Mode, NoteSymbol } from '../../../util/types';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -10,6 +10,7 @@ import { Title } from '@angular/platform-browser';
 export class HomeIndexComponent implements OnInit {
   note: NoteSymbol = NoteSymbol.c;
   mode: Mode = Mode.ionian;
+  youTubeId: string = '2YBtspm8j8M';
 
   constructor(private title: Title) {}
 

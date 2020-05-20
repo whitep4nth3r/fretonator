@@ -8,6 +8,7 @@ import { FretonatorModule } from 'src/app/common/fretonator/fretonator.module';
 import { SymbolToNoteObjPipe } from './home-index/symbol-to-note-obj.pipe';
 import { GenerateFretMapPipe } from './home-index/generate-fret-map.pipe';
 import { GetScaleFromModeMapPipe } from './home-index/get-scale-from-mode-map.pipe';
+import { VideoLoaderModule } from '../../common/video-loader/video-loader.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,8 @@ import { GetScaleFromModeMapPipe } from './home-index/get-scale-from-mode-map.pi
     FormsModule,
     HomeRoutingModule,
     FretonatorModule,
+    VideoLoaderModule,
   ],
 })
-export class HomeModule {}
+export class HomeModule {
+}

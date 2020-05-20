@@ -1,5 +1,3 @@
-import { GenerateFretMapService } from './generate-fret-map.service';
-
 export const cIonianMode = [
   {
     name: 'c',

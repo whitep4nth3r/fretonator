@@ -1,5 +1,5 @@
-import {Pipe, PipeTransform} from '@angular/core';
-import {Fret, FretMap} from '../../util/types';
+import { Pipe, PipeTransform } from '@angular/core';
+import { Fret, FretMap } from '../../util/types';
 
 @Pipe({
   name: 'getFretFromFretMap',

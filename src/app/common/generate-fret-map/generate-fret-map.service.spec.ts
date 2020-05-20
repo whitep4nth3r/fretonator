@@ -1,18 +1,18 @@
 import { TestBed } from '@angular/core/testing';
 
 import {
+  aFlatPhrygian,
+  aSharpMajor,
+  bFlatLocrian,
+  bFlatPhrygian,
+  cHarmonicMinor,
+  cIonianFretMappings,
   cIonianMode,
+  cPhrygianMode,
   dDorianMode,
   dHarmonicMinor,
-  cHarmonicMinor,
-  fSharpHarmonicMinor,
-  cPhrygianMode,
-  bFlatPhrygian,
-  aFlatPhrygian,
-  bFlatLocrian,
-  aSharpMajor,
-  cIonianFretMappings,
   dIonianFretMappings,
+  fSharpHarmonicMinor,
 } from './generate-fret-map.service.testConstants';
 
 import { GenerateFretMapService } from './generate-fret-map.service';

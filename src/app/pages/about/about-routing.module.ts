@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, Route } from '@angular/router';
+import { Route, RouterModule, Routes } from '@angular/router';
 import { AboutIndexComponent } from './about-index/about-index.component';
 
 const home: Route = {

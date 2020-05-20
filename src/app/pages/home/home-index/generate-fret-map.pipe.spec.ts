@@ -1,8 +1,8 @@
-import {TestBed} from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import {GenerateFretMapPipe} from './generate-fret-map.pipe';
-import {Mode} from '../../../util/types';
-import {GenerateFretMapService} from '../../../common/generate-fret-map/generate-fret-map.service';
+import { GenerateFretMapPipe } from './generate-fret-map.pipe';
+import { Mode } from '../../../util/types';
+import { GenerateFretMapService } from '../../../common/generate-fret-map/generate-fret-map.service';
 
 describe('GenerateFretMapPipe', () => {
 

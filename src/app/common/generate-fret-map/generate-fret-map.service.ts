@@ -1,11 +1,6 @@
-import {Injectable} from '@angular/core';
-import {NoteObject, Fret, ModeMap} from '../../util/types';
-import {
-  Octave,
-  ModePatterns,
-  NoteToStringAndFretMap,
-  ScaleDegrees,
-} from '../../util/constants';
+import { Injectable } from '@angular/core';
+import { Fret, ModeMap, NoteObject } from '../../util/types';
+import { ModePatterns, NoteToStringAndFretMap, Octave, ScaleDegrees } from '../../util/constants';
 
 @Injectable({
   providedIn: 'root',

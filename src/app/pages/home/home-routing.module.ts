@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Route, Routes, RouterModule } from '@angular/router';
+import { Route, RouterModule, Routes } from '@angular/router';
 import { HomeIndexComponent } from './home-index/home-index.component';
 
 const home: Route = {
