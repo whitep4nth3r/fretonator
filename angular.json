@@ -168,6 +168,14 @@
           "configurations": {
             "production": {}
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/fretonator/browser",
+            "netlifyToken": "",
+            "siteId": "87d9f619-8f13-47e8-99cc-5167db7294a6"
+          }
         }
       }
     }
