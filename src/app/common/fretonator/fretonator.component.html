@@ -9,6 +9,7 @@
       [attr.data-string-name]="fret === 0 ? stringName : null"
       [attr.data-string]="string"
       [attr.data-fret]="fret"
+      [attr.data-degree]="fretMap | getScaleDegreeFromFretMap: string:fret"
       [attr.data-display-note]="fretMap | getNoteFromFretMap: string:fret"
     ></div>
   </ng-container>
@@ -48,8 +49,21 @@
   </div>
 </div>
 
+<div class="degrees">
+  <h4 class="degreesDisplay__title">Scale degrees</h4>
+  <div class="degreesDisplay">
+    <span class="degreesDisplay__degree degreesDisplay__degree--tonic">1</span>
+    <span class="degreesDisplay__degree degreesDisplay__degree--mediant"
+      >3</span
+    >
+    <span class="degreesDisplay__degree degreesDisplay__degree--dominant"
+      >5</span
+    >
+  </div>
+</div>
+
 <div class="scaleDisplay">
-  <h4 class="scaleDisplay__title">Scale:</h4>
+  <h4 class="scaleDisplay__title">Scale</h4>
   <div class="scaleDisplay__notes">
     <p
       class="scaleDisplay__note"

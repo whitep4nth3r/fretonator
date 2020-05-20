@@ -272,3 +272,13 @@ export const ModePatterns = {
 };
 
 export const Octave = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+
+export const ScaleDegrees = [
+  'tonic',
+  'supertonic',
+  'mediant',
+  'subdominant',
+  'dominant',
+  'submediant',
+  'leadingTone',
+];

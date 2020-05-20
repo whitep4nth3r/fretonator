@@ -4,6 +4,7 @@ import {
   Octave,
   ModePatterns,
   NoteToStringAndFretMap,
+  ScaleDegrees,
 } from '../../util/constants';
 
 @Injectable({
@@ -237,10 +238,11 @@ export class GenerateFretMapService {
   getFretMapping(startingNote: NoteObject, mode: string) {
     const modeMap = this.generateMode(startingNote, mode);
 
-    modeMap.forEach((NoteObject) => {
+    modeMap.forEach((NoteObject, index) => {
       NoteObject.displayName = this.convertNoteObjectToHumanReadable(
         NoteObject
       );
+      NoteObject.degree = ScaleDegrees[index];
     });
 
     const newFretMap = modeMap
@@ -250,6 +252,7 @@ export class GenerateFretMapService {
 
         newNotes.forEach((thisNote: NoteObject) => {
           thisNote.displayName = note.displayName;
+          thisNote.degree = note.degree;
         });
 
         return newNotes;
