@@ -1,19 +1,5 @@
 import { GenerateFretMapService } from './generate-fret-map.service';
 
-export const GenerateFretMapServiceMock: GenerateFretMapService = {
-  isNatural: jest.fn(),
-  isSharp: jest.fn(),
-  isFlat: jest.fn(),
-  isDoubleFlat: jest.fn(),
-  isDoubleSharp: jest.fn(),
-  generateNextNote: jest.fn(),
-  generateMode: jest.fn(),
-  convertNoteObjectToHumanReadable: jest.fn(),
-  convertNoteToFretMapKey: jest.fn(),
-  getFretMapping: jest.fn(),
-  sortFretMapping: jest.fn(),
-};
-
 export const cIonianMode = [
   {
     name: 'c',
