@@ -1,20 +1,35 @@
+import {TestBed} from '@angular/core/testing';
+
 import {GenerateFretMapPipe} from './generate-fret-map.pipe';
 import {Mode} from '../../../util/types';
-import {GenerateFretMapServiceMock} from '../../../common/generate-fret-map/generate-fret-map.service.testConstants';
+import {GenerateFretMapService} from '../../../common/generate-fret-map/generate-fret-map.service';
 
 describe('GenerateFretMapPipe', () => {
 
+  let pipe: GenerateFretMapPipe;
+
+  beforeEach(() => {
+    const service = TestBed.inject(GenerateFretMapService);
+    pipe = new GenerateFretMapPipe(service);
+  });
+
   it('create an instance', () => {
-    const pipe = new GenerateFretMapPipe(GenerateFretMapServiceMock);
     expect(pipe).toBeTruthy();
   });
 
   it('calls GenerateFretMapService.getFretMapping', () => {
+    const spy = spyOn(pipe.generateFretMapService, 'getFretMapping');
 
-    const pipe = new GenerateFretMapPipe(GenerateFretMapServiceMock);
-    pipe.transform({name: 'c', flat: false, sharp: false, doubleFlat: false, doubleSharp: false}, Mode.ionian);
+    const note = {
+      name: 'c',
+      flat: false,
+      sharp: false,
+      doubleFlat: false,
+      doubleSharp: false,
+    };
 
-    expect(GenerateFretMapServiceMock.getFretMapping).toHaveBeenCalled();
+    pipe.transform(note, 'ionian' as Mode);
+    expect(spy).toHaveBeenCalledWith(note, 'ionian');
   });
 
 });
