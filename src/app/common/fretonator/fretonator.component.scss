@@ -1,8 +1,13 @@
+@import "../../../styles/vars";
+@import "../../../styles/functions";
+
 .fretboard__container {
-  margin-top: 50px;
+  margin-top: pxToRem($grid-unit * 12);
   max-width: 980px;
   margin-left: auto;
   margin-right: auto;
+  padding: pxToRem($grid-unit * 4);
+  overflow-x: auto;
 }
 
 .fretboard {
@@ -28,6 +33,15 @@
     font-size: pxToRem(16);
   }
 
+  &:nth-child(-n + 13):after {
+    transform: translate(0, 20%); //I feel like this is a weird number
+  }
+
+  &:nth-last-child(-n + 13):after {
+    bottom: 0;
+    transform: translate(0, 50%); //also weird
+  }
+
   &.fretboard__cell--selected {
     &:after {
       content: attr(data-display-note);
@@ -41,7 +55,7 @@
   height: var(--string-height-base);
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 50%;
     left: calc(var(--fret-width-base) * -1);
@@ -81,25 +95,25 @@
     }
   }
 
-  &[data-string='G'][data-fret='3'],
-  &[data-string='G'][data-fret='5'],
-  &[data-string='G'][data-fret='7'],
-  &[data-string='G'][data-fret='9'],
-  &[data-string='B'][data-fret='12'],
-  &[data-string='D'][data-fret='12'] {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%2373eedc' /%3E%3C/svg%3E");
+  &[data-string="G"][data-fret="3"],
+  &[data-string="G"][data-fret="5"],
+  &[data-string="G"][data-fret="7"],
+  &[data-string="G"][data-fret="9"],
+  &[data-string="B"][data-fret="12"],
+  &[data-string="D"][data-fret="12"] {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23dbdae0' /%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center calc(var(--string-height-base) - 15px);
     background-size: 30px 30px;
   }
 
-  &[data-string='D'][data-fret='3'],
-  &[data-string='D'][data-fret='5'],
-  &[data-string='D'][data-fret='7'],
-  &[data-string='D'][data-fret='9'],
-  &[data-string='G'][data-fret='12'],
-  &[data-string='A'][data-fret='12'] {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%2373eedc' /%3E%3C/svg%3E");
+  &[data-string="D"][data-fret="3"],
+  &[data-string="D"][data-fret="5"],
+  &[data-string="D"][data-fret="7"],
+  &[data-string="D"][data-fret="9"],
+  &[data-string="G"][data-fret="12"],
+  &[data-string="A"][data-fret="12"] {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23dbdae0' /%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center -15px;
     background-size: 30px 30px;
@@ -139,4 +153,93 @@
     text-align: center;
     font-size: 80px;
   }
+
+  &[data-degree="tonic"] {
+    &:after {
+      background-color: var(--note-bg-tonic);
+      color: var(--note-color-tonic);
+    }
+  }
+
+  &[data-degree="mediant"] {
+    &:after {
+      background-color: var(--note-bg-mediant);
+      color: var(--note-color-mediant);
+    }
+  }
+
+  &[data-degree="dominant"] {
+    &:after {
+      background-color: var(--note-bg-dominant);
+      color: var(--note-color-dominant);
+    }
+  }
+}
+
+.degrees {
+  margin-left: auto;
+  margin-right: auto;
+  width: pxToRem($grid-unit * 20);
+  margin-top: pxToRem($grid-unit * 8);
+}
+
+.degreesDisplay__title {
+  text-align: center;
+  letter-spacing: var(--letter-spacing-display);
+  font-size: pxToRem(14);
+  text-transform: uppercase;
+  margin-bottom: pxToRem($grid-unit * 2);
+  display: flex;
+  flex-direction: column;
+}
+
+.degreesDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.degreesDisplay__degree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: pxToRem(16);
+  height: pxToRem($grid-unit * 4);
+  width: pxToRem($grid-unit * 4);
+  border-radius: 50%;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+}
+
+.degreesDisplay__degree--tonic {
+  background-color: var(--note-bg-tonic);
+  color: var(--note-color-tonic);
+}
+
+.degreesDisplay__degree--mediant {
+  background-color: var(--note-bg-mediant);
+  color: var(--note-color-mediant);
+}
+
+.degreesDisplay__degree--dominant {
+  background-color: var(--note-bg-dominant);
+  color: var(--note-color-dominant);
+}
+
+.scaleDisplay {
+  text-align: center;
+  margin-top: pxToRem($grid-unit * 8);
+  height: pxToRem($grid-unit * 10);
+}
+
+.scaleDisplay__title {
+  letter-spacing: var(--letter-spacing-display);
+  font-size: pxToRem(14);
+  text-transform: uppercase;
+  margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.scaleDisplay__note {
+  display: inline;
+  font-size: pxToRem(32);
 }

@@ -2,6 +2,7 @@ export interface Fret {
   string: string;
   fret: number;
   displayName: string;
+  degree: string;
 }
 
 export type FretMap = Fret[];
@@ -43,4 +44,11 @@ export interface NoteObject {
   doubleFlat: boolean;
   doubleSharp: boolean;
   displayName?: string;
+  degree?: string;
 }
+
+export type ModeMap = NoteObject[];
+
+export type ScaleNote = string;
+
+export type Scale = ScaleNote[];

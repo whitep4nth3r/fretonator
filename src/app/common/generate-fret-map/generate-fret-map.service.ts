@@ -1,12 +1,18 @@
-import { Injectable } from '@angular/core';
-import { NoteObject, Fret } from '../../util/types';
-import { Octave, ModePatterns, NoteToStringAndFretMap } from '../../util/constants';
+import {Injectable} from '@angular/core';
+import {NoteObject, Fret, ModeMap} from '../../util/types';
+import {
+  Octave,
+  ModePatterns,
+  NoteToStringAndFretMap,
+  ScaleDegrees,
+} from '../../util/constants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GenerateFretMapService {
-  constructor() {}
+  constructor() {
+  }
 
   isNatural = (note: NoteObject, noteName: string) => {
     return (
@@ -16,7 +22,7 @@ export class GenerateFretMapService {
       note.doubleFlat === false &&
       note.doubleSharp === false
     );
-  };
+  }
 
   isSharp = (note: NoteObject, noteName: string) => {
     return (
@@ -26,7 +32,7 @@ export class GenerateFretMapService {
       note.doubleFlat === false &&
       note.doubleSharp === false
     );
-  };
+  }
 
   isFlat = (note: NoteObject, noteName: string) => {
     return (
@@ -36,7 +42,7 @@ export class GenerateFretMapService {
       note.doubleFlat === false &&
       note.doubleSharp === false
     );
-  };
+  }
 
   isDoubleFlat = (note: NoteObject, noteName: string) => {
     return (
@@ -46,7 +52,7 @@ export class GenerateFretMapService {
       note.doubleFlat === true &&
       note.doubleSharp === false
     );
-  };
+  }
 
   isDoubleSharp = (note: NoteObject, noteName: string) => {
     return (
@@ -56,7 +62,7 @@ export class GenerateFretMapService {
       note.doubleFlat === false &&
       note.doubleSharp === true
     );
-  };
+  }
 
   generateNextNote = (currentNote: NoteObject, interval: number) => {
     const nextNote = {
@@ -67,11 +73,17 @@ export class GenerateFretMapService {
       doubleSharp: false,
     };
 
-    nextNote.name = currentNote.name === 'g' ? 'a' : Octave[Octave.indexOf(currentNote.name) + 1];
+    nextNote.name =
+      currentNote.name === 'g'
+        ? 'a'
+        : Octave[Octave.indexOf(currentNote.name) + 1];
 
     switch (interval) {
       case 1:
-        if (this.isNatural(currentNote, 'b') || this.isNatural(currentNote, 'e')) {
+        if (
+          this.isNatural(currentNote, 'b') ||
+          this.isNatural(currentNote, 'e')
+        ) {
           return nextNote;
         }
 
@@ -104,7 +116,10 @@ export class GenerateFretMapService {
         }
         break;
       case 2:
-        if (this.isNatural(currentNote, 'b') || this.isNatural(currentNote, 'e')) {
+        if (
+          this.isNatural(currentNote, 'b') ||
+          this.isNatural(currentNote, 'e')
+        ) {
           nextNote.sharp = true;
           return nextNote;
         }
@@ -136,26 +151,38 @@ export class GenerateFretMapService {
         }
         break;
       case 3:
-        if (
-          this.isNatural(currentNote, currentNote.name) ||
-          this.isFlat(currentNote, currentNote.name)
-        ) {
+        if (this.isFlat(currentNote, 'e') || this.isFlat(currentNote, 'b')) {
           nextNote.sharp = true;
           return nextNote;
         }
+
+        if (this.isFlat(currentNote, currentNote.name)) {
+          return nextNote;
+        }
+
+        if (this.isNatural(currentNote, currentNote.name)) {
+          nextNote.sharp = true;
+          return nextNote;
+        }
+
+        if (this.isSharp(currentNote, currentNote.name)) {
+          nextNote.doubleSharp = true;
+          return nextNote;
+        }
+
         break;
       default:
         throw new Error('No interval provided!');
     }
 
     return nextNote;
-  };
+  }
 
   generateMode = (startingNote: NoteObject, mode: string) => {
     let currentNote = startingNote;
     let newNote;
 
-    const newMode = [];
+    const newMode: ModeMap = [];
     newMode.push(currentNote);
 
     const modePattern = ModePatterns[mode];
@@ -167,7 +194,7 @@ export class GenerateFretMapService {
     }
 
     return newMode;
-  };
+  }
 
   convertNoteObjectToHumanReadable = (note: NoteObject) => {
     if (note.sharp) {
@@ -183,11 +210,11 @@ export class GenerateFretMapService {
     }
 
     if (note.doubleFlat) {
-      return note.name.toUpperCase() + '♭♭';
+      return note.name.toUpperCase() + '𝄫';
     }
 
     return note.name.toUpperCase();
-  };
+  }
 
   convertNoteToFretMapKey = (note: NoteObject) => {
     if (note.sharp) {
@@ -207,33 +234,30 @@ export class GenerateFretMapService {
     }
 
     return note.name;
-  };
+  }
 
   getFretMapping(startingNote: NoteObject, mode: string) {
-    const modeMap = this.generateMode(startingNote, mode);
+    const origModeMap = this.generateMode(startingNote, mode);
 
-    modeMap.forEach((NoteObject) => {
-      NoteObject.displayName = this.convertNoteObjectToHumanReadable(NoteObject);
-    });
+    const modeMap = origModeMap.map((noteObject, index) => ({
+      ...noteObject,
+      displayName: this.convertNoteObjectToHumanReadable(noteObject),
+      degree: ScaleDegrees[index],
+    }));
 
-    const newFretMap = modeMap
-      .map((note) => {
-        const newNotes = NoteToStringAndFretMap[this.convertNoteToFretMapKey(note)];
-
-        newNotes.forEach((thisNote: NoteObject) => {
-          thisNote.displayName = note.displayName;
-        });
-
-        return newNotes;
-      })
+    return modeMap
+      .map((note) =>
+        NoteToStringAndFretMap[this.convertNoteToFretMapKey(note)]
+          .map((thisNote: NoteObject) => ({
+            ...thisNote,
+            displayName: note.displayName,
+            degree: note.degree,
+          })))
       .flat()
-      .reduce((acc, curr) => {
-        return [...acc, curr];
-      }, [])
+      .reduce((acc, curr) => [...acc, curr], [])
       .filter((item) => !!item)
       .sort(this.sortFretMapping);
 
-    return newFretMap;
   }
 
   sortFretMapping = (current: Fret, next: Fret) => {
@@ -248,5 +272,5 @@ export class GenerateFretMapService {
     }
 
     return 0;
-  };
+  }
 }

@@ -1,5 +1,16 @@
 <header class="header">
-  <a routerLink="/" class="header__siteLogo"
-    ><img class="header__siteLogoImage" src="/assets/logo.png"
-  /></a>
+
+  <a [routerLink]="['/']" class="header__siteLogo">
+    <img class="header__siteLogoImage" src="/assets/logo.png" alt="Fretonator"/>
+  </a>
+
+  <ul class="header__links">
+    <li class="header__linksItem">
+      <a [routerLink]="['/', 'about']" class="header__linksItemLink">About</a>
+    </li>
+    <li class="header__linksItem">
+      <a [routerLink]="['/','contact']" class="header__linksItemLink">Contact</a>
+    </li>
+  </ul>
+
 </header>

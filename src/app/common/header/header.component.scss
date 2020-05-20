@@ -1,19 +1,56 @@
-@import '../../../styles/functions';
+@import "../../../styles/vars";
+@import "../../../styles/functions";
 
 .header {
   background-color: var(--black);
   height: pxToRem(160);
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
 }
 
 .header__siteLogo {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: pxToRem($grid-unit * 16);
 }
 
 .header__siteLogoImage {
   height: 100%;
   object-fit: contain;
+}
+
+.header__links {
+  list-style: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  height: pxToRem($grid-unit * 8);
+  text-align: center;
+}
+
+.header__linksItem {
+  display: inline-block;
+  padding-left: pxToRem($grid-unit);
+  padding-right: pxToRem($grid-unit);
+}
+
+.header__linksItemLink {
+  color: var(--peach);
+  font-size: pxToRem(14);
+  letter-spacing: var(--letter-spacing-display);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: var(--yellow);
+  }
 }
