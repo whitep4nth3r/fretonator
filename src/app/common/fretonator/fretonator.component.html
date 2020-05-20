@@ -65,11 +65,11 @@
 <div class="scaleDisplay">
   <h4 class="scaleDisplay__title">Scale</h4>
   <div class="scaleDisplay__notes">
-    <p
+    <h5
       class="scaleDisplay__note"
       *ngFor="let scaleNote of scale; let i = index"
     >
       {{ scaleNote }}<span *ngIf="i < scale.length - 1"> - </span>
-    </p>
+    </h5>
   </div>
 </div>
