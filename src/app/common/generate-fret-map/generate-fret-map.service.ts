@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { NoteObject, Fret, ModeMap } from '../../util/types';
+import {Injectable} from '@angular/core';
+import {NoteObject, Fret, ModeMap} from '../../util/types';
 import {
   Octave,
   ModePatterns,
@@ -11,7 +11,8 @@ import {
   providedIn: 'root',
 })
 export class GenerateFretMapService {
-  constructor() {}
+  constructor() {
+  }
 
   isNatural = (note: NoteObject, noteName: string) => {
     return (
@@ -236,35 +237,27 @@ export class GenerateFretMapService {
   }
 
   getFretMapping(startingNote: NoteObject, mode: string) {
-    const modeMap = this.generateMode(startingNote, mode);
+    const origModeMap = this.generateMode(startingNote, mode);
 
-    modeMap.forEach((NoteObject, index) => {
-      NoteObject.displayName = this.convertNoteObjectToHumanReadable(
-        NoteObject
-      );
-      NoteObject.degree = ScaleDegrees[index];
-    });
+    const modeMap = origModeMap.map((noteObject, index) => ({
+      ...noteObject,
+      displayName: this.convertNoteObjectToHumanReadable(noteObject),
+      degree: ScaleDegrees[index],
+    }));
 
-    const newFretMap = modeMap
-      .map((note) => {
-        const newNotes =
-          NoteToStringAndFretMap[this.convertNoteToFretMapKey(note)];
-
-        newNotes.forEach((thisNote: NoteObject) => {
-          thisNote.displayName = note.displayName;
-          thisNote.degree = note.degree;
-        });
-
-        return newNotes;
-      })
+    return modeMap
+      .map((note) =>
+        NoteToStringAndFretMap[this.convertNoteToFretMapKey(note)]
+          .map((thisNote: NoteObject) => ({
+            ...thisNote,
+            displayName: note.displayName,
+            degree: note.degree,
+          })))
       .flat()
-      .reduce((acc, curr) => {
-        return [...acc, curr];
-      }, [])
+      .reduce((acc, curr) => [...acc, curr], [])
       .filter((item) => !!item)
       .sort(this.sortFretMapping);
 
-    return newFretMap;
   }
 
   sortFretMapping = (current: Fret, next: Fret) => {
