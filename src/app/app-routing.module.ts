@@ -12,7 +12,7 @@ const about: Route = {
   loadChildren: () => import('./pages/about/about.module').then((mod) => mod.AboutModule),
 };
 
-//always make this the last one
+// always make this the last one
 const other: Route = {
   path: '**',
   redirectTo: '/',

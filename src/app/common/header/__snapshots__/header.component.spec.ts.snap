@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderComponent should match snapshot 1`] = `
+<app-header>
+  <header
+    class="header"
+  >
+    <a
+      class="header__siteLogo"
+      href="/"
+    >
+      <img
+        alt="Fretonator"
+        class="header__siteLogoImage"
+        src="/assets/logo.png"
+      />
+    </a>
+    <ul
+      class="header__links"
+    >
+      <li
+        class="header__linksItem"
+      >
+        <a
+          class="header__linksItemLink"
+          href="/about"
+        >
+          About
+        </a>
+      </li>
+      <li
+        class="header__linksItem"
+      >
+        <a
+          class="header__linksItemLink"
+          href="/contact"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+  </header>
+</app-header>
+`;

@@ -16,6 +16,11 @@ import { GetScaleFromModeMapPipe } from './home-index/get-scale-from-mode-map.pi
     GenerateFretMapPipe,
     GetScaleFromModeMapPipe,
   ],
-  imports: [CommonModule, FormsModule, HomeRoutingModule, FretonatorModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    HomeRoutingModule,
+    FretonatorModule,
+  ],
 })
 export class HomeModule {}
