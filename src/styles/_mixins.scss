@@ -1,9 +1,12 @@
-@import 'vars';
+@import './vars';
+@import './functions';
 
 @mixin content_wrapper {
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
+  padding-left: pxToRem($grid-unit * 3);
+  padding-right: pxToRem($grid-unit * 3);
 }
 
 @mixin focus_accessible($outline-offset: 0) {
