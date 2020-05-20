@@ -1,24 +1,24 @@
-// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-// import { AboutIndexComponent } from './about-index.component';
+import { AboutIndexComponent } from './about-index.component';
 
-// describe('AboutIndexComponent', () => {
-//   let component: AboutIndexComponent;
-//   let fixture: ComponentFixture<AboutIndexComponent>;
+describe('AboutIndexComponent', () => {
+  let component: AboutIndexComponent;
+  let fixture: ComponentFixture<AboutIndexComponent>;
 
-//   beforeEach(async(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [AboutIndexComponent],
-//     }).compileComponents();
-//   }));
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [AboutIndexComponent],
+    }).compileComponents();
+  }));
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(AboutIndexComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AboutIndexComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

@@ -13,7 +13,7 @@ export class HomeIndexComponent implements OnInit {
 
   constructor(private title: Title) {}
 
-  //to do meta stuff
+  // to do meta stuff
 
   ngOnInit(): void {
     this.title.setTitle('Welcome | Fretonator');

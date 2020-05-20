@@ -21,7 +21,7 @@ export class GenerateFretMapService {
       note.doubleFlat === false &&
       note.doubleSharp === false
     );
-  };
+  }
 
   isSharp = (note: NoteObject, noteName: string) => {
     return (
@@ -31,7 +31,7 @@ export class GenerateFretMapService {
       note.doubleFlat === false &&
       note.doubleSharp === false
     );
-  };
+  }
 
   isFlat = (note: NoteObject, noteName: string) => {
     return (
@@ -41,7 +41,7 @@ export class GenerateFretMapService {
       note.doubleFlat === false &&
       note.doubleSharp === false
     );
-  };
+  }
 
   isDoubleFlat = (note: NoteObject, noteName: string) => {
     return (
@@ -51,7 +51,7 @@ export class GenerateFretMapService {
       note.doubleFlat === true &&
       note.doubleSharp === false
     );
-  };
+  }
 
   isDoubleSharp = (note: NoteObject, noteName: string) => {
     return (
@@ -61,7 +61,7 @@ export class GenerateFretMapService {
       note.doubleFlat === false &&
       note.doubleSharp === true
     );
-  };
+  }
 
   generateNextNote = (currentNote: NoteObject, interval: number) => {
     const nextNote = {
@@ -175,7 +175,7 @@ export class GenerateFretMapService {
     }
 
     return nextNote;
-  };
+  }
 
   generateMode = (startingNote: NoteObject, mode: string) => {
     let currentNote = startingNote;
@@ -193,7 +193,7 @@ export class GenerateFretMapService {
     }
 
     return newMode;
-  };
+  }
 
   convertNoteObjectToHumanReadable = (note: NoteObject) => {
     if (note.sharp) {
@@ -213,7 +213,7 @@ export class GenerateFretMapService {
     }
 
     return note.name.toUpperCase();
-  };
+  }
 
   convertNoteToFretMapKey = (note: NoteObject) => {
     if (note.sharp) {
@@ -233,7 +233,7 @@ export class GenerateFretMapService {
     }
 
     return note.name;
-  };
+  }
 
   getFretMapping(startingNote: NoteObject, mode: string) {
     const modeMap = this.generateMode(startingNote, mode);
@@ -279,5 +279,5 @@ export class GenerateFretMapService {
     }
 
     return 0;
-  };
+  }
 }

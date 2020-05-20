@@ -1,24 +1,25 @@
-// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-// import { FretonatorComponent } from './fretonator.component';
+import { FretonatorComponent } from './fretonator.component';
+import {FretonatorModule} from './fretonator.module';
 
-// describe('FretonatorComponent', () => {
-//   let component: FretonatorComponent;
-//   let fixture: ComponentFixture<FretonatorComponent>;
+describe('FretonatorComponent', () => {
+  let component: FretonatorComponent;
+  let fixture: ComponentFixture<FretonatorComponent>;
 
-//   beforeEach(async(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [FretonatorComponent],
-//     }).compileComponents();
-//   }));
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [FretonatorModule]
+    }).compileComponents();
+  }));
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(FretonatorComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(FretonatorComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
+  xit('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

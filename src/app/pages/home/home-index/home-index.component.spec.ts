@@ -1,23 +1,23 @@
-// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-// import { HomeIndexComponent } from './home-index.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HomeIndexComponent } from './home-index.component';
 
-// describe('HomeIndexComponent', () => {
-//   let component: HomeIndexComponent;
-//   let fixture: ComponentFixture<HomeIndexComponent>;
+describe('HomeIndexComponent', () => {
+  let component: HomeIndexComponent;
+  let fixture: ComponentFixture<HomeIndexComponent>;
 
-//   beforeEach(async(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [HomeIndexComponent],
-//     }).compileComponents();
-//   }));
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [HomeIndexComponent],
+    }).compileComponents();
+  }));
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(HomeIndexComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(HomeIndexComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
+  xit('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
