@@ -1,5 +1,6 @@
-@import "../../../styles/vars";
-@import "../../../styles/functions";
+@import '../../../styles/vars';
+@import '../../../styles/functions';
+@import '../../../styles/mixins';
 
 .header {
   background-color: var(--black);
@@ -14,7 +15,6 @@
 .header__siteLogo {
   display: flex;
   flex-direction: column;
-  height: pxToRem($grid-unit * 16);
 }
 
 .header__siteLogoImage {
@@ -31,7 +31,8 @@
   margin: 0;
   padding-left: 0;
   padding-right: 0;
-  height: pxToRem($grid-unit * 8);
+  padding-top: pxToRem($grid-unit * 2);
+  padding-bottom: pxToRem($grid-unit * 2);
   text-align: center;
 }
 
@@ -48,6 +49,8 @@
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.2s ease-in-out;
+
+  @include focus_accessible(4px);
 
   &:hover,
   &:focus {

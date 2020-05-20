@@ -1,5 +1,6 @@
-@import "../../../styles/vars";
-@import "../../../styles/functions";
+@import '../../../styles/vars';
+@import '../../../styles/functions';
+@import '../../../styles/mixins';
 
 .footer {
   background-color: var(--peach);
@@ -29,4 +30,10 @@
   font-size: pxToRem(12);
   display: block;
   margin-bottom: pxToRem($grid-unit * 2);
+
+  @include focus_accessible(4px);
+
+  &:focus {
+    outline-color: var(--grey);
+  }
 }

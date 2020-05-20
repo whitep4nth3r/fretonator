@@ -1,0 +1,16 @@
+@import 'vars';
+
+@mixin content_wrapper {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin focus_accessible($outline-offset: 0) {
+  &:focus {
+    outline-width: 2px;
+    outline-color: var(--peach);
+    outline-style: solid;
+    outline-offset: $outline-offset;
+  }
+}
