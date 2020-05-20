@@ -14,7 +14,8 @@
     "dev:ssr": "ng run fretonator:serve-ssr",
     "serve:ssr": "node dist/fretonator/server/main.js",
     "build:ssr": "ng build --prod && ng run fretonator:server:production",
-    "prerender": "ng run fretonator:prerender"
+    "prerender": "ng run fretonator:prerender",
+    "prerender:app:build": "ng run fretonator:prerender --routesFile _routes.txt"
   },
   "private": true,
   "dependencies": {
