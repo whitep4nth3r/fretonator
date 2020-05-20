@@ -1,61 +1,44 @@
 <main>
   <div class="modeSelector">
     <div class="modeSelector__group">
-      <label
-        for="modeSelector-key"
-        class="modeSelector__label modeSelector__label--left"
-        >Key</label
-      >
-      <select
-        id="modeSelector-key"
-        class="modeSelector__select"
-        [(ngModel)]="note"
-      >
-        <optgroup>
-          <option value="a_">A&#9837;</option>
-          <option value="a">A</option>
-          <option value="a#">A#</option>
-        </optgroup>
-        <optgroup>
-          <option value="b_">B&#9837;</option>
-          <option value="b">B</option>
-        </optgroup>
-        <optgroup>
-          <option value="c">C</option>
-          <option value="c#">C#</option>
-        </optgroup>
-        <optgroup>
-          <option value="d_">D&#9837;</option>
-          <option value="d">D</option>
-          <option value="d#">D#</option>
-        </optgroup>
-        <optgroup>
-          <option value="e_">E&#9837;</option>
-          <option value="e">E</option>
-        </optgroup>
-        <optgroup>
-          <option value="f">F</option>
-          <option value="f#">F#</option>
-        </optgroup>
-        <optgroup>
-          <option value="g_">G&#9837;</option>
-          <option value="g">G</option>
-          <option value="g#">G#</option>
-        </optgroup>
+      <label for="modeSelector-key" class="modeSelector__label modeSelector__label--left">Key</label>
+      <select id="modeSelector-key" class="modeSelector__select" [(ngModel)]="note">
+        <option value="a_">A&#9837;</option>
+        <option value="a">A</option>
+        <option value="a#">A#</option>
+        <option value="" disabled aria-hidden="true"></option>
+
+        <option value="b_">B&#9837;</option>
+        <option value="b">B</option>
+        <option value="" disabled aria-hidden="true"></option>
+
+        <option value="c#">C#</option>
+        <option value="c">C</option>
+        <option value="" disabled aria-hidden="true"></option>
+
+        <option value="d_">D&#9837;</option>
+        <option value="d">D</option>
+        <option value="d#">D#</option>
+        <option value="" disabled aria-hidden="true"></option>
+
+        <option value="e_">E&#9837;</option>
+        <option value="e">E</option>
+        <option value="" disabled aria-hidden="true"></option>
+
+        <option value="f">F</option>
+        <option value="f#">F#</option>
+        <option value="" disabled aria-hidden="true"></option>
+
+        <option value="g_">G&#9837;</option>
+        <option value="g">G</option>
+        <option value="g#">G#</option>
+
       </select>
     </div>
 
     <div class="modeSelector__group">
-      <label
-        for="modeSelector-mode"
-        class="modeSelector__label modeSelector__label--right"
-        >Mode</label
-      >
-      <select
-        id="modeSelector-mode"
-        class="modeSelector__select"
-        [(ngModel)]="mode"
-      >
+      <label for="modeSelector-mode" class="modeSelector__label modeSelector__label--right">Mode</label>
+      <select id="modeSelector-mode" class="modeSelector__select" [(ngModel)]="mode">
         <optgroup label="Modern modes">
           <option value="ionian">Ionian (Major)</option>
           <option value="dorian">Dorian</option>
@@ -72,8 +55,6 @@
     </div>
   </div>
 
-  <app-fretonator
-    [scale]="note | symbolToNoteObj | getScaleFromModeMap: mode"
-    [fretMap]="note | symbolToNoteObj | generateFretMap: mode"
-  ></app-fretonator>
+  <app-fretonator [scale]="note | symbolToNoteObj | getScaleFromModeMap: mode"
+                  [fretMap]="note | symbolToNoteObj | generateFretMap: mode"></app-fretonator>
 </main>

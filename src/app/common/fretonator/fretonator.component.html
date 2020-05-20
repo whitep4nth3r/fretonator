@@ -3,14 +3,12 @@
     <div
       class="fretboard__cell"
       [class.fretboard__cell--string]="fret === 0"
-      [class.fretboard__cell--selected]="
-        fretMap | getNoteFromFretMap: string:fret
-      "
+      [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: string:fret"
       [attr.data-string-name]="fret === 0 ? stringName : null"
       [attr.data-string]="string"
       [attr.data-fret]="fret"
-      [attr.data-degree]="fretMap | getScaleDegreeFromFretMap: string:fret"
-      [attr.data-display-note]="fretMap | getNoteFromFretMap: string:fret"
+      [attr.data-degree]="(fretMap | getFretFromFretMap: string : fret)?.degree"
+      [attr.data-display-note]="(fretMap | getFretFromFretMap: string : fret)?.displayName"
     ></div>
   </ng-container>
 </ng-template>
@@ -54,10 +52,10 @@
   <div class="degreesDisplay">
     <span class="degreesDisplay__degree degreesDisplay__degree--tonic">1</span>
     <span class="degreesDisplay__degree degreesDisplay__degree--mediant"
-      >3</span
+    >3</span
     >
     <span class="degreesDisplay__degree degreesDisplay__degree--dominant"
-      >5</span
+    >5</span
     >
   </div>
 </div>
@@ -65,11 +63,11 @@
 <div class="scaleDisplay">
   <h4 class="scaleDisplay__title">Scale</h4>
   <div class="scaleDisplay__notes">
-    <h5
-      class="scaleDisplay__note"
-      *ngFor="let scaleNote of scale; let i = index"
-    >
-      {{ scaleNote }}<span *ngIf="i < scale.length - 1"> - </span>
-    </h5>
+    <ng-container *ngFor="let scaleNote of scale; let i = index">
+      <h5 class="scaleDisplay__note">
+        {{ scaleNote }}
+        <span *ngIf="i < scale.length - 1"> - </span>
+      </h5>
+    </ng-container>
   </div>
 </div>
