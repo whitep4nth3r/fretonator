@@ -13,9 +13,11 @@ import {
   dHarmonicMinor,
   dIonianFretMappings,
   fSharpHarmonicMinor,
+  cIonianJamTrack,
 } from './generate-fret-map.service.testConstants';
 
 import { GenerateFretMapService } from './generate-fret-map.service';
+import { NoteSymbol } from '../../util/types';
 
 describe('GenerateFretMapService', () => {
   let service: GenerateFretMapService;
@@ -47,7 +49,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      1
+      1,
     );
     expect(result).toEqual({
       name: 'd',
@@ -67,7 +69,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      1
+      1,
     );
     expect(result).toEqual({
       name: 'c',
@@ -87,7 +89,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      1
+      1,
     );
     expect(result).toEqual({
       name: 'b',
@@ -107,7 +109,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      1
+      1,
     );
     expect(result).toEqual({
       name: 'e',
@@ -127,7 +129,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      1
+      1,
     );
     expect(result).toEqual({
       name: 'f',
@@ -147,7 +149,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      1
+      1,
     );
     expect(result).toEqual({
       name: 'c',
@@ -167,7 +169,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      1
+      1,
     );
     expect(result).toEqual({
       name: 'c',
@@ -187,7 +189,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      1
+      1,
     );
     expect(result).toEqual({
       name: 'c',
@@ -207,7 +209,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      1
+      1,
     );
     expect(result).toEqual({
       name: 'f',
@@ -227,7 +229,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         doubleFlat: false,
         doubleSharp: true,
       },
-      1
+      1,
     );
     expect(result).toEqual({
       name: 'e',
@@ -256,7 +258,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      2
+      2,
     );
     expect(result).toEqual({
       name: 'd',
@@ -276,7 +278,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      2
+      2,
     );
     expect(result).toEqual({
       name: 'f',
@@ -296,7 +298,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      2
+      2,
     );
     expect(result).toEqual({
       name: 'd',
@@ -316,7 +318,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      2
+      2,
     );
     expect(result).toEqual({
       name: 'd',
@@ -336,7 +338,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
         doubleFlat: false,
         doubleSharp: true,
       },
-      2
+      2,
     );
     expect(result).toEqual({
       name: 'd',
@@ -365,7 +367,7 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      3
+      3,
     );
     expect(result).toEqual({
       name: 'd',
@@ -385,7 +387,7 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      3
+      3,
     );
     expect(result).toEqual({
       name: 'c',
@@ -405,7 +407,7 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      3
+      3,
     );
     expect(result).toEqual({
       name: 'g',
@@ -434,7 +436,7 @@ describe('GenerateFretMapService:isNatural', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'e'
+      'e',
     );
     expect(result).toBe(true);
   });
@@ -448,7 +450,7 @@ describe('GenerateFretMapService:isNatural', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'e'
+      'e',
     );
     expect(result).toBe(false);
   });
@@ -471,7 +473,7 @@ describe('GenerateFretMapService:isSharp', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'e'
+      'e',
     );
     expect(result).toBe(false);
   });
@@ -485,7 +487,7 @@ describe('GenerateFretMapService:isSharp', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'c'
+      'c',
     );
     expect(result).toBe(true);
   });
@@ -508,7 +510,7 @@ describe('GenerateFretMapService:isFlat', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'e'
+      'e',
     );
     expect(result).toBe(false);
   });
@@ -522,7 +524,7 @@ describe('GenerateFretMapService:isFlat', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'b'
+      'b',
     );
     expect(result).toBe(true);
   });
@@ -545,7 +547,7 @@ describe('GenerateFretMapService:isDoubleSharp', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'e'
+      'e',
     );
     expect(result).toBe(false);
   });
@@ -559,7 +561,7 @@ describe('GenerateFretMapService:isDoubleSharp', () => {
         doubleFlat: false,
         doubleSharp: true,
       },
-      'c'
+      'c',
     );
     expect(result).toBe(true);
   });
@@ -582,7 +584,7 @@ describe('GenerateFretMapService:isDoubleFlat', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'e'
+      'e',
     );
     expect(result).toBe(false);
   });
@@ -596,7 +598,7 @@ describe('GenerateFretMapService:isDoubleFlat', () => {
         doubleFlat: true,
         doubleSharp: false,
       },
-      'b'
+      'b',
     );
     expect(result).toBe(true);
   });
@@ -619,7 +621,7 @@ describe('GenerateFretMapService:generateMode', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'ionian'
+      'ionian',
     );
     expect(result).toEqual(cIonianMode);
   });
@@ -633,7 +635,7 @@ describe('GenerateFretMapService:generateMode', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'dorian'
+      'dorian',
     );
     expect(result).toEqual(dDorianMode);
   });
@@ -647,7 +649,7 @@ describe('GenerateFretMapService:generateMode', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'phrygian'
+      'phrygian',
     );
     expect(result).toEqual(cPhrygianMode);
   });
@@ -661,7 +663,7 @@ describe('GenerateFretMapService:generateMode', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'phrygian'
+      'phrygian',
     );
     expect(result).toEqual(bFlatPhrygian);
   });
@@ -675,7 +677,7 @@ describe('GenerateFretMapService:generateMode', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'phrygian'
+      'phrygian',
     );
     expect(result).toEqual(aFlatPhrygian);
   });
@@ -689,7 +691,7 @@ describe('GenerateFretMapService:generateMode', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'harmonicMinor'
+      'harmonicMinor',
     );
     expect(result).toEqual(dHarmonicMinor);
   });
@@ -703,7 +705,7 @@ describe('GenerateFretMapService:generateMode', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'harmonicMinor'
+      'harmonicMinor',
     );
     expect(result).toEqual(cHarmonicMinor);
   });
@@ -717,7 +719,7 @@ describe('GenerateFretMapService:generateMode', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'locrian'
+      'locrian',
     );
     expect(result).toEqual(bFlatLocrian);
   });
@@ -731,7 +733,7 @@ describe('GenerateFretMapService:generateMode', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'harmonicMinor'
+      'harmonicMinor',
     );
     expect(result).toEqual(fSharpHarmonicMinor);
   });
@@ -745,7 +747,7 @@ describe('GenerateFretMapService:generateMode', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'ionian'
+      'ionian',
     );
     expect(result).toEqual(aSharpMajor);
   });
@@ -906,7 +908,7 @@ describe('GenerateFretMapService:getFretMapping', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'ionian'
+      'ionian',
     );
 
     expect(result).toEqual(cIonianFretMappings);
@@ -921,9 +923,63 @@ describe('GenerateFretMapService:getFretMapping', () => {
         doubleFlat: false,
         doubleSharp: false,
       },
-      'ionian'
+      'ionian',
     );
 
     expect(result).toEqual(dIonianFretMappings);
+  });
+});
+
+describe('GenerateFretMapService:convertNoteObjectToNoteSymbol', () => {
+  let service: GenerateFretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(GenerateFretMapService);
+  });
+
+  it('returns the correct note symbol for A sharp', () => {
+    const result = service.convertNoteObjectToNoteSymbol({
+      name: 'a',
+      flat: false,
+      sharp: true,
+      doubleSharp: false,
+      doubleFlat: false,
+    });
+
+    expect(result).toBe(NoteSymbol.aSharp);
+  });
+
+  it('returns the correct note symbol for A flat', () => {
+    const result = service.convertNoteObjectToNoteSymbol({
+      name: 'a',
+      flat: true,
+      sharp: false,
+      doubleSharp: false,
+      doubleFlat: false,
+    });
+
+    expect(result).toBe(NoteSymbol.aFlat);
+  });
+});
+
+fdescribe('GenerateFretMapService:getJamTrack', () => {
+  let service: GenerateFretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(GenerateFretMapService);
+  });
+
+  it('returns a Jam track for c ionian', () => {
+    const result = service.getJamTrack({
+      name: 'c',
+      flat: false,
+      sharp: false,
+      doubleSharp: false,
+      doubleFlat: false,
+    }, 'ionian');
+
+    expect(result).toEqual(cIonianJamTrack);
   });
 });

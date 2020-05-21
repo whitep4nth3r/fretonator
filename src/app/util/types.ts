@@ -30,12 +30,22 @@ export enum NoteSymbol {
 export enum Mode {
   ionian = 'ionian',
   dorian = 'dorian',
-  phyrgian = 'phrygian',
+  phrygian = 'phrygian',
   lydian = 'lydian',
   mixolydian = 'mixolydian',
   aolian = 'aolian',
   locrian = 'locrian',
 }
+
+export interface JamTrack {
+  key: NoteSymbol;
+  mode: Mode;
+  youTubeId: string;
+  title: string;
+  creator: string;
+}
+
+export type JamTracks = JamTrack[];
 
 export interface NoteObject {
   name: string;

@@ -10,5 +10,4 @@ export class YoutubeLinkHtmlPipe implements PipeTransform {
   transform(youTubeId: string): SafeHtml {
     return this.domSanitizer.bypassSecurityTrustHtml(`https://www.youtube.com/watch?v=${youTubeId}`);
   }
-
 }

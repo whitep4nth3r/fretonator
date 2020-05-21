@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Fret, ModeMap, NoteObject } from '../../util/types';
+import { Fret, FretMap, JamTrack, ModeMap, NoteObject, NoteSymbol } from '../../util/types';
 import { ModePatterns, NoteToStringAndFretMap, Octave, ScaleDegrees } from '../../util/constants';
+import { JamTracksData } from '../../data/jamTracks';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +10,7 @@ export class GenerateFretMapService {
   constructor() {
   }
 
-  isNatural = (note: NoteObject, noteName: string) => {
+  isNatural = (note: NoteObject, noteName: string): boolean => {
     return (
       note.name === noteName &&
       note.sharp === false &&
@@ -19,7 +20,7 @@ export class GenerateFretMapService {
     );
   }
 
-  isSharp = (note: NoteObject, noteName: string) => {
+  isSharp = (note: NoteObject, noteName: string): boolean => {
     return (
       note.name === noteName &&
       note.sharp === true &&
@@ -29,7 +30,7 @@ export class GenerateFretMapService {
     );
   }
 
-  isFlat = (note: NoteObject, noteName: string) => {
+  isFlat = (note: NoteObject, noteName: string): boolean => {
     return (
       note.name === noteName &&
       note.sharp === false &&
@@ -39,7 +40,7 @@ export class GenerateFretMapService {
     );
   }
 
-  isDoubleFlat = (note: NoteObject, noteName: string) => {
+  isDoubleFlat = (note: NoteObject, noteName: string): boolean => {
     return (
       note.name === noteName &&
       note.sharp === false &&
@@ -49,7 +50,7 @@ export class GenerateFretMapService {
     );
   }
 
-  isDoubleSharp = (note: NoteObject, noteName: string) => {
+  isDoubleSharp = (note: NoteObject, noteName: string): boolean => {
     return (
       note.name === noteName &&
       note.sharp === false &&
@@ -59,7 +60,7 @@ export class GenerateFretMapService {
     );
   }
 
-  generateNextNote = (currentNote: NoteObject, interval: number) => {
+  generateNextNote = (currentNote: NoteObject, interval: number): NoteObject => {
     const nextNote = {
       name: '',
       flat: false,
@@ -173,7 +174,7 @@ export class GenerateFretMapService {
     return nextNote;
   }
 
-  generateMode = (startingNote: NoteObject, mode: string) => {
+  generateMode = (startingNote: NoteObject, mode: string): ModeMap => {
     let currentNote = startingNote;
     let newNote;
 
@@ -191,7 +192,7 @@ export class GenerateFretMapService {
     return newMode;
   }
 
-  convertNoteObjectToHumanReadable = (note: NoteObject) => {
+  convertNoteObjectToHumanReadable = (note: NoteObject): string => {
     if (note.sharp) {
       return note.name.toUpperCase() + '#';
     }
@@ -231,7 +232,7 @@ export class GenerateFretMapService {
     return note.name;
   }
 
-  getFretMapping(startingNote: NoteObject, mode: string) {
+  getFretMapping(startingNote: NoteObject, mode: string): FretMap {
     const origModeMap = this.generateMode(startingNote, mode);
 
     const modeMap = origModeMap.map((noteObject, index) => ({
@@ -268,4 +269,35 @@ export class GenerateFretMapService {
 
     return 0;
   }
+
+  convertNoteObjectToNoteSymbol = (noteObject: NoteObject): NoteSymbol | false => {
+    let suffix = '';
+
+    if (this.isSharp(noteObject, noteObject.name)) {
+      suffix = '#';
+    }
+
+    if (this.isFlat(noteObject, noteObject.name)) {
+      suffix = '_';
+    }
+
+    let returnSymbol: NoteSymbol;
+
+    Object.keys(NoteSymbol).forEach((symbol) => {
+      const item = NoteSymbol[symbol];
+      if (item === noteObject.name + suffix) {
+        returnSymbol = item;
+      }
+    });
+
+    return returnSymbol ? returnSymbol : false;
+  }
+
+  getJamTrack = (startingNote: NoteObject, mode: string): JamTrack  | false => {
+    const noteSymbol = this.convertNoteObjectToNoteSymbol(startingNote);
+
+    const found = JamTracksData
+      .find((thisTrack) => thisTrack.key === noteSymbol && thisTrack.mode === mode);
+
+    return found ? found : false;  }
 }
