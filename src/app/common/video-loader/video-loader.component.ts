@@ -8,7 +8,7 @@ import { JamTrack } from '../../util/types';
   styleUrls: ['./video-loader.component.scss']
 })
 export class VideoLoaderComponent implements OnInit {
-  @Input() jamTrack: JamTrack | false;
+  @Input() jamTrack: JamTrack;
   isBrowser = false;
 
   constructor(@Inject(PLATFORM_ID) private platformId) { }
