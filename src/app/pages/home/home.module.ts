@@ -10,6 +10,8 @@ import { GenerateFretMapPipe } from './home-index/generate-fret-map.pipe';
 import { GetScaleFromModeMapPipe } from './home-index/get-scale-from-mode-map.pipe';
 import { VideoLoaderModule } from '../../common/video-loader/video-loader.module';
 import { GetJamTrackPipe } from './home-index/get-jam-track.pipe';
+import { StringToNoteSymbolPipe } from './home-index/string-to-note-symbol.pipe';
+import { ChipsModule } from '../../common/chips/chips.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { GetJamTrackPipe } from './home-index/get-jam-track.pipe';
     GenerateFretMapPipe,
     GetScaleFromModeMapPipe,
     GetJamTrackPipe,
+    StringToNoteSymbolPipe,
   ],
   imports: [
     CommonModule,
@@ -25,6 +28,7 @@ import { GetJamTrackPipe } from './home-index/get-jam-track.pipe';
     HomeRoutingModule,
     FretonatorModule,
     VideoLoaderModule,
+    ChipsModule,
   ],
 })
 export class HomeModule {

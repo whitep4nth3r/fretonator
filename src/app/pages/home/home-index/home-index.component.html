@@ -1,13 +1,16 @@
-<app-chips name="key_base" [(ngModel)]="note">
+<main class="modeSelector__container">
+<h1 class="modeSelector__title">Learn modes and scales on the guitar</h1>
+
+<app-chips name="key_base" [(ngModel)]="note" (ngModelChange)="resetNoteExtender()">
   <app-chip *ngFor="let thisNote of octave"
             [id]="thisNote"
             [value]="thisNote">{{thisNote | titlecase}}</app-chip>
 </app-chips>
 
 <app-chips name="key_extender" [(ngModel)]="noteExtender">
-  <app-chip id="flat" [value]="'_'">{{note | titlecase}}♭</app-chip>
-  <app-chip id="natural" value="" [disabled]="true">{{note | titlecase}}</app-chip>
-  <app-chip id="sharp" [value]="'#'">{{note | titlecase}}#</app-chip>
+  <app-chip *ngIf="!(note === 'f' || note === 'c')" id="flat" [value]="'_'">{{note | titlecase}}♭</app-chip>
+  <app-chip id="natural" value="">{{note | titlecase}}</app-chip>
+  <app-chip *ngIf="!(note === 'b' || note === 'e')" id="sharp" [value]="'#'">{{note | titlecase}}#</app-chip>
 </app-chips>
 
 <app-chips name="mode" [(ngModel)]="mode">
@@ -17,67 +20,9 @@
 </app-chips>
 
 
-<main class="modeSelector__container">
-  <h1 class="modeSelector__title">Learn modes and scales on the guitar</h1>
-  <div class="modeSelector">
-    <div class="modeSelector__group">
-      <label for="modeSelector-key" class="modeSelector__label modeSelector__label--left">Key</label>
-      <select id="modeSelector-key" class="modeSelector__select" [(ngModel)]="note">
-        <option value="a_">A&#9837;</option>
-        <option value="a">A</option>
-        <option value="a#">A#</option>
-        <option value="" disabled aria-hidden="true"></option>
-
-        <option value="b_">B&#9837;</option>
-        <option value="b">B</option>
-        <option value="" disabled aria-hidden="true"></option>
-
-        <option value="c#">C#</option>
-        <option value="c">C</option>
-        <option value="" disabled aria-hidden="true"></option>
-
-        <option value="d_">D&#9837;</option>
-        <option value="d">D</option>
-        <option value="d#">D#</option>
-        <option value="" disabled aria-hidden="true"></option>
-
-        <option value="e_">E&#9837;</option>
-        <option value="e">E</option>
-        <option value="" disabled aria-hidden="true"></option>
-
-        <option value="f">F</option>
-        <option value="f#">F#</option>
-        <option value="" disabled aria-hidden="true"></option>
-
-        <option value="g_">G&#9837;</option>
-        <option value="g">G</option>
-        <option value="g#">G#</option>
-
-      </select>
-    </div>
-
-    <div class="modeSelector__group">
-      <label for="modeSelector-mode" class="modeSelector__label modeSelector__label--right">Mode</label>
-      <select id="modeSelector-mode" class="modeSelector__select" [(ngModel)]="mode">
-        <optgroup label="Modern modes">
-          <option value="ionian">Ionian (Major)</option>
-          <option value="dorian">Dorian</option>
-          <option value="phrygian">Phrygian</option>
-          <option value="lydian">Lydian</option>
-          <option value="mixolydian">Mixolydian</option>
-          <option value="aolian">Aolian (Natural minor)</option>
-          <option value="locrian">Locrian</option>
-        </optgroup>
-        <optgroup label="Other scales">
-          <option value="harmonicMinor">Harmonic minor</option>
-        </optgroup>
-      </select>
-    </div>
-  </div>
-
-  <app-fretonator [scale]="note | symbolToNoteObj | getScaleFromModeMap: mode"
-                  [fretMap]="note | symbolToNoteObj | generateFretMap: mode"></app-fretonator>
-  <section *ngIf="note | symbolToNoteObj | getJamTrack: mode">
-    <app-video-loader [jamTrack]="note | symbolToNoteObj | getJamTrack: mode"></app-video-loader>
+  <app-fretonator [scale]="note | symbolToNoteObj: noteExtender | getScaleFromModeMap: mode"
+                  [fretMap]="note | symbolToNoteObj: noteExtender | generateFretMap: mode"></app-fretonator>
+  <section *ngIf="note | symbolToNoteObj: noteExtender | getJamTrack: mode">
+    <app-video-loader [jamTrack]="note | symbolToNoteObj: noteExtender | getJamTrack: mode"></app-video-loader>
   </section>
 </main>

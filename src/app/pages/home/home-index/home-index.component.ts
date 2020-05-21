@@ -22,4 +22,8 @@ export class HomeIndexComponent implements OnInit {
   ngOnInit(): void {
     this.title.setTitle('Welcome | Fretonator');
   }
+
+  resetNoteExtender() {
+    this.noteExtender = '';
+  }
 }
