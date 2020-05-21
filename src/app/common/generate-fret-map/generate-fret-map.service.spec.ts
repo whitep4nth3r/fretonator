@@ -963,7 +963,7 @@ describe('GenerateFretMapService:convertNoteObjectToNoteSymbol', () => {
   });
 });
 
-fdescribe('GenerateFretMapService:getJamTrack', () => {
+describe('GenerateFretMapService:getJamTrack', () => {
   let service: GenerateFretMapService;
 
   beforeEach(() => {
