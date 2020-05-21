@@ -60,6 +60,6 @@
   <app-fretonator [scale]="note | symbolToNoteObj | getScaleFromModeMap: mode"
                   [fretMap]="note | symbolToNoteObj | generateFretMap: mode"></app-fretonator>
 
-<app-video-loader [youTubeId]="youTubeId"></app-video-loader>
+<app-video-loader [jamTrack]="note | symbolToNoteObj | getJamTrack: mode"></app-video-loader>
 
 </main>

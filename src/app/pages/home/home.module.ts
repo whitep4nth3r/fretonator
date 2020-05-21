@@ -9,6 +9,7 @@ import { SymbolToNoteObjPipe } from './home-index/symbol-to-note-obj.pipe';
 import { GenerateFretMapPipe } from './home-index/generate-fret-map.pipe';
 import { GetScaleFromModeMapPipe } from './home-index/get-scale-from-mode-map.pipe';
 import { VideoLoaderModule } from '../../common/video-loader/video-loader.module';
+import { GetJamTrackPipe } from './home-index/get-jam-track.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { VideoLoaderModule } from '../../common/video-loader/video-loader.module
     SymbolToNoteObjPipe,
     GenerateFretMapPipe,
     GetScaleFromModeMapPipe,
+    GetJamTrackPipe,
   ],
   imports: [
     CommonModule,
