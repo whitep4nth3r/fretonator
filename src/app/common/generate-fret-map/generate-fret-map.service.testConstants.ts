@@ -1,6 +1,6 @@
-import { GenerateFretMapService } from './generate-fret-map.service';
+import { FretMap, JamTrack, Mode, ModeMap, NoteSymbol } from '../../util/types';
 
-export const cIonianMode = [
+export const cIonianMode: ModeMap = [
   {
     name: 'c',
     sharp: false,
@@ -52,7 +52,7 @@ export const cIonianMode = [
   },
 ];
 
-export const dDorianMode = [
+export const dDorianMode: ModeMap = [
   {
     name: 'd',
     sharp: false,
@@ -104,7 +104,7 @@ export const dDorianMode = [
   },
 ];
 
-export const dHarmonicMinor = [
+export const dHarmonicMinor: ModeMap = [
   {
     name: 'd',
     sharp: false,
@@ -144,96 +144,6 @@ export const dHarmonicMinor = [
     name: 'b',
     sharp: false,
     flat: true,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-  {
-    name: 'c',
-    sharp: true,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-];
-
-export const cHarmonicMinor = [
-  {
-    name: 'c',
-    sharp: false,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-  {
-    name: 'd',
-    sharp: false,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-  {
-    name: 'e',
-    sharp: false,
-    flat: true,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-  {
-    name: 'f',
-    sharp: false,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-  {
-    name: 'g',
-    sharp: false,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-  {
-    name: 'a',
-    sharp: false,
-    flat: true,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-  {
-    name: 'b',
-    sharp: false,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-];
-
-export const fSharpHarmonicMinor = [
-  {
-    name: 'f',
-    sharp: true,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-  {
-    name: 'g',
-    sharp: true,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-  {
-    name: 'a',
-    sharp: false,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-  },
-  {
-    name: 'b',
-    sharp: false,
-    flat: false,
     doubleFlat: false,
     doubleSharp: false,
   },
@@ -244,6 +154,96 @@ export const fSharpHarmonicMinor = [
     doubleFlat: false,
     doubleSharp: false,
   },
+];
+
+export const cHarmonicMinor: ModeMap = [
+  {
+    name: 'c',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'd',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'e',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'f',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'g',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'a',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+];
+
+export const fSharpHarmonicMinor: ModeMap = [
+  {
+    name: 'f',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'g',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'a',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'c',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
   {
     name: 'd',
     sharp: false,
@@ -260,7 +260,7 @@ export const fSharpHarmonicMinor = [
   },
 ];
 
-export const cPhrygianMode = [
+export const cPhrygianMode: ModeMap = [
   {
     name: 'c',
     sharp: false,
@@ -312,7 +312,7 @@ export const cPhrygianMode = [
   },
 ];
 
-export const bFlatPhrygian = [
+export const bFlatPhrygian: ModeMap = [
   {
     name: 'b',
     sharp: false,
@@ -364,7 +364,7 @@ export const bFlatPhrygian = [
   },
 ];
 
-export const aFlatPhrygian = [
+export const aFlatPhrygian: ModeMap = [
   {
     name: 'a',
     sharp: false,
@@ -416,7 +416,7 @@ export const aFlatPhrygian = [
   },
 ];
 
-export const bFlatLocrian = [
+export const bFlatLocrian: ModeMap = [
   {
     name: 'b',
     sharp: false,
@@ -468,7 +468,7 @@ export const bFlatLocrian = [
   },
 ];
 
-export const aSharpMajor = [
+export const aSharpMajor: ModeMap = [
   {
     name: 'a',
     sharp: true,
@@ -520,7 +520,7 @@ export const aSharpMajor = [
   },
 ];
 
-export const cIonianFretMappings = [
+export const cIonianFretMappings: FretMap = [
   { string: 'A', fret: 0, displayName: 'A', degree: 'submediant' },
   { string: 'A', fret: 2, displayName: 'B', degree: 'leadingTone' },
   { string: 'A', fret: 3, displayName: 'C', degree: 'tonic' },
@@ -563,7 +563,7 @@ export const cIonianFretMappings = [
   { string: 'G', fret: 12, displayName: 'G', degree: 'dominant' },
 ];
 
-export const dIonianFretMappings = [
+export const dIonianFretMappings: FretMap = [
   { string: 'A', fret: 0, displayName: 'A', degree: 'dominant' },
   { string: 'A', fret: 2, displayName: 'B', degree: 'submediant' },
   { string: 'A', fret: 4, displayName: 'C#', degree: 'leadingTone' },
@@ -605,3 +605,11 @@ export const dIonianFretMappings = [
   { string: 'G', fret: 11, displayName: 'F#', degree: 'mediant' },
   { string: 'G', fret: 12, displayName: 'G', degree: 'subdominant' },
 ];
+
+export const cIonianJamTrack: JamTrack = {
+  key: NoteSymbol.c,
+  mode: Mode.ionian,
+  youTubeId: 'test123',
+  title: 'C Ionian Jam Track',
+  creator: 'Guitar Whizz'
+};

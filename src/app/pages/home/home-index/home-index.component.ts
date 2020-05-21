@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NoteSymbol, Mode } from '../../../util/types';
+import { Mode, NoteSymbol } from '../../../util/types';
 import { Title } from '@angular/platform-browser';
 
 @Component({
