@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mode, NoteSymbol } from '../../../util/types';
-import { ModeSelectorObjects } from '../../../util/constants';
+import { ModeSelectorObjects, Octave } from '../../../util/constants';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -12,6 +12,7 @@ export class HomeIndexComponent implements OnInit {
   note: NoteSymbol = NoteSymbol.c;
   mode: Mode = Mode.ionian;
   modeSelectorObjects = ModeSelectorObjects;
+  octave = Octave;
 
   constructor(private title: Title) {}
 
@@ -19,5 +20,13 @@ export class HomeIndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.title.setTitle('Welcome | Fretonator');
+  }
+
+  selectNote(note: NoteSymbol) {
+    this.note = note;
+  }
+
+  selectMode(mode: Mode) {
+    this.mode = mode
   }
 }

@@ -84,7 +84,8 @@
   background-color: var(--white);
   margin: pxToRem($grid-unit / 2);
   border-radius: pxToRem($grid-unit * 2);
-  padding: pxToRem(4) pxToRem(8);;
+  padding: pxToRem(4) pxToRem(8);
+  cursor: pointer;
 
   @include focus_accessible();
 
@@ -104,8 +105,11 @@
 }
 
 .modeSelectorChips__input {
-  position: absolute;
-  top: -20px;
+  width: 0;
+  height: 0;
+  appearance: none;
+
+//todo - enable tab focus styles - can't focus on label?
 }
 
 .modeSelectorChips__chipContent {
