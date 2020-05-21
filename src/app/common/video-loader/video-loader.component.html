@@ -1,10 +1,11 @@
-<div class="videoLoader">
-  {{jamTrack.creator}}
-  {{jamTrack.title}}
+<div class="videoLoader" *ngIf="jamTrack">
     <app-video-server *ngIf="!isBrowser"
                       [youTubeId]="jamTrack.youTubeId"
                       class="videoLoader__content"></app-video-server>
     <app-video-browser *ngIf="isBrowser"
                        [youTubeId]="jamTrack.youTubeId"
                       class="videoLoader__content"></app-video-browser>
+
+  <pre>  {{jamTrack.creator}}
+    {{jamTrack.title}}</pre>
 </div>

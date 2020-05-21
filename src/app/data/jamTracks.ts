@@ -4,8 +4,8 @@ export const JamTracksData: JamTracks = [
   {
     key: NoteSymbol.c,
     mode: Mode.ionian,
-    youTubeId: 'test123',
-    title: 'C Ionian Jam Track',
-    creator: 'Guitar Whizz',
+    youTubeId: 'oMZz2FeV8q4',
+    title: 'C Ionian (Major) Jam Track',
+    creator: 'Tom Strahle',
   }
 ];

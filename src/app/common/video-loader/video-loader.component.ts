@@ -14,7 +14,7 @@ export class VideoLoaderComponent implements OnInit {
   constructor(@Inject(PLATFORM_ID) private platformId) { }
 
   ngOnInit(): void {
-    this.isBrowser = !isPlatformBrowser(this.platformId);
+    this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
 }

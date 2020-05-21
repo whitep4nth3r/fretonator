@@ -10,7 +10,6 @@ import { Title } from '@angular/platform-browser';
 export class HomeIndexComponent implements OnInit {
   note: NoteSymbol = NoteSymbol.c;
   mode: Mode = Mode.ionian;
-  youTubeId = '2YBtspm8j8M';
 
   constructor(private title: Title) {}
 
