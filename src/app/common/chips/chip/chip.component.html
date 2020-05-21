@@ -1,0 +1,14 @@
+<input [id]="id"
+       type="radio"
+       class="input"
+       [checked]="chips.value === value"
+       [name]="chips.name"
+       (change)="onChange()"
+       (blur)="onBlur()"
+       [disabled]="chips.disabled || disabled"
+       [ngModel]="chips.value"
+       [value]="value">
+
+<label [for]="id" class="chip">
+  <ng-content></ng-content>
+</label>

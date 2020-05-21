@@ -10,6 +10,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeIndexComponent implements OnInit {
   note: NoteSymbol = NoteSymbol.c;
+  noteExtender: '#' | '_' | '' = '';
   mode: Mode = Mode.ionian;
   modeSelectorObjects = ModeSelectorObjects;
   octave = Octave;
@@ -20,13 +21,5 @@ export class HomeIndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.title.setTitle('Welcome | Fretonator');
-  }
-
-  selectNote(note: NoteSymbol) {
-    this.note = note;
-  }
-
-  selectMode(mode: Mode) {
-    this.mode = mode
   }
 }

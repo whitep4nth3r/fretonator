@@ -1,0 +1,46 @@
+@import '../../../../styles/functions';
+@import '../../../../styles/mixins';
+
+:host {
+  margin: pxToRem($grid-unit / 2);
+  display: inline-block;
+}
+
+.chip {
+  border: 2px solid var(--black);
+  background-color: var(--white);
+  border-radius: pxToRem($grid-unit * 2);
+  padding: pxToRem(4) pxToRem(8);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+  font-size: pxToRem(14);
+}
+
+.chip--round {
+  height: pxToRem(44);
+  width: pxToRem(44);
+  border-radius: 50%;
+}
+
+.input {
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+.input:checked ~ .chip {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.input:focus ~ .chip {
+  outline-width: 2px;
+  outline-color: var(--peach);
+  outline-style: solid;
+  outline-offset: 0;
+}
+
+.input:disabled ~ .chip {
+  opacity: 0.5;
+}

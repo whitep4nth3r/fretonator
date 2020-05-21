@@ -1,48 +1,21 @@
-<!-- these are currently untabbable due to radio buttons not showing -->
-<div class="modeSelectorChips">
-  <!-- need a pipe to convert thisNote to NoteSymbol -->
-  <ng-container *ngFor="let thisNote of octave">
-    <label [for]="thisNote"
-           (click)="selectNote(thisNote)"
-           [class.modeSelectorChips__chip--selected]="thisNote === note"
-           class="modeSelectorChips__chip modeSelectorChips__chip--round"
-    ><input class="modeSelectorChips__input" type="radio" [id]="thisNote" [value]="thisNote" ng>
-      <span class="modeSelectorChips__chipContent">{{thisNote | titlecase}}</span>
-    </label>
-  </ng-container>
-</div>
+<app-chips name="key_base" [(ngModel)]="note">
+  <app-chip *ngFor="let thisNote of octave"
+            [id]="thisNote"
+            [value]="thisNote">{{thisNote | titlecase}}</app-chip>
+</app-chips>
 
-<!-- this template has to be created based on the sub selections available -
-not all keys service _ and # -->
-<div class="modeSelectorChips modeSelectorChips__sub">
-  <label for="select_a_"
-         class="modeSelectorChips__chip modeSelectorChips__chip--round modeSelectorChips__chip--selected"
-  ><input class="modeSelectorChips__input" type="radio" id="select_a_" value="a_">
-    <span class="modeSelectorChips__chipContent">A♭</span>
-  </label>
-  <label for="select_a_sub"
-         class="modeSelectorChips__chip modeSelectorChips__chip--round"
-  ><input class="modeSelectorChips__input" type="radio" id="select_a_sub" value="a">
-    <span class="modeSelectorChips__chipContent">A</span>
-  </label>
-  <label for="select_a#"
-         class="modeSelectorChips__chip modeSelectorChips__chip--round"
-  ><input class="modeSelectorChips__input" type="radio" id="select_a#" value="a#">
-    <span class="modeSelectorChips__chipContent">A#</span>
-  </label>
-</div>
+<app-chips name="key_extender" [(ngModel)]="noteExtender">
+  <app-chip id="flat" [value]="'_'">{{note | titlecase}}♭</app-chip>
+  <app-chip id="natural" value="" [disabled]="true">{{note | titlecase}}</app-chip>
+  <app-chip id="sharp" [value]="'#'">{{note | titlecase}}#</app-chip>
+</app-chips>
 
-<!-- mode names -->
-<div class="modeSelectorChips">
-  <ng-container *ngFor="let thisMode of modeSelectorObjects">
-    <label class="modeSelectorChips__chip"
-           [class.modeSelectorChips__chip--selected]="thisMode.name === mode"
-           (click)="selectMode(thisMode.name)"
-    ><input class="modeSelectorChips__input" type="radio" name="toggle" [value]="thisMode.name">
-      <span class="modeSelectorChips__chipContent">{{thisMode.displayName}}</span>
-    </label>
-  </ng-container>
-</div>
+<app-chips name="mode" [(ngModel)]="mode">
+  <app-chip *ngFor="let thisMode of modeSelectorObjects"
+            [id]="thisMode.name"
+            [value]="thisMode.name">{{thisMode.displayName}}</app-chip>
+</app-chips>
+
 
 <main class="modeSelector__container">
   <h1 class="modeSelector__title">Learn modes and scales on the guitar</h1>
