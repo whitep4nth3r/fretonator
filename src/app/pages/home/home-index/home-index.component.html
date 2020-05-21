@@ -104,7 +104,7 @@ not all keys service _ and # -->
 
   <app-fretonator [scale]="note | symbolToNoteObj | getScaleFromModeMap: mode"
                   [fretMap]="note | symbolToNoteObj | generateFretMap: mode"></app-fretonator>
-  <section>
+  <section *ngIf="note | symbolToNoteObj | getJamTrack: mode">
     <app-video-loader [jamTrack]="note | symbolToNoteObj | getJamTrack: mode"></app-video-loader>
   </section>
 </main>

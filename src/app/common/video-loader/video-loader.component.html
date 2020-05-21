@@ -1,24 +1,22 @@
-<ng-container *ngIf="jamTrack">
-  <div class="videoLoader">
-    <div class="videoLoader__meta">
-      <h3 class="videoLoader__title">Try a jam track</h3>
-      <p class="videoLoader__metaDetail">
-        {{jamTrack.title}} by  {{jamTrack.creator}} | <span
-        class="videoLoader__metaDetail--key">{{jamTrack.key | titlecase}} {{jamTrack.mode | titlecase }}
+<div class="videoLoader">
+  <div class="videoLoader__meta">
+    <h3 class="videoLoader__title">Try a jam track</h3>
+    <p class="videoLoader__metaDetail">
+      {{jamTrack.title}} by  {{jamTrack.creator}} | <span
+      class="videoLoader__metaDetail--key">{{jamTrack.key | titlecase}} {{jamTrack.mode | titlecase }}
       </span>
-      </p>
-    </div>
-
-    <div class="videoLoader__video">
-      <app-video-server *ngIf="!isBrowser"
-                        [youTubeId]="jamTrack.youTubeId"
-                        class="videoLoader__content"></app-video-server>
-      <app-video-browser *ngIf="isBrowser"
-                         [youTubeId]="jamTrack.youTubeId"
-                         [title]="jamTrack.title"
-                         class="videoLoader__content"></app-video-browser>
-    </div>
+    </p>
   </div>
-</ng-container>
+
+  <div class="videoLoader__video">
+    <app-video-server *ngIf="!isBrowser"
+                      [youTubeId]="jamTrack.youTubeId"
+                      class="videoLoader__content"></app-video-server>
+    <app-video-browser *ngIf="isBrowser"
+                       [youTubeId]="jamTrack.youTubeId"
+                       [title]="jamTrack.title"
+                       class="videoLoader__content"></app-video-browser>
+  </div>
+</div>
 
 
