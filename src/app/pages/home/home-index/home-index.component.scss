@@ -60,10 +60,56 @@
   font-family: var(--font-family-main);
   background-color: var(--white);
 
-  &:focus,
-  &:active {
-    outline-width: 2px;
-    outline-color: var(--peach);
-    outline-style: solid;
+  @include focus_accessible(-2px);
+}
+
+.modeSelectorChips {
+  overflow: hidden;
+  position: relative;
+  padding-top: pxToRem($grid-unit);
+  padding-bottom: pxToRem($grid-unit);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.modeSelectorChips__chip {
+  border: 2px solid var(--black);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: var(--white);
+  margin: pxToRem($grid-unit / 2);
+  border-radius: pxToRem($grid-unit * 2);
+  padding: pxToRem(4) pxToRem(8);;
+
+  @include focus_accessible();
+
+  &--selected {
+    background-color: var(--black);
+
+    .modeSelectorChips__chipContent {
+      color: var(--white);
+    }
   }
+}
+
+.modeSelectorChips__chip--round {
+  height: pxToRem(44);
+  width: pxToRem(44);
+  border-radius: 50%;
+}
+
+.modeSelectorChips__input {
+  position: absolute;
+  top: -20px;
+}
+
+.modeSelectorChips__chipContent {
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+  font-size: pxToRem(14);
 }

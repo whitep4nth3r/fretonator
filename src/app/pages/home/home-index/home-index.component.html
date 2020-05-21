@@ -1,3 +1,68 @@
+<div class="modeSelectorChips">
+  <label for="select_a"
+         class="modeSelectorChips__chip modeSelectorChips__chip--round modeSelectorChips__chip--selected"
+  ><input class="modeSelectorChips__input" type="radio" id="select_a" value="a">
+    <span class="modeSelectorChips__chipContent">A</span>
+  </label>
+  <label for="select_b"
+         class="modeSelectorChips__chip modeSelectorChips__chip--round"
+  ><input class="modeSelectorChips__input" type="radio" id="select_b" name="toggle" value="b">
+    <span class="modeSelectorChips__chipContent">B</span>
+  </label>
+  <label for="select_c"
+         class="modeSelectorChips__chip modeSelectorChips__chip--round"
+  ><input class="modeSelectorChips__input" type="radio" id="select_c" value="c">
+    <span class="modeSelectorChips__chipContent">C</span>
+  </label>
+  <label for="select_d"
+         class="modeSelectorChips__chip modeSelectorChips__chip--round"
+  ><input class="modeSelectorChips__input" type="radio" id="select_d" value="d">
+    <span class="modeSelectorChips__chipContent">D</span>
+  </label>
+  <label for="select_e"
+         class="modeSelectorChips__chip modeSelectorChips__chip--round"
+  ><input class="modeSelectorChips__input" type="radio" id="select_e" value="e">
+    <span class="modeSelectorChips__chipContent">E</span>
+  </label>
+  <label for="select_f"
+         class="modeSelectorChips__chip modeSelectorChips__chip--round"
+  ><input class="modeSelectorChips__input" type="radio" id="select_f" value="f">
+    <span class="modeSelectorChips__chipContent">F</span>
+  </label>
+  <label for="select_g"
+         class="modeSelectorChips__chip modeSelectorChips__chip--round"
+  ><input class="modeSelectorChips__input" type="radio" id="select_g" value="g">
+    <span class="modeSelectorChips__chipContent">G</span>
+  </label>
+</div>
+
+<div class="modeSelectorChips modeSelectorChips__sub">
+  <label for="select_a_"
+         class="modeSelectorChips__chip modeSelectorChips__chip--round modeSelectorChips__chip--selected"
+  ><input class="modeSelectorChips__input" type="radio" id="select_a_" value="a_">
+    <span class="modeSelectorChips__chipContent">A♭</span>
+  </label>
+  <label for="select_a_sub"
+         class="modeSelectorChips__chip modeSelectorChips__chip--round"
+  ><input class="modeSelectorChips__input" type="radio" id="select_a_sub" value="a">
+    <span class="modeSelectorChips__chipContent">A</span>
+  </label>
+  <label for="select_a#"
+         class="modeSelectorChips__chip modeSelectorChips__chip--round"
+  ><input class="modeSelectorChips__input" type="radio" id="select_a#" value="a#">
+    <span class="modeSelectorChips__chipContent">A#</span>
+  </label>
+</div>
+
+<div class="modeSelectorChips">
+  <ng-container *ngFor="let mode of modeSelectorObjects">
+    <label class="modeSelectorChips__chip"
+    ><input class="modeSelectorChips__input" type="radio" name="toggle" [value]="mode.name">
+      <span class="modeSelectorChips__chipContent">{{mode.displayName}}</span>
+    </label>
+  </ng-container>
+</div>
+
 <main class="modeSelector__container">
   <h1 class="modeSelector__title">Learn modes and scales on the guitar</h1>
   <div class="modeSelector">

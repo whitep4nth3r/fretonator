@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mode, NoteSymbol } from '../../../util/types';
+import { ModeSelectorObjects } from '../../../util/constants';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -10,6 +11,7 @@ import { Title } from '@angular/platform-browser';
 export class HomeIndexComponent implements OnInit {
   note: NoteSymbol = NoteSymbol.c;
   mode: Mode = Mode.ionian;
+  modeSelectorObjects = ModeSelectorObjects;
 
   constructor(private title: Title) {}
 

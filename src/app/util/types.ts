@@ -35,6 +35,7 @@ export enum Mode {
   mixolydian = 'mixolydian',
   aolian = 'aolian',
   locrian = 'locrian',
+  harmonicMinor = 'harmonicMinor'
 }
 
 export interface JamTrack {
