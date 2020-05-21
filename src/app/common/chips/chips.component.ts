@@ -14,6 +14,7 @@ import { noop } from 'rxjs';
 })
 export class ChipsComponent implements OnInit, ControlValueAccessor {
   @Input() name: string;
+  @Input() rounded: boolean;
   value: string | number;
   disabled: boolean;
 

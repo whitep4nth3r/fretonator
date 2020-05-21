@@ -9,6 +9,8 @@
        [ngModel]="chips.value"
        [value]="value">
 
-<label [for]="id" class="chip">
+<label [for]="id"
+       class="chip"
+       [class.chip--round]="chips.rounded">
   <ng-content></ng-content>
 </label>

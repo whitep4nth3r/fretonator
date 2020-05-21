@@ -21,6 +21,9 @@
   height: pxToRem(44);
   width: pxToRem(44);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .input {

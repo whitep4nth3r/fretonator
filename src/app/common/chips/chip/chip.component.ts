@@ -10,6 +10,7 @@ export class ChipComponent implements OnInit {
   @Input() id: string;
   @Input() value: string | number;
   @Input() disabled: boolean;
+  @Input() rounded: boolean;
   @HostBinding('attr.id') hostId = null;
 
   constructor(public chips: ChipsComponent) {

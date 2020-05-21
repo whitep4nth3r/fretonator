@@ -1,13 +1,13 @@
 <main class="modeSelector__container">
 <h1 class="modeSelector__title">Learn modes and scales on the guitar</h1>
 
-<app-chips name="key_base" [(ngModel)]="note" (ngModelChange)="resetNoteExtender()">
+<app-chips rounded="true"  name="key_base" [(ngModel)]="note" (ngModelChange)="resetNoteExtender()">
   <app-chip *ngFor="let thisNote of octave"
             [id]="thisNote"
             [value]="thisNote">{{thisNote | titlecase}}</app-chip>
 </app-chips>
 
-<app-chips name="key_extender" [(ngModel)]="noteExtender">
+<app-chips rounded="true" name="key_extender" [(ngModel)]="noteExtender">
   <app-chip *ngIf="!(note === 'f' || note === 'c')" id="flat" [value]="'_'">{{note | titlecase}}♭</app-chip>
   <app-chip id="natural" value="">{{note | titlecase}}</app-chip>
   <app-chip *ngIf="!(note === 'b' || note === 'e')" id="sharp" [value]="'#'">{{note | titlecase}}#</app-chip>
