@@ -1,0 +1,20 @@
+@import '../../../../styles/functions';
+@import '../../../../styles/typography';
+
+.videoServer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.videoServer__title {
+  @include font_large();
+  margin-bottom: pxToRem($grid-unit * 4);
+}
+
+.videoServer__link {
+  color: var(--black);
+  font-size: pxToRem(26);
+}

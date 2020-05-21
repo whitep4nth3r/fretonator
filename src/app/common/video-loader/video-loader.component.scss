@@ -1,4 +1,46 @@
+@import '../../../styles/vars';
+@import '../../../styles/functions';
+@import '../../../styles/typography';
+
 .videoLoader {
+  display: block;
+  max-width: $screen-med;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: pxToRem($grid-unit * 4);
+  padding-bottom: pxToRem($grid-unit * 4);
+}
+
+.videoLoader__meta {
+  display: block;
+  margin-top: pxToRem($grid-unit * 4);
+  margin-bottom: pxToRem($grid-unit * 4);
+}
+
+.videoLoader__title {
+  font-weight: var(--font-weight-bold);
+  font-size: pxToRem(24);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-display);
+  font-family: var(--font-family-main);
+  margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.videoLoader__metaDetail {
+  font-size: pxToRem(20);
+  font-style: italic;
+}
+
+.videoLoader__metaDetail--key {
+  font-weight: var(--font-weight-bold);
+}
+
+.videoLoader__metaLabel {
+  font-size: pxToRem(14);
+  display: block;
+}
+
+.videoLoader__video {
   display: block;
   width: 100%;
   height: 0;
@@ -16,3 +58,4 @@
   left: 0;
   right: 0;
 }
+
