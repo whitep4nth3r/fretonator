@@ -1,4 +1,3 @@
-<main>
 <main class="modeSelector__container">
   <h1 class="modeSelector__title">Learn modes and scales on the guitar</h1>
   <div class="modeSelector">
@@ -59,7 +58,7 @@
 
   <app-fretonator [scale]="note | symbolToNoteObj | getScaleFromModeMap: mode"
                   [fretMap]="note | symbolToNoteObj | generateFretMap: mode"></app-fretonator>
-
-<app-video-loader [jamTrack]="note | symbolToNoteObj | getJamTrack: mode"></app-video-loader>
-
+  <section>
+    <app-video-loader [jamTrack]="note | symbolToNoteObj | getJamTrack: mode"></app-video-loader>
+  </section>
 </main>

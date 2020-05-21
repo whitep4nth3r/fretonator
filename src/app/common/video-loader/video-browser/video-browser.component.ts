@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class VideoBrowserComponent implements OnInit {
   @Input() youTubeId: string;
+  @Input() title: string;
   constructor() { }
 
   ngOnInit(): void {
