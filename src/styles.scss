@@ -1,9 +1,10 @@
-@import './styles/vars';
-@import './styles/mixins';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+@import "./styles/vars";
+@import "./styles/mixins";
 
 :root {
   --background-color-base: #f9f9f9;
-  --font-family-main: 'Montserrat', sans-serif;
+  --font-family-main: "Montserrat", sans-serif;
 
   --string-color: #1c1c1c;
   --string-label-color: #1c1c1c;
