@@ -30,7 +30,9 @@
                 "output": "./"
               }
             ],
-            "styles": ["apps/fretonator-web/src/styles.scss"],
+            "styles": [
+              "apps/fretonator-web/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -88,7 +90,10 @@
               "apps/fretonator-web/tsconfig.app.json",
               "apps/fretonator-web/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/fretonator-web/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/fretonator-web/**"
+            ]
           }
         },
         "test": {
@@ -170,15 +175,21 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/fretonator-web-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/fretonator-web-e2e/**"]
+            "tsConfig": [
+              "apps/fretonator-web-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/fretonator-web-e2e/**"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "3db214b2-9621-4ee7-a319-253708aa4b45"
   },
   "schematics": {
     "@nrwl/angular:application": {
