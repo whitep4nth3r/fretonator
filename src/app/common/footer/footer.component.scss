@@ -31,9 +31,5 @@
   display: block;
   margin-bottom: pxToRem($grid-unit * 2);
 
-  @include focus_accessible(4px);
-
-  &:focus {
-    outline-color: var(--grey);
-  }
+  @include focus_accessible($focus_box_shadow_color_alt);
 }

@@ -11,6 +11,8 @@
 
 <label [for]="id"
        class="chip"
-       [class.chip--round]="chips.rounded">
+       [class.chip--round]="chips.rounded"
+       [class.chip--grey]="selectedColor === 'grey'"
+>
   <ng-content></ng-content>
 </label>

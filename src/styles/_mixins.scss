@@ -9,11 +9,11 @@
   padding-right: pxToRem($grid-unit * 3);
 }
 
-@mixin focus_accessible($outline-offset: 0) {
+@mixin focus_accessible($shadow_color: $focus_box_shadow_color) {
   &:focus {
-    outline-width: 2px;
-    outline-color: var(--peach);
-    outline-style: solid;
-    outline-offset: $outline-offset;
+    outline-width: 0;
+    box-shadow: transparentize($shadow_color, 0.1) 0 0 0 0.25rem;
+    transition: box-shadow 0.2s ease 0s;
   }
 }
+

@@ -9,12 +9,16 @@
   margin-bottom: pxToRem($grid-unit * 4);
 }
 
-.modeSelector__title {
-  @include font_large;
-  margin-top: pxToRem($grid-unit * 2);
-  margin-bottom: pxToRem($grid-unit * 2);
-  text-align: center;
-  max-width: $screen-sm;
+.modeSelector__chipsContainer {
+  margin-bottom: pxToRem($grid-unit * 3);
+  max-width: $mode_selector_max_width;
   margin-left: auto;
   margin-right: auto;
+}
+
+.modeSelector__label {
+  @include font_medium();
+  font-weight: var(--font-weight-bold);
+  margin-top: pxToRem($grid-unit * 1);
+  margin-bottom: pxToRem($grid-unit * 1);
 }

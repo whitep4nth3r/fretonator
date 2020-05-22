@@ -11,6 +11,8 @@ export class ChipComponent implements OnInit {
   @Input() value: string | number;
   @Input() disabled: boolean;
   @Input() rounded: boolean;
+  @Input() selectedColor: 'default' | 'grey';
+
   @HostBinding('attr.id') hostId = null;
 
   constructor(@Inject(forwardRef(() => ChipsComponent)) public chips: ChipsComponent) {

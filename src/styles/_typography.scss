@@ -20,6 +20,7 @@
   font-weight: var(--font-weight-normal);
   font-size: pxToRem(24);
   line-height: pxToRem(38);
+  text-transform: uppercase;
 }
 
 @mixin font_bodyCopy {

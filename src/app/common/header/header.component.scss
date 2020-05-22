@@ -9,6 +9,8 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  padding-top: pxToRem($grid-unit);
+  padding-bottom: pxToRem($grid-unit);
 }
 
 .header__siteLogo {
@@ -20,6 +22,8 @@
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
+
+  @include focus_accessible();
 }
 
 .header__links {
@@ -45,12 +49,13 @@
 .header__linksItemLink {
   color: var(--peach);
   font-size: pxToRem(14);
+  font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-display);
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.2s ease-in-out;
 
-  @include focus_accessible(4px);
+  @include focus_accessible();
 
   &:hover,
   &:focus {
