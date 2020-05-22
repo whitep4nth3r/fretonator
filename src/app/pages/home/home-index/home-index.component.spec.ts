@@ -27,7 +27,7 @@ describe('HomeIndexComponent', () => {
     TestBed.configureTestingModule({
       declarations: [HomeIndexComponentSpec],
       imports: [HomeModule],
-      providers: [{provide: Title, useClass: new MockTitle}],
+      providers: [{provide: Title, useClass: MockTitle}],
     }).compileComponents();
   }));
 
@@ -38,7 +38,7 @@ describe('HomeIndexComponent', () => {
     fixture.detectChanges();
   });
 
-  //to do wtf
+  // to do wtf
   xit('should create', () => {
     expect(component).toBeTruthy();
   });
