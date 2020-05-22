@@ -318,4 +318,4 @@ export const ModeSelectorObjects = [
     name: Mode.harmonicMinor,
     displayName: 'Harmonic Minor',
   },
-]
+];

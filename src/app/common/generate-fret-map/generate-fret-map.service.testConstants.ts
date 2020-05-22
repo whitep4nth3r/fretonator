@@ -605,11 +605,3 @@ export const dIonianFretMappings: FretMap = [
   { string: 'G', fret: 11, displayName: 'F#', degree: 'mediant' },
   { string: 'G', fret: 12, displayName: 'G', degree: 'subdominant' },
 ];
-
-export const cIonianJamTrack: JamTrack = {
-  key: NoteSymbol.c,
-  mode: Mode.ionian,
-  youTubeId: 'test123',
-  title: 'C Ionian Jam Track',
-  creator: 'Guitar Whizz'
-};

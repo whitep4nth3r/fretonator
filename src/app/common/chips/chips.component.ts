@@ -24,9 +24,9 @@ export class ChipsComponent implements OnInit, ControlValueAccessor {
   ngOnInit(): void {
   }
 
-  onChange = (value: string | number) => noop
+  onChange = (value: string | number) => noop;
 
-  onTouched = () => noop
+  onTouched = () => noop;
 
   registerOnChange(fn: any) {
     this.onChange = fn;
@@ -41,7 +41,7 @@ export class ChipsComponent implements OnInit, ControlValueAccessor {
   }
 
   setDisabledState(value: boolean) {
-    this.disabled = value
+    this.disabled = value;
   }
 
 }

@@ -1,5 +1,4 @@
 import { SymbolToNoteObjPipe } from './symbol-to-note-obj.pipe';
-import { NoteSymbol } from '../../../util/types';
 
 describe('SymbolToNoteObjPipe', () => {
   it('creates an instance', () => {
@@ -9,7 +8,7 @@ describe('SymbolToNoteObjPipe', () => {
 
   it('returns a d sharp note object given c# is provided', () => {
     const pipe = new SymbolToNoteObjPipe();
-    const result = pipe.transform(NoteSymbol.dSharp);
+    const result = pipe.transform('d', '#');
 
     expect(result).toEqual({
       name: 'd',
@@ -22,7 +21,7 @@ describe('SymbolToNoteObjPipe', () => {
 
   it('returns a d flat note object given d_ is provided', () => {
     const pipe = new SymbolToNoteObjPipe();
-    const result = pipe.transform(NoteSymbol.dFlat);
+    const result = pipe.transform('d', '_');
 
     expect(result).toEqual({
       name: 'd',
@@ -35,7 +34,7 @@ describe('SymbolToNoteObjPipe', () => {
 
   it('returns d natural note object given d is provided', () => {
     const pipe = new SymbolToNoteObjPipe();
-    const result = pipe.transform(NoteSymbol.d);
+    const result = pipe.transform('d', '');
 
     expect(result).toEqual({
       name: 'd',

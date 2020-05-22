@@ -1,6 +1,6 @@
-@import '../../../styles/vars';
-@import '../../../styles/functions';
-@import '../../../styles/mixins';
+@import "../../../styles/vars";
+@import "../../../styles/functions";
+@import "../../../styles/mixins";
 
 .header {
   background-color: var(--black);
@@ -18,7 +18,7 @@
 }
 
 .header__siteLogoImage {
-  height: 100%;
+  height: 50px;
   object-fit: contain;
 }
 

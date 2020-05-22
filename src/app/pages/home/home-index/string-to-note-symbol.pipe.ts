@@ -10,10 +10,10 @@ export class StringToNoteSymbolPipe implements PipeTransform {
     Object.keys(NoteSymbol).forEach((value): NoteSymbol => {
       const item = NoteSymbol[value];
       if (item === value) {
-       return item
+       return item;
       }
     });
 
-    return false
+    return false;
   }
 }

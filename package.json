@@ -9,6 +9,7 @@
     "build": "ng build",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:update": "jest --updateSnapshot",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run fretonator:serve-ssr",

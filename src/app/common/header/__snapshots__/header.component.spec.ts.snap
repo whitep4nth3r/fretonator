@@ -25,17 +25,7 @@ exports[`HeaderComponent should match snapshot 1`] = `
           class="header__linksItemLink"
           href="/about"
         >
-          About
-        </a>
-      </li>
-      <li
-        class="header__linksItem"
-      >
-        <a
-          class="header__linksItemLink"
-          href="/contact"
-        >
-          Contact
+          What is this?
         </a>
       </li>
     </ul>

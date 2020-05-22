@@ -5,7 +5,7 @@ import { NoteObject, NoteSymbol } from '../../../util/types';
   name: 'symbolToNoteObj',
 })
 export class SymbolToNoteObjPipe implements PipeTransform {
-  transform(note:string, noteExtender: string): NoteObject {
+  transform(note: string, noteExtender: string): NoteObject {
     return {
       name: note,
       flat: noteExtender === '_',

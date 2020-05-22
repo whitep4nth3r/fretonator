@@ -55,22 +55,15 @@ describe('HeaderComponent', () => {
   describe('Links', () => {
 
     let about: DebugElement;
-    let contact: DebugElement;
 
     beforeEach(() => {
       const links = fixture.debugElement.queryAll(selectors.links);
       about = links[0];
-      contact = links[1];
     });
 
     it('About should link to /about', () => {
       expect(about.properties.href).toBe('/about');
     });
-
-    it('Contact should link to /contact', () => {
-      expect(contact.properties.href).toBe('/contact');
-    });
-
   });
 
 });
