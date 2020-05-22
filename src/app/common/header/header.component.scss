@@ -4,7 +4,6 @@
 
 .header {
   background-color: var(--black);
-  height: pxToRem(160);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -14,12 +13,19 @@
 
 .header__siteLogo {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: pxToRem(160);
+  width: pxToRem(160);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.header__siteLogoImage {
-  height: 50px;
-  object-fit: contain;
+.header__siteLogoSvg {
+  flex: 1;
+  height: 100%;
+  width: 100%;
 }
 
 .header__links {
