@@ -1,0 +1,73 @@
+<ng-template #string let-stringName="stringName" let-string="string">
+  <ng-container *ngFor="let fret of frets">
+    <div
+      class="fretboard__cell"
+      [class.fretboard__cell--string]="fret === 0"
+      [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: string:fret"
+      [attr.data-string-name]="fret === 0 ? stringName : null"
+      [attr.data-string]="string"
+      [attr.data-fret]="fret"
+      [attr.data-degree]="(fretMap | getFretFromFretMap: string : fret)?.degree"
+      [attr.data-display-note]="(fretMap | getFretFromFretMap: string : fret)?.displayName"
+    ></div>
+  </ng-container>
+</ng-template>
+
+<div class="fretboard__container">
+  <div data-fretboard class="fretboard">
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'e', string: 'E' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'B', string: 'B' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'G', string: 'G' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'D', string: 'D' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'A', string: 'A' }"
+    ></ng-container>
+
+    <ng-container
+      [ngTemplateOutlet]="string"
+      [ngTemplateOutletContext]="{ stringName: 'E', string: 'E' }"
+    ></ng-container>
+  </div>
+</div>
+
+<div class="degrees">
+  <h4 class="degreesDisplay__title">Scale degrees</h4>
+  <div class="degreesDisplay">
+    <span class="degreesDisplay__degree degreesDisplay__degree--tonic">1</span>
+    <span class="degreesDisplay__degree degreesDisplay__degree--mediant"
+    >3</span
+    >
+    <span class="degreesDisplay__degree degreesDisplay__degree--dominant"
+    >5</span
+    >
+  </div>
+</div>
+
+<div class="scaleDisplay">
+  <h4 class="scaleDisplay__title">Scale</h4>
+  <div class="scaleDisplay__notes">
+    <ng-container *ngFor="let scaleNote of scale; let i = index">
+      <h5 class="scaleDisplay__note">
+        {{ scaleNote }}
+        <span *ngIf="i < scale.length - 1"> - </span>
+      </h5>
+    </ng-container>
+  </div>
+</div>

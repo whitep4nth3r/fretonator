@@ -1,0 +1,35 @@
+@import "../../../styles/vars";
+@import "../../../styles/functions";
+@import "../../../styles/mixins";
+
+.footer {
+  background-color: var(--peach);
+  padding: pxToRem($grid-unit * 2);
+  box-sizing: border-box;
+  margin-top: pxToRem($grid-unit * 10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: pxToRem($grid-unit * 2);
+  padding-bottom: pxToRem($grid-unit * 2);
+}
+
+.footer__copyright {
+  color: var(--black);
+  font-size: pxToRem(12);
+  letter-spacing: var(--letter-spacing-display);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.footer__viewGithub {
+  color: var(--black);
+  font-size: pxToRem(12);
+  display: block;
+  margin-bottom: pxToRem($grid-unit * 2);
+
+  @include focus_accessible($focus_box_shadow_color_alt);
+}

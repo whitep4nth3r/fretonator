@@ -1,0 +1,31 @@
+@import './vars';
+@import './functions';
+
+@mixin font_large {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-display);
+  text-transform: uppercase;
+  font-size: pxToRem(28);
+  line-height: pxToRem(36);
+
+  @media screen and (min-width: $screen-med) {
+    font-size: pxToRem(36);
+    line-height: pxToRem(44);
+  }
+}
+
+@mixin font_medium() {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-normal);
+  font-size: pxToRem(24);
+  line-height: pxToRem(38);
+  text-transform: uppercase;
+}
+
+@mixin font_bodyCopy {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-normal);
+  font-size: pxToRem(18);
+  line-height: pxToRem(30);
+}

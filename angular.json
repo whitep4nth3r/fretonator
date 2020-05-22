@@ -15,7 +15,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/fretonator-web",
+            "outputPath": "dist/fretonator-web/browser",
             "index": "apps/fretonator-web/src/index.html",
             "main": "apps/fretonator-web/src/main.ts",
             "polyfills": "apps/fretonator-web/src/polyfills.ts",
@@ -23,7 +23,12 @@
             "aot": true,
             "assets": [
               "apps/fretonator-web/src/favicon.ico",
-              "apps/fretonator-web/src/assets"
+              "apps/fretonator-web/src/assets",
+              {
+                "glob": "_redirects",
+                "input": "./",
+                "output": "./"
+              }
             ],
             "styles": ["apps/fretonator-web/src/styles.scss"],
             "scripts": []
@@ -93,6 +98,53 @@
             "tsConfig": "apps/fretonator-web/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "apps/fretonator-web/src/test-setup.ts"
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/fretonator-web/server",
+            "main": "apps/fretonator-web/server.ts",
+            "tsConfig": "apps/fretonator-web/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "apps/fretonator-web/src/environments/environment.ts",
+                  "with": "apps/fretonator-web/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "fretonator-web:build",
+            "serverTarget": "fretonator-web:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "fretonator-web:build:production",
+              "serverTarget": "fretonator-web:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "fretonator-web:build:production",
+            "serverTarget": "fretonator-web:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }

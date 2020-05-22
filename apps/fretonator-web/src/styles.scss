@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+@import "./styles/vars";
+@import "./styles/mixins";
+
+:root {
+  --background-color-base: #f9f9f9;
+  --font-family-main: "Montserrat", sans-serif;
+
+  --string-color: #1c1c1c;
+  --string-label-color: #1c1c1c;
+
+  --fret-color: rgba(28, 28, 28, 0.2);
+  --fret-width-base: 2px;
+  --fretboard-height: 100px;
+  --string-height-base: 48px;
+
+  --note-color: #fafac6;
+  --note-background: #1c1c1c;
+  --note-height: 36px;
+
+  --note-bg-tonic: #fecdaa;
+  --note-color-tonic: #1c1c1c;
+
+  --note-bg-mediant: #73eedc;
+  --note-color-mediant: #1c1c1c;
+
+  --note-bg-dominant: #adb9e3;
+  --note-color-dominant: #1c1c1c;
+
+  --border-width-base: 1px;
+  --border-radius-base: 2px;
+
+  --black: #1c1c1c;
+  --white: #ffffff;
+  --grey: #474350;
+  --yellow: #fafac6;
+  --peach: #fecdaa;
+  --blue: #3993dd;
+  --turquoise: #73eedc;
+  --purple: #adb9e3;
+
+  --font-weight-normal: 300;
+  --font-weight-bold: 500;
+  --font-weight-display: 700;
+  --letter-spacing-display: 2px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-normal);
+  background-color: var(--background-color-base);
+
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: var(--font-weight-normal);
+  }
+}

@@ -25,11 +25,14 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
+    "dev:ssr": "ng run fretonator-web:serve-ssr",
+    "serve:ssr": "node dist/fretonator-web/server/main.js",
+    "build:ssr": "ng build --prod && ng run fretonator-web:server:production",
+    "prerender": "ng run fretonator-web:prerender --routesFile _routes.txt"
   },
   "private": true,
   "dependencies": {
-    "@nrwl/angular": "9.3.0",
     "@angular/animations": "^9.1.0",
     "@angular/common": "^9.1.0",
     "@angular/compiler": "^9.1.0",
@@ -37,14 +40,20 @@
     "@angular/forms": "^9.1.0",
     "@angular/platform-browser": "^9.1.0",
     "@angular/platform-browser-dynamic": "^9.1.0",
+    "@angular/platform-server": "^9.1.0",
     "@angular/router": "^9.1.0",
+    "@nguniversal/express-engine": "^9.1.1",
+    "@nrwl/angular": "9.3.0",
     "core-js": "^2.5.4",
+    "express": "^4.15.2",
     "rxjs": "~6.5.4",
     "zone.js": "^0.10.2"
   },
   "devDependencies": {
     "@angular/cli": "9.1.0",
+    "@nguniversal/builders": "^9.1.1",
     "@nrwl/workspace": "9.3.0",
+    "@types/express": "^4.17.0",
     "@types/node": "~8.9.4",
     "dotenv": "6.2.0",
     "ts-node": "~7.0.0",
