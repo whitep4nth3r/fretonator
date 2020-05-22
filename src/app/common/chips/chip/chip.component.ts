@@ -1,5 +1,5 @@
-import { Component, HostBinding, Input, OnInit } from '@angular/core';
-import { ChipsComponent } from '../chips.component';
+import {Component, forwardRef, HostBinding, Inject, Input, OnInit} from '@angular/core';
+import {ChipsComponent} from '../chips.component';
 
 @Component({
   selector: 'app-chip',
@@ -13,7 +13,7 @@ export class ChipComponent implements OnInit {
   @Input() rounded: boolean;
   @HostBinding('attr.id') hostId = null;
 
-  constructor(public chips: ChipsComponent) {
+  constructor(@Inject(forwardRef(() => ChipsComponent)) public chips: ChipsComponent) {
   }
 
   ngOnInit(): void {
