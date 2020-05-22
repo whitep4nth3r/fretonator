@@ -35,7 +35,7 @@
   width: 0;
   height: 0;
   appearance: none;
-  visibility: hidden;
+  opacity: 0;
 }
 
 .input:checked ~ .chip {
