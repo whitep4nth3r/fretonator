@@ -1,8 +1,8 @@
 import { FocusOnRouterDirective } from './focus-on-router.directive';
 import { Component } from '@angular/core';
-import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FocusOnRouterModule } from './focus-on-router.module';
-import { NavigationEnd, Route, Router } from '@angular/router';
+import { Route, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 
