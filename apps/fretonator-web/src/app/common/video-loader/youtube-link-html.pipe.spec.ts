@@ -1,22 +1,32 @@
 import { YoutubeLinkHtmlPipe } from './youtube-link-html.pipe';
-import { DomSanitizer } from '@angular/platform-browser';
-import { TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 
 describe('YouTubeLinkHtmlPipe', () => {
-  let domSanitizer: DomSanitizer;
+  let pipe: YoutubeLinkHtmlPipe;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      providers: [YoutubeLinkHtmlPipe]
+    });
+    TestBed.compileComponents();
+  }));
+
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    domSanitizer = TestBed.inject(DomSanitizer);
+    pipe = TestBed.inject(YoutubeLinkHtmlPipe);
   });
 
   it('create an instance', () => {
-    const pipe = new YoutubeLinkHtmlPipe(domSanitizer);
     expect(pipe).toBeTruthy();
   });
 
-  xit('returns an embed a watch link', () => {
-    const pipe = new YoutubeLinkHtmlPipe(domSanitizer);
-    const result = pipe.transform('123');
-    expect(result).toBe('https://www.youtube.com/watch?v=123');
+  it('returns HTML', () => {
+    const result = pipe.transform('123') as any;
+    expect(result.getTypeName()).toBe('HTML');
   });
+
+  it('returns the correct resource', () => {
+    const result = pipe.transform('123') as any;
+    expect(result.changingThisBreaksApplicationSecurity).toBe('https://www.youtube.com/watch?v=123');
+  });
+
 });

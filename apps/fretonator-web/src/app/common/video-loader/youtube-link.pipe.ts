@@ -6,7 +6,9 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 })
 export class YouTubeLinkPipe implements PipeTransform {
 
-  constructor(private domSanitizer: DomSanitizer) {}
+  constructor(private domSanitizer: DomSanitizer) {
+  }
+
   transform(youTubeId: string): SafeUrl {
     return this.domSanitizer.bypassSecurityTrustUrl(`https://www.youtube.com/watch?v=${youTubeId}`);
   }

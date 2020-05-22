@@ -1,16 +1,33 @@
 import { YouTubeEmbedPipe } from './youtube-embed.pipe';
-import { DomSanitizer } from '@angular/platform-browser';
-import { TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
+import { SafeResourceUrl } from '@angular/platform-browser';
 
 describe('YoutubeEmbedPipe', () => {
-  let domSanitizer: DomSanitizer;
+  let pipe: YouTubeEmbedPipe;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      providers: [YouTubeEmbedPipe]
+    });
+    TestBed.compileComponents();
+  }));
+
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    domSanitizer = TestBed.inject(DomSanitizer);
+    pipe = TestBed.inject(YouTubeEmbedPipe);
   });
 
   it('create an instance', () => {
-    const pipe = new YouTubeEmbedPipe(domSanitizer);
     expect(pipe).toBeTruthy();
   });
+
+  it('returns a SafeResourceUrl', () => {
+    const result = pipe.transform('123') as any;
+    expect(result.getTypeName()).toBe('ResourceURL');
+  });
+
+  it('returns the correct resource', () => {
+    const result = pipe.transform('123') as any;
+    expect(result.changingThisBreaksApplicationSecurity).toBe('https://www.youtube.com/embed/123');
+  });
+
 });
