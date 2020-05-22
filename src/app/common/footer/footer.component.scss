@@ -1,6 +1,6 @@
-@import '../../../styles/vars';
-@import '../../../styles/functions';
-@import '../../../styles/mixins';
+@import "../../../styles/vars";
+@import "../../../styles/functions";
+@import "../../../styles/mixins";
 
 .footer {
   background-color: var(--peach);
@@ -19,7 +19,7 @@
   color: var(--black);
   font-size: pxToRem(12);
   letter-spacing: var(--letter-spacing-display);
-  font-weight: var(--font-weight-display);
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   display: block;
   margin-bottom: pxToRem($grid-unit * 2);
