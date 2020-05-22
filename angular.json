@@ -10,7 +10,7 @@
       },
       "root": "apps/fretonator-web",
       "sourceRoot": "apps/fretonator-web/src",
-      "prefix": "fretonator",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
