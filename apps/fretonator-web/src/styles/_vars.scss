@@ -21,7 +21,3 @@ $hamburger_layer-border-radius: 2px;
 $hamburger_hover-opacity: 0.7;
 $hamburger_active-layer-color: $hamburger_layer-color;
 $hamburger_active-hover-opacity: $hamburger_hover-opacity;
-
-$hamburger_hover-filter: opacity(50%) !default;
-$hamburger_active-hover-filter: $hamburger_hover-filter !default;
-
