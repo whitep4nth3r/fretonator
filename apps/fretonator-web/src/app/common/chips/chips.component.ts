@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input, OnInit } from '@angular/core';
+import { Component, forwardRef, HostBinding, Input, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { noop } from 'rxjs';
 
@@ -9,12 +9,15 @@ import { noop } from 'rxjs';
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => ChipsComponent),
-    multi: true,
-  }],
+    multi: true
+  }]
 })
 export class ChipsComponent implements OnInit, ControlValueAccessor {
+  @HostBinding('attr.aria-label') private readonly _hostAriaLabel = null;
+  @Input('aria-label') ariaLabel: string;
   @Input() name: string;
   @Input() rounded: boolean;
+
   value: string | number;
   disabled: boolean;
 

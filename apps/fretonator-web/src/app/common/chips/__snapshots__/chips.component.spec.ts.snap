@@ -16,56 +16,62 @@ exports[`ChipsComponent should match the snapshot 1`] = `
       formcontrolname="chip"
       name="chips-test"
     >
-      <div
-        class="chips"
-        role="radiogroup"
+      <fieldset
+        class="fieldset"
       >
-        <app-chip
-          value="one"
+        <div
+          class="chips"
         >
-          <input
-            class="input ng-untouched ng-pristine ng-valid"
-            id="one"
-            type="radio"
-          />
-          <label
-            class="chip"
-            for="one"
+          <app-chip
+            value="one"
           >
-            One
-          </label>
-        </app-chip>
-        <app-chip
-          value="two"
-        >
-          <input
-            class="input ng-untouched ng-pristine ng-valid"
-            id="two"
-            type="radio"
-          />
-          <label
-            class="chip"
-            for="two"
+            <input
+              class="input ng-untouched ng-pristine ng-valid"
+              id="one"
+              name="chips-test"
+              type="radio"
+            />
+            <label
+              class="chip"
+              for="one"
+            >
+              One
+            </label>
+          </app-chip>
+          <app-chip
+            value="two"
           >
-            Two
-          </label>
-        </app-chip>
-        <app-chip
-          value="three"
-        >
-          <input
-            class="input ng-untouched ng-pristine ng-valid"
-            id="three"
-            type="radio"
-          />
-          <label
-            class="chip"
-            for="three"
+            <input
+              class="input ng-untouched ng-pristine ng-valid"
+              id="two"
+              name="chips-test"
+              type="radio"
+            />
+            <label
+              class="chip"
+              for="two"
+            >
+              Two
+            </label>
+          </app-chip>
+          <app-chip
+            value="three"
           >
-            Two
-          </label>
-        </app-chip>
-      </div>
+            <input
+              class="input ng-untouched ng-pristine ng-valid"
+              id="three"
+              name="chips-test"
+              type="radio"
+            />
+            <label
+              class="chip"
+              for="three"
+            >
+              Two
+            </label>
+          </app-chip>
+        </div>
+      </fieldset>
     </app-chips>
   </form>
 </app-chips-spec>
