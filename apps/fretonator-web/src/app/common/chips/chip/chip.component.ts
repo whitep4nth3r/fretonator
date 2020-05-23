@@ -18,6 +18,8 @@ export class ChipComponent implements OnInit {
   @Input() disabled: boolean;
   @Input() selectedColor: SelectedColor = SelectedColor.default;
 
+  SelectedColor = SelectedColor;
+
   @HostBinding('attr.id') hostId = null;
 
   constructor(@Inject(forwardRef(() => ChipsComponent)) public chips: ChipsComponent) {
