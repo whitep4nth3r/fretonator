@@ -1,17 +1,24 @@
-import {Component, forwardRef, HostBinding, Inject, Input, OnInit} from '@angular/core';
-import {ChipsComponent} from '../chips.component';
+import { Component, forwardRef, HostBinding, Inject, Input, OnInit } from '@angular/core';
+import { ChipsComponent } from '../chips.component';
+
+export enum SelectedColor {
+  default = 'default',
+  grey = 'grey',
+}
+
 
 @Component({
   selector: 'app-chip',
   templateUrl: './chip.component.html',
-  styleUrls: ['./chip.component.scss'],
+  styleUrls: ['./chip.component.scss']
 })
 export class ChipComponent implements OnInit {
   @Input() id: string;
   @Input() value: string | number;
   @Input() disabled: boolean;
-  @Input() rounded: boolean;
-  @Input() selectedColor: 'default' | 'grey';
+  @Input() selectedColor: SelectedColor = SelectedColor.default;
+
+  SelectedColor = SelectedColor;
 
   @HostBinding('attr.id') hostId = null;
 

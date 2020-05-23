@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChipsComponent should match the snapshot 1`] = `
+<app-chips-spec
+  disableSecond="false"
+  rounded="false"
+  selectedColor={[Function String]}
+  testForm={[Function FormGroup]}
+>
+  <form
+    class="ng-untouched ng-pristine ng-valid"
+    novalidate=""
+  >
+    <app-chips
+      class="ng-untouched ng-pristine ng-valid"
+      formcontrolname="chip"
+      name="chips-test"
+    >
+      <div
+        class="chips"
+        role="radiogroup"
+      >
+        <app-chip
+          value="one"
+        >
+          <input
+            class="input ng-untouched ng-pristine ng-valid"
+            id="one"
+            type="radio"
+          />
+          <label
+            class="chip"
+            for="one"
+          >
+            One
+          </label>
+        </app-chip>
+        <app-chip
+          value="two"
+        >
+          <input
+            class="input ng-untouched ng-pristine ng-valid"
+            id="two"
+            type="radio"
+          />
+          <label
+            class="chip"
+            for="two"
+          >
+            Two
+          </label>
+        </app-chip>
+        <app-chip
+          value="three"
+        >
+          <input
+            class="input ng-untouched ng-pristine ng-valid"
+            id="three"
+            type="radio"
+          />
+          <label
+            class="chip"
+            for="three"
+          >
+            Two
+          </label>
+        </app-chip>
+      </div>
+    </app-chips>
+  </form>
+</app-chips-spec>
+`;
