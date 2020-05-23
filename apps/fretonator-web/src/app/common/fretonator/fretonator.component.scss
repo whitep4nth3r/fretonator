@@ -2,11 +2,14 @@
 @import "../../../styles/functions";
 
 .fretboard__container {
-  margin-top: pxToRem($grid-unit * 12);
+  margin-top: pxToRem($grid-unit * 1);
   max-width: $fretonator_max_width;
   margin-left: auto;
   margin-right: auto;
-  padding: pxToRem($grid-unit * 4);
+  padding-right: 0;
+  padding-left: pxToRem($grid-unit * 4);
+  padding-bottom: pxToRem($grid-unit * 4);
+  padding-top: pxToRem($grid-unit * 9);
   overflow-x: auto;
 }
 
@@ -69,7 +72,7 @@
     bottom: 50%;
     left: 0;
     right: 0;
-    transform: translatey(calc(50% - var(--border-width-base)));
+    transform: translatey(calc(50% - 1px));
   }
 
   &:nth-child(-n + 13) {
@@ -140,13 +143,13 @@
   }
 
   &:nth-child(-n + 13):after {
-    transform: translate(-50%, var(--border-width-base));
+    transform: translate(-50%, 1px);
   }
 
   &:nth-last-child(-n + 13):after {
     bottom: 0;
     top: unset;
-    transform: translate(-50%, calc(50% - var(--border-width-base)));
+    transform: translate(-50%, calc(50% - 1px));
   }
 
   .fretboard__marker {
@@ -243,3 +246,27 @@
   display: inline;
   font-size: pxToRem(32);
 }
+
+.arrowHint {
+  position: relative;
+  display: block;
+}
+
+.arrowHint__arrow {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+
+  &:before,
+  &:after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 512 512'%3E%3Cpath fill='%233993dd' d='M319.1 217c20.2 20.2 19.9 53.2-.6 73.7s-53.5 20.8-73.7.6l-190-190c-20.1-20.2-19.8-53.2.7-73.7S109 6.8 129.1 27l190 190z'/%3E%3Cpath fill='%233993dd' d='M319.1 290.5c20.2-20.2 19.9-53.2-.6-73.7s-53.5-20.8-73.7-.6l-190 190c-20.2 20.2-19.9 53.2.6 73.7s53.5 20.8 73.7.6l190-190z'/%3E%3C/svg%3E");
+  }
+
+  @media screen and (min-width: 712px) {
+    display: none;
+  }
+}
+
+
