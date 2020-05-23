@@ -152,10 +152,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: pxToRem($grid-unit);
-  padding-right: pxToRem($grid-unit);
-  padding-top: pxToRem($grid-unit * 2);
-  padding-bottom: pxToRem($grid-unit * 2);
+  padding: pxToRem($grid-unit * 2) pxToRem($grid-unit);
 
   @media screen and (min-width: $screen-med) {
     display: inline-block;

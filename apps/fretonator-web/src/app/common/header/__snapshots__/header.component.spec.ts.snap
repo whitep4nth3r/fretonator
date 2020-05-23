@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HeaderComponent should match snapshot 1`] = `
-<app-header>
+<app-header
+  isMenuVisible="false"
+>
   <header
     class="header"
   >
@@ -27,8 +29,20 @@ exports[`HeaderComponent should match snapshot 1`] = `
         </svg>
       </app-logo-with-text>
     </a>
+    <button
+      class="hamburger"
+      type="button"
+    >
+      <span
+        class="hamburger__box"
+      >
+        <span
+          class="hamburger__inner"
+        />
+      </span>
+    </button>
     <ul
-      class="header__links"
+      class="header__links header__links--hide"
     >
       <li
         class="header__linksItem"
