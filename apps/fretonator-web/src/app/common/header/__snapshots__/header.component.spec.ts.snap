@@ -13,6 +13,7 @@ exports[`HeaderComponent should match snapshot 1`] = `
       tabindex="-1"
     />
     <a
+      aria-label="Navigate to home"
       class="header__siteLogo"
       href="/"
     >
@@ -32,7 +33,6 @@ exports[`HeaderComponent should match snapshot 1`] = `
     <button
       aria-checked="false"
       aria-controls="headerLinks"
-      aria-expanded="false"
       aria-label="Menu Toggle"
       class="hamburger"
       role="switch"
@@ -47,6 +47,7 @@ exports[`HeaderComponent should match snapshot 1`] = `
       </span>
     </button>
     <ul
+      aria-expanded="false"
       class="header__links header__links--hide"
       id="headerLinks"
     >
