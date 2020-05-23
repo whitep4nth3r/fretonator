@@ -72,4 +72,8 @@ describe('HeaderComponent', () => {
     });
   });
 
+  //to do
+  describe('Menu toggle', () => {
+
+  })
 });

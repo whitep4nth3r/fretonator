@@ -7,7 +7,16 @@
     <app-logo-with-text></app-logo-with-text>
   </a>
 
-  <ul class="header__links">
+  <button class="hamburger"
+          [class.is__open]="isMenuVisible"
+          type="button"
+          (click)="toggleMenu()">
+    <span class="hamburger__box">
+      <span class="hamburger__inner"></span>
+    </span>
+  </button>
+
+  <ul class="header__links" *ngIf="isMenuVisible">
     <li class="header__linksItem">
       <a [routerLink]="['/']"
          [routerLinkActiveOptions]="{exact:true}"
