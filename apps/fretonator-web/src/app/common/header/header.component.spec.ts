@@ -10,8 +10,13 @@ describe('HeaderComponent', () => {
   const selectors = {
     logo: By.css('.header__siteLogo'),
     links: By.css('.header__linksItemLink'),
-    hamburger: By.css(`.hamburger`)
+    hamburger: By.css(`.hamburger`),
+    menu: By.css('.header__links')
   };
+
+  const classNames = {
+    menuHide: '.header__links--hide'
+  }
 
   @Component({
     selector: 'app-header-spec',
@@ -75,14 +80,16 @@ describe('HeaderComponent', () => {
 
   describe('toggleMenu()', () => {
     let hamburger: DebugElement;
+    let menu: DebugElement;
 
     beforeEach(() => {
       hamburger = fixture.debugElement.query(selectors.hamburger);
+      menu = fixture.debugElement.query(selectors.menu);
       hamburger.triggerEventHandler('click', new Event('click'));
     });
 
-    it('toggles isMenuVisible to true', () => {
-      expect(component.isMenuVisible).toBe(true);
+    it('removes the hidden links modifier', () => {
+      expect(menu.classes[classNames.menuHide]).toBeFalsy();
     });
   });
 });

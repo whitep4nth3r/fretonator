@@ -30,7 +30,12 @@ exports[`HeaderComponent should match snapshot 1`] = `
       </app-logo-with-text>
     </a>
     <button
+      aria-checked="false"
+      aria-controls="headerLinks"
+      aria-expanded="false"
+      aria-label="Menu Toggle"
       class="hamburger"
+      role="switch"
       type="button"
     >
       <span
@@ -43,6 +48,7 @@ exports[`HeaderComponent should match snapshot 1`] = `
     </button>
     <ul
       class="header__links header__links--hide"
+      id="headerLinks"
     >
       <li
         class="header__linksItem"
