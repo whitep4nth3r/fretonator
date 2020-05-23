@@ -2,7 +2,7 @@ import { FocusOnRouterDirective } from './focus-on-router.directive';
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FocusOnRouterModule } from './focus-on-router.module';
-import { NavigationEnd, Route, Router } from '@angular/router';
+import { Route, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 
@@ -58,19 +58,25 @@ describe('FocusOnRouterDirective', () => {
   it('should not focus on first navigation', () => {
     const elem = fixture.debugElement.query(selectors.button);
     const spy = spyOn(elem.nativeElement, 'focus');
-    fixture.detectChanges();
-    router.navigate(['/']);
 
-    expect(spy).not.toHaveBeenCalled();
+    fixture.ngZone.run(async () => {
+      await router.navigate(['/']);
+      await fixture.whenStable();
+      expect(spy).not.toHaveBeenCalled();
+    });
+
   });
 
   it('should focus only on second navigation', () => {
     const elem = fixture.debugElement.query(selectors.button);
     const spy = spyOn(elem.nativeElement, 'focus');
 
-    const event = new NavigationEnd(1, '/', '/');
-    (router.events as any).next(event);
+    fixture.ngZone.run(async () => {
+      await router.navigate(['/']);
+      await router.navigate(['/', 'about']);
+      await fixture.whenStable();
+      expect(spy).toHaveBeenCalledTimes(1);
+    });
 
-    expect(spy).toHaveBeenCalledTimes(1);
   });
 });
