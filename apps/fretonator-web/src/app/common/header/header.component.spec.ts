@@ -10,13 +10,14 @@ describe('HeaderComponent', () => {
   const selectors = {
     logo: By.css('.header__siteLogo'),
     links: By.css('.header__linksItemLink'),
+    hamburger: By.css(`.hamburger`)
   };
 
   @Component({
     selector: 'app-header-spec',
     template: `
       <app-header></app-header>
-    `,
+    `
   })
   class HeaderComponentSpec {
   }
@@ -27,7 +28,7 @@ describe('HeaderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderComponentSpec],
-      imports: [RouterTestingModule, HeaderModule],
+      imports: [RouterTestingModule, HeaderModule]
     }).compileComponents();
   }));
 
@@ -72,8 +73,16 @@ describe('HeaderComponent', () => {
     });
   });
 
-  //to do
-  describe('Menu toggle', () => {
+  describe('toggleMenu()', () => {
+    let hamburger: DebugElement;
 
-  })
+    beforeEach(() => {
+      hamburger = fixture.debugElement.query(selectors.hamburger);
+      hamburger.triggerEventHandler('click', new Event('click'));
+    });
+
+    it('toggles isMenuVisible to true', () => {
+      expect(component.isMenuVisible).toBe(true);
+    });
+  });
 });
