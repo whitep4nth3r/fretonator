@@ -1,12 +1,27 @@
 <header class="header">
-  <a [routerLink]="['/']" class="header__siteLogo">
+  <span class="header__focusEl" appFocusOnRouter tabindex="-1"></span>
+  <a
+    [routerLink]="['/']"
+    class="header__siteLogo"
+  >
     <app-logo-with-text></app-logo-with-text>
   </a>
 
   <ul class="header__links">
     <li class="header__linksItem">
-      <a [routerLink]="['/', 'about']" class="header__linksItemLink">What is this?</a>
+      <a [routerLink]="['/']"
+         [routerLinkActiveOptions]="{exact:true}"
+         routerLinkActive="header__linksItemLink--active"
+         class="header__linksItemLink"
+      >Home</a
+      >
+    </li>
+    <li class="header__linksItem">
+      <a [routerLink]="['/', 'about']"
+         routerLinkActive="header__linksItemLink--active"
+         class="header__linksItemLink"
+      >What is this?</a
+      >
     </li>
   </ul>
-
 </header>

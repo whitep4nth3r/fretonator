@@ -5,6 +5,11 @@ exports[`HeaderComponent should match snapshot 1`] = `
   <header
     class="header"
   >
+    <span
+      appfocusonrouter=""
+      class="header__focusEl"
+      tabindex="-1"
+    />
     <a
       class="header__siteLogo"
       href="/"
@@ -30,7 +35,19 @@ exports[`HeaderComponent should match snapshot 1`] = `
       >
         <a
           class="header__linksItemLink"
+          href="/"
+          routerlinkactive="header__linksItemLink--active"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="header__linksItem"
+      >
+        <a
+          class="header__linksItemLink"
           href="/about"
+          routerlinkactive="header__linksItemLink--active"
         >
           What is this?
         </a>

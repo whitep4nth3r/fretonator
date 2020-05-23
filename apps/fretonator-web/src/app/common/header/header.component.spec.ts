@@ -46,7 +46,7 @@ describe('HeaderComponent', () => {
   });
 
   describe('Logo', () => {
-    it('should have a link to the home page', () => {
+    it('should have a link to the home page on the logo', () => {
       const logoElem = fixture.debugElement.query(selectors.logo);
       expect(logoElem.properties.href).toBe('/');
     });
@@ -54,11 +54,17 @@ describe('HeaderComponent', () => {
 
   describe('Links', () => {
 
+    let home: DebugElement;
     let about: DebugElement;
 
     beforeEach(() => {
       const links = fixture.debugElement.queryAll(selectors.links);
-      about = links[0];
+      home = links[0];
+      about = links[1];
+    });
+
+    it('Home should link to /', () => {
+      expect(home.properties.href).toBe('/');
     });
 
     it('About should link to /about', () => {

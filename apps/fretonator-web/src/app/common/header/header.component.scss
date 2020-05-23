@@ -13,6 +13,12 @@
   padding-bottom: pxToRem($grid-unit);
 }
 
+.header__focusEl {
+  &:focus {
+    outline: none;
+  }
+}
+
 .header__siteLogo {
   display: flex;
   justify-content: center;
@@ -61,4 +67,8 @@
   &:focus {
     color: var(--yellow);
   }
+}
+
+.header__linksItemLink--active {
+  border-bottom: pxToRem(2) solid var(--peach);
 }
