@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HeaderComponent should match snapshot 1`] = `
-<app-header>
+<app-header
+  isMenuVisible="false"
+>
   <header
     class="header"
   >
@@ -27,8 +29,26 @@ exports[`HeaderComponent should match snapshot 1`] = `
         </svg>
       </app-logo-with-text>
     </a>
+    <button
+      aria-checked="false"
+      aria-controls="headerLinks"
+      aria-expanded="false"
+      aria-label="Menu Toggle"
+      class="hamburger"
+      role="switch"
+      type="button"
+    >
+      <span
+        class="hamburger__box"
+      >
+        <span
+          class="hamburger__inner"
+        />
+      </span>
+    </button>
     <ul
-      class="header__links"
+      class="header__links header__links--hide"
+      id="headerLinks"
     >
       <li
         class="header__linksItem"

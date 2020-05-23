@@ -7,7 +7,23 @@
     <app-logo-with-text></app-logo-with-text>
   </a>
 
-  <ul class="header__links">
+  <button class="hamburger"
+          [class.is__open]="isMenuVisible"
+          (click)="toggleMenu()"
+          [attr.aria-checked]="isMenuVisible"
+          [attr.aria-expanded]="isMenuVisible"
+          aria-label="Menu Toggle"
+          aria-controls="headerLinks"
+          role="switch"
+          type="button">
+    <span class="hamburger__box">
+      <span class="hamburger__inner"></span>
+    </span>
+  </button>
+
+  <ul class="header__links"
+      id="headerLinks"
+      [class.header__links--hide]="!isMenuVisible">
     <li class="header__linksItem">
       <a [routerLink]="['/']"
          [routerLinkActiveOptions]="{exact:true}"
