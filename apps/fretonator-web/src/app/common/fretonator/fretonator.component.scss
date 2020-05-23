@@ -11,7 +11,6 @@
   padding-bottom: pxToRem($grid-unit * 4);
   padding-top: pxToRem($grid-unit * 9);
   overflow-x: auto;
-  position: relative;
 }
 
 .fretboard {
@@ -249,6 +248,11 @@
 }
 
 .arrowHint {
+  position: relative;
+  display: block;
+}
+
+.arrowHint__arrow {
   display: block;
   position: absolute;
   top: 0;
