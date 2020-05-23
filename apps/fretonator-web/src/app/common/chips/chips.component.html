@@ -1,3 +1,5 @@
-<div role="radiogroup" class="chips">
-  <ng-content select="app-chip"></ng-content>
-</div>
+<fieldset [attr.aria-label]="ariaLabel" class="fieldset">
+  <div class="chips">
+    <ng-content select="app-chip"></ng-content>
+  </div>
+</fieldset>
