@@ -16,7 +16,8 @@
     </span>
   </button>
 
-  <ul class="header__links" *ngIf="isMenuVisible">
+  <ul class="header__links"
+      [class.header__links--hide]="!isMenuVisible">
     <li class="header__linksItem">
       <a [routerLink]="['/']"
          [routerLinkActiveOptions]="{exact:true}"

@@ -60,6 +60,10 @@
   }
 
   @include focus_accessible($focus_box_shadow_color);
+
+  @media screen and (min-width: $screen-med) {
+    display: none;
+  }
 }
 
 .hamburger__box {
@@ -135,6 +139,14 @@
   display: block;
 }
 
+.header__links--hide {
+  display: none;
+
+  @media screen and (min-width: $screen-med) {
+    display: block !important;
+  }
+}
+
 .header__linksItem {
   display: flex;
   flex-direction: column;
@@ -144,6 +156,10 @@
   padding-right: pxToRem($grid-unit);
   padding-top: pxToRem($grid-unit * 2);
   padding-bottom: pxToRem($grid-unit * 2);
+
+  @media screen and (min-width: $screen-med) {
+    display: inline-block;
+  }
 }
 
 .header__linksItemLink {
