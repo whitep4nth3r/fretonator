@@ -1,65 +1,79 @@
-<main class="modeSelector__container">
-
-  <div class="modeSelector__chipsContainer">
-    <h2 class="modeSelector__label">Key</h2>
-
-    <app-chips rounded="true"
-               name="key_base"
-               aria-label="Base Key"
-               [(ngModel)]="note"
-               (ngModelChange)="resetNoteExtender()">
-
-      <app-chip *ngFor="let thisNote of octave"
-                [id]="thisNote"
-                [value]="thisNote"
-                selectedColor="default">{{thisNote | titlecase}}</app-chip>
-
-    </app-chips>
-
-    <app-chips rounded="true"
-               name="key_extender"
-               aria-label="Key Extender"
-               [(ngModel)]="noteExtender">
-
-      <app-chip *ngIf="!(note === 'f' || note === 'c')" id="flat"
-                [value]="'_'"
-                selectedColor="grey">{{note | titlecase}}♭
-      </app-chip>
-
-      <app-chip id="natural"
-                value=""
-                selectedColor="grey">{{note | titlecase}}</app-chip>
-
-      <app-chip *ngIf="!(note === 'b' || note === 'e')" id="sharp"
-                [value]="'#'"
-                selectedColor="grey">{{note | titlecase}}#
-      </app-chip>
-
-    </app-chips>
-
+<main>
+  <div class="hero">
+    <div class="hero__inner">
+      <h1 class="hero__title">How to use the Fretonator</h1>
+      <ol class="hero__list">
+        <li class="hero__text hero__text--peach" data-step="1"> Choose a starting note</li>
+        <li class="hero__text hero__text--yellow" data-step="2">Pick a mode</li>
+        <li class="hero__text hero__text--purple" data-step="3">Check out the fretboard</li>
+        <li class="hero__text hero__text--turq" data-step="4">Have a jam!</li>
+      </ol>
+    </div>
   </div>
 
-  <div class="modeSelector__chipsContainer">
-    <h2 class="modeSelector__label">Mode</h2>
 
-    <app-chips name="mode"
-               [(ngModel)]="mode"
-               aria-label="Mode">
+  <div class="modeSelector__container">
+    <div class="modeSelector__chipsContainer">
+      <h2 class="modeSelector__label">Starting note</h2>
 
-      <app-chip *ngFor="let thisMode of modeSelectorObjects"
-                [id]="thisMode.name"
-                [value]="thisMode.name"
-                selectedColor="default">{{thisMode.displayName}}</app-chip>
-    </app-chips>
+      <app-chips rounded="true"
+                 name="key_base"
+                 aria-label="Base Key"
+                 [(ngModel)]="note"
+                 (ngModelChange)="resetNoteExtender()">
+
+        <app-chip *ngFor="let thisNote of octave"
+                  [id]="thisNote"
+                  [value]="thisNote"
+                  selectedColor="default">{{thisNote | titlecase}}</app-chip>
+
+      </app-chips>
+
+      <app-chips rounded="true"
+                 name="key_extender"
+                 aria-label="Key Extender"
+                 [(ngModel)]="noteExtender">
+
+        <app-chip *ngIf="!(note === 'f' || note === 'c')" id="flat"
+                  [value]="'_'"
+                  selectedColor="grey">{{note | titlecase}}♭
+        </app-chip>
+
+        <app-chip id="natural"
+                  value=""
+                  selectedColor="grey">{{note | titlecase}}</app-chip>
+
+        <app-chip *ngIf="!(note === 'b' || note === 'e')" id="sharp"
+                  [value]="'#'"
+                  selectedColor="grey">{{note | titlecase}}#
+        </app-chip>
+
+      </app-chips>
+
+    </div>
+
+    <div class="modeSelector__chipsContainer">
+      <h2 class="modeSelector__label">Mode</h2>
+
+      <app-chips name="mode"
+                 [(ngModel)]="mode"
+                 aria-label="Mode">
+
+        <app-chip *ngFor="let thisMode of modeSelectorObjects"
+                  [id]="thisMode.name"
+                  [value]="thisMode.name"
+                  selectedColor="default">{{thisMode.displayName}}</app-chip>
+      </app-chips>
+
+    </div>
+
+    <app-fretonator [scale]="note | symbolToNoteObj: noteExtender | getScaleFromModeMap: mode"
+                    [fretMap]="note | symbolToNoteObj: noteExtender | generateFretMap: mode"
+                    [intervalPattern]="mode | getIntervalPatternFromMode"></app-fretonator>
+
+    <ng-container *ngIf="note | symbolToNoteObj: noteExtender | getJamTrack: mode">
+      <app-video-loader [jamTrack]="note | symbolToNoteObj: noteExtender | getJamTrack: mode"></app-video-loader>
+    </ng-container>
 
   </div>
-
-  <app-fretonator [scale]="note | symbolToNoteObj: noteExtender | getScaleFromModeMap: mode"
-                  [fretMap]="note | symbolToNoteObj: noteExtender | generateFretMap: mode"></app-fretonator>
-
-
-  <ng-container *ngIf="note | symbolToNoteObj: noteExtender | getJamTrack: mode">
-    <app-video-loader [jamTrack]="note | symbolToNoteObj: noteExtender | getJamTrack: mode"></app-video-loader>
-  </ng-container>
-
 </main>

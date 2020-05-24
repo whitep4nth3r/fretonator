@@ -52,27 +52,45 @@
   </div>
 </div>
 
-<div class="degrees">
-  <h4 class="degreesDisplay__title">Scale degrees</h4>
-  <div class="degreesDisplay">
-    <span class="degreesDisplay__degree degreesDisplay__degree--tonic">1</span>
-    <span class="degreesDisplay__degree degreesDisplay__degree--mediant"
-    >3</span
-    >
-    <span class="degreesDisplay__degree degreesDisplay__degree--dominant"
-    >5</span
-    >
-  </div>
-</div>
+<div class="infoContainer">
 
-<div class="scaleDisplay">
-  <h4 class="scaleDisplay__title">Scale</h4>
-  <div class="scaleDisplay__notes">
-    <ng-container *ngFor="let scaleNote of scale; let i = index">
-      <h5 class="scaleDisplay__note">
-        {{ scaleNote }}
-        <span *ngIf="i < scale.length - 1"> - </span>
-      </h5>
-    </ng-container>
+  <div class="infoContainer__row">
+    <div class="degrees">
+      <h4 class="degreesDisplay__title">Degrees</h4>
+      <div class="degreesDisplay">
+        <span class="degreesDisplay__degree degreesDisplay__degree--tonic">1</span>
+        <span class="degreesDisplay__degree degreesDisplay__degree--mediant"
+        >3</span
+        >
+        <span class="degreesDisplay__degree degreesDisplay__degree--dominant"
+        >5</span
+        >
+      </div>
+    </div>
+
+    <div class="scaleDisplay">
+      <h4 class="scaleDisplay__title">Scale</h4>
+      <div class="scaleDisplay__notes">
+        <ng-container *ngFor="let scaleNote of scale; let i = index">
+          <h5 class="scaleDisplay__note">
+            {{ scaleNote }}
+            <span *ngIf="i < scale.length - 1"> - </span>
+          </h5>
+        </ng-container>
+      </div>
+    </div>
   </div>
+
+  <div class="intervalDisplay">
+    <h4 class="intervalDisplay__title">Interval pattern</h4>
+    <div class="intervalDisplay__intervals">
+      <ng-container *ngFor="let integer of intervalPattern; let i = index">
+        <h5 class="intervalDisplay__interval">
+          {{ integer | convertIntervalIntegerToString }}
+        </h5>
+        <span class="intervalDisplay__separator" *ngIf="i < intervalPattern.length - 1"> - </span>
+      </ng-container>
+    </div>
+  </div>
+
 </div>
