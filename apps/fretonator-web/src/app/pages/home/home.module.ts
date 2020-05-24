@@ -11,6 +11,7 @@ import { VideoLoaderModule } from '../../common/video-loader/video-loader.module
 import { GetJamTrackPipe } from './home-index/get-jam-track.pipe';
 import { ChipsModule } from '../../common/chips/chips.module';
 import { FretonatorModule } from '../../common/fretonator/fretonator.module';
+import { GetIntervalPatternFromModePipe } from './home-index/get-interval-pattern-from-mode.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FretonatorModule } from '../../common/fretonator/fretonator.module';
     GenerateFretMapPipe,
     GetScaleFromModeMapPipe,
     GetJamTrackPipe,
+    GetIntervalPatternFromModePipe,
   ],
   imports: [
     CommonModule,

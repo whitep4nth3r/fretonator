@@ -9,6 +9,7 @@ import { FretMap, Scale } from '../../util/types';
 export class FretonatorComponent implements OnInit {
   @Input() fretMap: FretMap;
   @Input() scale: Scale;
+  @Input() intervalPattern: [];
   frets = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   constructor() {}
 
