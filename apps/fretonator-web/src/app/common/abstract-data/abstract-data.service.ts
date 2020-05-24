@@ -7,7 +7,9 @@ import { isPlatformBrowser } from '@angular/common';
   providedIn: 'root'
 })
 export class AbstractDataService {
-  service = isPlatformBrowser(this.platformId) ? this.localStorageService : this.inMemoryService;
+  service = isPlatformBrowser(this.platformId)
+    ? this.localStorageService
+    : this.inMemoryService;
 
   constructor(private localStorageService: LocalStorageService,
               private inMemoryService: InMemoryStorageService,

@@ -17,6 +17,7 @@ export class HomeIndexComponent implements OnInit {
   octave = Octave;
   showHowTo;
 
+
   constructor(private title: Title, private meta: Meta, private localStorage: AbstractDataService) {
   }
 
@@ -28,9 +29,17 @@ export class HomeIndexComponent implements OnInit {
     });
 
     const _showHowTo = this.localStorage.getItem('showHowTo');
-    console.log(_showHowTo);
-    this.showHowTo = _showHowTo === undefined || _showHowTo === null ? true : _showHowTo;
-    console.log(this.showHowTo)
+    switch(_showHowTo) {
+      case false:
+        this.showHowTo = false;
+        break;
+      case true:
+        this.showHowTo = true;
+        break;
+      default:
+        this.showHowTo = true;
+    }
+
   }
 
   resetNoteExtender() {
@@ -38,9 +47,7 @@ export class HomeIndexComponent implements OnInit {
   }
 
   toggleHowTo() {
-    console.log('toggle')
     this.showHowTo = !this.showHowTo;
     this.localStorage.setItem('showHowTo', this.showHowTo);
-    console.log('final value', this.showHowTo)
   }
 }

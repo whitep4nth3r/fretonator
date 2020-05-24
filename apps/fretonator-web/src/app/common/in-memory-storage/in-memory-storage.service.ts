@@ -6,18 +6,13 @@ import { Injectable } from '@angular/core';
 export class InMemoryStorageService {
   localStore: any = {};
 
-  constructor() {
-  }
-
-
   setItem(key: string, value: any) {
-    console.log(key, value);
-    this.localStore[key] = value;
+    this.localStore[key] = JSON.stringify(value);
   }
 
   getItem(key: string) {
-    console.log('get')
-    return this.localStore[key];
+    const data = this.localStore[key];
+    return data ? JSON.parse(data) : undefined;
   }
 
   removeItem(key: string) {
