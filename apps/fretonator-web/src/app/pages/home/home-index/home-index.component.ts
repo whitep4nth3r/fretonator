@@ -14,6 +14,7 @@ export class HomeIndexComponent implements OnInit {
   mode: Mode = Mode.ionian;
   modeSelectorObjects = ModeSelectorObjects;
   octave = Octave;
+  showHowTo = true;
 
   constructor(private title: Title, private meta: Meta) {}
 
@@ -24,5 +25,9 @@ export class HomeIndexComponent implements OnInit {
 
   resetNoteExtender() {
     this.noteExtender = '';
+  }
+
+  toggleHowTo() {
+    this.showHowTo = !this.showHowTo;
   }
 }
