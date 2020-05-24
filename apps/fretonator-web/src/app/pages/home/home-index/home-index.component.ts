@@ -13,14 +13,14 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
     trigger('openClose', [
       state('*', style({ height: '*', overflow: 'visible' })),
       state('void', style({ height: '0', overflow: 'hidden' })),
-      transition('* => void', [animate('0.3s')]),
-      transition('void => *', [animate('0.3s')])
+      transition('* => void', [animate('0.1s')]),
+      transition('void => *', [animate('0.1s')])
     ]),
     trigger('slideInOut', [
       state('*', style({ opacity: 1, transform: 'translateX(0)' })),
       state('void', style({ opacity: 0, transform: 'translateX(-20px)' })),
       transition('* => void', [animate('0.1s')]),
-      transition('void => *', [animate('0.3s')])
+      transition('void => *', [animate('0.1s')])
     ])
   ]
 })
