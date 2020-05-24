@@ -34,6 +34,7 @@
   text-transform: uppercase;
   margin-bottom: pxToRem($grid-unit * 2);
   text-align: center;
+  font-weight: var(--font-weight-bold);
 }
 
 .hero__list {
