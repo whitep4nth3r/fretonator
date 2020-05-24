@@ -2,11 +2,11 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeIndexComponent } from './home-index.component';
 import { Component } from '@angular/core';
 import { HomeModule } from '../home.module';
-import { By, Title } from '@angular/platform-browser';
+import { By } from '@angular/platform-browser';
+import { BrowserTestingModule } from '@angular/platform-browser/testing';
 
 describe('HomeIndexComponent', () => {
 
-  let title: Title;
 
   const selectors = {
     howToToggle: By.css('.hero__toggleHowTo'),
@@ -14,7 +14,7 @@ describe('HomeIndexComponent', () => {
   };
 
   const classNames = {
-    hideHowTo: '.hidden'
+    hideHowTo: 'hidden'
   };
 
   @Component({
@@ -26,36 +26,32 @@ describe('HomeIndexComponent', () => {
   class HomeIndexComponentSpec {
   }
 
-  class MockTitle {
-  }
-
-  let component: HomeIndexComponent;
-  let fixture: ComponentFixture<HomeIndexComponent>;
+  let component: HomeIndexComponentSpec;
+  let fixture: ComponentFixture<HomeIndexComponentSpec>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HomeIndexComponentSpec],
-      imports: [HomeModule],
-      providers: [{ provide: Title, useClass: MockTitle }]
+      imports: [HomeModule, BrowserTestingModule]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeIndexComponent);
+    fixture = TestBed.createComponent(HomeIndexComponentSpec);
     component = fixture.componentInstance;
-    title = TestBed.inject(Title);
     fixture.detectChanges();
   });
 
-  // to do wtf
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
+    expect(fixture).toMatchSnapshot();
   });
 
-  xit('should toggle the how-to section', () => {
+  it('should toggle the how-to section', () => {
     const howToToggle = fixture.debugElement.query(selectors.howToToggle);
     const howToList = fixture.debugElement.query(selectors.howToList);
-    howToToggle.triggerEventHandler('click', new Event('click'));
+    howToToggle.nativeElement.click();
+    fixture.detectChanges();
     expect(howToList.classes[classNames.hideHowTo]).toBeTruthy();
   });
 });
