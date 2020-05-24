@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Mode, NoteSymbol } from '../../../util/types';
 import { ModeSelectorObjects, Octave } from '../../../util/constants';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-index',
@@ -15,12 +15,11 @@ export class HomeIndexComponent implements OnInit {
   modeSelectorObjects = ModeSelectorObjects;
   octave = Octave;
 
-  constructor(private title: Title) {}
-
-  // to do meta stuff
+  constructor(private title: Title, private meta: Meta) {}
 
   ngOnInit(): void {
-    this.title.setTitle('Welcome | Fretonator');
+    this.title.setTitle('Fretonator - the ultimate free guitar theory tool');
+    this.meta.updateTag({ name: 'description', content: 'The interactive theory tool for guitarists. Choose a starting note, pick a mode, check out the fretboard and have a jam!' })
   }
 
   resetNoteExtender() {
