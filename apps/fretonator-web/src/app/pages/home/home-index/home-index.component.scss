@@ -3,6 +3,103 @@
 @import '../../../../styles/functions';
 @import '../../../../styles/typography';
 
+.hero {
+  background-color: var(--black);
+  display: block;
+  width: 100%;
+  padding-top: pxToRem($grid-unit * 6);
+  padding-bottom: pxToRem($grid-unit * 6);
+  background-image: url('/assets/img/hero_bg.png');
+  background-position: center center;
+}
+
+.hero__inner {
+  max-width: $screen-med;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: pxToRem($grid-unit * 2);
+  padding-right: pxToRem($grid-unit * 2);
+
+  @media screen and (min-width: $screen-med) {
+    padding-left: pxToRem($grid-unit * 4);
+    padding-right: pxToRem($grid-unit * 4);
+  }
+}
+
+.hero__title {
+  display: block;
+  color: var(--background-color-base);
+  letter-spacing: var(--letter-spacing-display);
+  font-size: pxToRem(14);
+  text-transform: uppercase;
+  margin-bottom: pxToRem($grid-unit * 2);
+  text-align: center;
+}
+
+.hero__list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.hero__text {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-mega);
+  text-transform: uppercase;
+  font-size: pxToRem(16);
+  line-height: pxToRem(24);
+  color: var(--background-color-base);
+  margin-bottom: pxToRem($grid-unit * 2);
+
+  @media screen and (min-width: $screen-med) {
+    font-size: pxToRem(22);
+    line-height: pxToRem(30);
+  }
+
+  &:before {
+    content: attr(data-step);
+    display: flex;
+    justify-content: center;
+    font-size: pxToRem(16);
+    color: var(--black);
+    border-radius: 50%;
+    height: var(--note-height);
+    width: var(--note-height);
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: pxToRem($grid-unit * 2);
+    line-height: var(--note-height);
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}
+
+.hero__text--peach {
+  &:before {
+    background-color: var(--peach);
+  }
+}
+
+.hero__text--yellow {
+  &:before {
+    background-color: var(--yellow);
+  }
+}
+
+.hero__text--purple {
+  &:before {
+    background-color: var(--purple);
+  }
+}
+
+.hero__text--turq {
+  &:before {
+    background-color: var(--turquoise);
+  }
+}
+
 .modeSelector__container {
   @include content_wrapper;
   margin-top: pxToRem($grid-unit * 4);

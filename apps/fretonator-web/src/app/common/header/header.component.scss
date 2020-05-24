@@ -22,13 +22,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: pxToRem(160);
-  width: pxToRem(160);
+  height: pxToRem(120);
+  width: pxToRem(120);
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
 
   @include focus_accessible();
+
+  @media screen and (min-width: $screen-med) {
+    height: pxToRem(160);
+    width: pxToRem(160);
+  }
 }
 
 .hamburger {
