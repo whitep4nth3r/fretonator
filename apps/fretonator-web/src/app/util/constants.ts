@@ -308,7 +308,7 @@ export const ModeSelectorObjects = [
   },
   {
     name: Mode.aolian,
-    displayName: 'Aolian',
+    displayName: 'Aolian (Minor)',
   },
   {
     name: Mode.locrian,
