@@ -35,8 +35,15 @@
   margin-bottom: pxToRem($grid-unit * 2);
   text-align: center;
   font-weight: var(--font-weight-bold);
+  position: relative;
+  height: pxToRem(50);
 
   span {
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    left: 0;
     font-weight: var(--font-weight-bold);
   }
 }

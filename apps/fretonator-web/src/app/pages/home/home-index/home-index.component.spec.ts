@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { HomeModule } from '../home.module';
 import { By } from '@angular/platform-browser';
 import { BrowserTestingModule } from '@angular/platform-browser/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('HomeIndexComponent', () => {
 
@@ -32,7 +33,11 @@ describe('HomeIndexComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HomeIndexComponentSpec],
-      imports: [HomeModule, BrowserTestingModule]
+      imports: [
+        HomeModule,
+        BrowserTestingModule,
+        NoopAnimationsModule
+      ]
     }).compileComponents();
   }));
 
