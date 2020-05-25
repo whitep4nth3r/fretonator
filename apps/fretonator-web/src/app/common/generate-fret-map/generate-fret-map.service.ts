@@ -302,10 +302,11 @@ export class GenerateFretMapService {
     return found ? found : false;
   };
 
-  getChords = (modeMap: ModeMap, mode: string): ChordMap => {
+  getChords = (startingNote: NoteObject, mode: string): ChordMap => {
+    const origModeMap = this.generateMode(startingNote, mode);
     const chordPattern = ChordPatterns[mode];
 
-    return modeMap.map((noteObject, index) => ({
+    return origModeMap.map((noteObject, index) => ({
       note: this.convertNoteObjectToHumanReadable(noteObject),
       type: chordPattern[index]
     }));

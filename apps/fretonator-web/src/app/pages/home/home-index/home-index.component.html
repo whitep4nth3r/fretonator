@@ -85,7 +85,8 @@
 
     <app-fretonator [scale]="note | symbolToNoteObj: noteExtender | getScaleFromModeMap: mode"
                     [fretMap]="note | symbolToNoteObj: noteExtender | generateFretMap: mode"
-                    [intervalPattern]="mode | getIntervalPatternFromMode"></app-fretonator>
+                    [intervalPattern]="mode | getIntervalPatternFromMode"
+                    [chordMap]="note | symbolToNoteObj: noteExtender | getChordMap: mode"></app-fretonator>
 
     <ng-container *ngIf="note | symbolToNoteObj: noteExtender | getJamTrack: mode">
       <app-video-loader [jamTrack]="note | symbolToNoteObj: noteExtender | getJamTrack: mode"></app-video-loader>
