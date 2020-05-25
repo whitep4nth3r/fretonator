@@ -2,8 +2,12 @@
 
 exports[`HomeIndexComponent should create 1`] = `
 <app-home-index-spec>
-  <app-home-index>
-    <main>
+  <app-home-index
+    class="ng-tns-c0-0"
+  >
+    <main
+      class="ng-tns-c0-0"
+    >
       <div
         class="hero"
       >
@@ -14,15 +18,20 @@ exports[`HomeIndexComponent should create 1`] = `
             class="hero__title"
           >
             
-            <span>
+            <span
+              class="ng-tns-c0-0 ng-trigger ng-trigger-slideInOut ng-star-inserted"
+              style="opacity:1;transform:translateX(0);0:opacity;1:transform;"
+            >
               How to use the Fretonator
             </span>
             
           </h1>
+          
           <ol
             aria-expanded="true"
-            class="hero__list"
+            class="hero__list ng-tns-c0-0 ng-trigger ng-trigger-openClose ng-star-inserted"
             id="howToList"
+            style="overflow:visible;0:overflow;"
           >
             <li
               class="hero__text hero__text--peach"
@@ -58,7 +67,9 @@ exports[`HomeIndexComponent should create 1`] = `
             type="button"
           >
             
-            <span>
+            <span
+              class="ng-tns-c0-0 ng-star-inserted"
+            >
               Hide
             </span>
             
@@ -77,7 +88,7 @@ exports[`HomeIndexComponent should create 1`] = `
             Starting note
           </h2>
           <app-chips
-            class="ng-untouched ng-pristine ng-valid"
+            class="ng-tns-c0-0 ng-untouched ng-pristine ng-valid"
             name="key_base"
             rounded="true"
           >
@@ -90,6 +101,7 @@ exports[`HomeIndexComponent should create 1`] = `
               >
                 
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -106,6 +118,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -122,6 +135,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -138,6 +152,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -154,6 +169,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -170,6 +186,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -186,6 +203,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -205,7 +223,7 @@ exports[`HomeIndexComponent should create 1`] = `
             </fieldset>
           </app-chips>
           <app-chips
-            class="ng-untouched ng-pristine ng-valid"
+            class="ng-tns-c0-0 ng-untouched ng-pristine ng-valid"
             name="key_extender"
             rounded="true"
           >
@@ -218,6 +236,7 @@ exports[`HomeIndexComponent should create 1`] = `
               >
                 
                 <app-chip
+                  class="ng-tns-c0-0"
                   selectedcolor="grey"
                   value=""
                 >
@@ -236,6 +255,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 </app-chip>
                 
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="grey"
                 >
                   <input
@@ -264,7 +284,7 @@ exports[`HomeIndexComponent should create 1`] = `
             Mode
           </h2>
           <app-chips
-            class="ng-untouched ng-pristine ng-valid"
+            class="ng-tns-c0-0 ng-untouched ng-pristine ng-valid"
             name="mode"
           >
             <fieldset
@@ -276,6 +296,7 @@ exports[`HomeIndexComponent should create 1`] = `
               >
                 
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -292,6 +313,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -308,6 +330,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -324,6 +347,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -340,6 +364,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -356,6 +381,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -372,6 +398,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -388,6 +415,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -404,6 +432,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </label>
                 </app-chip>
                 <app-chip
+                  class="ng-tns-c0-0 ng-star-inserted"
                   selectedcolor="default"
                 >
                   <input
@@ -423,7 +452,9 @@ exports[`HomeIndexComponent should create 1`] = `
             </fieldset>
           </app-chips>
         </div>
-        <app-fretonator>
+        <app-fretonator
+          class="ng-tns-c0-0"
+        >
           
           <div
             class="arrowHint"
@@ -443,7 +474,7 @@ exports[`HomeIndexComponent should create 1`] = `
               
               
               <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--string fretboard__cell--selected ng-star-inserted"
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="0"
@@ -452,7 +483,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="1"
@@ -460,13 +491,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="2"
                 data-string="E"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="3"
@@ -474,13 +505,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="4"
                 data-string="E"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="5"
@@ -488,13 +519,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="6"
                 data-string="E"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="7"
@@ -502,7 +533,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="8"
@@ -510,13 +541,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="9"
                 data-string="E"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="10"
@@ -524,13 +555,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="11"
                 data-string="E"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="12"
@@ -541,7 +572,7 @@ exports[`HomeIndexComponent should create 1`] = `
               
               
               <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--string fretboard__cell--selected ng-star-inserted"
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="0"
@@ -550,7 +581,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="1"
@@ -558,13 +589,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="2"
                 data-string="B"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="3"
@@ -572,13 +603,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="4"
                 data-string="B"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="5"
@@ -586,7 +617,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="6"
@@ -594,13 +625,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="7"
                 data-string="B"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="8"
@@ -608,13 +639,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="9"
                 data-string="B"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="10"
@@ -622,13 +653,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="11"
                 data-string="B"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="12"
@@ -639,7 +670,7 @@ exports[`HomeIndexComponent should create 1`] = `
               
               
               <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--string fretboard__cell--selected ng-star-inserted"
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="0"
@@ -648,13 +679,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="1"
                 data-string="G"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="2"
@@ -662,13 +693,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="3"
                 data-string="G"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="4"
@@ -676,7 +707,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="5"
@@ -684,13 +715,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="6"
                 data-string="G"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="7"
@@ -698,13 +729,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="8"
                 data-string="G"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="9"
@@ -712,7 +743,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="10"
@@ -720,13 +751,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="11"
                 data-string="G"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="12"
@@ -737,7 +768,7 @@ exports[`HomeIndexComponent should create 1`] = `
               
               
               <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--string fretboard__cell--selected ng-star-inserted"
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="0"
@@ -746,13 +777,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="1"
                 data-string="D"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="2"
@@ -760,7 +791,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="3"
@@ -768,13 +799,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="4"
                 data-string="D"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="5"
@@ -782,13 +813,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="6"
                 data-string="D"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="7"
@@ -796,13 +827,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="8"
                 data-string="D"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="9"
@@ -810,7 +841,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="10"
@@ -818,13 +849,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="11"
                 data-string="D"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="12"
@@ -835,7 +866,7 @@ exports[`HomeIndexComponent should create 1`] = `
               
               
               <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--string fretboard__cell--selected ng-star-inserted"
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="0"
@@ -844,13 +875,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="1"
                 data-string="A"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="2"
@@ -858,7 +889,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="3"
@@ -866,13 +897,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="4"
                 data-string="A"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="5"
@@ -880,13 +911,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="6"
                 data-string="A"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="7"
@@ -894,7 +925,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="8"
@@ -902,13 +933,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="9"
                 data-string="A"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="10"
@@ -916,13 +947,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="11"
                 data-string="A"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="12"
@@ -933,7 +964,7 @@ exports[`HomeIndexComponent should create 1`] = `
               
               
               <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--string fretboard__cell--selected ng-star-inserted"
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="0"
@@ -942,7 +973,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="1"
@@ -950,13 +981,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="2"
                 data-string="E"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="3"
@@ -964,13 +995,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="4"
                 data-string="E"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="5"
@@ -978,13 +1009,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="6"
                 data-string="E"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="7"
@@ -992,7 +1023,7 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="8"
@@ -1000,13 +1031,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="9"
                 data-string="E"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="10"
@@ -1014,13 +1045,13 @@ exports[`HomeIndexComponent should create 1`] = `
               />
               
               <div
-                class="fretboard__cell"
+                class="fretboard__cell ng-star-inserted"
                 data-fret="11"
                 data-string="E"
               />
               
               <div
-                class="fretboard__cell fretboard__cell--selected"
+                class="fretboard__cell fretboard__cell--selected ng-star-inserted"
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="12"
@@ -1077,67 +1108,79 @@ exports[`HomeIndexComponent should create 1`] = `
                   
                   
                   <h5
-                    class="scaleDisplay__note"
+                    class="scaleDisplay__note ng-star-inserted"
                   >
                      C 
                     
-                    <span>
+                    <span
+                      class="ng-star-inserted"
+                    >
                        - 
                     </span>
                   </h5>
                   
                   <h5
-                    class="scaleDisplay__note"
+                    class="scaleDisplay__note ng-star-inserted"
                   >
                      D 
                     
-                    <span>
+                    <span
+                      class="ng-star-inserted"
+                    >
                        - 
                     </span>
                   </h5>
                   
                   <h5
-                    class="scaleDisplay__note"
+                    class="scaleDisplay__note ng-star-inserted"
                   >
                      E 
                     
-                    <span>
+                    <span
+                      class="ng-star-inserted"
+                    >
                        - 
                     </span>
                   </h5>
                   
                   <h5
-                    class="scaleDisplay__note"
+                    class="scaleDisplay__note ng-star-inserted"
                   >
                      F 
                     
-                    <span>
+                    <span
+                      class="ng-star-inserted"
+                    >
                        - 
                     </span>
                   </h5>
                   
                   <h5
-                    class="scaleDisplay__note"
+                    class="scaleDisplay__note ng-star-inserted"
                   >
                      G 
                     
-                    <span>
+                    <span
+                      class="ng-star-inserted"
+                    >
                        - 
                     </span>
                   </h5>
                   
                   <h5
-                    class="scaleDisplay__note"
+                    class="scaleDisplay__note ng-star-inserted"
                   >
                      A 
                     
-                    <span>
+                    <span
+                      class="ng-star-inserted"
+                    >
                        - 
                     </span>
                   </h5>
                   
                   <h5
-                    class="scaleDisplay__note"
+                    class="scaleDisplay__note ng-star-inserted"
                   >
                      B 
                     
@@ -1159,85 +1202,85 @@ exports[`HomeIndexComponent should create 1`] = `
                 
                 
                 <h5
-                  class="intervalDisplay__interval"
+                  class="intervalDisplay__interval ng-star-inserted"
                 >
                    tone 
                 </h5>
                 
                 <span
-                  class="intervalDisplay__separator"
+                  class="intervalDisplay__separator ng-star-inserted"
                 >
                    - 
                 </span>
                 
                 
                 <h5
-                  class="intervalDisplay__interval"
+                  class="intervalDisplay__interval ng-star-inserted"
                 >
                    tone 
                 </h5>
                 
                 <span
-                  class="intervalDisplay__separator"
+                  class="intervalDisplay__separator ng-star-inserted"
                 >
                    - 
                 </span>
                 
                 
                 <h5
-                  class="intervalDisplay__interval"
+                  class="intervalDisplay__interval ng-star-inserted"
                 >
                    semitone 
                 </h5>
                 
                 <span
-                  class="intervalDisplay__separator"
+                  class="intervalDisplay__separator ng-star-inserted"
                 >
                    - 
                 </span>
                 
                 
                 <h5
-                  class="intervalDisplay__interval"
+                  class="intervalDisplay__interval ng-star-inserted"
                 >
                    tone 
                 </h5>
                 
                 <span
-                  class="intervalDisplay__separator"
+                  class="intervalDisplay__separator ng-star-inserted"
                 >
                    - 
                 </span>
                 
                 
                 <h5
-                  class="intervalDisplay__interval"
+                  class="intervalDisplay__interval ng-star-inserted"
                 >
                    tone 
                 </h5>
                 
                 <span
-                  class="intervalDisplay__separator"
+                  class="intervalDisplay__separator ng-star-inserted"
                 >
                    - 
                 </span>
                 
                 
                 <h5
-                  class="intervalDisplay__interval"
+                  class="intervalDisplay__interval ng-star-inserted"
                 >
                    tone 
                 </h5>
                 
                 <span
-                  class="intervalDisplay__separator"
+                  class="intervalDisplay__separator ng-star-inserted"
                 >
                    - 
                 </span>
                 
                 
                 <h5
-                  class="intervalDisplay__interval"
+                  class="intervalDisplay__interval ng-star-inserted"
                 >
                    semitone 
                 </h5>
@@ -1249,7 +1292,9 @@ exports[`HomeIndexComponent should create 1`] = `
         </app-fretonator>
         
         
-        <app-video-loader>
+        <app-video-loader
+          class="ng-tns-c0-0 ng-star-inserted"
+        >
           <div
             class="videoLoader"
           >
@@ -1278,7 +1323,7 @@ exports[`HomeIndexComponent should create 1`] = `
               
               
               <app-video-browser
-                class="videoLoader__content"
+                class="videoLoader__content ng-star-inserted"
               >
                 <iframe
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
