@@ -11,7 +11,7 @@ export class GetChordMapPipe implements PipeTransform {
   }
 
   transform(noteObject: NoteObject, mode: Mode): ChordMap {
-    return this.generateFretMapService.getChords(noteObject, mode);
+    return this.generateFretMapService.getChordMap(noteObject, mode);
   }
 
 }

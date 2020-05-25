@@ -18,7 +18,7 @@ describe('GetChordMapPipe', () => {
   });
 
   it('calls GenerateFretMapService.getChords', () => {
-    const spy = spyOn(pipe.generateFretMapService, 'getChords');
+    const spy = spyOn(pipe.generateFretMapService, 'getChordMap');
 
     const note = {
       name: 'c',
