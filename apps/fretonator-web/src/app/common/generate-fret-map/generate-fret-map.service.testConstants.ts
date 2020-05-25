@@ -1,4 +1,4 @@
-import { FretMap, ModeMap } from '../../util/types';
+import { ChordType, FretMap, ModeMap, NoteSymbol } from '../../util/types';
 
 export const cIonianMode: ModeMap = [
   {
@@ -605,3 +605,35 @@ export const dIonianFretMappings: FretMap = [
   { string: 'G', fret: 11, displayName: 'F#', degree: 'mediant' },
   { string: 'G', fret: 12, displayName: 'G', degree: 'subdominant' },
 ];
+
+
+export const cIonianChordMap = [
+  {
+    note: 'C',
+    type: ChordType.major,
+  },
+  {
+    note: 'D',
+    type: ChordType.minor,
+  },
+  {
+    note: 'E',
+    type: ChordType.minor,
+  },
+  {
+    note: 'F',
+    type: ChordType.major,
+  },
+  {
+    note: 'G',
+    type: ChordType.major,
+  },
+  {
+    note: 'A',
+    type: ChordType.minor,
+  },
+  {
+    note: 'B',
+    type: ChordType.diminished,
+  },
+]
