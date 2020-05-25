@@ -1,6 +1,5 @@
 import { GetChordMapPipe } from './get-chord-map.pipe';
 import { GenerateFretMapService } from '../../../common/generate-fret-map/generate-fret-map.service';
-import { GetJamTrackPipe } from './get-jam-track.pipe';
 import { TestBed } from '@angular/core/testing';
 import { Mode } from '../../../util/types';
 

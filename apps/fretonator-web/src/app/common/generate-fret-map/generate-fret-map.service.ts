@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Chord, ChordMap, Fret, FretMap, JamTrack, ModeMap, NoteObject, NoteSymbol } from '../../util/types';
+import { ChordMap, Fret, FretMap, JamTrack, ModeMap, NoteObject, NoteSymbol } from '../../util/types';
 import { ChordPatterns, ModePatterns, NoteToStringAndFretMap, Octave, ScaleDegrees } from '../../util/constants';
 import { JamTracksData } from '../../data/jamTracks';
 

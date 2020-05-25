@@ -5,7 +5,8 @@ import {
   aSharpMajor,
   bFlatLocrian,
   bFlatPhrygian,
-  cHarmonicMinor, cIonianChordMap,
+  cHarmonicMinor,
+  cIonianChordMap,
   cIonianFretMappings,
   cIonianMode,
   cPhrygianMode,
@@ -18,7 +19,7 @@ import {
 import { JamTracksData } from '../../data/jamTracks';
 
 import { GenerateFretMapService } from './generate-fret-map.service';
-import { ChordType, NoteSymbol } from '../../util/types';
+import { NoteSymbol } from '../../util/types';
 
 describe('GenerateFretMapService', () => {
   let service: GenerateFretMapService;

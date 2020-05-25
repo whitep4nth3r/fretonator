@@ -1,4 +1,4 @@
-import { ChordType, FretMap, ModeMap, NoteSymbol } from '../../util/types';
+import { ChordType, FretMap, ModeMap } from '../../util/types';
 
 export const cIonianMode: ModeMap = [
   {
