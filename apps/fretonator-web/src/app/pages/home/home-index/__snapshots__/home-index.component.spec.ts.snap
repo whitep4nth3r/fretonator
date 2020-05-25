@@ -1364,12 +1364,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <p
                 class="videoLoader__metaDetail"
               >
-                 C Ionian (Major) Jam Track by Tom Strahle | 
-                <span
-                  class="videoLoader__metaDetail--key"
-                >
-                  C Ionian 
-                </span>
+                 C Ionian (Major) Jam Track by Tom Strahle 
               </p>
             </div>
             <div
