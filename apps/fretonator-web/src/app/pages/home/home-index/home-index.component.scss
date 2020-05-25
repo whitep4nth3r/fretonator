@@ -7,7 +7,7 @@
   background-color: var(--black);
   display: block;
   width: 100%;
-  padding-top: pxToRem($grid-unit * 6);
+  padding-top: pxToRem($grid-unit * 4);
   padding-bottom: pxToRem($grid-unit * 6);
   background-image: url('/assets/img/hero_bg.png');
   background-position: center center;
@@ -36,7 +36,7 @@
   text-align: center;
   font-weight: var(--font-weight-bold);
   position: relative;
-  height: pxToRem(50);
+  height: pxToRem($grid-unit * 4);
 
   span {
     position: absolute;
@@ -123,14 +123,14 @@
   display: block;
   color: var(--offwhite);
   font-family: var(--font-family-main);
-  letter-spacing: var(--letter-spacing-display);
-  font-size: pxToRem(16);
   background-color: var(--black);
   border: pxToRem(1) solid var(--offwhite);
   margin-top: pxToRem($grid-unit * 4);
-  padding: pxToRem($grid-unit) pxToRem($grid-unit);
-  text-transform: uppercase;
   cursor: pointer;
+  border-radius: pxToRem($grid-unit * 2);
+  padding: pxToRem(4) pxToRem(8);
+  font-weight: var(--font-weight-bold);
+  font-size: pxToRem(14);
 
   @include focus_accessible();
 
