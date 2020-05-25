@@ -3,6 +3,10 @@
 @import '../../../../styles/functions';
 @import '../../../../styles/typography';
 
+.hidden {
+  display: none;
+}
+
 .hero {
   background-color: var(--black);
   display: block;

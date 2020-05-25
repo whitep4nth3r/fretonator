@@ -1,6 +1,5 @@
 import { YouTubeEmbedPipe } from './youtube-embed.pipe';
 import { async, TestBed } from '@angular/core/testing';
-import { SafeResourceUrl } from '@angular/platform-browser';
 
 describe('YoutubeEmbedPipe', () => {
   let pipe: YouTubeEmbedPipe;

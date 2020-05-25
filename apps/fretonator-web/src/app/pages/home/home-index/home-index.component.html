@@ -2,14 +2,13 @@
   <div class="hero">
     <div class="hero__inner">
       <h1 class="hero__title">
-        <span @slideInOut *ngIf="showHowTo">How to use the Fretonator</span>
-        <span @slideInOut *ngIf="!showHowTo">Fretonator: the ultimate free guitar theory tool</span>
+        <span *ngIf="showHowTo">How to use the Fretonator</span>
+        <span *ngIf="!showHowTo">Fretonator: the ultimate free guitar theory tool</span>
       </h1>
-      <ol @openClose
-          *ngIf="showHowTo"
-          class="hero__list"
+      <ol class="hero__list"
           id="howToList"
-          aria-expanded="true">
+          [class.hidden]="!showHowTo"
+          [attr.aria-expanded]="showHowTo">
         <li class="hero__text hero__text--peach" data-step="1">Choose a starting note</li>
         <li class="hero__text hero__text--yellow" data-step="2">Pick a mode</li>
         <li class="hero__text hero__text--purple" data-step="3">Check out the fretboard</li>

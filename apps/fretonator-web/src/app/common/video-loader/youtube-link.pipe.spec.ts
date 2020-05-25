@@ -1,6 +1,5 @@
 import { async, TestBed } from '@angular/core/testing';
 import { YouTubeLinkPipe } from './youtube-link.pipe';
-import { SafeUrl } from '@angular/platform-browser';
 
 describe('YoutubeLinkPipe', () => {
 
