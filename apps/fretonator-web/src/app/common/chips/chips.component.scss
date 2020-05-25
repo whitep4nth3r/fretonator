@@ -14,4 +14,8 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: pxToRem($grid-unit * -1);
+
+  @media screen and (min-width: 400px) {
+    justify-content: center;
+  }
 }
