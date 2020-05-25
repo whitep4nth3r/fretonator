@@ -24,7 +24,7 @@ export class HomeIndexComponent implements OnInit {
     this.title.setTitle('Fretonator - the ultimate free guitar theory tool');
     this.meta.updateTag({
       name: 'description',
-      content: 'The interactive theory tool for guitarists. Choose a starting note, pick a mode, check out the fretboard and have a jam!'
+      content: 'The ultimate interactive free guitar theory tool. Choose a starting note, pick a mode, check out the fretboard and have a jam!'
     });
 
     const _showHowTo = this.localStorage.getItem('showHowTo');

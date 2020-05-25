@@ -7,8 +7,6 @@ import { BrowserTestingModule } from '@angular/platform-browser/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('HomeIndexComponent', () => {
-
-
   const selectors = {
     howToToggle: By.css('.hero__toggleHowTo'),
     howToList: By.css('.hero__list')

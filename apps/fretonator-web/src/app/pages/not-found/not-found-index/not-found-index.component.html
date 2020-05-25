@@ -1,5 +1,14 @@
 <main class="notFound__container">
+  <div class="notFound__inner">
 
-<h1 class="notFound__title">Oopsie poopsie!</h1>
-  <h2 class="notFound__subtitle">We couldn't find that page.</h2>
+    <h1 class="notFound__title">Broken string 404!</h1>
+    <h2 class="notFound__subtitle">Boo, we couldn't find that page.</h2>
+    <p class="notFound__subtitle">Not to worry, restring and move on! Nothing to see here...</p>
+
+    <a [routerLink]="['/']"
+       aria-label="Navigate to home"
+       class="notFound__logoContainer">
+      <app-logo-with-text></app-logo-with-text>
+    </a>
+  </div>
 </main>
