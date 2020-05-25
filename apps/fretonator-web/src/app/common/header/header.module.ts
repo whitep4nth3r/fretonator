@@ -12,8 +12,12 @@ import { FocusOnRouterModule } from '../focus-on-router/focus-on-router.module';
     CommonModule,
     RouterModule,
     LogoWithTextModule,
-    FocusOnRouterModule,
+    FocusOnRouterModule
   ],
-  exports: [HeaderComponent, LogoWithTextComponent],
+  exports: [
+    HeaderComponent,
+    LogoWithTextComponent
+  ]
 })
-export class HeaderModule {}
+export class HeaderModule {
+}

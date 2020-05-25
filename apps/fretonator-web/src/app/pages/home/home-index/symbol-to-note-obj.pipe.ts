@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { NoteObject, NoteSymbol } from '../../../util/types';
+import { NoteObject } from '../../../util/types';
 
 @Pipe({
   name: 'symbolToNoteObj',

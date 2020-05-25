@@ -30,5 +30,8 @@ import { GetIntervalPatternFromModePipe } from './home-index/get-interval-patter
     VideoLoaderModule,
     ChipsModule,
   ],
+  exports: [
+    HomeIndexComponent,
+  ]
 })
 export class HomeModule {}

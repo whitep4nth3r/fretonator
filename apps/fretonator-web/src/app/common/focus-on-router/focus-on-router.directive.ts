@@ -1,5 +1,5 @@
 import { Directive, ElementRef, OnDestroy } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter, skip } from 'rxjs/operators';
 

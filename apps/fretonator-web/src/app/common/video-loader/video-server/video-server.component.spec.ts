@@ -1,8 +1,8 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {VideoServerComponent} from './video-server.component';
-import {Component} from '@angular/core';
-import {VideoLoaderModule} from '../video-loader.module';
+import { VideoServerComponent } from './video-server.component';
+import { Component } from '@angular/core';
+import { VideoLoaderModule } from '../video-loader.module';
 
 describe('VideoServerComponent', () => {
   @Component({

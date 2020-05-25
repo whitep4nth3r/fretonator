@@ -1,9 +1,9 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {VideoBrowserComponent} from './video-browser.component';
-import {VideoLoaderModule} from '../video-loader.module';
-import {Component} from '@angular/core';
-import {BrowserTestingModule} from '@angular/platform-browser/testing';
+import { VideoBrowserComponent } from './video-browser.component';
+import { VideoLoaderModule } from '../video-loader.module';
+import { Component } from '@angular/core';
+import { BrowserTestingModule } from '@angular/platform-browser/testing';
 
 describe('VideoBrowserComponent', () => {
 

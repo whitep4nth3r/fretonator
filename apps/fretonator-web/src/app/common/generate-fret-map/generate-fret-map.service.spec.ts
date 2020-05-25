@@ -12,7 +12,7 @@ import {
   dDorianMode,
   dHarmonicMinor,
   dIonianFretMappings,
-  fSharpHarmonicMinor,
+  fSharpHarmonicMinor
 } from './generate-fret-map.service.testConstants';
 
 import { JamTracksData } from '../../data/jamTracks';
