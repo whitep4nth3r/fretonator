@@ -9,6 +9,7 @@ export enum ChordType {
   major = 'maj',
   minor = 'min',
   diminished ='dim',
+  augmented = 'aug'
 }
 
 export interface Chord {

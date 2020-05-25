@@ -1245,6 +1245,106 @@ exports[`HomeIndexComponent should create 1`] = `
                 
               </div>
             </div>
+            <div
+              class="chordMap"
+            >
+              <h4
+                class="chordMap__title"
+              >
+                Chords (triads)
+              </h4>
+              <div
+                class="chordMap__chords"
+              >
+                
+                
+                <h5
+                  class="chordMap__chord"
+                >
+                   Cmaj 
+                </h5>
+                
+                <span
+                  class="chordMap__separator"
+                >
+                   - 
+                </span>
+                
+                
+                <h5
+                  class="chordMap__chord"
+                >
+                   Dmin 
+                </h5>
+                
+                <span
+                  class="chordMap__separator"
+                >
+                   - 
+                </span>
+                
+                
+                <h5
+                  class="chordMap__chord"
+                >
+                   Emin 
+                </h5>
+                
+                <span
+                  class="chordMap__separator"
+                >
+                   - 
+                </span>
+                
+                
+                <h5
+                  class="chordMap__chord"
+                >
+                   Fmaj 
+                </h5>
+                
+                <span
+                  class="chordMap__separator"
+                >
+                   - 
+                </span>
+                
+                
+                <h5
+                  class="chordMap__chord"
+                >
+                   Gmaj 
+                </h5>
+                
+                <span
+                  class="chordMap__separator"
+                >
+                   - 
+                </span>
+                
+                
+                <h5
+                  class="chordMap__chord"
+                >
+                   Amin 
+                </h5>
+                
+                <span
+                  class="chordMap__separator"
+                >
+                   - 
+                </span>
+                
+                
+                <h5
+                  class="chordMap__chord"
+                >
+                   Bdim 
+                </h5>
+                
+                
+              </div>
+            </div>
           </div>
         </app-fretonator>
         

@@ -93,6 +93,15 @@
     </div>
   </div>
 
-  <pre>{{chordMap | json}}</pre>
-
+  <div class="chordMap">
+    <h4 class="chordMap__title">Chords (triads)</h4>
+    <div class="chordMap__chords">
+      <ng-container *ngFor="let chord of chordMap; let i = index">
+        <h5 class="chordMap__chord">
+          {{chord.note}}{{chord.type}}
+        </h5>
+        <span class="chordMap__separator" *ngIf="i < chordMap.length - 1"> - </span>
+      </ng-container>
+    </div>
+  </div>
 </div>

@@ -328,12 +328,14 @@
   }
 }
 
-.intervalDisplay {
+.intervalDisplay,
+.chordMap {
   display: flex;
   flex-direction: column;
   order: 3;
   align-items: center;
   margin-top: pxToRem($grid-unit * 8);
+  margin-bottom: pxToRem($grid-unit * 4);
 
   @media screen and (min-width: $screen-med) {
     align-items: flex-start;
@@ -341,11 +343,17 @@
   }
 }
 
-.intervalDisplay__title {
+.chordMap {
+  margin-bottom: 0;
+}
+
+.intervalDisplay__title,
+.chordMap__title {
   @include info_container_title;
 }
 
-.intervalDisplay__intervals {
+.intervalDisplay__intervals,
+.chordMap__chords {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -353,12 +361,15 @@
 }
 
 .intervalDisplay__interval,
-.intervalDisplay__separator {
+.intervalDisplay__separator,
+.chordMap__chord,
+.chordMap__separator {
   font-size: pxToRem(16);
   font-family: var(--font-family-main);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   font-style: italic;
   margin-right: pxToRem($grid-unit);
   margin-bottom: pxToRem($grid-unit);

@@ -338,8 +338,24 @@ export const ChordPatterns = {
     ChordType.major,
     ChordType.minor
   ],
-  harmonicMinor: [],
-  phrygianDominant: []
+  harmonicMinor: [
+    ChordType.minor,
+    ChordType.diminished,
+    ChordType.augmented,
+    ChordType.minor,
+    ChordType.major,
+    ChordType.major,
+    ChordType.diminished
+  ],
+  phrygianDominant: [
+    ChordType.major,
+    ChordType.major,
+    ChordType.diminished,
+    ChordType.minor,
+    ChordType.diminished,
+    ChordType.augmented,
+    ChordType.minor
+  ]
 };
 
 export const Octave = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];

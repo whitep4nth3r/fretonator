@@ -997,7 +997,14 @@ fdescribe('GenerateFretMapService:getChords', () => {
   });
 
   it('returns the correct pattern for ionian', () => {
-    const result = service.getChords(cIonianMode, 'ionian');
+    const result = service.getChords({
+        name: 'c',
+        flat: false,
+        sharp: false,
+        doubleSharp: false,
+        doubleFlat: false
+      },
+      'ionian');
 
     expect(result).toStrictEqual(cIonianChordMap);
   });
