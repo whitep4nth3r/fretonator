@@ -21,7 +21,7 @@ export class HomeIndexComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.title.setTitle('Fretonator - the ultimate free guitar theory tool');
+    this.title.setTitle('Fretonator - the ultimate interactive free guitar theory tool');
     this.meta.updateTag({
       name: 'description',
       content: 'The ultimate interactive free guitar theory tool. Choose a starting note, pick a mode, check out the fretboard and have a jam!'

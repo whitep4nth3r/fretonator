@@ -1,3 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AboutIndexComponent should create 1`] = `AboutIndexComponent {}`;
+exports[`AboutIndexComponent should create 1`] = `
+AboutIndexComponent {
+  "meta": Meta {
+    "_doc": Document {
+      "location": Location {
+        "assign": [Function],
+        "hash": "",
+        "host": "localhost",
+        "hostname": "localhost",
+        "href": "http://localhost/",
+        "origin": "http://localhost",
+        "pathname": "/",
+        "port": "",
+        "protocol": "http:",
+        "reload": [Function],
+        "replace": [Function],
+        "search": "",
+        "toString": [Function],
+      },
+      Symbol(DOM SymbolTree): SymbolTreeNode {
+        "cachedIndex": -1,
+        "cachedIndexVersion": NaN,
+        "childIndexCachedUpTo": null,
+        "childrenVersion": 0,
+        "firstChild": null,
+        "lastChild": null,
+        "nextSibling": null,
+        "parent": null,
+        "previousSibling": null,
+      },
+    },
+    "_dom": BrowserDomAdapter {},
+  },
+  "title": Title {
+    "_doc": Document {
+      "location": Location {
+        "assign": [Function],
+        "hash": "",
+        "host": "localhost",
+        "hostname": "localhost",
+        "href": "http://localhost/",
+        "origin": "http://localhost",
+        "pathname": "/",
+        "port": "",
+        "protocol": "http:",
+        "reload": [Function],
+        "replace": [Function],
+        "search": "",
+        "toString": [Function],
+      },
+      Symbol(DOM SymbolTree): SymbolTreeNode {
+        "cachedIndex": -1,
+        "cachedIndexVersion": NaN,
+        "childIndexCachedUpTo": null,
+        "childrenVersion": 0,
+        "firstChild": null,
+        "lastChild": null,
+        "nextSibling": null,
+        "parent": null,
+        "previousSibling": null,
+      },
+    },
+  },
+}
+`;
