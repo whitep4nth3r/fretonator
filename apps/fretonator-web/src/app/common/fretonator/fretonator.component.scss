@@ -188,6 +188,7 @@
   background-color: var(--white);
   padding: pxToRem($grid-unit * 4);
   border-radius: pxToRem($grid-unit * 4);
+  box-shadow: 0 pxToRem(1) pxToRem(3) rgba(26, 26, 26, 0.12), 0 pxToRem(1) pxToRem(2) rgba(26, 26, 26, 0.24);
 
   @media screen and (min-width: $screen-med) {
     margin-top: pxToRem($grid-unit * 8);

@@ -31,8 +31,8 @@
   @include focus_accessible();
 
   @media screen and (min-width: $screen-med) {
-    height: pxToRem(160);
-    width: pxToRem(160);
+    height: pxToRem(140);
+    width: pxToRem(140);
   }
 }
 

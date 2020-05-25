@@ -2,44 +2,61 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeIndexComponent } from './home-index.component';
 import { Component } from '@angular/core';
 import { HomeModule } from '../home.module';
-import { Title } from '@angular/platform-browser';
+import { By } from '@angular/platform-browser';
+import { BrowserTestingModule } from '@angular/platform-browser/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('HomeIndexComponent', () => {
 
-  let title: Title;
+
+  const selectors = {
+    howToToggle: By.css('.hero__toggleHowTo'),
+    howToList: By.css('.hero__list')
+  };
+
+  const classNames = {
+    hideHowTo: 'hidden'
+  };
 
   @Component({
     selector: 'app-home-index-spec',
     template: `
       <app-home-index></app-home-index>
-    `,
+    `
   })
   class HomeIndexComponentSpec {
   }
 
-  class MockTitle {
-  }
-
-  let component: HomeIndexComponent;
-  let fixture: ComponentFixture<HomeIndexComponent>;
+  let component: HomeIndexComponentSpec;
+  let fixture: ComponentFixture<HomeIndexComponentSpec>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HomeIndexComponentSpec],
-      imports: [HomeModule],
-      providers: [{provide: Title, useClass: MockTitle}],
+      imports: [
+        HomeModule,
+        BrowserTestingModule,
+        NoopAnimationsModule
+      ]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeIndexComponent);
+    fixture = TestBed.createComponent(HomeIndexComponentSpec);
     component = fixture.componentInstance;
-    title = TestBed.inject(Title);
     fixture.detectChanges();
   });
 
-  // to do wtf
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
+    expect(fixture).toMatchSnapshot();
+  });
+
+  xit('should toggle the how-to section', () => {
+    const howToToggle = fixture.debugElement.query(selectors.howToToggle);
+    const howToList = fixture.debugElement.query(selectors.howToList);
+    howToToggle.nativeElement.click();
+    fixture.detectChanges();
+    expect(howToList).toBeFalsy();
   });
 });
