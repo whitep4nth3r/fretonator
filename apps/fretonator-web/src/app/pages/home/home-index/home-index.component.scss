@@ -15,6 +15,7 @@
   padding-bottom: pxToRem($grid-unit * 6);
   background-image: url('/assets/img/hero_bg.png');
   background-position: center center;
+  background-size: cover;
 }
 
 .hero__inner {
