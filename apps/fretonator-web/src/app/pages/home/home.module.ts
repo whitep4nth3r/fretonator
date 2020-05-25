@@ -12,6 +12,7 @@ import { GetJamTrackPipe } from './home-index/get-jam-track.pipe';
 import { ChipsModule } from '../../common/chips/chips.module';
 import { FretonatorModule } from '../../common/fretonator/fretonator.module';
 import { GetIntervalPatternFromModePipe } from './home-index/get-interval-pattern-from-mode.pipe';
+import { GetChordMapPipe } from './home-index/get-chord-map.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { GetIntervalPatternFromModePipe } from './home-index/get-interval-patter
     GetScaleFromModeMapPipe,
     GetJamTrackPipe,
     GetIntervalPatternFromModePipe,
+    GetChordMapPipe,
   ],
   imports: [
     CommonModule,

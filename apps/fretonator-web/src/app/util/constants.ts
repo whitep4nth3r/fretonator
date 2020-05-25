@@ -1,4 +1,4 @@
-import { Mode } from './types';
+import { ChordType, Mode } from './types';
 
 export const NoteToStringAndFretMap = {
   c__: [
@@ -272,6 +272,90 @@ export const ModePatterns = {
   locrian: [1, 2, 2, 1, 2, 2, 2],
   harmonicMinor: [2, 1, 2, 2, 1, 3, 1],
   phrygianDominant: [1, 3, 1, 2, 1, 2, 2]
+};
+
+export const ChordPatterns = {
+  ionian: [
+    ChordType.major,
+    ChordType.minor,
+    ChordType.minor,
+    ChordType.major,
+    ChordType.major,
+    ChordType.minor,
+    ChordType.diminished
+  ],
+  dorian: [
+    ChordType.minor,
+    ChordType.minor,
+    ChordType.major,
+    ChordType.major,
+    ChordType.minor,
+    ChordType.diminished,
+    ChordType.major
+  ],
+  phrygian: [
+    ChordType.minor,
+    ChordType.major,
+    ChordType.major,
+    ChordType.minor,
+    ChordType.diminished,
+    ChordType.major,
+    ChordType.minor
+  ],
+  lydian: [
+    ChordType.major,
+    ChordType.major,
+    ChordType.minor,
+    ChordType.diminished,
+    ChordType.major,
+    ChordType.minor,
+    ChordType.minor
+  ],
+  mixolydian: [
+    ChordType.major,
+    ChordType.minor,
+    ChordType.diminished,
+    ChordType.major,
+    ChordType.minor,
+    ChordType.minor,
+    ChordType.major
+  ],
+  aolian: [
+    ChordType.minor,
+    ChordType.diminished,
+    ChordType.major,
+    ChordType.minor,
+    ChordType.minor,
+    ChordType.major,
+    ChordType.major
+  ],
+  locrian: [
+    ChordType.diminished,
+    ChordType.major,
+    ChordType.minor,
+    ChordType.minor,
+    ChordType.major,
+    ChordType.major,
+    ChordType.minor
+  ],
+  harmonicMinor: [
+    ChordType.minor,
+    ChordType.diminished,
+    ChordType.augmented,
+    ChordType.minor,
+    ChordType.major,
+    ChordType.major,
+    ChordType.diminished
+  ],
+  phrygianDominant: [
+    ChordType.major,
+    ChordType.major,
+    ChordType.diminished,
+    ChordType.minor,
+    ChordType.diminished,
+    ChordType.augmented,
+    ChordType.minor
+  ]
 };
 
 export const Octave = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];

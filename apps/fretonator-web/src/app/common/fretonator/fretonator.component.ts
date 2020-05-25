@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FretMap, Scale } from '../../util/types';
+import { ChordMap, FretMap, Scale } from '../../util/types';
 
 @Component({
   selector: 'app-fretonator',
@@ -10,6 +10,7 @@ export class FretonatorComponent implements OnInit {
   @Input() fretMap: FretMap;
   @Input() scale: Scale;
   @Input() intervalPattern: [];
+  @Input() chordMap: ChordMap;
   frets = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   constructor() {}
 

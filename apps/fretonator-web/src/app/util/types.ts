@@ -5,7 +5,21 @@ export interface Fret {
   degree: string;
 }
 
+export enum ChordType {
+  major = 'maj',
+  minor = 'min',
+  diminished ='dim',
+  augmented = 'aug'
+}
+
+export interface Chord {
+  note: string;
+  type: ChordType;
+}
+
 export type FretMap = Fret[];
+
+export type ChordMap = Chord[];
 
 export enum NoteSymbol {
   aFlat = 'a_',
