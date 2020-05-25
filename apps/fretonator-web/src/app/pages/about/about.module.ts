@@ -6,6 +6,10 @@ import { AboutIndexComponent } from './about-index/about-index.component';
 
 @NgModule({
   declarations: [AboutIndexComponent],
-  imports: [CommonModule, AboutRoutingModule],
+  imports: [
+    CommonModule,
+    AboutRoutingModule
+  ],
+  exports: [AboutIndexComponent],
 })
 export class AboutModule {}
