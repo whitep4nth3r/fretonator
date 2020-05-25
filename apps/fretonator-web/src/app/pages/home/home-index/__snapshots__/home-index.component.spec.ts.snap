@@ -368,7 +368,7 @@ exports[`HomeIndexComponent should create 1`] = `
                     class="chip"
                     for="aolian"
                   >
-                    Aolian
+                    Aolian (Minor)
                   </label>
                 </app-chip>
                 <app-chip
