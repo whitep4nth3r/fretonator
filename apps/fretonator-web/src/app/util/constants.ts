@@ -367,7 +367,7 @@ export const ChordPatterns = {
   ],
   minorPentatonic: [
     ChordType.minor,
-    ChordType.diminished,
+    ChordType.major,
     ChordType.major,
     ChordType.minor,
     ChordType.major,
