@@ -1,5 +1,81 @@
 import { ChordType, FretMap, ModeMap } from '../../util/types';
 
+export const aSharpPentatonicMajor: ModeMap = [
+  {
+    name: 'a',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'c',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: true,
+  },
+  {
+    name: 'e',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'f',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: true,
+  },
+]
+
+export const dFlatMajorPentatonic: ModeMap = [
+  {
+    name: 'd',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'e',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'f',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'a',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+]
+
 export const fMinorPentatonic: ModeMap = [
   {
     name: 'f',
