@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ChordMap, Fret, FretMap, JamTrack, ModeMap, NoteObject, NoteSymbol } from '../../util/types';
+import { ChordMap, Fret, FretMap, JamTrack, Mode, ModeMap, NoteObject, NoteSymbol } from '../../util/types';
 import { ChordPatterns, ModePatterns, NoteToStringAndFretMap, Octave, ScaleDegrees } from '../../util/constants';
 import { JamTracksData } from '../../data/jamTracks';
 
@@ -346,6 +346,14 @@ export class GenerateFretMapService {
   };
 
   getJamTrack = (startingNote: NoteObject, mode: string): JamTrack | false => {
+    if (mode === Mode.majorPentatonic) {
+      mode = Mode.ionian;
+    }
+
+    if (mode === Mode.minorPentatonic) {
+      mode = Mode.aolian;
+    }
+    
     const noteSymbol = this.convertNoteObjectToNoteSymbol(startingNote);
 
     const found = JamTracksData
