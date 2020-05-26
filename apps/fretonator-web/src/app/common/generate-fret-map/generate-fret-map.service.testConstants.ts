@@ -1,4 +1,4 @@
-import { ChordType, FretMap, Mode, ModeMap } from '../../util/types';
+import { ChordType, FretMap, ModeMap } from '../../util/types';
 
 export const fMinorPentatonic: ModeMap = [
   {
@@ -864,7 +864,7 @@ export const cMinorPentatonicChordMap = [
   },
   {
     note: 'E♭',
-    type: ChordType.diminished,
+    type: ChordType.major,
   },
   {
     note: 'F',

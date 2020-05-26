@@ -1,5 +1,4 @@
 import { DisplayScaleDegreesPipe } from './display-scale-degrees.pipe';
-import { consoleTestResultsHandler } from 'tslint/lib/test';
 
 describe('DisplayScaleDegreesPipe', () => {
   let pipe;
