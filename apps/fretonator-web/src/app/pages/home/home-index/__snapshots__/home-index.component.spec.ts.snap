@@ -419,6 +419,38 @@ exports[`HomeIndexComponent should create 1`] = `
                     Phrygian Dominant
                   </label>
                 </app-chip>
+                <app-chip
+                  selectedcolor="default"
+                >
+                  <input
+                    class="input ng-untouched ng-pristine ng-valid"
+                    id="majorPentatonic"
+                    name="mode"
+                    type="radio"
+                  />
+                  <label
+                    class="chip"
+                    for="majorPentatonic"
+                  >
+                    Major Pentatonic
+                  </label>
+                </app-chip>
+                <app-chip
+                  selectedcolor="default"
+                >
+                  <input
+                    class="input ng-untouched ng-pristine ng-valid"
+                    id="minorPentatonic"
+                    name="mode"
+                    type="radio"
+                  />
+                  <label
+                    class="chip"
+                    for="minorPentatonic"
+                  >
+                    Minor Pentatonic
+                  </label>
+                </app-chip>
               </div>
             </fieldset>
           </app-chips>

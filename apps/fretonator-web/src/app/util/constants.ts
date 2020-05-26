@@ -271,7 +271,9 @@ export const ModePatterns = {
   aolian: [2, 1, 2, 2, 1, 2, 2],
   locrian: [1, 2, 2, 1, 2, 2, 2],
   harmonicMinor: [2, 1, 2, 2, 1, 3, 1],
-  phrygianDominant: [1, 3, 1, 2, 1, 2, 2]
+  phrygianDominant: [1, 3, 1, 2, 1, 2, 2],
+  majorPentatonic: [2, 2, 4, 2, 4],
+  minorPentatonic: [4, 2, 2, 4, 2]
 };
 
 export const ChordPatterns = {
@@ -355,6 +357,20 @@ export const ChordPatterns = {
     ChordType.diminished,
     ChordType.augmented,
     ChordType.minor
+  ],
+  majorPentatonic: [
+    ChordType.major,
+    ChordType.minor,
+    ChordType.minor,
+    ChordType.major,
+    ChordType.minor,
+  ],
+  minorPentatonic: [
+    ChordType.minor,
+    ChordType.diminished,
+    ChordType.major,
+    ChordType.minor,
+    ChordType.major,
   ]
 };
 
@@ -393,7 +409,7 @@ export const ModeSelectorObjects = [
   },
   {
     name: Mode.aolian,
-    displayName: 'Aolian (Minor)',
+    displayName: 'Aolian (Minor)'
   },
   {
     name: Mode.locrian,
@@ -406,5 +422,13 @@ export const ModeSelectorObjects = [
   {
     name: Mode.phrygianDominant,
     displayName: 'Phrygian Dominant'
+  },
+  {
+    name: Mode.majorPentatonic,
+    displayName: 'Major Pentatonic'
+  },
+  {
+    name: Mode.minorPentatonic,
+    displayName: 'Minor Pentatonic'
   }
 ];
