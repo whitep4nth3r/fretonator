@@ -148,7 +148,7 @@
 
 
 .fretboard__cell--string {
-  border-right: pxToRem(4) solid var(--nut-color);
+  border-right: pxToRem(6) solid var(--nut-color);
 
   &:after {
     content: attr(data-string-name);
