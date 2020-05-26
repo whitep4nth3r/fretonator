@@ -180,11 +180,10 @@ export class GenerateFretMapService {
 
         break;
       case 4:
-        if (this.isNatural(currentNote, 'd') || this.isNatural(currentNote, 'a')) {
-          return nextNote;
-        }
-
-        if (this.isNatural(currentNote, 'e') || this.isNatural(currentNote, 'b')) {
+        if (this.isNatural(currentNote, 'd')
+          || this.isNatural(currentNote, 'a')
+          || this.isNatural(currentNote, 'e')
+          || this.isNatural(currentNote, 'b')) {
           return nextNote;
         }
 
@@ -193,22 +192,15 @@ export class GenerateFretMapService {
           return nextNote;
         }
 
-        if (this.isSharp(currentNote, 'e') || this.isSharp(currentNote, 'b')) {
-          nextNote.sharp = true;
-          return nextNote;
-        }
-
-        if (this.isSharp(currentNote, 'a') || this.isSharp(currentNote, 'd')) {
+        if (this.isSharp(currentNote, 'e')
+          || this.isSharp(currentNote, 'b')
+          || this.isSharp(currentNote, 'a')
+          || this.isSharp(currentNote, 'd')) {
           nextNote.sharp = true;
           return nextNote;
         }
 
         if (this.isSharp(currentNote, currentNote.name)) {
-          return nextNote;
-        }
-
-        if (this.isDoubleSharp(currentNote, currentNote.name)) {
-          nextNote.sharp = true;
           return nextNote;
         }
 
@@ -222,6 +214,10 @@ export class GenerateFretMapService {
           return nextNote;
         }
 
+        if (this.isDoubleSharp(currentNote, currentNote.name)) {
+          nextNote.sharp = true;
+          return nextNote;
+        }
         break;
       default:
         throw new Error('No interval provided!');

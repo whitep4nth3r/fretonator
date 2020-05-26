@@ -5,6 +5,7 @@ import {
   aMajorPentatonic,
   aMinorPentatonic,
   aSharpMajor,
+  aSharpPentatonicMajor,
   bFlatLocrian,
   bFlatPhrygian,
   cHarmonicMinor,
@@ -15,6 +16,7 @@ import {
   cMinorPentatonicChordMap,
   cPhrygianMode,
   dDorianMode,
+  dFlatMajorPentatonic,
   dHarmonicMinor,
   dIonianFretMappings,
   eFlatMajorPentatonic,
@@ -711,6 +713,37 @@ describe('GenerateFretMapService:generateMode', () => {
 
     expect(result).toEqual(fMinorPentatonic);
   });
+
+  it('returns the D flat Pentatonic Major', () => {
+    const result = service.generateMode(
+      {
+        name: 'd',
+        sharp: false,
+        flat: true,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(dFlatMajorPentatonic);
+  });
+
+  it('returns the A sharp Pentatonic Major', () => {
+    const result = service.generateMode(
+      {
+        name: 'a',
+        sharp: true,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(aSharpPentatonicMajor);
+  });
+
   it('returns the C ionian mode', () => {
     const result = service.generateMode(
       {
