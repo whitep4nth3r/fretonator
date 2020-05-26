@@ -144,6 +144,14 @@
       color: var(--note-color-dominant);
     }
   }
+
+  &[data-mode="majorPentatonic"],
+  &[data-mode="minorPentatonic"] {
+    &:after {
+      background-color: var(--note-background) !important;
+      color: var(--note-color) !important;
+    }
+  }
 }
 
 
@@ -183,7 +191,6 @@
       color: var(--note-color);
       font-size: pxToRem(12);
     }
-
 
     &[data-degree="tonic"] {
       &:after {
@@ -250,6 +257,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-bottom: pxToRem($grid-unit * 8);
 
   @media screen and (min-width: $screen-med) {
     order: 2;
@@ -306,7 +314,6 @@
 }
 
 .scaleDisplay {
-  margin-top: pxToRem($grid-unit * 8);
   height: pxToRem($grid-unit * 10);
   order: 2;
   display: flex;
