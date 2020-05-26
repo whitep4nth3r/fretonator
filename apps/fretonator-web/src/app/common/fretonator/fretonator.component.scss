@@ -19,40 +19,6 @@
   grid-template-columns: 32px repeat(12, minmax(50px, 1fr));
 }
 
-.fretboard__cell--string {
-  &:after {
-    content: attr(data-string-name);
-    height: var(--note-height);
-    width: var(--note-height);
-    left: 50%;
-    right: unset;
-    box-sizing: border-box;
-    border-radius: 50%;
-    transform: translate(-50%, 50%);
-    color: var(--string-color);
-    line-height: var(--note-height);
-    text-align: center;
-    font-weight: var(--font-weight-bold);
-    font-family: var(--font-family-main);
-    font-size: pxToRem(16);
-  }
-
-  &:nth-child(-n + 13):after {
-    transform: translate(0, 20%); //I feel like this is a weird number
-  }
-
-  &:nth-last-child(-n + 13):after {
-    bottom: 0;
-    transform: translate(0, 50%); //also weird
-  }
-
-  &.fretboard__cell--selected {
-    &:after {
-      content: attr(data-display-note);
-    }
-  }
-}
-
 .fretboard__cell {
   position: relative;
   border-right: var(--fret-width-base) solid var(--fret-color);
@@ -180,6 +146,67 @@
   }
 }
 
+
+.fretboard__cell--string {
+  border-right: pxToRem(4) solid var(--nut-color);
+
+  &:after {
+    content: attr(data-string-name);
+    height: var(--note-height);
+    width: var(--note-height);
+    left: 0;
+    right: unset;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transform: translate(-50%, 50%);
+    color: var(--string-color);
+    line-height: var(--note-height);
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-main);
+    font-size: pxToRem(16);
+  }
+
+  &:nth-child(-n + 13):after {
+    transform: translate(-50%, 1px);
+  }
+
+  &:nth-last-child(-n + 13):after {
+    bottom: 0;
+    top: unset;
+    transform: translate(-50%, calc(50% - 1px));
+  }
+
+  &.fretboard__cell--selected {
+    &:after {
+      content: attr(data-display-note);
+      color: var(--note-color);
+      font-size: pxToRem(12);
+    }
+
+
+    &[data-degree="tonic"] {
+      &:after {
+        background-color: var(--note-bg-tonic);
+        color: var(--note-color-tonic);
+      }
+    }
+
+    &[data-degree="mediant"] {
+      &:after {
+        background-color: var(--note-bg-mediant);
+        color: var(--note-color-mediant);
+      }
+    }
+
+    &[data-degree="dominant"] {
+      &:after {
+        background-color: var(--note-bg-dominant);
+        color: var(--note-color-dominant);
+      }
+    }
+  }
+}
 
 .infoContainer {
   @include content_wrapper();
