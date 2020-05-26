@@ -2,18 +2,25 @@ import { TestBed } from '@angular/core/testing';
 
 import {
   aFlatPhrygian,
+  aMajorPentatonic,
+  aMinorPentatonic,
   aSharpMajor,
   bFlatLocrian,
   bFlatPhrygian,
   cHarmonicMinor,
   cIonianChordMap,
   cIonianFretMappings,
-  cIonianMode,
+  cIonianMode, cMajorPentatonicChordMap,
+  cMinorPentatonicChordMap,
   cPhrygianMode,
   dDorianMode,
   dHarmonicMinor,
   dIonianFretMappings,
-  fSharpHarmonicMinor
+  eFlatMajorPentatonic,
+  eFlatMinorPentatonic,
+  fMinorPentatonic,
+  fSharpHarmonicMinor,
+  fSharpMajorPentatonic
 } from './generate-fret-map.service.testConstants';
 
 import { JamTracksData } from '../../data/jamTracks';
@@ -614,6 +621,95 @@ describe('GenerateFretMapService:generateMode', () => {
     service = TestBed.inject(GenerateFretMapService);
   });
 
+  it('returns the A Pentatonic Minor', () => {
+    const result = service.generateMode(
+      {
+        name: 'a',
+        sharp: false,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'minorPentatonic'
+    );
+
+    expect(result).toEqual(aMinorPentatonic);
+  });
+
+  it('returns the A Pentatonic Major', () => {
+    const result = service.generateMode(
+      {
+        name: 'a',
+        sharp: false,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(aMajorPentatonic);
+  });
+
+  it('returns the E Flat Pentatonic Minor', () => {
+    const result = service.generateMode(
+      {
+        name: 'e',
+        sharp: false,
+        flat: true,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'minorPentatonic'
+    );
+
+    expect(result).toEqual(eFlatMinorPentatonic);
+  });
+
+  it('returns the E Flat Pentatonic Major', () => {
+    const result = service.generateMode(
+      {
+        name: 'e',
+        sharp: false,
+        flat: true,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(eFlatMajorPentatonic);
+  });
+
+  it('returns the F Sharp Pentatonic Major', () => {
+    const result = service.generateMode(
+      {
+        name: 'f',
+        sharp: true,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(fSharpMajorPentatonic);
+  });
+
+  it('returns the F Pentatonic Minor', () => {
+    const result = service.generateMode(
+      {
+        name: 'f',
+        sharp: true,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'minorPentatonic'
+    );
+
+    expect(result).toEqual(fMinorPentatonic);
+  });
   it('returns the C ionian mode', () => {
     const result = service.generateMode(
       {
@@ -1008,6 +1104,32 @@ fdescribe('GenerateFretMapService:getChords', () => {
       'ionian');
 
     expect(result).toStrictEqual(cIonianChordMap);
+  });
+
+  it('returns the correct pattern for c minor pentatonic', () => {
+    const result = service.getChordMap({
+        name: 'c',
+        flat: false,
+        sharp: false,
+        doubleSharp: false,
+        doubleFlat: false
+      },
+      'minorPentatonic');
+
+    expect(result).toStrictEqual(cMinorPentatonicChordMap);
+  });
+
+  it('returns the correct pattern for c major pentatonic', () => {
+    const result = service.getChordMap({
+        name: 'c',
+        flat: false,
+        sharp: false,
+        doubleSharp: false,
+        doubleFlat: false
+      },
+      'majorPentatonic');
+
+    expect(result).toStrictEqual(cMajorPentatonicChordMap);
   });
 });
 

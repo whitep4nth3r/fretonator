@@ -69,10 +69,22 @@ export class GenerateFretMapService {
       doubleSharp: false
     };
 
-    nextNote.name =
-      currentNote.name === 'g'
-        ? 'a'
-        : Octave[Octave.indexOf(currentNote.name) + 1];
+    if (interval === 4) {
+
+      if (currentNote.name === 'f') {
+        nextNote.name = 'a';
+      } else if (currentNote.name === 'g') {
+        nextNote.name = 'b';
+      } else {
+        nextNote.name = Octave[Octave.indexOf(currentNote.name) + 2];
+      }
+
+    } else {
+      nextNote.name =
+        currentNote.name === 'g'
+          ? 'a'
+          : Octave[Octave.indexOf(currentNote.name) + 1];
+    }
 
     switch (interval) {
       case 1:
@@ -163,6 +175,30 @@ export class GenerateFretMapService {
 
         if (this.isSharp(currentNote, currentNote.name)) {
           nextNote.doubleSharp = true;
+          return nextNote;
+        }
+
+        break;
+      case 4:
+        if (this.isNatural(currentNote, 'd') || this.isNatural(currentNote, 'a')) {
+          return nextNote;
+        }
+
+        if (this.isNatural(currentNote, 'e') || this.isNatural(currentNote, 'b')) {
+          return nextNote;
+        }
+
+        if (this.isNatural(currentNote, currentNote.name)) {
+          nextNote.flat = true;
+          return nextNote;
+        }
+
+        if (this.isSharp(currentNote, currentNote.name)) {
+          return nextNote;
+        }
+
+        if (this.isFlat(currentNote, currentNote.name)) {
+          nextNote.flat = true;
           return nextNote;
         }
 
