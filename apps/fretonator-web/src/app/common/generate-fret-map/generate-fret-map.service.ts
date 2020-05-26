@@ -193,7 +193,27 @@ export class GenerateFretMapService {
           return nextNote;
         }
 
+        if (this.isSharp(currentNote, 'e') || this.isSharp(currentNote, 'b')) {
+          nextNote.sharp = true;
+          return nextNote;
+        }
+
+        if (this.isSharp(currentNote, 'a') || this.isSharp(currentNote, 'd')) {
+          nextNote.sharp = true;
+          return nextNote;
+        }
+
         if (this.isSharp(currentNote, currentNote.name)) {
+          return nextNote;
+        }
+
+        if (this.isDoubleSharp(currentNote, currentNote.name)) {
+          nextNote.sharp = true;
+          return nextNote;
+        }
+
+        if (this.isFlat(currentNote, 'g')) {
+          nextNote.doubleFlat = true;
           return nextNote;
         }
 
