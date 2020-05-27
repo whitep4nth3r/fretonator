@@ -23,7 +23,7 @@ import {
   eFlatMinorPentatonic,
   fMinorPentatonic,
   fSharpHarmonicMinor,
-  fSharpMajorPentatonic
+  fSharpMajorPentatonic,
 } from './generate-fret-map.service.testConstants';
 
 import { JamTracksData } from '../../data/jamTracks';
@@ -44,6 +44,40 @@ describe('GenerateFretMapService', () => {
   });
 });
 
+describe('GenerateFretMapService:getNextOctaveNote', () => {
+  let service: GenerateFretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(GenerateFretMapService);
+  });
+
+  it('returns "a" if interval is 4 and current note is f', () => {
+    const result = service.getNextOctaveNote('f', 4);
+    expect(result).toBe('a');
+  });
+
+  it('returns "b" if interval is 4 and current note is g', () => {
+    const result = service.getNextOctaveNote('g', 4);
+    expect(result).toBe('b');
+  });
+
+  it('returns "e" if interval is 4 and current note is c', () => {
+    const result = service.getNextOctaveNote('c', 4);
+    expect(result).toBe('e');
+  });
+
+  it('returns "a" if interval is 2 and current note is g', () => {
+    const result = service.getNextOctaveNote('g', 2);
+    expect(result).toBe('a');
+  });
+
+  it('returns "d" if interval is 2 and current note is c', () => {
+    const result = service.getNextOctaveNote('d', 2);
+    expect(result).toBe('d');
+  });
+});
+
 describe('GenerateFretMapService:generateNextNote - semitones', () => {
   let service: GenerateFretMapService;
 
@@ -59,7 +93,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       1
     );
@@ -68,7 +102,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
       sharp: false,
       flat: true,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -79,7 +113,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         sharp: false,
         flat: true,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       1
     );
@@ -88,7 +122,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
       sharp: false,
       flat: true,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -99,7 +133,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         sharp: true,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       1
     );
@@ -108,7 +142,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
       sharp: false,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -119,7 +153,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       1
     );
@@ -128,7 +162,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
       sharp: false,
       flat: true,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -139,7 +173,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       1
     );
@@ -148,7 +182,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
       sharp: false,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -159,7 +193,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       1
     );
@@ -168,7 +202,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
       sharp: false,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -179,7 +213,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       1
     );
@@ -188,7 +222,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
       sharp: false,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -199,7 +233,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         sharp: true,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       1
     );
@@ -208,7 +242,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
       sharp: true,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -219,7 +253,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         sharp: true,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       1
     );
@@ -228,7 +262,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
       sharp: true,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -239,7 +273,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: true
+        doubleSharp: true,
       },
       1
     );
@@ -248,7 +282,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
       sharp: true,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 });
@@ -268,7 +302,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       2
     );
@@ -277,7 +311,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
       sharp: false,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -288,7 +322,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       2
     );
@@ -297,7 +331,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
       sharp: true,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -308,7 +342,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
         sharp: true,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       2
     );
@@ -317,7 +351,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
       sharp: true,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -328,7 +362,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
         sharp: false,
         flat: true,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       2
     );
@@ -337,7 +371,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
       sharp: false,
       flat: true,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -348,7 +382,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: true
+        doubleSharp: true,
       },
       2
     );
@@ -357,7 +391,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
       sharp: false,
       flat: false,
       doubleFlat: false,
-      doubleSharp: true
+      doubleSharp: true,
     });
   });
 });
@@ -377,7 +411,7 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       3
     );
@@ -386,7 +420,7 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
       sharp: true,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -397,7 +431,7 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
         sharp: false,
         flat: true,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       3
     );
@@ -406,7 +440,7 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
       sharp: true,
       flat: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     });
   });
 
@@ -417,7 +451,7 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
         sharp: true,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       3
     );
@@ -426,7 +460,7 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
       sharp: false,
       flat: false,
       doubleFlat: false,
-      doubleSharp: true
+      doubleSharp: true,
     });
   });
 });
@@ -446,7 +480,7 @@ describe('GenerateFretMapService:isNatural', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'e'
     );
@@ -460,7 +494,7 @@ describe('GenerateFretMapService:isNatural', () => {
         sharp: false,
         flat: true,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'e'
     );
@@ -483,7 +517,49 @@ describe('GenerateFretMapService:isSharp', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
+      },
+      'e'
+    );
+    expect(result).toBe(false);
+  });
+
+  it('returns false for an e flat', () => {
+    const result = service.isSharp(
+      {
+        name: 'e',
+        sharp: false,
+        flat: true,
+        doubleFlat: false,
+        doubleSharp: false,
+      },
+      'e'
+    );
+    expect(result).toBe(false);
+  });
+
+  it('returns false for an e double flat', () => {
+    const result = service.isSharp(
+      {
+        name: 'e',
+        sharp: false,
+        flat: false,
+        doubleFlat: true,
+        doubleSharp: false,
+      },
+      'e'
+    );
+    expect(result).toBe(false);
+  });
+
+  it('returns false for an e double sharp', () => {
+    const result = service.isSharp(
+      {
+        name: 'e',
+        sharp: false,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: true,
       },
       'e'
     );
@@ -497,7 +573,7 @@ describe('GenerateFretMapService:isSharp', () => {
         sharp: true,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'c'
     );
@@ -520,7 +596,7 @@ describe('GenerateFretMapService:isFlat', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'e'
     );
@@ -534,7 +610,7 @@ describe('GenerateFretMapService:isFlat', () => {
         sharp: false,
         flat: true,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'b'
     );
@@ -557,7 +633,7 @@ describe('GenerateFretMapService:isDoubleSharp', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'e'
     );
@@ -571,7 +647,7 @@ describe('GenerateFretMapService:isDoubleSharp', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: true
+        doubleSharp: true,
       },
       'c'
     );
@@ -587,6 +663,20 @@ describe('GenerateFretMapService:isDoubleFlat', () => {
     service = TestBed.inject(GenerateFretMapService);
   });
 
+  it('returns false for an e double sharp', () => {
+    const result = service.isDoubleFlat(
+      {
+        name: 'e',
+        sharp: false,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: true,
+      },
+      'e'
+    );
+    expect(result).toBe(false);
+  });
+
   it('returns false for an e natural', () => {
     const result = service.isDoubleFlat(
       {
@@ -594,7 +684,7 @@ describe('GenerateFretMapService:isDoubleFlat', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'e'
     );
@@ -608,7 +698,7 @@ describe('GenerateFretMapService:isDoubleFlat', () => {
         sharp: false,
         flat: false,
         doubleFlat: true,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'b'
     );
@@ -631,7 +721,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'minorPentatonic'
     );
@@ -646,7 +736,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'majorPentatonic'
     );
@@ -661,7 +751,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: true,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'minorPentatonic'
     );
@@ -676,7 +766,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: true,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'majorPentatonic'
     );
@@ -691,7 +781,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: true,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'majorPentatonic'
     );
@@ -706,7 +796,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: true,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'minorPentatonic'
     );
@@ -721,7 +811,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: true,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'majorPentatonic'
     );
@@ -736,7 +826,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: true,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'majorPentatonic'
     );
@@ -751,7 +841,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'ionian'
     );
@@ -765,7 +855,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'dorian'
     );
@@ -779,7 +869,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'phrygian'
     );
@@ -793,7 +883,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: true,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'phrygian'
     );
@@ -807,7 +897,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: true,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'phrygian'
     );
@@ -821,7 +911,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'harmonicMinor'
     );
@@ -835,7 +925,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'harmonicMinor'
     );
@@ -849,7 +939,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: false,
         flat: true,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'locrian'
     );
@@ -863,7 +953,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: true,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'harmonicMinor'
     );
@@ -877,7 +967,7 @@ describe('GenerateFretMapService:generateMode', () => {
         sharp: true,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'ionian'
     );
@@ -899,7 +989,7 @@ describe('GenerateFretMapService:convertNoteObjectToHumanReadable', () => {
       sharp: false,
       flat: false,
       doubleSharp: false,
-      doubleFlat: false
+      doubleFlat: false,
     });
 
     expect(result).toBe('D');
@@ -911,7 +1001,7 @@ describe('GenerateFretMapService:convertNoteObjectToHumanReadable', () => {
       sharp: true,
       flat: false,
       doubleSharp: false,
-      doubleFlat: false
+      doubleFlat: false,
     });
 
     expect(result).toBe('D#');
@@ -923,7 +1013,7 @@ describe('GenerateFretMapService:convertNoteObjectToHumanReadable', () => {
       sharp: false,
       flat: true,
       doubleSharp: false,
-      doubleFlat: false
+      doubleFlat: false,
     });
 
     expect(result).toBe('D♭');
@@ -935,7 +1025,7 @@ describe('GenerateFretMapService:convertNoteObjectToHumanReadable', () => {
       sharp: false,
       flat: false,
       doubleSharp: true,
-      doubleFlat: false
+      doubleFlat: false,
     });
 
     expect(result).toBe('Dx');
@@ -947,7 +1037,7 @@ describe('GenerateFretMapService:convertNoteObjectToHumanReadable', () => {
       sharp: false,
       flat: false,
       doubleSharp: false,
-      doubleFlat: true
+      doubleFlat: true,
     });
 
     expect(result).toBe('D𝄫');
@@ -968,7 +1058,7 @@ describe('GenerateFretMapService:convertNoteToFretMapKey', () => {
       sharp: false,
       flat: false,
       doubleSharp: false,
-      doubleFlat: false
+      doubleFlat: false,
     });
 
     expect(result).toBe('d');
@@ -980,7 +1070,7 @@ describe('GenerateFretMapService:convertNoteToFretMapKey', () => {
       sharp: true,
       flat: false,
       doubleSharp: false,
-      doubleFlat: false
+      doubleFlat: false,
     });
 
     expect(result).toBe('d#');
@@ -992,7 +1082,7 @@ describe('GenerateFretMapService:convertNoteToFretMapKey', () => {
       sharp: false,
       flat: true,
       doubleSharp: false,
-      doubleFlat: false
+      doubleFlat: false,
     });
 
     expect(result).toBe('d_');
@@ -1004,7 +1094,7 @@ describe('GenerateFretMapService:convertNoteToFretMapKey', () => {
       sharp: false,
       flat: false,
       doubleSharp: true,
-      doubleFlat: false
+      doubleFlat: false,
     });
 
     expect(result).toBe('d##');
@@ -1016,7 +1106,7 @@ describe('GenerateFretMapService:convertNoteToFretMapKey', () => {
       sharp: false,
       flat: false,
       doubleSharp: false,
-      doubleFlat: true
+      doubleFlat: true,
     });
 
     expect(result).toBe('d__');
@@ -1038,7 +1128,7 @@ describe('GenerateFretMapService:getFretMapping', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'ionian'
     );
@@ -1053,7 +1143,7 @@ describe('GenerateFretMapService:getFretMapping', () => {
         sharp: false,
         flat: false,
         doubleFlat: false,
-        doubleSharp: false
+        doubleSharp: false,
       },
       'ionian'
     );
@@ -1076,7 +1166,7 @@ describe('GenerateFretMapService:convertNoteObjectToNoteSymbol', () => {
       flat: false,
       sharp: true,
       doubleSharp: false,
-      doubleFlat: false
+      doubleFlat: false,
     });
 
     expect(result).toBe(NoteSymbol.aSharp);
@@ -1088,7 +1178,7 @@ describe('GenerateFretMapService:convertNoteObjectToNoteSymbol', () => {
       flat: true,
       sharp: false,
       doubleSharp: false,
-      doubleFlat: false
+      doubleFlat: false,
     });
 
     expect(result).toBe(NoteSymbol.aFlat);
@@ -1110,7 +1200,7 @@ describe('GenerateFretMapService:getJamTrack', () => {
         flat: false,
         sharp: false,
         doubleSharp: false,
-        doubleFlat: false
+        doubleFlat: false,
       },
       'ionian'
     );
@@ -1128,42 +1218,47 @@ fdescribe('GenerateFretMapService:getChords', () => {
   });
 
   it('returns the correct pattern for ionian', () => {
-    const result = service.getChordMap({
+    const result = service.getChordMap(
+      {
         name: 'c',
         flat: false,
         sharp: false,
         doubleSharp: false,
-        doubleFlat: false
+        doubleFlat: false,
       },
-      'ionian');
+      'ionian'
+    );
 
     expect(result).toStrictEqual(cIonianChordMap);
   });
 
   it('returns the correct pattern for c minor pentatonic', () => {
-    const result = service.getChordMap({
+    const result = service.getChordMap(
+      {
         name: 'c',
         flat: false,
         sharp: false,
         doubleSharp: false,
-        doubleFlat: false
+        doubleFlat: false,
       },
-      'minorPentatonic');
+      'minorPentatonic'
+    );
 
     expect(result).toStrictEqual(cMinorPentatonicChordMap);
   });
 
   it('returns the correct pattern for c major pentatonic', () => {
-    const result = service.getChordMap({
+    const result = service.getChordMap(
+      {
         name: 'c',
         flat: false,
         sharp: false,
         doubleSharp: false,
-        doubleFlat: false
+        doubleFlat: false,
       },
-      'majorPentatonic');
+      'majorPentatonic'
+    );
 
     expect(result).toStrictEqual(cMajorPentatonicChordMap);
   });
 });
-
