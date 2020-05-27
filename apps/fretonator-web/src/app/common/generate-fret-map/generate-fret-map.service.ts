@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+packimport { Injectable } from '@angular/core';
 import {
   ChordMap,
   Fret,
@@ -7,23 +7,22 @@ import {
   Mode,
   ModeMap,
   NoteObject,
-  NoteSymbol
+  NoteSymbol,
 } from '../../util/types';
 import {
   ChordPatterns,
   ModePatterns,
   NoteToStringAndFretMap,
   Octave,
-  ScaleDegrees
+  ScaleDegrees,
 } from '../../util/constants';
 import { JamTracksData } from '../../data/jamTracks';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GenerateFretMapService {
-  constructor() {
-  }
+  constructor() {}
 
   isNatural = (note: NoteObject, noteName: string): boolean => {
     return (
@@ -89,7 +88,7 @@ export class GenerateFretMapService {
         ? 'a'
         : Octave[Octave.indexOf(currentNoteName) + 1];
     }
-  };
+  }
 
   generateNextNote = (
     currentNote: NoteObject,
@@ -100,7 +99,7 @@ export class GenerateFretMapService {
       flat: false,
       sharp: false,
       doubleFlat: false,
-      doubleSharp: false
+      doubleSharp: false,
     };
 
     switch (interval) {
@@ -311,7 +310,7 @@ export class GenerateFretMapService {
     const modeMap = origModeMap.map((noteObject, index) => ({
       ...noteObject,
       displayName: this.convertNoteObjectToHumanReadable(noteObject),
-      degree: ScaleDegrees[index]
+      degree: ScaleDegrees[index],
     }));
 
     return modeMap
@@ -320,7 +319,7 @@ export class GenerateFretMapService {
           (thisNote: NoteObject) => ({
             ...thisNote,
             displayName: note.displayName,
-            degree: note.degree
+            degree: note.degree,
           })
         )
       )
@@ -328,7 +327,7 @@ export class GenerateFretMapService {
       .reduce((acc, curr) => [...acc, curr], [])
       .filter((item) => !!item)
       .sort(this.sortFretMapping);
-  };
+  }
 
   sortFretMapping = (current: Fret, next: Fret) => {
     if (current.string < next.string) {
@@ -393,7 +392,7 @@ export class GenerateFretMapService {
 
     return origModeMap.map((noteObject, index) => ({
       note: this.convertNoteObjectToHumanReadable(noteObject),
-      type: chordPattern[index]
+      type: chordPattern[index],
     }));
   };
 }
