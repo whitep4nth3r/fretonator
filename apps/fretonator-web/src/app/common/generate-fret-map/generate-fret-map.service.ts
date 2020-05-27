@@ -1,28 +1,14 @@
-packimport { Injectable } from '@angular/core';
-import {
-  ChordMap,
-  Fret,
-  FretMap,
-  JamTrack,
-  Mode,
-  ModeMap,
-  NoteObject,
-  NoteSymbol,
-} from '../../util/types';
-import {
-  ChordPatterns,
-  ModePatterns,
-  NoteToStringAndFretMap,
-  Octave,
-  ScaleDegrees,
-} from '../../util/constants';
+import { Injectable } from '@angular/core';
+import { ChordMap, Fret, FretMap, JamTrack, Mode, ModeMap, NoteObject, NoteSymbol } from '../../util/types';
+import { ChordPatterns, ModePatterns, NoteToStringAndFretMap, Octave, ScaleDegrees } from '../../util/constants';
 import { JamTracksData } from '../../data/jamTracks';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class GenerateFretMapService {
-  constructor() {}
+  constructor() {
+  }
 
   isNatural = (note: NoteObject, noteName: string): boolean => {
     return (
@@ -74,33 +60,31 @@ export class GenerateFretMapService {
     );
   };
 
-  getNextOctaveNote(currentNoteName: string, interval: number) {
-    if (interval === 4 && currentNoteName === 'f') {
-      if (currentNoteName === 'f') {
-        return 'a';
-      } else if (currentNoteName === 'g') {
-        return 'b';
-      } else {
-        return Octave[Octave.indexOf(currentNoteName) + 2];
-      }
-    } else {
-      return currentNoteName === 'g'
-        ? 'a'
-        : Octave[Octave.indexOf(currentNoteName) + 1];
-    }
-  }
-
-  generateNextNote = (
-    currentNote: NoteObject,
-    interval: number
-  ): NoteObject => {
+  generateNextNote = (currentNote: NoteObject, interval: number): NoteObject => {
     const nextNote = {
-      name: this.getNextOctaveNote(currentNote.name, interval),
+      name: '',
       flat: false,
       sharp: false,
       doubleFlat: false,
-      doubleSharp: false,
+      doubleSharp: false
     };
+
+    if (interval === 4) {
+
+      if (currentNote.name === 'f') {
+        nextNote.name = 'a';
+      } else if (currentNote.name === 'g') {
+        nextNote.name = 'b';
+      } else {
+        nextNote.name = Octave[Octave.indexOf(currentNote.name) + 2];
+      }
+
+    } else {
+      nextNote.name =
+        currentNote.name === 'g'
+          ? 'a'
+          : Octave[Octave.indexOf(currentNote.name) + 1];
+    }
 
     switch (interval) {
       case 1:
@@ -196,12 +180,10 @@ export class GenerateFretMapService {
 
         break;
       case 4:
-        if (
-          this.isNatural(currentNote, 'd') ||
-          this.isNatural(currentNote, 'a') ||
-          this.isNatural(currentNote, 'e') ||
-          this.isNatural(currentNote, 'b')
-        ) {
+        if (this.isNatural(currentNote, 'd')
+          || this.isNatural(currentNote, 'a')
+          || this.isNatural(currentNote, 'e')
+          || this.isNatural(currentNote, 'b')) {
           return nextNote;
         }
 
@@ -210,12 +192,10 @@ export class GenerateFretMapService {
           return nextNote;
         }
 
-        if (
-          this.isSharp(currentNote, 'e') ||
-          this.isSharp(currentNote, 'b') ||
-          this.isSharp(currentNote, 'a') ||
-          this.isSharp(currentNote, 'd')
-        ) {
+        if (this.isSharp(currentNote, 'e')
+          || this.isSharp(currentNote, 'b')
+          || this.isSharp(currentNote, 'a')
+          || this.isSharp(currentNote, 'd')) {
           nextNote.sharp = true;
           return nextNote;
         }
@@ -310,23 +290,22 @@ export class GenerateFretMapService {
     const modeMap = origModeMap.map((noteObject, index) => ({
       ...noteObject,
       displayName: this.convertNoteObjectToHumanReadable(noteObject),
-      degree: ScaleDegrees[index],
+      degree: ScaleDegrees[index]
     }));
 
     return modeMap
       .map((note) =>
-        NoteToStringAndFretMap[this.convertNoteToFretMapKey(note)].map(
-          (thisNote: NoteObject) => ({
+        NoteToStringAndFretMap[this.convertNoteToFretMapKey(note)]
+          .map((thisNote: NoteObject) => ({
             ...thisNote,
             displayName: note.displayName,
-            degree: note.degree,
-          })
-        )
-      )
+            degree: note.degree
+          })))
       .flat()
       .reduce((acc, curr) => [...acc, curr], [])
       .filter((item) => !!item)
       .sort(this.sortFretMapping);
+
   }
 
   sortFretMapping = (current: Fret, next: Fret) => {
@@ -343,9 +322,7 @@ export class GenerateFretMapService {
     return 0;
   };
 
-  convertNoteObjectToNoteSymbol = (
-    noteObject: NoteObject
-  ): NoteSymbol | false => {
+  convertNoteObjectToNoteSymbol = (noteObject: NoteObject): NoteSymbol | false => {
     let suffix = '';
 
     if (this.isSharp(noteObject, noteObject.name)) {
@@ -376,12 +353,11 @@ export class GenerateFretMapService {
     if (mode === Mode.minorPentatonic) {
       mode = Mode.aolian;
     }
-
+    
     const noteSymbol = this.convertNoteObjectToNoteSymbol(startingNote);
 
-    const found = JamTracksData.find(
-      (thisTrack) => thisTrack.key === noteSymbol && thisTrack.mode === mode
-    );
+    const found = JamTracksData
+      .find((thisTrack) => thisTrack.key === noteSymbol && thisTrack.mode === mode);
 
     return found ? found : false;
   };
@@ -392,7 +368,8 @@ export class GenerateFretMapService {
 
     return origModeMap.map((noteObject, index) => ({
       note: this.convertNoteObjectToHumanReadable(noteObject),
-      type: chordPattern[index],
+      type: chordPattern[index]
     }));
+
   };
 }
