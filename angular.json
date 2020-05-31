@@ -28,7 +28,8 @@
                 "glob": "_redirects",
                 "input": "./",
                 "output": "./"
-              }
+              },
+              "apps/fretonator-web/src/manifest.webmanifest"
             ],
             "styles": [
               "apps/fretonator-web/src/styles.scss"
@@ -62,7 +63,9 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/fretonator-web/ngsw-config.json"
             }
           }
         },
