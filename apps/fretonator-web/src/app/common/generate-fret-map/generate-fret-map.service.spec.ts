@@ -23,7 +23,8 @@ import {
   eFlatMinorPentatonic,
   fMinorPentatonic,
   fSharpHarmonicMinor,
-  fSharpMajorPentatonic
+  fSharpMajorPentatonic,
+  gFlatMinorPentatonic
 } from './generate-fret-map.service.testConstants';
 
 import { JamTracksData } from '../../data/jamTracks';
@@ -666,6 +667,21 @@ describe('GenerateFretMapService:generateMode', () => {
     service = TestBed.inject(GenerateFretMapService);
   });
 
+  it('returns the G flat Pentatonic Minor', () => {
+    const result = service.generateMode(
+      {
+        name: 'g',
+        sharp: false,
+        flat: true,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'minorPentatonic'
+    );
+
+    expect(result).toEqual(gFlatMinorPentatonic);
+  });
+
   it('returns the A Pentatonic Minor', () => {
     const result = service.generateMode(
       {
@@ -1215,7 +1231,7 @@ describe('GenerateFretMapService:getJamTrack', () => {
     );
 
     expect(result).toEqual(false);
-  })
+  });
 });
 
 describe('GenerateFretMapService:getChords', () => {
@@ -1277,25 +1293,25 @@ describe('GenerateFretMapService:getNextOctaveNote', () => {
   it('returns an a for interval 4 and noteName f', () => {
     const result = service.getNextOctaveNote('f', 4);
     expect(result).toBe('a');
-  })
+  });
 
   it('returns a b for interval 4 and noteName g', () => {
     const result = service.getNextOctaveNote('g', 4);
     expect(result).toBe('b');
-  })
+  });
 
   it('returns a c for interval 4 and noteName a', () => {
     const result = service.getNextOctaveNote('a', 4);
     expect(result).toBe('c');
-  })
+  });
 
   it('returns an a for interval 3 and noteName g', () => {
     const result = service.getNextOctaveNote('g', 3);
     expect(result).toBe('a');
-  })
+  });
 
   it('returns a d for interval 2 and noteName c', () => {
     const result = service.getNextOctaveNote('c', 2);
     expect(result).toBe('d');
-  })
-})
+  });
+});

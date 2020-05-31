@@ -219,7 +219,7 @@ export class GenerateFretMapService {
         }
         break;
       default:
-        throw new Error('No interval provided!');
+        throw new Error('Unmapped interval provided!');
     }
 
     return nextNote;

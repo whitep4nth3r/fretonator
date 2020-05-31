@@ -114,6 +114,44 @@ export const fMinorPentatonic: ModeMap = [
   },
 ]
 
+export const gFlatMinorPentatonic: ModeMap = [
+  {
+    name: 'g',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: false,
+    doubleFlat: true,
+    doubleSharp: false,
+  },
+  {
+    name: 'c',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'd',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'f',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+]
+
 export const eFlatMajorPentatonic: ModeMap = [
   {
     name: 'e',
