@@ -60,31 +60,30 @@ export class GenerateFretMapService {
     );
   };
 
+  getNextOctaveNote = (noteName: string, interval: number): string => {
+    if (interval === 4) {
+      if (noteName === 'f') {
+        return 'a';
+      } else if (noteName === 'g') {
+        return 'b';
+      } else {
+        return Octave[Octave.indexOf(noteName) + 2];
+      }
+    } else {
+      return noteName === 'g'
+          ? 'a'
+          : Octave[Octave.indexOf(noteName) + 1];
+    }
+}
+
   generateNextNote = (currentNote: NoteObject, interval: number): NoteObject => {
     const nextNote = {
-      name: '',
+      name: this.getNextOctaveNote(currentNote.name, interval),
       flat: false,
       sharp: false,
       doubleFlat: false,
       doubleSharp: false
     };
-
-    if (interval === 4) {
-
-      if (currentNote.name === 'f') {
-        nextNote.name = 'a';
-      } else if (currentNote.name === 'g') {
-        nextNote.name = 'b';
-      } else {
-        nextNote.name = Octave[Octave.indexOf(currentNote.name) + 2];
-      }
-
-    } else {
-      nextNote.name =
-        currentNote.name === 'g'
-          ? 'a'
-          : Octave[Octave.indexOf(currentNote.name) + 1];
-    }
 
     switch (interval) {
       case 1:
@@ -353,7 +352,7 @@ export class GenerateFretMapService {
     if (mode === Mode.minorPentatonic) {
       mode = Mode.aolian;
     }
-    
+
     const noteSymbol = this.convertNoteObjectToNoteSymbol(startingNote);
 
     const found = JamTracksData
