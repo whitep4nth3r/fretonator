@@ -1,5 +1,347 @@
 import { ChordType, FretMap, ModeMap } from '../../util/types';
 
+export const aSharpPentatonicMajor: ModeMap = [
+  {
+    name: 'a',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'c',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: true,
+  },
+  {
+    name: 'e',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'f',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: true,
+  },
+]
+
+export const dFlatMajorPentatonic: ModeMap = [
+  {
+    name: 'd',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'e',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'f',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'a',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+]
+
+export const fMinorPentatonic: ModeMap = [
+  {
+    name: 'f',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'a',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'c',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'e',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+]
+
+export const gFlatMinorPentatonic: ModeMap = [
+  {
+    name: 'g',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: false,
+    doubleFlat: true,
+    doubleSharp: false,
+  },
+  {
+    name: 'c',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'd',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'f',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+]
+
+export const eFlatMajorPentatonic: ModeMap = [
+  {
+    name: 'e',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'f',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'g',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'c',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+]
+
+export const fSharpMajorPentatonic: ModeMap = [
+  {
+    name: 'f',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'g',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'a',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'c',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'd',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+]
+
+export const eFlatMinorPentatonic: ModeMap = [
+  {
+    name: 'e',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'g',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'a',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'd',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+]
+
+export const aMajorPentatonic: ModeMap = [
+  {
+    name: 'a',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'c',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'e',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'f',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+]
+
+export const aMinorPentatonic: ModeMap = [
+  {
+    name: 'a',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'c',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'd',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'e',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+  {
+    name: 'g',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+  },
+]
+
 export const cIonianMode: ModeMap = [
   {
     name: 'c',
@@ -606,6 +948,51 @@ export const dIonianFretMappings: FretMap = [
   { string: 'G', fret: 12, displayName: 'G', degree: 'subdominant' },
 ];
 
+export const cMajorPentatonicChordMap = [
+  {
+    note: 'C',
+    type: ChordType.major,
+  },
+  {
+    note: 'D',
+    type: ChordType.minor,
+  },
+  {
+    note: 'E',
+    type: ChordType.minor,
+  },
+  {
+    note: 'G',
+    type: ChordType.major,
+  },
+  {
+    note: 'A',
+    type: ChordType.minor,
+  },
+]
+
+export const cMinorPentatonicChordMap = [
+  {
+    note: 'C',
+    type: ChordType.minor,
+  },
+  {
+    note: 'E♭',
+    type: ChordType.major,
+  },
+  {
+    note: 'F',
+    type: ChordType.major,
+  },
+  {
+    note: 'G',
+    type: ChordType.minor,
+  },
+  {
+    note: 'B♭',
+    type: ChordType.major,
+  },
+]
 
 export const cIonianChordMap = [
   {

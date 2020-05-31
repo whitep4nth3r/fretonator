@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ChordMap, Fret, FretMap, JamTrack, ModeMap, NoteObject, NoteSymbol } from '../../util/types';
+import { ChordMap, Fret, FretMap, JamTrack, Mode, ModeMap, NoteObject, NoteSymbol } from '../../util/types';
 import { ChordPatterns, ModePatterns, NoteToStringAndFretMap, Octave, ScaleDegrees } from '../../util/constants';
 import { JamTracksData } from '../../data/jamTracks';
 
@@ -60,19 +60,30 @@ export class GenerateFretMapService {
     );
   };
 
+  getNextOctaveNote = (noteName: string, interval: number): string => {
+    if (interval === 4) {
+      if (noteName === 'f') {
+        return 'a';
+      } else if (noteName === 'g') {
+        return 'b';
+      } else {
+        return Octave[Octave.indexOf(noteName) + 2];
+      }
+    } else {
+      return noteName === 'g'
+          ? 'a'
+          : Octave[Octave.indexOf(noteName) + 1];
+    }
+}
+
   generateNextNote = (currentNote: NoteObject, interval: number): NoteObject => {
     const nextNote = {
-      name: '',
+      name: this.getNextOctaveNote(currentNote.name, interval),
       flat: false,
       sharp: false,
       doubleFlat: false,
       doubleSharp: false
     };
-
-    nextNote.name =
-      currentNote.name === 'g'
-        ? 'a'
-        : Octave[Octave.indexOf(currentNote.name) + 1];
 
     switch (interval) {
       case 1:
@@ -167,8 +178,48 @@ export class GenerateFretMapService {
         }
 
         break;
+      case 4:
+        if (this.isNatural(currentNote, 'd')
+          || this.isNatural(currentNote, 'a')
+          || this.isNatural(currentNote, 'e')
+          || this.isNatural(currentNote, 'b')) {
+          return nextNote;
+        }
+
+        if (this.isNatural(currentNote, currentNote.name)) {
+          nextNote.flat = true;
+          return nextNote;
+        }
+
+        if (this.isSharp(currentNote, 'e')
+          || this.isSharp(currentNote, 'b')
+          || this.isSharp(currentNote, 'a')
+          || this.isSharp(currentNote, 'd')) {
+          nextNote.sharp = true;
+          return nextNote;
+        }
+
+        if (this.isSharp(currentNote, currentNote.name)) {
+          return nextNote;
+        }
+
+        if (this.isFlat(currentNote, 'g')) {
+          nextNote.doubleFlat = true;
+          return nextNote;
+        }
+
+        if (this.isFlat(currentNote, currentNote.name)) {
+          nextNote.flat = true;
+          return nextNote;
+        }
+
+        if (this.isDoubleSharp(currentNote, currentNote.name)) {
+          nextNote.sharp = true;
+          return nextNote;
+        }
+        break;
       default:
-        throw new Error('No interval provided!');
+        throw new Error('Unmapped interval provided!');
     }
 
     return nextNote;
@@ -294,6 +345,14 @@ export class GenerateFretMapService {
   };
 
   getJamTrack = (startingNote: NoteObject, mode: string): JamTrack | false => {
+    if (mode === Mode.majorPentatonic) {
+      mode = Mode.ionian;
+    }
+
+    if (mode === Mode.minorPentatonic) {
+      mode = Mode.aolian;
+    }
+
     const noteSymbol = this.convertNoteObjectToNoteSymbol(startingNote);
 
     const found = JamTracksData

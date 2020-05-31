@@ -2,18 +2,29 @@ import { TestBed } from '@angular/core/testing';
 
 import {
   aFlatPhrygian,
+  aMajorPentatonic,
+  aMinorPentatonic,
   aSharpMajor,
+  aSharpPentatonicMajor,
   bFlatLocrian,
   bFlatPhrygian,
   cHarmonicMinor,
   cIonianChordMap,
   cIonianFretMappings,
   cIonianMode,
+  cMajorPentatonicChordMap,
+  cMinorPentatonicChordMap,
   cPhrygianMode,
   dDorianMode,
+  dFlatMajorPentatonic,
   dHarmonicMinor,
   dIonianFretMappings,
-  fSharpHarmonicMinor
+  eFlatMajorPentatonic,
+  eFlatMinorPentatonic,
+  fMinorPentatonic,
+  fSharpHarmonicMinor,
+  fSharpMajorPentatonic,
+  gFlatMinorPentatonic
 } from './generate-fret-map.service.testConstants';
 
 import { JamTracksData } from '../../data/jamTracks';
@@ -480,6 +491,48 @@ describe('GenerateFretMapService:isSharp', () => {
     expect(result).toBe(false);
   });
 
+  it('returns false for e flat', () => {
+    const result = service.isSharp(
+      {
+        name: 'e',
+        sharp: false,
+        flat: true,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'e'
+    );
+    expect(result).toBe(false);
+  });
+
+  it('returns false for e double flat', () => {
+    const result = service.isSharp(
+      {
+        name: 'e',
+        sharp: false,
+        flat: false,
+        doubleFlat: true,
+        doubleSharp: false
+      },
+      'e'
+    );
+    expect(result).toBe(false);
+  });
+
+  it('returns false for e double sharp', () => {
+    const result = service.isSharp(
+      {
+        name: 'e',
+        sharp: false,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: true
+      },
+      'e'
+    );
+    expect(result).toBe(false);
+  });
+
   it('returns true for a c sharp', () => {
     const result = service.isSharp(
       {
@@ -612,6 +665,141 @@ describe('GenerateFretMapService:generateMode', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(GenerateFretMapService);
+  });
+
+  it('returns the G flat Pentatonic Minor', () => {
+    const result = service.generateMode(
+      {
+        name: 'g',
+        sharp: false,
+        flat: true,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'minorPentatonic'
+    );
+
+    expect(result).toEqual(gFlatMinorPentatonic);
+  });
+
+  it('returns the A Pentatonic Minor', () => {
+    const result = service.generateMode(
+      {
+        name: 'a',
+        sharp: false,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'minorPentatonic'
+    );
+
+    expect(result).toEqual(aMinorPentatonic);
+  });
+
+  it('returns the A Pentatonic Major', () => {
+    const result = service.generateMode(
+      {
+        name: 'a',
+        sharp: false,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(aMajorPentatonic);
+  });
+
+  it('returns the E Flat Pentatonic Minor', () => {
+    const result = service.generateMode(
+      {
+        name: 'e',
+        sharp: false,
+        flat: true,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'minorPentatonic'
+    );
+
+    expect(result).toEqual(eFlatMinorPentatonic);
+  });
+
+  it('returns the E Flat Pentatonic Major', () => {
+    const result = service.generateMode(
+      {
+        name: 'e',
+        sharp: false,
+        flat: true,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(eFlatMajorPentatonic);
+  });
+
+  it('returns the F Sharp Pentatonic Major', () => {
+    const result = service.generateMode(
+      {
+        name: 'f',
+        sharp: true,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(fSharpMajorPentatonic);
+  });
+
+  it('returns the F Pentatonic Minor', () => {
+    const result = service.generateMode(
+      {
+        name: 'f',
+        sharp: false,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'minorPentatonic'
+    );
+
+    expect(result).toEqual(fMinorPentatonic);
+  });
+
+  it('returns the D flat Pentatonic Major', () => {
+    const result = service.generateMode(
+      {
+        name: 'd',
+        sharp: false,
+        flat: true,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(dFlatMajorPentatonic);
+  });
+
+  it('returns the A sharp Pentatonic Major', () => {
+    const result = service.generateMode(
+      {
+        name: 'a',
+        sharp: true,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(aSharpPentatonicMajor);
   });
 
   it('returns the C ionian mode', () => {
@@ -963,6 +1151,18 @@ describe('GenerateFretMapService:convertNoteObjectToNoteSymbol', () => {
 
     expect(result).toBe(NoteSymbol.aFlat);
   });
+
+  it('returns false if it cannot find the note symbol', () => {
+    const result = service.convertNoteObjectToNoteSymbol({
+      name: 'aaaaa',
+      flat: true,
+      sharp: false,
+      doubleSharp: false,
+      doubleFlat: false
+    });
+
+    expect(result).toBe(false);
+  });
 });
 
 describe('GenerateFretMapService:getJamTrack', () => {
@@ -987,9 +1187,54 @@ describe('GenerateFretMapService:getJamTrack', () => {
 
     expect(result).toEqual(JamTracksData[0]);
   });
+
+  it('returns a Jam track for c pentatonic major', () => {
+    const result = service.getJamTrack(
+      {
+        name: 'c',
+        flat: false,
+        sharp: false,
+        doubleSharp: false,
+        doubleFlat: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(JamTracksData[0]);
+  });
+
+  it('returns a Jam track for c pentatonic minor', () => {
+    const result = service.getJamTrack(
+      {
+        name: 'c',
+        flat: false,
+        sharp: false,
+        doubleSharp: false,
+        doubleFlat: false
+      },
+      'minorPentatonic'
+    );
+
+    expect(result).toEqual(JamTracksData[5]);
+  });
+
+  it('returns false if there is no jam track', () => {
+    const result = service.getJamTrack(
+      {
+        name: 'c',
+        flat: false,
+        sharp: false,
+        doubleSharp: false,
+        doubleFlat: false
+      },
+      'unknownMode'
+    );
+
+    expect(result).toEqual(false);
+  });
 });
 
-fdescribe('GenerateFretMapService:getChords', () => {
+describe('GenerateFretMapService:getChords', () => {
   let service: GenerateFretMapService;
 
   beforeEach(() => {
@@ -1009,5 +1254,64 @@ fdescribe('GenerateFretMapService:getChords', () => {
 
     expect(result).toStrictEqual(cIonianChordMap);
   });
+
+  it('returns the correct pattern for c minor pentatonic', () => {
+    const result = service.getChordMap({
+        name: 'c',
+        flat: false,
+        sharp: false,
+        doubleSharp: false,
+        doubleFlat: false
+      },
+      'minorPentatonic');
+
+    expect(result).toStrictEqual(cMinorPentatonicChordMap);
+  });
+
+  it('returns the correct pattern for c major pentatonic', () => {
+    const result = service.getChordMap({
+        name: 'c',
+        flat: false,
+        sharp: false,
+        doubleSharp: false,
+        doubleFlat: false
+      },
+      'majorPentatonic');
+
+    expect(result).toStrictEqual(cMajorPentatonicChordMap);
+  });
 });
 
+describe('GenerateFretMapService:getNextOctaveNote', () => {
+  let service: GenerateFretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(GenerateFretMapService);
+  });
+
+  it('returns an a for interval 4 and noteName f', () => {
+    const result = service.getNextOctaveNote('f', 4);
+    expect(result).toBe('a');
+  });
+
+  it('returns a b for interval 4 and noteName g', () => {
+    const result = service.getNextOctaveNote('g', 4);
+    expect(result).toBe('b');
+  });
+
+  it('returns a c for interval 4 and noteName a', () => {
+    const result = service.getNextOctaveNote('a', 4);
+    expect(result).toBe('c');
+  });
+
+  it('returns an a for interval 3 and noteName g', () => {
+    const result = service.getNextOctaveNote('g', 3);
+    expect(result).toBe('a');
+  });
+
+  it('returns a d for interval 2 and noteName c', () => {
+    const result = service.getNextOctaveNote('c', 2);
+    expect(result).toBe('d');
+  });
+});

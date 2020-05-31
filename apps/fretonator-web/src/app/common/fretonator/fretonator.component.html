@@ -9,6 +9,7 @@
       [attr.data-fret]="fret"
       [attr.data-degree]="(fretMap | getFretFromFretMap: string : fret)?.degree"
       [attr.data-display-note]="(fretMap | getFretFromFretMap: string : fret)?.displayName"
+      [attr.data-mode]="mode"
     ></div>
   </ng-container>
 </ng-template>
@@ -55,7 +56,7 @@
 <div class="infoContainer">
 
   <div class="infoContainer__row">
-    <div class="degrees">
+    <div class="degrees" *ngIf="mode | displayScaleDegrees">
       <h4 class="degreesDisplay__title">Degrees</h4>
       <div class="degreesDisplay">
         <span class="degreesDisplay__degree degreesDisplay__degree--tonic">1</span>

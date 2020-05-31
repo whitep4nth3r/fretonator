@@ -51,6 +51,8 @@ export enum Mode {
   locrian = 'locrian',
   harmonicMinor = 'harmonicMinor',
   phrygianDominant = 'phrygianDominant',
+  majorPentatonic = 'majorPentatonic',
+  minorPentatonic = 'minorPentatonic'
 }
 
 export interface JamTrack {

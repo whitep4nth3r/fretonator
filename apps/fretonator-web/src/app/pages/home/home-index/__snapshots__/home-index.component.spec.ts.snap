@@ -419,6 +419,38 @@ exports[`HomeIndexComponent should create 1`] = `
                     Phrygian Dominant
                   </label>
                 </app-chip>
+                <app-chip
+                  selectedcolor="default"
+                >
+                  <input
+                    class="input ng-untouched ng-pristine ng-valid"
+                    id="majorPentatonic"
+                    name="mode"
+                    type="radio"
+                  />
+                  <label
+                    class="chip"
+                    for="majorPentatonic"
+                  >
+                    Major Pentatonic
+                  </label>
+                </app-chip>
+                <app-chip
+                  selectedcolor="default"
+                >
+                  <input
+                    class="input ng-untouched ng-pristine ng-valid"
+                    id="minorPentatonic"
+                    name="mode"
+                    type="radio"
+                  />
+                  <label
+                    class="chip"
+                    for="minorPentatonic"
+                  >
+                    Minor Pentatonic
+                  </label>
+                </app-chip>
               </div>
             </fieldset>
           </app-chips>
@@ -447,6 +479,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="0"
+                data-mode="ionian"
                 data-string="E"
                 data-string-name="e"
               />
@@ -456,12 +489,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="1"
+                data-mode="ionian"
                 data-string="E"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="2"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -470,12 +505,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="3"
+                data-mode="ionian"
                 data-string="E"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="4"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -484,12 +521,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="5"
+                data-mode="ionian"
                 data-string="E"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="6"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -498,6 +537,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="7"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -506,12 +546,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="8"
+                data-mode="ionian"
                 data-string="E"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="9"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -520,12 +562,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="10"
+                data-mode="ionian"
                 data-string="E"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -534,6 +578,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="12"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -545,6 +590,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="0"
+                data-mode="ionian"
                 data-string="B"
                 data-string-name="B"
               />
@@ -554,12 +600,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="1"
+                data-mode="ionian"
                 data-string="B"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="2"
+                data-mode="ionian"
                 data-string="B"
               />
               
@@ -568,12 +616,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="3"
+                data-mode="ionian"
                 data-string="B"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="4"
+                data-mode="ionian"
                 data-string="B"
               />
               
@@ -582,6 +632,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="5"
+                data-mode="ionian"
                 data-string="B"
               />
               
@@ -590,12 +641,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="6"
+                data-mode="ionian"
                 data-string="B"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="7"
+                data-mode="ionian"
                 data-string="B"
               />
               
@@ -604,12 +657,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="8"
+                data-mode="ionian"
                 data-string="B"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="9"
+                data-mode="ionian"
                 data-string="B"
               />
               
@@ -618,12 +673,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="10"
+                data-mode="ionian"
                 data-string="B"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-mode="ionian"
                 data-string="B"
               />
               
@@ -632,6 +689,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="12"
+                data-mode="ionian"
                 data-string="B"
               />
               
@@ -643,6 +701,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="0"
+                data-mode="ionian"
                 data-string="G"
                 data-string-name="G"
               />
@@ -650,6 +709,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="1"
+                data-mode="ionian"
                 data-string="G"
               />
               
@@ -658,12 +718,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="2"
+                data-mode="ionian"
                 data-string="G"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="3"
+                data-mode="ionian"
                 data-string="G"
               />
               
@@ -672,6 +734,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="4"
+                data-mode="ionian"
                 data-string="G"
               />
               
@@ -680,12 +743,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="5"
+                data-mode="ionian"
                 data-string="G"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="6"
+                data-mode="ionian"
                 data-string="G"
               />
               
@@ -694,12 +759,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="7"
+                data-mode="ionian"
                 data-string="G"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="8"
+                data-mode="ionian"
                 data-string="G"
               />
               
@@ -708,6 +775,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="9"
+                data-mode="ionian"
                 data-string="G"
               />
               
@@ -716,12 +784,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="10"
+                data-mode="ionian"
                 data-string="G"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-mode="ionian"
                 data-string="G"
               />
               
@@ -730,6 +800,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="12"
+                data-mode="ionian"
                 data-string="G"
               />
               
@@ -741,6 +812,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="0"
+                data-mode="ionian"
                 data-string="D"
                 data-string-name="D"
               />
@@ -748,6 +820,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="1"
+                data-mode="ionian"
                 data-string="D"
               />
               
@@ -756,6 +829,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="2"
+                data-mode="ionian"
                 data-string="D"
               />
               
@@ -764,12 +838,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="3"
+                data-mode="ionian"
                 data-string="D"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="4"
+                data-mode="ionian"
                 data-string="D"
               />
               
@@ -778,12 +854,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="5"
+                data-mode="ionian"
                 data-string="D"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="6"
+                data-mode="ionian"
                 data-string="D"
               />
               
@@ -792,12 +870,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="7"
+                data-mode="ionian"
                 data-string="D"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="8"
+                data-mode="ionian"
                 data-string="D"
               />
               
@@ -806,6 +886,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="9"
+                data-mode="ionian"
                 data-string="D"
               />
               
@@ -814,12 +895,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="10"
+                data-mode="ionian"
                 data-string="D"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-mode="ionian"
                 data-string="D"
               />
               
@@ -828,6 +911,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="12"
+                data-mode="ionian"
                 data-string="D"
               />
               
@@ -839,6 +923,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="0"
+                data-mode="ionian"
                 data-string="A"
                 data-string-name="A"
               />
@@ -846,6 +931,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="1"
+                data-mode="ionian"
                 data-string="A"
               />
               
@@ -854,6 +940,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="2"
+                data-mode="ionian"
                 data-string="A"
               />
               
@@ -862,12 +949,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="3"
+                data-mode="ionian"
                 data-string="A"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="4"
+                data-mode="ionian"
                 data-string="A"
               />
               
@@ -876,12 +965,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="5"
+                data-mode="ionian"
                 data-string="A"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="6"
+                data-mode="ionian"
                 data-string="A"
               />
               
@@ -890,6 +981,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="7"
+                data-mode="ionian"
                 data-string="A"
               />
               
@@ -898,12 +990,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="8"
+                data-mode="ionian"
                 data-string="A"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="9"
+                data-mode="ionian"
                 data-string="A"
               />
               
@@ -912,12 +1006,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="10"
+                data-mode="ionian"
                 data-string="A"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-mode="ionian"
                 data-string="A"
               />
               
@@ -926,6 +1022,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="12"
+                data-mode="ionian"
                 data-string="A"
               />
               
@@ -937,6 +1034,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="0"
+                data-mode="ionian"
                 data-string="E"
                 data-string-name="E"
               />
@@ -946,12 +1044,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="1"
+                data-mode="ionian"
                 data-string="E"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="2"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -960,12 +1060,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="3"
+                data-mode="ionian"
                 data-string="E"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="4"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -974,12 +1076,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="5"
+                data-mode="ionian"
                 data-string="E"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="6"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -988,6 +1092,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="7"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -996,12 +1101,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="8"
+                data-mode="ionian"
                 data-string="E"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="9"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -1010,12 +1117,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="10"
+                data-mode="ionian"
                 data-string="E"
               />
               
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -1024,6 +1133,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="12"
+                data-mode="ionian"
                 data-string="E"
               />
               
@@ -1035,6 +1145,7 @@ exports[`HomeIndexComponent should create 1`] = `
             <div
               class="infoContainer__row"
             >
+              
               <div
                 class="degrees"
               >
