@@ -1135,6 +1135,18 @@ describe('GenerateFretMapService:convertNoteObjectToNoteSymbol', () => {
 
     expect(result).toBe(NoteSymbol.aFlat);
   });
+
+  it('returns false if it cannot find the note symbol', () => {
+    const result = service.convertNoteObjectToNoteSymbol({
+      name: 'aaaaa',
+      flat: true,
+      sharp: false,
+      doubleSharp: false,
+      doubleFlat: false
+    });
+
+    expect(result).toBe(false);
+  });
 });
 
 describe('GenerateFretMapService:getJamTrack', () => {
@@ -1159,6 +1171,51 @@ describe('GenerateFretMapService:getJamTrack', () => {
 
     expect(result).toEqual(JamTracksData[0]);
   });
+
+  it('returns a Jam track for c pentatonic major', () => {
+    const result = service.getJamTrack(
+      {
+        name: 'c',
+        flat: false,
+        sharp: false,
+        doubleSharp: false,
+        doubleFlat: false
+      },
+      'majorPentatonic'
+    );
+
+    expect(result).toEqual(JamTracksData[0]);
+  });
+
+  it('returns a Jam track for c pentatonic minor', () => {
+    const result = service.getJamTrack(
+      {
+        name: 'c',
+        flat: false,
+        sharp: false,
+        doubleSharp: false,
+        doubleFlat: false
+      },
+      'minorPentatonic'
+    );
+
+    expect(result).toEqual(JamTracksData[5]);
+  });
+
+  it('returns false if there is no jam track', () => {
+    const result = service.getJamTrack(
+      {
+        name: 'c',
+        flat: false,
+        sharp: false,
+        doubleSharp: false,
+        doubleFlat: false
+      },
+      'unknownMode'
+    );
+
+    expect(result).toEqual(false);
+  })
 });
 
 describe('GenerateFretMapService:getChords', () => {
