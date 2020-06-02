@@ -2,77 +2,37 @@
 
 exports[`ChipsComponent should match the snapshot 1`] = `
 <app-chips-spec
-  disableSecond="false"
-  rounded="false"
   selectedColor={[Function String]}
-  testForm={[Function FormGroup]}
 >
-  <form
-    class="ng-untouched ng-pristine ng-valid"
-    novalidate=""
-  >
-    <app-chips
-      class="ng-untouched ng-pristine ng-valid"
-      formcontrolname="chip"
-      name="chips-test"
+  <app-chips>
+    <div
+      class="chips"
     >
-      <fieldset
-        class="fieldset"
-      >
-        <div
-          class="chips"
+      <app-chip>
+        <a
+          class="chip"
+          href="/a/natural/ionian"
         >
-          <app-chip
-            value="one"
-          >
-            <input
-              class="input ng-untouched ng-pristine ng-valid"
-              id="one"
-              name="chips-test"
-              type="radio"
-            />
-            <label
-              class="chip"
-              for="one"
-            >
-              One
-            </label>
-          </app-chip>
-          <app-chip
-            value="two"
-          >
-            <input
-              class="input ng-untouched ng-pristine ng-valid"
-              id="two"
-              name="chips-test"
-              type="radio"
-            />
-            <label
-              class="chip"
-              for="two"
-            >
-              Two
-            </label>
-          </app-chip>
-          <app-chip
-            value="three"
-          >
-            <input
-              class="input ng-untouched ng-pristine ng-valid"
-              id="three"
-              name="chips-test"
-              type="radio"
-            />
-            <label
-              class="chip"
-              for="three"
-            >
-              Two
-            </label>
-          </app-chip>
-        </div>
-      </fieldset>
-    </app-chips>
-  </form>
+          One 
+        </a>
+      </app-chip>
+      <app-chip>
+        <a
+          class="chip chip--round"
+          href="/b/flat/mixolydian"
+        >
+          Two 
+        </a>
+      </app-chip>
+      <app-chip>
+        <a
+          class="chip"
+          href="/f/sharp/minorPentatonic"
+        >
+          Two 
+        </a>
+      </app-chip>
+    </div>
+  </app-chips>
 </app-chips-spec>
 `;

@@ -76,183 +76,119 @@ exports[`HomeIndexComponent should create 1`] = `
           >
             Starting note
           </h2>
-          <app-chips
-            class="ng-untouched ng-pristine ng-valid"
-            name="key_base"
-            rounded="true"
-          >
-            <fieldset
-              aria-label="Base Key"
-              class="fieldset"
+          <app-chips>
+            <div
+              class="chips"
             >
-              <div
-                class="chips"
+              
+              <app-chip
+                rounded="true"
+                selectedcolor="default"
               >
-                
-                <app-chip
-                  selectedcolor="default"
+                <a
+                  class="chip chip--round"
+                  href="/a/natural/ionian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="a"
-                    name="key_base"
-                    type="radio"
-                  />
-                  <label
-                    class="chip chip--round"
-                    for="a"
-                  >
-                    A
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  A
+                </a>
+              </app-chip>
+              <app-chip
+                rounded="true"
+                selectedcolor="default"
+              >
+                <a
+                  class="chip chip--round"
+                  href="/b/natural/ionian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="b"
-                    name="key_base"
-                    type="radio"
-                  />
-                  <label
-                    class="chip chip--round"
-                    for="b"
-                  >
-                    B
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  B
+                </a>
+              </app-chip>
+              <app-chip
+                rounded="true"
+                selectedcolor="default"
+              >
+                <a
+                  class="chip chip--active chip--round"
+                  href="/c/natural/ionian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="c"
-                    name="key_base"
-                    type="radio"
-                  />
-                  <label
-                    class="chip chip--round"
-                    for="c"
-                  >
-                    C
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  C
+                </a>
+              </app-chip>
+              <app-chip
+                rounded="true"
+                selectedcolor="default"
+              >
+                <a
+                  class="chip chip--round"
+                  href="/d/natural/ionian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="d"
-                    name="key_base"
-                    type="radio"
-                  />
-                  <label
-                    class="chip chip--round"
-                    for="d"
-                  >
-                    D
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  D
+                </a>
+              </app-chip>
+              <app-chip
+                rounded="true"
+                selectedcolor="default"
+              >
+                <a
+                  class="chip chip--round"
+                  href="/e/natural/ionian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="e"
-                    name="key_base"
-                    type="radio"
-                  />
-                  <label
-                    class="chip chip--round"
-                    for="e"
-                  >
-                    E
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  E
+                </a>
+              </app-chip>
+              <app-chip
+                rounded="true"
+                selectedcolor="default"
+              >
+                <a
+                  class="chip chip--round"
+                  href="/f/natural/ionian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="f"
-                    name="key_base"
-                    type="radio"
-                  />
-                  <label
-                    class="chip chip--round"
-                    for="f"
-                  >
-                    F
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  F
+                </a>
+              </app-chip>
+              <app-chip
+                rounded="true"
+                selectedcolor="default"
+              >
+                <a
+                  class="chip chip--round"
+                  href="/g/natural/ionian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="g"
-                    name="key_base"
-                    type="radio"
-                  />
-                  <label
-                    class="chip chip--round"
-                    for="g"
-                  >
-                    G
-                  </label>
-                </app-chip>
-              </div>
-            </fieldset>
+                  G
+                </a>
+              </app-chip>
+            </div>
           </app-chips>
-          <app-chips
-            class="ng-untouched ng-pristine ng-valid"
-            name="key_extender"
-            rounded="true"
-          >
-            <fieldset
-              aria-label="Key Extender"
-              class="fieldset"
+          <app-chips>
+            <div
+              class="chips"
             >
-              <div
-                class="chips"
+              
+              <app-chip
+                rounded="true"
+                selectedcolor="grey"
               >
-                
-                <app-chip
-                  selectedcolor="grey"
-                  value=""
+                <a
+                  class="chip chip--active chip--round chip--grey"
+                  href="/c/natural/ionian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="natural"
-                    name="key_extender"
-                    type="radio"
-                  />
-                  <label
-                    class="chip chip--round chip--grey"
-                    for="natural"
-                  >
-                    C
-                  </label>
-                </app-chip>
-                
-                <app-chip
-                  selectedcolor="grey"
+                  C
+                </a>
+              </app-chip>
+              
+              <app-chip
+                rounded="true"
+                selectedcolor="grey"
+              >
+                <a
+                  class="chip chip--round chip--grey"
+                  href="/c/sharp/ionian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="sharp"
-                    name="key_extender"
-                    type="radio"
-                  />
-                  <label
-                    class="chip chip--round chip--grey"
-                    for="sharp"
-                  >
-                    C# 
-                  </label>
-                </app-chip>
-              </div>
-            </fieldset>
+                  C# 
+                </a>
+              </app-chip>
+            </div>
           </app-chips>
         </div>
         <div
@@ -263,196 +199,122 @@ exports[`HomeIndexComponent should create 1`] = `
           >
             Mode
           </h2>
-          <app-chips
-            class="ng-untouched ng-pristine ng-valid"
-            name="mode"
-          >
-            <fieldset
-              aria-label="Mode"
-              class="fieldset"
+          <app-chips>
+            <div
+              class="chips"
             >
-              <div
-                class="chips"
+              
+              <app-chip
+                selectedcolor="default"
               >
-                
-                <app-chip
-                  selectedcolor="default"
+                <a
+                  class="chip chip--active"
+                  href="/c/natural/ionian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="ionian"
-                    name="mode"
-                    type="radio"
-                  />
-                  <label
-                    class="chip"
-                    for="ionian"
-                  >
-                    Ionian (Major)
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  Ionian (Major)
+                </a>
+              </app-chip>
+              <app-chip
+                selectedcolor="default"
+              >
+                <a
+                  class="chip"
+                  href="/c/natural/dorian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="dorian"
-                    name="mode"
-                    type="radio"
-                  />
-                  <label
-                    class="chip"
-                    for="dorian"
-                  >
-                    Dorian
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  Dorian
+                </a>
+              </app-chip>
+              <app-chip
+                selectedcolor="default"
+              >
+                <a
+                  class="chip"
+                  href="/c/natural/phrygian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="phrygian"
-                    name="mode"
-                    type="radio"
-                  />
-                  <label
-                    class="chip"
-                    for="phrygian"
-                  >
-                    Phrygian
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  Phrygian
+                </a>
+              </app-chip>
+              <app-chip
+                selectedcolor="default"
+              >
+                <a
+                  class="chip"
+                  href="/c/natural/lydian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="lydian"
-                    name="mode"
-                    type="radio"
-                  />
-                  <label
-                    class="chip"
-                    for="lydian"
-                  >
-                    Lydian
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  Lydian
+                </a>
+              </app-chip>
+              <app-chip
+                selectedcolor="default"
+              >
+                <a
+                  class="chip"
+                  href="/c/natural/mixolydian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="mixolydian"
-                    name="mode"
-                    type="radio"
-                  />
-                  <label
-                    class="chip"
-                    for="mixolydian"
-                  >
-                    Mixolydian
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  Mixolydian
+                </a>
+              </app-chip>
+              <app-chip
+                selectedcolor="default"
+              >
+                <a
+                  class="chip"
+                  href="/c/natural/aolian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="aolian"
-                    name="mode"
-                    type="radio"
-                  />
-                  <label
-                    class="chip"
-                    for="aolian"
-                  >
-                    Aolian (Minor)
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  Aolian (Minor)
+                </a>
+              </app-chip>
+              <app-chip
+                selectedcolor="default"
+              >
+                <a
+                  class="chip"
+                  href="/c/natural/locrian"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="locrian"
-                    name="mode"
-                    type="radio"
-                  />
-                  <label
-                    class="chip"
-                    for="locrian"
-                  >
-                    Locrian
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  Locrian
+                </a>
+              </app-chip>
+              <app-chip
+                selectedcolor="default"
+              >
+                <a
+                  class="chip"
+                  href="/c/natural/harmonicMinor"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="harmonicMinor"
-                    name="mode"
-                    type="radio"
-                  />
-                  <label
-                    class="chip"
-                    for="harmonicMinor"
-                  >
-                    Harmonic Minor
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  Harmonic Minor
+                </a>
+              </app-chip>
+              <app-chip
+                selectedcolor="default"
+              >
+                <a
+                  class="chip"
+                  href="/c/natural/phrygianDominant"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="phrygianDominant"
-                    name="mode"
-                    type="radio"
-                  />
-                  <label
-                    class="chip"
-                    for="phrygianDominant"
-                  >
-                    Phrygian Dominant
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  Phrygian Dominant
+                </a>
+              </app-chip>
+              <app-chip
+                selectedcolor="default"
+              >
+                <a
+                  class="chip"
+                  href="/c/natural/majorPentatonic"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="majorPentatonic"
-                    name="mode"
-                    type="radio"
-                  />
-                  <label
-                    class="chip"
-                    for="majorPentatonic"
-                  >
-                    Major Pentatonic
-                  </label>
-                </app-chip>
-                <app-chip
-                  selectedcolor="default"
+                  Major Pentatonic
+                </a>
+              </app-chip>
+              <app-chip
+                selectedcolor="default"
+              >
+                <a
+                  class="chip"
+                  href="/c/natural/minorPentatonic"
                 >
-                  <input
-                    class="input ng-untouched ng-pristine ng-valid"
-                    id="minorPentatonic"
-                    name="mode"
-                    type="radio"
-                  />
-                  <label
-                    class="chip"
-                    for="minorPentatonic"
-                  >
-                    Minor Pentatonic
-                  </label>
-                </app-chip>
-              </div>
-            </fieldset>
+                  Minor Pentatonic
+                </a>
+              </app-chip>
+            </div>
           </app-chips>
         </div>
         <app-fretonator>
