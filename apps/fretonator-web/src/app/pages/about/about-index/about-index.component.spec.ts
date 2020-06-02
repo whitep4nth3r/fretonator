@@ -36,6 +36,5 @@ describe('AboutIndexComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(component).toMatchSnapshot();
   });
 });
