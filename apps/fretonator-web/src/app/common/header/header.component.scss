@@ -12,12 +12,6 @@
   padding-top: pxToRem($grid-unit);
 }
 
-.header__focusEl {
-  &:focus {
-    outline: none;
-  }
-}
-
 .header__siteLogo {
   display: flex;
   justify-content: center;

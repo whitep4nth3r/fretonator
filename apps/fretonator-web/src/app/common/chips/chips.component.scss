@@ -1,12 +1,6 @@
 @import '../../../styles/functions';
 @import '../../../styles/mixins';
 
-.fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
 .chips {
   padding-top: pxToRem($grid-unit);
   padding-bottom: pxToRem($grid-unit);
