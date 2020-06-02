@@ -4,6 +4,15 @@ exports[`AboutIndexComponent should create 1`] = `
 AboutIndexComponent {
   "meta": Meta {
     "_doc": Document {
+      "__zone_symbol__loadfalse": Array [
+        Object {
+          "runCount": 2,
+          "source": "Document.addEventListener:load",
+          "state": "scheduled",
+          "type": "eventTask",
+          "zone": "<root>",
+        },
+      ],
       "location": Location {
         "assign": [Function],
         "hash": "",
@@ -35,6 +44,15 @@ AboutIndexComponent {
   },
   "title": Title {
     "_doc": Document {
+      "__zone_symbol__loadfalse": Array [
+        Object {
+          "runCount": 2,
+          "source": "Document.addEventListener:load",
+          "state": "scheduled",
+          "type": "eventTask",
+          "zone": "<root>",
+        },
+      ],
       "location": Location {
         "assign": [Function],
         "hash": "",

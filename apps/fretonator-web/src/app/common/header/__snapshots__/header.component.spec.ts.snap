@@ -7,11 +7,6 @@ exports[`HeaderComponent should match snapshot 1`] = `
   <header
     class="header"
   >
-    <span
-      appfocusonrouter=""
-      class="header__focusEl"
-      tabindex="-1"
-    />
     <a
       aria-label="Navigate to home"
       class="header__siteLogo"
