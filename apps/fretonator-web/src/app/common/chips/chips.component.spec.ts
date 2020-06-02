@@ -23,13 +23,13 @@ describe('ChipsComponent', () => {
   @Component({
     selector: 'app-chips-spec',
     template: `
-      <form [formGroup]="testForm">
-        <app-chips name="chips-test" [rounded]="rounded" formControlName="chip">
-          <app-chip id="one" value="one" [selectedColor]="selectedColor">One</app-chip>
-          <app-chip id="two" value="two" [disabled]="disableSecond">Two</app-chip>
-          <app-chip id="three" value="three">Two</app-chip>
-        </app-chips>
-      </form>
+        <form [formGroup]="testForm">
+            <app-chips name="chips-test" [rounded]="rounded" formControlName="chip">
+                <app-chip id="one" link="one" [selectedColor]="selectedColor">One</app-chip>
+                <app-chip id="two" link="two" [disabled]="disableSecond">Two</app-chip>
+                <app-chip id="three" link="three">Two</app-chip>
+            </app-chips>
+        </form>
     `
   })
   class ChipsComponentSpec {
