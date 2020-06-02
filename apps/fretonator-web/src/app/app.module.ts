@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './common/header/header.module';
 import { FooterModule } from './common/footer/footer.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ServiceWorkerModule } from '@angular/service-worker';
+// import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -17,7 +17,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     HeaderModule,
     FooterModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent],
