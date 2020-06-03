@@ -88,6 +88,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip chip--round"
                   href="/a/natural/ionian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   A
                 </a>
@@ -99,6 +100,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip chip--round"
                   href="/b/natural/ionian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   B
                 </a>
@@ -110,6 +112,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip chip--active chip--round"
                   href="/c/natural/ionian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   C
                 </a>
@@ -121,6 +124,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip chip--round"
                   href="/d/natural/ionian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   D
                 </a>
@@ -132,6 +136,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip chip--round"
                   href="/e/natural/ionian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   E
                 </a>
@@ -143,6 +148,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip chip--round"
                   href="/f/natural/ionian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   F
                 </a>
@@ -154,6 +160,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip chip--round"
                   href="/g/natural/ionian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   G
                 </a>
@@ -172,6 +179,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip chip--active chip--round chip--grey"
                   href="/c/natural/ionian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   C
                 </a>
@@ -184,6 +192,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip chip--round chip--grey"
                   href="/c/sharp/ionian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   C# 
                 </a>
@@ -210,6 +219,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip chip--active"
                   href="/c/natural/ionian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   Ionian (Major)
                 </a>
@@ -220,6 +230,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip"
                   href="/c/natural/dorian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   Dorian
                 </a>
@@ -230,6 +241,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip"
                   href="/c/natural/phrygian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   Phrygian
                 </a>
@@ -240,6 +252,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip"
                   href="/c/natural/lydian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   Lydian
                 </a>
@@ -250,6 +263,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip"
                   href="/c/natural/mixolydian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   Mixolydian
                 </a>
@@ -260,6 +274,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip"
                   href="/c/natural/aolian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   Aolian (Minor)
                 </a>
@@ -270,6 +285,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip"
                   href="/c/natural/locrian"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   Locrian
                 </a>
@@ -280,6 +296,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip"
                   href="/c/natural/harmonicMinor"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   Harmonic Minor
                 </a>
@@ -290,6 +307,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip"
                   href="/c/natural/phrygianDominant"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   Phrygian Dominant
                 </a>
@@ -300,6 +318,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip"
                   href="/c/natural/majorPentatonic"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   Major Pentatonic
                 </a>
@@ -310,6 +329,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <a
                   class="chip"
                   href="/c/natural/minorPentatonic"
+                  title="note | createChipLink: noteExtender: mode"
                 >
                   Minor Pentatonic
                 </a>

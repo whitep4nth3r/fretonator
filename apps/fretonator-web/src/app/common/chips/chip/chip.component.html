@@ -1,8 +1,10 @@
-<a [routerLink]="['/', note, noteExtender, mode]"
-   class="chip"
-   [class.chip--active]="selected"
-   [class.chip--round]="rounded"
-   [class.chip--grey]="selectedColor === SelectedColor.grey"
+<a
+  [routerLink]="['/', note, noteExtender, mode]"
+  title="note | createChipLink: noteExtender: mode"
+  class="chip"
+  [class.chip--active]="selected"
+  [class.chip--round]="rounded"
+  [class.chip--grey]="selectedColor === SelectedColor.grey"
 >
   <ng-content></ng-content>
 </a>

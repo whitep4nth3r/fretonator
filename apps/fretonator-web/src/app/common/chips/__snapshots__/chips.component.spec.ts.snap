@@ -12,6 +12,7 @@ exports[`ChipsComponent should match the snapshot 1`] = `
         <a
           class="chip"
           href="/a/natural/ionian"
+          title="note | createChipLink: noteExtender: mode"
         >
           One 
         </a>
@@ -20,6 +21,7 @@ exports[`ChipsComponent should match the snapshot 1`] = `
         <a
           class="chip chip--round"
           href="/b/flat/mixolydian"
+          title="note | createChipLink: noteExtender: mode"
         >
           Two 
         </a>
@@ -28,6 +30,7 @@ exports[`ChipsComponent should match the snapshot 1`] = `
         <a
           class="chip"
           href="/f/sharp/minorPentatonic"
+          title="note | createChipLink: noteExtender: mode"
         >
           Two 
         </a>
