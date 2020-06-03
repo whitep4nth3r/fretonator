@@ -21,12 +21,7 @@ export class HomeIndexComponent implements OnInit {
   octave = Octave;
   showHowTo;
   metaExtender;
-
-  constructor(private title: Title,
-              private meta: Meta,
-              private localStorage: AbstractDataService,
-              private activatedRoute: ActivatedRoute) {
-  }
+  
   constructor(
     private title: Title,
     private meta: Meta,
