@@ -30,7 +30,7 @@ import {
 import { JamTracksData } from '../../data/jamTracks';
 
 import { GenerateFretMapService } from './generate-fret-map.service';
-import { NoteSymbol } from '../../util/types';
+import { NoteSymbol, NoteExtenderString, Mode } from '../../util/types';
 
 describe('GenerateFretMapService', () => {
   let service: GenerateFretMapService;
@@ -1313,5 +1313,41 @@ describe('GenerateFretMapService:getNextOctaveNote', () => {
   it('returns a d for interval 2 and noteName c', () => {
     const result = service.getNextOctaveNote('c', 2);
     expect(result).toBe('d');
+  });
+});
+
+describe('GenerateFretMapService:convertFretMapConfigurationToDisplayString', () => {
+  let service: GenerateFretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(GenerateFretMapService);
+  });
+
+  it('returns C Ionian (Major)', () => {
+    const result = service.convertFretMapConfigurationToDisplayString(
+      'c',
+      NoteExtenderString.natural,
+      Mode.ionian
+    );
+    expect(result).toBe('C Ionian (Major)');
+  });
+
+  it('returns D sharp Aolian (Minor)', () => {
+    const result = service.convertFretMapConfigurationToDisplayString(
+      'd',
+      NoteExtenderString.sharp,
+      Mode.aolian
+    );
+    expect(result).toBe('D sharp Aolian (Minor)');
+  });
+
+  it('returns A flat Minor Pentatonic', () => {
+    const result = service.convertFretMapConfigurationToDisplayString(
+      'a',
+      NoteExtenderString.flat,
+      Mode.minorPentatonic
+    );
+    expect(result).toBe('A flat Minor Pentatonic');
   });
 });

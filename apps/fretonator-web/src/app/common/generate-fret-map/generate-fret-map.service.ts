@@ -1,6 +1,24 @@
 import { Injectable } from '@angular/core';
-import { ChordMap, Fret, FretMap, JamTrack, Mode, ModeMap, NoteObject, NoteSymbol } from '../../util/types';
-import { ChordPatterns, ModePatterns, NoteToStringAndFretMap, Octave, ScaleDegrees } from '../../util/constants';
+import {
+  ChordMap,
+  Fret,
+  FretMap,
+  JamTrack,
+  Mode,
+  ModeMap,
+  NoteObject,
+  NoteSymbol,
+  NoteExtenderString,
+  NoteExtenderSymbol,
+} from '../../util/types';
+import {
+  ChordPatterns,
+  ModePatterns,
+  NoteToStringAndFretMap,
+  Octave,
+  ScaleDegrees,
+  ModeSelectorObjects,
+} from '../../util/constants';
 import { JamTracksData } from '../../data/jamTracks';
 
 @Injectable({
@@ -281,6 +299,23 @@ export class GenerateFretMapService {
     }
 
     return note.name;
+  };
+
+  convertFretMapConfigurationToDisplayString = (
+    note: string,
+    noteExtender: NoteExtenderString,
+    mode: Mode
+  ): string => {
+    const returnNote = note.toUpperCase();
+    const returnExtender = noteExtender === 'natural' ? '' : ' ' + noteExtender;
+
+    const modeSelectorObj = ModeSelectorObjects.filter(
+      (item) => item.name === mode
+    );
+
+    const returnMode = modeSelectorObj[0].displayName;
+
+    return returnNote + returnExtender + ' ' + returnMode;
   };
 
   getFretMapping(startingNote: NoteObject, mode: string): FretMap {

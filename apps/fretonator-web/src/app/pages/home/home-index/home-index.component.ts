@@ -26,6 +26,13 @@ export class HomeIndexComponent implements OnInit {
               private localStorage: AbstractDataService,
               private activatedRoute: ActivatedRoute) {
   }
+  constructor(
+    private title: Title,
+    private meta: Meta,
+    private localStorage: AbstractDataService,
+    private activatedRoute: ActivatedRoute,
+    private fretMapService: GenerateFretMapService
+  ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(() => this.onRouteChange());
@@ -68,9 +75,17 @@ export class HomeIndexComponent implements OnInit {
         this.noteExtender = NoteExtenderSymbol.natural;
     }
 
-    //todo calculate meta extender in a function/service
-    this.metaExtender = ' | ' + this.note.toUpperCase() + this.noteExtender + ' ' + this.mode;
-    this.title.setTitle('Fretonator - the ultimate interactive free guitar theory tool' + this.metaExtender);
+    this.metaExtender =
+      ' | ' +
+      this.fretMapService.convertFretMapConfigurationToDisplayString(
+        this.note,
+        this.noteExtenderString,
+        this.mode
+      );
+    this.title.setTitle(
+      'Fretonator - the ultimate interactive free guitar theory tool' +
+        this.metaExtender
+    );
   }
 
   toggleHowTo() {
