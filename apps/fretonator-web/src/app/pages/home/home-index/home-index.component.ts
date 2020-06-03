@@ -4,6 +4,7 @@ import { ModeSelectorObjects, Octave } from '../../../util/constants';
 import { Meta, Title } from '@angular/platform-browser';
 import { AbstractDataService } from '../../../common/abstract-data/abstract-data.service';
 import { ActivatedRoute } from '@angular/router';
+import { GenerateFretMapService } from '../../../common/generate-fret-map/generate-fret-map.service';
 
 @Component({
   selector: 'app-home-index',
