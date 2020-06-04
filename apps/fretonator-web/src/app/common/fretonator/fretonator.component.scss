@@ -1,6 +1,7 @@
 @import "../../../styles/vars";
 @import "../../../styles/functions";
 @import "../../../styles/mixins";
+@import "../../../styles/typography";
 
 .fretboard__container {
   margin-top: pxToRem($grid-unit * 1);
@@ -237,6 +238,7 @@
 
   @media screen and (min-width: $screen-med) {
     flex-direction: row;
+    margin-bottom: 0;
   }
 }
 
@@ -412,4 +414,71 @@
 
 .intervalDisplay__separator {
   font-weight: var(--font-weight-normal);
+}
+
+.scaleDegrees__toggle {
+  border-width: var(--border-width-button);
+  border-radius: var(--border-radius-button);
+  border-color: var(--grey);
+  color: var(--grey);
+  font-size: pxToRem(14);
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-bold);
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: pxToRem($grid-unit * 2);
+  padding: pxToRem($grid-unit / 2) pxToRem($grid-unit);
+
+  @include focus_accessible();
+}
+
+.scaleDegreesInfo {
+  background-color: var(--black);
+  margin-left: pxToRem($grid-unit * -4);
+  margin-right: pxToRem($grid-unit * -4);
+  padding: pxToRem($grid-unit * 4);
+  margin-bottom: pxToRem($grid-unit * 4);
+}
+
+.scaleDegreesInfo__title {
+  @include font_medium();
+  color: var(--peach);
+  padding-bottom: pxToRem($grid-unit * 2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scaleDegreesInfo__close {
+  border-width: 0;
+  background-color: transparent;
+  height: pxToRem(44);
+  width: pxToRem(44);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  svg {
+    height: 50%;
+    width: 50%;
+  }
+}
+
+.scaleDegreesInfo__copy {
+  @include font_bodyCopy();
+  color: var(--offwhite);
+  margin-top: pxToRem($grid-unit * 2);
+  margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.scaleDegreesInfo__list {
+
+}
+
+.scaleDegreesInfo__listItem {
+  @include font_bodyCopy();
+  color: var(--yellow);
+  margin-bottom: pxToRem($grid-unit * 1);
 }

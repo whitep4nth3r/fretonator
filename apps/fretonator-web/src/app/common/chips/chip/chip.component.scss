@@ -7,9 +7,11 @@
 }
 
 .chip {
-  border: 2px solid var(--black);
+  border-width: var(--border-width-button);
+  border-style: solid;
+  border-color: var(--black);
   background-color: var(--white);
-  border-radius: pxToRem($grid-unit * 2);
+  border-radius: var(--border-radius-button);
   padding: pxToRem(4) pxToRem(8);
   cursor: pointer;
   font-weight: var(--font-weight-bold);
