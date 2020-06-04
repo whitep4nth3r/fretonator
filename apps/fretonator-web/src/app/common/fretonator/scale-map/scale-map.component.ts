@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Mode, Scale } from '../../../util/types';
 
 enum ScaleDegreesToggleText {
@@ -11,20 +11,15 @@ enum ScaleDegreesToggleText {
   templateUrl: './scale-map.component.html',
   styleUrls: ['./scale-map.component.scss']
 })
-export class ScaleMapComponent implements OnInit {
+export class ScaleMapComponent {
   @Input() mode: Mode;
   @Input() scale: Scale;
 
-  showscaleMapInfo = false;
+  showScaleMapInfo = false;
   scaleDegreesToggleText = ScaleDegreesToggleText.hidden;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  togglescaleMapInfo() {
-    this.showscaleMapInfo = !this.showscaleMapInfo;
-    this.scaleDegreesToggleText = this.showscaleMapInfo ? ScaleDegreesToggleText.visible : ScaleDegreesToggleText.hidden;
+  toggleScaleMapInfo() {
+    this.showScaleMapInfo = !this.showScaleMapInfo;
+    this.scaleDegreesToggleText = this.showScaleMapInfo ? ScaleDegreesToggleText.visible : ScaleDegreesToggleText.hidden;
   }
 }
