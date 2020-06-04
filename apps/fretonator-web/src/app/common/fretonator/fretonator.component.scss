@@ -417,19 +417,10 @@
 }
 
 .scaleDegrees__toggle {
-  border-width: var(--border-width-button);
-  border-radius: var(--border-radius-button);
+  @include chip_button_base();
   border-color: var(--grey);
   color: var(--grey);
-  font-size: pxToRem(14);
-  font-family: var(--font-family-main);
-  font-weight: var(--font-weight-bold);
-  background-color: transparent;
-  cursor: pointer;
   margin-top: pxToRem($grid-unit * 2);
-  padding: pxToRem($grid-unit / 2) pxToRem($grid-unit);
-
-  @include focus_accessible();
 }
 
 .scaleDegreesInfo {
