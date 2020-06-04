@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Mode, NoteObject, Scale } from '../../../util/types';
-import { GenerateFretMapService } from '../../../common/generate-fret-map/generate-fret-map.service';
+import { FretMapService } from '../../../common/fret-map/fret-map.service';
 
 @Pipe({
   name: 'getScaleFromModeMap',
 })
 export class GetScaleFromModeMapPipe implements PipeTransform {
-  constructor(private generateFretMapService: GenerateFretMapService) {
+  constructor(private generateFretMapService: FretMapService) {
   }
 
   transform(note: NoteObject, mode: Mode): Scale {

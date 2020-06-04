@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { CreateChipLinkTitlePipe } from './create-chip-link-title.pipe';
-import { GenerateFretMapService } from '../../../common/generate-fret-map/generate-fret-map.service';
+import { FretMapService } from '../../fret-map/fret-map.service';
 import { NoteExtenderString, Mode } from '../../../util/types';
 
 describe('CreateChipLinkTitlePipe', () => {
-  let service: GenerateFretMapService;
+  let service: FretMapService;
   let pipe: CreateChipLinkTitlePipe;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
     pipe = new CreateChipLinkTitlePipe(service);
   });
 

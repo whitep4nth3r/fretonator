@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FretonatorComponent } from './fretonator.component';
 import { FretonatorModule } from './fretonator.module';
 import { Component } from '@angular/core';
-import { dIonianFretMappings } from '../generate-fret-map/generate-fret-map.service.testConstants';
+import { dIonianFretMappings } from '../fret-map/fret-map.service.testConstants';
 
 describe('FretonatorComponent', () => {
 
