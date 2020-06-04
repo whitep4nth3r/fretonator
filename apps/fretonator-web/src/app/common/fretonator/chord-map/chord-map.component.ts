@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ChordMap } from '../../../util/types';
 
 @Component({
@@ -6,12 +6,6 @@ import { ChordMap } from '../../../util/types';
   templateUrl: './chord-map.component.html',
   styleUrls: ['./chord-map.component.scss']
 })
-export class ChordMapComponent implements OnInit {
+export class ChordMapComponent {
   @Input() chordMap: ChordMap;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
