@@ -7,7 +7,6 @@ export enum SelectedColor {
   grey = 'grey',
 }
 
-
 @Component({
   selector: 'app-chip',
   templateUrl: './chip.component.html',
