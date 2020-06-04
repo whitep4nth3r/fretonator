@@ -10,7 +10,7 @@ exports[`ChipsComponent should match the snapshot 1`] = `
     >
       <app-chip>
         <a
-          aria-label="note | createChipLink: noteExtender: mode"
+          aria-label="A Ionian (Major)"
           class="chip"
           href="/a/natural/ionian"
         >
@@ -19,7 +19,7 @@ exports[`ChipsComponent should match the snapshot 1`] = `
       </app-chip>
       <app-chip>
         <a
-          aria-label="note | createChipLink: noteExtender: mode"
+          aria-label="B flat Mixolydian"
           class="chip chip--round"
           href="/b/flat/mixolydian"
         >
@@ -28,7 +28,7 @@ exports[`ChipsComponent should match the snapshot 1`] = `
       </app-chip>
       <app-chip>
         <a
-          aria-label="note | createChipLink: noteExtender: mode"
+          aria-label="F sharp Minor Pentatonic"
           class="chip"
           href="/f/sharp/minorPentatonic"
         >

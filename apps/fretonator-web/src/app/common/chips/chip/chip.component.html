@@ -1,6 +1,6 @@
 <a
   [routerLink]="['/', note, noteExtender, mode]"
-  aria-label="note | createChipLink: noteExtender: mode"
+  [attr.aria-label]="note | createChipLinkTitle: noteExtender: mode"
   class="chip"
   [class.chip--active]="selected"
   [class.chip--round]="rounded"

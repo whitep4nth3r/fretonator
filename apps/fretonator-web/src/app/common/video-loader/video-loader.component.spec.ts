@@ -6,8 +6,7 @@ import { VideoLoaderModule } from './video-loader.module';
 import { JamTracksData } from '../../data/jamTracks';
 
 xdescribe('VideoLoaderComponent', () => {
-
-
+  
   @Component({
     selector: 'app-video-loader',
     template: `
