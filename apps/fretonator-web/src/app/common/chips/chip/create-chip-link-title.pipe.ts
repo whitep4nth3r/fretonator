@@ -9,12 +9,12 @@ export class CreateChipLinkTitlePipe implements PipeTransform {
   constructor(public generateFretMapService: FretMapService) {}
   transform(
     note: string,
-    noteExtender: NoteExtenderString,
+    noteExtender: string,
     mode: Mode
   ): string {
     return this.generateFretMapService.convertFretMapConfigurationToDisplayString(
       note,
-      noteExtender,
+      noteExtender as NoteExtenderString,
       mode
     );
   }

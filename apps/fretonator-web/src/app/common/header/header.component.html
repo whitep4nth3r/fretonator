@@ -10,10 +10,9 @@
   <button class="hamburger"
           [class.is__open]="isMenuVisible"
           (click)="toggleMenu()"
-          [attr.aria-checked]="isMenuVisible"
+          [attr.aria-expanded]="isMenuVisible"
           aria-label="Menu Toggle"
           aria-controls="headerLinks"
-          role="switch"
           type="button">
     <span class="hamburger__box">
       <span class="hamburger__inner"></span>

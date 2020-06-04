@@ -1,5 +1,4 @@
-import { Component, Inject, Input, OnInit, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, Input } from '@angular/core';
 import { JamTrack } from '../../util/types';
 
 @Component({
@@ -7,14 +6,12 @@ import { JamTrack } from '../../util/types';
   templateUrl: './video-loader.component.html',
   styleUrls: ['./video-loader.component.scss']
 })
-export class VideoLoaderComponent implements OnInit {
+export class VideoLoaderComponent {
   @Input() jamTrack: JamTrack;
-  isBrowser = false;
+  showVideo = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId) { }
-
-  ngOnInit(): void {
-    this.isBrowser = isPlatformBrowser(this.platformId);
+  @HostListener('window:scroll')
+  onScroll() {
+    this.showVideo = true;
   }
-
 }

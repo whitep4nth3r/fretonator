@@ -7,10 +7,10 @@
   </div>
 
   <div class="videoLoader__video">
-    <app-video-server *ngIf="!isBrowser"
+    <app-video-server *ngIf="!showVideo"
                       [youTubeId]="jamTrack.youTubeId"
                       class="videoLoader__content"></app-video-server>
-    <app-video-browser *ngIf="isBrowser"
+    <app-video-browser *ngIf="showVideo"
                        [youTubeId]="jamTrack.youTubeId"
                        [title]="jamTrack.title"
                        class="videoLoader__content"></app-video-browser>

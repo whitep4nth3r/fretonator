@@ -12,9 +12,8 @@
       <button class="scaleDegrees__toggle"
               aria-label="Scale Degrees Info Toggle"
               aria-controls="scaleMapInfo"
-              role="switch"
               type="button"
-              [attr.aria-checked]="showScaleMapInfo"
+              [attr.aria-expanded]="showScaleMapInfo"
               (click)="toggleScaleMapInfo()">{{scaleDegreesToggleText}}
       </button>
     </div>
@@ -39,7 +38,6 @@
       <button class="scaleMapInfo__close"
               aria-label="Scale Degrees Info Toggle"
               aria-controls="scaleMapInfo"
-              role="switch"
               type="button"
               (click)="toggleScaleMapInfo()">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
