@@ -34,8 +34,9 @@
       <app-chips>
         <app-chip *ngFor="let thisNote of octave"
                   [note]="thisNote"
-                  [noteExtender]="noteExtenderString"
+                  [noteExtender]="'natural'"
                   [mode]="mode"
+                  [isBaseNote]="true"
                   rounded="true"
                   selectedColor="default">{{thisNote | titlecase}}</app-chip>
       </app-chips>

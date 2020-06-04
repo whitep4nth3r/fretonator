@@ -18,6 +18,7 @@ export class ChipComponent implements DoCheck {
   @Input() mode: Mode;
   @Input() selectedColor: SelectedColor = SelectedColor.default;
   @Input() rounded = false;
+  @Input() isBaseNote = false;
   SelectedColor = SelectedColor;
   selected = false;
 
@@ -33,6 +34,8 @@ export class ChipComponent implements DoCheck {
 
     if (data.note !== this.note) {
       return false;
+    } else if (data.note === this.note && this.isBaseNote) {
+      return true;
     }
 
     if (data.noteExtender !== this.noteExtender) {
