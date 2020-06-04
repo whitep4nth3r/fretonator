@@ -11,9 +11,6 @@ export default function(schema: any): Rule {
     ];
 
     const modeRoutes = generateModeRoutes();
-
-    // writeRoutes(tree, [...staticPages, ...modeRoutes]);
-
     return writeRoutes(tree, [...staticPages, ...modeRoutes]);
   };
 }
