@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { CreateChipLinkTitlePipe } from './create-chip-link-title.pipe';
 import { FretMapService } from '../../fret-map/fret-map.service';
-import { NoteExtenderString, Mode } from '../../../util/types';
+import { Mode, NoteExtenderString } from '../../../util/types';
 
 describe('CreateChipLinkTitlePipe', () => {
   let service: FretMapService;

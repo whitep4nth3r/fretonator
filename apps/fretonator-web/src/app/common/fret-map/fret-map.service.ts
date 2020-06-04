@@ -6,18 +6,17 @@ import {
   JamTrack,
   Mode,
   ModeMap,
-  NoteObject,
-  NoteSymbol,
   NoteExtenderString,
-  NoteExtenderSymbol,
+  NoteObject,
+  NoteSymbol
 } from '../../util/types';
 import {
   ChordPatterns,
   ModePatterns,
+  ModeSelectorObjects,
   NoteToStringAndFretMap,
   Octave,
-  ScaleDegrees,
-  ModeSelectorObjects,
+  ScaleDegrees
 } from '../../util/constants';
 import { JamTracksData } from '../../data/jamTracks';
 

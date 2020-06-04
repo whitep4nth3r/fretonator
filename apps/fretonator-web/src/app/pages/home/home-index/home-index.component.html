@@ -80,7 +80,7 @@
 
     <app-fretonator [scale]="note | symbolToNoteObj: noteExtender | getScaleFromModeMap: mode"
                     [fretMap]="note | symbolToNoteObj: noteExtender | generateFretMap: mode"
-                    [intervalPattern]="mode | getIntervalPatternFromMode"
+                    [intervalMap]="mode | getIntervalPatternFromMode"
                     [chordMap]="note | symbolToNoteObj: noteExtender | getChordMap: mode"
                     [mode]="mode"></app-fretonator>
 

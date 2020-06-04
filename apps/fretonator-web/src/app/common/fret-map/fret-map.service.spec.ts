@@ -30,7 +30,7 @@ import {
 import { JamTracksData } from '../../data/jamTracks';
 
 import { FretMapService } from './fret-map.service';
-import { NoteSymbol, NoteExtenderString, Mode } from '../../util/types';
+import { Mode, NoteExtenderString, NoteSymbol } from '../../util/types';
 
 describe('GenerateFretMapService', () => {
   let service: FretMapService;

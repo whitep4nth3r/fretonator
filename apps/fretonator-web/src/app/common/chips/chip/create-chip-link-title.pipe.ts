@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { NoteExtenderString, Mode } from '../../../util/types';
+import { Mode, NoteExtenderString } from '../../../util/types';
 import { FretMapService } from '../../fret-map/fret-map.service';
 
 @Pipe({

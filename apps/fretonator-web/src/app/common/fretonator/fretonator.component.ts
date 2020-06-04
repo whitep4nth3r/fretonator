@@ -14,7 +14,7 @@ enum ScaleDegreesToggleText {
 export class FretonatorComponent implements OnInit {
   @Input() fretMap: FretMap;
   @Input() scale: Scale;
-  @Input() intervalPattern: [];
+  @Input() intervalMap: [];
   @Input() chordMap: ChordMap;
   @Input() mode: Mode;
   frets = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
