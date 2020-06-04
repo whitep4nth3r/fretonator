@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Mode } from '../../util/types';
+import { Mode } from '../../../util/types';
 
 @Pipe({
   name: 'displayScaleDegrees'
