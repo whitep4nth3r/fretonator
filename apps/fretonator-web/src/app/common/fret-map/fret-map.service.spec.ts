@@ -25,19 +25,19 @@ import {
   fSharpHarmonicMinor,
   fSharpMajorPentatonic,
   gFlatMinorPentatonic
-} from './generate-fret-map.service.testConstants';
+} from './fret-map.service.testConstants';
 
 import { JamTracksData } from '../../data/jamTracks';
 
-import { GenerateFretMapService } from './generate-fret-map.service';
-import { NoteSymbol } from '../../util/types';
+import { FretMapService } from './fret-map.service';
+import { Mode, NoteExtenderString, NoteSymbol } from '../../util/types';
 
 describe('GenerateFretMapService', () => {
-  let service: GenerateFretMapService;
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('should be created', () => {
@@ -45,12 +45,12 @@ describe('GenerateFretMapService', () => {
   });
 });
 
-describe('GenerateFretMapService:generateNextNote - semitones', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:generateNextNote - semitones', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns a semitone higher when all sharps and flats are false', () => {
@@ -254,12 +254,12 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
   });
 });
 
-describe('GenerateFretMapService:generateNextNote - tones', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:generateNextNote - tones', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns a tone higher when all sharps and flats are false', () => {
@@ -363,12 +363,12 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
   });
 });
 
-describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:generateNextNote - aug 2nds', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns an aug 2nd higher when the current note is c', () => {
@@ -432,12 +432,12 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
   });
 });
 
-describe('GenerateFretMapService:isNatural', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:isNatural', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns true for an e natural', () => {
@@ -469,12 +469,12 @@ describe('GenerateFretMapService:isNatural', () => {
   });
 });
 
-describe('GenerateFretMapService:isSharp', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:isSharp', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns false for an e natural', () => {
@@ -548,12 +548,12 @@ describe('GenerateFretMapService:isSharp', () => {
   });
 });
 
-describe('GenerateFretMapService:isFlat', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:isFlat', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns false for an e natural', () => {
@@ -585,12 +585,12 @@ describe('GenerateFretMapService:isFlat', () => {
   });
 });
 
-describe('GenerateFretMapService:isDoubleSharp', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:isDoubleSharp', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns false for an e natural', () => {
@@ -622,12 +622,12 @@ describe('GenerateFretMapService:isDoubleSharp', () => {
   });
 });
 
-describe('GenerateFretMapService:isDoubleFlat', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:isDoubleFlat', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns false for an e natural', () => {
@@ -659,12 +659,12 @@ describe('GenerateFretMapService:isDoubleFlat', () => {
   });
 });
 
-describe('GenerateFretMapService:generateMode', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:generateMode', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns the G flat Pentatonic Minor', () => {
@@ -943,12 +943,12 @@ describe('GenerateFretMapService:generateMode', () => {
   });
 });
 
-describe('GenerateFretMapService:convertNoteObjectToHumanReadable', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:convertNoteObjectToHumanReadable', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns D for a d natural object', () => {
@@ -1012,12 +1012,12 @@ describe('GenerateFretMapService:convertNoteObjectToHumanReadable', () => {
   });
 });
 
-describe('GenerateFretMapService:convertNoteToFretMapKey', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:convertNoteToFretMapKey', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns d for a d natural object', () => {
@@ -1081,12 +1081,12 @@ describe('GenerateFretMapService:convertNoteToFretMapKey', () => {
   });
 });
 
-describe('GenerateFretMapService:getFretMapping', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:getFretMapping', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns the correct fret mappings for C ionian', () => {
@@ -1120,12 +1120,12 @@ describe('GenerateFretMapService:getFretMapping', () => {
   });
 });
 
-describe('GenerateFretMapService:convertNoteObjectToNoteSymbol', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:convertNoteObjectToNoteSymbol', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns the correct note symbol for A sharp', () => {
@@ -1165,12 +1165,12 @@ describe('GenerateFretMapService:convertNoteObjectToNoteSymbol', () => {
   });
 });
 
-describe('GenerateFretMapService:getJamTrack', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:getJamTrack', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns a Jam track for c ionian', () => {
@@ -1234,12 +1234,12 @@ describe('GenerateFretMapService:getJamTrack', () => {
   });
 });
 
-describe('GenerateFretMapService:getChords', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:getChords', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns the correct pattern for ionian', () => {
@@ -1282,12 +1282,12 @@ describe('GenerateFretMapService:getChords', () => {
   });
 });
 
-describe('GenerateFretMapService:getNextOctaveNote', () => {
-  let service: GenerateFretMapService;
+describe('FretMapService:getNextOctaveNote', () => {
+  let service: FretMapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('returns an a for interval 4 and noteName f', () => {
@@ -1313,5 +1313,41 @@ describe('GenerateFretMapService:getNextOctaveNote', () => {
   it('returns a d for interval 2 and noteName c', () => {
     const result = service.getNextOctaveNote('c', 2);
     expect(result).toBe('d');
+  });
+});
+
+describe('FretMapService:convertFretMapConfigurationToDisplayString', () => {
+  let service: FretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(FretMapService);
+  });
+
+  it('returns C Ionian (Major)', () => {
+    const result = service.convertFretMapConfigurationToDisplayString(
+      'c',
+      NoteExtenderString.natural,
+      Mode.ionian
+    );
+    expect(result).toBe('C Ionian (Major)');
+  });
+
+  it('returns D sharp Aolian (Minor)', () => {
+    const result = service.convertFretMapConfigurationToDisplayString(
+      'd',
+      NoteExtenderString.sharp,
+      Mode.aolian
+    );
+    expect(result).toBe('D sharp Aolian (Minor)');
+  });
+
+  it('returns A flat Minor Pentatonic', () => {
+    const result = service.convertFretMapConfigurationToDisplayString(
+      'a',
+      NoteExtenderString.flat,
+      Mode.minorPentatonic
+    );
+    expect(result).toBe('A flat Minor Pentatonic');
   });
 });

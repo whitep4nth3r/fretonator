@@ -80,3 +80,15 @@ export type ModeMap = NoteObject[];
 export type ScaleNote = string;
 
 export type Scale = ScaleNote[];
+
+export enum NoteExtenderString {
+  sharp = 'sharp',
+  natural = 'natural',
+  flat = 'flat'
+}
+
+export enum NoteExtenderSymbol {
+  sharp = '#',
+  natural = '',
+  flat = '_'
+}

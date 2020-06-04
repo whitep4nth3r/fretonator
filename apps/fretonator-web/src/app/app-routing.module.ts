@@ -3,7 +3,6 @@ import { Route, RouterModule, Routes } from '@angular/router';
 
 const home: Route = {
   path: '',
-  pathMatch: 'full',
   loadChildren: () => import('./pages/home/home.module').then((mod) => mod.HomeModule),
 };
 
@@ -23,7 +22,7 @@ const routes: Routes = [home, about, notFound];
   imports: [
     RouterModule.forRoot(routes, {
     initialNavigation: 'enabled',
-    scrollPositionRestoration: 'enabled',
+    scrollPositionRestoration: 'disabled',
 }),
   ],
   exports: [RouterModule],

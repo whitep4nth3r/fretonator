@@ -1,18 +1,10 @@
-<input type="radio"
-       class="input"
-       [name]="chips.name"
-       [attr.name]="chips.name"
-       [checked]="chips.value === value"
-       [disabled]="chips.disabled || disabled"
-       [id]="id"
-       [ngModel]="chips.value"
-       [value]="value"
-       (change)="onChange()"
-       (blur)="onBlur()">
-
-<label [for]="id"
-       class="chip"
-       [class.chip--round]="chips.rounded"
-       [class.chip--grey]="selectedColor === SelectedColor.grey">
+<a
+  [routerLink]="['/', note, noteExtender, mode]"
+  aria-label="note | createChipLink: noteExtender: mode"
+  class="chip"
+  [class.chip--active]="selected"
+  [class.chip--round]="rounded"
+  [class.chip--grey]="selectedColor === SelectedColor.grey"
+>
   <ng-content></ng-content>
-</label>
+</a>

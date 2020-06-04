@@ -5,6 +5,9 @@ import { HomeModule } from '../home.module';
 import { By } from '@angular/platform-browser';
 import { BrowserTestingModule } from '@angular/platform-browser/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 describe('HomeIndexComponent', () => {
   const selectors = {
@@ -34,7 +37,21 @@ describe('HomeIndexComponent', () => {
       imports: [
         HomeModule,
         BrowserTestingModule,
-        NoopAnimationsModule
+        NoopAnimationsModule,
+        RouterTestingModule
+      ],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            params: of({}),
+            snapshot: {
+              data: {
+                selected: { note: 'c', noteExtender: 'natural', mode: 'ionian' }
+              }
+            }
+          }
+        }
       ]
     }).compileComponents();
   }));

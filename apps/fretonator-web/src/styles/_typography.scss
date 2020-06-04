@@ -29,3 +29,13 @@
   font-size: pxToRem(18);
   line-height: pxToRem(30);
 }
+
+@mixin info_container_title {
+  font-family: var(--font-family-main);
+  letter-spacing: var(--letter-spacing-display);
+  font-size: pxToRem(14);
+  text-transform: uppercase;
+  margin-bottom: pxToRem($grid-unit * 2);
+  display: flex;
+  flex-direction: column;
+}

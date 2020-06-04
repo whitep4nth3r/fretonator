@@ -1,41 +1,51 @@
-import { Component, forwardRef, HostBinding, Inject, Input, OnInit } from '@angular/core';
-import { ChipsComponent } from '../chips.component';
+import { Component, DoCheck, Input } from '@angular/core';
+import { Mode } from '../../../util/types';
+import { ActivatedRoute } from '@angular/router';
 
 export enum SelectedColor {
   default = 'default',
   grey = 'grey',
 }
 
-
 @Component({
   selector: 'app-chip',
   templateUrl: './chip.component.html',
   styleUrls: ['./chip.component.scss']
 })
-export class ChipComponent implements OnInit {
-  @Input() id: string;
-  @Input() value: string | number;
-  @Input() disabled: boolean;
+export class ChipComponent implements DoCheck {
+  @Input() note: string;
+  @Input() noteExtender: string;
+  @Input() mode: Mode;
   @Input() selectedColor: SelectedColor = SelectedColor.default;
-
+  @Input() rounded = false;
+  @Input() isBaseNote = false;
   SelectedColor = SelectedColor;
+  selected = false;
 
-  @HostBinding('attr.id') hostId = null;
-
-  constructor(@Inject(forwardRef(() => ChipsComponent)) public chips: ChipsComponent) {
+  constructor(private activatedRoute: ActivatedRoute) {
   }
 
-  ngOnInit(): void {
+  ngDoCheck() {
+    this.selected = this.isSelected(this.activatedRoute);
   }
 
-  onChange() {
-    this.chips.writeValue(this.value);
-    this.chips.onChange(this.value);
-    this.chips.onTouched();
-  }
+  isSelected(activatedRoute) {
+    const data = activatedRoute.snapshot.data.selected;
 
-  onBlur() {
-    this.chips.onTouched();
-  }
+    if (data.note !== this.note) {
+      return false;
+    } else if (data.note === this.note && this.isBaseNote) {
+      return true;
+    }
 
+    if (data.noteExtender !== this.noteExtender) {
+      return false;
+    }
+
+    if (data.mode !== this.mode) {
+      return false;
+    }
+
+    return true;
+  }
 }

@@ -27,57 +27,53 @@
     </div>
   </div>
 
-
   <div class="modeSelector__container">
     <div class="modeSelector__chipsContainer">
       <h2 class="modeSelector__label">Starting note</h2>
 
-      <app-chips rounded="true"
-                 name="key_base"
-                 aria-label="Base Key"
-                 [(ngModel)]="note"
-                 (ngModelChange)="resetNoteExtender()">
-
+      <app-chips>
         <app-chip *ngFor="let thisNote of octave"
-                  [id]="thisNote"
-                  [value]="thisNote"
+                  [note]="thisNote"
+                  [noteExtender]="'natural'"
+                  [mode]="mode"
+                  [isBaseNote]="true"
+                  rounded="true"
                   selectedColor="default">{{thisNote | titlecase}}</app-chip>
-
       </app-chips>
 
-      <app-chips rounded="true"
-                 name="key_extender"
-                 aria-label="Key Extender"
-                 [(ngModel)]="noteExtender">
-
-        <app-chip *ngIf="!(note === 'f' || note === 'c')" id="flat"
-                  [value]="'_'"
+      <app-chips>
+        <app-chip *ngIf="!(note === 'f' || note === 'c')"
+                  [note]="note"
+                  [noteExtender]="'flat'"
+                  [mode]="mode"
+                  rounded="true"
                   selectedColor="grey">{{note | titlecase}}♭
         </app-chip>
 
-        <app-chip id="natural"
-                  value=""
+        <app-chip [note]="note"
+                  [noteExtender]="'natural'"
+                  [mode]="mode"
+                  rounded="true"
                   selectedColor="grey">{{note | titlecase}}</app-chip>
 
-        <app-chip *ngIf="!(note === 'b' || note === 'e')" id="sharp"
-                  [value]="'#'"
+        <app-chip *ngIf="!(note === 'b' || note === 'e')"
+                  [note]="note"
+                  [noteExtender]="'sharp'"
+                  [mode]="mode"
+                  rounded="true"
                   selectedColor="grey">{{note | titlecase}}#
         </app-chip>
-
       </app-chips>
-
     </div>
 
     <div class="modeSelector__chipsContainer">
       <h2 class="modeSelector__label">Mode</h2>
 
-      <app-chips name="mode"
-                 [(ngModel)]="mode"
-                 aria-label="Mode">
-
+      <app-chips>
         <app-chip *ngFor="let thisMode of modeSelectorObjects"
-                  [id]="thisMode.name"
-                  [value]="thisMode.name"
+                  [note]="note"
+                  [noteExtender]="noteExtenderString"
+                  [mode]="thisMode.name"
                   selectedColor="default">{{thisMode.displayName}}</app-chip>
       </app-chips>
 
@@ -85,7 +81,7 @@
 
     <app-fretonator [scale]="note | symbolToNoteObj: noteExtender | getScaleFromModeMap: mode"
                     [fretMap]="note | symbolToNoteObj: noteExtender | generateFretMap: mode"
-                    [intervalPattern]="mode | getIntervalPatternFromMode"
+                    [intervalMap]="mode | getIntervalPatternFromMode"
                     [chordMap]="note | symbolToNoteObj: noteExtender | getChordMap: mode"
                     [mode]="mode"></app-fretonator>
 

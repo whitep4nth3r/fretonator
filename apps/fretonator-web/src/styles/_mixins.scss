@@ -35,3 +35,20 @@
   }
 }
 
+@mixin chip_button_base {
+  appearance: none;
+  border-width: var(--border-width-button);
+  border-style: solid;
+  border-color: var(--black);
+  background-color: var(--white);
+  border-radius: var(--border-radius-button);
+  padding: pxToRem(4) pxToRem(8);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+  font-size: pxToRem(14);
+  text-decoration: none;
+  color: var(--black);
+
+  @include focus_accessible();
+}
