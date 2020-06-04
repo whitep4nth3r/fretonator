@@ -11,9 +11,7 @@
       </div>
       <button class="scaleDegrees__toggle"
               aria-label="Scale Degrees Info Toggle"
-              aria-controls="scaleMapInfo"
               type="button"
-              [attr.aria-expanded]="showScaleMapInfo"
               (click)="toggleScaleMapInfo()">{{scaleDegreesToggleText}}
       </button>
     </div>
@@ -32,12 +30,11 @@
   </div>
 
   <div class="scaleMapInfo"
-       id="scaleMapInfo"
+       [attr.aria-expanded]="showScaleMapInfo"
        *ngIf="showScaleMapInfo">
     <h2 class="scaleMapInfo__title">About Scale Degrees
       <button class="scaleMapInfo__close"
-              aria-label="Scale Degrees Info Toggle"
-              aria-controls="scaleMapInfo"
+              aria-label="Scale Degrees Info Close"
               type="button"
               (click)="toggleScaleMapInfo()">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
