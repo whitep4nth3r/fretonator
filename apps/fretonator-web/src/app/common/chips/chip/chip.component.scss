@@ -7,24 +7,7 @@
 }
 
 .chip {
-  border-width: var(--border-width-button);
-  border-style: solid;
-  border-color: var(--black);
-  background-color: var(--white);
-  border-radius: var(--border-radius-button);
-  padding: pxToRem(4) pxToRem(8);
-  cursor: pointer;
-  font-weight: var(--font-weight-bold);
-  font-family: var(--font-family-main);
-  font-size: pxToRem(14);
-  text-decoration: none;
-  color: var(--black);
-
-  &:focus {
-    outline-width: 0;
-    box-shadow: transparentize($focus_box_shadow_color, 0.1) 0 0 0 0.25rem;
-    transition: box-shadow 0.2s ease 0s;
-  }
+  @include chip_button_base()
 }
 
 .chip--grey {
