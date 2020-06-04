@@ -4,7 +4,7 @@ import { ModeSelectorObjects, Octave } from '../../../util/constants';
 import { Meta, Title } from '@angular/platform-browser';
 import { AbstractDataService } from '../../../common/abstract-data/abstract-data.service';
 import { ActivatedRoute } from '@angular/router';
-import { GenerateFretMapService } from '../../../common/generate-fret-map/generate-fret-map.service';
+import { FretMapService } from '../../../common/fret-map/fret-map.service';
 
 @Component({
   selector: 'app-home-index',
@@ -21,13 +21,13 @@ export class HomeIndexComponent implements OnInit {
   octave = Octave;
   showHowTo;
   metaExtender;
-  
+
   constructor(
     private title: Title,
     private meta: Meta,
     private localStorage: AbstractDataService,
     private activatedRoute: ActivatedRoute,
-    private fretMapService: GenerateFretMapService
+    private fretMapService: FretMapService
   ) {}
 
   ngOnInit(): void {

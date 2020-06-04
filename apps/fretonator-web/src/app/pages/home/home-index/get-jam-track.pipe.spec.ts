@@ -1,14 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { GetJamTrackPipe } from './get-jam-track.pipe';
 import { Mode } from '../../../util/types';
-import { GenerateFretMapService } from '../../../common/generate-fret-map/generate-fret-map.service';
+import { FretMapService } from '../../../common/fret-map/fret-map.service';
 
 describe('GetJamTrackPipe', () => {
-  let service: GenerateFretMapService;
+  let service: FretMapService;
   let pipe: GetJamTrackPipe;
 
   beforeEach(() => {
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
     pipe = new GetJamTrackPipe(service);
   });
 

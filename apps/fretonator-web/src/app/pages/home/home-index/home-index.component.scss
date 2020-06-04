@@ -130,7 +130,7 @@
   background-color: var(--black);
   border-color: var(--offwhite);
   margin-top: pxToRem($grid-unit * 4);
-  
+
   &:focus {
     border-color: transparent;
   }

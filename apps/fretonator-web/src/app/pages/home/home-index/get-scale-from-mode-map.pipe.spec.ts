@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { GetScaleFromModeMapPipe } from './get-scale-from-mode-map.pipe';
 import { Mode } from '../../../util/types';
-import { GenerateFretMapService } from '../../../common/generate-fret-map/generate-fret-map.service';
+import { FretMapService } from '../../../common/fret-map/fret-map.service';
 
 const cNoteObj = {
   name: 'c',
@@ -11,10 +11,10 @@ const cNoteObj = {
   doubleSharp: false,
 };
 describe('GetScaleFromModeMapPipe', () => {
-  let service: GenerateFretMapService;
+  let service: FretMapService;
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GenerateFretMapService);
+    service = TestBed.inject(FretMapService);
   });
 
   it('create an instance', () => {

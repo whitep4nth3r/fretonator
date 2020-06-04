@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { NoteExtenderString, Mode } from '../../../util/types';
-import { GenerateFretMapService } from '../../generate-fret-map/generate-fret-map.service';
+import { FretMapService } from '../../fret-map/fret-map.service';
 
 @Pipe({
   name: 'createChipLinkTitle',
 })
 export class CreateChipLinkTitlePipe implements PipeTransform {
-  constructor(public generateFretMapService: GenerateFretMapService) {}
+  constructor(public generateFretMapService: FretMapService) {}
   transform(
     note: string,
     noteExtender: NoteExtenderString,

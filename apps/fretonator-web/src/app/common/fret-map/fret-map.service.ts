@@ -24,7 +24,7 @@ import { JamTracksData } from '../../data/jamTracks';
 @Injectable({
   providedIn: 'root'
 })
-export class GenerateFretMapService {
+export class FretMapService {
   constructor() {
   }
 
