@@ -1,0 +1,11 @@
+<div class="intervalMap">
+  <h4 class="intervalMap__title">Mode interval pattern</h4>
+  <div class="intervalMap__intervals">
+    <ng-container *ngFor="let integer of intervalMap; let i = index">
+      <h5 class="intervalMap__interval">
+        {{ integer | convertIntervalIntegerToString }}
+      </h5>
+      <span class="intervalMap__separator" *ngIf="i < intervalMap.length - 1"> - </span>
+    </ng-container>
+  </div>
+</div>

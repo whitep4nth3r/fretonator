@@ -128,27 +128,7 @@
     </p>
   </div>
 
-  <div class="intervalDisplay">
-    <h4 class="intervalDisplay__title">Mode interval pattern</h4>
-    <div class="intervalDisplay__intervals">
-      <ng-container *ngFor="let integer of intervalPattern; let i = index">
-        <h5 class="intervalDisplay__interval">
-          {{ integer | convertIntervalIntegerToString }}
-        </h5>
-        <span class="intervalDisplay__separator" *ngIf="i < intervalPattern.length - 1"> - </span>
-      </ng-container>
-    </div>
-  </div>
+  <app-interval-map [intervalMap]="intervalMap"></app-interval-map>
 
-  <div class="chordMap">
-    <h4 class="chordMap__title">Chords (triads)</h4>
-    <div class="chordMap__chords">
-      <ng-container *ngFor="let chord of chordMap; let i = index">
-        <h5 class="chordMap__chord">
-          {{chord.note}}{{chord.type}}
-        </h5>
-        <span class="chordMap__separator" *ngIf="i < chordMap.length - 1"> - </span>
-      </ng-container>
-    </div>
-  </div>
+  <app-chord-map [chordMap]="chordMap"></app-chord-map>
 </div>
