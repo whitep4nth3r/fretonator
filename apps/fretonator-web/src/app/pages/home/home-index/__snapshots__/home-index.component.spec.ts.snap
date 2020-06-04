@@ -1057,8 +1057,6 @@ exports[`HomeIndexComponent should create 1`] = `
                     </span>
                   </div>
                   <button
-                    aria-controls="scaleMapInfo"
-                    aria-expanded="false"
                     aria-label="Scale Degrees Info Toggle"
                     class="scaleDegrees__toggle"
                     type="button"
