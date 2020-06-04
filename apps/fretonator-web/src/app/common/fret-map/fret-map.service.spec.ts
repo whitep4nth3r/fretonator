@@ -45,7 +45,7 @@ describe('GenerateFretMapService', () => {
   });
 });
 
-describe('GenerateFretMapService:generateNextNote - semitones', () => {
+describe('FretMapService:generateNextNote - semitones', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -254,7 +254,7 @@ describe('GenerateFretMapService:generateNextNote - semitones', () => {
   });
 });
 
-describe('GenerateFretMapService:generateNextNote - tones', () => {
+describe('FretMapService:generateNextNote - tones', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -363,7 +363,7 @@ describe('GenerateFretMapService:generateNextNote - tones', () => {
   });
 });
 
-describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
+describe('FretMapService:generateNextNote - aug 2nds', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -432,7 +432,7 @@ describe('GenerateFretMapService:generateNextNote - aug 2nds', () => {
   });
 });
 
-describe('GenerateFretMapService:isNatural', () => {
+describe('FretMapService:isNatural', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -469,7 +469,7 @@ describe('GenerateFretMapService:isNatural', () => {
   });
 });
 
-describe('GenerateFretMapService:isSharp', () => {
+describe('FretMapService:isSharp', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -548,7 +548,7 @@ describe('GenerateFretMapService:isSharp', () => {
   });
 });
 
-describe('GenerateFretMapService:isFlat', () => {
+describe('FretMapService:isFlat', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -585,7 +585,7 @@ describe('GenerateFretMapService:isFlat', () => {
   });
 });
 
-describe('GenerateFretMapService:isDoubleSharp', () => {
+describe('FretMapService:isDoubleSharp', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -622,7 +622,7 @@ describe('GenerateFretMapService:isDoubleSharp', () => {
   });
 });
 
-describe('GenerateFretMapService:isDoubleFlat', () => {
+describe('FretMapService:isDoubleFlat', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -659,7 +659,7 @@ describe('GenerateFretMapService:isDoubleFlat', () => {
   });
 });
 
-describe('GenerateFretMapService:generateMode', () => {
+describe('FretMapService:generateMode', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -943,7 +943,7 @@ describe('GenerateFretMapService:generateMode', () => {
   });
 });
 
-describe('GenerateFretMapService:convertNoteObjectToHumanReadable', () => {
+describe('FretMapService:convertNoteObjectToHumanReadable', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -1012,7 +1012,7 @@ describe('GenerateFretMapService:convertNoteObjectToHumanReadable', () => {
   });
 });
 
-describe('GenerateFretMapService:convertNoteToFretMapKey', () => {
+describe('FretMapService:convertNoteToFretMapKey', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -1081,7 +1081,7 @@ describe('GenerateFretMapService:convertNoteToFretMapKey', () => {
   });
 });
 
-describe('GenerateFretMapService:getFretMapping', () => {
+describe('FretMapService:getFretMapping', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -1120,7 +1120,7 @@ describe('GenerateFretMapService:getFretMapping', () => {
   });
 });
 
-describe('GenerateFretMapService:convertNoteObjectToNoteSymbol', () => {
+describe('FretMapService:convertNoteObjectToNoteSymbol', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -1165,7 +1165,7 @@ describe('GenerateFretMapService:convertNoteObjectToNoteSymbol', () => {
   });
 });
 
-describe('GenerateFretMapService:getJamTrack', () => {
+describe('FretMapService:getJamTrack', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -1234,7 +1234,7 @@ describe('GenerateFretMapService:getJamTrack', () => {
   });
 });
 
-describe('GenerateFretMapService:getChords', () => {
+describe('FretMapService:getChords', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -1282,7 +1282,7 @@ describe('GenerateFretMapService:getChords', () => {
   });
 });
 
-describe('GenerateFretMapService:getNextOctaveNote', () => {
+describe('FretMapService:getNextOctaveNote', () => {
   let service: FretMapService;
 
   beforeEach(() => {
@@ -1316,7 +1316,7 @@ describe('GenerateFretMapService:getNextOctaveNote', () => {
   });
 });
 
-describe('GenerateFretMapService:convertFretMapConfigurationToDisplayString', () => {
+describe('FretMapService:convertFretMapConfigurationToDisplayString', () => {
   let service: FretMapService;
 
   beforeEach(() => {
