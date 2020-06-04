@@ -1055,6 +1055,16 @@ exports[`HomeIndexComponent should create 1`] = `
                     5
                   </span>
                 </div>
+                <button
+                  aria-checked="false"
+                  aria-controls="scaleDegreesInfo"
+                  aria-label="Scale Degrees Info Toggle"
+                  class="scaleDegrees__toggle"
+                  role="switch"
+                  type="button"
+                >
+                  What is this? 
+                </button>
               </div>
               <div
                 class="scaleDisplay"
@@ -1138,13 +1148,14 @@ exports[`HomeIndexComponent should create 1`] = `
                 </div>
               </div>
             </div>
+            
             <div
               class="intervalDisplay"
             >
               <h4
                 class="intervalDisplay__title"
               >
-                Interval pattern
+                Mode interval pattern
               </h4>
               <div
                 class="intervalDisplay__intervals"
