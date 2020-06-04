@@ -18,7 +18,10 @@ export class IsValidModeConfigurationGuard implements CanActivate {
       return home;
     }
 
-    if(!NoteSymbol[note + NoteExtenderSymbol[noteExtender]]) {
+    const extenderSymbol = NoteExtenderSymbol[noteExtender];
+    const validCombination = Object.values(NoteSymbol).find(value => value === `${note}${extenderSymbol}`)
+
+    if(!validCombination) {
       return home;
     }
 
