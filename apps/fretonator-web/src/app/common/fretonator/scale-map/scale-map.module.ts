@@ -4,7 +4,6 @@ import { ScaleMapComponent } from './scale-map.component';
 import { DisplayScaleDegreesPipe } from './display-scale-degrees.pipe';
 
 
-
 @NgModule({
   declarations: [ScaleMapComponent, DisplayScaleDegreesPipe],
   exports: [
