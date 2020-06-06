@@ -39,7 +39,7 @@
     bottom: 50%;
     left: 0;
     right: 0;
-    transform: translatey(calc(50% - 1px));
+    transform: translateY(calc(50% - 1px));
   }
 
   &:nth-child(-n + 13) {

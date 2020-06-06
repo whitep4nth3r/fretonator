@@ -3,12 +3,12 @@
     <div
       class="fretboard__cell"
       [class.fretboard__cell--string]="fret === 0"
-      [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: string:fret"
+      [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: stringName:fret:fretMapIsCaseSensitive"
       [attr.data-string-name]="fret === 0 ? stringName : null"
       [attr.data-string]="string"
       [attr.data-fret]="fret"
-      [attr.data-degree]="(fretMap | getFretFromFretMap: string : fret)?.degree"
-      [attr.data-display-note]="(fretMap | getFretFromFretMap: string : fret)?.displayName"
+      [attr.data-degree]="(fretMap | getFretFromFretMap: string:fret:fretMapIsCaseSensitive)?.degree"
+      [attr.data-display-note]="(fretMap | getFretFromFretMap: string:fret:fretMapIsCaseSensitive)?.displayName"
       [attr.data-mode]="mode"
     ></div>
   </ng-container>
@@ -53,7 +53,7 @@
   </div>
 </div>
 
-<div class="infoContainer">
+<div class="infoContainer" *ngIf="showInfoCard">
   <app-scale-map [mode]="mode"
                  [scale]="scale"
                  [isTheoretical]="scale | isTheoreticalScale"

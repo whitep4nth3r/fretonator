@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LearnIndexComponent } from './learn-index.component';
 
-describe('LearnIndexComponent', () => {
+xdescribe('LearnIndexComponent', () => {
   let component: LearnIndexComponent;
   let fixture: ComponentFixture<LearnIndexComponent>;
 

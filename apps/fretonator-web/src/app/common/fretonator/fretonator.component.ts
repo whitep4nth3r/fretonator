@@ -15,6 +15,8 @@ export class FretonatorComponent {
   @Input() modeDisplayString: string;
   @Input() note: string;
   @Input() noteExtenderString: string;
+  @Input() showInfoCard: boolean;
+  @Input() fretMapIsCaseSensitive = false;
 
   frets = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 }

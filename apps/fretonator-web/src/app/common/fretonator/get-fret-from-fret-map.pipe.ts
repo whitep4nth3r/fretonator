@@ -2,12 +2,19 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Fret, FretMap } from '../../util/types';
 
 @Pipe({
-  name: 'getFretFromFretMap',
+  name: 'getFretFromFretMap'
 })
 export class GetFretFromFretMapPipe implements PipeTransform {
-  transform(fretMap: FretMap, stringName: string, fret: number): Fret | false {
+  transform(fretMap: FretMap, stringName: string, fret: number, caseSensitive: boolean): Fret | false {
+
     const found = fretMap
-      .find((thisFret) => thisFret.fret === fret && thisFret.string === stringName);
+      .find((thisFret) => {
+
+        const stringComparison = !caseSensitive ? thisFret.string.toUpperCase() : thisFret.string;
+        const stringNameComparison = !caseSensitive ? stringName.toUpperCase() : stringName;
+
+        return thisFret.fret === fret && stringComparison === stringNameComparison;
+      });
 
     return found ? found : false;
   }

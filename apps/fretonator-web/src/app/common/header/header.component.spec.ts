@@ -61,16 +61,22 @@ describe('HeaderComponent', () => {
   describe('Links', () => {
 
     let home: DebugElement;
+    let learn: DebugElement;
     let about: DebugElement;
 
     beforeEach(() => {
       const links = fixture.debugElement.queryAll(selectors.links);
       home = links[0];
-      about = links[1];
+      learn = links[1];
+      about = links[2];
     });
 
     it('Home should link to /', () => {
       expect(home.properties.href).toBe('/');
+    });
+
+    it('Learn should link to /learn', () => {
+      expect(learn.properties.href).toBe('/learn');
     });
 
     it('About should link to /about', () => {
