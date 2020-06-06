@@ -21,7 +21,7 @@ Thank you and happy jamming!
 
 ## Technical
 
-The Fretonator was built with:
+The Fretonator is built with:
 
 ```
 Angular
