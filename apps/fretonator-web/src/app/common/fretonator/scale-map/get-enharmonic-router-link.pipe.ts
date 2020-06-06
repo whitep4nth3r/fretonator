@@ -10,12 +10,13 @@ export class GetEnharmonicRouterLinkPipe implements PipeTransform {
   transform(note: string, noteExtenderString: string, mode: string): string[] {
     let newNote;
 
-    for(const group of Enharmonics) {
-        if (group[0].includes(note.toUpperCase())) {
-            newNote = group[1].charAt(0).toLowerCase();
-        }
+    const extenderStringAsSymbol = noteExtenderString === 'sharp' ? '#' : '♭';
+    const enharmonicItem = note.toUpperCase() + extenderStringAsSymbol;
 
-        if (group[1].includes(note.toUpperCase())) {
+    for(const group of Enharmonics) {
+        if (group[0] === enharmonicItem) {
+            newNote = group[1].charAt(0).toLowerCase();
+        } else if (group[1] === enharmonicItem) {
           newNote = group[0].charAt(0).toLowerCase();
         }
     }
