@@ -1028,48 +1028,13 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="scaleMap__row"
               >
-                
-                <div
-                  class="scaleMap__degrees"
-                >
-                  <h4
-                    class="scaleMap__title"
-                  >
-                    Degrees
-                  </h4>
-                  <div
-                    class="degreesDisplay"
-                  >
-                    <span
-                      class="degreesDisplay__degree degreesDisplay__degree--tonic"
-                    >
-                      1
-                    </span>
-                    <span
-                      class="degreesDisplay__degree degreesDisplay__degree--mediant"
-                    >
-                      3
-                    </span>
-                    <span
-                      class="degreesDisplay__degree degreesDisplay__degree--dominant"
-                    >
-                      5
-                    </span>
-                  </div>
-                  <button
-                    aria-label="Scale Degrees Info Toggle"
-                    class="scaleDegrees__toggle"
-                    type="button"
-                  >
-                    What is this? 
-                  </button>
-                </div>
                 <div
                   class="scaleDisplay"
                 >
                   <h4
                     class="scaleDisplay__title"
                   >
+                    
                     Scale
                   </h4>
                   <div
@@ -1144,8 +1109,46 @@ exports[`HomeIndexComponent should create 1`] = `
                       
                     </h5>
                   </div>
+                  
+                </div>
+                
+                <div
+                  class="scaleMap__degrees"
+                >
+                  <h4
+                    class="scaleMap__title"
+                  >
+                    Degrees
+                  </h4>
+                  <div
+                    class="degreesDisplay"
+                  >
+                    <span
+                      class="degreesDisplay__degree degreesDisplay__degree--tonic"
+                    >
+                      1
+                    </span>
+                    <span
+                      class="degreesDisplay__degree degreesDisplay__degree--mediant"
+                    >
+                      3
+                    </span>
+                    <span
+                      class="degreesDisplay__degree degreesDisplay__degree--dominant"
+                    >
+                      5
+                    </span>
+                  </div>
+                  <button
+                    aria-label="Scale Degrees Info Toggle"
+                    class="button__infoToggle"
+                    type="button"
+                  >
+                    What is this? 
+                  </button>
                 </div>
               </div>
+              
               
             </app-scale-map>
             <app-interval-map>

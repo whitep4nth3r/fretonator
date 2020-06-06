@@ -13,6 +13,7 @@ import { ChipsModule } from '../../common/chips/chips.module';
 import { FretonatorModule } from '../../common/fretonator/fretonator.module';
 import { GetIntervalPatternFromModePipe } from './home-index/get-interval-pattern-from-mode.pipe';
 import { GetChordMapPipe } from './home-index/get-chord-map.pipe';
+import { CreateModeDisplayStringPipe } from './home-index/create-mode-display-string.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { GetChordMapPipe } from './home-index/get-chord-map.pipe';
     GetJamTrackPipe,
     GetIntervalPatternFromModePipe,
     GetChordMapPipe,
+    CreateModeDisplayStringPipe,
   ],
   imports: [
     CommonModule,

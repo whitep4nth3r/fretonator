@@ -5,11 +5,13 @@ import { GetFretFromFretMapPipe } from './get-fret-from-fret-map.pipe';
 import { ChordMapModule } from './chord-map/chord-map.module';
 import { IntervalMapModule } from './interval-map/interval-map.module';
 import { ScaleMapModule } from './scale-map/scale-map.module';
+import { IsTheoreticalScalePipe } from './is-theoretical-scale.pipe';
 
 @NgModule({
   declarations: [
     FretonatorComponent,
     GetFretFromFretMapPipe,
+    IsTheoreticalScalePipe,
   ],
   imports: [
     CommonModule,

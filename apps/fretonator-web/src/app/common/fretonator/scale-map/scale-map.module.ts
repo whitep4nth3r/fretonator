@@ -2,15 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScaleMapComponent } from './scale-map.component';
 import { DisplayScaleDegreesPipe } from './display-scale-degrees.pipe';
+import { GetEnharmonicEquivalentPipe } from './get-enharmonic-equivalent.pipe';
+import { RouterModule } from '@angular/router';
+import { GetEnharmonicRouterLinkPipe } from './get-enharmonic-router-link.pipe';
 
 
 @NgModule({
-  declarations: [ScaleMapComponent, DisplayScaleDegreesPipe],
+  declarations: [ScaleMapComponent, DisplayScaleDegreesPipe, GetEnharmonicEquivalentPipe, GetEnharmonicRouterLinkPipe],
   exports: [
     ScaleMapComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class ScaleMapModule { }
