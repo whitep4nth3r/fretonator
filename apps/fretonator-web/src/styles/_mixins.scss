@@ -35,6 +35,14 @@
   }
 }
 
+@mixin divider {
+  border-width: pxToRem(2);
+  border-color: var(--peach);
+  border-style: solid;
+  margin-top: pxToRem($grid-unit * 4);
+  margin-bottom: pxToRem($grid-unit * 4);
+}
+
 @mixin chip_button_base {
   appearance: none;
   border-width: var(--border-width-button);
@@ -49,6 +57,32 @@
   font-size: pxToRem(14);
   text-decoration: none;
   color: var(--black);
+
+  @include focus_accessible();
+}
+
+@mixin button_base {
+  border-width: var(--border-width-button);
+  border-style: solid;
+  border-color: var(--black);
+  background-color: var(--black);
+  border-radius: var(--border-radius-button);
+  padding: pxToRem($grid-unit * 2) pxToRem($grid-unit * 4);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+  font-size: pxToRem(20);
+  text-decoration: none;
+  color: var(--offwhite);
+  text-transform: uppercase;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--grey);
+    border-color: var(--grey);
+  }
 
   @include focus_accessible();
 }

@@ -38,37 +38,3 @@
 .link {
   @include text_link();
 }
-
-.about__banner {
-  display: block;
-  width: 100%;
-}
-
-.about__bannerSegment {
-  position: relative;
-  height: pxToRem($grid-unit * 2);
-
-  &.grey {
-    background-color: var(--grey);
-  }
-
-  &.peach {
-    background-color: var(--peach);
-  }
-
-  &.yellow {
-    background-color: var(--yellow);
-  }
-
-  &.purple {
-    background-color: var(--purple);
-  }
-
-  &.blue {
-    background-color: var(--blue);
-  }
-
-  &.turquoise {
-    background-color: var(--turquoise);
-  }
-}

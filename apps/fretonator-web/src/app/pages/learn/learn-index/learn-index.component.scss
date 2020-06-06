@@ -1,0 +1,76 @@
+@import '../../../../styles/vars';
+@import '../../../../styles/mixins';
+@import '../../../../styles/typography';
+
+.learn__container {
+  @include content_wrapper();
+  max-width: $screen-med;
+}
+
+.learn__title {
+  @include font_large();
+  text-align: center;
+  margin-bottom: pxToRem($grid-unit * 4);
+  margin-top: pxToRem($grid-unit * 4);
+}
+
+.learn__introCopy {
+  @include font_bodyCopy();
+  margin-bottom: pxToRem($grid-unit * 4);
+}
+
+.learn__divider {
+  @include divider();
+}
+
+.learn__item {
+  display: flex;
+  flex-direction: column;
+  margin-top: pxToRem($grid-unit * 6);
+  margin-bottom: pxToRem($grid-unit * 6);
+
+  @media screen and (min-width: $screen-med) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.learn__imageContainer {
+  margin-bottom: pxToRem($grid-unit * 4);
+
+  @media screen and (min-width: $screen-med) {
+    margin-right: pxToRem($grid-unit * 4);
+    margin-bottom: 0;
+    flex-basis: 100%;
+  }
+}
+
+.learn__image {
+  width: 100%;
+}
+
+.learn__info {
+
+}
+
+.learn__itemTitle {
+  @include font_medium();
+  margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.learn__itemExcerpt {
+  @include font_bodyCopy();
+  margin-bottom: pxToRem($grid-unit * 4);
+}
+
+.learn__link {
+  @include button_base();
+  width: 100%;
+  display: block;
+
+  @media screen and (min-width: $screen-med) {
+    width: unset;
+    display: inline-block;
+  }
+}
