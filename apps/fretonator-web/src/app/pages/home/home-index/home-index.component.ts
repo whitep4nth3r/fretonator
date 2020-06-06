@@ -21,7 +21,7 @@ export class HomeIndexComponent implements OnInit {
   modeSelectorObjects = ModeSelectorObjects;
   octave = Octave;
   showHowTo;
-  
+
   constructor(
     private title: Title,
     private meta: Meta,
@@ -35,7 +35,7 @@ export class HomeIndexComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(() => this.onRouteChange());
     this.setHomePageTitle();
-    this.setHomePageMetaDescription();
+    this.setHomePageMeta();
 
     const _showHowTo = this.localStorage.getItem('showHowTo');
     switch (_showHowTo) {
@@ -70,7 +70,7 @@ export class HomeIndexComponent implements OnInit {
     }
 
     this.setHomePageTitle();
-    this.setHomePageMetaDescription();
+    this.setHomePageMeta();
   }
 
   toggleHowTo() {
@@ -84,10 +84,30 @@ export class HomeIndexComponent implements OnInit {
     );
   }
 
-  setHomePageMetaDescription() {
+  setHomePageMeta() {
     this.meta.updateTag({
       name: 'description',
       content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)
+    });
+    
+    this.meta.updateTag({
+      name: 'twitter:description',
+      content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)
+    });
+
+    this.meta.updateTag({
+      property: 'og:description',
+      content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)
+    });
+
+    this.meta.updateTag({
+      property: 'og:title',
+      content: this.metaService.generateHomePageTitle(this.note, this.noteExtenderString, this.mode)
+    });
+
+    this.meta.updateTag({
+      property: 'og:url',
+      content: this.metaService.generateHomePageUrl(this.note, this.noteExtenderString, this.mode)
     });
   }
 }

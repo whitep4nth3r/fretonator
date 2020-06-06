@@ -15,7 +15,13 @@ export class MetaService {
 
   getGenericEndDescription = (): string => {
     return 'Choose a starting note, pick a mode, check out the fretboard and have a jam!';
-  }
+  };
+
+  generateHomePageUrl = (note,
+                         noteExtenderString,
+                         mode): string => {
+    return 'https://www.fretonator.com/' + note + '/' + noteExtenderString + '/' + mode;
+  };
 
   generateHomePageTitle = (note,
                            noteExtenderString,
