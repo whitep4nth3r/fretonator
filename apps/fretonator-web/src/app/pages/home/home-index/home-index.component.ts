@@ -5,6 +5,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { AbstractDataService } from '../../../common/abstract-data/abstract-data.service';
 import { ActivatedRoute } from '@angular/router';
 import { FretMapService } from '../../../common/fret-map/fret-map.service';
+import { MetaService } from '../../../common/meta/meta.service';
 
 @Component({
   selector: 'app-home-index',
@@ -20,24 +21,21 @@ export class HomeIndexComponent implements OnInit {
   modeSelectorObjects = ModeSelectorObjects;
   octave = Octave;
   showHowTo;
-  metaExtender;
-
+  
   constructor(
     private title: Title,
     private meta: Meta,
     private localStorage: AbstractDataService,
     private activatedRoute: ActivatedRoute,
-    private fretMapService: FretMapService
-  ) {}
+    private fretMapService: FretMapService,
+    private metaService: MetaService
+  ) {
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(() => this.onRouteChange());
-
-    this.title.setTitle('Fretonator - the ultimate interactive free guitar theory tool' + this.metaExtender);
-    this.meta.updateTag({
-      name: 'description',
-      content: 'The ultimate interactive free guitar theory tool. Choose a starting note, pick a mode, check out the fretboard and have a jam!'
-    });
+    this.setHomePageTitle();
+    this.setHomePageMetaDescription();
 
     const _showHowTo = this.localStorage.getItem('showHowTo');
     switch (_showHowTo) {
@@ -71,21 +69,25 @@ export class HomeIndexComponent implements OnInit {
         this.noteExtender = NoteExtenderSymbol.natural;
     }
 
-    this.metaExtender =
-      ' | ' +
-      this.fretMapService.convertFretMapConfigurationToDisplayString(
-        this.note,
-        this.noteExtenderString,
-        this.mode
-      );
-    this.title.setTitle(
-      'Fretonator - the ultimate interactive free guitar theory tool' +
-        this.metaExtender
-    );
+    this.setHomePageTitle();
+    this.setHomePageMetaDescription();
   }
 
   toggleHowTo() {
     this.showHowTo = !this.showHowTo;
     this.localStorage.setItem('showHowTo', this.showHowTo);
+  }
+
+  setHomePageTitle() {
+    this.title.setTitle(
+      this.metaService.generateHomePageTitle(this.note, this.noteExtenderString, this.mode)
+    );
+  }
+
+  setHomePageMetaDescription() {
+    this.meta.updateTag({
+      name: 'description',
+      content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)
+    });
   }
 }
