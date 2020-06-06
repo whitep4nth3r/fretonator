@@ -12,5 +12,9 @@ export class FretonatorComponent {
   @Input() intervalMap: [];
   @Input() chordMap: ChordMap;
   @Input() mode: Mode;
+  @Input() modeDisplayString: string;
+  @Input() note: string;
+  @Input() noteExtenderString: string;
+
   frets = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 }

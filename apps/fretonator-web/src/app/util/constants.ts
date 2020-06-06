@@ -1,4 +1,4 @@
-import { ChordType, Mode } from './types';
+import { ChordType, Mode, NoteExtenderSymbol, NoteSymbol } from './types';
 
 export const NoteToStringAndFretMap = {
   c__: [
@@ -363,14 +363,14 @@ export const ChordPatterns = {
     ChordType.minor,
     ChordType.minor,
     ChordType.major,
-    ChordType.minor,
+    ChordType.minor
   ],
   minorPentatonic: [
     ChordType.minor,
     ChordType.major,
     ChordType.major,
     ChordType.minor,
-    ChordType.major,
+    ChordType.major
   ]
 };
 
@@ -431,4 +431,12 @@ export const ModeSelectorObjects = [
     name: Mode.minorPentatonic,
     displayName: 'Minor Pentatonic'
   }
+];
+
+export const Enharmonics = [
+  ['C#', 'D♭'],
+  ['D#', 'E♭'],
+  ['F#', 'G♭'],
+  ['G#', 'A♭'],
+  ['A#', 'B♭']
 ];

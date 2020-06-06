@@ -55,7 +55,11 @@
 
 <div class="infoContainer">
   <app-scale-map [mode]="mode"
-                 [scale]="scale"></app-scale-map>
+                 [scale]="scale"
+                 [isTheoretical]="scale | isTheoreticalScale"
+                 [modeDisplayString]="modeDisplayString"
+                 [note]="note"
+                 [noteExtenderString]="noteExtenderString"></app-scale-map>
 
   <app-interval-map [intervalMap]="intervalMap"></app-interval-map>
 
