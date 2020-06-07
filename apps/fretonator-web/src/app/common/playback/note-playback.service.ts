@@ -21,30 +21,30 @@ export class NotePlaybackService {
 
   playNote(stringName, fret) {
     if (this.context) {
-      let noteFrequency = this.getFrequency(stringName, fret);
+      const noteFrequency = this.getFrequency(stringName, fret);
       this.pluckString(noteFrequency);
     }
   }
 
   private getFrequency(stringName, fret) {
     // We're using stringName here, the case sensitive alt to string, to differentiate E/e strings.
-    let stringFrequency = StringFrequencies[stringName];
-    let fretCents = fret * 100;
+    const stringFrequency = StringFrequencies[stringName];
+    const fretCents = fret * 100;
     return stringFrequency * Math.pow(2, (fretCents / 1200));
   }
 
   private pluckString(frequency: number) {
     // Use Karplus-Strong algo to simply synth guitar-like sounds.
     // https://ccrma.stanford.edu/~jos/pasp/Karplus_Strong_Algorithm.html
-    let processor = this.context.createScriptProcessor(SYNTH_BUFFER_SIZE, 0, 1);
-    let signalPeriod = Math.round(this.context.sampleRate / frequency);
-    let currentSample = new Float32Array(signalPeriod);
+    const processor = this.context.createScriptProcessor(SYNTH_BUFFER_SIZE, 0, 1);
+    const signalPeriod = Math.round(this.context.sampleRate / frequency);
+    const currentSample = new Float32Array(signalPeriod);
     // Fill sample with random noise -1 through +1
     this.fillWithNoise(currentSample, signalPeriod);
     let n = 0;
     processor.addEventListener('audioprocess', (e) => {
       // Populate output buffer with signal
-      let outputBuffer = e.outputBuffer.getChannelData(0);
+      const outputBuffer = e.outputBuffer.getChannelData(0);
       for (let i = 0; i < outputBuffer.length; i++) {
         // Lowpass the signal by averaging it with the next point
         currentSample[n] = (currentSample[n] + currentSample[(n + 1) % signalPeriod]) / 2;
@@ -54,7 +54,7 @@ export class NotePlaybackService {
       }
     });
     // Filter the output
-    let bandpass = this.createBandpassFilter(frequency);
+    const bandpass = this.createBandpassFilter(frequency);
     processor.connect(bandpass);
     // Kill the processor after 2 seconds
     setTimeout(() => {
@@ -70,7 +70,7 @@ export class NotePlaybackService {
   }
 
   private createBandpassFilter(frequency){
-    let bandpass = this.context.createBiquadFilter();
+    const bandpass = this.context.createBiquadFilter();
     bandpass.type = "bandpass";
     bandpass.frequency.value = Math.round(frequency);
     bandpass.Q.value = 1 / 6;
