@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ChordMap, FretMap, Mode, Scale } from '../../util/types';
+import { NotePlaybackService } from '../playback/note-playback.service';
 
 @Component({
   selector: 'app-fretonator',
@@ -15,6 +16,8 @@ export class FretonatorComponent {
   @Input() modeDisplayString: string;
   @Input() note: string;
   @Input() noteExtenderString: string;
+
+  constructor(public playbackService: NotePlaybackService) { }
 
   frets = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 }

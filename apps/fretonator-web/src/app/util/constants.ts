@@ -440,3 +440,12 @@ export const Enharmonics = [
   ['G#', 'A♭'],
   ['A#', 'B♭']
 ];
+
+export const StringFrequencies = {
+  'e': 329.63,
+  'B': 246.94,
+  'G': 196.00,
+  'D': 146.83,
+  'A': 110.00,
+  'E': 82.41
+}

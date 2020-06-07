@@ -10,6 +10,7 @@
       [attr.data-degree]="(fretMap | getFretFromFretMap: string : fret)?.degree"
       [attr.data-display-note]="(fretMap | getFretFromFretMap: string : fret)?.displayName"
       [attr.data-mode]="mode"
+      (click)="playbackService.playNote(stringName, fret)"
     ></div>
   </ng-container>
 </ng-template>
