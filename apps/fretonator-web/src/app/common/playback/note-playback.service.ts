@@ -10,17 +10,18 @@ const SYNTH_PLAY_DURATION = 2000;
 export class NotePlaybackService {
   private context: AudioContext;
 
-  constructor() {
-    try {
-      // Feature sniff for web audio API
-      this.context = new (window.AudioContext || window['webkitAudioContext']);
-    } catch (e) {
-      // No browser support :(
-    }
-  }
+  constructor() {}
 
   playNote(stringName, fret) {
-    if (this.context) {
+    if (!this.context) {
+      try {
+        // Feature sniff for web audio API
+        this.context = new (window.AudioContext || window['webkitAudioContext']);
+      } catch (e) {
+        // No browser support :(
+      }
+    }
+    if(this.context){
       const noteFrequency = this.getFrequency(stringName, fret);
       this.pluckString(noteFrequency);
     }
