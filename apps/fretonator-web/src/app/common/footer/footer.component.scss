@@ -1,9 +1,10 @@
-@import "../../../styles/vars";
-@import "../../../styles/functions";
-@import "../../../styles/mixins";
+@import '../../../styles/vars';
+@import '../../../styles/functions';
+@import '../../../styles/mixins';
+@import '../../../styles/typography';
 
 .footer {
-  background-color: var(--peach);
+  background-color: var(--black);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -12,8 +13,39 @@
   padding: pxToRem($grid-unit * 2);
 }
 
+.footer__thanksCopy {
+  @include font_bodyCopy();
+  color: var(--offwhite);
+}
+
+.footer__creditsTitle {
+  @include font_medium();
+  margin-top: pxToRem($grid-unit);
+  margin-bottom: pxToRem($grid-unit);
+  color: var(--peach);
+  font-weight: var(--font-weight-bold);
+}
+
+.footer__creditsList {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin-bottom: pxToRem($grid-unit * 4);
+}
+
+.footer__creditsListItem {
+  @include font_bodyCopy();
+  color: var(--offwhite);
+}
+
+.footer__creditsListItemLink {
+  @include text_link();
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
+
 .footer__copyright {
-  color: var(--black);
+  color: var(--offwhite);
   font-size: pxToRem(12);
   letter-spacing: var(--letter-spacing-display);
   font-weight: var(--font-weight-bold);
@@ -23,7 +55,7 @@
 }
 
 .footer__viewGithub {
-  color: var(--black);
+  color: var(--offwhite);
   font-size: pxToRem(12);
   display: block;
   margin-bottom: pxToRem($grid-unit * 2);
