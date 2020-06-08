@@ -41,7 +41,7 @@
   border-style: solid;
   border-color: var(--black);
   background-color: var(--white);
-  border-radius: var(--border-radius-button);
+  border-radius: var(--border-radius-chip);
   padding: pxToRem(4) pxToRem(8);
   cursor: pointer;
   font-weight: var(--font-weight-bold);
@@ -51,4 +51,34 @@
   color: var(--black);
 
   @include focus_accessible();
+}
+
+@mixin hard_button_base(
+    $foregroundColor: var(--offwhite),
+    $backgroundColor: var(--black)) {
+  border-radius: var(--border-radius-button);
+  border: pxToRem(2) solid $foregroundColor;
+  text-transform: uppercase;
+  font-family: var(--font-family-main);
+  font-size: pxToRem(18);
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  background-color: $backgroundColor;
+  padding: pxToRem($grid-unit) pxToRem($grid-unit * 2);
+  color: $foregroundColor;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-display);
+  margin-top: pxToRem($grid-unit * 3);
+  box-shadow: 8px 8px 0 0 $foregroundColor;
+
+  @include focus_accessible();
+
+  &:hover {
+    border-color: var(--yellow);
+    color: var(--yellow);
+  }
 }
