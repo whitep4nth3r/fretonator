@@ -40,6 +40,12 @@
     left: 0;
     right: 0;
     transform: translatey(calc(50% - 1px));
+    opacity: .9;
+    cursor: pointer;
+  }
+
+  &:hover:after{
+    opacity: 1;
   }
 
   &:nth-child(-n + 13) {
