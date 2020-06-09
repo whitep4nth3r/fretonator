@@ -167,35 +167,12 @@
 }
 
 .infoHighlight {
-  border-radius: var(--border-radius-button);
+  border-radius: var(--border-radius-chip);
   padding: pxToRem($grid-unit / 4) pxToRem($grid-unit * 2);
   color: var(--black);
   background-color: var(--peach);
 }
 
 .actionButton {
-  border-radius: var(--border-radius-button);
-  border: pxToRem(2) solid var(--offwhite);
-  text-transform: uppercase;
-  font-family: var(--font-family-main);
-  font-size: pxToRem(18);
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-  background-color: transparent;
-  padding: pxToRem($grid-unit) pxToRem($grid-unit * 2);
-  color: var(--offwhite);
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-display);
-  margin-top: pxToRem($grid-unit * 3);
-
-  @include focus_accessible();
-
-  &:hover {
-    border-color: var(--yellow);
-    color: var(--yellow);
-  }
+  @include hard_button_base();
 }

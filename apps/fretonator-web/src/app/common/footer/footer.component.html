@@ -1,5 +1,41 @@
 <footer class="footer">
-  <p class="footer__copyright">&copy; {{ date | date: "yyyy" }} Fretonator</p>
+  <h6 class="footer__creditsTitle">Fretonator is open source</h6>
+  <p class="footer__thanksCopy">
+    Thank you to the following generous contributors:
+  </p>
+  <ul class="footer__creditsList">
+    <li class="footer__creditsListItem">
+      <a
+        href="http://drozar.io"
+        rel="nofollow noopener noreferrer"
+        target="_blank"
+        class="footer__creditsListItemLink"
+      >
+        Jacob D'Rozario
+      </a>
+      - design & UX
+    </li>
+    <li class="footer__creditsListItem">
+      <a
+        href="https://github.com/geometricpanda"
+        rel="nofollow noopener noreferrer"
+        target="_blank"
+        class="footer__creditsListItemLink"
+        >Jim Drury</a
+      >
+      - all things Angular
+    </li>
+    <li class="footer__creditsListItem">
+      <a
+        href="https://ell.io.tt/"
+        rel="nofollow noopener noreferrer"
+        target="_blank"
+        class="footer__creditsListItemLink"
+        >Elliot Brooks</a
+      >
+      - audio playback
+    </li>
+  </ul>
   <a
     class="footer__viewGithub"
     href="https://github.com/ishythefishy/fretonator"
@@ -7,4 +43,5 @@
     target="_blank"
     >View on GitHub</a
   >
+  <p class="footer__copyright">&copy; {{ date | date: 'yyyy' }} Fretonator</p>
 </footer>
