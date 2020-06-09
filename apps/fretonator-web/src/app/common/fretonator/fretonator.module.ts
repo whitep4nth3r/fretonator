@@ -6,6 +6,7 @@ import { ChordMapModule } from './chord-map/chord-map.module';
 import { IntervalMapModule } from './interval-map/interval-map.module';
 import { ScaleMapModule } from './scale-map/scale-map.module';
 import { IsTheoreticalScalePipe } from './is-theoretical-scale.pipe';
+import { SpeakerModule } from '../svgs/speaker/speaker.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { IsTheoreticalScalePipe } from './is-theoretical-scale.pipe';
     CommonModule,
     ChordMapModule,
     IntervalMapModule,
-    ScaleMapModule
+    ScaleMapModule,
+    SpeakerModule
   ],
   exports: [
     FretonatorComponent

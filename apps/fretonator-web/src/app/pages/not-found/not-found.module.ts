@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { NotFoundRoutingModule } from './not-found-routing.module';
 import { NotFoundIndexComponent } from './not-found-index/not-found-index.component';
-import { LogoWithTextComponent } from '../../common/logo-with-text/logo-with-text.component';
-import { LogoWithTextModule } from '../../common/logo-with-text/logo-with-text.module';
+import { LogoWithTextComponent } from '../../common/svgs/logo-with-text/logo-with-text.component';
+import { LogoWithTextModule } from '../../common/svgs/logo-with-text/logo-with-text.module';
 
 @NgModule({
   declarations: [NotFoundIndexComponent],

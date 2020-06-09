@@ -3,21 +3,23 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FretonatorComponent } from './fretonator.component';
 import { FretonatorModule } from './fretonator.module';
 import { Component } from '@angular/core';
-import { dIonianFretMappings } from '../fret-map/fret-map.service.testConstants';
 
 describe('FretonatorComponent', () => {
-
   @Component({
     selector: 'app-fretonator-spec',
     template: `
-      <app-fretonator></app-fretonator>
-    `,
+      <app-fretonator [scale]="['C', 'D', 'E']"
+                      [fretMap]="[
+                      { string: 'A', fret: 0, displayName: 'A', degree: 'dominant' },
+                      { string: 'A', fret: 2, displayName: 'B', degree: 'submediant' }]">
+      </app-fretonator>
+    `
   })
   class FretonatorComponentSpec {
   }
 
-  let component: FretonatorComponent;
-  let fixture: ComponentFixture<FretonatorComponent>;
+  let component: FretonatorComponentSpec;
+  let fixture: ComponentFixture<FretonatorComponentSpec>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -27,13 +29,12 @@ describe('FretonatorComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FretonatorComponent);
+    fixture = TestBed.createComponent(FretonatorComponentSpec);
     component = fixture.componentInstance;
-    component.fretMap = dIonianFretMappings;
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

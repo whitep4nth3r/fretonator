@@ -138,15 +138,12 @@
   background-color: transparent;
   height: pxToRem(44);
   width: pxToRem(44);
+  padding: pxToRem($grid-unit);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
-  svg {
-    height: 50%;
-    width: 50%;
-  }
+  color: var(--grey);
 }
 
 .infoBlock__copy {
@@ -168,7 +165,7 @@
 
 .infoHighlight {
   border-radius: var(--border-radius-chip);
-  padding: pxToRem($grid-unit / 4) pxToRem($grid-unit * 2);
+  padding: pxToRem($grid-unit / 4) pxToRem(9);
   color: var(--black);
   background-color: var(--peach);
 }
