@@ -260,17 +260,24 @@
 
 .fretonator__playCta {
   @include font_bodyCopy();
-  font-size: pxToRem(14);
+  font-size: pxToRem(12);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: pxToRem($grid-unit * 4);
   color: var(--grey);
+  line-height: 1;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $screen-sm) {
+    font-size: pxToRem(14);
+  }
 }
 
 .fretonator__playCtaIcon {
   display: flex;
-  height: pxToRem($grid-unit * 3);
-  width: pxToRem($grid-unit * 3);
+  height: pxToRem($grid-unit * 2);
+  width: pxToRem($grid-unit * 2);
   margin-right: pxToRem($grid-unit);
 }
