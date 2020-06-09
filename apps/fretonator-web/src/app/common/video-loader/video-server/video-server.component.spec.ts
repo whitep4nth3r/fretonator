@@ -8,7 +8,7 @@ describe('VideoServerComponent', () => {
   @Component({
     selector: 'app-video-server-spec',
     template: `
-      <app-video-server></app-video-server>
+      <app-video-server [youTubeId]="'123'"></app-video-server>
     `,
   })
   class VideoServerComponentSpec {
@@ -31,7 +31,7 @@ describe('VideoServerComponent', () => {
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

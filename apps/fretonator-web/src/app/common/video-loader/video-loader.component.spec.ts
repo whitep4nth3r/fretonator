@@ -3,34 +3,34 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { VideoLoaderComponent } from './video-loader.component';
 import { Component } from '@angular/core';
 import { VideoLoaderModule } from './video-loader.module';
-import { JamTracksData } from '../../data/jamTracks';
 
-xdescribe('VideoLoaderComponent', () => {
-  
+describe('VideoLoaderComponent', () => {
+
   @Component({
-    selector: 'app-video-loader',
+    selector: 'app-video-loader-spec',
     template: `
-      <app-video-loader></app-video-loader>
-    `,
+      <app-video-loader
+        [jamTrack]="{key: 'c', mode: 'ionian', youTubeId: 'oMZz2FeV8q4', title: 'C Ionian (Major) Jam Track', creator: 'Tom Strahle'}">
+      </app-video-loader>
+    `
   })
-  class VideoServerComponentSpec {
+  class VideoLoaderComponentSpec {
   }
 
-  let component: VideoLoaderComponent;
-  let fixture: ComponentFixture<VideoLoaderComponent>;
+  let component: VideoLoaderComponentSpec;
+  let fixture: ComponentFixture<VideoLoaderComponentSpec>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [VideoLoaderComponent],
-      imports: [VideoLoaderModule],
+      declarations: [VideoLoaderComponentSpec],
+      imports: [VideoLoaderModule]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VideoLoaderComponent);
+    fixture = TestBed.createComponent(VideoLoaderComponentSpec);
     component = fixture.componentInstance;
-    component.jamTrack = JamTracksData[0];
     fixture.detectChanges();
   });
 

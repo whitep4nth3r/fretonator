@@ -16,6 +16,7 @@
 .footer__thanksCopy {
   @include font_bodyCopy();
   color: var(--offwhite);
+  text-align: center;
 }
 
 .footer__creditsTitle {
@@ -24,6 +25,7 @@
   margin-bottom: pxToRem($grid-unit);
   color: var(--peach);
   font-weight: var(--font-weight-bold);
+  text-align: center;
 }
 
 .footer__creditsList {
