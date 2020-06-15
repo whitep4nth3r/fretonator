@@ -3,10 +3,9 @@
     <h4 class="scaleDisplay__title"
         [class.infoHighlight]="isTheoretical"><span *ngIf="isTheoretical">Theoretical &nbsp;</span>Scale</h4>
     <div class="scaleDisplay__notes">
-      <ng-container *ngFor="let scaleNote of scale; let i = index">
+      <ng-container *ngFor="let note of modeMap; let i = index">
         <h5 class="scaleDisplay__note">
-          {{ scaleNote }}
-          <span *ngIf="i < scale.length - 1"> - </span>
+          {{ note.displayName }}
         </h5>
       </ng-container>
     </div>

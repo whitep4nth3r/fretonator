@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Mode, Scale } from '../../../util/types';
+import { Mode, ModeMap, Scale } from '../../../util/types';
 
 enum ScaleDegreesToggleText {
   hidden = 'What is this?',
@@ -20,6 +20,7 @@ export class ScaleMapComponent {
   @Input() mode: Mode;
   @Input() note: string;
   @Input() noteExtenderString: string;
+  @Input() modeMap: ModeMap;
   @Input() scale: Scale;
   @Input() isTheoretical: boolean;
   @Input() modeDisplayString: string;

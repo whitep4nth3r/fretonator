@@ -14,6 +14,7 @@ import { FretonatorModule } from '../../common/fretonator/fretonator.module';
 import { GetIntervalPatternFromModePipe } from './home-index/get-interval-pattern-from-mode.pipe';
 import { GetChordMapPipe } from './home-index/get-chord-map.pipe';
 import { CreateModeDisplayStringPipe } from './home-index/create-mode-display-string.pipe';
+import { GenerateModeMapPipe } from './home-index/generate-mode-map.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CreateModeDisplayStringPipe } from './home-index/create-mode-display-st
     GetIntervalPatternFromModePipe,
     GetChordMapPipe,
     CreateModeDisplayStringPipe,
+    GenerateModeMapPipe,
   ],
   imports: [
     CommonModule,

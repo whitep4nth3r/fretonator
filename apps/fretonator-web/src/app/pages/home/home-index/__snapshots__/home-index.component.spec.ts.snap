@@ -1069,67 +1069,42 @@ exports[`HomeIndexComponent should create 1`] = `
                       class="scaleDisplay__note"
                     >
                        C 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        D 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        E 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        F 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        G 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        A 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        B 
-                      
                     </h5>
                   </div>
                   

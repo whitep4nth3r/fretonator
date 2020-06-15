@@ -88,10 +88,10 @@ export class FretMapService {
       }
     } else {
       return noteName === 'g'
-          ? 'a'
-          : Octave[Octave.indexOf(noteName) + 1];
+        ? 'a'
+        : Octave[Octave.indexOf(noteName) + 1];
     }
-}
+  };
 
   generateNextNote = (currentNote: NoteObject, interval: number): NoteObject => {
     const nextNote = {
@@ -243,16 +243,22 @@ export class FretMapService {
   };
 
   generateMode = (startingNote: NoteObject, mode: string): ModeMap => {
-    let currentNote = startingNote;
-    let newNote;
+    let currentNote = {
+      ...startingNote,
+      displayName: this.convertNoteObjectToHumanReadable(startingNote)
+    };
 
     const newMode: ModeMap = [];
     newMode.push(currentNote);
+
+    let newNote;
 
     const modePattern = ModePatterns[mode];
 
     for (let i = 0; i < modePattern.length - 1; i++) {
       newNote = this.generateNextNote(currentNote, modePattern[i]);
+      newNote.displayName = this.convertNoteObjectToHumanReadable(newNote)
+
       newMode.push(newNote);
       currentNote = newNote;
     }

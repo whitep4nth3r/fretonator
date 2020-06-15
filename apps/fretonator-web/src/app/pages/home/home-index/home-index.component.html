@@ -79,7 +79,8 @@
 
     </div>
 
-    <app-fretonator [scale]="note | symbolToNoteObj: noteExtender | getScaleFromModeMap: mode"
+    <app-fretonator [modeMap]="note | symbolToNoteObj: noteExtender | generateModeMap: mode"
+                    [scale]="(note | symbolToNoteObj: noteExtender) | getScaleFromModeMap: mode"
                     [fretMap]="note | symbolToNoteObj: noteExtender | generateFretMap: mode"
                     [intervalMap]="mode | getIntervalPatternFromMode"
                     [chordMap]="note | symbolToNoteObj: noteExtender | getChordMap: mode"

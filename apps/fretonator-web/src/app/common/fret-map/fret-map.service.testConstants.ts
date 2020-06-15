@@ -7,6 +7,7 @@ export const aSharpPentatonicMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A#',
   },
   {
     name: 'b',
@@ -14,6 +15,7 @@ export const aSharpPentatonicMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B#'
   },
   {
     name: 'c',
@@ -21,6 +23,7 @@ export const aSharpPentatonicMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: true,
+    displayName: 'Cx'
   },
   {
     name: 'e',
@@ -28,6 +31,7 @@ export const aSharpPentatonicMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E#'
   },
   {
     name: 'f',
@@ -35,6 +39,7 @@ export const aSharpPentatonicMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: true,
+    displayName: 'Fx'
   },
 ]
 
@@ -45,6 +50,7 @@ export const dFlatMajorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D♭'
   },
   {
     name: 'e',
@@ -52,6 +58,7 @@ export const dFlatMajorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E♭'
   },
   {
     name: 'f',
@@ -59,6 +66,7 @@ export const dFlatMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F'
   },
   {
     name: 'a',
@@ -66,6 +74,7 @@ export const dFlatMajorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A♭'
   },
   {
     name: 'b',
@@ -73,6 +82,7 @@ export const dFlatMajorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B♭'
   },
 ]
 
@@ -83,6 +93,7 @@ export const fMinorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F'
   },
   {
     name: 'a',
@@ -90,6 +101,7 @@ export const fMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A♭'
   },
   {
     name: 'b',
@@ -97,6 +109,7 @@ export const fMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B♭'
   },
   {
     name: 'c',
@@ -104,6 +117,7 @@ export const fMinorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C'
   },
   {
     name: 'e',
@@ -111,6 +125,7 @@ export const fMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E♭'
   },
 ]
 
@@ -121,6 +136,7 @@ export const gFlatMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G♭'
   },
   {
     name: 'b',
@@ -128,6 +144,7 @@ export const gFlatMinorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: true,
     doubleSharp: false,
+    displayName: 'B𝄫'
   },
   {
     name: 'c',
@@ -135,6 +152,7 @@ export const gFlatMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C♭'
   },
   {
     name: 'd',
@@ -142,6 +160,7 @@ export const gFlatMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D♭'
   },
   {
     name: 'f',
@@ -149,6 +168,7 @@ export const gFlatMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F♭'
   },
 ]
 
@@ -159,6 +179,7 @@ export const eFlatMajorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E♭'
   },
   {
     name: 'f',
@@ -166,6 +187,7 @@ export const eFlatMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F'
   },
   {
     name: 'g',
@@ -173,6 +195,7 @@ export const eFlatMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G'
   },
   {
     name: 'b',
@@ -180,6 +203,7 @@ export const eFlatMajorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B♭'
   },
   {
     name: 'c',
@@ -187,6 +211,7 @@ export const eFlatMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C'
   },
 ]
 
@@ -197,6 +222,7 @@ export const fSharpMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F#'
   },
   {
     name: 'g',
@@ -204,6 +230,7 @@ export const fSharpMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G#'
   },
   {
     name: 'a',
@@ -211,6 +238,7 @@ export const fSharpMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A#'
   },
   {
     name: 'c',
@@ -218,6 +246,7 @@ export const fSharpMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C#'
   },
   {
     name: 'd',
@@ -225,6 +254,7 @@ export const fSharpMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D#'
   },
 ]
 
@@ -235,6 +265,7 @@ export const eFlatMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E♭'
   },
   {
     name: 'g',
@@ -242,6 +273,7 @@ export const eFlatMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G♭'
   },
   {
     name: 'a',
@@ -249,6 +281,7 @@ export const eFlatMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A♭'
   },
   {
     name: 'b',
@@ -256,6 +289,7 @@ export const eFlatMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B♭'
   },
   {
     name: 'd',
@@ -263,6 +297,7 @@ export const eFlatMinorPentatonic: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D♭'
   },
 ]
 
@@ -273,6 +308,7 @@ export const aMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A'
   },
   {
     name: 'b',
@@ -280,6 +316,7 @@ export const aMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B'
   },
   {
     name: 'c',
@@ -287,6 +324,7 @@ export const aMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C#'
   },
   {
     name: 'e',
@@ -294,6 +332,7 @@ export const aMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E'
   },
   {
     name: 'f',
@@ -301,6 +340,7 @@ export const aMajorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F#'
   },
 ]
 
@@ -311,6 +351,7 @@ export const aMinorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A'
   },
   {
     name: 'c',
@@ -318,6 +359,7 @@ export const aMinorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C'
   },
   {
     name: 'd',
@@ -325,6 +367,7 @@ export const aMinorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D'
   },
   {
     name: 'e',
@@ -332,6 +375,7 @@ export const aMinorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E'
   },
   {
     name: 'g',
@@ -339,6 +383,7 @@ export const aMinorPentatonic: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G'
   },
 ]
 
@@ -349,6 +394,7 @@ export const cIonianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C'
   },
   {
     name: 'd',
@@ -356,6 +402,7 @@ export const cIonianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D'
   },
   {
     name: 'e',
@@ -363,6 +410,7 @@ export const cIonianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E'
   },
   {
     name: 'f',
@@ -370,6 +418,7 @@ export const cIonianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F'
   },
   {
     name: 'g',
@@ -377,6 +426,7 @@ export const cIonianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G'
   },
   {
     name: 'a',
@@ -384,6 +434,7 @@ export const cIonianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A'
   },
   {
     name: 'b',
@@ -391,6 +442,7 @@ export const cIonianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B'
   },
 ];
 
@@ -401,6 +453,7 @@ export const dDorianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D'
   },
   {
     name: 'e',
@@ -408,6 +461,7 @@ export const dDorianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E'
   },
   {
     name: 'f',
@@ -415,6 +469,7 @@ export const dDorianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F'
   },
   {
     name: 'g',
@@ -422,6 +477,7 @@ export const dDorianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G'
   },
   {
     name: 'a',
@@ -429,6 +485,7 @@ export const dDorianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A'
   },
   {
     name: 'b',
@@ -436,6 +493,7 @@ export const dDorianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B'
   },
   {
     name: 'c',
@@ -443,6 +501,7 @@ export const dDorianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C'
   },
 ];
 
@@ -453,6 +512,7 @@ export const dHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D'
   },
   {
     name: 'e',
@@ -460,6 +520,7 @@ export const dHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E'
   },
   {
     name: 'f',
@@ -467,6 +528,7 @@ export const dHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F'
   },
   {
     name: 'g',
@@ -474,6 +536,7 @@ export const dHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G'
   },
   {
     name: 'a',
@@ -481,6 +544,7 @@ export const dHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A'
   },
   {
     name: 'b',
@@ -488,6 +552,7 @@ export const dHarmonicMinor: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B♭'
   },
   {
     name: 'c',
@@ -495,6 +560,7 @@ export const dHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C#'
   },
 ];
 
@@ -505,6 +571,7 @@ export const cHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C'
   },
   {
     name: 'd',
@@ -512,6 +579,7 @@ export const cHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D'
   },
   {
     name: 'e',
@@ -519,6 +587,7 @@ export const cHarmonicMinor: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E♭'
   },
   {
     name: 'f',
@@ -526,6 +595,7 @@ export const cHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F'
   },
   {
     name: 'g',
@@ -533,6 +603,7 @@ export const cHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G'
   },
   {
     name: 'a',
@@ -540,6 +611,7 @@ export const cHarmonicMinor: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A♭'
   },
   {
     name: 'b',
@@ -547,6 +619,7 @@ export const cHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B'
   },
 ];
 
@@ -557,6 +630,7 @@ export const fSharpHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F#'
   },
   {
     name: 'g',
@@ -564,6 +638,7 @@ export const fSharpHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G#'
   },
   {
     name: 'a',
@@ -571,6 +646,7 @@ export const fSharpHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A'
   },
   {
     name: 'b',
@@ -578,6 +654,7 @@ export const fSharpHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B'
   },
   {
     name: 'c',
@@ -585,6 +662,7 @@ export const fSharpHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C#'
   },
   {
     name: 'd',
@@ -592,6 +670,7 @@ export const fSharpHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D'
   },
   {
     name: 'e',
@@ -599,6 +678,7 @@ export const fSharpHarmonicMinor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E#'
   },
 ];
 
@@ -609,6 +689,7 @@ export const cPhrygianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C'
   },
   {
     name: 'd',
@@ -616,6 +697,7 @@ export const cPhrygianMode: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D♭'
   },
   {
     name: 'e',
@@ -623,6 +705,7 @@ export const cPhrygianMode: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E♭'
   },
   {
     name: 'f',
@@ -630,6 +713,7 @@ export const cPhrygianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F'
   },
   {
     name: 'g',
@@ -637,6 +721,7 @@ export const cPhrygianMode: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G'
   },
   {
     name: 'a',
@@ -644,6 +729,7 @@ export const cPhrygianMode: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A♭'
   },
   {
     name: 'b',
@@ -651,6 +737,7 @@ export const cPhrygianMode: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B♭'
   },
 ];
 
@@ -661,6 +748,7 @@ export const bFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B♭'
   },
   {
     name: 'c',
@@ -668,6 +756,7 @@ export const bFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C♭'
   },
   {
     name: 'd',
@@ -675,6 +764,7 @@ export const bFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D♭'
   },
   {
     name: 'e',
@@ -682,6 +772,7 @@ export const bFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E♭'
   },
   {
     name: 'f',
@@ -689,6 +780,7 @@ export const bFlatPhrygian: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F'
   },
   {
     name: 'g',
@@ -696,6 +788,7 @@ export const bFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G♭'
   },
   {
     name: 'a',
@@ -703,6 +796,7 @@ export const bFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A♭'
   },
 ];
 
@@ -713,6 +807,7 @@ export const aFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A♭'
   },
   {
     name: 'b',
@@ -720,6 +815,7 @@ export const aFlatPhrygian: ModeMap = [
     flat: false,
     doubleFlat: true,
     doubleSharp: false,
+    displayName: 'B𝄫'
   },
   {
     name: 'c',
@@ -727,6 +823,7 @@ export const aFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C♭'
   },
   {
     name: 'd',
@@ -734,6 +831,7 @@ export const aFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D♭'
   },
   {
     name: 'e',
@@ -741,6 +839,7 @@ export const aFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E♭'
   },
   {
     name: 'f',
@@ -748,6 +847,7 @@ export const aFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F♭'
   },
   {
     name: 'g',
@@ -755,6 +855,7 @@ export const aFlatPhrygian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G♭'
   },
 ];
 
@@ -765,6 +866,7 @@ export const bFlatLocrian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B♭'
   },
   {
     name: 'c',
@@ -772,6 +874,7 @@ export const bFlatLocrian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'C♭'
   },
   {
     name: 'd',
@@ -779,6 +882,7 @@ export const bFlatLocrian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D♭'
   },
   {
     name: 'e',
@@ -786,6 +890,7 @@ export const bFlatLocrian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E♭'
   },
   {
     name: 'f',
@@ -793,6 +898,7 @@ export const bFlatLocrian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'F♭'
   },
   {
     name: 'g',
@@ -800,6 +906,7 @@ export const bFlatLocrian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'G♭'
   },
   {
     name: 'a',
@@ -807,6 +914,7 @@ export const bFlatLocrian: ModeMap = [
     flat: true,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A♭'
   },
 ];
 
@@ -817,6 +925,7 @@ export const aSharpMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'A#'
   },
   {
     name: 'b',
@@ -824,6 +933,7 @@ export const aSharpMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'B#'
   },
   {
     name: 'c',
@@ -831,6 +941,7 @@ export const aSharpMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: true,
+    displayName: 'Cx'
   },
   {
     name: 'd',
@@ -838,6 +949,7 @@ export const aSharpMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'D#'
   },
   {
     name: 'e',
@@ -845,6 +957,7 @@ export const aSharpMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: false,
+    displayName: 'E#'
   },
   {
     name: 'f',
@@ -852,6 +965,7 @@ export const aSharpMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: true,
+    displayName: 'Fx'
   },
   {
     name: 'g',
@@ -859,6 +973,7 @@ export const aSharpMajor: ModeMap = [
     flat: false,
     doubleFlat: false,
     doubleSharp: true,
+    displayName: 'Gx'
   },
 ];
 

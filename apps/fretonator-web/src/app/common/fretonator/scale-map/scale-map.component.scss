@@ -84,6 +84,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: pxToRem($grid-unit * 8);
+  width: 100%;
 
   @media screen and (min-width: $screen-med) {
     flex-basis: 70%;
@@ -98,11 +99,29 @@
   flex-direction: row;
 }
 
+.scaleDisplay__notes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .scaleDisplay__note {
-  display: inline;
-  font-size: pxToRem(24);
+  display: inline-block;
+  text-align: center;
+  font-size: pxToRem(18);
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-bold);
+  margin: 0 pxToRem($grid-unit);
+
+  @media screen and (min-width: $screen-sm) {
+    font-size: pxToRem(24);
+  }
+
+  @media screen and (min-width: $screen-med) {
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
 }
 
 
