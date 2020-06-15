@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { CrossComponent } from './cross.component';
 
 
-
 @NgModule({
   declarations: [CrossComponent],
   exports: [

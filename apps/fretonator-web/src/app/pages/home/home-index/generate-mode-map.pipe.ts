@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { FretMap, Mode, ModeMap, NoteObject } from '../../../util/types';
+import { Mode, ModeMap, NoteObject } from '../../../util/types';
 import { FretMapService } from '../../../common/fret-map/fret-map.service';
 
 @Pipe({

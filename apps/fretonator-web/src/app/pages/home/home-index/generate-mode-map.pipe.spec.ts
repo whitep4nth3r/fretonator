@@ -1,9 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 
 import { GenerateModeMapPipe } from './generate-mode-map.pipe';
-import { Mode, ModeMap } from '../../../util/types';
+import { Mode } from '../../../util/types';
 import { FretMapService } from '../../../common/fret-map/fret-map.service';
-import { GenerateFretMapPipe } from './generate-fret-map.pipe';
 
 describe('GenerateModeMapPipe', () => {
   let pipe: GenerateModeMapPipe;

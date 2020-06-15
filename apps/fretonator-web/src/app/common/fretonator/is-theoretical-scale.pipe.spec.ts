@@ -1,4 +1,9 @@
 import { IsTheoreticalScalePipe } from './is-theoretical-scale.pipe';
+import {
+  aSharpPentatonicMajor,
+  fMinorPentatonic,
+  gFlatMinorPentatonic
+} from '../fret-map/fret-map.service.testConstants';
 
 describe('IsTheoreticalScalePipe', () => {
   let pipe: IsTheoreticalScalePipe;
@@ -11,14 +16,14 @@ describe('IsTheoreticalScalePipe', () => {
   });
 
   it('returns true for a scale with a double flat in', () => {
-    expect(pipe.transform(['C', 'D𝄫'])).toBe(true);
+    expect(pipe.transform(gFlatMinorPentatonic)).toBe(true);
   });
 
   it('returns true for a scale with a double sharp in', () => {
-    expect(pipe.transform(['Cx', 'D'])).toBe(true);
+    expect(pipe.transform(aSharpPentatonicMajor)).toBe(true);
   });
 
   it('returns false for scales without double flat or double sharp', () => {
-    expect(pipe.transform(['C', 'D'])).toBe(false);
+    expect(pipe.transform(fMinorPentatonic)).toBe(false);
   });
 });

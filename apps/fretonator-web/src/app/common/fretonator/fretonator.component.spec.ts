@@ -8,7 +8,14 @@ describe('FretonatorComponent', () => {
   @Component({
     selector: 'app-fretonator-spec',
     template: `
-      <app-fretonator [scale]="['C', 'D', 'E']"
+      <app-fretonator [modeMap]="[{
+                                  name: 'f',
+                                  sharp: false,
+                                  flat: false,
+                                  doubleFlat: false,
+                                  doubleSharp: false,
+                                  displayName: 'F'
+                                }]"
                       [fretMap]="[
                       { string: 'A', fret: 0, displayName: 'A', degree: 'dominant' },
                       { string: 'A', fret: 2, displayName: 'B', degree: 'submediant' }]">

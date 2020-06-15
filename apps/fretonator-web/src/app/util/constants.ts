@@ -1,4 +1,4 @@
-import { ChordType, Mode, NoteExtenderSymbol, NoteSymbol } from './types';
+import { ChordType, Mode } from './types';
 
 export const NoteToStringAndFretMap = {
   c__: [
