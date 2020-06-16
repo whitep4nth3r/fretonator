@@ -6,6 +6,9 @@
 .chipsContainer {
   margin-top: pxToRem($grid-unit * 2);
   margin-bottom: pxToRem($grid-unit * 4);
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .similarModes {
@@ -30,4 +33,8 @@
 .similarModes__copy {
   @include font_bodyCopy();
   margin-bottom: pxToRem($grid-unit * 2);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }

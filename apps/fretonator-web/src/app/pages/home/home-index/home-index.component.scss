@@ -149,6 +149,7 @@
 
 .modeSelector__label {
   @include font_medium();
+  font-size: pxToRem(16);
   font-weight: var(--font-weight-bold);
   margin-top: pxToRem($grid-unit * 1);
   margin-bottom: pxToRem($grid-unit * 1);
