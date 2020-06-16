@@ -328,7 +328,6 @@ export class FretMapService {
 
     const modeMap = origModeMap.map((noteObject, index) => ({
       ...noteObject,
-      displayName: this.convertNoteObjectToHumanReadable(noteObject),
       degree: ScaleDegrees[index]
     }));
 

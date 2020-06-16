@@ -40,13 +40,8 @@
     bottom: 50%;
     left: 0;
     right: 0;
-    transform: translatey(calc(50% - 1px));
-    opacity: .9;
+    transform: translateY(calc(50% - 1px));
     cursor: pointer;
-  }
-
-  &:hover:after{
-    opacity: 1;
   }
 
   &:nth-child(-n + 13) {
@@ -102,6 +97,7 @@
     content: attr(data-display-note);
     height: var(--note-height);
     width: var(--note-height);
+    line-height: var(--note-height);
     left: 50%;
     right: unset;
     box-sizing: border-box;
@@ -109,15 +105,26 @@
     transform: translate(-50%, 50%);
     background-color: var(--note-background);
     color: var(--note-color);
-    line-height: var(--note-height);
     text-align: center;
     font-weight: var(--font-weight-bold);
     font-family: var(--font-family-main);
     font-size: pxToRem(12);
+    opacity: 0.9;
+    transition-duration: 0.1s;
+    transition-property: line-height, height, width, opacity;
+    transition-timing-function: ease-in-out;
+  }
+
+  &:hover:after,
+  &:active:after {
+    opacity: 1;
+    height: var(--note-height-hover);
+    width: var(--note-height-hover);
+    line-height: var(--note-height-hover);
   }
 
   &:nth-child(-n + 13):after {
-    transform: translate(-50%, 1px);
+    transform: translate(-50%, 6px);
   }
 
   &:nth-last-child(-n + 13):after {
@@ -183,7 +190,7 @@
   }
 
   &:nth-child(-n + 13):after {
-    transform: translate(-50%, 1px);
+    transform: translate(-50%, 6px);
   }
 
   &:nth-last-child(-n + 13):after {
