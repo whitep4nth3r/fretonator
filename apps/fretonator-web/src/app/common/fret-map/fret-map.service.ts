@@ -19,7 +19,7 @@ import {
   NoteToStringAndFretMap,
   Octave,
   ScaleDegrees,
-  SimilarModePatterns
+  StandardModePatterns
 } from '../../util/constants';
 import { JamTracksData } from '../../data/jamTracks';
 
@@ -428,15 +428,19 @@ export class FretMapService {
   };
 
   getSimilarModes = (modeMap: ModeMap, inputMode: Mode): SimilarModes => {
-    const firstModeInPattern = SimilarModePatterns.indexOf(inputMode);
+    const firstModeInPattern = StandardModePatterns.indexOf(inputMode);
+
+    if (firstModeInPattern === -1) {
+      return [];
+    }
 
     const similarModes = modeMap
       .map((noteObject, index) => {
         return {
           noteDisplayName: noteObject.displayName,
           note: noteObject.name,
-          mode: SimilarModePatterns[firstModeInPattern + index],
-          noteExtender: this.getNoteExtenderStringFromNoteObject(noteObject),
+          mode: StandardModePatterns[firstModeInPattern + index],
+          noteExtender: this.getNoteExtenderStringFromNoteObject(noteObject)
         } as unknown as SimilarMode;
       });
 

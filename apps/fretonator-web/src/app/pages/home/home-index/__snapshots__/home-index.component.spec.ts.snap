@@ -1395,6 +1395,7 @@ exports[`HomeIndexComponent should create 1`] = `
               </div>
             </app-chord-map>
             <app-similar-modes>
+              
               <div
                 class="similarModes"
               >
@@ -1406,81 +1407,95 @@ exports[`HomeIndexComponent should create 1`] = `
                 <p
                   class="similarModes__copy"
                 >
-                  If you know the patterns of C Ionian (Major), you'll know the modes below. Just shift your fingers along the fret board.
+                  If you know the patterns of C Ionian (Major) on the fretboard, you can transfer those shapes to the modes below.
                 </p>
-                <app-chips>
-                  <div
-                    class="chips"
-                  >
-                    
-                    <app-chip
-                      selectedcolor="default"
+                <div
+                  class="chipsContainer"
+                >
+                  <app-chips>
+                    <div
+                      class="chips"
                     >
-                      <a
-                        aria-label="D Dorian"
-                        class="chip"
-                        href="/d/natural/dorian"
+                      
+                      <app-chip
+                        selectedcolor="default"
                       >
-                        D Dorian
-                      </a>
-                    </app-chip>
-                    <app-chip
-                      selectedcolor="default"
-                    >
-                      <a
-                        aria-label="E Phrygian"
-                        class="chip"
-                        href="/e/natural/phrygian"
+                        <a
+                          aria-label="D Dorian"
+                          class="chip"
+                          href="/d/natural/dorian"
+                        >
+                          D Dorian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
                       >
-                        E Phrygian
-                      </a>
-                    </app-chip>
-                    <app-chip
-                      selectedcolor="default"
-                    >
-                      <a
-                        aria-label="F Lydian"
-                        class="chip"
-                        href="/f/natural/lydian"
+                        <a
+                          aria-label="E Phrygian"
+                          class="chip"
+                          href="/e/natural/phrygian"
+                        >
+                          E Phrygian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
                       >
-                        F Lydian
-                      </a>
-                    </app-chip>
-                    <app-chip
-                      selectedcolor="default"
-                    >
-                      <a
-                        aria-label="G Mixolydian"
-                        class="chip"
-                        href="/g/natural/mixolydian"
+                        <a
+                          aria-label="F Lydian"
+                          class="chip"
+                          href="/f/natural/lydian"
+                        >
+                          F Lydian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
                       >
-                        G Mixolydian
-                      </a>
-                    </app-chip>
-                    <app-chip
-                      selectedcolor="default"
-                    >
-                      <a
-                        aria-label="A Aolian (Minor)"
-                        class="chip"
-                        href="/a/natural/aolian"
+                        <a
+                          aria-label="G Mixolydian"
+                          class="chip"
+                          href="/g/natural/mixolydian"
+                        >
+                          G Mixolydian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
                       >
-                        A Aolian
-                      </a>
-                    </app-chip>
-                    <app-chip
-                      selectedcolor="default"
-                    >
-                      <a
-                        aria-label="B Locrian"
-                        class="chip"
-                        href="/b/natural/locrian"
+                        <a
+                          aria-label="A Aolian (Minor)"
+                          class="chip"
+                          href="/a/natural/aolian"
+                        >
+                          A Aolian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
                       >
-                        B Locrian
-                      </a>
-                    </app-chip>
-                  </div>
-                </app-chips>
+                        <a
+                          aria-label="B Locrian"
+                          class="chip"
+                          href="/b/natural/locrian"
+                        >
+                          B Locrian
+                        </a>
+                      </app-chip>
+                    </div>
+                  </app-chips>
+                </div>
+                <p
+                  class="similarModes__copy"
+                >
+                  There are only 7 patterns you need to learn. Once you've memorised those patterns, you can play any of the 7 standard modes (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aolian, Locrian) from any starting note, anywhere on the fretboard.
+                </p>
+                <p
+                  class="similarModes__copy"
+                >
+                  These patterns always appear in the same order, one after the other.
+                </p>
               </div>
             </app-similar-modes>
           </div>

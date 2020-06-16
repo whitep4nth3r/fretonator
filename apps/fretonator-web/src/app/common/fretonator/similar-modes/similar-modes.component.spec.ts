@@ -9,7 +9,7 @@ describe('SimilarModesComponent', () => {
   @Component({
     selector: 'app-similar-modes-spec',
     template: `
-      <app-similar-modes>
+      <app-similar-modes [similarModes]="[]">
       </app-similar-modes>
     `
   })

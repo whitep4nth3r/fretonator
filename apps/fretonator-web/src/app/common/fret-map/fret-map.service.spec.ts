@@ -1366,4 +1366,10 @@ describe('FretMapService:getSimilarModes', () => {
 
     expect(result).toEqual(cIonianSimilarModes);
   });
+
+  it('returns an empty array for a mode not in the StandardModePatterns array', () => {
+    const result = service.getSimilarModes(fSharpHarmonicMinor, Mode.harmonicMinor);
+
+    expect(result).toEqual([]);
+  });
 });

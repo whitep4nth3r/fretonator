@@ -3,6 +3,11 @@
 @import "../../../../styles/mixins";
 @import "../../../../styles/typography";
 
+.chipsContainer {
+  margin-top: pxToRem($grid-unit * 2);
+  margin-bottom: pxToRem($grid-unit * 4);
+}
+
 .similarModes {
   background-color: var(--peach);
   padding: pxToRem($grid-unit * 4);
