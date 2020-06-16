@@ -1,3 +1,5 @@
+@import './functions';
+
 $grid-unit: 8 !default;
 
 $screen-sm: 600px !default;
@@ -10,6 +12,8 @@ $focus_box_shadow_color_alt: #474350 !default;
 
 $fretonator_max_width: 980px !default;
 $mode_selector_max_width: 800px !default;
+
+$infoContainer_info_row_height: pxToRem($grid-unit * 8);
 
 $hamburger_padding-x: 16px;
 $hamburger_padding-y: 16px;
