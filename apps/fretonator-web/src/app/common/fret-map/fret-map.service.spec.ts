@@ -1353,6 +1353,49 @@ describe('FretMapService:convertFretMapConfigurationToDisplayString', () => {
   });
 });
 
+describe('FretMapService:getNoteExtenderStringFromNoteObject', () => {
+  let service: FretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(FretMapService);
+  });
+
+  it('returns NoteExtenderString.flat for a flat note', () => {
+    const result = service.getNoteExtenderStringFromNoteObject({
+      name: 'b',
+      flat: true,
+      sharp: false,
+      doubleSharp: false,
+      doubleFlat: false
+    });
+    expect(result).toBe('flat');
+  });
+
+
+  it('returns NoteExtenderString.sharp for a sharp note', () => {
+    const result = service.getNoteExtenderStringFromNoteObject({
+      name: 'd',
+      flat: false,
+      sharp: true,
+      doubleSharp: false,
+      doubleFlat: false
+    });
+    expect(result).toBe('sharp');
+  });
+
+  it('returns NoteExtenderString.natural for a natural note', () => {
+    const result = service.getNoteExtenderStringFromNoteObject({
+      name: 'd',
+      flat: false,
+      sharp: false,
+      doubleSharp: false,
+      doubleFlat: false
+    });
+    expect(result).toBe('natural');
+  });
+});
+
 describe('FretMapService:getSimilarModes', () => {
   let service: FretMapService;
 

@@ -343,12 +343,12 @@ exports[`HomeIndexComponent should create 1`] = `
             class="fretboard__toggle"
           >
             <button
-              class="fretboard__toggleButton fretboard__toggleButton--left fretboard__toggleButton--active"
+              class="fretboard__toggleButton fretboard__toggleButton--twelve fretboard__toggleButton--active"
             >
               12 frets 
             </button>
             <button
-              class="fretboard__toggleButton fretboard__toggleButton--right"
+              class="fretboard__toggleButton fretboard__toggleButton--twentyFour"
             >
               24 frets 
             </button>
@@ -1180,7 +1180,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </div>
                   <button
                     aria-label="Scale Degrees Info Toggle"
-                    class="button__infoToggle"
+                    class="button__infoToggle button__infoToggle--scaleDegrees"
                     type="button"
                   >
                     What is this? 

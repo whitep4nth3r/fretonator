@@ -369,13 +369,13 @@
   color: var(--offwhite);
 }
 
-.fretboard__toggleButton--left {
+.fretboard__toggleButton--twelve {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-right-width: calc(var(--border-width-button) / 2);
 }
 
-.fretboard__toggleButton--right {
+.fretboard__toggleButton--twentyFour {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left-width: calc(var(--border-width-button) / 2);

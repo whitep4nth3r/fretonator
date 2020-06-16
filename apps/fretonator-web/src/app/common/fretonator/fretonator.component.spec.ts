@@ -2,9 +2,20 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FretonatorComponent } from './fretonator.component';
 import { FretonatorModule } from './fretonator.module';
-import { Component } from '@angular/core';
+import { Component, DebugElement } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 describe('FretonatorComponent', () => {
+
+  const selectors = {
+    twelveButton: By.css('.fretboard__toggleButton--twelve'),
+    twentyFourButton: By.css('.fretboard__toggleButton--twentyFour')
+  }
+
+  const classNames = {
+    toggleFretButtonSelected: 'fretboard__toggleButton--active'
+  }
+
   @Component({
     selector: 'app-fretonator-spec',
     template: `
@@ -43,5 +54,27 @@ describe('FretonatorComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  describe('setFretMode()', () => {
+    let twelveButton: DebugElement;
+    let twentyFourButton: DebugElement;
+
+    beforeEach(() => {
+      twelveButton = fixture.debugElement.query(selectors.twelveButton);
+      twentyFourButton = fixture.debugElement.query(selectors.twentyFourButton);
+    });
+
+    it('changes the fret mode to twenty four when the button is clicked', () => {
+      twentyFourButton.nativeElement.click();
+      fixture.detectChanges();
+      expect(twentyFourButton.classes[classNames.toggleFretButtonSelected]).toBeTruthy();
+    });
+
+    it('changes the fret mode to twelve when the button is clicked', () => {
+      twelveButton.nativeElement.click();
+      fixture.detectChanges();
+      expect(twelveButton.classes[classNames.toggleFretButtonSelected]).toBeTruthy();
+    });
   });
 });
