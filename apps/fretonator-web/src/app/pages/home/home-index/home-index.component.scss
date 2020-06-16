@@ -135,6 +135,7 @@
 
 .modeSelector__container {
   @include content_wrapper;
+  max-width: none;
   margin-top: pxToRem($grid-unit * 4);
   margin-bottom: pxToRem($grid-unit * 4);
 }
