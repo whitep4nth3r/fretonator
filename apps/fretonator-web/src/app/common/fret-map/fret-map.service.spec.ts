@@ -1351,3 +1351,55 @@ describe('FretMapService:convertFretMapConfigurationToDisplayString', () => {
     expect(result).toBe('A flat Minor Pentatonic');
   });
 });
+
+describe('FretMapService:getSimilarModes', () => {
+  let service: FretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(FretMapService);
+  });
+
+  it('returns correctly for an input of c natural ionian', () => {
+    const result = service.getSimilarModes(cIonianMode, Mode.ionian);
+
+    expect(result).toBe([
+      {
+        noteDisplayName: 'D',
+        note: 'd',
+        mode: 'dorian',
+        noteExtender: 'natural'
+      },
+      {
+        noteDisplayName: 'E',
+        note: 'e',
+        mode: 'phrygian',
+        noteExtender: 'natural'
+      },
+      {
+        noteDisplayName: 'F',
+        note: 'f',
+        mode: 'lydian',
+        noteExtender: 'natural'
+      },
+      {
+        noteDisplayName: 'G',
+        note: 'g',
+        mode: 'mixolydian',
+        noteExtender: 'natural'
+      },
+      {
+        noteDisplayName: 'A',
+        note: 'a',
+        mode: 'aolian',
+        noteExtender: 'natural'
+      },
+      {
+        noteDisplayName: 'B',
+        note: 'b',
+        mode: 'locrian',
+        noteExtender: 'natural'
+      }
+    ]);
+  });
+});

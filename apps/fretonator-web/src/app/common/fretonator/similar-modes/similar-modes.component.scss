@@ -1,0 +1,28 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/functions";
+@import "../../../../styles/mixins";
+@import "../../../../styles/typography";
+
+.similarModes {
+  background-color: var(--peach);
+  padding: pxToRem($grid-unit * 4);
+  margin-left: pxToRem($grid-unit * -4);
+  margin-right: pxToRem($grid-unit * -4);
+  margin-top: pxToRem($grid-unit * 4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $screen-med) {
+    align-items: flex-start;
+  }
+}
+
+.similarModes__title {
+  @include info_container_title();
+}
+
+.similarModes__copy {
+  @include font_bodyCopy();
+  margin-bottom: pxToRem($grid-unit * 2);
+}

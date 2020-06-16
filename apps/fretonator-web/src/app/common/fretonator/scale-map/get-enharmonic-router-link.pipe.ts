@@ -24,5 +24,4 @@ export class GetEnharmonicRouterLinkPipe implements PipeTransform {
 
     return ['/', newNote, newNoteExtender, mode];
   }
-
 }

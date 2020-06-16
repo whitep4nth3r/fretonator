@@ -626,3 +626,20 @@ export const StringFrequencies = {
   'A': 110.00,
   'E': 82.41
 }
+
+export const SimilarModePatterns = [
+  Mode.ionian,
+  Mode.dorian,
+  Mode.phrygian,
+  Mode.lydian,
+  Mode.mixolydian,
+  Mode.aolian,
+  Mode.locrian,
+  Mode.ionian,
+  Mode.dorian,
+  Mode.phrygian,
+  Mode.lydian,
+  Mode.mixolydian,
+  Mode.aolian,
+  Mode.locrian
+]

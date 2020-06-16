@@ -8,7 +8,9 @@ import {
   ModeMap,
   NoteExtenderString,
   NoteObject,
-  NoteSymbol
+  NoteSymbol,
+  SimilarMode,
+  SimilarModes
 } from '../../util/types';
 import {
   ChordPatterns,
@@ -16,7 +18,8 @@ import {
   ModeSelectorObjects,
   NoteToStringAndFretMap,
   Octave,
-  ScaleDegrees
+  ScaleDegrees,
+  SimilarModePatterns
 } from '../../util/constants';
 import { JamTracksData } from '../../data/jamTracks';
 
@@ -257,7 +260,7 @@ export class FretMapService {
 
     for (let i = 0; i < modePattern.length - 1; i++) {
       newNote = this.generateNextNote(currentNote, modePattern[i]);
-      newNote.displayName = this.convertNoteObjectToHumanReadable(newNote)
+      newNote.displayName = this.convertNoteObjectToHumanReadable(newNote);
 
       newMode.push(newNote);
       currentNote = newNote;
@@ -408,6 +411,36 @@ export class FretMapService {
       note: this.convertNoteObjectToHumanReadable(noteObject),
       type: chordPattern[index]
     }));
+  };
 
+  getNoteExtenderStringFromNoteObject = (noteObject: NoteObject): NoteExtenderString => {
+    if (this.isSharp(noteObject, noteObject.name)) {
+      return NoteExtenderString.sharp;
+    }
+
+    if (this.isFlat(noteObject, noteObject.name)) {
+      return NoteExtenderString.flat;
+    }
+
+    if (this.isNatural(noteObject, noteObject.name)) {
+      return NoteExtenderString.natural;
+    }
+  };
+
+  getSimilarModes = (modeMap: ModeMap, inputMode: Mode): SimilarModes => {
+    const firstModeInPattern = SimilarModePatterns.indexOf(inputMode);
+
+    const similarModes = modeMap
+      .map((noteObject, index) => {
+        return {
+          noteDisplayName: noteObject.displayName,
+          note: noteObject.name,
+          mode: SimilarModePatterns[firstModeInPattern + index],
+          noteExtender: this.getNoteExtenderStringFromNoteObject(noteObject),
+        } as unknown as SimilarMode;
+      });
+
+    similarModes.shift();
+    return similarModes;
   };
 }

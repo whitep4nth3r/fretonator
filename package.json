@@ -10,7 +10,7 @@
     "test": "ng test",
     "test:coverage": "npm run affected:test -- --all --code-coverage",
     "test:update": "nx test -- --updateSnapshot",
-    "test:watch": "npm run affected:test -- --watchAll",
+    "test:watch": "npm run affected:test -- --watch",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
     "affected:apps": "nx affected:apps",

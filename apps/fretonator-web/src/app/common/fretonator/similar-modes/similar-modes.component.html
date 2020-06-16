@@ -1,0 +1,13 @@
+<div class="similarModes">
+  <h4 class="similarModes__title">Did you know?</h4>
+  <p class="similarModes__copy">If you know the patterns of {{modeDisplayString}}, you'll know the modes below. Just shift your fingers along the
+    fret board.</p>
+
+  <app-chips>
+    <app-chip *ngFor="let mode of similarModes"
+              [note]="mode.note"
+              [noteExtender]="mode.noteExtender"
+              [mode]="mode.mode"
+              selectedColor="default">{{mode.displayName}} {{mode.mode | titlecase}}</app-chip>
+  </app-chips>
+</div>
