@@ -233,7 +233,7 @@
   @include content_wrapper();
   max-width: $screen-med;
   margin-top: pxToRem($grid-unit * 4);
-  background-color: var(--white);
+  background-color: var(--background-color-light);
   padding: pxToRem($grid-unit * 4);
   border-radius: pxToRem($grid-unit * 4);
   box-shadow: 0 pxToRem(1) pxToRem(3) rgba(26, 26, 26, 0.12), 0 pxToRem(1) pxToRem(2) rgba(26, 26, 26, 0.24);

@@ -124,6 +124,39 @@
   }
 }
 
+.buttonRow {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $screen-sm) {
+    flex-direction: row;
+  }
+}
+
+.button__playScale {
+  @include chip_button_base();
+  margin-top: pxToRem($grid-unit * 2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s ease-in-out;
+
+  &:hover, &:active {
+    background-color: var(--purple);
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    margin-right: pxToRem($grid-unit * 2);
+  }
+}
+
+.button__playScale__svg {
+  display: flex;
+  height: pxToRem($grid-unit * 2);
+  width: pxToRem($grid-unit * 2);
+  margin-right: pxToRem($grid-unit / 2);
+}
 
 .button__infoToggle {
   @include chip_button_base();

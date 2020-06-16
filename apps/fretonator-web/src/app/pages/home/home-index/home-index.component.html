@@ -47,21 +47,21 @@
                   [noteExtender]="'flat'"
                   [mode]="mode"
                   rounded="true"
-                  selectedColor="grey">{{note | titlecase}}♭
+                  selectedColor="muted">{{note | titlecase}}♭
         </app-chip>
 
         <app-chip [note]="note"
                   [noteExtender]="'natural'"
                   [mode]="mode"
                   rounded="true"
-                  selectedColor="grey">{{note | titlecase}}</app-chip>
+                  selectedColor="muted">{{note | titlecase}}</app-chip>
 
         <app-chip *ngIf="!(note === 'b' || note === 'e')"
                   [note]="note"
                   [noteExtender]="'sharp'"
                   [mode]="mode"
                   rounded="true"
-                  selectedColor="grey">{{note | titlecase}}#
+                  selectedColor="muted">{{note | titlecase}}#
         </app-chip>
       </app-chips>
     </div>

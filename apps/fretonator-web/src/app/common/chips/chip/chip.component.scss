@@ -10,9 +10,10 @@
   @include chip_button_base()
 }
 
-.chip--grey {
-  border-color: var(--grey);
-  color: var(--grey);
+.chip--muted {
+  border-color: var(--chip-border-color-muted);
+  color: var(--chip-foreground-color-muted);
+  background-color: var(--chip-background-color-muted);
 }
 
 .chip--round {
@@ -25,10 +26,13 @@
 }
 
 .chip--active {
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--chip-background-color-active);
+  color: var(--chip-foreground-color-active);
+  border-color: var(--chip-border-color-active);
 
-  &.chip--grey {
-    background-color: var(--grey);
+  &.chip--muted {
+    background-color: var(--chip-background-color-muted-active);
+    border-color: var(--chip-border-color-muted-active);
+    color: var(--chip-foreground-color-muted-active);
   }
 }

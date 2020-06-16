@@ -39,4 +39,8 @@ export class ScaleMapComponent {
     this.showTheoreticalScalesInfo = !this.showTheoreticalScalesInfo;
     this.theoreticalScalesToggleText = this.showTheoreticalScalesInfo ? TheoreticalScalesToggleText.visible : TheoreticalScalesToggleText.hidden;
   }
+
+  playScale() {
+    console.log('playing');
+  }
 }

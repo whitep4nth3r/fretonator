@@ -152,6 +152,7 @@
   margin-top: pxToRem($grid-unit * 1);
   margin-bottom: pxToRem($grid-unit * 1);
   text-align: left;
+  color: var(--foreground-color-base);
 
   @media screen and (min-width: 400px) {
     text-align: center;

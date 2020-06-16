@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 export enum SelectedColor {
   default = 'default',
-  grey = 'grey',
+  muted = 'muted',
 }
 
 @Component({
