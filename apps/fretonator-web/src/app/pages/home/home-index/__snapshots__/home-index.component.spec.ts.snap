@@ -174,11 +174,11 @@ exports[`HomeIndexComponent should create 1`] = `
               
               <app-chip
                 rounded="true"
-                selectedcolor="grey"
+                selectedcolor="muted"
               >
                 <a
                   aria-label="C Ionian (Major)"
-                  class="chip chip--active chip--round chip--grey"
+                  class="chip chip--active chip--round chip--muted"
                   href="/c/natural/ionian"
                 >
                   C
@@ -187,11 +187,11 @@ exports[`HomeIndexComponent should create 1`] = `
               
               <app-chip
                 rounded="true"
-                selectedcolor="grey"
+                selectedcolor="muted"
               >
                 <a
                   aria-label="C sharp Ionian (Major)"
-                  class="chip chip--round chip--grey"
+                  class="chip chip--round chip--muted"
                   href="/c/sharp/ionian"
                 >
                   C# 
