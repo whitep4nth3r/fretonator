@@ -1394,6 +1394,95 @@ exports[`HomeIndexComponent should create 1`] = `
                 </div>
               </div>
             </app-chord-map>
+            <app-similar-modes>
+              <div
+                class="similarModes"
+              >
+                <h4
+                  class="similarModes__title"
+                >
+                  Did you know?
+                </h4>
+                <p
+                  class="similarModes__copy"
+                >
+                  If you know the patterns of C Ionian (Major), you'll know the modes below. Just shift your fingers along the fret board.
+                </p>
+                <app-chips>
+                  <div
+                    class="chips"
+                  >
+                    
+                    <app-chip
+                      selectedcolor="default"
+                    >
+                      <a
+                        aria-label="D Dorian"
+                        class="chip"
+                        href="/d/natural/dorian"
+                      >
+                        D Dorian
+                      </a>
+                    </app-chip>
+                    <app-chip
+                      selectedcolor="default"
+                    >
+                      <a
+                        aria-label="E Phrygian"
+                        class="chip"
+                        href="/e/natural/phrygian"
+                      >
+                        E Phrygian
+                      </a>
+                    </app-chip>
+                    <app-chip
+                      selectedcolor="default"
+                    >
+                      <a
+                        aria-label="F Lydian"
+                        class="chip"
+                        href="/f/natural/lydian"
+                      >
+                        F Lydian
+                      </a>
+                    </app-chip>
+                    <app-chip
+                      selectedcolor="default"
+                    >
+                      <a
+                        aria-label="G Mixolydian"
+                        class="chip"
+                        href="/g/natural/mixolydian"
+                      >
+                        G Mixolydian
+                      </a>
+                    </app-chip>
+                    <app-chip
+                      selectedcolor="default"
+                    >
+                      <a
+                        aria-label="A Aolian (Minor)"
+                        class="chip"
+                        href="/a/natural/aolian"
+                      >
+                        A Aolian
+                      </a>
+                    </app-chip>
+                    <app-chip
+                      selectedcolor="default"
+                    >
+                      <a
+                        aria-label="B Locrian"
+                        class="chip"
+                        href="/b/natural/locrian"
+                      >
+                        B Locrian
+                      </a>
+                    </app-chip>
+                  </div>
+                </app-chips>
+              </div>
+            </app-similar-modes>
           </div>
         </app-fretonator>
         

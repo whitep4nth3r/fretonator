@@ -12,6 +12,7 @@ import {
   cIonianChordMap,
   cIonianFretMappings,
   cIonianMode,
+  cIonianSimilarModes,
   cMajorPentatonicChordMap,
   cMinorPentatonicChordMap,
   cPhrygianMode,
@@ -1363,43 +1364,6 @@ describe('FretMapService:getSimilarModes', () => {
   it('returns correctly for an input of c natural ionian', () => {
     const result = service.getSimilarModes(cIonianMode, Mode.ionian);
 
-    expect(result).toBe([
-      {
-        noteDisplayName: 'D',
-        note: 'd',
-        mode: 'dorian',
-        noteExtender: 'natural'
-      },
-      {
-        noteDisplayName: 'E',
-        note: 'e',
-        mode: 'phrygian',
-        noteExtender: 'natural'
-      },
-      {
-        noteDisplayName: 'F',
-        note: 'f',
-        mode: 'lydian',
-        noteExtender: 'natural'
-      },
-      {
-        noteDisplayName: 'G',
-        note: 'g',
-        mode: 'mixolydian',
-        noteExtender: 'natural'
-      },
-      {
-        noteDisplayName: 'A',
-        note: 'a',
-        mode: 'aolian',
-        noteExtender: 'natural'
-      },
-      {
-        noteDisplayName: 'B',
-        note: 'b',
-        mode: 'locrian',
-        noteExtender: 'natural'
-      }
-    ]);
+    expect(result).toEqual(cIonianSimilarModes);
   });
 });

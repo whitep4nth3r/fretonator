@@ -8,12 +8,14 @@ import { ScaleMapModule } from './scale-map/scale-map.module';
 import { IsTheoreticalScalePipe } from './is-theoretical-scale.pipe';
 import { SpeakerModule } from '../svgs/speaker/speaker.module';
 import { SimilarModesModule } from './similar-modes/similar-modes.module';
+import { GetSimilarModesPipe } from './get-similar-modes.pipe';
 
 @NgModule({
   declarations: [
     FretonatorComponent,
     GetFretFromFretMapPipe,
     IsTheoreticalScalePipe,
+    GetSimilarModesPipe,
   ],
   imports: [
     CommonModule,

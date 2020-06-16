@@ -1,20 +1,34 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SimilarModesComponent } from './similar-modes.component';
+import { Component } from '@angular/core';
+import { SimilarModesModule } from './similar-modes.module';
 
 describe('SimilarModesComponent', () => {
-  let component: SimilarModesComponent;
-  let fixture: ComponentFixture<SimilarModesComponent>;
+
+  @Component({
+    selector: 'app-similar-modes-spec',
+    template: `
+      <app-similar-modes>
+      </app-similar-modes>
+    `
+  })
+  class SimilarModesComponentSpec {
+  }
+
+  let component: SimilarModesComponentSpec;
+  let fixture: ComponentFixture<SimilarModesComponentSpec>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SimilarModesComponent ]
+      declarations: [SimilarModesComponentSpec],
+      imports: [ SimilarModesModule ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SimilarModesComponent);
+    fixture = TestBed.createComponent(SimilarModesComponentSpec);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

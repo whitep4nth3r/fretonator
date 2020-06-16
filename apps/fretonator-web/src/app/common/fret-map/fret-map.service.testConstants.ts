@@ -1209,3 +1209,42 @@ export const cIonianChordMap = [
     type: ChordType.diminished,
   },
 ]
+
+export const cIonianSimilarModes = [
+  {
+    noteDisplayName: 'D',
+    note: 'd',
+    mode: 'dorian',
+    noteExtender: 'natural'
+  },
+  {
+    noteDisplayName: 'E',
+    note: 'e',
+    mode: 'phrygian',
+    noteExtender: 'natural'
+  },
+  {
+    noteDisplayName: 'F',
+    note: 'f',
+    mode: 'lydian',
+    noteExtender: 'natural'
+  },
+  {
+    noteDisplayName: 'G',
+    note: 'g',
+    mode: 'mixolydian',
+    noteExtender: 'natural'
+  },
+  {
+    noteDisplayName: 'A',
+    note: 'a',
+    mode: 'aolian',
+    noteExtender: 'natural'
+  },
+  {
+    noteDisplayName: 'B',
+    note: 'b',
+    mode: 'locrian',
+    noteExtender: 'natural'
+  }
+]
