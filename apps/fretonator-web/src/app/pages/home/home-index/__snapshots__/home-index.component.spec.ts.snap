@@ -174,11 +174,11 @@ exports[`HomeIndexComponent should create 1`] = `
               
               <app-chip
                 rounded="true"
-                selectedcolor="grey"
+                selectedcolor="muted"
               >
                 <a
                   aria-label="C Ionian (Major)"
-                  class="chip chip--active chip--round chip--grey"
+                  class="chip chip--active chip--round chip--muted"
                   href="/c/natural/ionian"
                 >
                   C
@@ -187,11 +187,11 @@ exports[`HomeIndexComponent should create 1`] = `
               
               <app-chip
                 rounded="true"
-                selectedcolor="grey"
+                selectedcolor="muted"
               >
                 <a
                   aria-label="C sharp Ionian (Major)"
-                  class="chip chip--round chip--grey"
+                  class="chip chip--round chip--muted"
                   href="/c/sharp/ionian"
                 >
                   C# 
@@ -340,6 +340,20 @@ exports[`HomeIndexComponent should create 1`] = `
         <app-fretonator>
           
           <div
+            class="fretboard__toggle"
+          >
+            <button
+              class="fretboard__toggleButton fretboard__toggleButton--left fretboard__toggleButton--active"
+            >
+              12 frets 
+            </button>
+            <button
+              class="fretboard__toggleButton fretboard__toggleButton--right"
+            >
+              24 frets 
+            </button>
+          </div>
+          <div
             class="arrowHint"
           >
             <span
@@ -351,7 +365,6 @@ exports[`HomeIndexComponent should create 1`] = `
           >
             <div
               class="fretboard"
-              data-fretboard=""
             >
               
               
