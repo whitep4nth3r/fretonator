@@ -61,8 +61,6 @@
   text-transform: uppercase;
   font-family: var(--font-family-main);
   font-size: pxToRem(18);
-  margin-left: auto;
-  margin-right: auto;
   display: inline-block;
   background-color: $backgroundColor;
   padding: pxToRem($grid-unit) pxToRem($grid-unit * 2);

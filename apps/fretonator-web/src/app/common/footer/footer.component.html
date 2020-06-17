@@ -1,47 +1,73 @@
 <footer class="footer">
-  <h6 class="footer__creditsTitle">Fretonator is open source</h6>
-  <p class="footer__thanksCopy">
-    Thank you to the following generous contributors:
-  </p>
-  <ul class="footer__creditsList">
-    <li class="footer__creditsListItem">
+  <div class="footer__inner">
+
+    <div class="footer__leftColumn">
+
+      <h6 class="footer__sectionTitle">
+        Fretonator is open source
+      </h6>
+      <p class="footer__copy">
+        Thank you to the following generous contributors:
+      </p>
+      <ul class="footer__list">
+        <li class="footer__listItem">
+          <a
+            href="http://drozar.io"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            class="footer__listItemLink"
+          >
+            Jacob D'Rozario
+          </a>
+          - design & UX
+        </li>
+        <li class="footer__listItem">
+          <a
+            href="https://github.com/geometricpanda"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            class="footer__listItemLink"
+          >Jim Drury</a
+          >
+          - all things Angular
+        </li>
+        <li class="footer__listItem">
+          <a
+            href="https://ell.io.tt/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            class="footer__listItemLink"
+          >Elliot Brooks</a
+          >
+          - audio playback
+        </li>
+      </ul>
       <a
-        href="http://drozar.io"
+        class="footer__bigButton"
+        href="https://github.com/ishythefishy/fretonator"
         rel="nofollow noopener noreferrer"
         target="_blank"
-        class="footer__creditsListItemLink"
-      >
-        Jacob D'Rozario
+      >View on GitHub</a>
+    </div>
+
+    <div class="footer__rightColumn">
+      <h6 class="footer__sectionTitle">Who made this?</h6>
+      <p class="footer__copy footer__copy--right">
+        Hey there, I'm Salma.
+      </p>
+      <p class="footer__copy footer__copy--right">I'm a musician and software engineer in Manchester, UK. My goal with
+        the Fretonator is to crowdsource feedback and ideas to create the ultimate guitar learning hub that's simple,
+        easy and enjoyable to use.</p>
+      <p class="footer__copy footer__copy--right">Feedback/request form coming soon.</p>
+      <p class="footer__copy footer__copy--right">The Fretonator is free and always will be!</p>
+      <a href="https://www.buymeacoffee.com/fretonator"
+         rel="nofollow noopener noreferrer"
+         target="_blank"
+         class="footer__smallButton">
+        Buy me a coffee
       </a>
-      - design & UX
-    </li>
-    <li class="footer__creditsListItem">
-      <a
-        href="https://github.com/geometricpanda"
-        rel="nofollow noopener noreferrer"
-        target="_blank"
-        class="footer__creditsListItemLink"
-        >Jim Drury</a
-      >
-      - all things Angular
-    </li>
-    <li class="footer__creditsListItem">
-      <a
-        href="https://ell.io.tt/"
-        rel="nofollow noopener noreferrer"
-        target="_blank"
-        class="footer__creditsListItemLink"
-        >Elliot Brooks</a
-      >
-      - audio playback
-    </li>
-  </ul>
-  <a
-    class="footer__viewGithub"
-    href="https://github.com/ishythefishy/fretonator"
-    rel="nofollow noopener noreferrer"
-    target="_blank"
-    >View on GitHub</a
-  >
+    </div>
+  </div>
+
   <p class="footer__copyright">&copy; {{ date | date: 'yyyy' }} Fretonator</p>
 </footer>

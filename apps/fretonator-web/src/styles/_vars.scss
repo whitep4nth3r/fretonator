@@ -17,12 +17,12 @@ $mode_selector_max_width: 800px !default;
 $infoContainer_info_row_height: pxToRem($grid-unit * 8);
 
 $hamburger_padding-x: 16px;
-$hamburger_padding-y: 16px;
+$hamburger_padding-y: 24px;
 $hamburger_layer-width: 32px;
 $hamburger_layer-height: 3px;
 $hamburger_layer-spacing: 6px;
 $hamburger_layer-color: #fecdaa;
 $hamburger_layer-border-radius: 2px;
-$hamburger_hover-opacity: 0.7;
+$hamburger_hover-opacity: 0.9;
 $hamburger_active-layer-color: $hamburger_layer-color;
 $hamburger_active-hover-opacity: $hamburger_hover-opacity;
