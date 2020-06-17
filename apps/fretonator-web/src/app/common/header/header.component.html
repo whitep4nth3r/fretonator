@@ -1,23 +1,31 @@
 <header class="header">
-  <a
-    [routerLink]="['/']"
-    class="header__siteLogo"
-    aria-label="Navigate to home"
-  >
-    <app-logo-with-text></app-logo-with-text>
-  </a>
-
-  <button class="hamburger"
-          [class.is__open]="isMenuVisible"
-          (click)="toggleMenu()"
-          [attr.aria-expanded]="isMenuVisible"
-          aria-label="Menu Toggle"
-          aria-controls="headerLinks"
-          type="button">
+  <div class="header__topRow">
+    <button class="hamburger"
+            [class.is__open]="isMenuVisible"
+            (click)="toggleMenu()"
+            [attr.aria-expanded]="isMenuVisible"
+            aria-label="Menu Toggle"
+            aria-controls="headerLinks"
+            type="button">
     <span class="hamburger__box">
       <span class="hamburger__inner"></span>
     </span>
-  </button>
+    </button>
+
+    <a
+      [routerLink]="['/']"
+      class="header__siteLogo"
+      aria-label="Navigate to home"
+    >
+      <span class="header__siteLogo__text">
+        <app-logo-with-text></app-logo-with-text>
+      </span>
+      <span class="header__siteLogo__noText">
+        <app-logo-no-text></app-logo-no-text>
+      </span>
+    </a>
+
+  </div>
 
   <ul class="header__links"
       id="headerLinks"
