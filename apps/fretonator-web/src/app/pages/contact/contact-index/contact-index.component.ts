@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./contact-index.component.scss']
 })
 export class ContactIndexComponent implements OnInit {
-  formName: 'contact';
+  formName = 'Contact';
   formSubmitError = false;
   form = new FormGroup({
     honeypot: new FormControl('', [
