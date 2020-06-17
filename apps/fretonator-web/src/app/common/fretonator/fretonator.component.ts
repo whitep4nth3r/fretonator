@@ -33,7 +33,6 @@ export class FretonatorComponent {
   fretMode = FretMode.twelve;
   frets = FretReturner[this.fretMode];
 
-
   get fretModes() {
     return FretMode;
   }

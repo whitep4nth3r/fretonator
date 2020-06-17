@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Mode, NoteExtenderString, NoteExtenderSymbol, NoteSymbol } from '../../../util/types';
 import { ModeSelectorObjects, Octave } from '../../../util/constants';
 import { Meta, Title } from '@angular/platform-browser';
@@ -6,6 +6,7 @@ import { AbstractDataService } from '../../../common/abstract-data/abstract-data
 import { ActivatedRoute } from '@angular/router';
 import { FretMapService } from '../../../common/fret-map/fret-map.service';
 import { MetaService } from '../../../common/meta/meta.service';
+import { GlobalService } from '../../../global.service';
 
 @Component({
   selector: 'app-home-index',
@@ -13,7 +14,8 @@ import { MetaService } from '../../../common/meta/meta.service';
   styleUrls: ['./home-index.component.scss']
 })
 
-export class HomeIndexComponent implements OnInit {
+export class HomeIndexComponent implements OnInit, AfterViewInit {
+  @ViewChild('scrollTarget') scrollTarget: ElementRef<HTMLElement>;
   note: NoteSymbol = NoteSymbol.c;
   noteExtender: NoteExtenderSymbol;
   noteExtenderString: NoteExtenderString;
@@ -28,7 +30,8 @@ export class HomeIndexComponent implements OnInit {
     private localStorage: AbstractDataService,
     private activatedRoute: ActivatedRoute,
     private fretMapService: FretMapService,
-    private metaService: MetaService
+    private metaService: MetaService,
+    private globalService: GlobalService
   ) {
   }
 
@@ -48,6 +51,10 @@ export class HomeIndexComponent implements OnInit {
       default:
         this.showHowTo = true;
     }
+  }
+
+  ngAfterViewInit(): void {
+    this.globalService.setScrollTarget(this.scrollTarget.nativeElement);
   }
 
   onRouteChange() {
@@ -89,7 +96,7 @@ export class HomeIndexComponent implements OnInit {
       name: 'description',
       content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)
     });
-    
+
     this.meta.updateTag({
       name: 'twitter:description',
       content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)

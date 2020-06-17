@@ -1417,9 +1417,7 @@ exports[`HomeIndexComponent should create 1`] = `
                       class="chips"
                     >
                       
-                      <app-chip
-                        selectedcolor="default"
-                      >
+                      <app-chip>
                         <a
                           aria-label="D Dorian"
                           class="chip"
@@ -1428,9 +1426,7 @@ exports[`HomeIndexComponent should create 1`] = `
                           D Dorian
                         </a>
                       </app-chip>
-                      <app-chip
-                        selectedcolor="default"
-                      >
+                      <app-chip>
                         <a
                           aria-label="E Phrygian"
                           class="chip"
@@ -1439,9 +1435,7 @@ exports[`HomeIndexComponent should create 1`] = `
                           E Phrygian
                         </a>
                       </app-chip>
-                      <app-chip
-                        selectedcolor="default"
-                      >
+                      <app-chip>
                         <a
                           aria-label="F Lydian"
                           class="chip"
@@ -1450,9 +1444,7 @@ exports[`HomeIndexComponent should create 1`] = `
                           F Lydian
                         </a>
                       </app-chip>
-                      <app-chip
-                        selectedcolor="default"
-                      >
+                      <app-chip>
                         <a
                           aria-label="G Mixolydian"
                           class="chip"
@@ -1461,9 +1453,7 @@ exports[`HomeIndexComponent should create 1`] = `
                           G Mixolydian
                         </a>
                       </app-chip>
-                      <app-chip
-                        selectedcolor="default"
-                      >
+                      <app-chip>
                         <a
                           aria-label="A Aolian (Minor)"
                           class="chip"
@@ -1472,9 +1462,7 @@ exports[`HomeIndexComponent should create 1`] = `
                           A Aolian
                         </a>
                       </app-chip>
-                      <app-chip
-                        selectedcolor="default"
-                      >
+                      <app-chip>
                         <a
                           aria-label="B Locrian"
                           class="chip"
