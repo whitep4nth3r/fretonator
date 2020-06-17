@@ -9,4 +9,5 @@ import { SimilarModes } from '../../../util/types';
 export class SimilarModesComponent {
   @Input() similarModes: SimilarModes;
   @Input() modeDisplayString: string;
+  @Input() isTheoretical: boolean;
 }
