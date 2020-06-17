@@ -7,6 +7,7 @@
   background-color: var(--black);
   box-sizing: border-box;
   padding: pxToRem($grid-unit * 6);
+  border-top: pxToRem($grid-unit) solid var(--peach);
 }
 
 .footer__inner {
@@ -47,7 +48,7 @@
   @media screen and (min-width: $screen-med) {
     justify-content: flex-end;
     align-items: flex-end;
-    flex-basis: 40%;
+    flex-basis: 35%;
   }
 }
 
