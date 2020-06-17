@@ -446,6 +446,65 @@ export const cIonianMode: ModeMap = [
   },
 ];
 
+export const cLydianMode: ModeMap = [
+  {
+    name: 'c',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'C'
+  },
+  {
+    name: 'd',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'D'
+  },
+  {
+    name: 'e',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'E'
+  },
+  {
+    name: 'f',
+    sharp: true,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'F'
+  },
+  {
+    name: 'g',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'G'
+  },
+  {
+    name: 'a',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'A'
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'B'
+  },
+];
+
 export const dDorianMode: ModeMap = [
   {
     name: 'd',
@@ -1245,6 +1304,45 @@ export const cIonianSimilarModes = [
     noteDisplayName: 'B',
     note: 'b',
     mode: 'locrian',
+    noteExtender: 'natural'
+  }
+]
+
+export const cLydianSimilarModes = [
+  {
+    noteDisplayName: 'D',
+    note: 'd',
+    mode: 'mixolydian',
+    noteExtender: 'natural'
+  },
+  {
+    noteDisplayName: 'E',
+    note: 'e',
+    mode: 'aolian',
+    noteExtender: 'natural'
+  },
+  {
+    noteDisplayName: 'F',
+    note: 'f',
+    mode: 'locrian',
+    noteExtender: 'sharp'
+  },
+  {
+    noteDisplayName: 'G',
+    note: 'g',
+    mode: 'ionian',
+    noteExtender: 'natural'
+  },
+  {
+    noteDisplayName: 'A',
+    note: 'a',
+    mode: 'dorian',
+    noteExtender: 'natural'
+  },
+  {
+    noteDisplayName: 'B',
+    note: 'b',
+    mode: 'phrygian',
     noteExtender: 'natural'
   }
 ]

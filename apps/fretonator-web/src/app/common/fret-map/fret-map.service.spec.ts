@@ -13,6 +13,8 @@ import {
   cIonianFretMappings,
   cIonianMode,
   cIonianSimilarModes,
+  cLydianMode,
+  cLydianSimilarModes,
   cMajorPentatonicChordMap,
   cMinorPentatonicChordMap,
   cPhrygianMode,
@@ -1406,13 +1408,16 @@ describe('FretMapService:getSimilarModes', () => {
 
   it('returns correctly for an input of c natural ionian', () => {
     const result = service.getSimilarModes(cIonianMode, Mode.ionian);
-
     expect(result).toEqual(cIonianSimilarModes);
+  });
+
+  it('returns correctly for an input of c natural lydian', () => {
+    const result = service.getSimilarModes(cLydianMode, Mode.lydian);
+    expect(result).toEqual(cLydianSimilarModes);
   });
 
   it('returns an empty array for a mode not in the StandardModePatterns array', () => {
     const result = service.getSimilarModes(fSharpHarmonicMinor, Mode.harmonicMinor);
-
     expect(result).toEqual([]);
   });
 });
