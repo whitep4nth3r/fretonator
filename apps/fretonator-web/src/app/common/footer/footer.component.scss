@@ -49,16 +49,42 @@
 }
 
 .footer__copyright {
-  color: var(--offwhite);
+  color: var(--grey);
   font-size: pxToRem(12);
   letter-spacing: var(--letter-spacing-display);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   display: block;
+  margin-top: pxToRem($grid-unit * 4);
   margin-bottom: pxToRem($grid-unit * 2);
 }
 
 .footer__viewGithub {
   @include hard_button_base();
   margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.footer__support {
+  @include chip_button_base();
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  margin-top: pxToRem($grid-unit * 4);
+  padding: pxToRem($grid-unit / 2) pxToRem($grid-unit * 2);
+  color: var(--yellow);
+  border-color: var(--yellow);
+
+  &:focus {
+    border-color: transparent;
+  }
+}
+
+.footer__support__svg {
+  height: pxToRem(24);
+  width: pxToRem(24);
+  display: inline-flex;
 }

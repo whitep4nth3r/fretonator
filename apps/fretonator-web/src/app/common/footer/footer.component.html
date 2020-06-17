@@ -21,7 +21,7 @@
         rel="nofollow noopener noreferrer"
         target="_blank"
         class="footer__creditsListItemLink"
-        >Jim Drury</a
+      >Jim Drury</a
       >
       - all things Angular
     </li>
@@ -31,7 +31,7 @@
         rel="nofollow noopener noreferrer"
         target="_blank"
         class="footer__creditsListItemLink"
-        >Elliot Brooks</a
+      >Elliot Brooks</a
       >
       - audio playback
     </li>
@@ -41,7 +41,18 @@
     href="https://github.com/ishythefishy/fretonator"
     rel="nofollow noopener noreferrer"
     target="_blank"
-    >View on GitHub</a
-  >
+  >View on GitHub</a>
+
+  <a href="https://www.buymeacoffee.com/fretonator"
+     rel="nofollow noopener noreferrer"
+     target="_blank"
+     class="footer__support">
+    <span class="footer__support__svg">
+      <app-coffee-svg></app-coffee-svg>
+    </span>
+    Buy me a coffee
+  </a>
+
   <p class="footer__copyright">&copy; {{ date | date: 'yyyy' }} Fretonator</p>
+
 </footer>

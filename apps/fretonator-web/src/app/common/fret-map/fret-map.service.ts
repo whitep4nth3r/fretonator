@@ -9,7 +9,6 @@ import {
   NoteExtenderString,
   NoteObject,
   NoteSymbol,
-  SimilarMode,
   SimilarModes
 } from '../../util/types';
 import {

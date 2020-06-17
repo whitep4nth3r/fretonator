@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Mode, ModeMap, Scale } from '../../../util/types';
+import { Mode, ModeMap } from '../../../util/types';
 import { NotePlaybackService } from '../../playback/note-playback.service';
 
 enum ScaleDegreesToggleText {

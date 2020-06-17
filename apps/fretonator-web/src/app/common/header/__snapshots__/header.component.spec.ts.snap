@@ -66,6 +66,18 @@ exports[`HeaderComponent should match snapshot 1`] = `
           About
         </a>
       </li>
+      <li
+        class="header__linksItem"
+      >
+        <a
+          class="header__linksItemLink"
+          href="https://www.buymeacoffee.com/fretonator"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >
+          Support
+        </a>
+      </li>
     </ul>
   </header>
 </app-header>
