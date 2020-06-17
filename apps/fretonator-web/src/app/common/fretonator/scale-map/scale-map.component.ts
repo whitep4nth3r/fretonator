@@ -22,7 +22,6 @@ export class ScaleMapComponent {
   @Input() note: string;
   @Input() noteExtenderString: string;
   @Input() modeMap: ModeMap;
-  @Input() scale: Scale;
   @Input() isTheoretical: boolean;
   @Input() modeDisplayString: string;
 

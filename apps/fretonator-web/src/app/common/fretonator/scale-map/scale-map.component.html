@@ -61,12 +61,13 @@
     one double flat (𝄫) or double sharp (x).</p>
   <p class="infoBlock__copy">{{modeDisplayString}} is a theoretical scale and looks unnecessarily complicated. We can
     make things simpler!</p>
-  <p class="infoBlock__copy">Switch to the enharmonic equivalent note of {{scale[0] | getEnharmonicEquivalent }} to make
+  <p class="infoBlock__copy">Switch to the enharmonic equivalent note of {{modeMap[0].displayName | getEnharmonicEquivalent }} to make
     the notes easier to read. (It'll sound exactly the same!)</p>
   <a class="actionButton"
      (click)="toggleTheoreticalScaleInfo()"
      [routerLink]="note | getEnharmonicRouterLink: noteExtenderString: mode"
-  >Switch to {{scale[0] | getEnharmonicEquivalent }}</a>
+  >Switch to {{modeMap[0].displayName | getEnharmonicEquivalent }}</a>
+
 </div>
 
 <div class="infoBlock infoBlock--scaleDegrees"
