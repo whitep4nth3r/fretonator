@@ -152,6 +152,9 @@
   @media screen and (min-width: $screen-sm) {
     margin-right: pxToRem($grid-unit * 2);
   }
+
+  display: none;
+
 }
 
 .button__playScale__svg {
