@@ -1,0 +1,5 @@
+@import '../../../../styles/mixins';
+
+.form__submit {
+  @include hard_button_base();
+}

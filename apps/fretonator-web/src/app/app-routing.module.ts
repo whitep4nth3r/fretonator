@@ -11,12 +11,17 @@ const about: Route = {
   loadChildren: () => import('./pages/about/about.module').then((mod) => mod.AboutModule),
 };
 
+const contact: Route = {
+  path: 'contact',
+  loadChildren: () => import('./pages/contact/contact.module').then((mod) => mod.ContactModule),
+};
+
 const notFound: Route = {
   path: '**',
   loadChildren: () => import('./pages/not-found/not-found.module').then((mod) => mod.NotFoundModule),
 };
 
-const routes: Routes = [home, about, notFound];
+const routes: Routes = [home, about, contact, notFound];
 
 @NgModule({
   imports: [

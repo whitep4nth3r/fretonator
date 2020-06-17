@@ -1,0 +1,54 @@
+<form [name]="formName"
+      data-netlify="true"
+      method="POST"
+      action="/contact/success"
+      netlify-honeypot="bot-field"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" name="Name" type="text" formControlName="name">
+    <ng-container *ngIf="name.touched">
+      <p *ngIf="name.errors?.required">Enter your name, yo!</p>
+      <p *ngIf="name.errors?.pattern">Please enter a valid name!</p>
+      <p *ngIf="name.errors?.maxlength">Come on, your name isn't actually {{name.errors?.maxlength.actualLength}}
+        characters long!</p>
+      <pre>{{name.errors | json}}</pre>
+    </ng-container>
+  </div>
+  <div>
+    <label for="email">
+      Email
+    </label>
+    <input id="email" name="Email" type="email" formControlName="email">
+    <ng-container *ngIf="email.touched">
+      <p *ngIf="email.errors?.email">An email address isn't required, but if you'd like me to reply to your message,
+        please enter a valid email address!</p>
+      <pre>{{email.errors | json}}</pre>
+    </ng-container>
+
+  </div>
+  <div>
+    <label for="message">
+      Message
+    </label>
+    <textarea id="message" name="Message" formControlName="message"></textarea>
+    <ng-container *ngIf="message.touched">
+      <p *ngIf="message.errors?.required">Go on, give me some feedback!</p>
+      <p *ngIf="message.errors?.minlength">Go on, give me some feedback!</p>
+      <pre>{{message.errors | json}}</pre>
+    </ng-container>
+
+    <div>
+      <label for="bot-field">Don't fill this out if you're human!</label>
+      <input type="text" id="bot-field" name="bot-field" formControlName="honeypot">
+      <pre>{{honeypot.errors | json}}</pre>
+    </div>
+
+    <input type="submit" class="form__submit" formControlName="submit" aria-label="Submit Form"/>
+    <p *ngIf="formSubmitError">Oh no! Didn't work.</p>
+  </div>
+
+</form>
