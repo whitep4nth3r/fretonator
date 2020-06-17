@@ -435,14 +435,14 @@ export class FretMapService {
     }
 
     const similarModes = modeMap
-      .map((noteObject, index) => {
-        return {
+      .map((noteObject, index) => (
+        {
           noteDisplayName: noteObject.displayName,
           note: noteObject.name,
           mode: StandardModePatterns[firstModeInPattern + index],
           noteExtender: this.getNoteExtenderStringFromNoteObject(noteObject)
-        } as unknown as SimilarMode;
-      });
+        }
+      ));
 
     similarModes.shift();
     return similarModes;
