@@ -230,4 +230,6 @@
 
 .actionButton {
   @include hard_button_base();
+  margin-left: auto;
+  margin-right: auto;
 }
