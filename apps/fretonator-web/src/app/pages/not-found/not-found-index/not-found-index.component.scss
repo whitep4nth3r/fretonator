@@ -21,8 +21,6 @@
   @include font_large();
   color: var(--offwhite);
   text-align: center;
-  //margin-top: pxToRem($grid-unit * 8);
-  //margin-bottom: pxToRem($grid-unit * 2);
 }
 
 .notFound__subtitle {

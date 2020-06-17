@@ -47,21 +47,21 @@
                   [noteExtender]="'flat'"
                   [mode]="mode"
                   rounded="true"
-                  selectedColor="grey">{{note | titlecase}}♭
+                  selectedColor="muted">{{note | titlecase}}♭
         </app-chip>
 
         <app-chip [note]="note"
                   [noteExtender]="'natural'"
                   [mode]="mode"
                   rounded="true"
-                  selectedColor="grey">{{note | titlecase}}</app-chip>
+                  selectedColor="muted">{{note | titlecase}}</app-chip>
 
         <app-chip *ngIf="!(note === 'b' || note === 'e')"
                   [note]="note"
                   [noteExtender]="'sharp'"
                   [mode]="mode"
                   rounded="true"
-                  selectedColor="grey">{{note | titlecase}}#
+                  selectedColor="muted">{{note | titlecase}}#
         </app-chip>
       </app-chips>
     </div>
@@ -79,7 +79,7 @@
 
     </div>
 
-    <app-fretonator [scale]="note | symbolToNoteObj: noteExtender | getScaleFromModeMap: mode"
+    <app-fretonator [modeMap]="note | symbolToNoteObj: noteExtender | generateModeMap: mode"
                     [fretMap]="note | symbolToNoteObj: noteExtender | generateFretMap: mode"
                     [intervalMap]="mode | getIntervalPatternFromMode"
                     [chordMap]="note | symbolToNoteObj: noteExtender | getChordMap: mode"

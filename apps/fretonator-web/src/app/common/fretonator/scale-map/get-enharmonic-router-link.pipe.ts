@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { Enharmonics } from '../../../util/constants';
 
 @Pipe({
@@ -25,5 +24,4 @@ export class GetEnharmonicRouterLinkPipe implements PipeTransform {
 
     return ['/', newNote, newNoteExtender, mode];
   }
-
 }

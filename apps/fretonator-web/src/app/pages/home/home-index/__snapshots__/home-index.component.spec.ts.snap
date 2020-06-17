@@ -174,11 +174,11 @@ exports[`HomeIndexComponent should create 1`] = `
               
               <app-chip
                 rounded="true"
-                selectedcolor="grey"
+                selectedcolor="muted"
               >
                 <a
                   aria-label="C Ionian (Major)"
-                  class="chip chip--active chip--round chip--grey"
+                  class="chip chip--active chip--round chip--muted"
                   href="/c/natural/ionian"
                 >
                   C
@@ -187,11 +187,11 @@ exports[`HomeIndexComponent should create 1`] = `
               
               <app-chip
                 rounded="true"
-                selectedcolor="grey"
+                selectedcolor="muted"
               >
                 <a
                   aria-label="C sharp Ionian (Major)"
-                  class="chip chip--round chip--grey"
+                  class="chip chip--round chip--muted"
                   href="/c/sharp/ionian"
                 >
                   C# 
@@ -340,6 +340,20 @@ exports[`HomeIndexComponent should create 1`] = `
         <app-fretonator>
           
           <div
+            class="fretboard__toggle"
+          >
+            <button
+              class="fretboard__toggleButton fretboard__toggleButton--twelve fretboard__toggleButton--active"
+            >
+              12 frets 
+            </button>
+            <button
+              class="fretboard__toggleButton fretboard__toggleButton--twentyFour"
+            >
+              24 frets 
+            </button>
+          </div>
+          <div
             class="arrowHint"
           >
             <span
@@ -351,7 +365,6 @@ exports[`HomeIndexComponent should create 1`] = `
           >
             <div
               class="fretboard"
-              data-fretboard=""
             >
               
               
@@ -1069,70 +1082,73 @@ exports[`HomeIndexComponent should create 1`] = `
                       class="scaleDisplay__note"
                     >
                        C 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        D 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        E 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        F 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        G 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        A 
-                      
-                      <span>
-                         - 
-                      </span>
                     </h5>
                     
                     <h5
                       class="scaleDisplay__note"
                     >
                        B 
-                      
                     </h5>
                   </div>
-                  
+                  <div
+                    class="buttonRow"
+                  >
+                    <button
+                      aria-label="Play this scale"
+                      class="button__playScale"
+                      type="button"
+                    >
+                      <span
+                        class="button__playScale__svg"
+                      >
+                        <app-play-svg>
+                          <svg
+                            aria-hidden="true"
+                            class="svg"
+                            role="img"
+                            viewBox="0 0 512 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"
+                            />
+                          </svg>
+                        </app-play-svg>
+                      </span>
+                       Play scale 
+                    </button>
+                    
+                  </div>
                 </div>
                 
                 <div
@@ -1164,7 +1180,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </div>
                   <button
                     aria-label="Scale Degrees Info Toggle"
-                    class="button__infoToggle"
+                    class="button__infoToggle button__infoToggle--scaleDegrees"
                     type="button"
                   >
                     What is this? 
@@ -1378,6 +1394,114 @@ exports[`HomeIndexComponent should create 1`] = `
                 </div>
               </div>
             </app-chord-map>
+            <app-similar-modes>
+              
+              <div
+                class="similarModes"
+              >
+                <h4
+                  class="similarModes__title"
+                >
+                  Did you know?
+                </h4>
+                <p
+                  class="similarModes__copy"
+                >
+                  If you know the patterns of C Ionian (Major) on the fretboard, you can transfer those shapes to the modes below.
+                </p>
+                <div
+                  class="chipsContainer"
+                >
+                  <app-chips>
+                    <div
+                      class="chips"
+                    >
+                      
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="D Dorian"
+                          class="chip"
+                          href="/d/natural/dorian"
+                        >
+                          D Dorian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="E Phrygian"
+                          class="chip"
+                          href="/e/natural/phrygian"
+                        >
+                          E Phrygian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="F Lydian"
+                          class="chip"
+                          href="/f/natural/lydian"
+                        >
+                          F Lydian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="G Mixolydian"
+                          class="chip"
+                          href="/g/natural/mixolydian"
+                        >
+                          G Mixolydian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="A Aolian (Minor)"
+                          class="chip"
+                          href="/a/natural/aolian"
+                        >
+                          A Aolian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="B Locrian"
+                          class="chip"
+                          href="/b/natural/locrian"
+                        >
+                          B Locrian
+                        </a>
+                      </app-chip>
+                    </div>
+                  </app-chips>
+                </div>
+                <p
+                  class="similarModes__copy"
+                >
+                  There are only 7 patterns you need to learn. Once you've memorised those patterns, you can play any of the 7 standard modes 
+                  <em>
+                    (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aolian, Locrian
+                  </em>
+                  ) from any starting note, anywhere on the fretboard.
+                </p>
+                <p
+                  class="similarModes__copy"
+                >
+                  These patterns always appear in the same order, one after the other.
+                </p>
+              </div>
+            </app-similar-modes>
           </div>
         </app-fretonator>
         

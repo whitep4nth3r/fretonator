@@ -9,7 +9,8 @@
     "build": "ng build",
     "test": "ng test",
     "test:coverage": "npm run affected:test -- --all --code-coverage",
-    "test:update": "nx test —-updateSnapshot",
+    "test:update": "nx test -- --updateSnapshot",
+    "test:watch": "npm run affected:test -- --watch",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
     "affected:apps": "nx affected:apps",
@@ -56,7 +57,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.901.0",
-    "@angular/cli": "9.1.0",
+    "@angular/cli": "^9.1.8",
     "@angular/compiler-cli": "^9.1.0",
     "@angular/language-service": "^9.1.0",
     "@nguniversal/builders": "^9.1.1",

@@ -4,20 +4,23 @@
 
 :root {
   --background-color-base: #f9f9f9;
+  --background-color-light: #ffffff;
+  --foreground-color-base: #1c1c1c;
   --font-family-main: "Montserrat", sans-serif;
 
   --string-color: #1c1c1c;
   --string-label-color: #1c1c1c;
-
+  --nut-color: #1a1a1a;
   --fret-color: rgba(28, 28, 28, 0.2);
+
   --fret-width-base: 2px;
   --fretboard-height: 100px;
   --string-height-base: 48px;
-  --nut-color: #1a1a1a;
 
   --note-color: #fafac6;
   --note-background: #1c1c1c;
   --note-height: 36px;
+  --note-height-hover: 39px;
 
   --note-bg-tonic: #fecdaa;
   --note-color-tonic: #1c1c1c;
@@ -34,6 +37,22 @@
   --border-radius-button: 0;
 
   --border-width-button: 2px;
+
+  --chip-background-color: #ffffff;
+  --chip-foreground-color: #1c1c1c;
+  --chip-border-color: #1c1c1c;
+
+  --chip-background-color-active: #1c1c1c;
+  --chip-foreground-color-active: #f9f9f9;
+  --chip-border-color-active: #1c1c1c;
+
+  --chip-background-color-muted: #ffffff;
+  --chip-foreground-color-muted: #474350;
+  --chip-border-color-muted: #474350;;
+
+  --chip-foreground-color-muted-active: #f9f9f9;
+  --chip-background-color-muted-active: #474350;
+  --chip-border-color-muted-active: #474350;
 
   --black: #1c1c1c;
   --white: #ffffff;

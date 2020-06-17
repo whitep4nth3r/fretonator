@@ -15,13 +15,26 @@
   </ng-container>
 </ng-template>
 
+<div class="fretboard__toggle">
+  <button class="fretboard__toggleButton fretboard__toggleButton--twelve"
+          [class.fretboard__toggleButton--active]="fretMode === fretModes.twelve"
+          (click)="setFretMode(fretModes.twelve)">12 frets
+  </button>
+  <button class="fretboard__toggleButton fretboard__toggleButton--twentyFour"
+          [class.fretboard__toggleButton--active]="fretMode === fretModes.twentyFour"
+          (click)="setFretMode(fretModes.twentyFour)">24 frets
+  </button>
+</div>
+
 <div class="arrowHint">
   <span class="arrowHint__arrow"></span>
 </div>
 
-<div class="fretboard__container">
+<div class="fretboard__container"
+     [class.fretboard__wide]="fretMode === fretModes.twentyFour">
 
-  <div data-fretboard class="fretboard">
+  <div class="fretboard"
+       [class.fretboard__24]="fretMode === fretModes.twentyFour">
     <ng-container
       [ngTemplateOutlet]="string"
       [ngTemplateOutletContext]="{ stringName: 'e', string: 'E' }"
@@ -63,8 +76,8 @@
 
 <div class="infoContainer">
   <app-scale-map [mode]="mode"
-                 [scale]="scale"
-                 [isTheoretical]="scale | isTheoreticalScale"
+                 [modeMap]="modeMap"
+                 [isTheoretical]="modeMap | isTheoreticalScale"
                  [modeDisplayString]="modeDisplayString"
                  [note]="note"
                  [noteExtenderString]="noteExtenderString"></app-scale-map>
@@ -72,4 +85,11 @@
   <app-interval-map [intervalMap]="intervalMap"></app-interval-map>
 
   <app-chord-map [chordMap]="chordMap"></app-chord-map>
+
+  <app-similar-modes [modeDisplayString]="modeDisplayString"
+                     [similarModes]="modeMap | getSimilarModes : mode"
+                     [isTheoretical]="modeMap | isTheoreticalScale">
+
+  </app-similar-modes>
+
 </div>

@@ -8,7 +8,9 @@ import {
   ModeMap,
   NoteExtenderString,
   NoteObject,
-  NoteSymbol
+  NoteSymbol,
+  SimilarMode,
+  SimilarModes
 } from '../../util/types';
 import {
   ChordPatterns,
@@ -16,7 +18,8 @@ import {
   ModeSelectorObjects,
   NoteToStringAndFretMap,
   Octave,
-  ScaleDegrees
+  ScaleDegrees,
+  StandardModePatterns
 } from '../../util/constants';
 import { JamTracksData } from '../../data/jamTracks';
 
@@ -88,10 +91,10 @@ export class FretMapService {
       }
     } else {
       return noteName === 'g'
-          ? 'a'
-          : Octave[Octave.indexOf(noteName) + 1];
+        ? 'a'
+        : Octave[Octave.indexOf(noteName) + 1];
     }
-}
+  };
 
   generateNextNote = (currentNote: NoteObject, interval: number): NoteObject => {
     const nextNote = {
@@ -243,16 +246,22 @@ export class FretMapService {
   };
 
   generateMode = (startingNote: NoteObject, mode: string): ModeMap => {
-    let currentNote = startingNote;
-    let newNote;
+    let currentNote = {
+      ...startingNote,
+      displayName: this.convertNoteObjectToHumanReadable(startingNote)
+    };
 
     const newMode: ModeMap = [];
     newMode.push(currentNote);
+
+    let newNote;
 
     const modePattern = ModePatterns[mode];
 
     for (let i = 0; i < modePattern.length - 1; i++) {
       newNote = this.generateNextNote(currentNote, modePattern[i]);
+      newNote.displayName = this.convertNoteObjectToHumanReadable(newNote);
+
       newMode.push(newNote);
       currentNote = newNote;
     }
@@ -322,7 +331,6 @@ export class FretMapService {
 
     const modeMap = origModeMap.map((noteObject, index) => ({
       ...noteObject,
-      displayName: this.convertNoteObjectToHumanReadable(noteObject),
       degree: ScaleDegrees[index]
     }));
 
@@ -403,6 +411,40 @@ export class FretMapService {
       note: this.convertNoteObjectToHumanReadable(noteObject),
       type: chordPattern[index]
     }));
+  };
 
+  getNoteExtenderStringFromNoteObject = (noteObject: NoteObject): NoteExtenderString => {
+    if (this.isSharp(noteObject, noteObject.name)) {
+      return NoteExtenderString.sharp;
+    }
+
+    if (this.isFlat(noteObject, noteObject.name)) {
+      return NoteExtenderString.flat;
+    }
+
+    if (this.isNatural(noteObject, noteObject.name)) {
+      return NoteExtenderString.natural;
+    }
+  };
+
+  getSimilarModes = (modeMap: ModeMap, inputMode: Mode): SimilarModes => {
+    const firstModeInPattern = StandardModePatterns.indexOf(inputMode);
+
+    if (firstModeInPattern === -1) {
+      return [];
+    }
+
+    const similarModes = modeMap
+      .map((noteObject, index) => (
+        {
+          noteDisplayName: noteObject.displayName,
+          note: noteObject.name,
+          mode: StandardModePatterns[firstModeInPattern + index],
+          noteExtender: this.getNoteExtenderStringFromNoteObject(noteObject)
+        }
+      ));
+
+    similarModes.shift();
+    return similarModes;
   };
 }

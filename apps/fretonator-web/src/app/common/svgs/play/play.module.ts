@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SpeakerComponent } from './speaker.component';
+import { PlayComponent } from './play.component';
 
 
 @NgModule({
-  declarations: [SpeakerComponent],
+  declarations: [PlayComponent],
   exports: [
-    SpeakerComponent
+    PlayComponent
   ],
   imports: [
     CommonModule
   ]
 })
-export class SpeakerModule { }
+export class PlayModule { }

@@ -12,6 +12,9 @@ import {
   cIonianChordMap,
   cIonianFretMappings,
   cIonianMode,
+  cIonianSimilarModes,
+  cLydianMode,
+  cLydianSimilarModes,
   cMajorPentatonicChordMap,
   cMinorPentatonicChordMap,
   cPhrygianMode,
@@ -1349,5 +1352,72 @@ describe('FretMapService:convertFretMapConfigurationToDisplayString', () => {
       Mode.minorPentatonic
     );
     expect(result).toBe('A flat Minor Pentatonic');
+  });
+});
+
+describe('FretMapService:getNoteExtenderStringFromNoteObject', () => {
+  let service: FretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(FretMapService);
+  });
+
+  it('returns NoteExtenderString.flat for a flat note', () => {
+    const result = service.getNoteExtenderStringFromNoteObject({
+      name: 'b',
+      flat: true,
+      sharp: false,
+      doubleSharp: false,
+      doubleFlat: false
+    });
+    expect(result).toBe('flat');
+  });
+
+
+  it('returns NoteExtenderString.sharp for a sharp note', () => {
+    const result = service.getNoteExtenderStringFromNoteObject({
+      name: 'd',
+      flat: false,
+      sharp: true,
+      doubleSharp: false,
+      doubleFlat: false
+    });
+    expect(result).toBe('sharp');
+  });
+
+  it('returns NoteExtenderString.natural for a natural note', () => {
+    const result = service.getNoteExtenderStringFromNoteObject({
+      name: 'd',
+      flat: false,
+      sharp: false,
+      doubleSharp: false,
+      doubleFlat: false
+    });
+    expect(result).toBe('natural');
+  });
+});
+
+describe('FretMapService:getSimilarModes', () => {
+  let service: FretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(FretMapService);
+  });
+
+  it('returns correctly for an input of c natural ionian', () => {
+    const result = service.getSimilarModes(cIonianMode, Mode.ionian);
+    expect(result).toEqual(cIonianSimilarModes);
+  });
+
+  it('returns correctly for an input of c natural lydian', () => {
+    const result = service.getSimilarModes(cLydianMode, Mode.lydian);
+    expect(result).toEqual(cLydianSimilarModes);
+  });
+
+  it('returns an empty array for a mode not in the StandardModePatterns array', () => {
+    const result = service.getSimilarModes(fSharpHarmonicMinor, Mode.harmonicMinor);
+    expect(result).toEqual([]);
   });
 });

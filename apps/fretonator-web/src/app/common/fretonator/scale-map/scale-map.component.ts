@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Mode, Scale } from '../../../util/types';
+import { Mode, ModeMap, Scale } from '../../../util/types';
+import { NotePlaybackService } from '../../playback/note-playback.service';
 
 enum ScaleDegreesToggleText {
   hidden = 'What is this?',
@@ -20,7 +21,7 @@ export class ScaleMapComponent {
   @Input() mode: Mode;
   @Input() note: string;
   @Input() noteExtenderString: string;
-  @Input() scale: Scale;
+  @Input() modeMap: ModeMap;
   @Input() isTheoretical: boolean;
   @Input() modeDisplayString: string;
 
@@ -28,6 +29,9 @@ export class ScaleMapComponent {
   showTheoreticalScalesInfo = false;
   scaleDegreesToggleText = ScaleDegreesToggleText.hidden;
   theoreticalScalesToggleText = TheoreticalScalesToggleText.hidden;
+
+  constructor(public playbackService: NotePlaybackService) {
+  }
 
   toggleScaleMapInfo() {
     this.showScaleMapInfo = !this.showScaleMapInfo;
@@ -37,5 +41,9 @@ export class ScaleMapComponent {
   toggleTheoreticalScaleInfo() {
     this.showTheoreticalScalesInfo = !this.showTheoreticalScalesInfo;
     this.theoreticalScalesToggleText = this.showTheoreticalScalesInfo ? TheoreticalScalesToggleText.visible : TheoreticalScalesToggleText.hidden;
+  }
+
+  playScale(modeMap: ModeMap) {
+    this.playbackService.playMode(modeMap);
   }
 }

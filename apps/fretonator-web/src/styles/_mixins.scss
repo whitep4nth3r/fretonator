@@ -39,8 +39,8 @@
   appearance: none;
   border-width: var(--border-width-button);
   border-style: solid;
-  border-color: var(--black);
-  background-color: var(--white);
+  border-color: var(--chip-border-color);
+  background-color: var(--chip-background-color);
   border-radius: var(--border-radius-chip);
   padding: pxToRem(4) pxToRem(8);
   cursor: pointer;
@@ -48,7 +48,7 @@
   font-family: var(--font-family-main);
   font-size: pxToRem(14);
   text-decoration: none;
-  color: var(--black);
+  color: var(--chip-foreground-color);
 
   @include focus_accessible();
 }

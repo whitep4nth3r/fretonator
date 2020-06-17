@@ -3,19 +3,29 @@
     <h4 class="scaleDisplay__title"
         [class.infoHighlight]="isTheoretical"><span *ngIf="isTheoretical">Theoretical &nbsp;</span>Scale</h4>
     <div class="scaleDisplay__notes">
-      <ng-container *ngFor="let scaleNote of scale; let i = index">
+      <ng-container *ngFor="let note of modeMap; let i = index">
         <h5 class="scaleDisplay__note">
-          {{ scaleNote }}
-          <span *ngIf="i < scale.length - 1"> - </span>
+          {{ note.displayName }}
         </h5>
       </ng-container>
     </div>
-    <button *ngIf="isTheoretical"
-            class="button__infoToggle"
-            aria-label="Theoretical Scales Info Toggle"
-            type="button"
-            (click)="toggleTheoreticalScaleInfo()">{{theoreticalScalesToggleText}}
-    </button>
+    <div class="buttonRow">
+      <button class="button__playScale"
+              aria-label="Play this scale"
+              type="button"
+              (click)="playScale(modeMap)">
+        <span class="button__playScale__svg">
+          <app-play-svg></app-play-svg>
+        </span>
+        Play scale
+      </button>
+      <button *ngIf="isTheoretical"
+              class="button__infoToggle button__infoToggle--theoretical"
+              aria-label="Theoretical Scales Info Toggle"
+              type="button"
+              (click)="toggleTheoreticalScaleInfo()">{{theoreticalScalesToggleText}}
+      </button>
+    </div>
   </div>
 
   <div class="scaleMap__degrees" *ngIf="mode | displayScaleDegrees">
@@ -28,7 +38,7 @@
       <span class="degreesDisplay__degree degreesDisplay__degree--dominant"
       >5</span>
     </div>
-    <button class="button__infoToggle"
+    <button class="button__infoToggle button__infoToggle--scaleDegrees"
             aria-label="Scale Degrees Info Toggle"
             type="button"
             (click)="toggleScaleMapInfo()">{{scaleDegreesToggleText}}
@@ -36,7 +46,7 @@
   </div>
 </div>
 
-<div class="infoBlock"
+<div class="infoBlock infoBlock--theoreticalScales"
      [attr.aria-expanded]="showTheoreticalScalesInfo"
      *ngIf="showTheoreticalScalesInfo">
   <h2 class="infoBlock__title">About Theoretical Scales
@@ -44,21 +54,23 @@
             aria-label="Theoretical Scales Info Close"
             type="button"
             (click)="toggleTheoreticalScaleInfo()">
-    <app-cross-svg></app-cross-svg>
+      <app-cross-svg></app-cross-svg>
     </button>
   </h2>
   <p class="infoBlock__copy">A theoretical scale or <em>impossible key</em> is a key whose key signature has at least
     one double flat (𝄫) or double sharp (x).</p>
-  <p class="infoBlock__copy">{{modeDisplayString}} is a theoretical scale and looks unnecessarily complicated. We can make things simpler!</p>
-  <p class="infoBlock__copy">Switch to the enharmonic equivalent note of {{scale[0] | getEnharmonicEquivalent }} to make
+  <p class="infoBlock__copy">{{modeDisplayString}} is a theoretical scale and looks unnecessarily complicated. We can
+    make things simpler!</p>
+  <p class="infoBlock__copy">Switch to the enharmonic equivalent note of {{modeMap[0].displayName | getEnharmonicEquivalent }} to make
     the notes easier to read. (It'll sound exactly the same!)</p>
   <a class="actionButton"
      (click)="toggleTheoreticalScaleInfo()"
      [routerLink]="note | getEnharmonicRouterLink: noteExtenderString: mode"
-  >Switch to {{scale[0] | getEnharmonicEquivalent }}</a>
+  >Switch to {{modeMap[0].displayName | getEnharmonicEquivalent }}</a>
+
 </div>
 
-<div class="infoBlock"
+<div class="infoBlock infoBlock--scaleDegrees"
      [attr.aria-expanded]="showScaleMapInfo"
      *ngIf="showScaleMapInfo">
   <h2 class="infoBlock__title">About Scale Degrees

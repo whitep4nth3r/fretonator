@@ -6,6 +6,7 @@ import { GetEnharmonicEquivalentPipe } from './get-enharmonic-equivalent.pipe';
 import { RouterModule } from '@angular/router';
 import { GetEnharmonicRouterLinkPipe } from './get-enharmonic-router-link.pipe';
 import { CrossModule } from '../../svgs/cross/cross.module';
+import { PlayModule } from '../../svgs/play/play.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CrossModule } from '../../svgs/cross/cross.module';
   imports: [
     CommonModule,
     RouterModule,
-    CrossModule
+    CrossModule,
+    PlayModule
   ]
 })
 export class ScaleMapModule { }

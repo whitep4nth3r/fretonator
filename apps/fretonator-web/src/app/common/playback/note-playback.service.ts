@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StringFrequencies } from '../../util/constants';
+import { ModeMap } from '../../util/types';
 
 const SYNTH_BUFFER_SIZE = 4096;
 const SYNTH_PLAY_DURATION = 2000;
@@ -25,6 +26,11 @@ export class NotePlaybackService {
       const noteFrequency = this.getFrequency(stringName, fret);
       this.pluckString(noteFrequency);
     }
+  }
+
+  playMode(modeMap: ModeMap) {
+    console.log('playMode called!');
+    console.log(modeMap);
   }
 
   private getFrequency(stringName, fret) {
