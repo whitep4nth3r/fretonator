@@ -20,7 +20,7 @@
         Play scale
       </button>
       <button *ngIf="isTheoretical"
-              class="button__infoToggle"
+              class="button__infoToggle button__infoToggle--theoretical"
               aria-label="Theoretical Scales Info Toggle"
               type="button"
               (click)="toggleTheoreticalScaleInfo()">{{theoreticalScalesToggleText}}
@@ -38,7 +38,7 @@
       <span class="degreesDisplay__degree degreesDisplay__degree--dominant"
       >5</span>
     </div>
-    <button class="button__infoToggle"
+    <button class="button__infoToggle button__infoToggle--scaleDegrees"
             aria-label="Scale Degrees Info Toggle"
             type="button"
             (click)="toggleScaleMapInfo()">{{scaleDegreesToggleText}}
@@ -46,7 +46,7 @@
   </div>
 </div>
 
-<div class="infoBlock"
+<div class="infoBlock infoBlock--theoreticalScales"
      [attr.aria-expanded]="showTheoreticalScalesInfo"
      *ngIf="showTheoreticalScalesInfo">
   <h2 class="infoBlock__title">About Theoretical Scales
@@ -69,7 +69,7 @@
   >Switch to {{scale[0] | getEnharmonicEquivalent }}</a>
 </div>
 
-<div class="infoBlock"
+<div class="infoBlock infoBlock--scaleDegrees"
      [attr.aria-expanded]="showScaleMapInfo"
      *ngIf="showScaleMapInfo">
   <h2 class="infoBlock__title">About Scale Degrees

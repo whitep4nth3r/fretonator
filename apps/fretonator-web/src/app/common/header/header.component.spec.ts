@@ -15,7 +15,7 @@ describe('HeaderComponent', () => {
   };
 
   const classNames = {
-    menuHide: '.header__links--hide'
+    menuHide: 'header__links--hide'
   }
 
   @Component({
@@ -85,7 +85,8 @@ describe('HeaderComponent', () => {
     beforeEach(() => {
       hamburger = fixture.debugElement.query(selectors.hamburger);
       menu = fixture.debugElement.query(selectors.menu);
-      hamburger.triggerEventHandler('click', new Event('click'));
+      hamburger.nativeElement.click();
+      fixture.detectChanges();
     });
 
     it('removes the hidden links modifier', () => {

@@ -343,12 +343,12 @@ exports[`HomeIndexComponent should create 1`] = `
             class="fretboard__toggle"
           >
             <button
-              class="fretboard__toggleButton fretboard__toggleButton--left fretboard__toggleButton--active"
+              class="fretboard__toggleButton fretboard__toggleButton--twelve fretboard__toggleButton--active"
             >
               12 frets 
             </button>
             <button
-              class="fretboard__toggleButton fretboard__toggleButton--right"
+              class="fretboard__toggleButton fretboard__toggleButton--twentyFour"
             >
               24 frets 
             </button>
@@ -1180,7 +1180,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   </div>
                   <button
                     aria-label="Scale Degrees Info Toggle"
-                    class="button__infoToggle"
+                    class="button__infoToggle button__infoToggle--scaleDegrees"
                     type="button"
                   >
                     What is this? 
@@ -1394,6 +1394,114 @@ exports[`HomeIndexComponent should create 1`] = `
                 </div>
               </div>
             </app-chord-map>
+            <app-similar-modes>
+              
+              <div
+                class="similarModes"
+              >
+                <h4
+                  class="similarModes__title"
+                >
+                  Did you know?
+                </h4>
+                <p
+                  class="similarModes__copy"
+                >
+                  If you know the patterns of C Ionian (Major) on the fretboard, you can transfer those shapes to the modes below.
+                </p>
+                <div
+                  class="chipsContainer"
+                >
+                  <app-chips>
+                    <div
+                      class="chips"
+                    >
+                      
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="D Dorian"
+                          class="chip"
+                          href="/d/natural/dorian"
+                        >
+                          D Dorian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="E Phrygian"
+                          class="chip"
+                          href="/e/natural/phrygian"
+                        >
+                          E Phrygian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="F Lydian"
+                          class="chip"
+                          href="/f/natural/lydian"
+                        >
+                          F Lydian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="G Mixolydian"
+                          class="chip"
+                          href="/g/natural/mixolydian"
+                        >
+                          G Mixolydian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="A Aolian (Minor)"
+                          class="chip"
+                          href="/a/natural/aolian"
+                        >
+                          A Aolian
+                        </a>
+                      </app-chip>
+                      <app-chip
+                        selectedcolor="default"
+                      >
+                        <a
+                          aria-label="B Locrian"
+                          class="chip"
+                          href="/b/natural/locrian"
+                        >
+                          B Locrian
+                        </a>
+                      </app-chip>
+                    </div>
+                  </app-chips>
+                </div>
+                <p
+                  class="similarModes__copy"
+                >
+                  There are only 7 patterns you need to learn. Once you've memorised those patterns, you can play any of the 7 standard modes 
+                  <em>
+                    (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aolian, Locrian
+                  </em>
+                  ) from any starting note, anywhere on the fretboard.
+                </p>
+                <p
+                  class="similarModes__copy"
+                >
+                  These patterns always appear in the same order, one after the other.
+                </p>
+              </div>
+            </app-similar-modes>
           </div>
         </app-fretonator>
         
