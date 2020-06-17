@@ -426,6 +426,16 @@ export class FretMapService {
     }
   };
 
+  getStandardModesInOrder = (startModeIndex: number): Mode[] => {
+    const before = [...StandardModePatterns];
+    const after = before.splice(startModeIndex);
+
+    return [
+      ...after,
+      ...before
+    ];
+  };
+
   getSimilarModes = (modeMap: ModeMap, inputMode: Mode): SimilarModes => {
     const firstModeInPattern = StandardModePatterns.indexOf(inputMode);
 
@@ -433,12 +443,14 @@ export class FretMapService {
       return [];
     }
 
+    const nextModes = this.getStandardModesInOrder(firstModeInPattern);
+
     const similarModes = modeMap
       .map((noteObject, index) => (
         {
           noteDisplayName: noteObject.displayName,
           note: noteObject.name,
-          mode: StandardModePatterns[firstModeInPattern + index],
+          mode: nextModes[index],
           noteExtender: this.getNoteExtenderStringFromNoteObject(noteObject)
         }
       ));

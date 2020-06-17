@@ -1398,6 +1398,29 @@ describe('FretMapService:getNoteExtenderStringFromNoteObject', () => {
   });
 });
 
+describe('FretMapService:getStandardModesInOrder', () => {
+  let service: FretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(FretMapService);
+  });
+
+  it('returns a set of modes correctly for starting mode dorian', () => {
+    const result = service.getStandardModesInOrder(1);
+    expect(result).toEqual([
+      Mode.dorian,
+      Mode.phrygian,
+      Mode.lydian,
+      Mode.mixolydian,
+      Mode.aolian,
+      Mode.locrian,
+      Mode.ionian,
+    ])
+  })
+});
+
+
 describe('FretMapService:getSimilarModes', () => {
   let service: FretMapService;
 

@@ -634,12 +634,5 @@ export const StandardModePatterns = [
   Mode.lydian,
   Mode.mixolydian,
   Mode.aolian,
-  Mode.locrian,
-  Mode.ionian,
-  Mode.dorian,
-  Mode.phrygian,
-  Mode.lydian,
-  Mode.mixolydian,
-  Mode.aolian,
   Mode.locrian
 ]
