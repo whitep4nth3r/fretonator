@@ -5,7 +5,6 @@ import { GlobalService } from '../../global.service';
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class FooterComponent {
   date: Date = new Date();

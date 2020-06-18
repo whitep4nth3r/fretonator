@@ -4,6 +4,7 @@ import { FormService } from '../form.service';
 import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { GlobalService } from '../../../global.service';
+import { FormErrorMessages } from '../../../util/constants'
 
 @Component({
   selector: 'app-contact-index',
@@ -14,6 +15,12 @@ export class ContactIndexComponent implements OnInit, AfterViewInit {
   @ViewChild('scrollTarget') scrollTarget: ElementRef<HTMLElement>;
   formName = 'Contact';
   formSubmitError = false;
+  globalErrors = {
+    name: false,
+    email: false,
+    message: false,
+    any: false
+  };
   form = new FormGroup({
     honeypot: new FormControl('', [
       Validators.maxLength(0)
@@ -32,7 +39,7 @@ export class ContactIndexComponent implements OnInit, AfterViewInit {
     ]),
     submit: new FormControl('Submit', [])
   }, {
-    updateOn: 'blur'
+    updateOn: 'change'
   });
 
   constructor(private formService: FormService,
@@ -48,8 +55,11 @@ export class ContactIndexComponent implements OnInit, AfterViewInit {
   }
 
   onSubmit() {
+    this.resetGlobalErrors();
+
     if (this.form.invalid) {
       this.form.markAllAsTouched();
+      this.calculateGlobalErrors();
       return;
     }
 
@@ -97,6 +107,49 @@ export class ContactIndexComponent implements OnInit, AfterViewInit {
 
   get honeypot() {
     return this.form.get('honeypot');
+  }
+
+  resetGlobalErrors() {
+    this.globalErrors = {
+      name: false,
+      email: false,
+      message: false,
+      any: false
+    };
+  }
+
+  getNameError() {
+    if (!this.name.errors) {
+      return;
+    }
+    return true;
+  }
+
+  getEmailError() {
+    if (!this.email.errors) {
+      return;
+    }
+    return true;
+  }
+
+  getMessageError() {
+    if (!this.message.errors) {
+      return;
+    }
+    return true;
+  }
+
+  calculateGlobalErrors() {
+    this.globalErrors = {
+      name: this.getNameError(),
+      email: this.getEmailError(),
+      message: this.getMessageError(),
+      any: this.getNameError() || this.getEmailError() || this.getMessageError()
+    };
+  }
+
+  getErrorMessage(field: string, type: string) {
+    return FormErrorMessages[field][type];
   }
 
 }

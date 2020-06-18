@@ -51,6 +51,8 @@
   border: pxToRem(2) solid var(--form-input-border-color);
   background-color: var(--form-input-bg-color);
   color: var(--form-input-color);
+
+  @include focus_accessible();
 }
 
 .form__input--textArea {
@@ -62,7 +64,7 @@
   height: pxToRem($grid-unit * 3);
   position: absolute;
   transform: translateY(50%);
-  left: 92%;
+  right: pxToRem($grid-unit * 2);
 }
 
 .form__validIcon--textArea {
@@ -98,6 +100,22 @@
   border-top-width: pxToRem(2);
 }
 
+.form__error--inner {
+  display: block;
+  margin-bottom: pxToRem($grid-unit * 1);
+  margin-top: pxToRem($grid-unit * 1);
+
+  &:before {
+    display: inline-block;
+    content: '';
+    border-radius: 50%;
+    height: pxToRem($grid-unit * 1.5);
+    width:pxToRem($grid-unit * 1.5);
+    margin-right: pxToRem($grid-unit * 2);
+    background-color: var(--error-fg);
+  }
+}
+
 .form__submit {
   @include hard_button_base();
   margin-top: pxToRem($grid-unit * 6);
@@ -106,4 +124,14 @@
   &:disabled {
     opacity: 0.5;
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px var(--form-input-bg-color) inset !important;
+  -webkit-text-fill-color: var(--form-input-color) !important;
 }

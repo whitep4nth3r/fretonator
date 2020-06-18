@@ -30,11 +30,9 @@
       </span>
     </div>
     <ng-container *ngIf="name.touched">
-      <p class="form__error" *ngIf="name.errors?.required">Enter your name, yo! A fake one will do.</p>
-      <p class="form__error" *ngIf="name.errors?.pattern">Please enter a valid name that won't break the form!</p>
-      <p class="form__error" *ngIf="name.errors?.maxlength">Come on, your name isn't
-        actually {{name.errors?.maxlength.actualLength}}
-        characters long!</p>
+      <p class="form__error" *ngIf="name.errors?.required">{{getErrorMessage('name', 'required')}}</p>
+      <p class="form__error" *ngIf="name.errors?.pattern">{{getErrorMessage('name', 'pattern')}}</p>
+      <p class="form__error" *ngIf="name.errors?.maxlength">{{getErrorMessage('name', 'maxLength')}}</p>
     </ng-container>
     <label for="email" class="form__label">
       Your contact email
@@ -50,8 +48,7 @@
       </span>
     </div>
     <ng-container *ngIf="email.touched">
-      <p class="form__error" *ngIf="email.errors?.email">An email address isn't required, but if you'd like me to reply
-        to your message, please enter a valid one!</p>
+      <p class="form__error" *ngIf="email.errors?.email">{{getErrorMessage('email', 'valid')}}</p>
     </ng-container>
 
     <label for="message" class="form__label">
@@ -67,8 +64,8 @@
       </span>
     </div>
     <ng-container *ngIf="message.touched">
-      <p class="form__error" *ngIf="message.errors?.required">Go on, give me some feedback!</p>
-      <p class="form__error" *ngIf="message.errors?.minlength">Come on, you can write more than that!</p>
+      <p class="form__error" *ngIf="message.errors?.required">{{getErrorMessage('message', 'required')}}</p>
+      <p class="form__error" *ngIf="message.errors?.minlength">{{getErrorMessage('message', 'minLength')}}</p>
     </ng-container>
 
     <div class="form__honeypot">
@@ -77,9 +74,16 @@
     </div>
 
     <input type="submit" class="form__submit" formControlName="submit" aria-label="Submit Form"/>
+
+    <p class="form__error form__error--global" *ngIf="globalErrors.any">
+      Please fix the following errors in the form to submit:
+      <span class="form__error--inner" *ngIf="globalErrors.name">{{getErrorMessage('name', 'general')}}</span>
+      <span class="form__error--inner" *ngIf="globalErrors.email">{{getErrorMessage('email', 'valid')}}</span>
+      <span class="form__error--inner" *ngIf="globalErrors.message">{{getErrorMessage('message', 'general')}}</span>
+    </p>
+
     <p class="form__error form__error--global" *ngIf="formSubmitError">Eeesh! Something went wrong when we tried to
-      submit the form. Please
-      try again.</p>
+      submit the form. Please try again.</p>
 
   </form>
 </div>

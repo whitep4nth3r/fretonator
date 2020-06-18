@@ -636,3 +636,20 @@ export const StandardModePatterns = [
   Mode.aolian,
   Mode.locrian
 ];
+
+export const FormErrorMessages = {
+  name: {
+    required: 'Enter your name, yo! A fake one will do.',
+    pattern: 'Please enter a valid name that won\'t break the form!',
+    maxLength: 'Come on, your name isn\'t actually that long!',
+    general: 'There\'s something wrong with the name field.'
+  },
+  email: {
+    valid: 'An email address isn\'t required, but if you\'d like me to reply to your message, please enter a valid one!'
+  },
+  message: {
+    required: 'Go on, give me some feedback!',
+    minLength: 'Keep typing, you\'re doing great.',
+    general: 'Oops! There\'s something wrong with the message field.'
+  }
+};
