@@ -48,9 +48,21 @@
   padding: pxToRem($grid-unit) pxToRem($grid-unit * 7) pxToRem($grid-unit) pxToRem($grid-unit);
   width: 100%;
   display: block;
+  font-weight: var(--font-weight-bold);
   border: pxToRem(2) solid var(--form-input-border-color);
   background-color: var(--form-input-bg-color);
   color: var(--form-input-color);
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    background-color: var(--form-input-autofill-bg-color) !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--form-input-autofill-bg-color) inset !important;
+    -webkit-text-fill-color: var(--form-input-autofill-color) !important;
+    -webkit-transition-delay: 99999s;
+    border: pxToRem(2) solid var(--form-input-autofill-color);
+    transition: background-color 5000s ease-in-out 0s;
+  }
 
   @include focus_accessible();
 }
@@ -121,7 +133,7 @@
   margin-top: pxToRem($grid-unit * 6);
   margin-bottom: pxToRem($grid-unit * 3);
   -webkit-appearance: none;
-  
+
   &:disabled {
     opacity: 0.5;
   }
@@ -135,4 +147,5 @@ textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 30px var(--form-input-bg-color) inset !important;
   -webkit-text-fill-color: var(--form-input-color) !important;
+  -webkit-transition-delay: 99999s;
 }
