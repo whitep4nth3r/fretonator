@@ -1,10 +1,10 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormService } from '../form.service';
 import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { GlobalService } from '../../../global.service';
-import { FormErrorMessages } from '../../../util/constants'
+import { FormErrorMessages } from '../../../util/constants';
 
 @Component({
   selector: 'app-contact-index',
