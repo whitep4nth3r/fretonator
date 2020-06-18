@@ -7,69 +7,65 @@ exports[`HomeIndexComponent should create 1`] = `
       <div
         class="hero"
       >
-        <div
-          class="hero__inner"
+        <h1
+          class="hero__title"
         >
-          <h1
-            class="hero__title"
+          
+          <span>
+            How to use the Fretonator
+          </span>
+          
+        </h1>
+        <ol
+          aria-expanded="true"
+          class="hero__grid"
+          id="howToList"
+        >
+          <li
+            class="hero__block hero__text--peach"
+            data-step="1"
           >
-            
-            <span>
-              How to use the Fretonator
-            </span>
-            
-          </h1>
-          <ol
-            aria-expanded="true"
-            class="hero__list"
-            id="howToList"
+            Choose a starting note
+          </li>
+          <li
+            class="hero__block hero__text--yellow"
+            data-step="2"
           >
-            <li
-              class="hero__text hero__text--peach"
-              data-step="1"
-            >
-              Choose a starting note
-            </li>
-            <li
-              class="hero__text hero__text--yellow"
-              data-step="2"
-            >
-              Pick a mode
-            </li>
-            <li
-              class="hero__text hero__text--purple"
-              data-step="3"
-            >
-              Check out the fretboard
-            </li>
-            <li
-              class="hero__text hero__text--turq"
-              data-step="4"
-            >
-              Have a jam!
-            </li>
-            <li
-              class="hero__text hero__text--blue"
-              data-step="5"
-            >
-              Learn the theory
-            </li>
-          </ol>
-          <button
-            aria-checked="true"
-            aria-controls="howToList"
-            aria-label="Toggle visibility of Fretonator guide"
-            class="hero__toggleHowTo"
-            role="switch"
-            type="button"
+            Pick a mode
+          </li>
+          <li
+            class="hero__block hero__text--purple"
+            data-step="3"
           >
-            
-            <span>
-              Hide
-            </span>
-            
-          </button>
-        </div>
+            Check out the fretboard
+          </li>
+          <li
+            class="hero__block hero__text--turq"
+            data-step="4"
+          >
+            Have a jam!
+          </li>
+          <li
+            class="hero__block hero__text--blue"
+            data-step="5"
+          >
+            Learn the theory
+          </li>
+        </ol>
+        <button
+          aria-checked="true"
+          aria-controls="howToList"
+          aria-label="Toggle visibility of Fretonator guide"
+          class="hero__toggleHowTo"
+          role="switch"
+          type="button"
+        >
+          
+          <span>
+            Hide
+          </span>
+          
+        </button>
       </div>
       <div
         class="modeSelector__container"

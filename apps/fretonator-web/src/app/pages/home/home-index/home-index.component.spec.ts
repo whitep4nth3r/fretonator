@@ -12,7 +12,7 @@ import { of } from 'rxjs';
 describe('HomeIndexComponent', () => {
   const selectors = {
     howToToggle: By.css('.hero__toggleHowTo'),
-    howToList: By.css('.hero__list')
+    howToList: By.css('.hero__grid')
   };
 
   const classNames = {
