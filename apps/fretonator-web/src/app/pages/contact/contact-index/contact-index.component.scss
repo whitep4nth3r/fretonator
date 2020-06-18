@@ -120,7 +120,8 @@
   @include hard_button_base();
   margin-top: pxToRem($grid-unit * 6);
   margin-bottom: pxToRem($grid-unit * 3);
-
+  -webkit-appearance: none;
+  
   &:disabled {
     opacity: 0.5;
   }
