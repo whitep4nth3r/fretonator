@@ -2,9 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterComponent } from './footer.component';
 import { Component } from '@angular/core';
-import { RouterTestingModule } from '@angular/router/testing';
-import { HeaderModule } from '../header/header.module';
 import { FooterModule } from './footer.module';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('FooterComponent', () => {
   @Component({
@@ -22,7 +21,7 @@ describe('FooterComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [FooterComponentSpec],
-      imports: [FooterModule]
+      imports: [FooterModule, RouterTestingModule]
     }).compileComponents();
   }));
 

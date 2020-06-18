@@ -61,6 +61,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin-bottom: pxToRem($grid-unit * 2);
 
   @media screen and (min-width: $screen-med) {
     justify-content: flex-start;
@@ -74,6 +75,12 @@
     align-self: flex-end;
     text-align: right;
   }
+}
+
+.footer__copy--link {
+  @include text_link();
+  color: var(--peach);
+  border-color: var(--peach);
 }
 
 .footer__sectionTitle {

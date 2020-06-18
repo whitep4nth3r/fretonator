@@ -1,54 +1,85 @@
-<form [name]="formName"
-      data-netlify="true"
-      method="POST"
-      action="/contact/success"
-      netlify-honeypot="bot-field"
-      [formGroup]="form"
-      (ngSubmit)="onSubmit()">
-  <div>
-    <label for="name">
-      Name
+<div class="form__container" #scrollTargetContact>
+  <h1 class="form__title">Share the love <span role="img" aria-label="red heart emoji">❤️</span></h1>
+  <p class="form__copy">My goal with
+    the Fretonator is to crowdsource feedback and ideas to create the ultimate guitar learning hub that's simple,
+    easy and enjoyable to use.</p>
+  <p class="form__copy">Noticed a bug? Got an idea for a feature? Want to collaborate? Or just want to say hello? I'd
+    love to
+    hear from you. Send
+    me a message!</p>
+  <p class="form__copy form__copy--bold">Let's build the Fretonator together.</p>
+  <form [name]="formName"
+        data-netlify="true"
+        method="POST"
+        action="/contact/success"
+        netlify-honeypot="bot-field"
+        class="form"
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()">
+    <label for="name" class="form__label">
+      Your name *
     </label>
-    <input id="name" name="Name" type="text" formControlName="name">
+    <div class="form__inputGroup">
+      <input id="name"
+             name="Name"
+             type="text"
+             formControlName="name"
+             class="form__input">
+      <span class="form__validIcon" *ngIf="name.valid">
+        <app-tick-svg></app-tick-svg>
+      </span>
+    </div>
     <ng-container *ngIf="name.touched">
-      <p *ngIf="name.errors?.required">Enter your name, yo!</p>
-      <p *ngIf="name.errors?.pattern">Please enter a valid name!</p>
-      <p *ngIf="name.errors?.maxlength">Come on, your name isn't actually {{name.errors?.maxlength.actualLength}}
+      <p class="form__error" *ngIf="name.errors?.required">Enter your name, yo! A fake one will do.</p>
+      <p class="form__error" *ngIf="name.errors?.pattern">Please enter a valid name that won't break the form!</p>
+      <p class="form__error" *ngIf="name.errors?.maxlength">Come on, your name isn't
+        actually {{name.errors?.maxlength.actualLength}}
         characters long!</p>
-      <pre>{{name.errors | json}}</pre>
     </ng-container>
-  </div>
-  <div>
-    <label for="email">
-      Email
+    <label for="email" class="form__label">
+      Your contact email
     </label>
-    <input id="email" name="Email" type="email" formControlName="email">
+    <div class="form__inputGroup">
+      <input id="email"
+             name="Email"
+             type="email"
+             formControlName="email"
+             class="form__input">
+      <span class="form__validIcon" *ngIf="email.value.length > 0 && email.valid">
+        <app-tick-svg></app-tick-svg>
+      </span>
+    </div>
     <ng-container *ngIf="email.touched">
-      <p *ngIf="email.errors?.email">An email address isn't required, but if you'd like me to reply to your message,
-        please enter a valid email address!</p>
-      <pre>{{email.errors | json}}</pre>
+      <p class="form__error" *ngIf="email.errors?.email">An email address isn't required, but if you'd like me to reply
+        to your message, please enter a valid one!</p>
     </ng-container>
 
-  </div>
-  <div>
-    <label for="message">
-      Message
+    <label for="message" class="form__label">
+      Your message *
     </label>
-    <textarea id="message" name="Message" formControlName="message"></textarea>
+    <div class="form__inputGroup">
+    <textarea id="message"
+              name="Message"
+              formControlName="message"
+              class="form__input form__input--textArea"></textarea>
+      <span class="form__validIcon form__validIcon--textArea" *ngIf="message.valid">
+        <app-tick-svg></app-tick-svg>
+      </span>
+    </div>
     <ng-container *ngIf="message.touched">
-      <p *ngIf="message.errors?.required">Go on, give me some feedback!</p>
-      <p *ngIf="message.errors?.minlength">Go on, give me some feedback!</p>
-      <pre>{{message.errors | json}}</pre>
+      <p class="form__error" *ngIf="message.errors?.required">Go on, give me some feedback!</p>
+      <p class="form__error" *ngIf="message.errors?.minlength">Come on, you can write more than that!</p>
     </ng-container>
 
-    <div>
+    <div class="form__honeypot">
       <label for="bot-field">Don't fill this out if you're human!</label>
       <input type="text" id="bot-field" name="bot-field" formControlName="honeypot">
-      <pre>{{honeypot.errors | json}}</pre>
     </div>
 
     <input type="submit" class="form__submit" formControlName="submit" aria-label="Submit Form"/>
-    <p *ngIf="formSubmitError">Oh no! Didn't work.</p>
-  </div>
+    <p class="form__error form__error--global" *ngIf="formSubmitError">Eeesh! Something went wrong when we tried to
+      submit the form. Please
+      try again.</p>
 
-</form>
+  </form>
+</div>
