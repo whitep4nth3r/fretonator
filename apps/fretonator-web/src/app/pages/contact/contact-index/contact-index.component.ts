@@ -49,7 +49,6 @@ export class ContactIndexComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.globalService.setScrollTarget(this.scrollTarget.nativeElement);
-    this.globalService.getScrollTarget().scrollIntoView();
   }
 
   onSubmit() {

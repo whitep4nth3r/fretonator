@@ -14,7 +14,6 @@ export class ContactSuccessComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.globalService.setScrollTarget(this.scrollTarget.nativeElement);
-    this.globalService.getScrollTarget().scrollIntoView();
   }
 
   onClick() {
