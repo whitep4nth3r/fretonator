@@ -26,6 +26,7 @@ export class FretonatorComponent {
   @Input() modeDisplayString: string;
   @Input() note: string;
   @Input() noteExtenderString: string;
+  @Input() noteExtender: string;
 
   constructor(public playbackService: NotePlaybackService) {
   }

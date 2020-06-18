@@ -21,4 +21,5 @@ import { PlayModule } from '../../svgs/play/play.module';
     PlayModule
   ]
 })
-export class ScaleMapModule { }
+export class ScaleMapModule {
+}

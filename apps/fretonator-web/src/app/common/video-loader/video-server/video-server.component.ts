@@ -8,7 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class VideoServerComponent implements OnInit {
   @Input() youTubeId: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

@@ -9,7 +9,7 @@ describe('FormService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
-      providers: [FormService],
+      providers: [FormService]
     });
     service = TestBed.inject(FormService);
   });

@@ -6,12 +6,12 @@ import { ContactSuccessComponent } from './contact-success/contact-success.compo
 const contact: Route = {
   path: '',
   pathMatch: 'full',
-  component: ContactIndexComponent,
+  component: ContactIndexComponent
 };
 
-const success:  Route = {
+const success: Route = {
   path: 'success',
-  component: ContactSuccessComponent,
+  component: ContactSuccessComponent
 };
 
 const routes: Routes = [contact, success];
@@ -20,4 +20,5 @@ const routes: Routes = [contact, success];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ContactRoutingModule { }
+export class ContactRoutingModule {
+}

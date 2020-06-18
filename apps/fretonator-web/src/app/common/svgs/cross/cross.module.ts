@@ -12,4 +12,5 @@ import { CrossComponent } from './cross.component';
     CommonModule
   ]
 })
-export class CrossModule { }
+export class CrossModule {
+}

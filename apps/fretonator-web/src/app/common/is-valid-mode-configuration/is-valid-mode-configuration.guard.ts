@@ -14,14 +14,14 @@ export class IsValidModeConfigurationGuard implements CanActivate {
     const { note, noteExtender, mode } = next.params;
     const home = this.router.createUrlTree(['/']);
 
-    if(!Mode[mode]) {
+    if (!Mode[mode]) {
       return home;
     }
 
     const extenderSymbol = NoteExtenderSymbol[noteExtender];
-    const validCombination = Object.values(NoteSymbol).find(value => value === `${note}${extenderSymbol}`)
+    const validCombination = Object.values(NoteSymbol).find(value => value === `${note}${extenderSymbol}`);
 
-    if(!validCombination) {
+    if (!validCombination) {
       return home;
     }
 

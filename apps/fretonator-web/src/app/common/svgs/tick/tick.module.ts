@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { TickComponent } from './tick.component';
 
 
-
 @NgModule({
   declarations: [TickComponent],
   exports: [
@@ -13,4 +12,5 @@ import { TickComponent } from './tick.component';
     CommonModule
   ]
 })
-export class TickModule { }
+export class TickModule {
+}

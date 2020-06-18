@@ -362,6 +362,16 @@ export class FretMapService {
     return 0;
   };
 
+  convertSymbolToNoteObject = (note: string, noteExtender: string): NoteObject => {
+    return {
+      name: note,
+      flat: noteExtender === '_',
+      sharp: noteExtender === '#',
+      doubleFlat: false,
+      doubleSharp: false
+    };
+  }
+
   convertNoteObjectToNoteSymbol = (noteObject: NoteObject): NoteSymbol | false => {
     let suffix = '';
 

@@ -1,5 +1,5 @@
 import { SymbolToNoteObjPipe } from './symbol-to-note-obj.pipe';
-import { FretMapService } from '../../../common/fret-map/fret-map.service';
+import { FretMapService } from '../fret-map/fret-map.service';
 import { TestBed } from '@angular/core/testing';
 
 describe('SymbolToNoteObjPipe', () => {

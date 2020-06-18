@@ -18,6 +18,6 @@ export class RouteToModeConfigurationService implements Resolve<ModeRouteData> {
       note: route.params.note || NoteSymbol.c,
       noteExtender: route.params.noteExtender || NoteExtenderString.natural,
       mode: route.params.mode || Mode.ionian
-    }
+    };
   }
 }

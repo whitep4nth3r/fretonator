@@ -4,8 +4,6 @@ import { ContactIndexComponent } from './contact-index.component';
 import { Component } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ContactModule } from '../contact.module';
-import { BrowserTestingModule } from '@angular/platform-browser/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('ContactIndexComponent', () => {
   @Component({

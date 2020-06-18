@@ -18,17 +18,14 @@
 }
 
 .videoLoader__title {
-  font-weight: var(--font-weight-bold);
-  font-size: pxToRem(24);
-  text-transform: uppercase;
-  letter-spacing: var(--letter-spacing-display);
-  font-family: var(--font-family-main);
-  margin-bottom: pxToRem($grid-unit * 2);
+  @include fretonator_section_title;
+  text-align: center;
 }
 
 .videoLoader__metaDetail {
   font-size: pxToRem(20);
   font-style: italic;
+  text-align: center;
 }
 
 .videoLoader__video {

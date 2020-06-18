@@ -13,7 +13,7 @@ import { ConvertIntervalIntegerToStringPipe } from './convert-interval-integer-t
     IntervalMapComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule
   ]
 })
 export class IntervalMapModule {

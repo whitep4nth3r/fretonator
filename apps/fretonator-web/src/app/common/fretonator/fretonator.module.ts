@@ -9,6 +9,9 @@ import { IsTheoreticalScalePipe } from './is-theoretical-scale.pipe';
 import { SpeakerModule } from '../svgs/speaker/speaker.module';
 import { SimilarModesModule } from './similar-modes/similar-modes.module';
 import { GetSimilarModesPipe } from './get-similar-modes.pipe';
+import { VideoLoaderModule } from '../video-loader/video-loader.module';
+import { SymbolToNoteObjPipe } from './symbol-to-note-obj.pipe';
+import { GetJamTrackPipe } from './get-jam-track.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,8 @@ import { GetSimilarModesPipe } from './get-similar-modes.pipe';
     GetFretFromFretMapPipe,
     IsTheoreticalScalePipe,
     GetSimilarModesPipe,
+    SymbolToNoteObjPipe,
+    GetJamTrackPipe
   ],
   imports: [
     CommonModule,
@@ -23,7 +28,8 @@ import { GetSimilarModesPipe } from './get-similar-modes.pipe';
     IntervalMapModule,
     ScaleMapModule,
     SpeakerModule,
-    SimilarModesModule
+    SimilarModesModule,
+    VideoLoaderModule
   ],
   exports: [
     FretonatorComponent

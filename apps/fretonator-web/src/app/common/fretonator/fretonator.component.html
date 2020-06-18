@@ -15,6 +15,8 @@
   </ng-container>
 </ng-template>
 
+<h5 class="fretonator__sectionTitle">Check out the fretboard</h5>
+
 <div class="fretboard__toggle">
   <button class="fretboard__toggleButton fretboard__toggleButton--twelve"
           [class.fretboard__toggleButton--active]="fretMode === fretModes.twelve"
@@ -74,6 +76,11 @@
   Tap notes on the fretboard for sound!
 </h4>
 
+<ng-container *ngIf="note | symbolToNoteObj: noteExtender | getJamTrack: mode">
+  <app-video-loader [jamTrack]="note | symbolToNoteObj: noteExtender | getJamTrack: mode"></app-video-loader>
+</ng-container>
+
+<h5 class="fretonator__sectionTitle">Learn the theory</h5>
 <div class="infoContainer">
   <app-scale-map [mode]="mode"
                  [modeMap]="modeMap"

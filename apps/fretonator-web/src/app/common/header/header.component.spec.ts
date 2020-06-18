@@ -16,7 +16,7 @@ describe('HeaderComponent', () => {
 
   const classNames = {
     menuHide: 'header__links--hide'
-  }
+  };
 
   @Component({
     selector: 'app-header-spec',

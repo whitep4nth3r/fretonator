@@ -10,7 +10,7 @@ describe('ChordMapComponent', () => {
     selector: 'app-chord-map-spec',
     template: `
       <app-chord-map></app-chord-map>
-    `,
+    `
   })
   class ChordMapComponentSpec {
   }
@@ -20,10 +20,10 @@ describe('ChordMapComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChordMapComponentSpec ],
-      imports: [ ChordMapModule ]
+      declarations: [ChordMapComponentSpec],
+      imports: [ChordMapModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

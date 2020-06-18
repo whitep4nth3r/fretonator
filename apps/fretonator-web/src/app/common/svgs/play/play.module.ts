@@ -12,4 +12,5 @@ import { PlayComponent } from './play.component';
     CommonModule
   ]
 })
-export class PlayModule { }
+export class PlayModule {
+}

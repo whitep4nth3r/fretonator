@@ -99,7 +99,7 @@ export const NoteToStringAndFretMap = {
     { string: 'G', fret: 7 },
     { string: 'G', fret: 19 },
     { string: 'B', fret: 3 },
-    { string: 'B', fret: 15 },
+    { string: 'B', fret: 15 }
   ],
   'd#': [
     { string: 'E', fret: 11 },
@@ -137,7 +137,7 @@ export const NoteToStringAndFretMap = {
     { string: 'G', fret: 7 },
     { string: 'G', fret: 19 },
     { string: 'B', fret: 3 },
-    { string: 'B', fret: 15 },
+    { string: 'B', fret: 15 }
   ],
   e_: [
     { string: 'E', fret: 11 },
@@ -149,7 +149,7 @@ export const NoteToStringAndFretMap = {
     { string: 'G', fret: 8 },
     { string: 'G', fret: 20 },
     { string: 'B', fret: 4 },
-    { string: 'B', fret: 16 },
+    { string: 'B', fret: 16 }
   ],
   e: [
     { string: 'E', fret: 0 },
@@ -174,7 +174,7 @@ export const NoteToStringAndFretMap = {
     { string: 'G', fret: 10 },
     { string: 'G', fret: 22 },
     { string: 'B', fret: 6 },
-    { string: 'B', fret: 18 },
+    { string: 'B', fret: 18 }
   ],
   'e##': [
     { string: 'E', fret: 2 },
@@ -186,7 +186,7 @@ export const NoteToStringAndFretMap = {
     { string: 'G', fret: 11 },
     { string: 'G', fret: 23 },
     { string: 'B', fret: 7 },
-    { string: 'B', fret: 19 },
+    { string: 'B', fret: 19 }
   ],
   f__: [
     { string: 'E', fret: 11 },
@@ -198,7 +198,7 @@ export const NoteToStringAndFretMap = {
     { string: 'G', fret: 8 },
     { string: 'G', fret: 20 },
     { string: 'B', fret: 4 },
-    { string: 'B', fret: 16 },
+    { string: 'B', fret: 16 }
   ],
   f_: [
     { string: 'E', fret: 0 },
@@ -272,7 +272,7 @@ export const NoteToStringAndFretMap = {
     { string: 'G', fret: 11 },
     { string: 'G', fret: 23 },
     { string: 'B', fret: 7 },
-    { string: 'B', fret: 19 },
+    { string: 'B', fret: 19 }
   ],
   g: [
     { string: 'E', fret: 3 },
@@ -285,7 +285,7 @@ export const NoteToStringAndFretMap = {
     { string: 'G', fret: 12 },
     { string: 'G', fret: 24 },
     { string: 'B', fret: 8 },
-    { string: 'B', fret: 20 },
+    { string: 'B', fret: 20 }
   ],
   'g#': [
     { string: 'E', fret: 4 },
@@ -625,7 +625,7 @@ export const StringFrequencies = {
   'D': 146.83,
   'A': 110.00,
   'E': 82.41
-}
+};
 
 export const StandardModePatterns = [
   Mode.ionian,
@@ -635,4 +635,4 @@ export const StandardModePatterns = [
   Mode.mixolydian,
   Mode.aolian,
   Mode.locrian
-]
+];

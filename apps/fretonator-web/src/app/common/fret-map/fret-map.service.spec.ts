@@ -1415,9 +1415,9 @@ describe('FretMapService:getStandardModesInOrder', () => {
       Mode.mixolydian,
       Mode.aolian,
       Mode.locrian,
-      Mode.ionian,
-    ])
-  })
+      Mode.ionian
+    ]);
+  });
 });
 
 
@@ -1442,5 +1442,51 @@ describe('FretMapService:getSimilarModes', () => {
   it('returns an empty array for a mode not in the StandardModePatterns array', () => {
     const result = service.getSimilarModes(fSharpHarmonicMinor, Mode.harmonicMinor);
     expect(result).toEqual([]);
+  });
+});
+
+describe('FretMapService:convertSymbolToNoteObject', () => {
+  let service: FretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(FretMapService);
+  });
+
+
+  it('returns a d sharp note object given c# is provided', () => {
+    const result = service.convertSymbolToNoteObject('d', '#');
+
+    expect(result).toEqual({
+      name: 'd',
+      flat: false,
+      sharp: true,
+      doubleFlat: false,
+      doubleSharp: false
+    });
+  });
+
+  it('returns a d flat note object given d_ is provided', () => {
+    const result = service.convertSymbolToNoteObject('d', '_');
+
+    expect(result).toEqual({
+      name: 'd',
+      flat: true,
+      sharp: false,
+      doubleFlat: false,
+      doubleSharp: false
+    });
+  });
+
+  it('returns d natural note object given d is provided', () => {
+    const result = service.convertSymbolToNoteObject('d', '');
+
+    expect(result).toEqual({
+      name: 'd',
+      flat: false,
+      sharp: false,
+      doubleFlat: false,
+      doubleSharp: false
+    });
   });
 });

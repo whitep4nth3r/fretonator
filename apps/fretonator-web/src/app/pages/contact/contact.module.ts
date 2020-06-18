@@ -28,4 +28,5 @@ import { TickModule } from '../../common/svgs/tick/tick.module';
     ContactSuccessComponent
   ]
 })
-export class ContactModule { }
+export class ContactModule {
+}

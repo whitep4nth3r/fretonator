@@ -9,7 +9,7 @@ describe('ScaleMapComponent', () => {
 
   const selectors = {
     toggleScaleInfo: By.css('.button__infoToggle--scaleDegrees'),
-    scaleMapDegreesInfo: By.css('.infoBlock--scaleDegrees'),
+    scaleMapDegreesInfo: By.css('.infoBlock--scaleDegrees')
   };
 
   @Component({

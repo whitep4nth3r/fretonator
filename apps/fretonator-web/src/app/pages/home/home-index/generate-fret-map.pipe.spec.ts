@@ -25,7 +25,7 @@ describe('GenerateFretMapPipe', () => {
       flat: false,
       sharp: false,
       doubleFlat: false,
-      doubleSharp: false,
+      doubleSharp: false
     };
 
     pipe.transform(note, 'ionian' as Mode);

@@ -9,7 +9,7 @@ import { CoffeeModule } from '../svgs/coffee/coffee.module';
   imports: [
     CommonModule,
     RouterModule,
-    CoffeeModule,
+    CoffeeModule
   ],
   exports: [
     FooterComponent

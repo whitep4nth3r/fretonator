@@ -6,7 +6,8 @@ import { FretMapService } from '../../../common/fret-map/fret-map.service';
   name: 'generateModeMap'
 })
 export class GenerateModeMapPipe implements PipeTransform {
-  constructor(public generateFretMapService: FretMapService) {}
+  constructor(public generateFretMapService: FretMapService) {
+  }
 
   transform(note: NoteObject, mode: Mode): ModeMap {
     return this.generateFretMapService.generateMode(note, mode);

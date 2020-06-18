@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SimilarModes } from '../../../util/types';
 import { GlobalService } from '../../../global.service';
 
@@ -12,7 +12,8 @@ export class SimilarModesComponent {
   @Input() modeDisplayString: string;
   @Input() isTheoretical: boolean;
 
-  constructor(private globalService: GlobalService){}
+  constructor(private globalService: GlobalService) {
+  }
 
   onModeChange() {
     this.globalService.getScrollTarget().scrollIntoView();

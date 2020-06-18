@@ -48,6 +48,12 @@ exports[`HomeIndexComponent should create 1`] = `
             >
               Have a jam!
             </li>
+            <li
+              class="hero__text hero__text--blue"
+              data-step="5"
+            >
+              Learn the theory
+            </li>
           </ol>
           <button
             aria-checked="true"
@@ -74,7 +80,7 @@ exports[`HomeIndexComponent should create 1`] = `
           <h2
             class="modeSelector__label"
           >
-            Starting note
+            Choose a starting note
           </h2>
           <app-chips>
             <div
@@ -206,7 +212,7 @@ exports[`HomeIndexComponent should create 1`] = `
           <h2
             class="modeSelector__label"
           >
-            Mode
+            Pick a mode
           </h2>
           <app-chips>
             <div
@@ -339,6 +345,11 @@ exports[`HomeIndexComponent should create 1`] = `
         </div>
         <app-fretonator>
           
+          <h5
+            class="fretonator__sectionTitle"
+          >
+            Check out the fretboard
+          </h5>
           <div
             class="fretboard__toggle"
           >
@@ -1057,6 +1068,60 @@ exports[`HomeIndexComponent should create 1`] = `
              Tap notes on the fretboard for sound!
   
           </h4>
+          
+          
+          <app-video-loader>
+            <div
+              class="videoLoader"
+            >
+              <div
+                class="videoLoader__meta"
+              >
+                <h3
+                  class="videoLoader__title"
+                >
+                  Have a jam
+                </h3>
+                <p
+                  class="videoLoader__metaDetail"
+                >
+                   C Ionian (Major) Jam Track by Tom Strahle 
+                </p>
+              </div>
+              <div
+                class="videoLoader__video"
+              >
+                
+                <app-video-server
+                  class="videoLoader__content"
+                >
+                  <div
+                    class="videoServer__container"
+                  >
+                    <h3
+                      class="videoServer__title"
+                    >
+                      View on YouTube
+                    </h3>
+                    <a
+                      class="videoServer__link"
+                      href="https://www.youtube.com/watch?v=oMZz2FeV8q4"
+                      rel="nofollow noopener noreferrer"
+                      target="_blank"
+                    >
+                      https://www.youtube.com/watch?v=oMZz2FeV8q4
+                    </a>
+                  </div>
+                </app-video-server>
+                
+              </div>
+            </div>
+          </app-video-loader>
+          <h5
+            class="fretonator__sectionTitle"
+          >
+            Learn the theory
+          </h5>
           <div
             class="infoContainer"
           >
@@ -1492,55 +1557,6 @@ exports[`HomeIndexComponent should create 1`] = `
             </app-similar-modes>
           </div>
         </app-fretonator>
-        
-        
-        <app-video-loader>
-          <div
-            class="videoLoader"
-          >
-            <div
-              class="videoLoader__meta"
-            >
-              <h3
-                class="videoLoader__title"
-              >
-                Try a jam track
-              </h3>
-              <p
-                class="videoLoader__metaDetail"
-              >
-                 C Ionian (Major) Jam Track by Tom Strahle 
-              </p>
-            </div>
-            <div
-              class="videoLoader__video"
-            >
-              
-              <app-video-server
-                class="videoLoader__content"
-              >
-                <div
-                  class="videoServer__container"
-                >
-                  <h3
-                    class="videoServer__title"
-                  >
-                    View on YouTube
-                  </h3>
-                  <a
-                    class="videoServer__link"
-                    href="https://www.youtube.com/watch?v=oMZz2FeV8q4"
-                    rel="nofollow noopener noreferrer"
-                    target="_blank"
-                  >
-                    https://www.youtube.com/watch?v=oMZz2FeV8q4
-                  </a>
-                </div>
-              </app-video-server>
-              
-            </div>
-          </div>
-        </app-video-loader>
       </div>
     </main>
   </app-home-index>

@@ -342,21 +342,18 @@
 .infoContainer {
   @include content_wrapper();
   max-width: $screen-med;
-  margin-top: pxToRem($grid-unit * 4);
+  margin-top: pxToRem($grid-unit * 2);
+  margin-bottom: pxToRem($grid-unit * 8);
   background-color: var(--background-color-light);
   padding: pxToRem($grid-unit * 4);
   border-radius: pxToRem($grid-unit * 4);
   box-shadow: 0 pxToRem(1) pxToRem(3) rgba(26, 26, 26, 0.12), 0 pxToRem(1) pxToRem(2) rgba(26, 26, 26, 0.24);
-
-  @media screen and (min-width: $screen-med) {
-    margin-top: pxToRem($grid-unit * 8);
-  }
 }
 
 .fretboard__toggle {
   display: block;
   text-align: center;
-  margin: pxToRem($grid-unit * 4) auto 0 auto;
+  margin: pxToRem($grid-unit * 2) auto 0 auto;
 }
 
 .fretboard__toggleButton {
@@ -404,7 +401,7 @@
 }
 
 .fretonator__playCta {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   font-size: pxToRem(12);
   display: flex;
   justify-content: center;
@@ -418,6 +415,11 @@
   @media screen and (min-width: $screen-sm) {
     font-size: pxToRem(14);
   }
+}
+
+.fretonator__sectionTitle {
+  @include fretonator_section_title;
+  text-align: center;
 }
 
 .fretonator__playCtaIcon {

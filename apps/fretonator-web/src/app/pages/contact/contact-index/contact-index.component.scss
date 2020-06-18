@@ -14,7 +14,7 @@
 }
 
 .form__title {
-  @include font_large();
+  @include font_large;
   color: var(--form-container-color);
   text-align: left;
   margin-top: pxToRem($grid-unit * 3);
@@ -22,7 +22,7 @@
 }
 
 .form__copy {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   color: var(--form-container-color);
   text-align: left;
   margin-bottom: pxToRem($grid-unit * 2);
@@ -43,9 +43,9 @@
 }
 
 .form__input {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   border-radius: 0;
-  padding: pxToRem($grid-unit) pxToRem($grid-unit * 7)  pxToRem($grid-unit) pxToRem($grid-unit);
+  padding: pxToRem($grid-unit) pxToRem($grid-unit * 7) pxToRem($grid-unit) pxToRem($grid-unit);
   width: 100%;
   display: block;
   border: pxToRem(2) solid var(--form-input-border-color);
@@ -70,7 +70,7 @@
 }
 
 .form__label {
-  @include font_medium();
+  @include font_medium;
   font-size: pxToRem(14);
   display: block;
   margin-bottom: pxToRem($grid-unit);
@@ -83,7 +83,7 @@
 }
 
 .form__error {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   background-color: var(--error-bg);
   color: var(--error-fg);
   padding: pxToRem($grid-unit);

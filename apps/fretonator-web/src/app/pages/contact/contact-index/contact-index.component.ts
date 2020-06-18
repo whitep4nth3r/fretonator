@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormService } from '../form.service';
 import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { GlobalService } from '../../../global.service';
 
 @Component({
   selector: 'app-contact-index',
   templateUrl: './contact-index.component.html',
   styleUrls: ['./contact-index.component.scss']
 })
-export class ContactIndexComponent implements OnInit {
+export class ContactIndexComponent implements OnInit, AfterViewInit {
+  @ViewChild('scrollTarget') scrollTarget: ElementRef<HTMLElement>;
   formName = 'Contact';
   formSubmitError = false;
   form = new FormGroup({
@@ -33,10 +35,16 @@ export class ContactIndexComponent implements OnInit {
     updateOn: 'blur'
   });
 
-  constructor(private formService: FormService, private router: Router) {
+  constructor(private formService: FormService,
+              private router: Router,
+              private globalService: GlobalService) {
   }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    this.globalService.setScrollTarget(this.scrollTarget.nativeElement);
   }
 
   onSubmit() {

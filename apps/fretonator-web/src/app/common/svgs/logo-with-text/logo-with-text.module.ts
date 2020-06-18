@@ -4,12 +4,13 @@ import { LogoWithTextComponent } from './logo-with-text.component';
 
 
 @NgModule({
-    declarations: [LogoWithTextComponent],
-    exports: [
-        LogoWithTextComponent,
-    ],
-    imports: [
-        CommonModule,
-    ],
+  declarations: [LogoWithTextComponent],
+  exports: [
+    LogoWithTextComponent
+  ],
+  imports: [
+    CommonModule
+  ]
 })
-export class LogoWithTextModule { }
+export class LogoWithTextModule {
+}

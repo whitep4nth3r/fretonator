@@ -16,7 +16,7 @@ export class FormService {
 
     const options = {
       headers,
-      responseType: 'text' as 'text',
+      responseType: 'text' as 'text'
     };
 
     const formBody = new URLSearchParams();

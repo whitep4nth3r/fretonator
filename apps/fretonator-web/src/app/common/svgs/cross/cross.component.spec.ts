@@ -8,9 +8,9 @@ describe('CrossComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CrossComponent ]
+      declarations: [CrossComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
