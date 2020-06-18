@@ -65,7 +65,7 @@
     of {{modeMap[0].displayName | getEnharmonicEquivalent }} to make
     the notes easier to read. (It'll sound exactly the same!)</p>
   <a class="actionButton"
-     (click)="toggleTheoreticalScaleInfo()"
+     (click)="linkClick()"
      [routerLink]="note | getEnharmonicRouterLink: noteExtenderString: mode"
   >Switch to {{modeMap[0].displayName | getEnharmonicEquivalent }}</a>
 
