@@ -649,7 +649,7 @@ export const FormErrorMessages = {
   },
   message: {
     required: 'Go on, give me some feedback!',
-    minLength: 'Keep typing, you\'re doing great.',
+    minLength: 'Keep typing, you\'re doing great. (Give me at least 30 characters please!)',
     general: 'Oops! There\'s something wrong with the message field.'
   }
 };

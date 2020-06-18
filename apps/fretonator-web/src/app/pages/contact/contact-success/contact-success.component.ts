@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GlobalService } from '../../../global.service';
 
 @Component({
@@ -6,12 +6,18 @@ import { GlobalService } from '../../../global.service';
   templateUrl: './contact-success.component.html',
   styleUrls: ['./contact-success.component.scss']
 })
-export class ContactSuccessComponent {
+export class ContactSuccessComponent implements AfterViewInit {
+  @ViewChild('scrollTarget') scrollTarget: ElementRef<HTMLElement>;
 
   constructor(private globalService: GlobalService) {
   }
 
-  clickLink() {
+  ngAfterViewInit(): void {
+    this.globalService.setScrollTarget(this.scrollTarget.nativeElement);
+    this.globalService.getScrollTarget().scrollIntoView();
+  }
+
+  onClick() {
     this.globalService.getScrollTarget().scrollIntoView();
   }
 }

@@ -1,4 +1,4 @@
-<div class="success__container">
+<div class="success__container" #scrollTarget>
   <h1 class="success__title">You are amazing! <span role="img" aria-label="raising hands emoji">🙌🏼️</span></h1>
   <p class="success__copy">I can't thank you enough for your feedback. I will endeavour to reply to all messages when I
     can.</p>
@@ -14,5 +14,5 @@
     pull request.</p>
   <a [routerLink]="['/']"
      class="success__cta"
-     (click)="clickLink()">Return to the Fretonator</a>
+     (click)="onClick()">Return to the Fretonator</a>
 </div>

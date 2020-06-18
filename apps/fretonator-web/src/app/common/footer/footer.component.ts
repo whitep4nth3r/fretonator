@@ -12,7 +12,7 @@ export class FooterComponent {
   constructor(private globalService: GlobalService) {
   }
 
-  onLinkClick() {
+  onClick() {
     this.globalService.getScrollTarget().scrollIntoView();
   }
 }

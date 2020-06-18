@@ -11,7 +11,7 @@ import { FormErrorMessages } from '../../../util/constants'
   templateUrl: './contact-index.component.html',
   styleUrls: ['./contact-index.component.scss']
 })
-export class ContactIndexComponent implements OnInit, AfterViewInit {
+export class ContactIndexComponent implements AfterViewInit {
   @ViewChild('scrollTarget') scrollTarget: ElementRef<HTMLElement>;
   formName = 'Contact';
   formSubmitError = false;
@@ -47,11 +47,9 @@ export class ContactIndexComponent implements OnInit, AfterViewInit {
               private globalService: GlobalService) {
   }
 
-  ngOnInit(): void {
-  }
-
   ngAfterViewInit(): void {
     this.globalService.setScrollTarget(this.scrollTarget.nativeElement);
+    this.globalService.getScrollTarget().scrollIntoView();
   }
 
   onSubmit() {
