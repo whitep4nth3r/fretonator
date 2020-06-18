@@ -31,7 +31,7 @@
 }
 
 .similarModes__copy {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   margin-bottom: pxToRem($grid-unit * 2);
 
   &:last-of-type {

@@ -8,7 +8,7 @@ export interface Fret {
 export enum ChordType {
   major = 'maj',
   minor = 'min',
-  diminished ='dim',
+  diminished = 'dim',
   augmented = 'aug'
 }
 

@@ -6,7 +6,9 @@ import { Mode, NoteExtenderString } from '../../../util/types';
   name: 'createModeDisplayString'
 })
 export class CreateModeDisplayStringPipe implements PipeTransform {
-  constructor(public fretMapService: FretMapService) {}
+  constructor(public fretMapService: FretMapService) {
+  }
+
   transform(
     note: string,
     noteExtender: string,

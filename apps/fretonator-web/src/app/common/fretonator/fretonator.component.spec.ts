@@ -10,11 +10,11 @@ describe('FretonatorComponent', () => {
   const selectors = {
     twelveButton: By.css('.fretboard__toggleButton--twelve'),
     twentyFourButton: By.css('.fretboard__toggleButton--twentyFour')
-  }
+  };
 
   const classNames = {
     toggleFretButtonSelected: 'fretboard__toggleButton--active'
-  }
+  };
 
   @Component({
     selector: 'app-fretonator-spec',

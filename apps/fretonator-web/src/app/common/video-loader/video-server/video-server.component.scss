@@ -10,11 +10,12 @@
 }
 
 .videoServer__title {
-  @include font_large();
+  @include font_large;
+  color: var(--offwhite);
   margin-bottom: pxToRem($grid-unit * 4);
 }
 
 .videoServer__link {
-  color: var(--black);
+  color: var(--offwhite);
   font-size: pxToRem(26);
 }

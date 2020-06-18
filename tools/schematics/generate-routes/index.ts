@@ -7,6 +7,8 @@ export default function(schema: any): Rule {
     const staticPages = [
       '/',
       '/about',
+      '/contact',
+      '/contact/success',
       '/404'
     ];
 

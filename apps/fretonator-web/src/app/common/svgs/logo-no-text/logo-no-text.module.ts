@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { LogoNoTextComponent } from './logo-no-text.component';
 
 
-
 @NgModule({
   declarations: [LogoNoTextComponent],
   exports: [
@@ -13,4 +12,5 @@ import { LogoNoTextComponent } from './logo-no-text.component';
     CommonModule
   ]
 })
-export class LogoNoTextModule { }
+export class LogoNoTextModule {
+}

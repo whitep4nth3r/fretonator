@@ -1,0 +1,89 @@
+<div class="form__container" #scrollTarget>
+  <h1 class="form__title">Share the love <span role="img" aria-label="red heart emoji">❤️</span></h1>
+  <p class="form__copy">My goal with
+    the Fretonator is to crowdsource feedback and ideas to create the ultimate guitar learning hub that's simple,
+    easy and enjoyable to use.</p>
+  <p class="form__copy">Noticed a bug? Got an idea for a feature? Want to collaborate? Or just want to say hello? I'd
+    love to
+    hear from you. Send
+    me a message!</p>
+  <p class="form__copy form__copy--bold">Let's build the Fretonator together.</p>
+  <form [name]="formName"
+        data-netlify="true"
+        method="POST"
+        action="/contact/success"
+        netlify-honeypot="bot-field"
+        class="form"
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()">
+    <label for="name" class="form__label">
+      Your name *
+    </label>
+    <div class="form__inputGroup">
+      <input id="name"
+             name="Name"
+             type="text"
+             formControlName="name"
+             class="form__input">
+      <span class="form__validIcon" *ngIf="name.valid">
+        <app-tick-svg></app-tick-svg>
+      </span>
+    </div>
+    <ng-container *ngIf="name.touched">
+      <p class="form__error" *ngIf="name.errors?.required">{{getErrorMessage('name', 'required')}}</p>
+      <p class="form__error" *ngIf="name.errors?.pattern">{{getErrorMessage('name', 'pattern')}}</p>
+      <p class="form__error" *ngIf="name.errors?.maxlength">{{getErrorMessage('name', 'maxLength')}}</p>
+    </ng-container>
+    <label for="email" class="form__label">
+      Your contact email
+    </label>
+    <div class="form__inputGroup">
+      <input id="email"
+             name="Email"
+             type="email"
+             formControlName="email"
+             class="form__input">
+      <span class="form__validIcon" *ngIf="email.value.length > 0 && email.valid">
+        <app-tick-svg></app-tick-svg>
+      </span>
+    </div>
+    <ng-container *ngIf="email.touched">
+      <p class="form__error" *ngIf="email.errors?.email">{{getErrorMessage('email', 'valid')}}</p>
+    </ng-container>
+
+    <label for="message" class="form__label">
+      Your message *
+    </label>
+    <div class="form__inputGroup">
+    <textarea id="message"
+              name="Message"
+              formControlName="message"
+              class="form__input form__input--textArea"></textarea>
+      <span class="form__validIcon form__validIcon--textArea" *ngIf="message.valid">
+        <app-tick-svg></app-tick-svg>
+      </span>
+    </div>
+    <ng-container *ngIf="message.touched">
+      <p class="form__error" *ngIf="message.errors?.required">{{getErrorMessage('message', 'required')}}</p>
+      <p class="form__error" *ngIf="message.errors?.minlength">{{getErrorMessage('message', 'minLength')}}</p>
+    </ng-container>
+
+    <div class="form__honeypot">
+      <label for="bot-field">Don't fill this out if you're human!</label>
+      <input type="text" id="bot-field" name="bot-field" formControlName="honeypot">
+    </div>
+
+    <input type="submit" class="form__submit" formControlName="submit" aria-label="Submit Form"/>
+
+    <p class="form__error form__error--global" *ngIf="globalErrors.any">
+      Please fix the following errors in the form to submit:
+      <span class="form__error--inner" *ngIf="globalErrors.name">{{getErrorMessage('name', 'general')}}</span>
+      <span class="form__error--inner" *ngIf="globalErrors.email">{{getErrorMessage('email', 'valid')}}</span>
+      <span class="form__error--inner" *ngIf="globalErrors.message">{{getErrorMessage('message', 'general')}}</span>
+    </p>
+
+    <p class="form__error form__error--global" *ngIf="formSubmitError">Eeesh! Something went wrong when we tried to
+      submit the form. Please try again.</p>
+
+  </form>
+</div>

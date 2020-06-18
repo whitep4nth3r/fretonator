@@ -10,6 +10,7 @@ import { AboutIndexComponent } from './about-index/about-index.component';
     CommonModule,
     AboutRoutingModule
   ],
-  exports: [AboutIndexComponent],
+  exports: [AboutIndexComponent]
 })
-export class AboutModule {}
+export class AboutModule {
+}

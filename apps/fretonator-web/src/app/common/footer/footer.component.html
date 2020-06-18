@@ -2,7 +2,6 @@
   <div class="footer__inner">
 
     <div class="footer__leftColumn">
-
       <h6 class="footer__sectionTitle">
         Fretonator is open source
       </h6>
@@ -58,15 +57,21 @@
       <p class="footer__copy footer__copy--right">I'm a musician and software engineer in Manchester, UK. My goal with
         the Fretonator is to crowdsource feedback and ideas to create the ultimate guitar learning hub that's simple,
         easy and enjoyable to use.</p>
-      <p class="footer__copy footer__copy--right">Feedback/request form coming soon.</p>
+      <a [routerLink]="['/', 'contact']"
+         (click)="onClick()"
+         class="footer__copy footer__copy--right footer__copy--link">Submit your feedback</a>
       <p class="footer__copy footer__copy--right">The Fretonator is free and always will be!</p>
       <a href="https://www.buymeacoffee.com/fretonator"
          rel="nofollow noopener noreferrer"
          target="_blank"
          class="footer__smallButton">
+          <span class="footer__support__svg">
+            <app-coffee-svg></app-coffee-svg>
+          </span>
         Buy me a coffee
       </a>
     </div>
+
   </div>
 
   <p class="footer__copyright">&copy; {{ date | date: 'yyyy' }} Fretonator</p>

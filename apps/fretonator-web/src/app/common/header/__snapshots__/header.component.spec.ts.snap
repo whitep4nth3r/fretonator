@@ -94,11 +94,22 @@ exports[`HeaderComponent should match snapshot 1`] = `
       >
         <a
           class="header__linksItemLink"
+          href="/contact"
+          routerlinkactive="header__linksItemLink--active"
+        >
+          Contact
+        </a>
+      </li>
+      <li
+        class="header__linksItem"
+      >
+        <a
+          class="header__linksItemLink"
           href="https://www.buymeacoffee.com/fretonator"
           rel="nofollow noopener noreferrer"
           target="_blank"
         >
-          Support
+          Donate
         </a>
       </li>
     </ul>

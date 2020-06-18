@@ -8,26 +8,27 @@ const home: Route = {
   path: '',
   pathMatch: 'full',
   resolve: {
-    selected: RouteToModeConfigurationService,
+    selected: RouteToModeConfigurationService
   },
-  component: HomeIndexComponent,
+  component: HomeIndexComponent
 };
 
 const fretonator: Route = {
   path: ':note/:noteExtender/:mode',
   resolve: {
-    selected: RouteToModeConfigurationService,
+    selected: RouteToModeConfigurationService
   },
   canActivate: [
     IsValidModeConfigurationGuard
   ],
-  component: HomeIndexComponent,
+  component: HomeIndexComponent
 };
 
 const routes: Routes = [home, fretonator];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class HomeRoutingModule {}
+export class HomeRoutingModule {
+}

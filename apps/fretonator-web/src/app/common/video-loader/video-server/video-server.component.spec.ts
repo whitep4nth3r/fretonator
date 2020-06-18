@@ -9,7 +9,7 @@ describe('VideoServerComponent', () => {
     selector: 'app-video-server-spec',
     template: `
       <app-video-server [youTubeId]="'123'"></app-video-server>
-    `,
+    `
   })
   class VideoServerComponentSpec {
   }
@@ -20,7 +20,7 @@ describe('VideoServerComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [VideoServerComponentSpec],
-      imports: [VideoLoaderModule],
+      imports: [VideoLoaderModule]
     })
       .compileComponents();
   }));

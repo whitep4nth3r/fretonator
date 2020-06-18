@@ -14,4 +14,5 @@ import { ChipsModule } from '../../chips/chips.module';
     ChipsModule
   ]
 })
-export class SimilarModesModule { }
+export class SimilarModesModule {
+}

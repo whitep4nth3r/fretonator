@@ -182,7 +182,7 @@
 }
 
 .infoBlock__title {
-  @include font_medium();
+  @include font_medium;
   color: var(--peach);
   padding-bottom: pxToRem($grid-unit * 2);
   display: flex;
@@ -205,7 +205,7 @@
 }
 
 .infoBlock__copy {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   color: var(--offwhite);
   margin-top: pxToRem($grid-unit * 2);
   margin-bottom: pxToRem($grid-unit * 2);
@@ -216,7 +216,7 @@
 }
 
 .infoBlock__listItem {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   color: var(--yellow);
   margin-bottom: pxToRem($grid-unit * 1);
 }

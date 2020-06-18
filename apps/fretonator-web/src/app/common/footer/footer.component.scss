@@ -53,7 +53,7 @@
 }
 
 .footer__copy {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   font-size: pxToRem(15);
   line-height: pxToRem(22);
   color: var(--offwhite);
@@ -61,6 +61,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin-bottom: pxToRem($grid-unit * 2);
 
   @media screen and (min-width: $screen-med) {
     justify-content: flex-start;
@@ -76,14 +77,26 @@
   }
 }
 
+.footer__copy--link {
+  @include text_link();
+  color: var(--peach);
+  border-color: var(--peach);
+}
+
 .footer__sectionTitle {
-  @include font_medium();
+  @include font_medium;
   font-size: pxToRem(18);
+  line-height: pxToRem(28);
   margin-top: pxToRem($grid-unit);
   margin-bottom: pxToRem($grid-unit);
   color: var(--peach);
   font-weight: var(--font-weight-bold);
   display: flex;
+  text-align: center;
+
+  @media screen and (min-width: $screen-med) {
+    text-align: left;
+  }
 }
 
 .footer__list {
@@ -98,7 +111,7 @@
 }
 
 .footer__listItem {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   font-size: pxToRem(15);
   line-height: pxToRem(26);
   color: var(--offwhite);
@@ -113,7 +126,7 @@
 }
 
 .footer__copyright {
-  color: var(--grey);
+  color: var(--offwhite);
   font-size: pxToRem(12);
   letter-spacing: var(--letter-spacing-display);
   font-weight: var(--font-weight-bold);

@@ -12,4 +12,5 @@ import { SpeakerComponent } from './speaker.component';
     CommonModule
   ]
 })
-export class SpeakerModule { }
+export class SpeakerModule {
+}

@@ -7,7 +7,8 @@ import { Mode, ModeMap, SimilarModes } from '../../util/types';
 })
 export class GetSimilarModesPipe implements PipeTransform {
 
-  constructor(public generateFretMapService: FretMapService) {}
+  constructor(public generateFretMapService: FretMapService) {
+  }
 
   transform(modeMap: ModeMap, mode: Mode): SimilarModes {
     return this.generateFretMapService.getSimilarModes(modeMap, mode);

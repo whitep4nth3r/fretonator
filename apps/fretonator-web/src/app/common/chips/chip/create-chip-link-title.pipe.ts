@@ -3,10 +3,12 @@ import { Mode, NoteExtenderString } from '../../../util/types';
 import { FretMapService } from '../../fret-map/fret-map.service';
 
 @Pipe({
-  name: 'createChipLinkTitle',
+  name: 'createChipLinkTitle'
 })
 export class CreateChipLinkTitlePipe implements PipeTransform {
-  constructor(public generateFretMapService: FretMapService) {}
+  constructor(public generateFretMapService: FretMapService) {
+  }
+
   transform(
     note: string,
     noteExtender: string,

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { GetJamTrackPipe } from './get-jam-track.pipe';
-import { Mode } from '../../../util/types';
-import { FretMapService } from '../../../common/fret-map/fret-map.service';
+import { Mode } from '../../util/types';
+import { FretMapService } from '../fret-map/fret-map.service';
 
 describe('GetJamTrackPipe', () => {
   let service: FretMapService;
@@ -24,7 +24,7 @@ describe('GetJamTrackPipe', () => {
       flat: false,
       sharp: false,
       doubleFlat: false,
-      doubleSharp: false,
+      doubleSharp: false
     };
 
     pipe.transform(note, 'ionian' as Mode);

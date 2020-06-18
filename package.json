@@ -8,6 +8,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test:clear": "nx test -- --clearCache",
     "test:coverage": "npm run affected:test -- --all --code-coverage",
     "test:update": "nx test -- --updateSnapshot",
     "test:watch": "npm run affected:test -- --watch",

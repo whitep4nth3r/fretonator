@@ -9,12 +9,13 @@
                 [note]="mode.note"
                 [noteExtender]="mode.noteExtender"
                 [mode]="mode.mode"
-                selectedColor="default">{{mode.noteDisplayName}} {{mode.mode | titlecase}}</app-chip>
+                (chipClick)="onModeChange()">{{mode.noteDisplayName}} {{mode.mode | titlecase}}</app-chip>
     </app-chips>
   </div>
 
   <p class="similarModes__copy">There are only 7 patterns you need to learn. Once you've memorised those patterns,
-    you can play any of the 7 standard modes <em>(Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aolian, Locrian</em>) from
+    you can play any of the 7 standard modes <em>(Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aolian, Locrian</em>)
+    from
     any starting note, anywhere on the fretboard.</p>
   <p class="similarModes__copy">These patterns always appear in the same order, one after the other.</p>
 </div>

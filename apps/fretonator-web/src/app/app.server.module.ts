@@ -9,8 +9,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     AppModule,
     ServerModule,
-    NoopAnimationsModule,
+    NoopAnimationsModule
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppServerModule {}
+export class AppServerModule {
+}

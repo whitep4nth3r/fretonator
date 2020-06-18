@@ -11,7 +11,8 @@ const SYNTH_PLAY_DURATION = 2000;
 export class NotePlaybackService {
   private context: AudioContext;
 
-  constructor() {}
+  constructor() {
+  }
 
   playNote(stringName, fret) {
     if (!this.context) {
@@ -22,7 +23,7 @@ export class NotePlaybackService {
         // No browser support :(
       }
     }
-    if(this.context){
+    if (this.context) {
       const noteFrequency = this.getFrequency(stringName, fret);
       this.pluckString(noteFrequency);
     }
@@ -70,15 +71,15 @@ export class NotePlaybackService {
     }, SYNTH_PLAY_DURATION);
   }
 
-  private fillWithNoise(sample, signalPeriod){
+  private fillWithNoise(sample, signalPeriod) {
     for (let i = 0; i < signalPeriod; i++) {
       sample[i] = (2 * Math.random()) - 1;
     }
   }
 
-  private createBandpassFilter(frequency){
+  private createBandpassFilter(frequency) {
     const bandpass = this.context.createBiquadFilter();
-    bandpass.type = "bandpass";
+    bandpass.type = 'bandpass';
     bandpass.frequency.value = Math.round(frequency);
     bandpass.Q.value = 1 / 6;
     bandpass.connect(this.context.destination);

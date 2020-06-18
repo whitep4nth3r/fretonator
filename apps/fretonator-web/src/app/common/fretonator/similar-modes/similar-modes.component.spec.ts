@@ -22,7 +22,7 @@ describe('SimilarModesComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SimilarModesComponentSpec],
-      imports: [ SimilarModesModule ]
+      imports: [SimilarModesModule]
     })
       .compileComponents();
   }));
