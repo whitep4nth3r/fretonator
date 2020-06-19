@@ -32,7 +32,7 @@
   @media screen and (min-width: $screen-med) {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -42,7 +42,8 @@
   @media screen and (min-width: $screen-med) {
     margin-right: pxToRem($grid-unit * 4);
     margin-bottom: 0;
-    flex-basis: 100%;
+    flex-basis: 33.333%;
+    flex-shrink: 0;
   }
 }
 
