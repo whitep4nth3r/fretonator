@@ -4,6 +4,7 @@ import { ContactSuccessComponent } from './contact-success.component';
 import { Component } from '@angular/core';
 import { ContactModule } from '../contact.module';
 import { RouterTestingModule } from '@angular/router/testing';
+import { CommonModule } from '@angular/common';
 
 describe('ContactSuccessComponent', () => {
   @Component({
@@ -23,7 +24,8 @@ describe('ContactSuccessComponent', () => {
       declarations: [ContactSuccessComponentSpec],
       imports: [
         ContactModule,
-        RouterTestingModule
+        RouterTestingModule,
+        CommonModule
       ]
     }).compileComponents();
   }));

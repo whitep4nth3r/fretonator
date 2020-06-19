@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class GlobalService {
 
   private scrollTarget: HTMLElement;
+  private globalScrollTarget: HTMLElement;
 
   getScrollTarget(): HTMLElement {
     return this.scrollTarget;
@@ -13,5 +14,13 @@ export class GlobalService {
 
   setScrollTarget(el: HTMLElement) {
     this.scrollTarget = el;
+  }
+
+  getGlobalScrollTarget() : HTMLElement {
+    return this.globalScrollTarget;
+  }
+
+  setGlobalScrollTarget(el: HTMLElement) {
+    this.globalScrollTarget = el;
   }
 }

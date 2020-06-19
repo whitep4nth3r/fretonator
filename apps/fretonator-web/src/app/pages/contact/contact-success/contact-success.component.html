@@ -1,5 +1,5 @@
-<div class="success__container" #scrollTarget>
-  <h1 class="success__title">You are amazing! <span role="img" aria-label="raising hands emoji">🙌🏼️</span></h1>
+<div class="success__container">
+  <h1 class="success__title">You are amazing! <span role="img" aria-label="raising hands emoji">🙌🏼</span></h1>
   <p class="success__copy">I can't thank you enough for your feedback. I will endeavour to reply to all messages when I
     can.</p>
   <hr class="success__divider"/>
@@ -13,6 +13,6 @@
       repository</a>, do your magic, and send over a
     pull request.</p>
   <a [routerLink]="['/']"
-     class="success__cta"
-     (click)="onClick()">Return to the Fretonator</a>
+     [state]="{scrollToTop: true}"
+     class="success__cta">Return to the Fretonator</a>
 </div>

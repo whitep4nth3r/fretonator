@@ -58,7 +58,7 @@
         the Fretonator is to crowdsource feedback and ideas to create the ultimate guitar learning hub that's simple,
         easy and enjoyable to use.</p>
       <a [routerLink]="['/', 'contact']"
-         (click)="onClick()"
+         [state]="{scrollToTop: true}"
          class="footer__copy footer__copy--right footer__copy--link">Submit your feedback</a>
       <p class="footer__copy footer__copy--right">The Fretonator is free and always will be!</p>
       <a href="https://www.buymeacoffee.com/fretonator"

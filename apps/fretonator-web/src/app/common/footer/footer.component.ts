@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { GlobalService } from '../../global.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,11 +7,4 @@ import { GlobalService } from '../../global.service';
 })
 export class FooterComponent {
   date: Date = new Date();
-
-  constructor(private globalService: GlobalService) {
-  }
-
-  onClick() {
-    this.globalService.getScrollTarget().scrollIntoView();
-  }
 }

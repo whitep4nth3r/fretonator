@@ -1,14 +1,19 @@
 import { TestBed } from '@angular/core/testing';
 import { MetaService } from './meta.service';
 import { FretMapService } from '../fret-map/fret-map.service';
+import { Meta, Title } from '@angular/platform-browser';
 
 describe('MetaService', () => {
   let fretMapService: FretMapService;
   let metaService: MetaService;
+  let title: Title;
+  let meta: Meta;
 
   beforeEach(() => {
     fretMapService = TestBed.inject(FretMapService);
-    metaService = new MetaService(fretMapService);
+    title = TestBed.inject(Title);
+    meta = TestBed.inject(Meta);
+    metaService = new MetaService(fretMapService, title, meta);
   });
 
   it('should be created', () => {
