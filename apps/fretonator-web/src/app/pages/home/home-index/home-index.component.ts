@@ -37,7 +37,6 @@ export class HomeIndexComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(() => this.onRouteChange());
-    this.setHomePageTitle();
     this.setHomePageMeta();
 
     const _showHowTo = this.localStorage.getItem('showHowTo');
@@ -59,7 +58,6 @@ export class HomeIndexComponent implements OnInit, AfterViewInit {
 
   onRouteChange() {
     const routeData = this.activatedRoute.snapshot.data.selected;
-
     this.note = routeData.note;
     this.noteExtenderString = routeData.noteExtender;
     this.mode = routeData.mode;
@@ -76,7 +74,6 @@ export class HomeIndexComponent implements OnInit, AfterViewInit {
         this.noteExtender = NoteExtenderSymbol.natural;
     }
 
-    this.setHomePageTitle();
     this.setHomePageMeta();
   }
 
@@ -85,36 +82,11 @@ export class HomeIndexComponent implements OnInit, AfterViewInit {
     this.localStorage.setItem('showHowTo', this.showHowTo);
   }
 
-  setHomePageTitle() {
-    this.title.setTitle(
-      this.metaService.generateHomePageTitle(this.note, this.noteExtenderString, this.mode)
-    );
-  }
-
   setHomePageMeta() {
-    this.meta.updateTag({
-      name: 'description',
-      content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)
-    });
+    const pageDescription = this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode);
+    const pageTitle = this.metaService.generateHomePageTitle(this.note, this.noteExtenderString, this.mode);
+    const pageUrl = this.metaService.generateHomePageUrl(this.note, this.noteExtenderString, this.mode);
 
-    this.meta.updateTag({
-      name: 'twitter:description',
-      content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)
-    });
-
-    this.meta.updateTag({
-      property: 'og:description',
-      content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)
-    });
-
-    this.meta.updateTag({
-      property: 'og:title',
-      content: this.metaService.generateHomePageTitle(this.note, this.noteExtenderString, this.mode)
-    });
-
-    this.meta.updateTag({
-      property: 'og:url',
-      content: this.metaService.generateHomePageUrl(this.note, this.noteExtenderString, this.mode)
-    });
+    this.metaService.updateAllGenericMeta(pageUrl, pageTitle, pageDescription);
   }
 }

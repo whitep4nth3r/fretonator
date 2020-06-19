@@ -1,18 +1,21 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormService } from '../form.service';
 import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { GlobalService } from '../../../global.service';
 import { FormErrorMessages } from '../../../util/constants';
+import { MetaService } from '../../../common/meta/meta.service';
 
 @Component({
   selector: 'app-contact-index',
   templateUrl: './contact-index.component.html',
   styleUrls: ['./contact-index.component.scss']
 })
-export class ContactIndexComponent implements AfterViewInit {
-  @ViewChild('scrollTarget') scrollTarget: ElementRef<HTMLElement>;
+export class ContactIndexComponent implements OnInit {
+  pageDescription = 'Noticed a bug? Got an idea for a feature? Want to collaborate? Or just want to say hello? I\'d love to hear from you. Send me a message!';
+  pageTitle = 'Share the love. Submit your feedback on the Fretonator - the ultimate interactive free guitar theory tool.';
+  pageUrl = 'https://www.fretonator.com/contact';
   formName = 'Contact';
   formSubmitError = false;
   globalErrors = {
@@ -44,11 +47,12 @@ export class ContactIndexComponent implements AfterViewInit {
 
   constructor(private formService: FormService,
               private router: Router,
-              private globalService: GlobalService) {
+              private globalService: GlobalService,
+              private metaService: MetaService) {
   }
 
-  ngAfterViewInit(): void {
-    this.globalService.setScrollTarget(this.scrollTarget.nativeElement);
+  ngOnInit(): void {
+    this.metaService.updateAllGenericMeta(this.pageUrl, this.pageTitle, this.pageDescription);
   }
 
   onSubmit() {
@@ -79,7 +83,7 @@ export class ContactIndexComponent implements AfterViewInit {
   }
 
   async onSuccess() {
-    await (this.router.navigate(['/', 'contact', 'success']));
+    await (this.router.navigate(['/', 'contact', 'success'], { state: { scrollToTop: true } }));
   }
 
   onFail() {
