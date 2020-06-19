@@ -5,7 +5,7 @@ import { NotFoundIndexComponent } from './not-found-index/not-found-index.compon
 const notFound: Route = {
   path: '',
   pathMatch: 'full',
-  component: NotFoundIndexComponent,
+  component: NotFoundIndexComponent
 };
 
 const routes: Routes = [notFound];
@@ -14,4 +14,5 @@ const routes: Routes = [notFound];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class NotFoundRoutingModule { }
+export class NotFoundRoutingModule {
+}

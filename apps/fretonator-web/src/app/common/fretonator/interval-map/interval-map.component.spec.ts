@@ -10,7 +10,7 @@ describe('IntervalMapComponent', () => {
     selector: 'app-interval-map-spec',
     template: `
       <app-interval-map></app-interval-map>
-    `,
+    `
   })
   class IntervalMapComponentSpec {
   }
@@ -20,10 +20,10 @@ describe('IntervalMapComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IntervalMapComponentSpec ],
-      imports: [ IntervalMapModule ]
+      declarations: [IntervalMapComponentSpec],
+      imports: [IntervalMapModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -12,6 +12,7 @@ import { StripeBannerModule } from '../../common/stripe-banner/stripe-banner.mod
     AboutRoutingModule,
     StripeBannerModule
   ],
-  exports: [AboutIndexComponent],
+  exports: [AboutIndexComponent]
 })
-export class AboutModule {}
+export class AboutModule {
+}

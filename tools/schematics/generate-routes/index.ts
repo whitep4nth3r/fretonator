@@ -9,6 +9,8 @@ export default function(schema: any): Rule {
       '/about',
       '/learn',
       '/learn/patterns',
+      '/contact',
+      '/contact/success',
       '/404'
     ];
 

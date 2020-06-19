@@ -8,25 +8,25 @@
 }
 
 .about__subtitle {
-  @include font_medium();
+  @include font_medium;
   text-transform: none;
   font-weight: var(--font-weight-bold);
 }
 
 .about__title {
-  @include font_large();
+  @include font_large;
   margin-top: pxToRem($grid-unit * 4);
   margin-bottom: pxToRem($grid-unit * 2);
 }
 
 .about__copy {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   margin-top: pxToRem($grid-unit * 4);
   margin-bottom: pxToRem($grid-unit * 4);
 }
 
 .about__signOff {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   font-style: italic;
   font-weight: var(--font-weight-bold);
 }

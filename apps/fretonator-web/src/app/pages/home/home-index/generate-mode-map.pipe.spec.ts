@@ -1,30 +1,31 @@
 import { TestBed } from '@angular/core/testing';
-import { GetJamTrackPipe } from './get-jam-track.pipe';
+
+import { GenerateModeMapPipe } from './generate-mode-map.pipe';
 import { Mode } from '../../../util/types';
 import { FretMapService } from '../../../common/fret-map/fret-map.service';
 
-describe('GetJamTrackPipe', () => {
-  let service: FretMapService;
-  let pipe: GetJamTrackPipe;
+describe('GenerateModeMapPipe', () => {
+  let pipe: GenerateModeMapPipe;
 
   beforeEach(() => {
-    service = TestBed.inject(FretMapService);
-    pipe = new GetJamTrackPipe(service);
+    const service = TestBed.inject(FretMapService);
+    pipe = new GenerateModeMapPipe(service);
   });
 
   it('create an instance', () => {
     expect(pipe).toBeTruthy();
   });
 
-  it('calls GenerateFretMapService.getJamTrack', () => {
-    const spy = spyOn(pipe.generateFretMapService, 'getJamTrack');
+
+  it('calls GenerateFretMapService.generateMode', () => {
+    const spy = spyOn(pipe.generateFretMapService, 'generateMode');
 
     const note = {
       name: 'c',
       flat: false,
       sharp: false,
       doubleFlat: false,
-      doubleSharp: false,
+      doubleSharp: false
     };
 
     pipe.transform(note, 'ionian' as Mode);

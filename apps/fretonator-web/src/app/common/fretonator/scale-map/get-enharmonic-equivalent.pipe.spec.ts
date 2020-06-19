@@ -9,5 +9,5 @@ describe('GetHarmonicEquivalentPipe', () => {
   it('returns A♭ for G#', () => {
     const pipe = new GetEnharmonicEquivalentPipe();
     expect(pipe.transform('G#')).toBe('A♭');
-  })
+  });
 });

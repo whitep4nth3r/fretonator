@@ -1,0 +1,21 @@
+<div class="similarModes" *ngIf="similarModes.length > 0 && !isTheoretical">
+  <h4 class="similarModes__title">Did you know?</h4>
+  <p class="similarModes__copy">If you know the patterns of {{modeDisplayString}} on the fretboard,
+    you can transfer those shapes to the modes below.</p>
+
+  <div class="chipsContainer">
+    <app-chips>
+      <app-chip *ngFor="let mode of similarModes"
+                [note]="mode.note"
+                [noteExtender]="mode.noteExtender"
+                [mode]="mode.mode"
+                (chipClick)="onModeChange()">{{mode.noteDisplayName}} {{mode.mode | titlecase}}</app-chip>
+    </app-chips>
+  </div>
+
+  <p class="similarModes__copy">There are only 7 patterns you need to learn. Once you've memorised those patterns,
+    you can play any of the 7 standard modes <em>(Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aolian, Locrian</em>)
+    from
+    any starting note, anywhere on the fretboard.</p>
+  <p class="similarModes__copy">These patterns always appear in the same order, one after the other.</p>
+</div>

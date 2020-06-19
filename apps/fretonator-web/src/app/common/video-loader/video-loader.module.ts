@@ -15,16 +15,16 @@ import { YoutubeLinkHtmlPipe } from './youtube-link-html.pipe';
     VideoServerComponent,
     YouTubeEmbedPipe,
     YouTubeLinkPipe,
-    YoutubeLinkHtmlPipe,
+    YoutubeLinkHtmlPipe
   ],
   exports: [
     VideoLoaderComponent,
     VideoBrowserComponent,
-    VideoServerComponent,
+    VideoServerComponent
   ],
   imports: [
-    CommonModule,
-  ],
+    CommonModule
+  ]
 })
 export class VideoLoaderModule {
 }

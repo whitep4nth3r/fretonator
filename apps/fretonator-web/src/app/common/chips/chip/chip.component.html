@@ -1,10 +1,11 @@
 <a
   [routerLink]="['/', note, noteExtender, mode]"
   [attr.aria-label]="note | createChipLinkTitle: noteExtender: mode"
+  (click)="onClick($event)"
   class="chip"
   [class.chip--active]="selected"
   [class.chip--round]="rounded"
-  [class.chip--grey]="selectedColor === SelectedColor.grey"
+  [class.chip--muted]="selectedColor === SelectedColor.muted"
 >
   <ng-content></ng-content>
 </a>

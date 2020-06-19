@@ -39,6 +39,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  height: $infoContainer_info_row_height;
 }
 
 .degreesDisplay__degree {
@@ -84,6 +86,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: pxToRem($grid-unit * 8);
+  width: 100%;
 
   @media screen and (min-width: $screen-med) {
     flex-basis: 70%;
@@ -98,13 +101,68 @@
   flex-direction: row;
 }
 
-.scaleDisplay__note {
-  display: inline;
-  font-size: pxToRem(24);
-  font-family: var(--font-family-main);
-  font-weight: var(--font-weight-bold);
+.scaleDisplay__notes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $infoContainer_info_row_height;
 }
 
+.scaleDisplay__note {
+  display: inline-block;
+  text-align: center;
+  font-size: pxToRem(18);
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-bold);
+  margin: 0 pxToRem($grid-unit);
+
+  @media screen and (min-width: $screen-sm) {
+    font-size: pxToRem(24);
+  }
+
+  @media screen and (min-width: $screen-med) {
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+.buttonRow {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $screen-sm) {
+    flex-direction: row;
+  }
+}
+
+.button__playScale {
+  @include chip_button_base();
+  margin-top: pxToRem($grid-unit * 2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s ease-in-out;
+
+  &:hover, &:active {
+    background-color: var(--purple);
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    margin-right: pxToRem($grid-unit * 2);
+  }
+
+  display: none;
+
+}
+
+.button__playScale__svg {
+  display: flex;
+  height: pxToRem($grid-unit * 2);
+  width: pxToRem($grid-unit * 2);
+  margin-right: pxToRem($grid-unit / 2);
+}
 
 .button__infoToggle {
   @include chip_button_base();
@@ -124,7 +182,7 @@
 }
 
 .infoBlock__title {
-  @include font_medium();
+  @include font_medium;
   color: var(--peach);
   padding-bottom: pxToRem($grid-unit * 2);
   display: flex;
@@ -138,19 +196,16 @@
   background-color: transparent;
   height: pxToRem(44);
   width: pxToRem(44);
+  padding: pxToRem($grid-unit);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
-  svg {
-    height: 50%;
-    width: 50%;
-  }
+  color: var(--grey);
 }
 
 .infoBlock__copy {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   color: var(--offwhite);
   margin-top: pxToRem($grid-unit * 2);
   margin-bottom: pxToRem($grid-unit * 2);
@@ -161,41 +216,20 @@
 }
 
 .infoBlock__listItem {
-  @include font_bodyCopy();
+  @include font_bodyCopy;
   color: var(--yellow);
   margin-bottom: pxToRem($grid-unit * 1);
 }
 
 .infoHighlight {
-  border-radius: var(--border-radius-button);
-  padding: pxToRem($grid-unit / 4) pxToRem($grid-unit * 2);
+  border-radius: var(--border-radius-chip);
+  padding: pxToRem($grid-unit / 4) pxToRem(9);
   color: var(--black);
   background-color: var(--peach);
 }
 
 .actionButton {
-  border-radius: var(--border-radius-button);
-  border: pxToRem(2) solid var(--offwhite);
-  text-transform: uppercase;
-  font-family: var(--font-family-main);
-  font-size: pxToRem(18);
+  @include hard_button_base();
   margin-left: auto;
   margin-right: auto;
-  display: inline-block;
-  background-color: transparent;
-  padding: pxToRem($grid-unit) pxToRem($grid-unit * 2);
-  color: var(--offwhite);
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-display);
-  margin-top: pxToRem($grid-unit * 3);
-
-  @include focus_accessible();
-
-  &:hover {
-    border-color: var(--yellow);
-    color: var(--yellow);
-  }
 }

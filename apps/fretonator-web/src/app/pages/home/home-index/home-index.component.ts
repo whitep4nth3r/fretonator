@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Mode, NoteExtenderString, NoteExtenderSymbol, NoteSymbol } from '../../../util/types';
 import { ModeSelectorObjects, Octave } from '../../../util/constants';
 import { Meta, Title } from '@angular/platform-browser';
@@ -6,6 +6,7 @@ import { AbstractDataService } from '../../../common/abstract-data/abstract-data
 import { ActivatedRoute } from '@angular/router';
 import { FretMapService } from '../../../common/fret-map/fret-map.service';
 import { MetaService } from '../../../common/meta/meta.service';
+import { GlobalService } from '../../../global.service';
 
 @Component({
   selector: 'app-home-index',
@@ -13,7 +14,8 @@ import { MetaService } from '../../../common/meta/meta.service';
   styleUrls: ['./home-index.component.scss']
 })
 
-export class HomeIndexComponent implements OnInit {
+export class HomeIndexComponent implements OnInit, AfterViewInit {
+  @ViewChild('scrollTarget') scrollTarget: ElementRef<HTMLElement>;
   note: NoteSymbol = NoteSymbol.c;
   noteExtender: NoteExtenderSymbol;
   noteExtenderString: NoteExtenderString;
@@ -28,13 +30,13 @@ export class HomeIndexComponent implements OnInit {
     private localStorage: AbstractDataService,
     private activatedRoute: ActivatedRoute,
     private fretMapService: FretMapService,
-    private metaService: MetaService
+    private metaService: MetaService,
+    private globalService: GlobalService
   ) {
   }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(() => this.onRouteChange());
-    this.setHomePageTitle();
     this.setHomePageMeta();
 
     const _showHowTo = this.localStorage.getItem('showHowTo');
@@ -50,9 +52,12 @@ export class HomeIndexComponent implements OnInit {
     }
   }
 
+  ngAfterViewInit(): void {
+    this.globalService.setScrollTarget(this.scrollTarget.nativeElement);
+  }
+
   onRouteChange() {
     const routeData = this.activatedRoute.snapshot.data.selected;
-
     this.note = routeData.note;
     this.noteExtenderString = routeData.noteExtender;
     this.mode = routeData.mode;
@@ -69,7 +74,6 @@ export class HomeIndexComponent implements OnInit {
         this.noteExtender = NoteExtenderSymbol.natural;
     }
 
-    this.setHomePageTitle();
     this.setHomePageMeta();
   }
 
@@ -78,36 +82,11 @@ export class HomeIndexComponent implements OnInit {
     this.localStorage.setItem('showHowTo', this.showHowTo);
   }
 
-  setHomePageTitle() {
-    this.title.setTitle(
-      this.metaService.generateHomePageTitle(this.note, this.noteExtenderString, this.mode)
-    );
-  }
-
   setHomePageMeta() {
-    this.meta.updateTag({
-      name: 'description',
-      content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)
-    });
-    
-    this.meta.updateTag({
-      name: 'twitter:description',
-      content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)
-    });
+    const pageDescription = this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode);
+    const pageTitle = this.metaService.generateHomePageTitle(this.note, this.noteExtenderString, this.mode);
+    const pageUrl = this.metaService.generateHomePageUrl(this.note, this.noteExtenderString, this.mode);
 
-    this.meta.updateTag({
-      property: 'og:description',
-      content: this.metaService.generateHomePageMetaDescription(this.note, this.noteExtenderString, this.mode)
-    });
-
-    this.meta.updateTag({
-      property: 'og:title',
-      content: this.metaService.generateHomePageTitle(this.note, this.noteExtenderString, this.mode)
-    });
-
-    this.meta.updateTag({
-      property: 'og:url',
-      content: this.metaService.generateHomePageUrl(this.note, this.noteExtenderString, this.mode)
-    });
+    this.metaService.updateAllGenericMeta(pageUrl, pageTitle, pageDescription);
   }
 }

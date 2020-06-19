@@ -9,16 +9,16 @@ import { CreateChipLinkTitlePipe } from './chip/create-chip-link-title.pipe';
   declarations: [
     ChipsComponent,
     ChipComponent,
-    CreateChipLinkTitlePipe,
+    CreateChipLinkTitlePipe
   ],
   imports: [
     CommonModule,
-    RouterModule,
+    RouterModule
   ],
   exports: [
     ChipComponent,
-    ChipsComponent,
-  ],
+    ChipsComponent
+  ]
 })
 export class ChipsModule {
 }

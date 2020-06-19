@@ -1,10 +1,10 @@
-import { Component, DoCheck, Input } from '@angular/core';
+import { Component, DoCheck, EventEmitter, Input, Output } from '@angular/core';
 import { Mode } from '../../../util/types';
 import { ActivatedRoute } from '@angular/router';
 
 export enum SelectedColor {
   default = 'default',
-  grey = 'grey',
+  muted = 'muted',
 }
 
 @Component({
@@ -19,6 +19,7 @@ export class ChipComponent implements DoCheck {
   @Input() selectedColor: SelectedColor = SelectedColor.default;
   @Input() rounded = false;
   @Input() isBaseNote = false;
+  @Output() chipClick = new EventEmitter<MouseEvent>();
   SelectedColor = SelectedColor;
   selected = false;
 
@@ -47,5 +48,9 @@ export class ChipComponent implements DoCheck {
     }
 
     return true;
+  }
+
+  onClick(event: MouseEvent) {
+    this.chipClick.emit(event);
   }
 }

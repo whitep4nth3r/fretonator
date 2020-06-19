@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import { RouterModule } from '@angular/router';
-import { LogoWithTextModule } from '../logo-with-text/logo-with-text.module';
-import { LogoWithTextComponent } from '../logo-with-text/logo-with-text.component';
+import { LogoWithTextModule } from '../svgs/logo-with-text/logo-with-text.module';
+import { LogoNoTextModule } from '../svgs/logo-no-text/logo-no-text.module';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -11,10 +11,10 @@ import { LogoWithTextComponent } from '../logo-with-text/logo-with-text.componen
     CommonModule,
     RouterModule,
     LogoWithTextModule,
+    LogoNoTextModule
   ],
   exports: [
-    HeaderComponent,
-    LogoWithTextComponent
+    HeaderComponent
   ]
 })
 export class HeaderModule {

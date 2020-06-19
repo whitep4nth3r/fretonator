@@ -8,7 +8,7 @@ export interface Fret {
 export enum ChordType {
   major = 'maj',
   minor = 'min',
-  diminished ='dim',
+  diminished = 'dim',
   augmented = 'aug'
 }
 
@@ -92,3 +92,12 @@ export enum NoteExtenderSymbol {
   natural = '',
   flat = '_'
 }
+
+export interface SimilarMode {
+  noteDisplayName: string,
+  note: string,
+  noteExtender: NoteExtenderString;
+  mode: Mode,
+}
+
+export type SimilarModes = SimilarMode[];

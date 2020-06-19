@@ -11,7 +11,7 @@ describe('VideoBrowserComponent', () => {
     selector: 'app-video-browser-spec',
     template: `
       <app-video-browser [youTubeId]="youTubeId" [title]="title"></app-video-browser>
-    `,
+    `
   })
   class VideoBrowserComponentSpec {
     youTubeId = 'test123';
@@ -24,12 +24,12 @@ describe('VideoBrowserComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        VideoBrowserComponentSpec,
+        VideoBrowserComponentSpec
       ],
       imports: [
         VideoLoaderModule,
         BrowserTestingModule
-      ],
+      ]
 
     })
       .compileComponents();

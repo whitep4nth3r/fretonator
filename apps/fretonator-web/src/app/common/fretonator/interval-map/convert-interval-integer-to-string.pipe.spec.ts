@@ -23,4 +23,16 @@ describe('ConvertIntervalIntegerToStringPipe', () => {
     const result = pipe.transform(3);
     expect(result).toBe('aug 2nd');
   });
+
+  it('returns "min 3rd" for 4', () => {
+    const pipe = new ConvertIntervalIntegerToStringPipe();
+    const result = pipe.transform(4);
+    expect(result).toBe('min 3rd');
+  });
+
+  it('returns "" for something else', () => {
+    const pipe = new ConvertIntervalIntegerToStringPipe();
+    const result = pipe.transform(5);
+    expect(result).toBe('');
+  });
 });

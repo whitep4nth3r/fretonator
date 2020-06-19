@@ -16,7 +16,7 @@ describe('GetChordMapPipe', () => {
     expect(pipe).toBeTruthy();
   });
 
-  it('calls GenerateFretMapService.getChords', () => {
+  it('calls FretMapService.getChords', () => {
     const spy = spyOn(pipe.generateFretMapService, 'getChordMap');
 
     const note = {
@@ -24,7 +24,7 @@ describe('GetChordMapPipe', () => {
       flat: false,
       sharp: false,
       doubleFlat: false,
-      doubleSharp: false,
+      doubleSharp: false
     };
 
     pipe.transform(note, 'ionian' as Mode);

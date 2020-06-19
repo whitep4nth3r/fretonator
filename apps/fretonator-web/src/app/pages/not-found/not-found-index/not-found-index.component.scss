@@ -18,15 +18,13 @@
 }
 
 .notFound__title {
-  @include font_large();
+  @include font_large;
   color: var(--offwhite);
   text-align: center;
-  //margin-top: pxToRem($grid-unit * 8);
-  //margin-bottom: pxToRem($grid-unit * 2);
 }
 
 .notFound__subtitle {
-  @include font_medium();
+  @include font_large;
   color: var(--offwhite);
   text-transform: none;
   margin-top: pxToRem($grid-unit * 2);
@@ -42,4 +40,5 @@
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
+  color: var(--offwhite);
 }

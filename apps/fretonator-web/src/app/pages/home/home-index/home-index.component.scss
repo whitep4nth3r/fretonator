@@ -12,23 +12,24 @@
   display: block;
   width: 100%;
   padding-top: pxToRem($grid-unit * 4);
-  padding-bottom: pxToRem($grid-unit * 6);
+  padding-bottom: pxToRem($grid-unit * 4);
 }
 
-.hero__inner {
-  max-width: $screen-med;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: pxToRem($grid-unit * 2);
-  padding-right: pxToRem($grid-unit * 2);
+.hero__grid {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  position: relative;
 
-  @media screen and (min-width: $screen-med) {
-    padding-left: pxToRem($grid-unit * 4);
-    padding-right: pxToRem($grid-unit * 4);
+  @media screen and (min-width: $screen-sm) {
+    flex-direction: row;
   }
 }
 
 .hero__title {
+  font-family: var(--font-family-main);
   display: block;
   color: var(--offwhite);
   letter-spacing: var(--letter-spacing-display);
@@ -38,7 +39,7 @@
   text-align: center;
   font-weight: var(--font-weight-bold);
   position: relative;
-  height: pxToRem($grid-unit * 4);
+  height: pxToRem($grid-unit * 6);
 
   span {
     position: absolute;
@@ -50,72 +51,64 @@
   }
 }
 
-.hero__list {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-}
-
 .hidden {
   display: none;
 }
 
-.hero__text {
+.hero__block {
   font-family: var(--font-family-main);
-  font-weight: var(--font-weight-normal);
-  letter-spacing: var(--letter-spacing-mega);
+  letter-spacing: var(--letter-spacing-display);
+  font-size: pxToRem(14);
   text-transform: uppercase;
-  font-size: pxToRem(16);
-  line-height: pxToRem(24);
-  color: var(--offwhite);
-  margin-bottom: pxToRem($grid-unit * 2);
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+  padding-top: pxToRem($grid-unit * 2);
+  padding-left: pxToRem($grid-unit * 2);
+  padding-right: pxToRem($grid-unit * 2);
+  padding-bottom: pxToRem($grid-unit * 4);
+  margin: pxToRem($grid-unit);
+  box-shadow: 8px 8px 0 0 var(--grey);
 
-  @media screen and (min-width: $screen-med) {
-    font-size: pxToRem(20);
-    line-height: pxToRem(28);
+  @media screen and (min-width: $screen-sm) {
+    flex-basis: 20%;
+
+    &:first-child {
+      margin-left: pxToRem($grid-unit * 2);
+    }
+
+    &:last-child {
+      margin-right: pxToRem($grid-unit * 2);
+    }
   }
 
   &:before {
     content: attr(data-step);
-    display: flex;
-    justify-content: center;
-    font-size: pxToRem(16);
-    color: var(--black);
-    border-radius: 50%;
-    height: var(--note-height);
-    width: var(--note-height);
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: var(--font-weight-bold);
-    margin-bottom: pxToRem($grid-unit * 2);
-    line-height: var(--note-height);
-    text-align: center;
-    letter-spacing: 1px;
+    @include hard_button_base();
+    box-shadow: 4px 4px 0 0 var(--offwhite);
+    display: block;
+    width: pxToRem($grid-unit * 6);
+    margin: pxToRem($grid-unit * 2) auto pxToRem($grid-unit * 4) auto;
   }
 }
 
 .hero__text--peach {
-  &:before {
-    background-color: var(--peach);
-  }
+  background-color: var(--peach);
 }
 
 .hero__text--yellow {
-  &:before {
-    background-color: var(--yellow);
-  }
+  background-color: var(--yellow);
 }
 
 .hero__text--purple {
-  &:before {
-    background-color: var(--purple);
-  }
+  background-color: var(--purple);
 }
 
 .hero__text--turq {
-  &:before {
-    background-color: var(--turquoise);
-  }
+  background-color: var(--turquoise);
+}
+
+.hero__text--blue {
+  background-color: var(--blue);
 }
 
 .hero__toggleHowTo {
@@ -135,25 +128,19 @@
 
 .modeSelector__container {
   @include content_wrapper;
+  max-width: none;
   margin-top: pxToRem($grid-unit * 4);
   margin-bottom: pxToRem($grid-unit * 4);
 }
 
 .modeSelector__chipsContainer {
-  margin-bottom: pxToRem($grid-unit * 3);
+  margin-bottom: pxToRem($grid-unit * 4);
   max-width: $mode_selector_max_width;
   margin-left: auto;
   margin-right: auto;
 }
 
 .modeSelector__label {
-  @include font_medium();
-  font-weight: var(--font-weight-bold);
-  margin-top: pxToRem($grid-unit * 1);
-  margin-bottom: pxToRem($grid-unit * 1);
-  text-align: left;
-
-  @media screen and (min-width: 400px) {
-    text-align: center;
-  }
+  @include fretonator_section_title;
+  text-align: center;
 }

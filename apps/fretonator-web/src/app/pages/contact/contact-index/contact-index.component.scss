@@ -1,0 +1,151 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/typography';
+
+.form__container {
+  max-width: $screen-med;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--form-container-bg-color);
+  padding: pxToRem($grid-unit * 4);
+
+  @media screen and (min-width: $screen-med) {
+    padding: pxToRem($grid-unit * 6) pxToRem($grid-unit * 16);
+  }
+}
+
+.form__title {
+  @include font_large;
+  color: var(--form-container-color);
+  text-align: left;
+  margin-top: pxToRem($grid-unit * 3);
+  margin-bottom: pxToRem($grid-unit * 3);
+}
+
+.form__copy {
+  @include font_bodyCopy;
+  color: var(--form-container-color);
+  text-align: left;
+  margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.form__copy--bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.form {
+  margin-top: pxToRem($grid-unit * 2);
+  margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.form__inputGroup {
+  position: relative;
+  display: flex;
+}
+
+.form__input {
+  @include font_bodyCopy;
+  border-radius: 0;
+  padding: pxToRem($grid-unit) pxToRem($grid-unit * 7) pxToRem($grid-unit) pxToRem($grid-unit);
+  width: 100%;
+  display: block;
+  font-weight: var(--font-weight-bold);
+  border: pxToRem(2) solid var(--form-input-border-color);
+  background-color: var(--form-input-bg-color);
+  color: var(--form-input-color);
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    background-color: var(--form-input-autofill-bg-color) !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--form-input-autofill-bg-color) inset !important;
+    -webkit-text-fill-color: var(--form-input-autofill-color) !important;
+    -webkit-transition-delay: 99999s;
+    border: pxToRem(2) solid var(--form-input-autofill-color);
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  @include focus_accessible();
+}
+
+.form__input--textArea {
+  height: pxToRem($grid-unit * 18);
+}
+
+.form__validIcon {
+  color: var(--success-bg);
+  height: pxToRem($grid-unit * 3);
+  position: absolute;
+  transform: translateY(50%);
+  right: pxToRem($grid-unit * 2);
+}
+
+.form__validIcon--textArea {
+  bottom: pxToRem($grid-unit * 3);
+}
+
+.form__label {
+  @include font_medium;
+  font-size: pxToRem(14);
+  display: block;
+  margin-bottom: pxToRem($grid-unit);
+  margin-top: pxToRem($grid-unit * 4);
+  color: var(--form-label-color);
+}
+
+.form__honeypot {
+  display: none;
+}
+
+.form__error {
+  @include font_bodyCopy;
+  background-color: var(--error-bg);
+  color: var(--error-fg);
+  padding: pxToRem($grid-unit);
+  font-weight: var(--font-weight-bold);
+  border: pxToRem(2) solid var(--form-input-border-color);
+  border-top-width: 0;
+}
+
+.form__error--global {
+  margin-top: pxToRem($grid-unit * 3);
+  margin-bottom: pxToRem($grid-unit * 2);
+  border-top-width: pxToRem(2);
+}
+
+.form__error--inner {
+  display: block;
+  margin-bottom: pxToRem($grid-unit * 1);
+  margin-top: pxToRem($grid-unit * 1);
+
+  &:before {
+    display: inline-block;
+    content: '';
+    border-radius: 50%;
+    height: pxToRem($grid-unit * 1.5);
+    width:pxToRem($grid-unit * 1.5);
+    margin-right: pxToRem($grid-unit * 2);
+    background-color: var(--error-fg);
+  }
+}
+
+.form__submit {
+  @include hard_button_base();
+  margin-top: pxToRem($grid-unit * 6);
+  margin-bottom: pxToRem($grid-unit * 3);
+  -webkit-appearance: none;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px var(--form-input-bg-color) inset !important;
+  -webkit-text-fill-color: var(--form-input-color) !important;
+  -webkit-transition-delay: 99999s;
+}

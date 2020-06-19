@@ -17,7 +17,7 @@ export class ConvertIntervalIntegerToStringPipe implements PipeTransform {
         return 'aug 2nd';
       }
       case(4): {
-        return 'min 3rd'
+        return 'min 3rd';
       }
       default: {
         return '';

@@ -12,4 +12,5 @@ import { ChordMapComponent } from './chord-map.component';
     CommonModule
   ]
 })
-export class ChordMapModule { }
+export class ChordMapModule {
+}

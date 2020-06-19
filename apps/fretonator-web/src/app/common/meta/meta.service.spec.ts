@@ -1,14 +1,19 @@
 import { TestBed } from '@angular/core/testing';
 import { MetaService } from './meta.service';
 import { FretMapService } from '../fret-map/fret-map.service';
+import { Meta, Title } from '@angular/platform-browser';
 
 describe('MetaService', () => {
   let fretMapService: FretMapService;
   let metaService: MetaService;
+  let title: Title;
+  let meta: Meta;
 
   beforeEach(() => {
     fretMapService = TestBed.inject(FretMapService);
-    metaService = new MetaService(fretMapService);
+    title = TestBed.inject(Title);
+    meta = TestBed.inject(Meta);
+    metaService = new MetaService(fretMapService, title, meta);
   });
 
   it('should be created', () => {
@@ -18,17 +23,17 @@ describe('MetaService', () => {
   it('should return the base title', () => {
     const result = metaService.getBaseTitle();
     expect(result).toBe('Fretonator - the ultimate interactive free guitar theory tool');
-  })
+  });
 
   it('should return a generic end description', () => {
     const result = metaService.getGenericEndDescription();
-    expect(result).toBe('Choose a starting note, pick a mode, check out the fretboard and have a jam!')
-  })
+    expect(result).toBe('Choose a starting note, pick a mode, check out the fretboard and have a jam!');
+  });
 
   it('should return a home page url from given parameters', () => {
     const result = metaService.generateHomePageUrl('c', 'natural', 'lydian');
     expect(result).toBe('https://www.fretonator.com/c/natural/lydian');
-  })
+  });
 
   it('should call the fret map service for the title and return the correct string', () => {
     const result = metaService.generateHomePageTitle('c', 'natural', 'lydian');

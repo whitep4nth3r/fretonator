@@ -15,7 +15,7 @@
   }
 }
 
-@mixin font_medium() {
+@mixin font_medium {
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-normal);
   font-size: pxToRem(24);
@@ -38,4 +38,13 @@
   margin-bottom: pxToRem($grid-unit * 2);
   display: flex;
   flex-direction: column;
+}
+
+@mixin fretonator_section_title {
+  @include font_medium;
+  font-size: pxToRem(16);
+  font-weight: var(--font-weight-bold);
+  margin-top: pxToRem($grid-unit * 1);
+  margin-bottom: pxToRem($grid-unit * 1);
+  color: var(--foreground-color-base);
 }
