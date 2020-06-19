@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { StringFrequencies } from '../../util/constants';
-import { ModeMap } from '../../util/types';
+import { NoteToStringAndFretMap, StringFrequencies } from '../../util/constants';
+import { ModeMap, NoteObject } from '../../util/types';
+import { FretMapService } from '../fret-map/fret-map.service';
 
 const SYNTH_BUFFER_SIZE = 4096;
 const SYNTH_PLAY_DURATION = 2000;
@@ -11,7 +12,7 @@ const SYNTH_PLAY_DURATION = 2000;
 export class NotePlaybackService {
   private context: AudioContext;
 
-  constructor() {
+  constructor(private fretMapService: FretMapService) {
   }
 
   playNote(stringName, fret) {
@@ -29,9 +30,65 @@ export class NotePlaybackService {
     }
   }
 
+  getSingleFretMapKey = (note: NoteObject, position: number) => {
+    return NoteToStringAndFretMap[this.fretMapService.convertNoteToFretMapKey(note)][position];
+  };
+
+  getNextNoteInMode = (noteObject: NoteObject, position: number) => {
+    const thisFretMapKey = this.getSingleFretMapKey(noteObject, position);
+    const frequency = this.getFrequency(thisFretMapKey.string, thisFretMapKey.fret);
+
+    return {
+      ...thisFretMapKey,
+      frequency
+    };
+  };
+
   playMode(modeMap: ModeMap) {
-    console.log('playMode called!');
-    console.log(modeMap);
+
+    const collection = [];
+
+    for (let i = 0; i < modeMap.length; i++) {
+      let positionInNoteMap = 0;
+
+      let noteToTry = this.getNextNoteInMode(modeMap[i], positionInNoteMap);
+
+      // this needs to be a proper recursive function
+      if (collection[i - 1]) {
+        if (noteToTry.frequency > collection[i - 1].frequency) {
+          collection.push(noteToTry);
+        } else {
+          positionInNoteMap++;
+          noteToTry = this.getNextNoteInMode(modeMap[i], positionInNoteMap);
+
+          if (noteToTry.frequency > collection[i - 1].frequency) {
+            collection.push(noteToTry);
+
+          } else {
+            positionInNoteMap++;
+            noteToTry = this.getNextNoteInMode(modeMap[i], positionInNoteMap);
+
+            if (noteToTry.frequency > collection[i - 1].frequency) {
+              collection.push(noteToTry);
+            } else {
+              console.log('we have reached the end');
+            }
+          }
+        }
+      } else {
+        collection.push(noteToTry);
+      }
+    }
+
+    let j = 0;
+    const playAllNotes = setInterval(() => {
+      if (j === collection.length - 1) {
+        clearInterval(playAllNotes);
+      }
+      console.log('Playing ', collection[j]);
+      this.playNote(collection[j].string, collection[j].fret);
+      j++;
+    }, 1600);
   }
 
   private getFrequency(stringName, fret) {
