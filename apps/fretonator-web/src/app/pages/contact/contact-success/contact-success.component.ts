@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MetaService } from '../../../common/meta/meta.service';
 
 @Component({
