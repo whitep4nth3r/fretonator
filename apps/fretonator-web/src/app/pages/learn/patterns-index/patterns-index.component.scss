@@ -1,0 +1,27 @@
+@import '../../../../styles/vars';
+@import '../../../../styles/mixins';
+@import '../../../../styles/typography';
+
+.patterns__container {
+  @include content_wrapper;
+  max-width: $fretonator_max_width;
+}
+
+.patterns__intro {
+  max-width: 698px;
+  margin-bottom: pxToRem($grid-unit * 6);
+  margin-top: pxToRem($grid-unit * 6);
+}
+
+.patterns__title {
+  @include font_large;
+  margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.patterns__subtitle {
+  @include font_medium;
+}
+
+.patterns__divider {
+  @include divider();
+}

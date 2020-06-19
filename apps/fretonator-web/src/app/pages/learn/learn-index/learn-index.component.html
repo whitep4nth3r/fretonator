@@ -1,7 +1,6 @@
 <app-stripe-banner></app-stripe-banner>
 
 <div class="learn__container">
-
   <h1 class="learn__title">Learn Guitar Theory</h1>
   <p class="learn__introCopy">Welcome to the Fretonator learning hub, where you can learn music theory tailored to the
     guitar, guitar techniques and essential maintenance skills.</p>
@@ -9,17 +8,21 @@
 
   <hr class="learn__divider"/>
 
-  <div class="learn__item">
+  <a [routerLink]="['/', 'learn', 'patterns']"
+     [state]="{scrollToTop: true}"
+     class="learn__item"
+     aria-label="Learn patterns">
     <div class="learn__imageContainer">
-      <img src="https://via.placeholder.com/200x200" class="learn__image" alt="Patterns"/>
+      <img src="/assets/img/3nps.png" class="learn__image" alt="Patterns"/>
+      <a [routerLink]="['/', 'learn', 'patterns']"
+         [state]="{scrollToTop: true}"
+         class="learn__link">Learn patterns</a>
     </div>
     <div class="learn__info">
       <h2 class="learn__itemTitle">Patterns</h2>
-      <p class="learn__itemExcerpt">There are only 7 patterns you need to learn on the guitar. Once you've memorised those patterns,
-        you can play any of the 7 standard modes (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aolian, Locrian) from
-        any starting note, anywhere on the fretboard.</p>
-      <a [routerLink]="['/', 'learn', 'patterns']" class="learn__link">Learn patterns</a>
+      <p class="learn__itemExcerpt">There are only 7 patterns you need to learn on the guitar. Once you've memorised
+        those patterns, you can play any of the 7 standard modes from any starting note, anywhere on the fretboard.</p>
     </div>
-  </div>
+  </a>
 
 </div>
