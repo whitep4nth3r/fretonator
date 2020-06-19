@@ -55,26 +55,4 @@ describe('FretonatorComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  describe('setFretMode()', () => {
-    let twelveButton: DebugElement;
-    let twentyFourButton: DebugElement;
-
-    beforeEach(() => {
-      twelveButton = fixture.debugElement.query(selectors.twelveButton);
-      twentyFourButton = fixture.debugElement.query(selectors.twentyFourButton);
-    });
-
-    it('changes the fret mode to twenty four when the button is clicked', () => {
-      twentyFourButton.nativeElement.click();
-      fixture.detectChanges();
-      expect(twentyFourButton.classes[classNames.toggleFretButtonSelected]).toBeTruthy();
-    });
-
-    it('changes the fret mode to twelve when the button is clicked', () => {
-      twelveButton.nativeElement.click();
-      fixture.detectChanges();
-      expect(twelveButton.classes[classNames.toggleFretButtonSelected]).toBeTruthy();
-    });
-  });
 });

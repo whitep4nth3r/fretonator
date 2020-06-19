@@ -1,11 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Fret, FretMap } from '../../util/types';
+import { Fret, FretMap } from '../../../util/types';
 
 @Pipe({
   name: 'getFretFromFretMap'
 })
 export class GetFretFromFretMapPipe implements PipeTransform {
-  transform(fretMap: FretMap, stringName: string, fret: number, caseSensitive: boolean): Fret | false {
+  transform(fretMap: FretMap, stringName: string, fret: number, caseSensitive = false): Fret | false {
 
     const found = fretMap
       .find((thisFret) => {

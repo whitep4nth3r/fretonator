@@ -1,86 +1,15 @@
-<ng-template #string let-stringName="stringName" let-string="string">
-  <ng-container *ngFor="let fret of frets">
-    <div
-      class="fretboard__cell"
-      [class.fretboard__cell--string]="fret === 0"
-      [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: string:fret"
-      [attr.data-string-name]="fret === 0 ? stringName : null"
-      [attr.data-string]="string"
-      [attr.data-fret]="fret"
-      [attr.data-degree]="(fretMap | getFretFromFretMap: string : fret)?.degree"
-      [attr.data-display-note]="(fretMap | getFretFromFretMap: string : fret)?.displayName"
-      [attr.data-mode]="mode"
-      (click)="playbackService.playNote(stringName, fret)"
-    ></div>
-  </ng-container>
-</ng-template>
-
 <h5 class="fretonator__sectionTitle">Check out the fretboard</h5>
 
-<div class="fretboard__toggle">
-  <button class="fretboard__toggleButton fretboard__toggleButton--twelve"
-          [class.fretboard__toggleButton--active]="fretMode === fretModes.twelve"
-          (click)="setFretMode(fretModes.twelve)">12 frets
-  </button>
-  <button class="fretboard__toggleButton fretboard__toggleButton--twentyFour"
-          [class.fretboard__toggleButton--active]="fretMode === fretModes.twentyFour"
-          (click)="setFretMode(fretModes.twentyFour)">24 frets
-  </button>
-</div>
-
-<div class="arrowHint">
-  <span class="arrowHint__arrow"></span>
-</div>
-
-<div class="fretboard__container"
-     [class.fretboard__wide]="fretMode === fretModes.twentyFour">
-
-  <div class="fretboard"
-       [class.fretboard__24]="fretMode === fretModes.twentyFour">
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'e', string: 'E' }"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'B', string: 'B' }"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'G', string: 'G' }"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'D', string: 'D' }"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'A', string: 'A' }"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'E', string: 'E' }"
-    ></ng-container>
-  </div>
-</div>
-
-<h4 class="fretonator__playCta">
-  <span class="fretonator__playCtaIcon">
-    <app-speaker-svg></app-speaker-svg>
-  </span>
-  Tap notes on the fretboard for sound!
-</h4>
+<app-fretboard [fretMap]="fretMap"
+               [mode]="mode"
+               [showPlayCtaIcon]="true"></app-fretboard>
 
 <ng-container *ngIf="note | symbolToNoteObj: noteExtender | getJamTrack: mode">
   <app-video-loader [jamTrack]="note | symbolToNoteObj: noteExtender | getJamTrack: mode"></app-video-loader>
 </ng-container>
 
 <h5 class="fretonator__sectionTitle">Learn the theory</h5>
+
 <div class="infoContainer">
   <app-scale-map [mode]="mode"
                  [modeMap]="modeMap"

@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import { LearnRoutingModule } from './learn-routing.module';
 import { LearnIndexComponent } from './learn-index/learn-index.component';
 import { StripeBannerModule } from '../../common/stripe-banner/stripe-banner.module';
-import { FretonatorModule } from '../../common/fretonator/fretonator.module';
 import { PatternsIndexComponent } from './patterns-index/patterns-index.component';
+import { FretboardModule } from '../../common/fretonator/fretboard/fretboard.module';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { PatternsIndexComponent } from './patterns-index/patterns-index.componen
     CommonModule,
     LearnRoutingModule,
     StripeBannerModule,
-    FretonatorModule
+    FretboardModule
   ],
   exports: [
     LearnIndexComponent,
