@@ -8,10 +8,10 @@ import { Mode } from '../../../util/types';
   styleUrls: ['./patterns-index.component.scss']
 })
 export class PatternsIndexComponent implements OnInit {
-  @Output() expandFretboard = new EventEmitter<MouseEvent>();
   modeSelectors = PatternModeSelectors;
   selectedMode = Mode.ionian;
   selectedFretMap = PatternFretMaps.ionian;
+  shouldExpand = true;
   modesRequiringExpansion = [
     Mode.mixolydian,
     Mode.aolian,
@@ -29,14 +29,7 @@ export class PatternsIndexComponent implements OnInit {
     this.selectedFretMap = PatternFretMaps[mode];
 
     if (this.modesRequiringExpansion.indexOf(mode) > -1) {
-      this.expandFretboardHere();
+      this.shouldExpand = true;
     }
-  }
-
-  expandFretboardHere() {
-    //JIM I JUST CANNOT WORK OUT WHERE TO PUT THIS DIRECTIVE
-    // IS IT ON THE INSTANCE OF FRETBOARD ON PATTERNS-INDEX?
-    // IS IN IN THE FRETBOARD HTML?
-    this.expandFretboard.emit();
   }
 }

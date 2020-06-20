@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { FretMap, Mode } from '../../../util/types';
 import { NotePlaybackService } from '../../playback/note-playback.service';
 
@@ -17,7 +17,8 @@ const FretReturner = {
   templateUrl: './fretboard.component.html',
   styleUrls: ['./fretboard.component.scss']
 })
-export class FretboardComponent implements OnInit {
+export class FretboardComponent implements OnChanges {
+  @Output() loadExpandedChange = new EventEmitter<Boolean>()
   @Input() fretMap: FretMap;
   @Input() mode: Mode;
   @Input() stringNamesAreCaseSensitive = false;
@@ -28,7 +29,7 @@ export class FretboardComponent implements OnInit {
   constructor(public playbackService: NotePlaybackService) {
   }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
     if (this.loadExpanded) {
       this.setFretMode(FretMode.twentyFour);
     }
@@ -41,6 +42,8 @@ export class FretboardComponent implements OnInit {
   setFretMode(fretMode: FretMode) {
     this.fretMode = fretMode;
     this.frets = FretReturner[fretMode];
+
+    this.loadExpandedChange.emit(fretMode === FretMode.twentyFour);
   }
 
 }
