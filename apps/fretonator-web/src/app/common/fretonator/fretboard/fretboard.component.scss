@@ -220,7 +220,6 @@
     font-weight: var(--font-weight-bold);
     font-family: var(--font-family-main);
     font-size: pxToRem(12);
-    opacity: 0.9;
     transition-duration: 0.1s;
     transition-property: line-height, height, width, opacity;
     transition-timing-function: ease-in-out;
@@ -228,7 +227,6 @@
 
   &:hover:after,
   &:active:after {
-    opacity: 1;
     height: var(--note-height-hover);
     width: var(--note-height-hover);
     line-height: var(--note-height-hover);
@@ -247,6 +245,12 @@
   .fretboard__marker {
     text-align: center;
     font-size: 80px;
+  }
+
+  &[data-degree="ghost"] {
+    &:after {
+      background-color: var(--note-bg-ghost);
+    }
   }
 
   &[data-degree="tonic"] {
@@ -314,6 +318,12 @@
       content: attr(data-display-note);
       color: var(--note-color);
       font-size: pxToRem(12);
+    }
+
+    &[data-degree="ghost"] {
+      &:after {
+        background-color: var(--note-bg-ghost);
+      }
     }
 
     &[data-degree="tonic"] {

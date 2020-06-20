@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { StripeBannerComponent } from './stripe-banner.component';
 
 
-
 @NgModule({
   declarations: [StripeBannerComponent],
   imports: [

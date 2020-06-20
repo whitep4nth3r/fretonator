@@ -45,6 +45,19 @@
   margin-left: auto;
 }
 
+@mixin chips_group {
+  padding-top: pxToRem($grid-unit);
+  padding-bottom: pxToRem($grid-unit);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: pxToRem($grid-unit * -1);
+
+  @media screen and (min-width: 400px) {
+    justify-content: center;
+  }
+}
+
 @mixin chip_button_base {
   appearance: none;
   border-width: var(--border-width-button);
@@ -63,9 +76,32 @@
   @include focus_accessible();
 }
 
+@mixin chip_tag(
+  $bgColor: var(--background-color-base),
+  $fgColor: var(--foreground-color-base))  {
+
+  border-width: var(--border-width-button);
+  border-style: solid;
+  border-color: $fgColor;
+  background-color: $bgColor;
+  color: $fgColor;
+  padding: pxToRem(4) pxToRem(8);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+  font-size: pxToRem(14);
+  text-decoration: none;
+  border-radius: var(--border-radius-chip);
+}
+
+@mixin hard_box_shadow(
+  $color: var(--black),
+  $size: pxToRem($grid-unit)) {
+  box-shadow: $size $size 0 0 $color;
+}
+
 @mixin hard_button_base(
-    $foregroundColor: var(--offwhite),
-    $backgroundColor: var(--black)) {
+  $foregroundColor: var(--offwhite),
+  $backgroundColor: var(--black)) {
   border-radius: var(--border-radius-button);
   border: pxToRem(2) solid $foregroundColor;
   text-transform: uppercase;
@@ -81,7 +117,8 @@
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-display);
   margin-top: pxToRem($grid-unit * 3);
-  box-shadow: 8px 8px 0 0 $foregroundColor;
+
+  @include hard_box_shadow($foregroundColor, 8px);
 
   @include focus_accessible();
 

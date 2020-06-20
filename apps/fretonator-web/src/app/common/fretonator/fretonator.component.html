@@ -1,8 +1,7 @@
 <h5 class="fretonator__sectionTitle">Check out the fretboard</h5>
 
 <app-fretboard [fretMap]="fretMap"
-               [mode]="mode"
-               [showPlayCtaIcon]="true"></app-fretboard>
+               [mode]="mode"></app-fretboard>
 
 <ng-container *ngIf="note | symbolToNoteObj: noteExtender | getJamTrack: mode">
   <app-video-loader [jamTrack]="note | symbolToNoteObj: noteExtender | getJamTrack: mode"></app-video-loader>

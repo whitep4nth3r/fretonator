@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { ChordMap, FretMap, Mode, ModeMap } from '../../util/types';
-import { NotePlaybackService } from '../playback/note-playback.service';
 
 
 @Component({

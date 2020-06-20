@@ -17,7 +17,7 @@ import { FretboardModule } from '../../common/fretonator/fretboard/fretboard.mod
     CommonModule,
     LearnRoutingModule,
     StripeBannerModule,
-    FretboardModule
+    FretboardModule,
   ],
   exports: [
     LearnIndexComponent,

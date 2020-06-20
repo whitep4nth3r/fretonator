@@ -1,85 +1,75 @@
 @import '../../../../styles/vars';
 @import '../../../../styles/mixins';
 @import '../../../../styles/typography';
+@import '../../../../styles/content';
+
 
 .learn__container {
-  @include content_wrapper();
-  max-width: $screen-med;
+  @include content_container;
 }
 
 .learn__title {
-  @include font_large();
-  text-align: center;
-  margin-bottom: pxToRem($grid-unit * 4);
-  margin-top: pxToRem($grid-unit * 4);
+  @include content_title;
 }
 
 .learn__introCopy {
-  @include font_bodyCopy();
-  margin-bottom: pxToRem($grid-unit * 4);
+  @include content_intro_copy;
 }
 
-.learn__divider {
-  @include divider();
+.grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: pxToRem($grid-unit * 3);
+  justify-items: stretch;
+  align-items: stretch;
+  justify-content: center;
+  align-content: stretch;
+  margin-top: pxToRem($grid-unit * 8);
+  margin-bottom: pxToRem($grid-unit * 8);
 }
 
-.learn__item {
-  display: flex;
-  flex-direction: column;
-  margin-top: pxToRem($grid-unit * 6);
-  margin-bottom: pxToRem($grid-unit * 6);
-  border: pxToRem(2) solid var(--black);
-  color: var(--foreground-color-base);
+.grid__item {
+  background-color: var(--white);
+  padding: pxToRem($grid-unit * 2);
+  border: pxToRem(2) solid var(--foreground-color-base);
   text-decoration: none;
-  box-shadow: 8px 8px 0 0 var(--grey);
+  color: var(--foreground-color-base);
+  @include hard_box_shadow(var(--grey));
+}
 
-  @media screen and (min-width: $screen-med) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+.grid__item--link {
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover,
+  &:active {
+    transform: scale(1.03);
   }
 }
 
-.learn__imageContainer {
-  padding: pxToRem($grid-unit * 4);
-  background-color: var(--black);
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (min-width: $screen-sm) {
-    flex-basis: 42%;
-    flex-shrink: 0;
-  }
+.grid__item__title {
+  @include fretonator_section_title;
 }
 
-.learn__image {
+.grid__item__image {
   width: 100%;
-  border: pxToRem(2) solid var(--yellow);
-  box-shadow: 8px 8px 0 0 var(--yellow);
+  border: pxToRem(2) solid var(--black);
 }
 
-.learn__info {
-  display: flex;
-  flex-direction: column;
-  padding: pxToRem($grid-unit * 4);
-}
-
-.learn__itemTitle {
-  @include font_medium();
-  margin-bottom: pxToRem($grid-unit * 3);
-  color: var(--foreground-color-base);
-  text-decoration: none;
-}
-
-.learn__itemExcerpt {
-  @include font_bodyCopy();
-  margin-bottom: pxToRem($grid-unit * 4);
-  color: var(--foreground-color-base);
-  text-decoration: none;
-}
-
-.learn__link {
-  @include hard_button_base();
+.grid__item__copy {
+  @include font_bodyCopy;
   margin-bottom: pxToRem($grid-unit);
 }
+
+.tagRow {
+  display: flex;
+  flex-direction: row;
+  margin-top: pxToRem($grid-unit * 4);
+}
+
+.tag {
+  @include chip_tag;
+  margin-right: pxToRem($grid-unit);
+}
+
