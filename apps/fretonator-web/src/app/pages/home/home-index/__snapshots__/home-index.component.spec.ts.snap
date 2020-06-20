@@ -1624,6 +1624,12 @@ exports[`HomeIndexComponent should create 1`] = `
                 >
                   These patterns always appear in the same order, one after the other.
                 </p>
+                <a
+                  class="similarModes__cta"
+                  href="/learn/patterns"
+                >
+                  Learn more
+                </a>
               </div>
             </app-similar-modes>
           </div>

@@ -38,3 +38,8 @@
     margin-bottom: 0;
   }
 }
+
+.similarModes__cta {
+  @include hard_button_base;
+  margin-left: auto;
+}
