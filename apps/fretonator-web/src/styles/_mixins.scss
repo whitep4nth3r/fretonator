@@ -78,7 +78,7 @@
 
 @mixin chip_tag(
   $bgColor: var(--background-color-base),
-  $fgColor: var(--foreground-color-base))  {
+  $fgColor: var(--foreground-color-base)) {
 
   border-width: var(--border-width-button);
   border-style: solid;
@@ -101,7 +101,8 @@
 
 @mixin hard_button_base(
   $foregroundColor: var(--offwhite),
-  $backgroundColor: var(--black)) {
+  $backgroundColor: var(--black),
+  $hoverColor: var(--yellow)) {
   border-radius: var(--border-radius-button);
   border: pxToRem(2) solid $foregroundColor;
   text-transform: uppercase;
@@ -123,8 +124,8 @@
   @include focus_accessible();
 
   &:hover {
-    border-color: var(--yellow);
-    color: var(--yellow);
+    border-color: $hoverColor;
+    color: $hoverColor;
   }
 }
 

@@ -36,5 +36,6 @@ describe('ContactIndexComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(component).toMatchSnapshot();
   });
 });
