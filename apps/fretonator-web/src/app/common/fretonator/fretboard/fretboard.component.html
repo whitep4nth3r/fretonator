@@ -15,6 +15,12 @@
   </ng-container>
 </ng-template>
 
+<ng-template #fretboardHelp>
+  <ng-container *ngFor="let fret of frets">
+    <span class="fretboard__help" [attr.data-fret]="fret"></span>
+  </ng-container>
+</ng-template>
+
 <div class="fretboard__toggle">
   <button class="fretboard__toggleButton fretboard__toggleButton--twelve"
           [class.fretboard__toggleButton--active]="fretMode === fretModes.twelve"
@@ -63,6 +69,13 @@
     <ng-container
       [ngTemplateOutlet]="string"
       [ngTemplateOutletContext]="{ stringName: 'E', string: 'E' }"
+    ></ng-container>
+  </div>
+
+  <div class="fretboard"
+       [class.fretboard__24]="fretMode === fretModes.twentyFour">
+    <ng-container
+      [ngTemplateOutlet]="fretboardHelp"
     ></ng-container>
   </div>
 </div>

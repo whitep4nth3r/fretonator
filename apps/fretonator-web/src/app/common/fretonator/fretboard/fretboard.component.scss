@@ -20,6 +20,32 @@
   }
 }
 
+.fretboard__help {
+  text-align: center;
+  padding-top: pxToRem($grid-unit * 4);
+
+  &[data-fret="3"],
+  &[data-fret="5"],
+  &[data-fret="7"],
+  &[data-fret="9"],
+  &[data-fret="12"],
+  &[data-fret="15"],
+  &[data-fret="17"],
+  &[data-fret="19"],
+  &[data-fret="21"],
+  &[data-fret="24"] {
+    &:after {
+      content: attr(data-fret);
+      font-family: var(--font-family-main);
+      font-style: italic;
+      font-weight: var(--font-weight-bold);
+      color: var(--grey);
+      font-size: pxToRem(14);
+      opacity: 0.5;
+    }
+  }
+}
+
 .fretboard__24 {
   .fretboard__cell {
     &:nth-child(-n + 13) {
@@ -377,7 +403,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: pxToRem($grid-unit * 4);
+  margin-bottom: pxToRem($grid-unit * 2);
   color: var(--grey);
   line-height: 1;
   margin-left: auto;
