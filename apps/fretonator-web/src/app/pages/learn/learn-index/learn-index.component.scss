@@ -12,6 +12,10 @@
   @include content_title;
 }
 
+.learn__subtitle {
+  @include fretonator_section_title;
+}
+
 .learn__introCopy {
   @include content_intro_copy;
 }

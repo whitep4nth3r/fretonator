@@ -3,19 +3,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FretonatorComponent } from './fretonator.component';
 import { FretonatorModule } from './fretonator.module';
 import { Component } from '@angular/core';
-import { By } from '@angular/platform-browser';
 
 describe('FretonatorComponent', () => {
-
-  const selectors = {
-    twelveButton: By.css('.fretboard__toggleButton--twelve'),
-    twentyFourButton: By.css('.fretboard__toggleButton--twentyFour')
-  };
-
-  const classNames = {
-    toggleFretButtonSelected: 'fretboard__toggleButton--active'
-  };
-
   @Component({
     selector: 'app-fretonator-spec',
     template: `
@@ -54,5 +43,6 @@ describe('FretonatorComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(component).toMatchSnapshot();
   });
 });

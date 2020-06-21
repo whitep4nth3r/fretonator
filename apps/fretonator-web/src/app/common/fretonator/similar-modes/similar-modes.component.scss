@@ -39,6 +39,11 @@
   }
 }
 
+.emphasis {
+  font-weight: var(--font-weight-bold);
+  font-style: italic;
+}
+
 .similarModes__cta {
   @include hard_button_base;
   margin-left: auto;

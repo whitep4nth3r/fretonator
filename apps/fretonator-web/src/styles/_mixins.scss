@@ -23,7 +23,7 @@
   font-size: inherit;
   color: var(--grey);
   cursor: pointer;
-  border-bottom: pxToRem(1) solid var(--grey);
+  border-bottom: pxToRem(2) solid var(--grey);
   padding-bottom: pxToRem(1);
   transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 

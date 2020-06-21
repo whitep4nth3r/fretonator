@@ -3,6 +3,19 @@
 @import '../../../../styles/typography';
 @import '../../../../styles/content';
 
+.breadcrumbs {
+  margin-top: pxToRem($grid-unit * 2);
+  margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.breadcrumbs__link {
+  @include text_link;
+}
+
+.breadcrumbs__link__svg {
+  color: inherit;
+}
+
 .patterns__container {
   @include content_container;
   margin-bottom: pxToRem($grid-unit * 6);
