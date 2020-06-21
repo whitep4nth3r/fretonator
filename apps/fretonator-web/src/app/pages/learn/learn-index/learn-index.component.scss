@@ -79,5 +79,7 @@
 .tag {
   @include chip_tag;
   margin-right: pxToRem($grid-unit);
+  border-width: 0;
+  background-color: var(--peach);
 }
 
