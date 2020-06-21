@@ -1,7 +1,7 @@
 <div class="similarModes" *ngIf="similarModes.length > 0 && !isTheoretical">
   <h4 class="similarModes__title">Did you know?</h4>
-  <p class="similarModes__copy">If you know {{modeDisplayString}} on the fretboard,
-    you can already play the modes below!</p>
+  <p class="similarModes__copy">If you know the notes of {{modeDisplayString}}, you can play the modes below, which use
+    the exact same notes.</p>
 
   <div class="chipsContainer">
     <app-chips>
@@ -12,6 +12,9 @@
                 (chipClick)="onModeChange()">{{mode.noteDisplayName}} {{mode.mode | titlecase}}</app-chip>
     </app-chips>
   </div>
+
+  <p class="similarModes__copy">What's more, if you know the Ionian pattern, you can play the Ionian mode in any key. Just play the
+    pattern starting on your chosen starting note (root note).</p>
 
   <p class="similarModes__copy">In order to play and jam in all 7 of the main modes, you <span class="emphasis">only need to learn 7
     patterns</span>.
