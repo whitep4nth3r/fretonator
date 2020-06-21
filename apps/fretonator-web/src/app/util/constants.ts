@@ -982,6 +982,7 @@ export const PatternFretMaps = {
     { string: 'G', fret: 10, displayName: '', degree: '' },
     { string: 'G', fret: 12, displayName: '', degree: '' },
     { string: 'G', fret: 14, displayName: '', degree: '' },
+    { string: 'G', fret: 15, displayName: '', degree: 'ghost' },
     { string: 'B', fret: 3, displayName: '', degree: 'ghost' },
     { string: 'B', fret: 5, displayName: '', degree: 'ghost' },
     { string: 'B', fret: 6, displayName: '', degree: 'ghost' },
