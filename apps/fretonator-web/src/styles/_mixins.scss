@@ -107,10 +107,10 @@
   border: pxToRem(2) solid $foregroundColor;
   text-transform: uppercase;
   font-family: var(--font-family-main);
-  font-size: pxToRem(18);
+  font-size: pxToRem(16);
   display: inline-block;
   background-color: $backgroundColor;
-  padding: pxToRem($grid-unit) pxToRem($grid-unit * 2);
+  padding: pxToRem($grid-unit * 2);
   color: $foregroundColor;
   text-decoration: none;
   cursor: pointer;

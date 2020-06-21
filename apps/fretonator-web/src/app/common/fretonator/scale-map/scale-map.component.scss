@@ -85,7 +85,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: pxToRem($grid-unit * 8);
+  margin-bottom: pxToRem($grid-unit * 4);
   width: 100%;
 
   @media screen and (min-width: $screen-med) {
@@ -230,5 +230,6 @@
 
 .actionButton {
   @include hard_button_base();
-  margin-left: auto;
+  margin-bottom: pxToRem($grid-unit * 2);
+  align-self: flex-start;
 }

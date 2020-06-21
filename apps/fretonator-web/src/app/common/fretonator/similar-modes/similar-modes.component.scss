@@ -46,5 +46,5 @@
 
 .similarModes__cta {
   @include hard_button_base;
-  margin-left: auto;
+  align-self: flex-start;
 }

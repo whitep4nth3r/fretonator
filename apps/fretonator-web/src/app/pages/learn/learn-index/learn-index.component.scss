@@ -67,6 +67,7 @@
       var(--offwhite),
       var(--purple)
   );
+  margin-bottom: pxToRem($grid-unit * 4);
 }
 
 .tagRow {
