@@ -1652,7 +1652,7 @@ exports[`HomeIndexComponent should create 1`] = `
                   class="similarModes__cta"
                   href="/learn/patterns"
                 >
-                  Learn about patterns
+                  Go to the Hub
                 </a>
               </div>
             </app-similar-modes>
