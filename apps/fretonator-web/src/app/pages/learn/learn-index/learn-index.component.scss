@@ -30,12 +30,7 @@
 }
 
 .grid__item {
-  background-color: var(--white);
-  padding: pxToRem($grid-unit * 2);
-  border: pxToRem(2) solid var(--foreground-color-base);
-  text-decoration: none;
-  color: var(--foreground-color-base);
-  @include hard_box_shadow(var(--grey));
+  @include card;
 }
 
 .grid__item--link {
@@ -65,7 +60,7 @@
 .grid__item__button {
   @include hard_button_base(
       var(--black),
-      var(--peach),
+      var(--offwhite),
       var(--purple)
   );
 }

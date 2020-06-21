@@ -4,6 +4,7 @@ import { PatternsIndexComponent } from './patterns-index.component';
 import { Component, DebugElement } from '@angular/core';
 import { LearnModule } from '../learn.module';
 import { By } from '@angular/platform-browser';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('PatternsIndexComponent', () => {
   const selectors = {
@@ -29,7 +30,8 @@ describe('PatternsIndexComponent', () => {
     TestBed.configureTestingModule({
       declarations: [PatternsIndexComponentSpec],
       imports: [
-        LearnModule
+        LearnModule,
+        RouterTestingModule
       ]
     })
       .compileComponents();

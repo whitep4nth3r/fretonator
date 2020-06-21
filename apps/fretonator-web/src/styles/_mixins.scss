@@ -35,9 +35,9 @@
   }
 }
 
-@mixin divider {
+@mixin divider($color: var(--peach)) {
   border-width: pxToRem(2);
-  border-color: var(--peach);
+  border-color: $color;
   border-style: solid;
   margin-top: pxToRem($grid-unit * 4);
   margin-bottom: pxToRem($grid-unit * 4);
@@ -153,4 +153,14 @@
   }
 
   @include focus_accessible();
+}
+
+
+@mixin card {
+  background-color: var(--white);
+  padding: pxToRem($grid-unit * 2);
+  border: pxToRem(2) solid var(--foreground-color-base);
+  text-decoration: none;
+  color: var(--foreground-color-base);
+  @include hard_box_shadow(var(--grey));
 }
