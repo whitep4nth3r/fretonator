@@ -38,3 +38,13 @@
     margin-bottom: 0;
   }
 }
+
+.emphasis {
+  font-weight: var(--font-weight-bold);
+  font-style: italic;
+}
+
+.similarModes__cta {
+  @include hard_button_base;
+  align-self: flex-start;
+}

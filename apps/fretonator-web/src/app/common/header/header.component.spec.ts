@@ -61,20 +61,34 @@ describe('HeaderComponent', () => {
   describe('Links', () => {
 
     let home: DebugElement;
+    let learn: DebugElement;
     let about: DebugElement;
+    let contact: DebugElement;
+    let donate: DebugElement;
 
     beforeEach(() => {
       const links = fixture.debugElement.queryAll(selectors.links);
       home = links[0];
-      about = links[1];
+      learn = links[1];
+      about = links[2];
+      contact = links[3];
+      donate = links[3];
     });
 
     it('Home should link to /', () => {
       expect(home.properties.href).toBe('/');
     });
 
+    it('Learn should link to /learn', () => {
+      expect(learn.properties.href).toBe('/learn');
+    });
+
     it('About should link to /about', () => {
       expect(about.properties.href).toBe('/about');
+    });
+
+    it('Contact should link to /contact', () => {
+      expect(contact.properties.href).toBe('/contact');
     });
   });
 

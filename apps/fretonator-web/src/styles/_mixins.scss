@@ -23,7 +23,7 @@
   font-size: inherit;
   color: var(--grey);
   cursor: pointer;
-  border-bottom: pxToRem(1) solid var(--grey);
+  border-bottom: pxToRem(2) solid var(--grey);
   padding-bottom: pxToRem(1);
   transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 
@@ -32,6 +32,29 @@
   &:active {
     color: var(--peach);
     border-color: var(--peach);
+  }
+}
+
+@mixin divider($color: var(--peach)) {
+  border-width: pxToRem(2);
+  border-color: $color;
+  border-style: solid;
+  margin-top: pxToRem($grid-unit * 4);
+  margin-bottom: pxToRem($grid-unit * 4);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin chips_group {
+  padding-top: pxToRem($grid-unit);
+  padding-bottom: pxToRem($grid-unit);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: pxToRem($grid-unit * -1);
+
+  @media screen and (min-width: 400px) {
+    justify-content: center;
   }
 }
 
@@ -53,17 +76,41 @@
   @include focus_accessible();
 }
 
+@mixin chip_tag(
+  $bgColor: var(--background-color-base),
+  $fgColor: var(--foreground-color-base)) {
+
+  border-width: var(--border-width-button);
+  border-style: solid;
+  border-color: $fgColor;
+  background-color: $bgColor;
+  color: $fgColor;
+  padding: pxToRem(4) pxToRem(8);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+  font-size: pxToRem(14);
+  text-decoration: none;
+  border-radius: var(--border-radius-chip);
+}
+
+@mixin hard_box_shadow(
+  $color: var(--black),
+  $size: pxToRem($grid-unit)) {
+  box-shadow: $size $size 0 0 $color;
+}
+
 @mixin hard_button_base(
-    $foregroundColor: var(--offwhite),
-    $backgroundColor: var(--black)) {
+  $foregroundColor: var(--offwhite),
+  $backgroundColor: var(--black),
+  $hoverColor: var(--yellow)) {
   border-radius: var(--border-radius-button);
   border: pxToRem(2) solid $foregroundColor;
   text-transform: uppercase;
   font-family: var(--font-family-main);
-  font-size: pxToRem(18);
+  font-size: pxToRem(16);
   display: inline-block;
   background-color: $backgroundColor;
-  padding: pxToRem($grid-unit) pxToRem($grid-unit * 2);
+  padding: pxToRem($grid-unit * 2);
   color: $foregroundColor;
   text-decoration: none;
   cursor: pointer;
@@ -71,12 +118,49 @@
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-display);
   margin-top: pxToRem($grid-unit * 3);
-  box-shadow: 8px 8px 0 0 $foregroundColor;
+
+  @include hard_box_shadow($foregroundColor, 8px);
 
   @include focus_accessible();
 
   &:hover {
-    border-color: var(--yellow);
-    color: var(--yellow);
+    border-color: $hoverColor;
+    color: $hoverColor;
   }
+}
+
+@mixin button_base {
+  border-width: var(--border-width-button);
+  border-style: solid;
+  border-color: var(--black);
+  background-color: var(--black);
+  border-radius: var(--border-radius-button);
+  padding: pxToRem($grid-unit * 2) pxToRem($grid-unit * 4);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+  font-size: pxToRem(20);
+  text-decoration: none;
+  color: var(--offwhite);
+  text-transform: uppercase;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--grey);
+    border-color: var(--grey);
+  }
+
+  @include focus_accessible();
+}
+
+
+@mixin card {
+  background-color: var(--white);
+  padding: pxToRem($grid-unit * 2);
+  border: pxToRem(2) solid var(--foreground-color-base);
+  text-decoration: none;
+  color: var(--foreground-color-base);
+  @include hard_box_shadow(var(--grey));
 }

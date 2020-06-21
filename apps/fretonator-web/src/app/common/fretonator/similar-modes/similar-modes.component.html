@@ -1,7 +1,7 @@
 <div class="similarModes" *ngIf="similarModes.length > 0 && !isTheoretical">
   <h4 class="similarModes__title">Did you know?</h4>
-  <p class="similarModes__copy">If you know the patterns of {{modeDisplayString}} on the fretboard,
-    you can transfer those shapes to the modes below.</p>
+  <p class="similarModes__copy">If you know the notes of {{modeDisplayString}}, you can play the modes below, which use
+    the exact same notes.</p>
 
   <div class="chipsContainer">
     <app-chips>
@@ -13,9 +13,21 @@
     </app-chips>
   </div>
 
-  <p class="similarModes__copy">There are only 7 patterns you need to learn. Once you've memorised those patterns,
-    you can play any of the 7 standard modes <em>(Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aolian, Locrian</em>)
-    from
-    any starting note, anywhere on the fretboard.</p>
-  <p class="similarModes__copy">These patterns always appear in the same order, one after the other.</p>
+  <p class="similarModes__copy">What's more, if you know the Ionian pattern, you can play the Ionian mode in any key. Just play the
+    pattern starting on your chosen starting note (root note).</p>
+
+  <p class="similarModes__copy">In order to play and jam in all 7 of the main modes, you <span class="emphasis">only need to learn 7
+    patterns</span>.
+  </p>
+  <p class="similarModes__copy">These patterns always appear in <span class="emphasis">the exact same order</span>
+    across
+    the fretboard, regardless of the starting note or mode.</p>
+
+  <p class="similarModes__copy">You might have heard this named as the <span
+    class="emphasis">3 note per string</span> method. Learn more about this and the 7 standard modes of the major scale
+    in our
+    learning hub.</p>
+  <a [routerLink]="['/', 'learn', 'patterns']"
+     [state]="{scrollToTop: true}"
+     class="similarModes__cta">Learn about patterns</a>
 </div>

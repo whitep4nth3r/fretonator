@@ -11,6 +11,11 @@ const about: Route = {
   loadChildren: () => import('./pages/about/about.module').then((mod) => mod.AboutModule)
 };
 
+const learn: Route = {
+  path: 'learn',
+  loadChildren: () => import('./pages/learn/learn.module').then((mod) => mod.LearnModule),
+};
+
 const contact: Route = {
   path: 'contact',
   loadChildren: () => import('./pages/contact/contact.module').then((mod) => mod.ContactModule)
@@ -21,7 +26,7 @@ const notFound: Route = {
   loadChildren: () => import('./pages/not-found/not-found.module').then((mod) => mod.NotFoundModule)
 };
 
-const routes: Routes = [home, about, contact, notFound];
+const routes: Routes = [home, about, learn, contact, notFound];
 
 @NgModule({
   imports: [

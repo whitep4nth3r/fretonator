@@ -77,10 +77,6 @@ export interface NoteObject {
 
 export type ModeMap = NoteObject[];
 
-export type ScaleNote = string;
-
-export type Scale = ScaleNote[];
-
 export enum NoteExtenderString {
   sharp = 'sharp',
   natural = 'natural',

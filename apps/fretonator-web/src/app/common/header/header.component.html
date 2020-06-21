@@ -40,7 +40,16 @@
       >
     </li>
     <li class="header__linksItem">
+      <a [routerLink]="['/', 'learn']"
+         [state]="{scrollToTop: true}"
+         routerLinkActive="header__linksItemLink--active"
+         class="header__linksItemLink"
+      >Learn</a
+      >
+    </li>
+    <li class="header__linksItem">
       <a [routerLink]="['/', 'about']"
+         [state]="{scrollToTop: true}"
          routerLinkActive="header__linksItemLink--active"
          class="header__linksItemLink"
       >About</a

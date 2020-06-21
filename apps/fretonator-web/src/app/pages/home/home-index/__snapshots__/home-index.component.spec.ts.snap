@@ -340,730 +340,805 @@ exports[`HomeIndexComponent should create 1`] = `
           </app-chips>
         </div>
         <app-fretonator>
-          
           <h5
             class="fretonator__sectionTitle"
           >
             Check out the fretboard
           </h5>
-          <div
-            class="fretboard__toggle"
-          >
-            <button
-              class="fretboard__toggleButton fretboard__toggleButton--twelve fretboard__toggleButton--active"
-            >
-              12 frets 
-            </button>
-            <button
-              class="fretboard__toggleButton fretboard__toggleButton--twentyFour"
-            >
-              24 frets 
-            </button>
-          </div>
-          <div
-            class="arrowHint"
-          >
-            <span
-              class="arrowHint__arrow"
-            />
-          </div>
-          <div
-            class="fretboard__container"
-          >
+          <app-fretboard>
+            
+            
             <div
-              class="fretboard"
+              class="fretboard__toggle"
             >
-              
-              
-              
-              <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
-                data-degree="mediant"
-                data-display-note="E"
-                data-fret="0"
-                data-mode="ionian"
-                data-string="E"
-                data-string-name="e"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="subdominant"
-                data-display-note="F"
-                data-fret="1"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="2"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="dominant"
-                data-display-note="G"
-                data-fret="3"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="4"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="submediant"
-                data-display-note="A"
-                data-fret="5"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="6"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="leadingTone"
-                data-display-note="B"
-                data-fret="7"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="tonic"
-                data-display-note="C"
-                data-fret="8"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="9"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="supertonic"
-                data-display-note="D"
-                data-fret="10"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="11"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="mediant"
-                data-display-note="E"
-                data-fret="12"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              
-              
-              
-              <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
-                data-degree="leadingTone"
-                data-display-note="B"
-                data-fret="0"
-                data-mode="ionian"
-                data-string="B"
-                data-string-name="B"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="tonic"
-                data-display-note="C"
-                data-fret="1"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="2"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="supertonic"
-                data-display-note="D"
-                data-fret="3"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="4"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="mediant"
-                data-display-note="E"
-                data-fret="5"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="subdominant"
-                data-display-note="F"
-                data-fret="6"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="7"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="dominant"
-                data-display-note="G"
-                data-fret="8"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="9"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="submediant"
-                data-display-note="A"
-                data-fret="10"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="11"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="leadingTone"
-                data-display-note="B"
-                data-fret="12"
-                data-mode="ionian"
-                data-string="B"
-              />
-              
-              
-              
-              
-              <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
-                data-degree="dominant"
-                data-display-note="G"
-                data-fret="0"
-                data-mode="ionian"
-                data-string="G"
-                data-string-name="G"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="1"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="submediant"
-                data-display-note="A"
-                data-fret="2"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="3"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="leadingTone"
-                data-display-note="B"
-                data-fret="4"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="tonic"
-                data-display-note="C"
-                data-fret="5"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="6"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="supertonic"
-                data-display-note="D"
-                data-fret="7"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="8"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="mediant"
-                data-display-note="E"
-                data-fret="9"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="subdominant"
-                data-display-note="F"
-                data-fret="10"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="11"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="dominant"
-                data-display-note="G"
-                data-fret="12"
-                data-mode="ionian"
-                data-string="G"
-              />
-              
-              
-              
-              
-              <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
-                data-degree="supertonic"
-                data-display-note="D"
-                data-fret="0"
-                data-mode="ionian"
-                data-string="D"
-                data-string-name="D"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="1"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="mediant"
-                data-display-note="E"
-                data-fret="2"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="subdominant"
-                data-display-note="F"
-                data-fret="3"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="4"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="dominant"
-                data-display-note="G"
-                data-fret="5"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="6"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="submediant"
-                data-display-note="A"
-                data-fret="7"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="8"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="leadingTone"
-                data-display-note="B"
-                data-fret="9"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="tonic"
-                data-display-note="C"
-                data-fret="10"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="11"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="supertonic"
-                data-display-note="D"
-                data-fret="12"
-                data-mode="ionian"
-                data-string="D"
-              />
-              
-              
-              
-              
-              <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
-                data-degree="submediant"
-                data-display-note="A"
-                data-fret="0"
-                data-mode="ionian"
-                data-string="A"
-                data-string-name="A"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="1"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="leadingTone"
-                data-display-note="B"
-                data-fret="2"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="tonic"
-                data-display-note="C"
-                data-fret="3"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="4"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="supertonic"
-                data-display-note="D"
-                data-fret="5"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="6"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="mediant"
-                data-display-note="E"
-                data-fret="7"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="subdominant"
-                data-display-note="F"
-                data-fret="8"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="9"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="dominant"
-                data-display-note="G"
-                data-fret="10"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="11"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="submediant"
-                data-display-note="A"
-                data-fret="12"
-                data-mode="ionian"
-                data-string="A"
-              />
-              
-              
-              
-              
-              <div
-                class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
-                data-degree="mediant"
-                data-display-note="E"
-                data-fret="0"
-                data-mode="ionian"
-                data-string="E"
-                data-string-name="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="subdominant"
-                data-display-note="F"
-                data-fret="1"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="2"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="dominant"
-                data-display-note="G"
-                data-fret="3"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="4"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="submediant"
-                data-display-note="A"
-                data-fret="5"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="6"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="leadingTone"
-                data-display-note="B"
-                data-fret="7"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="tonic"
-                data-display-note="C"
-                data-fret="8"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="9"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="supertonic"
-                data-display-note="D"
-                data-fret="10"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell"
-                data-fret="11"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
-              <div
-                class="fretboard__cell fretboard__cell--selected"
-                data-degree="mediant"
-                data-display-note="E"
-                data-fret="12"
-                data-mode="ionian"
-                data-string="E"
-              />
-              
+              <button
+                class="fretboard__toggleButton fretboard__toggleButton--twelve fretboard__toggleButton--active"
+              >
+                12 frets 
+              </button>
+              <button
+                class="fretboard__toggleButton fretboard__toggleButton--twentyFour"
+              >
+                24 frets 
+              </button>
             </div>
-          </div>
-          <h4
-            class="fretonator__playCta"
-          >
-            <span
-              class="fretonator__playCtaIcon"
+            <div
+              class="arrowHint"
             >
-              <app-speaker-svg>
-                <svg
-                  aria-hidden="true"
-                  class="svg"
-                  role="img"
-                  viewBox="0 0 576 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zm233.32-51.08c-11.17-7.33-26.18-4.24-33.51 6.95-7.34 11.17-4.22 26.18 6.95 33.51 66.27 43.49 105.82 116.6 105.82 195.58 0 78.98-39.55 152.09-105.82 195.58-11.17 7.32-14.29 22.34-6.95 33.5 7.04 10.71 21.93 14.56 33.51 6.95C528.27 439.58 576 351.33 576 256S528.27 72.43 448.35 19.97zM480 256c0-63.53-32.06-121.94-85.77-156.24-11.19-7.14-26.03-3.82-33.12 7.46s-3.78 26.21 7.41 33.36C408.27 165.97 432 209.11 432 256s-23.73 90.03-63.48 115.42c-11.19 7.14-14.5 22.07-7.41 33.36 6.51 10.36 21.12 15.14 33.12 7.46C447.94 377.94 480 319.54 480 256zm-141.77-76.87c-11.58-6.33-26.19-2.16-32.61 9.45-6.39 11.61-2.16 26.2 9.45 32.61C327.98 228.28 336 241.63 336 256c0 14.38-8.02 27.72-20.92 34.81-11.61 6.41-15.84 21-9.45 32.61 6.43 11.66 21.05 15.8 32.61 9.45 28.23-15.55 45.77-45 45.77-76.88s-17.54-61.32-45.78-76.86z"
-                  />
-                </svg>
-              </app-speaker-svg>
-            </span>
-             Tap notes on the fretboard for sound!
+              <span
+                class="arrowHint__arrow"
+              />
+            </div>
+            <div
+              class="fretboard__container"
+            >
+              <div
+                class="fretboard"
+              >
+                
+                
+                
+                <div
+                  class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                  data-degree="mediant"
+                  data-display-note="E"
+                  data-fret="0"
+                  data-mode="ionian"
+                  data-string="E"
+                  data-string-name="e"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="subdominant"
+                  data-display-note="F"
+                  data-fret="1"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="2"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="dominant"
+                  data-display-note="G"
+                  data-fret="3"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="4"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="submediant"
+                  data-display-note="A"
+                  data-fret="5"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="6"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="leadingTone"
+                  data-display-note="B"
+                  data-fret="7"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="tonic"
+                  data-display-note="C"
+                  data-fret="8"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="9"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="supertonic"
+                  data-display-note="D"
+                  data-fret="10"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="11"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="mediant"
+                  data-display-note="E"
+                  data-fret="12"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                
+                
+                
+                <div
+                  class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                  data-degree="leadingTone"
+                  data-display-note="B"
+                  data-fret="0"
+                  data-mode="ionian"
+                  data-string="B"
+                  data-string-name="B"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="tonic"
+                  data-display-note="C"
+                  data-fret="1"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="2"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="supertonic"
+                  data-display-note="D"
+                  data-fret="3"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="4"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="mediant"
+                  data-display-note="E"
+                  data-fret="5"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="subdominant"
+                  data-display-note="F"
+                  data-fret="6"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="7"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="dominant"
+                  data-display-note="G"
+                  data-fret="8"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="9"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="submediant"
+                  data-display-note="A"
+                  data-fret="10"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="11"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="leadingTone"
+                  data-display-note="B"
+                  data-fret="12"
+                  data-mode="ionian"
+                  data-string="B"
+                />
+                
+                
+                
+                
+                <div
+                  class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                  data-degree="dominant"
+                  data-display-note="G"
+                  data-fret="0"
+                  data-mode="ionian"
+                  data-string="G"
+                  data-string-name="G"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="1"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="submediant"
+                  data-display-note="A"
+                  data-fret="2"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="3"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="leadingTone"
+                  data-display-note="B"
+                  data-fret="4"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="tonic"
+                  data-display-note="C"
+                  data-fret="5"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="6"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="supertonic"
+                  data-display-note="D"
+                  data-fret="7"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="8"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="mediant"
+                  data-display-note="E"
+                  data-fret="9"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="subdominant"
+                  data-display-note="F"
+                  data-fret="10"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="11"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="dominant"
+                  data-display-note="G"
+                  data-fret="12"
+                  data-mode="ionian"
+                  data-string="G"
+                />
+                
+                
+                
+                
+                <div
+                  class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                  data-degree="supertonic"
+                  data-display-note="D"
+                  data-fret="0"
+                  data-mode="ionian"
+                  data-string="D"
+                  data-string-name="D"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="1"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="mediant"
+                  data-display-note="E"
+                  data-fret="2"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="subdominant"
+                  data-display-note="F"
+                  data-fret="3"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="4"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="dominant"
+                  data-display-note="G"
+                  data-fret="5"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="6"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="submediant"
+                  data-display-note="A"
+                  data-fret="7"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="8"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="leadingTone"
+                  data-display-note="B"
+                  data-fret="9"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="tonic"
+                  data-display-note="C"
+                  data-fret="10"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="11"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="supertonic"
+                  data-display-note="D"
+                  data-fret="12"
+                  data-mode="ionian"
+                  data-string="D"
+                />
+                
+                
+                
+                
+                <div
+                  class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                  data-degree="submediant"
+                  data-display-note="A"
+                  data-fret="0"
+                  data-mode="ionian"
+                  data-string="A"
+                  data-string-name="A"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="1"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="leadingTone"
+                  data-display-note="B"
+                  data-fret="2"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="tonic"
+                  data-display-note="C"
+                  data-fret="3"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="4"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="supertonic"
+                  data-display-note="D"
+                  data-fret="5"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="6"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="mediant"
+                  data-display-note="E"
+                  data-fret="7"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="subdominant"
+                  data-display-note="F"
+                  data-fret="8"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="9"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="dominant"
+                  data-display-note="G"
+                  data-fret="10"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="11"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="submediant"
+                  data-display-note="A"
+                  data-fret="12"
+                  data-mode="ionian"
+                  data-string="A"
+                />
+                
+                
+                
+                
+                <div
+                  class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
+                  data-degree="mediant"
+                  data-display-note="E"
+                  data-fret="0"
+                  data-mode="ionian"
+                  data-string="E"
+                  data-string-name="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="subdominant"
+                  data-display-note="F"
+                  data-fret="1"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="2"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="dominant"
+                  data-display-note="G"
+                  data-fret="3"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="4"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="submediant"
+                  data-display-note="A"
+                  data-fret="5"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="6"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="leadingTone"
+                  data-display-note="B"
+                  data-fret="7"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="tonic"
+                  data-display-note="C"
+                  data-fret="8"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="9"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="supertonic"
+                  data-display-note="D"
+                  data-fret="10"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell"
+                  data-fret="11"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+                <div
+                  class="fretboard__cell fretboard__cell--selected"
+                  data-degree="mediant"
+                  data-display-note="E"
+                  data-fret="12"
+                  data-mode="ionian"
+                  data-string="E"
+                />
+                
+              </div>
+              <div
+                class="fretboard"
+              >
+                
+                
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="0"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="1"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="2"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="3"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="4"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="5"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="6"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="7"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="8"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="9"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="10"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="11"
+                />
+                
+                <span
+                  class="fretboard__help"
+                  data-fret="12"
+                />
+                
+              </div>
+            </div>
+            <h4
+              class="fretonator__playCta"
+            >
+              <span
+                class="fretonator__playCtaIcon"
+              >
+                <app-speaker-svg>
+                  <svg
+                    aria-hidden="true"
+                    class="svg"
+                    role="img"
+                    viewBox="0 0 576 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zm233.32-51.08c-11.17-7.33-26.18-4.24-33.51 6.95-7.34 11.17-4.22 26.18 6.95 33.51 66.27 43.49 105.82 116.6 105.82 195.58 0 78.98-39.55 152.09-105.82 195.58-11.17 7.32-14.29 22.34-6.95 33.5 7.04 10.71 21.93 14.56 33.51 6.95C528.27 439.58 576 351.33 576 256S528.27 72.43 448.35 19.97zM480 256c0-63.53-32.06-121.94-85.77-156.24-11.19-7.14-26.03-3.82-33.12 7.46s-3.78 26.21 7.41 33.36C408.27 165.97 432 209.11 432 256s-23.73 90.03-63.48 115.42c-11.19 7.14-14.5 22.07-7.41 33.36 6.51 10.36 21.12 15.14 33.12 7.46C447.94 377.94 480 319.54 480 256zm-141.77-76.87c-11.58-6.33-26.19-2.16-32.61 9.45-6.39 11.61-2.16 26.2 9.45 32.61C327.98 228.28 336 241.63 336 256c0 14.38-8.02 27.72-20.92 34.81-11.61 6.41-15.84 21-9.45 32.61 6.43 11.66 21.05 15.8 32.61 9.45 28.23-15.55 45.77-45 45.77-76.88s-17.54-61.32-45.78-76.86z"
+                    />
+                  </svg>
+                </app-speaker-svg>
+              </span>
+               Tap notes on the fretboard for sound!
   
-          </h4>
+            </h4>
+          </app-fretboard>
           
           
           <app-video-loader>
@@ -1468,7 +1543,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <p
                   class="similarModes__copy"
                 >
-                  If you know the patterns of C Ionian (Major) on the fretboard, you can transfer those shapes to the modes below.
+                  If you know the notes of C Ionian (Major), you can play the modes below, which use the exact same notes.
                 </p>
                 <div
                   class="chipsContainer"
@@ -1538,17 +1613,47 @@ exports[`HomeIndexComponent should create 1`] = `
                 <p
                   class="similarModes__copy"
                 >
-                  There are only 7 patterns you need to learn. Once you've memorised those patterns, you can play any of the 7 standard modes 
-                  <em>
-                    (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aolian, Locrian
-                  </em>
-                  ) from any starting note, anywhere on the fretboard.
+                  What's more, if you know the Ionian pattern, you can play the Ionian mode in any key. Just play the pattern starting on your chosen starting note (root note).
                 </p>
                 <p
                   class="similarModes__copy"
                 >
-                  These patterns always appear in the same order, one after the other.
+                  In order to play and jam in all 7 of the main modes, you 
+                  <span
+                    class="emphasis"
+                  >
+                    only need to learn 7 patterns
+                  </span>
+                  . 
                 </p>
+                <p
+                  class="similarModes__copy"
+                >
+                  These patterns always appear in 
+                  <span
+                    class="emphasis"
+                  >
+                    the exact same order
+                  </span>
+                   across the fretboard, regardless of the starting note or mode.
+                </p>
+                <p
+                  class="similarModes__copy"
+                >
+                  You might have heard this named as the 
+                  <span
+                    class="emphasis"
+                  >
+                    3 note per string
+                  </span>
+                   method. Learn more about this and the 7 standard modes of the major scale in our learning hub.
+                </p>
+                <a
+                  class="similarModes__cta"
+                  href="/learn/patterns"
+                >
+                  Learn about patterns
+                </a>
               </div>
             </app-similar-modes>
           </div>

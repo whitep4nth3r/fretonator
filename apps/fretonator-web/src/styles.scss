@@ -3,6 +3,21 @@
 @import "./styles/mixins";
 
 :root {
+  --black: #1c1c1c;
+  --white: #ffffff;
+  --offwhite: #f9f9f9;
+  --grey: #474350;
+  --yellow: #fafac6;
+  --peach: #fecdaa;
+  --blue: #3993dd;
+  --turquoise: #73eedc;
+  --purple: #adb9e3;
+
+  --error-bg: #d64045;
+  --error-fg: #f9f9f9;
+
+  --success-bg: #84dd63;
+
   --background-color-base: #f9f9f9;
   --background-color-light: #ffffff;
   --foreground-color-base: #1c1c1c;
@@ -24,6 +39,8 @@
 
   --note-bg-tonic: #fecdaa;
   --note-color-tonic: #1c1c1c;
+
+  --note-bg-ghost: #adb9e3;
 
   --note-bg-mediant: #73eedc;
   --note-color-mediant: #1c1c1c;
@@ -62,21 +79,6 @@
   --form-input-color: #ffffff;
   --form-input-autofill-bg-color: #fafac6;
   --form-input-autofill-color: #1c1c1c;
-
-  --black: #1c1c1c;
-  --white: #ffffff;
-  --offwhite: #f9f9f9;
-  --grey: #474350;
-  --yellow: #fafac6;
-  --peach: #fecdaa;
-  --blue: #3993dd;
-  --turquoise: #73eedc;
-  --purple: #adb9e3;
-
-  --error-bg: #d64045;
-  --error-fg: #f9f9f9;
-
-  --success-bg: #84dd63;
 
   --font-weight-normal: 300;
   --font-weight-bold: 500;

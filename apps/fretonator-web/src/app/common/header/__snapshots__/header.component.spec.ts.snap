@@ -83,6 +83,17 @@ exports[`HeaderComponent should match snapshot 1`] = `
       >
         <a
           class="header__linksItemLink"
+          href="/learn"
+          routerlinkactive="header__linksItemLink--active"
+        >
+          Learn
+        </a>
+      </li>
+      <li
+        class="header__linksItem"
+      >
+        <a
+          class="header__linksItemLink"
           href="/about"
           routerlinkactive="header__linksItemLink--active"
         >
