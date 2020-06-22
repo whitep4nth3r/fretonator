@@ -1146,7 +1146,7 @@ exports[`HomeIndexComponent should create 1`] = `
               class="learnHub__cta"
               href="/learn/patterns"
             >
-               Learn the 7 scale patterns on the guitar in the learning hub → 
+               Learn how to break this down into patterns in our learning hub → 
             </a>
           </div>
           
