@@ -17,5 +17,4 @@ export class FretonatorComponent {
   @Input() note: string;
   @Input() noteExtenderString: string;
   @Input() noteExtender: string;
-
 }
