@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FretonatorComponent } from './fretonator.component';
 import { FretonatorModule } from './fretonator.module';
 import { Component } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('FretonatorComponent', () => {
   @Component({
@@ -31,7 +32,7 @@ describe('FretonatorComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [FretonatorComponentSpec],
-      imports: [FretonatorModule]
+      imports: [FretonatorModule, RouterTestingModule]
     }).compileComponents();
   }));
 

@@ -11,6 +11,7 @@ import { VideoLoaderModule } from '../video-loader/video-loader.module';
 import { SymbolToNoteObjPipe } from './symbol-to-note-obj.pipe';
 import { GetJamTrackPipe } from './get-jam-track.pipe';
 import { FretboardModule } from './fretboard/fretboard.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FretboardModule } from './fretboard/fretboard.module';
     ScaleMapModule,
     SimilarModesModule,
     VideoLoaderModule,
-    FretboardModule
+    FretboardModule,
+    RouterModule
   ],
   exports: [
     FretonatorComponent

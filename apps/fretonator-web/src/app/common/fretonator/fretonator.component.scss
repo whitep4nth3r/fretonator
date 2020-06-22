@@ -18,3 +18,15 @@
   @include fretonator_section_title;
   text-align: center;
 }
+
+.cta__row {
+  text-align: center;
+  padding-top: pxToRem($grid-unit * 4);
+}
+
+.learnHub__cta {
+  @include text_link;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: pxToRem(30);
+}

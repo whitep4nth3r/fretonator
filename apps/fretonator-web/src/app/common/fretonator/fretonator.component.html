@@ -3,6 +3,14 @@
 <app-fretboard [fretMap]="fretMap"
                [mode]="mode"></app-fretboard>
 
+<div class="cta__row">
+  <a [routerLink]="['/','learn','patterns']"
+     [state]="{scrollToTop: true}"
+     class="learnHub__cta">
+    Learn the 7 scale patterns on the guitar in the learning hub &#8594;
+  </a>
+</div>
+
 <ng-container *ngIf="note | symbolToNoteObj: noteExtender | getJamTrack: mode">
   <app-video-loader [jamTrack]="note | symbolToNoteObj: noteExtender | getJamTrack: mode"></app-video-loader>
 </ng-container>
