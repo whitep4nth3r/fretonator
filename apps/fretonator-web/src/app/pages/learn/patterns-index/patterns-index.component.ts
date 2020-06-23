@@ -18,7 +18,7 @@ export class PatternsIndexComponent implements OnInit {
   shouldExpand = true;
   modesRequiringExpansion = [
     Mode.mixolydian,
-    Mode.aolian,
+    Mode.aeolian,
     Mode.locrian
   ];
 

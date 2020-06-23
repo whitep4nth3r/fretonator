@@ -38,7 +38,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.c,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'zp2aj8AQzTM',
     title: 'C Minor Groove Backing Track - Aeolian Mode',
     creator: 'Quist'
@@ -94,7 +94,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.cSharp,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: '8OC5bv5Swoo',
     title: 'Guitar Backing Track Rock Ballad - C# minor',
     creator: 'Gilad Perry'
@@ -150,7 +150,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.dFlat,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: '8OC5bv5Swoo',
     title: 'Guitar Backing Track Rock Ballad - C# minor',
     creator: 'Gilad Perry'
@@ -206,7 +206,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.d,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'LnqPVktUgNw',
     title: 'D Minor Scale (Aeolian) - Groovy Backing Track',
     creator: 'Quist'
@@ -262,7 +262,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.dSharp,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: '8xgBrlyZ5uM',
     title: 'D# minor Backing Track - D#m - D sharp - Hard Rock Metal Power Ballad Guitar Jam Backtrack',
     creator: 'Tomas Sandanus Music'
@@ -318,7 +318,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.eFlat,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: '8xgBrlyZ5uM',
     title: 'D# minor Backing Track - D#m - D sharp - Hard Rock Metal Power Ballad Guitar Jam Backtrack',
     creator: 'Tomas Sandanus Music'
@@ -374,7 +374,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.e,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'IolqIzmoC3g',
     title: 'Minor Blues Backing Track in Em (E Minor) TCDG',
     creator: 'TCDG Guitar Lessons'
@@ -430,7 +430,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.f,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'kT42dIifKZM',
     title: 'Epic Guitar Backing Track in F Minor - Quist',
     creator: 'Quist'
@@ -486,7 +486,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.fSharp,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'ncc9NdOk-Qo',
     title: 'Badass Aggressive Rock | Guitar Backing Track Jam in F# Minor',
     creator: 'Elevated Jam Tracks'
@@ -542,7 +542,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.gFlat,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'ncc9NdOk-Qo',
     title: 'Badass Aggressive Rock | Guitar Backing Track Jam in F# Minor',
     creator: 'Elevated Jam Tracks'
@@ -598,7 +598,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.g,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'q8Dl0oBPZvU',
     title: 'G Aeolian Mode Backing Track',
     creator: 'EffectiveMusicPractice'
@@ -654,7 +654,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.gSharp,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'lVlYZrhqbyQ',
     title: 'Psychedelic Bluesy Groove | Guitar Backing Track Jam in G# Minor',
     creator: 'Elevated Jam Tracks'
@@ -710,7 +710,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.aFlat,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'lVlYZrhqbyQ',
     title: 'Psychedelic Bluesy Groove | Guitar Backing Track Jam in G# Minor',
     creator: 'Elevated Jam Tracks'
@@ -766,7 +766,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.a,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'JnLbw0gLPsM',
     title: 'Deep Ethereal Ballad Guitar Backing Track Jam in A Minor',
     creator: 'Elevated Jam Tracks'
@@ -822,7 +822,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.aSharp,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'GsC474JU6iA',
     title: 'Bb Aeolian Mode Backing Track',
     creator: 'EffectiveMusicPractice'
@@ -878,7 +878,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.bFlat,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'GsC474JU6iA',
     title: 'Bb Aeolian Mode Backing Track',
     creator: 'EffectiveMusicPractice'
@@ -934,7 +934,7 @@ export const JamTracksData: JamTracks = [
   },
   {
     key: NoteSymbol.b,
-    mode: Mode.aolian,
+    mode: Mode.aeolian,
     youTubeId: 'B0DFOHmJnhQ',
     title: 'Pink Floyd Backing Track In B Minor',
     creator: 'QuantizeMusic'
