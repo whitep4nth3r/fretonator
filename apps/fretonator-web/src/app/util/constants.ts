@@ -445,7 +445,7 @@ export const ModePatterns = {
   phrygian: [1, 2, 2, 2, 1, 2, 2],
   lydian: [2, 2, 2, 1, 2, 2, 1],
   mixolydian: [2, 2, 1, 2, 2, 1, 2],
-  aolian: [2, 1, 2, 2, 1, 2, 2],
+  aeolian: [2, 1, 2, 2, 1, 2, 2],
   locrian: [1, 2, 2, 1, 2, 2, 2],
   harmonicMinor: [2, 1, 2, 2, 1, 3, 1],
   phrygianDominant: [1, 3, 1, 2, 1, 2, 2],
@@ -499,7 +499,7 @@ export const ChordPatterns = {
     ChordType.minor,
     ChordType.major
   ],
-  aolian: [
+  aeolian: [
     ChordType.minor,
     ChordType.diminished,
     ChordType.major,
@@ -585,8 +585,8 @@ export const ModeSelectorObjects = [
     displayName: 'Mixolydian'
   },
   {
-    name: Mode.aolian,
-    displayName: 'Aolian (Minor)'
+    name: Mode.aeolian,
+    displayName: 'Aeolian (Minor)'
   },
   {
     name: Mode.locrian,
@@ -616,7 +616,7 @@ export const PatternModeSelectors: Mode[] = [
   Mode.phrygian,
   Mode.lydian,
   Mode.mixolydian,
-  Mode.aolian,
+  Mode.aeolian,
   Mode.locrian
 ];
 
@@ -643,7 +643,7 @@ export const StandardModePatterns = [
   Mode.phrygian,
   Mode.lydian,
   Mode.mixolydian,
-  Mode.aolian,
+  Mode.aeolian,
   Mode.locrian
 ];
 
@@ -946,7 +946,7 @@ export const PatternFretMaps = {
     { string: 'e', fret: 15, displayName: '', degree: 'ghost' },
     { string: 'e', fret: 17, displayName: '', degree: 'ghost' }
   ],
-  aolian: [
+  aeolian: [
     { string: 'E', fret: 1, displayName: '', degree: 'ghost' },
     { string: 'E', fret: 3, displayName: '', degree: 'ghost' },
     { string: 'E', fret: 5, displayName: '', degree: 'ghost' },

@@ -401,7 +401,7 @@ export class FretMapService {
     }
 
     if (mode === Mode.minorPentatonic) {
-      mode = Mode.aolian;
+      mode = Mode.aeolian;
     }
 
     const noteSymbol = this.convertNoteObjectToNoteSymbol(startingNote);

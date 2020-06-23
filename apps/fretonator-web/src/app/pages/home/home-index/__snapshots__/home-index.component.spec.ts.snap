@@ -274,11 +274,11 @@ exports[`HomeIndexComponent should create 1`] = `
                 selectedcolor="default"
               >
                 <a
-                  aria-label="C Aolian (Minor)"
+                  aria-label="C Aeolian (Minor)"
                   class="chip"
-                  href="/c/natural/aolian"
+                  href="/c/natural/aeolian"
                 >
-                  Aolian (Minor)
+                  Aeolian (Minor)
                 </a>
               </app-chip>
               <app-chip
@@ -1601,11 +1601,11 @@ exports[`HomeIndexComponent should create 1`] = `
                       </app-chip>
                       <app-chip>
                         <a
-                          aria-label="A Aolian (Minor)"
+                          aria-label="A Aeolian (Minor)"
                           class="chip"
-                          href="/a/natural/aolian"
+                          href="/a/natural/aeolian"
                         >
-                          A Aolian
+                          A Aeolian
                         </a>
                       </app-chip>
                       <app-chip>

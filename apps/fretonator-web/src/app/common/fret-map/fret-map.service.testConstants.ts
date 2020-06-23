@@ -1297,7 +1297,7 @@ export const cIonianSimilarModes = [
   {
     noteDisplayName: 'A',
     note: 'a',
-    mode: 'aolian',
+    mode: 'aeolian',
     noteExtender: 'natural'
   },
   {
@@ -1318,7 +1318,7 @@ export const cLydianSimilarModes = [
   {
     noteDisplayName: 'E',
     note: 'e',
-    mode: 'aolian',
+    mode: 'aeolian',
     noteExtender: 'natural'
   },
   {

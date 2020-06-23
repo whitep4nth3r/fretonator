@@ -47,7 +47,7 @@ export enum Mode {
   phrygian = 'phrygian',
   lydian = 'lydian',
   mixolydian = 'mixolydian',
-  aolian = 'aolian',
+  aeolian = 'aeolian',
   locrian = 'locrian',
   harmonicMinor = 'harmonicMinor',
   phrygianDominant = 'phrygianDominant',

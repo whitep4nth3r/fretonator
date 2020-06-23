@@ -1336,13 +1336,13 @@ describe('FretMapService:convertFretMapConfigurationToDisplayString', () => {
     expect(result).toBe('C Ionian (Major)');
   });
 
-  it('returns D sharp Aolian (Minor)', () => {
+  it('returns D sharp Aeolian (Minor)', () => {
     const result = service.convertFretMapConfigurationToDisplayString(
       'd',
       NoteExtenderString.sharp,
-      Mode.aolian
+      Mode.aeolian
     );
-    expect(result).toBe('D sharp Aolian (Minor)');
+    expect(result).toBe('D sharp Aeolian (Minor)');
   });
 
   it('returns A flat Minor Pentatonic', () => {
@@ -1413,7 +1413,7 @@ describe('FretMapService:getStandardModesInOrder', () => {
       Mode.phrygian,
       Mode.lydian,
       Mode.mixolydian,
-      Mode.aolian,
+      Mode.aeolian,
       Mode.locrian,
       Mode.ionian
     ]);
