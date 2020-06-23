@@ -153,6 +153,7 @@
   position: relative;
   border-right: var(--fret-width-base) solid var(--fret-color);
   height: var(--string-height-base);
+  pointer-events: none;
 
   &:before {
     content: "";
@@ -230,6 +231,8 @@
 }
 
 .fretboard__cell--selected {
+  pointer-events: all;
+
   &:after {
     content: attr(data-display-note);
     height: var(--note-height);
