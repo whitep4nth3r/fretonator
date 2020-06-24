@@ -64,7 +64,6 @@ describe('HeaderComponent', () => {
     let learn: DebugElement;
     let about: DebugElement;
     let contact: DebugElement;
-    let donate: DebugElement;
 
     beforeEach(() => {
       const links = fixture.debugElement.queryAll(selectors.links);
@@ -72,7 +71,6 @@ describe('HeaderComponent', () => {
       learn = links[1];
       about = links[2];
       contact = links[3];
-      donate = links[3];
     });
 
     it('Home should link to /', () => {
