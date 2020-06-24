@@ -169,3 +169,14 @@
   width: pxToRem(20);
   margin-right: pxToRem($grid-unit / 2);
 }
+
+.footer__twitchButton {
+  background-color: #9147ff;
+  color: var(--white);
+  padding: pxToRem($grid-unit * 2);
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-bold);
+  border-radius: pxToRem(6);
+  text-decoration: none;
+  margin-top: pxToRem($grid-unit * 4);
+}
