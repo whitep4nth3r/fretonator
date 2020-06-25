@@ -30,6 +30,8 @@ Angular Prerender
 Netlify
 ```
 
+See `package.json` for commands available to the project.
+
 ### www.fretonator.com
 
 ---
