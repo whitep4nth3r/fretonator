@@ -3,13 +3,7 @@
 
 <img src="https://www.fretonator.com/assets/img/og_twitter.png">
 
-## Thanks for checking out the Fretonator!
-
-I’m a qualified music teacher that (somehow) ended up working as a lead software engineer (it’s a long story), and I built this for my husban️d.
-
-He’s a phenomenal guitarist, and over the past few years has worked on learning modes and scale theory for the guitar (with a little help from me). Obviously, the internet is great for this kind of stuff, but what he felt the world wide web was lacking was an interactive and informative tool to could use in his practice sessions that had everything he needed on one single page.
-
-## Enter the Fretonator!
+---
 
 The Fretonator is your new interactive tool for learning common modes on the guitar, understanding the chord theory behind the modes, and most importantly - having a jam.
 
@@ -30,48 +24,74 @@ Angular Prerender
 Netlify
 ```
 
+## The Fretonator is open source! 
+
+[Apache License, v2.0](https://github.com/ishythefishy/fretonator/blob/master/LICENSE)
+
+Want to contribute to the Fretonator? Here's now in 12 simple steps...
+
+### System requirements:
+
+```
+Node 14
+NPM
+```
 
 ### Build Instructions
-Requires Node (14) & NPM.
 
-1. Ensure Node Package Manager (NPM) and Angular CLI (NG) are installed.
+[1] Ensure Node Package Manager (NPM) and Angular CLI (NG) are installed.
+
 ```
 npm -v
 npm install -g @angular/cli
-ng --version
 ```
 
-2. Fork the repository.
+[2] Fork the repository.
 
-3. Clone your fork to your local development environment.
+[3] Clone your fork to your local development environment.
 ```
 git clone [url]
 ```
 
-4. Change into the Fretonator directory.
+[4] Navigate to the Fretonator directory.
 ```
 cd fretonator
 ```
 
-5. Install the dependencies.
+[5] Install the dependencies.
 ```
 npm install
 ```
 
-6. Run the local development server. This should open automatically in your browser but would be accessible via http://localhost:4200/.
+[6] Run your local development server. 
+
+The `--open` flag opens the application in your browser automatically and is not required.
+
 ```
 ng serve --open
 ```
 
+[7] Navigate to http://localhost:4200/ in your browser.
+
+[8] Write some code!
+
+[9] Open a pull request, and I'll take a look!
+
+[10] Things get merged.
+
+[11] A Netlify deployment is triggered automatically.
+
+###[12] PROFIT!!!
+
 ---
-```
-This project was generated using [Nx](https://nx.dev).
-```
+
 See `package.json` for test and build commands available to the project.
 
 ### www.fretonator.com
 
 ---
+
+## Other technical stuff
 
 This project was generated using [Nx](https://nx.dev).
 
