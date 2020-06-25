@@ -32,7 +32,7 @@ Netlify
 ```
 
 ### Build Instructions
-Requires Node & NPM.
+Requires Node (14) & NPM.
 
 1. Ensure Node Package Manager (NPM) and Angular CLI (NG) are installed.
 ```
@@ -40,12 +40,12 @@ npm -v
 npm install -g @angular/cli
 ng --version
 ```
-2. Fork the reposititory.
+2. Fork the repository.
 3. Clone your fork to your local development environment.
 ```
 git clone [url]
 ```
-4. Change into the Fretonantor directory.
+4. Change into the Fretonator directory.
 ```
 cd fretonator
 ```
