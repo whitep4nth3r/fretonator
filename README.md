@@ -30,7 +30,44 @@ Angular Prerender
 Netlify
 ```
 
-See `package.json` for commands available to the project.
+
+### Build Instructions
+Requires Node (14) & NPM.
+
+1. Ensure Node Package Manager (NPM) and Angular CLI (NG) are installed.
+```
+npm -v
+npm install -g @angular/cli
+ng --version
+```
+
+2. Fork the repository.
+
+3. Clone your fork to your local development environment.
+```
+git clone [url]
+```
+
+4. Change into the Fretonator directory.
+```
+cd fretonator
+```
+
+5. Install the dependencies.
+```
+npm install
+```
+
+6. Run the local development server. This should open automatically in your browser but would be accessible via http://localhost:4200/.
+```
+ng serve --open
+```
+
+---
+```
+This project was generated using [Nx](https://nx.dev).
+```
+See `package.json` for test and build commands available to the project.
 
 ### www.fretonator.com
 
@@ -141,4 +178,5 @@ Dependencies
 
 ```shell script
 jpegoptim -m75 *.jpg --overwrite
+
 ```
