@@ -354,6 +354,16 @@ exports[`HomeIndexComponent should create 1`] = `
               <button
                 class="fretboard__toggleButton fretboard__toggleButton--twelve fretboard__toggleButton--active"
               >
+                Left hand 
+              </button>
+              <button
+                class="fretboard__toggleButton fretboard__toggleButton--twelve fretboard__toggleButton--active"
+              >
+                Right hand 
+              </button>
+              <button
+                class="fretboard__toggleButton fretboard__toggleButton--twelve fretboard__toggleButton--active"
+              >
                 12 frets 
               </button>
               <button
