@@ -81,7 +81,7 @@ ng serve --open
 
 [11] A Netlify deployment is triggered automatically.
 
-###[12] PROFIT!!!
+### [12] PROFIT!!!
 
 ---
 
