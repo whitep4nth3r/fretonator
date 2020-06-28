@@ -1,12 +1,12 @@
 <div class="scaleMap__row">
   <div class="scaleDisplay">
-    <h4 class="scaleDisplay__title"
-        [class.infoHighlight]="isTheoretical"><span *ngIf="isTheoretical">Theoretical &nbsp;</span>Scale</h4>
+    <h3 class="scaleDisplay__title"
+        [class.infoHighlight]="isTheoretical"><span *ngIf="isTheoretical">Theoretical &nbsp;</span>Scale</h3>
     <div class="scaleDisplay__notes">
       <ng-container *ngFor="let note of modeMap; let i = index">
-        <h5 class="scaleDisplay__note">
+        <p class="scaleDisplay__note">
           {{ note.displayName }}
-        </h5>
+        </p>
       </ng-container>
     </div>
     <div class="buttonRow">
@@ -49,14 +49,14 @@
 <div class="infoBlock infoBlock--theoreticalScales"
      [attr.aria-expanded]="showTheoreticalScalesInfo"
      *ngIf="showTheoreticalScalesInfo">
-  <h2 class="infoBlock__title">About Theoretical Scales
+  <h3 class="infoBlock__title">About Theoretical Scales
     <button class="infoBlock__close"
             aria-label="Theoretical Scales Info Close"
             type="button"
             (click)="toggleTheoreticalScaleInfo()">
       <app-cross-svg></app-cross-svg>
     </button>
-  </h2>
+  </h3>
   <p class="infoBlock__copy">A theoretical scale or <em>impossible key</em> is a key whose key signature has at least
     one double flat (𝄫) or double sharp (x).</p>
   <p class="infoBlock__copy">{{modeDisplayString}} is a theoretical scale and looks unnecessarily complicated. We can
@@ -74,14 +74,14 @@
 <div class="infoBlock infoBlock--scaleDegrees"
      [attr.aria-expanded]="showScaleMapInfo"
      *ngIf="showScaleMapInfo">
-  <h2 class="infoBlock__title">About Scale Degrees
+  <h3 class="infoBlock__title">About Scale Degrees
     <button class="infoBlock__close"
             aria-label="Scale Degrees Info Close"
             type="button"
             (click)="toggleScaleMapInfo()">
       <app-cross-svg></app-cross-svg>
     </button>
-  </h2>
+  </h3>
   <p class="infoBlock__copy">
     Each of the 7 notes of a mode or scale is called a <em>scale degree</em>, and has a specific name.
   </p>
