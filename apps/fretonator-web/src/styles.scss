@@ -3,6 +3,17 @@
 @import "./styles/mixins";
 
 :root {
+
+  --black: #202124;
+  --white: #ffffff;
+  --offwhite: #f9f9f9;
+  --grey: #474350;
+  --yellow: #fafac6;
+  --peach: #fecdaa;
+  --blue: #3993dd;
+  --turquoise: #73eedc;
+  --purple: #adb9e3;
+
   --font-weight-normal: 300;
   --font-weight-bold: 500;
   --font-weight-display: 700;
@@ -24,70 +35,62 @@
 
   --border-width-button: 2px;
 
-  --header-background: #202124;
+  --header-background: var(--black);
   --header-logo-color: #e1e1e1;
 
-  --footer-background: #202124;
-  --footer-border-color: #fecdaa;
+  --footer-background: var(--black);
+  --footer-border-color: var(--peach);
   --footer-copy-color: #e1e1e1;
-  --footer-link-color: #fecdaa;
-  --footer-title-color: #fecdaa;
-  --footer-list-link-color: #fafac6;
+  --footer-link-color: var(--peach);
+  --footer-title-color: var(--peach);
+  --footer-list-link-color: var(--yellow);
 
-  --hamburger_layer-color: #fecdaa;
-  --header-link-color: #fecdaa;
+  --hamburger_layer-color: var(--peach);
+  --header-link-color: var(--peach);
 
-  --hero-background-color: #202124;
+  --hero-background-color: var(--black);
   --hero-title-color: #e1e1e1;
-  --hero-block-box-shadow-color: #474350;
+  --hero-block-box-shadow-color: var(--grey);
   --hero-toggle-foreground-color: #e1e1e1;
-  --hero-toggle-background-color: #202124;
+  --hero-toggle-background-color: var(--black);
 
-  --black: #202124;
-  --white: #ffffff;
-  --offwhite: #f9f9f9;
-  --grey: #474350;
-  --yellow: #fafac6;
-  --peach: #fecdaa;
-  --blue: #3993dd;
-  --turquoise: #73eedc;
-  --purple: #adb9e3;
+
 }
 
 :root[color-mode="light"] {
   --error-bg: #d64045;
-  --error-fg: #f9f9f9;
+  --error-fg: var(--offwhite);
 
   --success-bg: #84dd63;
 
-  --background-color-base: #f9f9f9;
+  --background-color-base: var(--offwhite);
   --background-color-light: #ffffff;
   --foreground-color-base: #1c1c1c;
-  --text-link-color: #474350;
-  --text-link-hover-color: #fecdaa;
+  --text-link-color: var(--grey);
+  --text-link-hover-color: var(--peach);
 
   --string-color: #1c1c1c;
   --string-label-color: #1c1c1c;
   --nut-color: #1a1a1a;
   --fret-color: rgba(28, 28, 28, 0.2);
-  --fretboard-help-text-color: #474350;
-  --fretboard-play-cta-color: #474350;
+  --fretboard-help-text-color: var(--grey);
+  --fretboard-play-cta-color: var(--grey);
 
   --fret-marker-url: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23dbdae0' /%3E%3C/svg%3E");
 
-  --note-color: #fafac6;
+  --note-color: var(--yellow);
   --note-background: #1c1c1c;
 
 
-  --note-bg-tonic: #fecdaa;
+  --note-bg-tonic: var(--peach);
   --note-color-tonic: #1c1c1c;
 
-  --note-bg-ghost: #adb9e3;
+  --note-bg-ghost: var(--purple);
 
-  --note-bg-mediant: #73eedc;
+  --note-bg-mediant: var(--turquoise);
   --note-color-mediant: #1c1c1c;
 
-  --note-bg-dominant: #adb9e3;
+  --note-bg-dominant: var(--purple);
   --note-color-dominant: #1c1c1c;
 
 
@@ -96,40 +99,48 @@
   --chip-border-color: #1c1c1c;
 
   --chip-background-color-active: #1c1c1c;
-  --chip-foreground-color-active: #f9f9f9;
+  --chip-foreground-color-active: var(--offwhite);
   --chip-border-color-active: #1c1c1c;
 
   --chip-background-color-muted: #ffffff;
-  --chip-foreground-color-muted: #474350;
-  --chip-border-color-muted: #474350;;
+  --chip-foreground-color-muted: var(--grey);
+  --chip-border-color-muted: var(--grey);;
 
-  --chip-foreground-color-muted-active: #f9f9f9;
-  --chip-background-color-muted-active: #474350;
-  --chip-border-color-muted-active: #474350;
+  --chip-foreground-color-muted-active: var(--offwhite);
+  --chip-background-color-muted-active: var(--grey);
+  --chip-border-color-muted-active: var(--grey);
 
   --form-container-bg-color: #1c1c1c;
-  --form-container-color: #f9f9f9;
-  --form-input-border-color: #f9f9f9;
+  --form-container-color: var(--offwhite);
+  --form-input-border-color: var(--offwhite);
   --form-input-bg-color: #1c1c1c;
-  --form-label-color: #f9f9f9;
+  --form-label-color: var(--offwhite);
   --form-input-color: #ffffff;
-  --form-input-autofill-bg-color: #fafac6;
+  --form-input-autofill-bg-color: var(--yellow);
   --form-input-autofill-color: #1c1c1c;
 
   --video-loader-background-color: #1c1c1c;
-  --info-toggle-foreground-color: #474350;
+  --info-toggle-foreground-color: var(--grey);
+  --card-background-color: #ffffff;
+  --card-border-color: #1c1c1c;
+  --card-box-shadow-color: var(--grey);
+  --card-image-border-color: #1c1c1c;
+  --chip-tag-background-color: var(--peach);
+  --chip-tag-foreground-color: var(--black);
+
+  --similar-modes-background-color: var(--peach);
 }
 
 :root[color-mode="dark"] {
   --error-bg: #d64045;
-  --error-fg: #f9f9f9;
+  --error-fg: var(--offwhite);
 
   --success-bg: #84dd63;
 
-  --background-color-base: #202124;
-  --background-color-light: #474350;
+  --background-color-base: var(--black);
+  --background-color-light: var(--grey);
   --foreground-color-base: #e1e1e1;
-  --text-link-color: #fecdaa;
+  --text-link-color: var(--peach);
   --text-link-hover-color: #FD7C21;
 
   --string-color: #e1e1e1;
@@ -141,10 +152,10 @@
 
   --fret-marker-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23474350'/%3E%3C/svg%3E");
 
-  --note-color: #202124;
+  --note-color: var(--black);
   --note-background: #b8b8b8;
 
-  --note-bg-tonic: #fecdaa;
+  --note-bg-tonic: var(--peach);
   --note-color-tonic: #1c1c1c;
 
   --note-bg-ghost: #768AD0;
@@ -155,33 +166,41 @@
   --note-bg-dominant: #CA5502;
   --note-color-dominant: #1c1c1c;
 
-  --chip-background-color: #474350;
+  --chip-background-color: var(--grey);
   --chip-foreground-color: #e1e1e1;
-  --chip-border-color: #474350;
+  --chip-border-color: var(--grey);
 
-  --chip-background-color-active: #fecdaa;
-  --chip-foreground-color-active: #202124;
-  --chip-border-color-active: #fecdaa;
+  --chip-background-color-active: var(--peach);
+  --chip-foreground-color-active: var(--black);
+  --chip-border-color-active: var(--peach);
 
-  --chip-background-color-muted: #474350;
+  --chip-background-color-muted: var(--grey);
   --chip-foreground-color-muted: #e1e1e1;
-  --chip-border-color-muted: #474350;
+  --chip-border-color-muted: var(--grey);
 
-  --chip-foreground-color-muted-active: #fecdaa;
-  --chip-background-color-muted-active: #202124;
-  --chip-border-color-muted-active: #fecdaa;
+  --chip-foreground-color-muted-active: var(--peach);
+  --chip-background-color-muted-active: var(--black);
+  --chip-border-color-muted-active: var(--peach);
 
   --form-container-bg-color: #1c1c1c;
-  --form-container-color: #f9f9f9;
-  --form-input-border-color: #f9f9f9;
+  --form-container-color: var(--offwhite);
+  --form-input-border-color: var(--offwhite);
   --form-input-bg-color: #1c1c1c;
-  --form-label-color: #f9f9f9;
+  --form-label-color: var(--offwhite);
   --form-input-color: #ffffff;
-  --form-input-autofill-bg-color: #fafac6;
+  --form-input-autofill-bg-color: var(--yellow);
   --form-input-autofill-color: #1c1c1c;
 
-  --video-loader-background-color: #474350;
+  --video-loader-background-color: var(--grey);
   --info-toggle-foreground-color: #e1e1e1;
+  --card-background-color: var(--grey);
+  --card-border-color: var(--grey);
+  --card-box-shadow-color: #0A0A0B;
+  --card-image-border-color: #0A0A0B;
+  --chip-tag-background-color: var(--peach);
+  --chip-tag-foreground-color: var(--black);
+
+  --similar-modes-background-color: var(--black);
 }
 
 body {

@@ -155,12 +155,11 @@
   @include focus_accessible();
 }
 
-
 @mixin card {
-  background-color: var(--white);
+  background-color: var(--card-background-color);
   padding: pxToRem($grid-unit * 2);
-  border: pxToRem(2) solid var(--foreground-color-base);
+  border: pxToRem(2) solid var(--card-border-color);
   text-decoration: none;
   color: var(--foreground-color-base);
-  @include hard_box_shadow(var(--grey));
+  @include hard_box_shadow(var(--card-box-shadow-color));
 }

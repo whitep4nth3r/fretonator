@@ -53,7 +53,7 @@
 
 .grid__item__image {
   width: 100%;
-  border: pxToRem(2) solid var(--black);
+  border: pxToRem(2) solid var(--card-image-border-color);
 }
 
 .grid__item__copy {
@@ -77,9 +77,11 @@
 }
 
 .tag {
-  @include chip_tag;
+  @include chip_tag(
+    $bgColor: var(--chip-tag-background-color),
+    $fgColor: var(--chip-tag-foreground-color)
+  );
   margin-right: pxToRem($grid-unit);
   border-width: 0;
-  background-color: var(--peach);
 }
 
