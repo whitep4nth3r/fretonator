@@ -4,10 +4,10 @@
 @import '../../../styles/typography';
 
 .footer {
-  background-color: var(--black);
+  background-color: var(--footer-background);
   box-sizing: border-box;
   padding: pxToRem($grid-unit * 6);
-  border-top: pxToRem($grid-unit) solid var(--peach);
+  border-top: pxToRem($grid-unit) solid var(--footer-border-color);
 }
 
 .footer__inner {
@@ -56,7 +56,7 @@
   @include font_bodyCopy;
   font-size: pxToRem(15);
   line-height: pxToRem(22);
-  color: var(--offwhite);
+  color: var(--footer-copy-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,8 +79,8 @@
 
 .footer__copy--link {
   @include text_link();
-  color: var(--peach);
-  border-color: var(--peach);
+  color: var(--footer-link-color);
+  border-color: var(--footer-link-color);
 }
 
 .footer__sectionTitle {
@@ -89,7 +89,7 @@
   line-height: pxToRem(28);
   margin-top: pxToRem($grid-unit);
   margin-bottom: pxToRem($grid-unit);
-  color: var(--peach);
+  color: var(--footer-title-color);
   font-weight: var(--font-weight-bold);
   display: flex;
   text-align: center;
@@ -114,19 +114,19 @@
   @include font_bodyCopy;
   font-size: pxToRem(15);
   line-height: pxToRem(26);
-  color: var(--offwhite);
+  color: var(--footer-copy-color);
 }
 
 .footer__listItemLink {
   @include text_link();
-  color: var(--yellow);
-  border-color: var(--yellow);
+  color: var(--footer-list-link-color);
+  border-color: var(--footer-list-link-color);
 
   @include focus_accessible();
 }
 
 .footer__copyright {
-  color: var(--offwhite);
+  color: var(--footer-copy-color);
   font-size: pxToRem(12);
   letter-spacing: var(--letter-spacing-display);
   font-weight: var(--font-weight-bold);
@@ -153,11 +153,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: var(--black);
+  background-color: var(--footer-background);
   margin-top: pxToRem($grid-unit * 4);
   padding: pxToRem($grid-unit / 2) pxToRem($grid-unit * 2);
-  color: var(--yellow);
-  border-color: var(--yellow);
+  color: var(--footer-link-color);
+  border-color: var(--footer-link-color);
 
   &:focus {
     border-color: transparent;
@@ -172,7 +172,7 @@
 
 .footer__twitchButton {
   background-color: #9147ff;
-  color: var(--white);
+  color: #ffffff;
   padding: pxToRem($grid-unit * 2);
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-bold);

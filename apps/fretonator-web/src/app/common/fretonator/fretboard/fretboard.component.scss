@@ -39,7 +39,7 @@
       font-family: var(--font-family-main);
       font-style: italic;
       font-weight: var(--font-weight-bold);
-      color: var(--grey);
+      color: var(--fretboard-help-text-color);
       font-size: pxToRem(14);
       opacity: 0.5;
     }
@@ -207,7 +207,7 @@
   &[data-string="G"][data-fret="21"],
   &[data-string="B"][data-fret="12"],
   &[data-string="D"][data-fret="12"] {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23dbdae0' /%3E%3C/svg%3E");
+    background-image: var(--fret-marker-url);
     background-repeat: no-repeat;
     background-position: center calc(var(--string-height-base) - 15px);
     background-size: 30px 30px;
@@ -223,7 +223,7 @@
   &[data-string="D"][data-fret="21"],
   &[data-string="G"][data-fret="12"],
   &[data-string="A"][data-fret="12"] {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23dbdae0' /%3E%3C/svg%3E");
+    background-image: var(--fret-marker-url);
     background-repeat: no-repeat;
     background-position: center -15px;
     background-size: 30px 30px;
@@ -407,7 +407,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: pxToRem($grid-unit * 2);
-  color: var(--grey);
+  color: var(--fretboard-play-cta-color);
   line-height: 1;
   margin-left: auto;
   margin-right: auto;
@@ -429,8 +429,8 @@
 }
 
 .fretboard__toggleButton--active {
-  background-color: var(--black);
-  color: var(--offwhite);
+  background-color: var(--chip-background-color-active);
+  color: var(--chip-foreground-color-active);
 }
 
 .fretboard__toggleButton--twelve {

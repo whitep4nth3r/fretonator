@@ -8,7 +8,7 @@
 }
 
 .hero {
-  background-color: var(--black);
+  background-color: var(--hero-background-color);
   display: block;
   width: 100%;
   padding-top: pxToRem($grid-unit * 4);
@@ -31,7 +31,7 @@
 .hero__title {
   font-family: var(--font-family-main);
   display: block;
-  color: var(--offwhite);
+  color: var(--hero-title-color);
   letter-spacing: var(--letter-spacing-display);
   font-size: pxToRem(14);
   text-transform: uppercase;
@@ -67,7 +67,7 @@
   padding-right: pxToRem($grid-unit * 2);
   padding-bottom: pxToRem($grid-unit * 4);
   margin: pxToRem($grid-unit);
-  box-shadow: 8px 8px 0 0 var(--grey);
+  box-shadow: 8px 8px 0 0 var(--hero-block-box-shadow-color);
 
   @media screen and (min-width: $screen-sm) {
     flex-basis: 20%;
@@ -116,9 +116,9 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
-  color: var(--offwhite);
-  background-color: var(--black);
-  border-color: var(--offwhite);
+  color: var(--hero-toggle-foreground-color);
+  background-color: var(--hero-toggle-background-color);
+  border-color: var(--hero-toggle-foreground-color);
   margin-top: pxToRem($grid-unit * 4);
 
   &:focus {

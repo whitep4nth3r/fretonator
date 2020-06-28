@@ -21,17 +21,17 @@
   font-weight: var(--font-weight-bold);
   text-decoration: none;
   font-size: inherit;
-  color: var(--grey);
+  color: var(--text-link-color);
   cursor: pointer;
-  border-bottom: pxToRem(2) solid var(--grey);
+  border-bottom: pxToRem(2) solid var(--text-link-color);
   padding-bottom: pxToRem(1);
   transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 
   &:focus,
   &:hover,
   &:active {
-    color: var(--peach);
-    border-color: var(--peach);
+    color: var(--text-link-hover-color);
+    border-color: var(--text-link-hover-color);
   }
 }
 
