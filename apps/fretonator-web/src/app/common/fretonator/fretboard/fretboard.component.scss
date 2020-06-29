@@ -13,7 +13,7 @@ $note-height: 36;
   padding-right: 0;
   padding-left: pxToRem($grid-unit * 5);
   padding-bottom: pxToRem($grid-unit * 4);
-  padding-top: pxToRem($grid-unit * 9);
+  padding-top: pxToRem($grid-unit * 7);
   overflow-x: auto;
   transition: max-width 0.09s ease-in-out;
 
@@ -393,7 +393,11 @@ $note-height: 36;
 .arrowHint {
   position: relative;
   display: block;
-  margin-top: pxToRem($grid-unit * 2);
+  margin-top: pxToRem($grid-unit * 4);
+
+  @media screen and (min-width: 712px) {
+    display: none;
+  }
 }
 
 .arrowHint__arrow {
@@ -408,9 +412,6 @@ $note-height: 36;
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 512 512'%3E%3Cpath fill='%233993dd' d='M319.1 217c20.2 20.2 19.9 53.2-.6 73.7s-53.5 20.8-73.7.6l-190-190c-20.1-20.2-19.8-53.2.7-73.7S109 6.8 129.1 27l190 190z'/%3E%3Cpath fill='%233993dd' d='M319.1 290.5c20.2-20.2 19.9-53.2-.6-73.7s-53.5-20.8-73.7-.6l-190 190c-20.2 20.2-19.9 53.2.6 73.7s53.5 20.8 73.7.6l190-190z'/%3E%3C/svg%3E");
   }
 
-  @media screen and (min-width: 712px) {
-    display: none;
-  }
 
   &.fretboard__flip {
     right: unset;
