@@ -364,12 +364,30 @@ exports[`HomeIndexComponent should create 1`] = `
               <button
                 class="fretboard__toggleButton fretboard__toggleButton--middle-right"
               >
-                Left handed 
+                <span
+                  class="toggle__shortLabel"
+                >
+                  LH
+                </span>
+                <span
+                  class="toggle__longLabel"
+                >
+                  Left handed
+                </span>
               </button>
               <button
                 class="fretboard__toggleButton fretboard__toggleButton--right fretboard__toggleButton--active"
               >
-                Right handed 
+                <span
+                  class="toggle__shortLabel"
+                >
+                  RH
+                </span>
+                <span
+                  class="toggle__longLabel"
+                >
+                  Right handed
+                </span>
               </button>
             </div>
             <div

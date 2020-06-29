@@ -32,11 +32,15 @@
   </button>
   <button class="fretboard__toggleButton fretboard__toggleButton--middle-right"
           [class.fretboard__toggleButton--active]="orientation === orientations.left"
-          (click)="setOrientation(orientations.left)">Left handed
+          (click)="setOrientation(orientations.left)">
+    <span class="toggle__shortLabel">LH</span>
+    <span class="toggle__longLabel">Left handed</span>
   </button>
   <button class="fretboard__toggleButton fretboard__toggleButton--right"
           [class.fretboard__toggleButton--active]="orientation === orientations.right"
-          (click)="setOrientation(orientations.right)">Right handed
+          (click)="setOrientation(orientations.right)">
+    <span class="toggle__shortLabel">RH</span>
+    <span class="toggle__longLabel">Right handed</span>
   </button>
 </div>
 

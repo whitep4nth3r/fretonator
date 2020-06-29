@@ -8,7 +8,9 @@ import { By } from '@angular/platform-browser';
 describe('FretboardComponent', () => {
   const selectors = {
     twelveButton: By.css('.fretboard__toggleButton--left'),
-    twentyFourButton: By.css('.fretboard__toggleButton--middle-left')
+    twentyFourButton: By.css('.fretboard__toggleButton--middle-left'),
+    rightButton: By.css('.fretboard__toggleButton--right'),
+    leftButton: By.css('.fretboard__toggleButton--middle-right')
   };
 
   const classNames = {
@@ -68,4 +70,26 @@ describe('FretboardComponent', () => {
       expect(twelveButton.classes[classNames.toggleFretButtonSelected]).toBeTruthy();
     });
   });
+
+  describe('setOrientation()', () => {
+    let leftButton: DebugElement;
+    let rightButton: DebugElement;
+
+    beforeEach(() => {
+      leftButton = fixture.debugElement.query(selectors.leftButton);
+      rightButton = fixture.debugElement.query(selectors.rightButton);
+    });
+
+    it('changes the fret mode to left orientation when the button is clicked', () => {
+      leftButton.nativeElement.click();
+      fixture.detectChanges();
+      expect(leftButton.classes[classNames.toggleFretButtonSelected]).toBeTruthy();
+    });
+
+    it('changes the fret mode to right orientation when the button is clicked', () => {
+      rightButton.nativeElement.click();
+      fixture.detectChanges();
+      expect(rightButton.classes[classNames.toggleFretButtonSelected]).toBeTruthy();
+    });
+  })
 });

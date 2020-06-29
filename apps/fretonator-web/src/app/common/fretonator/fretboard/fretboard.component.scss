@@ -451,6 +451,26 @@
   height: pxToRem(44);
 }
 
+.toggle__shortLabel {
+  display: inline;
+  font-weight: inherit;
+  padding-left: pxToRem($grid_unit * 1.5);
+  padding-right: pxToRem($grid_unit * 1.5);
+
+  @media screen and (min-width: $screen-med) {
+    display: none;
+  }
+}
+
+.toggle__longLabel {
+  display: none;
+  font-weight: inherit;
+
+  @media screen and (min-width: $screen-med) {
+    display: inline;
+  }
+}
+
 .fretboard__toggleButton--active {
   background-color: var(--black);
   color: var(--offwhite);
