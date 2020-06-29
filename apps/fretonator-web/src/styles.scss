@@ -34,8 +34,6 @@
 
   --note-color: #fafac6;
   --note-background: #1c1c1c;
-  --note-height: 36px;
-  --note-height-hover: 39px;
 
   --note-bg-tonic: #fecdaa;
   --note-color-tonic: #1c1c1c;
@@ -89,6 +87,7 @@
 
 body {
   margin: 0;
+  font-size: 16px;
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-normal);
   background-color: var(--background-color-base);
