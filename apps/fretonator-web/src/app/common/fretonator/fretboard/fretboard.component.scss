@@ -18,6 +18,11 @@
   &.fretboard__wide {
     max-width: $fretonator_max_width-wide;
   }
+
+  &.fretboard__flip {
+    padding-left: 0;
+    padding-right: pxToRem($grid-unit * 4);
+  }
 }
 
 .fretboard__help {
@@ -136,6 +141,14 @@
       bottom: 0;
       top: unset;
       transform: translate(-50%, calc(50% - 1px));
+    }
+  }
+
+  &.fretboard__leftHanded {
+    .fretboard__cell--string {
+      &:nth-last-child(-n + 25):after {
+        transform: translate(50%, calc(50% - 1px));
+      }
     }
   }
 }
@@ -383,6 +396,7 @@
 .arrowHint {
   position: relative;
   display: block;
+  margin-top: pxToRem($grid-unit * 2);
 }
 
 .arrowHint__arrow {
@@ -399,6 +413,12 @@
 
   @media screen and (min-width: 712px) {
     display: none;
+  }
+
+  &.fretboard__flip {
+    right: unset;
+    left: 0;
+    transform: rotate(180deg);
   }
 }
 
@@ -464,4 +484,33 @@
   height: pxToRem($grid-unit * 2);
   width: pxToRem($grid-unit * 2);
   margin-right: pxToRem($grid-unit);
+}
+
+
+.fretboard__leftHanded {
+  direction: rtl;
+
+  .fretboard__cell {
+    border-left: var(--fret-width-base) solid var(--fret-color);
+    border-right: unset;
+  }
+
+  .fretboard__cell--string {
+    border-left: pxToRem(6) solid var(--nut-color);
+    border-right: unset;
+
+    &:after {
+      transform: translate(50%, 50%);
+    }
+
+    &:nth-child(-n + 13):after {
+      transform: translate(50%, 6px);
+    }
+
+    &:nth-last-child(-n + 13):after {
+      bottom: 0;
+      top: unset;
+      transform: translate(50%, calc(50% - 1px));
+    }
+  }
 }
