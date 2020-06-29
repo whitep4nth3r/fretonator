@@ -22,6 +22,7 @@
   &.fretboard__flip {
     padding-left: 0;
     padding-right: pxToRem($grid-unit * 4);
+    direction: rtl;
   }
 }
 
@@ -487,8 +488,6 @@
 }
 
 .fretboard__leftHanded {
-  direction: rtl;
-
   .fretboard__cell {
     border-left: var(--fret-width-base) solid var(--fret-color);
     border-right: unset;
