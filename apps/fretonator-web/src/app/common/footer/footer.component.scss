@@ -156,8 +156,8 @@
   background-color: var(--footer-background);
   margin-top: pxToRem($grid-unit * 4);
   padding: pxToRem($grid-unit / 2) pxToRem($grid-unit * 2);
-  color: var(--footer-link-color);
-  border-color: var(--footer-link-color);
+  color: var(--footer-small-button-accent-color);
+  border-color: var(--footer-small-button-accent-color);
 
   &:focus {
     border-color: transparent;

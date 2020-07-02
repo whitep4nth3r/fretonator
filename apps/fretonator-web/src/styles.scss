@@ -12,7 +12,7 @@
   --blue: #3993dd;
   --turquoise: #73eedc;
   --purple: #adb9e3;
-  --coral: #F67983;
+  --coral: #ee9198;
   --mint: #D9F9A5;
 
   --font-weight-normal: 300;
@@ -46,6 +46,7 @@
   --footer-link-color: var(--peach);
   --footer-title-color: var(--peach);
   --footer-list-link-color: var(--yellow);
+  --footer-small-button-accent-color: var(--yellow);
 
   --hamburger_layer-color: var(--peach);
   --header-link-color: var(--peach);
@@ -172,8 +173,8 @@
 
   --fret-marker-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23474350'/%3E%3C/svg%3E");
 
-  --note-color: var(--offwhite);
-  --note-background: #76818E;
+  --note-color: var(--black);
+  --note-background: var(--offwhite);
 
   --note-bg-tonic: var(--peach);
   --note-color-tonic: var(--black);

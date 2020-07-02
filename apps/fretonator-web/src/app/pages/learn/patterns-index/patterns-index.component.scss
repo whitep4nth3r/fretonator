@@ -112,8 +112,8 @@
 
 .patterns__cta {
   @include hard_button_base(
-      var(--black),
-      var(--offwhite),
-      var(--purple)
+      var(--card-button-foreground),
+      var(--card-button-backgorund),
+      var(--card-button-hover)
   );
 }
