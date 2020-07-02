@@ -205,3 +205,23 @@
 .header__linksItemLink--active {
   border-bottom: pxToRem(2) solid var(--peach);
 }
+
+.toggle__container {
+  padding-left: pxToRem($grid-unit * 2);
+  padding-right: pxToRem($grid-unit * 2);
+
+  @media screen and (min-width: $screen-med) {
+    position: absolute;
+    top: pxToRem($grid-unit * 2);
+    right: 0;
+  }
+}
+
+.theme__toggle {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  height: pxToRem($grid-unit * 4);
+  width: pxToRem($grid-unit * 4);
+  color: var(--theme-toggle-color);
+}
