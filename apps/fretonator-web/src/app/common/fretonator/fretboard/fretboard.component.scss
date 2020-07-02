@@ -273,6 +273,12 @@ $note-height: 36;
     direction: ltr;
   }
 
+  &.learn__theme {
+    &:after {
+      background-color: var(--note-background-learn-theme);
+    }
+  }
+
   &:nth-child(-n + 13):after {
     transform: translate(-50%, 6px);
   }

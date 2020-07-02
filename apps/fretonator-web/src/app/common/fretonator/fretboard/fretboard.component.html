@@ -2,6 +2,7 @@
   <ng-container *ngFor="let fret of frets">
     <div
       class="fretboard__cell"
+      [class.learn__theme]="configuration === 'learn'"
       [class.fretboard__cell--string]="fret === 0"
       [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive"
       [attr.data-string-name]="fret === 0 ? stringName : null"

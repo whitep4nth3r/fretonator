@@ -3,7 +3,6 @@
 @import '../../../../styles/typography';
 @import '../../../../styles/content';
 
-
 .learn__container {
   @include content_container;
 }
@@ -53,7 +52,7 @@
 
 .grid__item__image {
   width: 100%;
-  border: pxToRem(2) solid var(--card-image-border-color);
+  border: pxToRem($grid-unit) solid var(--card-image-border-color);
 }
 
 .grid__item__copy {
@@ -63,9 +62,9 @@
 
 .grid__item__button {
   @include hard_button_base(
-      var(--black),
-      var(--offwhite),
-      var(--purple)
+      var(--card-button-foreground),
+      var(--card-button-backgorund),
+      var(--card-button-hover)
   );
   margin-bottom: pxToRem($grid-unit * 4);
 }

@@ -4,33 +4,7 @@
 .stripeBanner {
   display: block;
   width: 100%;
-}
-
-.stripeBanner__segment {
   position: relative;
-  height: pxToRem($grid-unit * 2);
-
-  &.grey {
-    background-color: var(--grey);
-  }
-
-  &.peach {
-    background-color: var(--peach);
-  }
-
-  &.yellow {
-    background-color: var(--yellow);
-  }
-
-  &.purple {
-    background-color: var(--purple);
-  }
-
-  &.blue {
-    background-color: var(--blue);
-  }
-
-  &.turquoise {
-    background-color: var(--turquoise);
-  }
+  height: pxToRem($grid-unit);
+  background-color: var(--stripe-banner-background);
 }
