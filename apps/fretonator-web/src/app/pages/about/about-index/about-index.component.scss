@@ -1,32 +1,31 @@
 @import '../../../../styles/vars';
 @import '../../../../styles/mixins';
 @import '../../../../styles/typography';
+@import '../../../../styles/content';
 
 .about__container {
-  @include content_wrapper();
+  @include content_container;
   max-width: $screen-med;
 }
 
 .about__subtitle {
-  @include font_medium;
-  text-transform: none;
-  font-weight: var(--font-weight-bold);
+  @include content_subtitle;
 }
 
 .about__title {
-  @include font_large;
+  @include content_title;
   margin-top: pxToRem($grid-unit * 4);
   margin-bottom: pxToRem($grid-unit * 2);
 }
 
 .about__copy {
-  @include font_bodyCopy;
+  @include content_copy;
   margin-top: pxToRem($grid-unit * 4);
   margin-bottom: pxToRem($grid-unit * 4);
 }
 
 .about__signOff {
-  @include font_bodyCopy;
+  @include content_copy;
   font-style: italic;
   font-weight: var(--font-weight-bold);
 }

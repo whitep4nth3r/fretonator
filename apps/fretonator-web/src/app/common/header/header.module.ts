@@ -4,6 +4,8 @@ import { HeaderComponent } from './header.component';
 import { RouterModule } from '@angular/router';
 import { LogoWithTextModule } from '../svgs/logo-with-text/logo-with-text.module';
 import { LogoNoTextModule } from '../svgs/logo-no-text/logo-no-text.module';
+import { MoonModule } from '../svgs/moon/moon.module';
+import { SunModule } from '../svgs/sun/sun.module';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -11,7 +13,9 @@ import { LogoNoTextModule } from '../svgs/logo-no-text/logo-no-text.module';
     CommonModule,
     RouterModule,
     LogoWithTextModule,
-    LogoNoTextModule
+    LogoNoTextModule,
+    MoonModule,
+    SunModule
   ],
   exports: [
     HeaderComponent

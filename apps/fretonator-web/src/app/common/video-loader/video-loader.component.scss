@@ -26,6 +26,7 @@
   font-size: pxToRem(20);
   font-style: italic;
   text-align: center;
+  color: var(--foreground-color-base);
 }
 
 .videoLoader__video {
@@ -34,7 +35,7 @@
   height: 0;
   padding-bottom: percentage(9/16);
   overflow: hidden;
-  background-color: var(--black);
+  background-color: var(--video-loader-background-color);
   position: relative;
 }
 

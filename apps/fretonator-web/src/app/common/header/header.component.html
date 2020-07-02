@@ -25,6 +25,16 @@
       </span>
     </a>
 
+    <div class="toggle__container">
+      <button class="theme__toggle"
+              [class.isDark]="darkColorMode"
+              [class.isLight]="!darkColorMode"
+              aria-label="Toggle dark/light mode"
+              (click)="toggleTheme()">
+        <app-moon-svg *ngIf="darkColorMode"></app-moon-svg>
+        <app-sun-svg *ngIf="!darkColorMode"></app-sun-svg>
+      </button>
+    </div>
   </div>
 
   <ul class="header__links"

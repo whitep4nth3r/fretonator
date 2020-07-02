@@ -3,7 +3,7 @@
 @import "./styles/mixins";
 
 :root {
-  --black: #1c1c1c;
+  --black: #202124;
   --white: #ffffff;
   --offwhite: #f9f9f9;
   --grey: #474350;
@@ -12,39 +12,22 @@
   --blue: #3993dd;
   --turquoise: #73eedc;
   --purple: #adb9e3;
+  --coral: #ee9198;
+  --mint: #D9F9A5;
 
-  --error-bg: #d64045;
-  --error-fg: #f9f9f9;
-
-  --success-bg: #84dd63;
-
-  --background-color-base: #f9f9f9;
-  --background-color-light: #ffffff;
-  --foreground-color-base: #1c1c1c;
+  --font-weight-normal: 300;
+  --font-weight-bold: 500;
+  --font-weight-display: 700;
+  --letter-spacing-display: 2px;
+  --letter-spacing-mega: 4px;
   --font-family-main: "Montserrat", sans-serif;
-
-  --string-color: #1c1c1c;
-  --string-label-color: #1c1c1c;
-  --nut-color: #1a1a1a;
-  --fret-color: rgba(28, 28, 28, 0.2);
 
   --fret-width-base: 2px;
   --fretboard-height: 100px;
   --string-height-base: 48px;
 
-  --note-color: #fafac6;
-  --note-background: #1c1c1c;
-
-  --note-bg-tonic: #fecdaa;
-  --note-color-tonic: #1c1c1c;
-
-  --note-bg-ghost: #adb9e3;
-
-  --note-bg-mediant: #73eedc;
-  --note-color-mediant: #1c1c1c;
-
-  --note-bg-dominant: #adb9e3;
-  --note-color-dominant: #1c1c1c;
+  --note-height: 36px;
+  --note-height-hover: 39px;
 
   --border-width-base: 1px;
   --border-radius-base: 2px;
@@ -53,36 +36,196 @@
 
   --border-width-button: 2px;
 
-  --chip-background-color: #ffffff;
-  --chip-foreground-color: #1c1c1c;
-  --chip-border-color: #1c1c1c;
+  --header-background: var(--black);
+  --header-logo-color: #e1e1e1;
+  --theme-toggle-color: #e1e1e1;
 
-  --chip-background-color-active: #1c1c1c;
-  --chip-foreground-color-active: #f9f9f9;
-  --chip-border-color-active: #1c1c1c;
+  --footer-background: var(--black);
+  --footer-border-color: var(--peach);
+  --footer-copy-color: #e1e1e1;
+  --footer-link-color: var(--peach);
+  --footer-title-color: var(--peach);
+  --footer-list-link-color: var(--yellow);
+  --footer-small-button-accent-color: var(--yellow);
+
+  --hamburger_layer-color: var(--peach);
+  --header-link-color: var(--peach);
+
+  --hero-background-color: var(--black);
+  --hero-title-color: #e1e1e1;
+  --hero-block-box-shadow-color: var(--grey);
+  --hero-toggle-foreground-color: #e1e1e1;
+  --hero-toggle-background-color: var(--black);
+
+
+}
+
+[color-mode="light"] {
+  --error-bg: #d64045;
+  --error-fg: var(--offwhite);
+
+  --success-bg: #84dd63;
+
+  --background-color-base: var(--offwhite);
+  --background-color-light: #ffffff;
+  --foreground-color-base: var(--black);
+  --text-link-color: var(--grey);
+  --text-link-hover-color: var(--peach);
+
+  --stripe-banner-background: var(--peach);
+
+  --hero-block-background-step-1: var(--peach);
+  --hero-block-background-step-2: var(--yellow);
+  --hero-block-background-step-3: var(--purple);
+  --hero-block-background-step-4: var(--turquoise);
+  --hero-block-background-step-5: var(--blue);
+
+  --string-color: var(--black);
+  --string-label-color: var(--black);
+  --nut-color: #1a1a1a;
+  --fret-color: rgba(28, 28, 28, 0.2);
+  --fretboard-help-text-color: var(--grey);
+  --fretboard-play-cta-color: var(--grey);
+
+  --fret-marker-url: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23dbdae0' /%3E%3C/svg%3E");
+
+  --note-color: var(--yellow);
+  --note-background: var(--black);
+
+  --note-bg-tonic: var(--peach);
+  --note-color-tonic: var(--black);
+
+  --note-background-learn-theme: var(--note-background);
+  --note-bg-ghost: var(--purple);
+
+  --note-bg-mediant: var(--turquoise);
+  --note-color-mediant: var(--black);
+
+  --note-bg-dominant: var(--purple);
+  --note-color-dominant: var(--black);
+
+  --chip-background-color: #ffffff;
+  --chip-foreground-color: var(--black);
+  --chip-border-color: var(--black);
+
+  --chip-background-color-active: var(--black);
+  --chip-foreground-color-active: var(--offwhite);
+  --chip-border-color-active: var(--black);
 
   --chip-background-color-muted: #ffffff;
-  --chip-foreground-color-muted: #474350;
-  --chip-border-color-muted: #474350;;
+  --chip-foreground-color-muted: var(--grey);
+  --chip-border-color-muted: var(--grey);
 
-  --chip-foreground-color-muted-active: #f9f9f9;
-  --chip-background-color-muted-active: #474350;
-  --chip-border-color-muted-active: #474350;
+  --chip-foreground-color-muted-active: var(--offwhite);
+  --chip-background-color-muted-active: var(--grey);
+  --chip-border-color-muted-active: var(--grey);
 
-  --form-container-bg-color: #1c1c1c;
-  --form-container-color: #f9f9f9;
-  --form-input-border-color: #f9f9f9;
-  --form-input-bg-color: #1c1c1c;
-  --form-label-color: #f9f9f9;
+  --form-container-bg-color: var(--black);
+  --form-container-color: var(--offwhite);
+  --form-input-border-color: var(--offwhite);
+  --form-input-bg-color: var(--black);
+  --form-label-color: var(--offwhite);
   --form-input-color: #ffffff;
-  --form-input-autofill-bg-color: #fafac6;
-  --form-input-autofill-color: #1c1c1c;
+  --form-input-autofill-bg-color: var(--yellow);
+  --form-input-autofill-color: var(--black);
 
-  --font-weight-normal: 300;
-  --font-weight-bold: 500;
-  --font-weight-display: 700;
-  --letter-spacing-display: 2px;
-  --letter-spacing-mega: 4px;
+  --video-loader-background-color: var(--black);
+  --info-toggle-foreground-color: var(--grey);
+  --card-background-color: #ffffff;
+  --card-border-color: var(--black);
+  --card-box-shadow-color: var(--grey);
+  --card-image-border-color: var(--black);
+  --card-button-foreground: var(--black);
+  --card-button-backgorund: var(--offwhite);
+  --card-button-hover: var(--purple);
+  --chip-tag-background-color: var(--peach);
+  --chip-tag-foreground-color: var(--black);
+
+  --similar-modes-background-color: var(--peach);
+}
+
+[color-mode="dark"] {
+  --error-bg: #d64045;
+  --error-fg: var(--offwhite);
+
+  --success-bg: #84dd63;
+
+  --background-color-base: var(--black);
+  --background-color-light: var(--grey);
+  --foreground-color-base: #e1e1e1;
+  --text-link-color: var(--peach);
+  --text-link-hover-color: #FD7C21;
+
+  --stripe-banner-background: var(--peach);
+
+  --hero-block-background-step-1: var(--peach);
+  --hero-block-background-step-2: var(--coral);
+  --hero-block-background-step-3: var(--mint);
+  --hero-block-background-step-4: var(--coral);
+  --hero-block-background-step-5: var(--peach);
+
+  --string-color: #e1e1e1;
+  --string-label-color: #e1e1e1;
+  --nut-color: #d3d3d3;
+  --fret-color: rgba(249, 249, 249, 0.2);
+  --fretboard-help-text-color: #e1e1e1;
+  --fretboard-play-cta-color: #d3d3d3;
+
+  --fret-marker-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23474350'/%3E%3C/svg%3E");
+
+  --note-color: var(--black);
+  --note-background: var(--offwhite);
+
+  --note-bg-tonic: var(--peach);
+  --note-color-tonic: var(--black);
+
+  --note-background-learn-theme: var(--mint);
+  --note-bg-ghost: #e0e0e0;
+
+  --note-bg-mediant: var(--coral);
+  --note-color-mediant: var(--black);
+
+  --note-bg-dominant: #D9F9A5;
+  --note-color-dominant: var(--black);
+
+  --chip-background-color: var(--grey);
+  --chip-foreground-color: #e1e1e1;
+  --chip-border-color: var(--grey);
+
+  --chip-background-color-active: var(--peach);
+  --chip-foreground-color-active: var(--black);
+  --chip-border-color-active: var(--peach);
+
+  --chip-background-color-muted: var(--grey);
+  --chip-foreground-color-muted: #e1e1e1;
+  --chip-border-color-muted: var(--grey);
+
+  --chip-foreground-color-muted-active: var(--peach);
+  --chip-background-color-muted-active: var(--black);
+  --chip-border-color-muted-active: var(--peach);
+
+  --form-container-bg-color: var(--black);
+  --form-container-color: var(--offwhite);
+  --form-input-border-color: var(--offwhite);
+  --form-input-bg-color: var(--black);
+  --form-label-color: var(--offwhite);
+  --form-input-color: #ffffff;
+  --form-input-autofill-bg-color: var(--yellow);
+  --form-input-autofill-color: var(--black);
+
+  --video-loader-background-color: var(--grey);
+  --info-toggle-foreground-color: #e1e1e1;
+  --card-background-color: var(--grey);
+  --card-border-color: var(--grey);
+  --card-box-shadow-color: #0A0A0B;
+  --card-image-border-color: var(--black);
+  --card-button-foreground: var(--offwhite);
+  --card-button-backgorund: var(--black);
+  --card-button-hover: var(--yellow);
+  --chip-tag-background-color: var(--coral);
+  --chip-tag-foreground-color: var(--black);
+
+  --similar-modes-background-color: var(--black);
 }
 
 body {
@@ -90,7 +233,6 @@ body {
   font-size: 16px;
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-normal);
-  background-color: var(--background-color-base);
 
   * {
     margin: 0;
@@ -98,3 +240,4 @@ body {
     font-weight: var(--font-weight-normal);
   }
 }
+

@@ -12,7 +12,7 @@
 }
 
 .similarModes {
-  background-color: var(--peach);
+  background-color: var(--similar-modes-background-color);
   padding: pxToRem($grid-unit * 4);
   margin-left: pxToRem($grid-unit * -4);
   margin-right: pxToRem($grid-unit * -4);
@@ -33,6 +33,7 @@
 .similarModes__copy {
   @include font_bodyCopy;
   margin-bottom: pxToRem($grid-unit * 2);
+  color: var(--foreground-color-base);
 
   &:last-of-type {
     margin-bottom: 0;

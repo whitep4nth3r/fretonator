@@ -3,7 +3,7 @@
 @import "../../../styles/mixins";
 
 .header {
-  background-color: var(--black);
+  background-color: var(--header-background);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
   align-items: center;
   width: pxToRem(60);
   cursor: pointer;
-  color: var(--offwhite);
+  color: var(--header-logo-color);
 
   @include focus_accessible();
 
@@ -103,7 +103,7 @@
   display: block;
   top: $hamburger_layer-height / 2;
   margin-top: $hamburger_layer-height / -2;
-  background-color: $hamburger_active-layer-color;
+  background-color: var(--hamburger_layer-color);
   transition: background-color 0s 0.13s linear;
 
   &,
@@ -113,7 +113,7 @@
     display: block;
     width: $hamburger_layer-width;
     height: $hamburger_layer-height;
-    background-color: $hamburger_layer-color;
+    background-color: var(--hamburger_layer-color);
     border-radius: $hamburger_layer-border-radius;
     position: absolute;
     transition-property: transform;
@@ -186,7 +186,7 @@
 }
 
 .header__linksItemLink {
-  color: var(--peach);
+  color: var(--header-link-color);
   font-size: pxToRem(14);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-display);
@@ -205,3 +205,27 @@
 .header__linksItemLink--active {
   border-bottom: pxToRem(2) solid var(--peach);
 }
+
+.toggle__container {
+  padding-left: pxToRem($grid-unit * 2);
+  padding-right: pxToRem($grid-unit * 2);
+
+  @media screen and (min-width: $screen-med) {
+    position: absolute;
+    top: pxToRem($grid-unit * 2);
+    right: 0;
+  }
+}
+
+.theme__toggle {
+  cursor: pointer;
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  height: pxToRem($grid-unit * 5);
+  width: pxToRem($grid-unit * 5);
+  color: var(--theme-toggle-color);
+
+  @include focus_accessible;
+}
+

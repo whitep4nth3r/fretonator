@@ -39,6 +39,7 @@
 
 <div class="fretboard__container">
   <app-fretboard
+    [configuration]="'learn'"
     [fretMap]="selectedFretMap"
     [stringNamesAreCaseSensitive]="true"
     [(loadExpanded)]="shouldExpand"></app-fretboard>

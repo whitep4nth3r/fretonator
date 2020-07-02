@@ -106,6 +106,7 @@
   justify-content: space-between;
   align-items: center;
   height: $infoContainer_info_row_height;
+  color: var(--foreground-color-base);
 }
 
 .scaleDisplay__note {
@@ -154,7 +155,6 @@
   }
 
   display: none;
-
 }
 
 .button__playScale__svg {
@@ -166,8 +166,8 @@
 
 .button__infoToggle {
   @include chip_button_base();
-  border-color: var(--grey);
-  color: var(--grey);
+  border-color: var(--info-toggle-foreground-color);
+  color: var(--info-toggle-foreground-color);
   margin-top: pxToRem($grid-unit * 2);
 }
 
