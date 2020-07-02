@@ -23,10 +23,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   setDarkColorMode(dark: Boolean) {
-    if (dark) {
-      this.colorMode = ColorModes.dark;
-    } else {
-      this.colorMode = ColorModes.light;
-    }
+    this.colorMode = dark ? ColorModes.dark : ColorModes.light;
   }
 }

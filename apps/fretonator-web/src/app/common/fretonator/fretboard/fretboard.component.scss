@@ -277,6 +277,12 @@ $note-height: 36;
     &:after {
       background-color: var(--note-background-learn-theme);
     }
+
+    &[data-degree="ghost"] {
+      &:after {
+        background-color: var(--note-bg-ghost);
+      }
+    }
   }
 
   &:nth-child(-n + 13):after {
