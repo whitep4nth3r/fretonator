@@ -22,11 +22,11 @@ export class AppComponent implements AfterViewInit {
     this.globalService.setGlobalScrollTarget(this.globalScrollTarget.nativeElement);
   }
 
-  toggleColorMode() {
-    if (this.colorMode === ColorModes.dark) {
-      this.colorMode = ColorModes.light;
-    } else {
+  setDarkColorMode(dark: Boolean) {
+    if (dark) {
       this.colorMode = ColorModes.dark;
+    } else {
+      this.colorMode = ColorModes.light;
     }
   }
 }

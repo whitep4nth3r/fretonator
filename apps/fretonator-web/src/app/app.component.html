@@ -1,6 +1,6 @@
 <div class="app__wrapper"
      [attr.color-mode]="colorMode">
-  <app-header (toggleColorMode)="toggleColorMode()"></app-header>
+  <app-header (setDarkColorMode)="setDarkColorMode($event)"></app-header>
   <main #globalScrollTarget role="main">
     <router-outlet></router-outlet>
   </main>
