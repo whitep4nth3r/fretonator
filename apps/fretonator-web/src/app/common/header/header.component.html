@@ -27,6 +27,8 @@
 
     <div class="toggle__container">
       <button class="theme__toggle"
+              [class.isDark]="darkColorMode"
+              [class.isLight]="!darkColorMode"
               aria-label="Toggle dark/light mode"
               (click)="toggleTheme()">
         <app-moon-svg *ngIf="darkColorMode"></app-moon-svg>

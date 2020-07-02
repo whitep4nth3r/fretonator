@@ -11,11 +11,14 @@ describe('HeaderComponent', () => {
     logo: By.css('.header__siteLogo'),
     links: By.css('.header__linksItemLink'),
     hamburger: By.css(`.hamburger`),
-    menu: By.css('.header__links')
+    menu: By.css('.header__links'),
+    themeToggleButton: By.css('.theme__toggle')
   };
 
   const classNames = {
-    menuHide: 'header__links--hide'
+    menuHide: 'header__links--hide',
+    isDark: 'isDark',
+    isLight: 'isLight'
   };
 
   @Component({
@@ -104,5 +107,24 @@ describe('HeaderComponent', () => {
     it('removes the hidden links modifier', () => {
       expect(menu.classes[classNames.menuHide]).toBeFalsy();
     });
+  });
+
+  describe('toggleTheme()', () => {
+    let themeToggleButton: DebugElement;
+
+    beforeEach(() => {
+      themeToggleButton = fixture.debugElement.query(selectors.themeToggleButton);
+      fixture.detectChanges();
+    });
+
+    it('has the dark class by default', () => {
+      expect(themeToggleButton.classes[classNames.isDark]).toBeTruthy();
+    })
+
+    it('switches the class to isLight when clicked', () => {
+      themeToggleButton.nativeElement.click();
+      fixture.detectChanges();
+      expect(themeToggleButton.classes[classNames.isLight]).toBeTruthy();
+    })
   });
 });
