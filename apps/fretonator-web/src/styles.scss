@@ -59,7 +59,7 @@
 
 }
 
-:root[color-mode="light"] {
+[color-mode="light"] {
   --error-bg: #d64045;
   --error-fg: var(--offwhite);
 
@@ -143,7 +143,7 @@
   --similar-modes-background-color: var(--peach);
 }
 
-:root[color-mode="dark"] {
+[color-mode="dark"] {
   --error-bg: #d64045;
   --error-fg: var(--offwhite);
 
@@ -232,7 +232,6 @@ body {
   font-size: 16px;
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-normal);
-  background-color: var(--background-color-base);
 
   * {
     margin: 0;
@@ -240,3 +239,4 @@ body {
     font-weight: var(--font-weight-normal);
   }
 }
+

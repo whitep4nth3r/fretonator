@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ColorModes } from '../../app.component';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Output() toggleColorMode = new EventEmitter<any>();
   isMenuVisible = false;
+  darkColorMode = true;
 
   constructor() {
   }
@@ -16,5 +19,10 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.isMenuVisible = !this.isMenuVisible;
+  }
+
+  toggleTheme() {
+    this.darkColorMode = !this.darkColorMode;
+    this.toggleColorMode.emit();
   }
 }

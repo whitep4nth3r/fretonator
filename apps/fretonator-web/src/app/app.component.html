@@ -1,5 +1,8 @@
-<app-header></app-header>
-<main #globalScrollTarget role="main">
-  <router-outlet></router-outlet>
-</main>
-<app-footer></app-footer>
+<div class="app__wrapper"
+     [attr.color-mode]="colorMode">
+  <app-header (toggleColorMode)="toggleColorMode()"></app-header>
+  <main #globalScrollTarget role="main">
+    <router-outlet></router-outlet>
+  </main>
+  <app-footer></app-footer>
+</div>

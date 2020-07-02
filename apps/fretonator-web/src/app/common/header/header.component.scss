@@ -218,10 +218,14 @@
 }
 
 .theme__toggle {
+  cursor: pointer;
   appearance: none;
   background-color: transparent;
   border: 0;
   height: pxToRem($grid-unit * 4);
   width: pxToRem($grid-unit * 4);
   color: var(--theme-toggle-color);
+
+  @include focus_accessible;
 }
+

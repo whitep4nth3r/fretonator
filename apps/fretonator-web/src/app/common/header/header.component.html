@@ -26,9 +26,10 @@
     </a>
 
     <div class="toggle__container">
-      <button class="theme__toggle">
-        <app-moon-svg></app-moon-svg>
-        <app-sun-svg></app-sun-svg>
+      <button class="theme__toggle"
+              (click)="toggleTheme()">
+        <app-moon-svg *ngIf="darkColorMode"></app-moon-svg>
+        <app-sun-svg *ngIf="!darkColorMode"></app-sun-svg>
       </button>
     </div>
   </div>

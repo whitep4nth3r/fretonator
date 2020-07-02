@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './common/header/header.module';
 import { FooterModule } from './common/footer/footer.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MoonModule } from './common/svgs/moon/moon.module';
+import { SunModule } from './common/svgs/sun/sun.module';
 
 // import { ServiceWorkerModule } from '@angular/service-worker';
 
@@ -16,7 +18,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     AppRoutingModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    MoonModule,
+    SunModule
     // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
