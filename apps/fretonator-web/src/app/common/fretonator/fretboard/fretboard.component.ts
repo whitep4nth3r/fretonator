@@ -46,6 +46,7 @@ export class FretboardComponent implements OnChanges, OnInit {
   @Input() mode: Mode;
   @Input() stringNamesAreCaseSensitive = false;
   @Input() loadExpanded = false;
+  @Input() configuration;
   orientation;
   fretMode;
   frets;
