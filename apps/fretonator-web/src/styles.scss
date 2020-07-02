@@ -6,6 +6,7 @@
   --black: #202124;
   --white: #ffffff;
   --offwhite: #f9f9f9;
+  --offwhite-alt: #e1e1e1;
   --grey: #474350;
   --yellow: #fafac6;
   --peach: #fecdaa;
@@ -37,27 +38,24 @@
   --border-width-button: 2px;
 
   --header-background: var(--black);
-  --header-logo-color: #e1e1e1;
-  --theme-toggle-color: #e1e1e1;
-
-  --footer-background: var(--black);
-  --footer-border-color: var(--peach);
-  --footer-copy-color: #e1e1e1;
-  --footer-link-color: var(--peach);
-  --footer-title-color: var(--peach);
-  --footer-list-link-color: var(--yellow);
-  --footer-small-button-accent-color: var(--yellow);
-
+  --header-logo-color: var(--offwhite-alt);
+  --header-border-color: var(--peach);
+  --theme-toggle-color: var(--offwhite-alt);
   --hamburger_layer-color: var(--peach);
   --header-link-color: var(--peach);
-
   --hero-background-color: var(--black);
-  --hero-title-color: #e1e1e1;
+  --hero-title-color: var(--offwhite-alt);
   --hero-block-box-shadow-color: var(--grey);
   --hero-toggle-foreground-color: #e1e1e1;
   --hero-toggle-background-color: var(--black);
 
-
+  --footer-background: var(--black);
+  --footer-border-color: var(--peach);
+  --footer-copy-color: var(--offwhite-alt);
+  --footer-link-color: var(--peach);
+  --footer-title-color: var(--peach);
+  --footer-list-link-color: var(--yellow);
+  --footer-small-button-accent-color: var(--yellow);
 }
 
 [color-mode="light"] {

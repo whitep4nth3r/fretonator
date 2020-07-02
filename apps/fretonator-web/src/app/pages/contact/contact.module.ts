@@ -8,8 +8,6 @@ import { ContactSuccessComponent } from './contact-success/contact-success.compo
 import { HttpClientModule } from '@angular/common/http';
 import { FormService } from './form.service';
 import { TickModule } from '../../common/svgs/tick/tick.module';
-import { StripeBannerModule } from '../../common/stripe-banner/stripe-banner.module';
-
 
 @NgModule({
   declarations: [ContactIndexComponent, ContactSuccessComponent],
@@ -20,7 +18,6 @@ import { StripeBannerModule } from '../../common/stripe-banner/stripe-banner.mod
     FormsModule,
     HttpClientModule,
     TickModule,
-    StripeBannerModule
   ],
   providers: [
     FormService
