@@ -222,8 +222,8 @@
   appearance: none;
   background-color: transparent;
   border: 0;
-  height: pxToRem($grid-unit * 4);
-  width: pxToRem($grid-unit * 4);
+  height: pxToRem($grid-unit * 5);
+  width: pxToRem($grid-unit * 5);
   color: var(--theme-toggle-color);
 
   @include focus_accessible;
