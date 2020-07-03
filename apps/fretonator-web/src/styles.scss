@@ -140,6 +140,8 @@
   --chip-tag-foreground-color: var(--black);
 
   --similar-modes-background-color: var(--peach);
+
+  --fretboard-toggle-button-border-color: var(--black);
 }
 
 [color-mode="dark"] {
@@ -224,6 +226,7 @@
   --chip-tag-foreground-color: var(--black);
 
   --similar-modes-background-color: var(--black);
+  --fretboard-toggle-button-border-color: var(--peach);
 }
 
 body {

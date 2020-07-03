@@ -502,13 +502,32 @@ $note-height: 36;
 }
 
 .control__panel__section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: pxToRem($grid-unit * 4);
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $screen-med) {
+    margin-bottom: 0;
+  }
 }
 
 .control__panel__title {
   @include info_container_title;
+  text-align: center;
+
+  @media screen and (min-width: $screen-med) {
+    text-align: left;
+  }
 }
 
 .control__panel__title--right {
-  text-align: right;
+  text-align: center;
+  @media screen and (min-width: $screen-med) {
+    text-align: right;
+  }
 }

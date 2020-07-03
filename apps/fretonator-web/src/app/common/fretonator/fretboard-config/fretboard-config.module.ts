@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FretboardConfigComponent } from './fretboard-config.component';
 
 
-
 @NgModule({
   declarations: [FretboardConfigComponent],
   exports: [

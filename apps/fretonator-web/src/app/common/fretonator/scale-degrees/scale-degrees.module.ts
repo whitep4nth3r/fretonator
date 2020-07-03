@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ScaleDegreesComponent } from './scale-degrees.component';
 
 
-
 @NgModule({
   declarations: [ScaleDegreesComponent],
   exports: [

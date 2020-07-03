@@ -23,17 +23,18 @@
               class="button__infoToggle button__infoToggle--theoretical"
               aria-label="Theoretical Scales Info Toggle"
               type="button"
+              [attr.aria-expanded]="showTheoreticalScalesInfo"
               (click)="toggleTheoreticalScaleInfo()">{{theoreticalScalesToggleText}}
       </button>
     </div>
   </div>
 
   <div class="scaleMap__degrees" *ngIf="mode | displayScaleDegrees">
-    <h4 class="scaleMap__title">Degrees</h4>
-    <app-scale-degrees></app-scale-degrees>
+    <h4 class="scaleMap__title">Scale Degrees</h4>
     <button class="button__infoToggle button__infoToggle--scaleDegrees"
             aria-label="Scale Degrees Info Toggle"
             type="button"
+            [attr.aria-expanded]="showScaleMapInfo"
             (click)="toggleScaleMapInfo()">{{scaleDegreesToggleText}}
     </button>
   </div>
@@ -93,7 +94,7 @@
     chord - meaning it's usually the chord that the jam track starts on and returns to often.
   </p>
   <p class="infoBlock__copy">
-    Scale degrees 1, 3, and 5 are highlighted on the fretboard to give you a helpful point of reference when learning
+    Scale degrees 1, 3, and 5 can be highlighted on the fretboard to give you a helpful point of reference when learning
     the mode.
   </p>
 </div>

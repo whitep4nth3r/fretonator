@@ -4,7 +4,7 @@ import { NotePlaybackService } from '../../playback/note-playback.service';
 import { GlobalService } from '../../../global.service';
 
 enum ScaleDegreesToggleText {
-  hidden = 'What is this?',
+  hidden = 'About scale degrees',
   visible = 'Hide info'
 }
 
