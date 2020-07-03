@@ -7,10 +7,10 @@ import { By } from '@angular/platform-browser';
 
 describe('FretboardComponent', () => {
   const selectors = {
-    twelveButton: By.css('.fretboard__toggleButton--left'),
-    twentyFourButton: By.css('.fretboard__toggleButton--middle-left'),
-    rightButton: By.css('.fretboard__toggleButton--right'),
-    leftButton: By.css('.fretboard__toggleButton--middle-right')
+    twelveButton: By.css('.fretboard__toggleButton.twelve'),
+    twentyFourButton: By.css('.fretboard__toggleButton.twentyFour'),
+    rightButton: By.css('.fretboard__toggleButton.right'),
+    leftButton: By.css('.fretboard__toggleButton.left')
   };
 
   const classNames = {

@@ -9,8 +9,8 @@ import { FretMode, Orientation } from '../fretboard/fretboard.component';
 export class FretboardConfigComponent {
   @Input() fretMode;
   @Input() fretModes;
-  @Input() orientations;
   @Input() orientation;
+  @Input() orientations;
   @Output() setFretMode = new EventEmitter<FretMode>();
   @Output() setOrientation = new EventEmitter<Orientation>();
 

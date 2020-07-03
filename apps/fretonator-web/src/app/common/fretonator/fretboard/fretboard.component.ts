@@ -70,7 +70,7 @@ export class FretboardComponent implements OnChanges, OnInit {
       default:
         this.orientation = Orientation.right;
     }
-    
+
     this.toggleHighlightTonic();
     this.configureFretboard();
   }

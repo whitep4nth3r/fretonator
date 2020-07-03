@@ -10,6 +10,7 @@ import { FretboardConfigComponent } from './fretboard-config.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
 })
-export class FretboardConfigModule { }
+export class FretboardConfigModule {
+}
