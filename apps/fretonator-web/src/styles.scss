@@ -6,6 +6,7 @@
   --black: #202124;
   --white: #ffffff;
   --offwhite: #f9f9f9;
+  --offwhite-alt: #e1e1e1;
   --grey: #474350;
   --yellow: #fafac6;
   --peach: #fecdaa;
@@ -37,27 +38,24 @@
   --border-width-button: 2px;
 
   --header-background: var(--black);
-  --header-logo-color: #e1e1e1;
-  --theme-toggle-color: #e1e1e1;
+  --header-logo-color: var(--offwhite-alt);
+  --header-border-color: var(--peach);
+  --theme-toggle-color: var(--offwhite-alt);
+  --hamburger_layer-color: var(--peach);
+  --header-link-color: var(--peach);
+  --hero-background-color: var(--black);
+  --hero-title-color: var(--offwhite-alt);
+  --hero-block-box-shadow-color: var(--grey);
+  --hero-toggle-foreground-color: var(--offwhite-alt);
+  --hero-toggle-background-color: var(--black);
 
   --footer-background: var(--black);
   --footer-border-color: var(--peach);
-  --footer-copy-color: #e1e1e1;
+  --footer-copy-color: var(--offwhite-alt);
   --footer-link-color: var(--peach);
   --footer-title-color: var(--peach);
   --footer-list-link-color: var(--yellow);
   --footer-small-button-accent-color: var(--yellow);
-
-  --hamburger_layer-color: var(--peach);
-  --header-link-color: var(--peach);
-
-  --hero-background-color: var(--black);
-  --hero-title-color: #e1e1e1;
-  --hero-block-box-shadow-color: var(--grey);
-  --hero-toggle-foreground-color: #e1e1e1;
-  --hero-toggle-background-color: var(--black);
-
-
 }
 
 [color-mode="light"] {
@@ -152,7 +150,7 @@
 
   --background-color-base: var(--black);
   --background-color-light: var(--grey);
-  --foreground-color-base: #e1e1e1;
+  --foreground-color-base: var(--offwhite-alt);
   --text-link-color: var(--peach);
   --text-link-hover-color: #FD7C21;
 
@@ -164,11 +162,11 @@
   --hero-block-background-step-4: var(--coral);
   --hero-block-background-step-5: var(--peach);
 
-  --string-color: #e1e1e1;
-  --string-label-color: #e1e1e1;
+  --string-color: var(--offwhite-alt);
+  --string-label-color: var(--offwhite-alt);
   --nut-color: #d3d3d3;
   --fret-color: rgba(249, 249, 249, 0.2);
-  --fretboard-help-text-color: #e1e1e1;
+  --fretboard-help-text-color: var(--offwhite-alt);
   --fretboard-play-cta-color: #d3d3d3;
 
   --fret-marker-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23474350'/%3E%3C/svg%3E");
@@ -189,7 +187,7 @@
   --note-color-dominant: var(--black);
 
   --chip-background-color: var(--grey);
-  --chip-foreground-color: #e1e1e1;
+  --chip-foreground-color: var(--offwhite-alt);
   --chip-border-color: var(--grey);
 
   --chip-background-color-active: var(--peach);
@@ -197,7 +195,7 @@
   --chip-border-color-active: var(--peach);
 
   --chip-background-color-muted: var(--grey);
-  --chip-foreground-color-muted: #e1e1e1;
+  --chip-foreground-color-muted: var(--offwhite-alt);
   --chip-border-color-muted: var(--grey);
 
   --chip-foreground-color-muted-active: var(--peach);
@@ -214,7 +212,7 @@
   --form-input-autofill-color: var(--black);
 
   --video-loader-background-color: var(--grey);
-  --info-toggle-foreground-color: #e1e1e1;
+  --info-toggle-foreground-color: var(--offwhite-alt);
   --card-background-color: var(--grey);
   --card-border-color: var(--grey);
   --card-box-shadow-color: #0A0A0B;

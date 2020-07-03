@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  border-top: pxToRem($grid-unit / 2) solid var(--header-border-color);
 }
 
 .header__topRow {

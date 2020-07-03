@@ -8,6 +8,7 @@ $top_block_max_width: $screen-med;
 @mixin content_container {
   @include content_wrapper();
   max-width: $screen-med;
+  margin-top: pxToRem($grid-unit * 4);
 }
 
 @mixin content_title {
