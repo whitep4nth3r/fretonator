@@ -22,29 +22,6 @@
   </ng-container>
 </ng-template>
 
-<div class="fretboard__toggle">
-  <button class="fretboard__toggleButton fretboard__toggleButton--left"
-          [class.fretboard__toggleButton--active]="fretMode === fretModes.twelve"
-          (click)="setFretMode(fretModes.twelve)">12 frets
-  </button>
-  <button class="fretboard__toggleButton fretboard__toggleButton--middle-left"
-          [class.fretboard__toggleButton--active]="fretMode === fretModes.twentyFour"
-          (click)="setFretMode(fretModes.twentyFour)">24 frets
-  </button>
-  <button class="fretboard__toggleButton fretboard__toggleButton--middle-right"
-          [class.fretboard__toggleButton--active]="orientation === orientations.left"
-          (click)="setOrientation(orientations.left)">
-    <span class="toggle__shortLabel">LH</span>
-    <span class="toggle__longLabel">Left handed</span>
-  </button>
-  <button class="fretboard__toggleButton fretboard__toggleButton--right"
-          [class.fretboard__toggleButton--active]="orientation === orientations.right"
-          (click)="setOrientation(orientations.right)">
-    <span class="toggle__shortLabel">RH</span>
-    <span class="toggle__longLabel">Right handed</span>
-  </button>
-</div>
-
 <div class="arrowHint">
   <span class="arrowHint__arrow"
         [class.fretboard__flip]="orientation === orientations.left"></span>
@@ -88,9 +65,7 @@
       [ngTemplateOutlet]="string"
       [ngTemplateOutletContext]="{ stringName: 'E', string: 'E' }"
     ></ng-container>
-
   </div>
-
 
   <div class="fretboard"
        [class.fretboard__leftHanded]="orientation === orientations.left"
@@ -99,6 +74,18 @@
       [ngTemplateOutlet]="fretboardHelp"
     ></ng-container>
   </div>
+</div>
+
+<div class="control__panel">
+  <app-scale-degrees></app-scale-degrees>
+  <app-fretboard-config
+    [fretMode]="fretMode"
+    [fretModes]="fretModes"
+    [orientation]="orientation"
+    [orientations]="orientations"
+    (setFretMode)="setFretMode($event)"
+    (setOrientation)="setOrientation($event)"
+  ></app-fretboard-config>
 </div>
 
 <p class="fretonator__playCta">

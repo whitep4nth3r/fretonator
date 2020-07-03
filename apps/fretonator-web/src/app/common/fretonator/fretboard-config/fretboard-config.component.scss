@@ -1,0 +1,63 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/functions";
+@import "../../../../styles/mixins";
+@import "../../../../styles/typography";
+
+.fretboard__toggle {
+  display: block;
+  text-align: center;
+}
+
+.fretboard__toggleButton {
+  @include chip_button_base();
+  height: pxToRem(44);
+}
+
+.toggle__shortLabel {
+  display: inline;
+  font-weight: inherit;
+  padding-left: pxToRem($grid_unit * 1.5);
+  padding-right: pxToRem($grid_unit * 1.5);
+
+  @media screen and (min-width: $screen-med) {
+    display: none;
+  }
+}
+
+.toggle__longLabel {
+  display: none;
+  font-weight: inherit;
+
+  @media screen and (min-width: $screen-med) {
+    display: inline;
+  }
+}
+
+.fretboard__toggleButton--active {
+  background-color: var(--chip-background-color-active);
+  color: var(--chip-foreground-color-active);
+}
+
+.fretboard__toggleButton--left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: calc(var(--border-width-button) / 2);
+}
+
+.fretboard__toggleButton--middle-left {
+  border-radius: 0;
+  border-right-width: calc(var(--border-width-button) / 2);
+  border-left-width: 0;
+}
+
+.fretboard__toggleButton--middle-right {
+  border-radius: 0;
+  border-right-width: 0;
+  border-left-width: calc(var(--border-width-button) / 2);
+}
+
+.fretboard__toggleButton--right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: calc(var(--border-width-button) / 2);
+}

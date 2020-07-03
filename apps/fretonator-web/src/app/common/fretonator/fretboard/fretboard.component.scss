@@ -449,66 +449,6 @@ $note-height: 36;
   }
 }
 
-.fretboard__toggle {
-  display: block;
-  text-align: center;
-  margin: pxToRem($grid-unit * 2) auto 0 auto;
-}
-
-.fretboard__toggleButton {
-  @include chip_button_base();
-  height: pxToRem(44);
-}
-
-.toggle__shortLabel {
-  display: inline;
-  font-weight: inherit;
-  padding-left: pxToRem($grid_unit * 1.5);
-  padding-right: pxToRem($grid_unit * 1.5);
-
-  @media screen and (min-width: $screen-med) {
-    display: none;
-  }
-}
-
-.toggle__longLabel {
-  display: none;
-  font-weight: inherit;
-
-  @media screen and (min-width: $screen-med) {
-    display: inline;
-  }
-}
-
-.fretboard__toggleButton--active {
-  background-color: var(--chip-background-color-active);
-  color: var(--chip-foreground-color-active);
-}
-
-.fretboard__toggleButton--left {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right-width: calc(var(--border-width-button) / 2);
-}
-
-.fretboard__toggleButton--middle-left {
-  border-radius: 0;
-  border-right-width: calc(var(--border-width-button) / 2);
-  border-left-width: 0;
-}
-
-.fretboard__toggleButton--middle-right {
-  border-radius: 0;
-  border-right-width: 0;
-  border-left-width: calc(var(--border-width-button) / 2);
-}
-
-.fretboard__toggleButton--right {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left-width: calc(var(--border-width-button) / 2);
-}
-
 .fretonator__playCtaIcon {
   display: flex;
   height: pxToRem($grid-unit * 2);
@@ -540,4 +480,25 @@ $note-height: 36;
       transform: translate(50%, calc(50% - 1px));
     }
   }
+}
+
+.control__panel {
+  @include content_wrapper();
+  display: flex;
+  flex-direction: column;
+  max-width: $screen-med;
+  margin-top: pxToRem($grid-unit * 2);
+  margin-bottom: pxToRem($grid-unit * 8);
+  background-color: var(--background-color-light);
+  padding: pxToRem($grid-unit * 4);
+  border-radius: pxToRem($grid-unit * 4);
+  box-shadow: 0 pxToRem(1) pxToRem(3) rgba(26, 26, 26, 0.12), 0 pxToRem(1) pxToRem(2) rgba(26, 26, 26, 0.24);
+
+  @media screen and (min-width: $screen-med) {
+    flex-direction: row;
+  }
+}
+
+.control__panel__column {
+
 }

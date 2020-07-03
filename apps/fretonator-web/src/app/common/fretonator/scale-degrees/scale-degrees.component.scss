@@ -1,0 +1,49 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/functions";
+@import "../../../../styles/mixins";
+@import "../../../../styles/typography";
+
+.degreesDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: $infoContainer_info_row_height;
+}
+
+.degreesDisplay__degree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: pxToRem(16);
+  height: pxToRem($grid-unit * 4);
+  width: pxToRem($grid-unit * 4);
+  border-radius: 50%;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+  margin-left: pxToRem($grid-unit);
+  margin-right: pxToRem($grid-unit);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.degreesDisplay__degree--tonic {
+  background-color: var(--note-bg-tonic);
+  color: var(--note-color-tonic);
+}
+
+.degreesDisplay__degree--mediant {
+  background-color: var(--note-bg-mediant);
+  color: var(--note-color-mediant);
+}
+
+.degreesDisplay__degree--dominant {
+  background-color: var(--note-bg-dominant);
+  color: var(--note-color-dominant);
+}

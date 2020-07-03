@@ -30,14 +30,7 @@
 
   <div class="scaleMap__degrees" *ngIf="mode | displayScaleDegrees">
     <h4 class="scaleMap__title">Degrees</h4>
-    <div class="degreesDisplay">
-      <span class="degreesDisplay__degree degreesDisplay__degree--tonic">1</span>
-      <span class="degreesDisplay__degree degreesDisplay__degree--mediant"
-      >3</span
-      >
-      <span class="degreesDisplay__degree degreesDisplay__degree--dominant"
-      >5</span>
-    </div>
+    <app-scale-degrees></app-scale-degrees>
     <button class="button__infoToggle button__infoToggle--scaleDegrees"
             aria-label="Scale Degrees Info Toggle"
             type="button"

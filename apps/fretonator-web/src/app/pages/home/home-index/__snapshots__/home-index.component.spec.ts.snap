@@ -348,48 +348,6 @@ exports[`HomeIndexComponent should create 1`] = `
           
           
           <div
-            class="fretboard__toggle"
-          >
-            <button
-              class="fretboard__toggleButton fretboard__toggleButton--left fretboard__toggleButton--active"
-            >
-              12 frets 
-            </button>
-            <button
-              class="fretboard__toggleButton fretboard__toggleButton--middle-left"
-            >
-              24 frets 
-            </button>
-            <button
-              class="fretboard__toggleButton fretboard__toggleButton--middle-right"
-            >
-              <span
-                class="toggle__shortLabel"
-              >
-                LH
-              </span>
-              <span
-                class="toggle__longLabel"
-              >
-                Left handed
-              </span>
-            </button>
-            <button
-              class="fretboard__toggleButton fretboard__toggleButton--right fretboard__toggleButton--active"
-            >
-              <span
-                class="toggle__shortLabel"
-              >
-                RH
-              </span>
-              <span
-                class="toggle__longLabel"
-              >
-                Right handed
-              </span>
-            </button>
-          </div>
-          <div
             class="arrowHint"
           >
             <span
@@ -1142,6 +1100,75 @@ exports[`HomeIndexComponent should create 1`] = `
               
             </div>
           </div>
+          <div
+            class="control__panel"
+          >
+            <app-scale-degrees>
+              <div
+                class="degreesDisplay"
+              >
+                <span
+                  class="degreesDisplay__degree degreesDisplay__degree--tonic"
+                >
+                  1
+                </span>
+                <span
+                  class="degreesDisplay__degree degreesDisplay__degree--mediant"
+                >
+                  3
+                </span>
+                <span
+                  class="degreesDisplay__degree degreesDisplay__degree--dominant"
+                >
+                  5
+                </span>
+              </div>
+            </app-scale-degrees>
+            <app-fretboard-config>
+              <div
+                class="fretboard__toggle"
+              >
+                <button
+                  class="fretboard__toggleButton fretboard__toggleButton--left fretboard__toggleButton--active"
+                >
+                  12 frets 
+                </button>
+                <button
+                  class="fretboard__toggleButton fretboard__toggleButton--middle-left"
+                >
+                  24 frets 
+                </button>
+                <button
+                  class="fretboard__toggleButton fretboard__toggleButton--middle-right"
+                >
+                  <span
+                    class="toggle__shortLabel"
+                  >
+                    LH
+                  </span>
+                  <span
+                    class="toggle__longLabel"
+                  >
+                    Left handed
+                  </span>
+                </button>
+                <button
+                  class="fretboard__toggleButton fretboard__toggleButton--right fretboard__toggleButton--active"
+                >
+                  <span
+                    class="toggle__shortLabel"
+                  >
+                    RH
+                  </span>
+                  <span
+                    class="toggle__longLabel"
+                  >
+                    Right handed
+                  </span>
+                </button>
+              </div>
+            </app-fretboard-config>
+          </div>
           <p
             class="fretonator__playCta"
           >
@@ -1332,25 +1359,27 @@ exports[`HomeIndexComponent should create 1`] = `
                 >
                   Degrees
                 </h4>
-                <div
-                  class="degreesDisplay"
-                >
-                  <span
-                    class="degreesDisplay__degree degreesDisplay__degree--tonic"
+                <app-scale-degrees>
+                  <div
+                    class="degreesDisplay"
                   >
-                    1
-                  </span>
-                  <span
-                    class="degreesDisplay__degree degreesDisplay__degree--mediant"
-                  >
-                    3
-                  </span>
-                  <span
-                    class="degreesDisplay__degree degreesDisplay__degree--dominant"
-                  >
-                    5
-                  </span>
-                </div>
+                    <span
+                      class="degreesDisplay__degree degreesDisplay__degree--tonic"
+                    >
+                      1
+                    </span>
+                    <span
+                      class="degreesDisplay__degree degreesDisplay__degree--mediant"
+                    >
+                      3
+                    </span>
+                    <span
+                      class="degreesDisplay__degree degreesDisplay__degree--dominant"
+                    >
+                      5
+                    </span>
+                  </div>
+                </app-scale-degrees>
                 <button
                   aria-label="Scale Degrees Info Toggle"
                   class="button__infoToggle button__infoToggle--scaleDegrees"
