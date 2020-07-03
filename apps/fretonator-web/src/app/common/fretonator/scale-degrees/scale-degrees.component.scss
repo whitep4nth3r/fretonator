@@ -6,9 +6,8 @@
 .degreesDisplay {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  height: $infoContainer_info_row_height;
 }
 
 .degreesDisplay__degree {
@@ -23,6 +22,9 @@
   font-family: var(--font-family-main);
   margin-left: pxToRem($grid-unit);
   margin-right: pxToRem($grid-unit);
+  cursor: pointer;
+  background-color: var(--note-background);
+  color: var(--note-color);
 
   &:last-child {
     margin-right: 0;

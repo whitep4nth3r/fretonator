@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ColorModes } from '../../app.component';
 import { AbstractDataService } from '../abstract-data/abstract-data.service';
 
 const StorageKeys = {

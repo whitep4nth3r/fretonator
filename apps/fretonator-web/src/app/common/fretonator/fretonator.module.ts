@@ -32,7 +32,7 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   exports: [
-    FretonatorComponent
+    FretonatorComponent,
   ]
 })
 export class FretonatorModule {

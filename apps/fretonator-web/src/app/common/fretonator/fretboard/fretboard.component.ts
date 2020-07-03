@@ -2,6 +2,7 @@ import { Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, 
 import { FretMap, Mode } from '../../../util/types';
 import { NotePlaybackService } from '../../playback/note-playback.service';
 import { AbstractDataService } from '../../abstract-data/abstract-data.service';
+import { ScaleDegree } from '../../../util/constants';
 
 export enum FretMode {
   twelve = 'twelve',
@@ -20,8 +21,8 @@ const FretReturner = {
 
 const StorageKeys = {
   fretMode: 'fretonator_fretMode',
-  orientation: 'fretonator_orientation'
-}
+  orientation: 'fretonator_orientation',
+};
 
 @Component({
   selector: 'app-fretboard',
@@ -39,6 +40,7 @@ export class FretboardComponent implements OnChanges, OnInit {
   orientation;
   fretMode;
   frets;
+  highlightedDegrees = new Set<ScaleDegree>();
 
   constructor(public playbackService: NotePlaybackService,
               private localStorage: AbstractDataService) {
@@ -68,10 +70,10 @@ export class FretboardComponent implements OnChanges, OnInit {
       default:
         this.orientation = Orientation.right;
     }
-
+    
+    this.toggleHighlightTonic();
     this.configureFretboard();
   }
-
 
   ngOnChanges(): void {
     if (this.loadExpanded) {
@@ -85,6 +87,10 @@ export class FretboardComponent implements OnChanges, OnInit {
 
   get orientations() {
     return Orientation;
+  }
+
+  get scaleDegree() {
+    return ScaleDegree;
   }
 
   configureFretboard() {
@@ -103,5 +109,17 @@ export class FretboardComponent implements OnChanges, OnInit {
     this.fretMode = fretMode;
     this.localStorage.setItem(StorageKeys.fretMode, this.fretMode);
     this.configureFretboard();
+  }
+
+  toggleHighlightTonic() {
+    this.highlightedDegrees.has(ScaleDegree.tonic) ? this.highlightedDegrees.delete(ScaleDegree.tonic) : this.highlightedDegrees.add(ScaleDegree.tonic);
+  }
+
+  toggleHighlightMediant() {
+    this.highlightedDegrees.has(ScaleDegree.mediant) ? this.highlightedDegrees.delete(ScaleDegree.mediant) : this.highlightedDegrees.add(ScaleDegree.mediant);
+  }
+
+  toggleHighlightDominant() {
+    this.highlightedDegrees.has(ScaleDegree.dominant) ? this.highlightedDegrees.delete(ScaleDegree.dominant) : this.highlightedDegrees.add(ScaleDegree.dominant);
   }
 }

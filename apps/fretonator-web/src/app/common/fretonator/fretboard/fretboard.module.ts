@@ -10,13 +10,13 @@ import { FretboardConfigModule } from '../fretboard-config/fretboard-config.modu
 @NgModule({
   declarations: [
     FretboardComponent,
-    GetFretFromFretMapPipe
+    GetFretFromFretMapPipe,
   ],
   imports: [
     CommonModule,
     SpeakerModule,
     ScaleDegreesModule,
-    FretboardConfigModule
+    FretboardConfigModule,
   ],
   exports: [
     FretboardComponent

@@ -11,6 +11,7 @@
       [attr.data-degree]="(fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degree"
       [attr.data-display-note]="(fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.displayName"
       [attr.data-mode]="mode"
+      [attr.data-highlight]="highlightedDegrees.has((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degree)"
       (click)="playbackService.playNote(stringName, fret)"
     ></div>
   </ng-container>
@@ -77,15 +78,29 @@
 </div>
 
 <div class="control__panel">
-  <app-scale-degrees></app-scale-degrees>
-  <app-fretboard-config
-    [fretMode]="fretMode"
-    [fretModes]="fretModes"
-    [orientation]="orientation"
-    [orientations]="orientations"
-    (setFretMode)="setFretMode($event)"
-    (setOrientation)="setOrientation($event)"
-  ></app-fretboard-config>
+  <div class="control__panel__section">
+    <span class="control__panel__title">Highlight scale degrees</span>
+    <app-scale-degrees
+      [tonicActive]="highlightedDegrees.has(scaleDegree.tonic)"
+      [mediantActive]="highlightedDegrees.has(scaleDegree.mediant)"
+      [dominantActive]="highlightedDegrees.has(scaleDegree.dominant)"
+      (setTonicHighlight)="toggleHighlightTonic()"
+      (setMediantHighlight)="toggleHighlightMediant()"
+      (setDominantHighlight)="toggleHighlightDominant()"
+    ></app-scale-degrees>
+  </div>
+
+  <div class="control__panel__section">
+    <span class="control__panel__title control__panel__title--right">Configure fretboard</span>
+    <app-fretboard-config
+      [fretMode]="fretMode"
+      [fretModes]="fretModes"
+      [orientation]="orientation"
+      [orientations]="orientations"
+      (setFretMode)="setFretMode($event)"
+      (setOrientation)="setOrientation($event)"
+    ></app-fretboard-config>
+  </div>
 </div>
 
 <p class="fretonator__playCta">

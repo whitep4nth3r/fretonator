@@ -306,21 +306,21 @@ $note-height: 36;
     }
   }
 
-  &[data-degree="tonic"] {
+  &[data-degree="tonic"][data-highlight="true"] {
     &:after {
       background-color: var(--note-bg-tonic);
       color: var(--note-color-tonic);
     }
   }
 
-  &[data-degree="mediant"] {
+  &[data-degree="mediant"][data-highlight="true"] {
     &:after {
       background-color: var(--note-bg-mediant);
       color: var(--note-color-mediant);
     }
   }
 
-  &[data-degree="dominant"] {
+  &[data-degree="dominant"][data-highlight="true"] {
     &:after {
       background-color: var(--note-bg-dominant);
       color: var(--note-color-dominant);
@@ -342,7 +342,7 @@ $note-height: 36;
   &:after {
     content: attr(data-string-name);
     height: pxToRem($note-height);
-    width:  pxToRem($note-height);
+    width: pxToRem($note-height);
     left: 0;
     right: unset;
     box-sizing: border-box;
@@ -379,21 +379,21 @@ $note-height: 36;
       }
     }
 
-    &[data-degree="tonic"] {
+    &[data-degree="tonic"][data-highlight="true"] {
       &:after {
         background-color: var(--note-bg-tonic);
         color: var(--note-color-tonic);
       }
     }
 
-    &[data-degree="mediant"] {
+    &[data-degree="mediant"][data-highlight="true"] {
       &:after {
         background-color: var(--note-bg-mediant);
         color: var(--note-color-mediant);
       }
     }
 
-    &[data-degree="dominant"] {
+    &[data-degree="dominant"][data-highlight="true"] {
       &:after {
         background-color: var(--note-bg-dominant);
         color: var(--note-color-dominant);
@@ -486,6 +486,8 @@ $note-height: 36;
   @include content_wrapper();
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   max-width: $screen-med;
   margin-top: pxToRem($grid-unit * 2);
   margin-bottom: pxToRem($grid-unit * 8);
@@ -499,6 +501,14 @@ $note-height: 36;
   }
 }
 
-.control__panel__column {
+.control__panel__section {
 
+}
+
+.control__panel__title {
+  @include info_container_title;
+}
+
+.control__panel__title--right {
+  text-align: right;
 }

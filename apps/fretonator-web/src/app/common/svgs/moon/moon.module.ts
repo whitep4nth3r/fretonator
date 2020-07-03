@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { MoonComponent } from './moon.component';
 
 
-
 @NgModule({
   declarations: [MoonComponent],
   exports: [

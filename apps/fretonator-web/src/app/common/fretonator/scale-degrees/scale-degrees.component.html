@@ -1,8 +1,17 @@
 <div class="degreesDisplay">
-  <span class="degreesDisplay__degree degreesDisplay__degree--tonic">1</span>
-  <span class="degreesDisplay__degree degreesDisplay__degree--mediant"
+  <span
+    (click)="clickTonic()"
+    class="degreesDisplay__degree"
+    [class.degreesDisplay__degree--tonic]="tonicActive">1</span>
+  <span
+    (click)="clickMediant()"
+    class="degreesDisplay__degree"
+    [class.degreesDisplay__degree--mediant]="mediantActive"
   >3</span
   >
-  <span class="degreesDisplay__degree degreesDisplay__degree--dominant"
+  <span
+    (click)="clickDominant()"
+    class="degreesDisplay__degree"
+    [class.degreesDisplay__degree--dominant]="dominantActive"
   >5</span>
 </div>
