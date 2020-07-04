@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FretMode, Orientation } from '../fretboard/fretboard.component';
+import { FretModes, Orientations } from '../fretboard/fretboard.component';
 
 @Component({
   selector: 'app-fretboard-config',
@@ -8,17 +8,24 @@ import { FretMode, Orientation } from '../fretboard/fretboard.component';
 })
 export class FretboardConfigComponent {
   @Input() fretMode;
-  @Input() fretModes;
   @Input() orientation;
-  @Input() orientations;
-  @Output() setFretMode = new EventEmitter<FretMode>();
-  @Output() setOrientation = new EventEmitter<Orientation>();
 
-  setFretModeClick(fretMode: FretMode) {
+  @Output() setFretMode = new EventEmitter<FretModes>();
+  @Output() setOrientation = new EventEmitter<Orientations>();
+
+  setFretModeClick(fretMode: FretModes) {
     this.setFretMode.emit(fretMode);
   }
 
-  setOrientationClick(orientation: Orientation) {
+  setOrientationClick(orientation: Orientations) {
     this.setOrientation.emit(orientation);
+  }
+
+  get FretModes() {
+    return FretModes;
+  }
+
+  get Orientations() {
+    return Orientations;
   }
 }

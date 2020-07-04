@@ -91,5 +91,5 @@ describe('FretboardComponent', () => {
       fixture.detectChanges();
       expect(rightButton.classes[classNames.toggleFretButtonSelected]).toBeTruthy();
     });
-  })
+  });
 });

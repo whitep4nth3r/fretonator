@@ -1,14 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FretboardConfigComponent } from './fretboard-config.component';
 import { Component } from '@angular/core';
 import { FretboardConfigModule } from './fretboard-config.module';
 
-xdescribe('FretboardConfigComponent', () => {
+describe('FretboardConfigComponent', () => {
   @Component({
     selector: 'app-fretboard-config-spec',
     template: `
-      <app-fretboard-config [fretModes]=""></app-fretboard-config>
+      <app-fretboard-config></app-fretboard-config>
     `
   })
   class FretboardConfigComponentSpec {

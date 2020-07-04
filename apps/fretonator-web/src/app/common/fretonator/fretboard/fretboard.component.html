@@ -25,17 +25,17 @@
 
 <div class="arrowHint">
   <span class="arrowHint__arrow"
-        [class.fretboard__flip]="orientation === orientations.left"></span>
+        [class.fretboard__flip]="orientation === Orientations.left"></span>
 </div>
 
 <div class="fretboard__container"
-     [class.fretboard__flip]="orientation === orientations.left"
-     [class.fretboard__wide]="fretMode === fretModes.twentyFour">
+     [class.fretboard__flip]="orientation === Orientations.left"
+     [class.fretboard__wide]="fretMode === FretModes.twentyFour">
 
 
   <div class="fretboard"
-       [class.fretboard__leftHanded]="orientation === orientations.left"
-       [class.fretboard__24]="fretMode === fretModes.twentyFour">
+       [class.fretboard__leftHanded]="orientation === Orientations.left"
+       [class.fretboard__24]="fretMode === FretModes.twentyFour">
 
     <ng-container
       [ngTemplateOutlet]="string"
@@ -69,8 +69,8 @@
   </div>
 
   <div class="fretboard"
-       [class.fretboard__leftHanded]="orientation === orientations.left"
-       [class.fretboard__24]="fretMode === fretModes.twentyFour">
+       [class.fretboard__leftHanded]="orientation === Orientations.left"
+       [class.fretboard__24]="fretMode === FretModes.twentyFour">
     <ng-container
       [ngTemplateOutlet]="fretboardHelp"
     ></ng-container>
@@ -94,9 +94,7 @@
     <span class="control__panel__title control__panel__title--right">Configure fretboard</span>
     <app-fretboard-config
       [fretMode]="fretMode"
-      [fretModes]="fretModes"
       [orientation]="orientation"
-      [orientations]="orientations"
       (setFretMode)="setFretMode($event)"
       (setOrientation)="setOrientation($event)"
     ></app-fretboard-config>
