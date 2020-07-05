@@ -47,31 +47,10 @@ export class FretboardComponent implements OnChanges, OnInit {
   }
 
   ngOnInit() {
-    const _fretMode = this.localStorage.getItem(StorageKeys.fretMode);
-    switch (_fretMode) {
-      case 'twelve':
-        this.fretMode = FretModes.twelve;
-        break;
-      case 'twentyFour':
-        this.fretMode = FretModes.twentyFour;
-        break;
-      default:
-        this.fretMode = FretModes.twelve;
-    }
+    this.loadPropFromStorage(StorageKeys.fretMode, 'fretMode', FretModes.twelve);
+    this.loadPropFromStorage(StorageKeys.orientation, 'orientation', Orientations.right);
 
-    const _orientation = this.localStorage.getItem(StorageKeys.orientation);
-    switch (_orientation) {
-      case 'right':
-        this.orientation = Orientations.right;
-        break;
-      case 'left':
-        this.orientation = Orientations.left;
-        break;
-      default:
-        this.orientation = Orientations.right;
-    }
-
-    this.toggleHighlightTonic();
+    this.toggleHighlight(ScaleDegree.tonic);
     this.configureFretboard();
   }
 
@@ -88,7 +67,8 @@ export class FretboardComponent implements OnChanges, OnInit {
   get Orientations() {
     return Orientations;
   }
-
+  // TODO: any reason this method is not capitalized like the other enum getters?
+  // also, any reason it's singular rather than plural?
   get scaleDegree() {
     return ScaleDegree;
   }
@@ -101,7 +81,6 @@ export class FretboardComponent implements OnChanges, OnInit {
   setOrientation(orientation: Orientations) {
     this.orientation = orientation;
     this.localStorage.setItem(StorageKeys.orientation, this.orientation);
-
     this.configureFretboard();
   }
 
@@ -111,15 +90,12 @@ export class FretboardComponent implements OnChanges, OnInit {
     this.configureFretboard();
   }
 
-  toggleHighlightTonic() {
-    this.highlightedDegrees.has(ScaleDegree.tonic) ? this.highlightedDegrees.delete(ScaleDegree.tonic) : this.highlightedDegrees.add(ScaleDegree.tonic);
+  toggleHighlight(degree: ScaleDegree) {
+    this.highlightedDegrees.has(degree) ? this.highlightedDegrees.delete(degree) : this.highlightedDegrees.add(degree);
   }
 
-  toggleHighlightMediant() {
-    this.highlightedDegrees.has(ScaleDegree.mediant) ? this.highlightedDegrees.delete(ScaleDegree.mediant) : this.highlightedDegrees.add(ScaleDegree.mediant);
-  }
-
-  toggleHighlightDominant() {
-    this.highlightedDegrees.has(ScaleDegree.dominant) ? this.highlightedDegrees.delete(ScaleDegree.dominant) : this.highlightedDegrees.add(ScaleDegree.dominant);
+  loadPropFromStorage<T>(storageKey: string, propName: string, defaultValue: T) {
+    const value = this.localStorage.getItem(storageKey);
+    this[propName] = value || defaultValue;
   }
 }

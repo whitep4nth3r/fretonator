@@ -84,9 +84,9 @@
       [tonicActive]="highlightedDegrees.has(scaleDegree.tonic)"
       [mediantActive]="highlightedDegrees.has(scaleDegree.mediant)"
       [dominantActive]="highlightedDegrees.has(scaleDegree.dominant)"
-      (setTonicHighlight)="toggleHighlightTonic()"
-      (setMediantHighlight)="toggleHighlightMediant()"
-      (setDominantHighlight)="toggleHighlightDominant()"
+      (setTonicHighlight)="toggleHighlight(scaleDegree.tonic)"
+      (setMediantHighlight)="toggleHighlight(scaleDegree.mediant)"
+      (setDominantHighlight)="toggleHighlight(scaleDegree.dominant)"
     ></app-scale-degrees>
   </div>
 
