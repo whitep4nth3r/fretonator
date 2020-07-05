@@ -30,6 +30,7 @@
   cursor: pointer;
   background-color: var(--note-background);
   color: var(--note-color);
+  border-width: 0;
 
   &:last-child {
     margin-right: 0;

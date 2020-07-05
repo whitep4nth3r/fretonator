@@ -18,12 +18,12 @@
                  [noteExtenderString]="noteExtenderString"></app-scale-map>
 
   <div class="infoButtonRow">
-    <button class="infoButton"
+    <button class="infoButton infoButton--scaleMapInfo"
             aria-label="Scale Degrees Info Toggle"
             type="button"
             [attr.aria-expanded]="showScaleMapInfo"
             (click)="toggleScaleMapInfo()">{{scaleDegreesToggleText}}</button>
-    <button class="infoButton"
+    <button class="infoButton infoButton--theoreticalScalesInfo"
             aria-label="Theoretical Scales Info Toggle"
             type="button"
             *ngIf="modeMap | isTheoreticalScale"

@@ -18,7 +18,6 @@ export class ScaleDegreesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   clickTonic() {
     this.setTonicHighlight.emit();
   }

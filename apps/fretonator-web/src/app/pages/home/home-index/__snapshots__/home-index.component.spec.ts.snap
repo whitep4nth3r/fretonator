@@ -1194,21 +1194,24 @@ exports[`HomeIndexComponent should create 1`] = `
                 <div
                   class="degreesDisplay"
                 >
-                  <span
-                    class="degreesDisplay__degree degreesDisplay__degree--tonic"
+                  <button
+                    aria-label="Highlight tonic notes on the fretboard"
+                    class="degreesDisplay__degree tonic degreesDisplay__degree--tonic"
                   >
                     1
-                  </span>
-                  <span
-                    class="degreesDisplay__degree"
+                  </button>
+                  <button
+                    aria-label="Highlight mediant notes on the fretboard"
+                    class="degreesDisplay__degree mediant"
                   >
                     3
-                  </span>
-                  <span
-                    class="degreesDisplay__degree"
+                  </button>
+                  <button
+                    aria-label="Highlight dominant notes on the fretboard"
+                    class="degreesDisplay__degree dominant"
                   >
                     5
-                  </span>
+                  </button>
                 </div>
               </app-scale-degrees>
               <div
@@ -1217,12 +1220,12 @@ exports[`HomeIndexComponent should create 1`] = `
                 <button
                   class="fretboard__toggleButton fretboard__toggleButton--active"
                 >
-                  Note names
+                  Note names 
                 </button>
                 <button
                   class="fretboard__toggleButton"
                 >
-                  Note numbers
+                  Note numbers 
                 </button>
               </div>
             </div>
@@ -1397,7 +1400,7 @@ exports[`HomeIndexComponent should create 1`] = `
             <button
               aria-expanded="false"
               aria-label="Scale Degrees Info Toggle"
-              class="infoButton"
+              class="infoButton infoButton--scaleMapInfo"
               type="button"
             >
               About scale degrees

@@ -1,17 +1,20 @@
 <div class="degreesDisplay">
-  <span
+  <button
     (click)="clickTonic()"
-    class="degreesDisplay__degree"
-    [class.degreesDisplay__degree--tonic]="tonicActive">1</span>
-  <span
+    aria-label="Highlight tonic notes on the fretboard"
+    class="degreesDisplay__degree tonic"
+    [class.degreesDisplay__degree--tonic]="tonicActive">1</button>
+  <button
     (click)="clickMediant()"
-    class="degreesDisplay__degree"
+    aria-label="Highlight mediant notes on the fretboard"
+    class="degreesDisplay__degree mediant"
     [class.degreesDisplay__degree--mediant]="mediantActive"
-  >3</span
+  >3</button
   >
-  <span
+  <button
     (click)="clickDominant()"
-    class="degreesDisplay__degree"
+    aria-label="Highlight dominant notes on the fretboard"
+    class="degreesDisplay__degree dominant"
     [class.degreesDisplay__degree--dominant]="dominantActive"
-  >5</span>
+  >5</button>
 </div>
