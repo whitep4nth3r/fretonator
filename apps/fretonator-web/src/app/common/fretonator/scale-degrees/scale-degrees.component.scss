@@ -11,6 +11,7 @@
 
   @media screen and (min-width: $screen-med) {
     justify-content: flex-start;
+    height: pxToRem(46);
   }
 }
 

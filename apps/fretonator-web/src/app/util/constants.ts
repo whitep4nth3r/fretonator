@@ -553,7 +553,7 @@ export const ChordPatterns = {
 
 export const Octave = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
 
-export enum ScaleDegree {
+export enum ScaleDegrees {
   tonic = 'tonic',
   supertonic = 'supertonic',
   mediant = 'mediant',
@@ -563,14 +563,14 @@ export enum ScaleDegree {
   leadingTone = 'leadingTone'
 }
 
-export const ScaleDegrees = [
-  ScaleDegree.tonic,
-  ScaleDegree.supertonic,
-  ScaleDegree.mediant,
-  ScaleDegree.subdominant,
-  ScaleDegree.dominant,
-  ScaleDegree.submediant,
-  ScaleDegree.leadingTone
+export const ScaleDegreeNames = [
+  ScaleDegrees.tonic,
+  ScaleDegrees.supertonic,
+  ScaleDegrees.mediant,
+  ScaleDegrees.subdominant,
+  ScaleDegrees.dominant,
+  ScaleDegrees.submediant,
+  ScaleDegrees.leadingTone
 ];
 
 export const ModeSelectorObjects = [

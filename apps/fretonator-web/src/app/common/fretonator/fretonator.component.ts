@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ChordMap, FretMap, Mode, ModeMap } from '../../util/types';
+import { GlobalService } from '../../global.service';
 
 enum ScaleDegreesToggleText {
   hidden = 'About scale degrees',
@@ -31,6 +32,9 @@ export class FretonatorComponent {
   showTheoreticalScalesInfo = false;
   theoreticalScalesToggleText = TheoreticalScalesToggleText.hidden;
 
+  constructor(private globalService: GlobalService) {
+  }
+
   toggleScaleMapInfo() {
     this.showScaleMapInfo = !this.showScaleMapInfo;
     this.scaleDegreesToggleText = this.showScaleMapInfo ? ScaleDegreesToggleText.visible : ScaleDegreesToggleText.hidden;
@@ -39,5 +43,10 @@ export class FretonatorComponent {
   toggleTheoreticalScaleInfo() {
     this.showTheoreticalScalesInfo = !this.showTheoreticalScalesInfo;
     this.theoreticalScalesToggleText = this.showTheoreticalScalesInfo ? TheoreticalScalesToggleText.visible : TheoreticalScalesToggleText.hidden;
+  }
+
+  enharmonicLinkClick() {
+    this.toggleTheoreticalScaleInfo();
+    this.globalService.getScrollTarget().scrollIntoView();
   }
 }

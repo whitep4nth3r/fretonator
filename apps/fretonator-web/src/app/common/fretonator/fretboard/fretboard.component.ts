@@ -2,7 +2,7 @@ import { Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, 
 import { FretMap, Mode } from '../../../util/types';
 import { NotePlaybackService } from '../../playback/note-playback.service';
 import { AbstractDataService } from '../../abstract-data/abstract-data.service';
-import { ScaleDegree } from '../../../util/constants';
+import { ScaleDegrees } from '../../../util/constants';
 
 export enum FretModes {
   twelve = 'twelve',
@@ -14,6 +14,11 @@ export enum Orientations {
   right = 'right',
 }
 
+export enum NoteDisplays {
+  numbers = 'numbers',
+  noteNames = 'noteNames'
+}
+
 const FretReturner = {
   'twelve': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
   'twentyFour': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
@@ -21,7 +26,8 @@ const FretReturner = {
 
 const StorageKeys = {
   fretMode: 'fretonator_fretMode',
-  orientation: 'fretonator_orientation'
+  orientation: 'fretonator_orientation',
+  noteNameDisplay: 'fretonator_noteNameDisplay'
 };
 
 @Component({
@@ -40,7 +46,8 @@ export class FretboardComponent implements OnChanges, OnInit {
   orientation;
   fretMode;
   frets;
-  highlightedDegrees = new Set<ScaleDegree>();
+  highlightedDegrees = new Set<ScaleDegrees>();
+  noteNameDisplay = NoteDisplays.noteNames;
 
   constructor(public playbackService: NotePlaybackService,
               private localStorage: AbstractDataService) {
@@ -49,8 +56,9 @@ export class FretboardComponent implements OnChanges, OnInit {
   ngOnInit() {
     this.loadPropFromStorage(StorageKeys.fretMode, 'fretMode', FretModes.twelve);
     this.loadPropFromStorage(StorageKeys.orientation, 'orientation', Orientations.right);
+    this.loadPropFromStorage(StorageKeys.noteNameDisplay, 'noteNameDisplay', NoteDisplays.noteNames);
 
-    this.toggleHighlight(ScaleDegree.tonic);
+    this.toggleHighlight(ScaleDegrees.tonic);
     this.configureFretboard();
   }
 
@@ -67,10 +75,13 @@ export class FretboardComponent implements OnChanges, OnInit {
   get Orientations() {
     return Orientations;
   }
-  // TODO: any reason this method is not capitalized like the other enum getters?
-  // also, any reason it's singular rather than plural?
-  get scaleDegree() {
-    return ScaleDegree;
+
+  get ScaleDegrees() {
+    return ScaleDegrees;
+  }
+
+  get NoteDisplays() {
+    return NoteDisplays;
   }
 
   configureFretboard() {
@@ -90,8 +101,13 @@ export class FretboardComponent implements OnChanges, OnInit {
     this.configureFretboard();
   }
 
-  toggleHighlight(degree: ScaleDegree) {
+  toggleHighlight(degree: ScaleDegrees) {
     this.highlightedDegrees.has(degree) ? this.highlightedDegrees.delete(degree) : this.highlightedDegrees.add(degree);
+  }
+
+  toggleNoteDisplay(displayType: NoteDisplays) {
+    this.noteNameDisplay = displayType;
+    this.localStorage.setItem(StorageKeys.noteNameDisplay, displayType);
   }
 
   loadPropFromStorage<T>(storageKey: string, propName: string, defaultValue: T) {

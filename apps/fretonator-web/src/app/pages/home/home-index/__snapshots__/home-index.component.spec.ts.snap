@@ -1179,13 +1179,14 @@ exports[`HomeIndexComponent should create 1`] = `
             </div>
           </div>
           <div
-            class="control__panel"
+            class="controlPanel"
           >
+            
             <div
-              class="control__panel__section"
+              class="controlPanel__section"
             >
               <span
-                class="control__panel__title"
+                class="controlPanel__title"
               >
                 Highlight scale degrees
               </span>
@@ -1210,12 +1211,26 @@ exports[`HomeIndexComponent should create 1`] = `
                   </span>
                 </div>
               </app-scale-degrees>
+              <div
+                class="button__group"
+              >
+                <button
+                  class="fretboard__toggleButton fretboard__toggleButton--active"
+                >
+                  Note names
+                </button>
+                <button
+                  class="fretboard__toggleButton"
+                >
+                  Note numbers
+                </button>
+              </div>
             </div>
             <div
-              class="control__panel__section"
+              class="controlPanel__section"
             >
               <span
-                class="control__panel__title control__panel__title--right"
+                class="controlPanel__title controlPanel__title--right"
               >
                 Configure fretboard
               </span>
@@ -1256,16 +1271,6 @@ exports[`HomeIndexComponent should create 1`] = `
             </div>
           </div>
         </app-fretboard>
-        <div
-          class="cta__row"
-        >
-          <a
-            class="learnHub__cta"
-            href="/learn/patterns"
-          >
-             Learn how to break down modes into patterns in our learning hub → 
-          </a>
-        </div>
         
         
         <app-video-loader>
@@ -1383,58 +1388,45 @@ exports[`HomeIndexComponent should create 1`] = `
                      B 
                   </p>
                 </div>
-                <div
-                  class="buttonRow"
-                >
-                  <button
-                    aria-label="Play this scale"
-                    class="button__playScale"
-                    type="button"
-                  >
-                    <span
-                      class="button__playScale__svg"
-                    >
-                      <app-play-svg>
-                        <svg
-                          aria-hidden="true"
-                          class="svg"
-                          role="img"
-                          viewBox="0 0 512 512"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"
-                          />
-                        </svg>
-                      </app-play-svg>
-                    </span>
-                     Play scale 
-                  </button>
-                  
-                </div>
-              </div>
-              
-              <div
-                class="scaleMap__degrees"
-              >
-                <h4
-                  class="scaleMap__title"
-                >
-                  Scale Degrees
-                </h4>
-                <button
-                  aria-expanded="false"
-                  aria-label="Scale Degrees Info Toggle"
-                  class="button__infoToggle button__infoToggle--scaleDegrees"
-                  type="button"
-                >
-                  About scale degrees 
-                </button>
               </div>
             </div>
-            
-            
           </app-scale-map>
+          <div
+            class="infoButtonRow"
+          >
+            <button
+              aria-expanded="false"
+              aria-label="Scale Degrees Info Toggle"
+              class="infoButton"
+              type="button"
+            >
+              About scale degrees
+            </button>
+            
+            <a
+              class="infoButton infoButton--withChevron"
+              href="/learn/patterns"
+            >
+               Break modes down into patterns 
+              <span
+                class="infoButton__svgContainer"
+              >
+                <app-chevron-right-svg>
+                  <svg
+                    class="svg"
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                    />
+                  </svg>
+                </app-chevron-right-svg>
+              </span>
+            </a>
+          </div>
+          
+          
           <app-interval-map>
             <div
               class="intervalMap"

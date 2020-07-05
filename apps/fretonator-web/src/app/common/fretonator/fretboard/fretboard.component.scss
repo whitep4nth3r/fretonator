@@ -482,7 +482,7 @@ $note-height: 36;
   }
 }
 
-.control__panel {
+.controlPanel {
   @include content_wrapper();
   display: flex;
   flex-direction: column;
@@ -501,7 +501,7 @@ $note-height: 36;
   }
 }
 
-.control__panel__section {
+.controlPanel__section {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -516,7 +516,7 @@ $note-height: 36;
   }
 }
 
-.control__panel__title {
+.controlPanel__title {
   @include info_container_title;
   text-align: center;
 
@@ -525,9 +525,48 @@ $note-height: 36;
   }
 }
 
-.control__panel__title--right {
+.controlPanel__title--right {
   text-align: center;
   @media screen and (min-width: $screen-med) {
     text-align: right;
   }
+}
+
+.button__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: pxToRem($grid-unit * 2);
+  margin-top: pxToRem($grid-unit * 2);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $screen-med) {
+    justify-content: flex-start;
+  }
+}
+
+.fretboard__toggleButton {
+  @include chip_button_base();
+  padding: pxToRem($grid-unit * 1.5);
+  border-color: var(--fretboard-toggle-button-border-color);
+}
+
+.fretboard__toggleButton--active {
+  background-color: var(--chip-background-color-active);
+  color: var(--chip-foreground-color-active);
+}
+
+.fretboard__toggleButton:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: calc(var(--border-width-button) / 2);
+}
+
+.fretboard__toggleButton:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: calc(var(--border-width-button) / 2);
 }
