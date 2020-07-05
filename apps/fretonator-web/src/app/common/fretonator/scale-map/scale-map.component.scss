@@ -13,7 +13,6 @@
   @media screen and (min-width: $screen-med) {
     flex-direction: row;
     align-items: flex-start;
-    margin-bottom: pxToRem($grid-unit * 8);
   }
 }
 
@@ -29,55 +28,6 @@
     flex-basis: 30%;
     align-items: flex-end;
   }
-}
-
-.scaleMap__title {
-  @include info_container_title;
-}
-
-.degreesDisplay {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: $infoContainer_info_row_height;
-}
-
-.degreesDisplay__degree {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: pxToRem(16);
-  height: pxToRem($grid-unit * 4);
-  width: pxToRem($grid-unit * 4);
-  border-radius: 50%;
-  font-weight: var(--font-weight-bold);
-  font-family: var(--font-family-main);
-  margin-left: pxToRem($grid-unit);
-  margin-right: pxToRem($grid-unit);
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &:first-child {
-    margin-left: 0;
-  }
-}
-
-.degreesDisplay__degree--tonic {
-  background-color: var(--note-bg-tonic);
-  color: var(--note-color-tonic);
-}
-
-.degreesDisplay__degree--mediant {
-  background-color: var(--note-bg-mediant);
-  color: var(--note-color-mediant);
-}
-
-.degreesDisplay__degree--dominant {
-  background-color: var(--note-bg-dominant);
-  color: var(--note-color-dominant);
 }
 
 .scaleDisplay {
@@ -128,108 +78,9 @@
   }
 }
 
-.buttonRow {
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (min-width: $screen-sm) {
-    flex-direction: row;
-  }
-}
-
-.button__playScale {
-  @include chip_button_base();
-  margin-top: pxToRem($grid-unit * 2);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.1s ease-in-out;
-
-  &:hover, &:active {
-    background-color: var(--purple);
-  }
-
-  @media screen and (min-width: $screen-sm) {
-    margin-right: pxToRem($grid-unit * 2);
-  }
-
-  display: none;
-}
-
-.button__playScale__svg {
-  display: flex;
-  height: pxToRem($grid-unit * 2);
-  width: pxToRem($grid-unit * 2);
-  margin-right: pxToRem($grid-unit / 2);
-}
-
-.button__infoToggle {
-  @include chip_button_base();
-  border-color: var(--info-toggle-foreground-color);
-  color: var(--info-toggle-foreground-color);
-  margin-top: pxToRem($grid-unit * 2);
-}
-
-.infoBlock {
-  background-color: var(--black);
-  margin-left: pxToRem($grid-unit * -4);
-  margin-right: pxToRem($grid-unit * -4);
-  padding: pxToRem($grid-unit * 4);
-  margin-bottom: pxToRem($grid-unit * 4);
-  display: flex;
-  flex-direction: column;
-}
-
-.infoBlock__title {
-  @include font_medium;
-  color: var(--peach);
-  padding-bottom: pxToRem($grid-unit * 2);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.infoBlock__close {
-  border-width: 0;
-  background-color: transparent;
-  height: pxToRem(44);
-  width: pxToRem(44);
-  padding: pxToRem($grid-unit);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: var(--grey);
-}
-
-.infoBlock__copy {
-  @include font_bodyCopy;
-  color: var(--offwhite);
-  margin-top: pxToRem($grid-unit * 2);
-  margin-bottom: pxToRem($grid-unit * 2);
-}
-
-.infoBlock__list {
-
-}
-
-.infoBlock__listItem {
-  @include font_bodyCopy;
-  color: var(--yellow);
-  margin-bottom: pxToRem($grid-unit * 1);
-}
-
 .infoHighlight {
   border-radius: var(--border-radius-chip);
   padding: pxToRem($grid-unit / 4) pxToRem(9);
-  color: var(--black);
-  background-color: var(--peach);
-}
-
-.actionButton {
-  @include hard_button_base();
-  margin-bottom: pxToRem($grid-unit * 2);
-  align-self: flex-start;
+  color: var(--info-highlight-color);
+  background-color: var(--info-highlight-background-color);
 }

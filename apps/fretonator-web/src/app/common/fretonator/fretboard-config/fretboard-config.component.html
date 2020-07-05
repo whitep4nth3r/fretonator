@@ -1,0 +1,24 @@
+<div class="configure__controls">
+  <div class="button__group">
+    <button class="fretboard__toggleButton twelve"
+            [class.fretboard__toggleButton--active]="fretMode === FretModes.twelve"
+            (click)="setFretModeClick(FretModes.twelve)">12 frets
+    </button>
+    <button class="fretboard__toggleButton twentyFour"
+            [class.fretboard__toggleButton--active]="fretMode === FretModes.twentyFour"
+            (click)="setFretModeClick(FretModes.twentyFour)">24 frets
+    </button>
+  </div>
+  <div class="button__group">
+    <button class="fretboard__toggleButton left"
+            [class.fretboard__toggleButton--active]="orientation === Orientations.left"
+            (click)="setOrientationClick(Orientations.left)">
+      Left handed
+    </button>
+    <button class="fretboard__toggleButton right"
+            [class.fretboard__toggleButton--active]="orientation === Orientations.right"
+            (click)="setOrientationClick(Orientations.right)">
+      Right handed
+    </button>
+  </div>
+</div>

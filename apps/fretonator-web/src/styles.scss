@@ -45,9 +45,6 @@
   --header-link-color: var(--peach);
   --hero-background-color: var(--black);
   --hero-title-color: var(--offwhite-alt);
-  --hero-block-box-shadow-color: var(--grey);
-  --hero-toggle-foreground-color: var(--offwhite-alt);
-  --hero-toggle-background-color: var(--black);
 
   --footer-background: var(--black);
   --footer-border-color: var(--peach);
@@ -56,6 +53,9 @@
   --footer-title-color: var(--peach);
   --footer-list-link-color: var(--yellow);
   --footer-small-button-accent-color: var(--yellow);
+
+  --info-highlight-color: var(--black);
+  --info-highlight-background-color: var(--peach);
 }
 
 [color-mode="light"] {
@@ -72,12 +72,6 @@
 
   --stripe-banner-background: var(--peach);
 
-  --hero-block-background-step-1: var(--peach);
-  --hero-block-background-step-2: var(--yellow);
-  --hero-block-background-step-3: var(--purple);
-  --hero-block-background-step-4: var(--turquoise);
-  --hero-block-background-step-5: var(--blue);
-
   --string-color: var(--black);
   --string-label-color: var(--black);
   --nut-color: #1a1a1a;
@@ -86,6 +80,7 @@
   --fretboard-play-cta-color: var(--grey);
 
   --fret-marker-url: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23dbdae0' /%3E%3C/svg%3E");
+  --fretboard-arrow-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 512 512'%3E%3Cpath fill='%233993dd' d='M319.1 217c20.2 20.2 19.9 53.2-.6 73.7s-53.5 20.8-73.7.6l-190-190c-20.1-20.2-19.8-53.2.7-73.7S109 6.8 129.1 27l190 190z'/%3E%3Cpath fill='%233993dd' d='M319.1 290.5c20.2-20.2 19.9-53.2-.6-73.7s-53.5-20.8-73.7-.6l-190 190c-20.2 20.2-19.9 53.2.6 73.7s53.5 20.8 73.7.6l190-190z'/%3E%3C/svg%3E");;
 
   --note-color: var(--yellow);
   --note-background: var(--black);
@@ -140,6 +135,8 @@
   --chip-tag-foreground-color: var(--black);
 
   --similar-modes-background-color: var(--peach);
+
+  --fretboard-toggle-button-border-color: var(--black);
 }
 
 [color-mode="dark"] {
@@ -155,13 +152,6 @@
   --text-link-hover-color: #FD7C21;
 
   --stripe-banner-background: var(--peach);
-
-  --hero-block-background-step-1: var(--peach);
-  --hero-block-background-step-2: var(--coral);
-  --hero-block-background-step-3: var(--mint);
-  --hero-block-background-step-4: var(--coral);
-  --hero-block-background-step-5: var(--peach);
-
   --string-color: var(--offwhite-alt);
   --string-label-color: var(--offwhite-alt);
   --nut-color: #d3d3d3;
@@ -170,6 +160,7 @@
   --fretboard-play-cta-color: #d3d3d3;
 
   --fret-marker-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23474350'/%3E%3C/svg%3E");
+  --fretboard-arrow-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 512 512'%3E%3Cpath fill='%23ee9198' d='M319.1 217c20.2 20.2 19.9 53.2-.6 73.7s-53.5 20.8-73.7.6l-190-190c-20.1-20.2-19.8-53.2.7-73.7S109 6.8 129.1 27l190 190z'/%3E%3Cpath fill='%23ee9198' d='M319.1 290.5c20.2-20.2 19.9-53.2-.6-73.7s-53.5-20.8-73.7-.6l-190 190c-20.2 20.2-19.9 53.2.6 73.7s53.5 20.8 73.7.6l190-190z'/%3E%3C/svg%3E");
 
   --note-color: var(--black);
   --note-background: var(--offwhite);
@@ -224,6 +215,7 @@
   --chip-tag-foreground-color: var(--black);
 
   --similar-modes-background-color: var(--black);
+  --fretboard-toggle-button-border-color: var(--peach);
 }
 
 body {

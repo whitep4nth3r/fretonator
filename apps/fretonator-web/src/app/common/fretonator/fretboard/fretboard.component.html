@@ -9,8 +9,9 @@
       [attr.data-string]="string"
       [attr.data-fret]="fret"
       [attr.data-degree]="(fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degree"
-      [attr.data-display-note]="(fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.displayName"
+      [attr.data-display-note]="noteNameDisplay === NoteDisplays.noteNames ? ((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.displayName) : ((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degreeNumber)"
       [attr.data-mode]="mode"
+      [attr.data-highlight]="highlightedDegrees.has((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degree)"
       (click)="playbackService.playNote(stringName, fret)"
     ></div>
   </ng-container>
@@ -22,42 +23,18 @@
   </ng-container>
 </ng-template>
 
-<div class="fretboard__toggle">
-  <button class="fretboard__toggleButton fretboard__toggleButton--left"
-          [class.fretboard__toggleButton--active]="fretMode === fretModes.twelve"
-          (click)="setFretMode(fretModes.twelve)">12 frets
-  </button>
-  <button class="fretboard__toggleButton fretboard__toggleButton--middle-left"
-          [class.fretboard__toggleButton--active]="fretMode === fretModes.twentyFour"
-          (click)="setFretMode(fretModes.twentyFour)">24 frets
-  </button>
-  <button class="fretboard__toggleButton fretboard__toggleButton--middle-right"
-          [class.fretboard__toggleButton--active]="orientation === orientations.left"
-          (click)="setOrientation(orientations.left)">
-    <span class="toggle__shortLabel">LH</span>
-    <span class="toggle__longLabel">Left handed</span>
-  </button>
-  <button class="fretboard__toggleButton fretboard__toggleButton--right"
-          [class.fretboard__toggleButton--active]="orientation === orientations.right"
-          (click)="setOrientation(orientations.right)">
-    <span class="toggle__shortLabel">RH</span>
-    <span class="toggle__longLabel">Right handed</span>
-  </button>
-</div>
-
 <div class="arrowHint">
   <span class="arrowHint__arrow"
-        [class.fretboard__flip]="orientation === orientations.left"></span>
+        [class.fretboard__flip]="orientation === Orientations.left"></span>
 </div>
 
 <div class="fretboard__container"
-     [class.fretboard__flip]="orientation === orientations.left"
-     [class.fretboard__wide]="fretMode === fretModes.twentyFour">
-
+     [class.fretboard__flip]="orientation === Orientations.left"
+     [class.fretboard__wide]="fretMode === FretModes.twentyFour">
 
   <div class="fretboard"
-       [class.fretboard__leftHanded]="orientation === orientations.left"
-       [class.fretboard__24]="fretMode === fretModes.twentyFour">
+       [class.fretboard__leftHanded]="orientation === Orientations.left"
+       [class.fretboard__24]="fretMode === FretModes.twentyFour">
 
     <ng-container
       [ngTemplateOutlet]="string"
@@ -88,22 +65,50 @@
       [ngTemplateOutlet]="string"
       [ngTemplateOutletContext]="{ stringName: 'E', string: 'E' }"
     ></ng-container>
-
   </div>
 
-
   <div class="fretboard"
-       [class.fretboard__leftHanded]="orientation === orientations.left"
-       [class.fretboard__24]="fretMode === fretModes.twentyFour">
+       [class.fretboard__leftHanded]="orientation === Orientations.left"
+       [class.fretboard__24]="fretMode === FretModes.twentyFour">
     <ng-container
       [ngTemplateOutlet]="fretboardHelp"
     ></ng-container>
   </div>
 </div>
 
-<p class="fretonator__playCta">
-  <span class="fretonator__playCtaIcon">
-    <app-speaker-svg></app-speaker-svg>
-  </span>
-  Tap notes on the fretboard for sound!
-</p>
+<div class="controlPanel">
+  <div class="controlPanel__section">
+    <span class="controlPanel__title" *ngIf="!(mode | displayScaleDegrees)">Configure scale degrees</span>
+    <span class="controlPanel__title" *ngIf="mode | displayScaleDegrees">Highlight scale degrees</span>
+    <app-scale-degrees
+      *ngIf="mode | displayScaleDegrees"
+      [tonicActive]="highlightedDegrees.has(ScaleDegrees.tonic)"
+      [mediantActive]="highlightedDegrees.has(ScaleDegrees.mediant)"
+      [dominantActive]="highlightedDegrees.has(ScaleDegrees.dominant)"
+      (setTonicHighlight)="toggleHighlight(ScaleDegrees.tonic)"
+      (setMediantHighlight)="toggleHighlight(ScaleDegrees.mediant)"
+      (setDominantHighlight)="toggleHighlight(ScaleDegrees.dominant)"
+    ></app-scale-degrees>
+
+    <div class="button__group">
+      <button class="fretboard__toggleButton"
+              [class.fretboard__toggleButton--active]="noteNameDisplay === NoteDisplays.noteNames"
+              (click)="toggleNoteDisplay(NoteDisplays.noteNames)">Note names
+      </button>
+      <button (click)="toggleNoteDisplay(NoteDisplays.numbers)"
+              class="fretboard__toggleButton"
+              [class.fretboard__toggleButton--active]="noteNameDisplay === NoteDisplays.numbers">Note numbers
+      </button>
+    </div>
+  </div>
+
+  <div class="controlPanel__section">
+    <span class="controlPanel__title controlPanel__title--right">Configure fretboard</span>
+    <app-fretboard-config
+      [fretMode]="fretMode"
+      [orientation]="orientation"
+      (setFretMode)="setFretMode($event)"
+      (setOrientation)="setOrientation($event)"
+    ></app-fretboard-config>
+  </div>
+</div>

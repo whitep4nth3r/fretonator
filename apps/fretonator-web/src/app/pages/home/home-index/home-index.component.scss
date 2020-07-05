@@ -3,29 +3,14 @@
 @import '../../../../styles/functions';
 @import '../../../../styles/typography';
 
-.hidden {
-  display: none;
-}
-
 .hero {
   background-color: var(--hero-background-color);
   display: block;
   width: 100%;
   padding-top: pxToRem($grid-unit * 4);
   padding-bottom: pxToRem($grid-unit * 4);
-}
-
-.hero__grid {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  position: relative;
-
-  @media screen and (min-width: $screen-sm) {
-    flex-direction: row;
-  }
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero__title {
@@ -39,91 +24,6 @@
   text-align: center;
   font-weight: var(--font-weight-bold);
   position: relative;
-  height: pxToRem($grid-unit * 6);
-
-  span {
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    left: 0;
-    font-weight: var(--font-weight-bold);
-  }
-}
-
-.hidden {
-  display: none;
-}
-
-.hero__block {
-  font-family: var(--font-family-main);
-  letter-spacing: var(--letter-spacing-display);
-  font-size: pxToRem(14);
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: var(--font-weight-bold);
-  padding-top: pxToRem($grid-unit * 2);
-  padding-left: pxToRem($grid-unit * 2);
-  padding-right: pxToRem($grid-unit * 2);
-  padding-bottom: pxToRem($grid-unit * 4);
-  margin: pxToRem($grid-unit);
-  box-shadow: 8px 8px 0 0 var(--hero-block-box-shadow-color);
-
-  @media screen and (min-width: $screen-sm) {
-    flex-basis: 20%;
-
-    &:first-child {
-      margin-left: pxToRem($grid-unit * 2);
-    }
-
-    &:last-child {
-      margin-right: pxToRem($grid-unit * 2);
-    }
-  }
-
-  &:before {
-    content: attr(data-step);
-    @include hard_button_base();
-    box-shadow: 4px 4px 0 0 var(--offwhite);
-    display: block;
-    width: pxToRem($grid-unit * 6);
-    margin: pxToRem($grid-unit * 2) auto pxToRem($grid-unit * 4) auto;
-  }
-}
-
-.hero__text--step1 {
-  background-color: var(--hero-block-background-step-1);
-}
-
-.hero__text--step2 {
-  background-color: var(--hero-block-background-step-2);
-}
-
-.hero__text--step3 {
-  background-color: var(--hero-block-background-step-3);
-}
-
-.hero__text--step4 {
-  background-color: var(--hero-block-background-step-4);
-}
-
-.hero__text--step5 {
-  background-color: var(--hero-block-background-step-5);
-}
-
-.hero__toggleHowTo {
-  @include chip_button_base();
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  color: var(--hero-toggle-foreground-color);
-  background-color: var(--hero-toggle-background-color);
-  border-color: var(--hero-toggle-foreground-color);
-  margin-top: pxToRem($grid-unit * 4);
-
-  &:focus {
-    border-color: transparent;
-  }
 }
 
 .modeSelector__container {

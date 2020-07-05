@@ -1,8 +1,11 @@
+import { ScaleDegrees } from './constants';
+
 export interface Fret {
   string: string;
   fret: number;
   displayName: string;
-  degree: string;
+  degree: ScaleDegrees;
+  degreeNumber: number;
 }
 
 export enum ChordType {

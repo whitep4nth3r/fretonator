@@ -19,14 +19,96 @@
   text-align: center;
 }
 
-.cta__row {
-  text-align: center;
-  padding-top: pxToRem($grid-unit * 4);
+.infoButtonRow {
+  display: flex;
+  flex-direction: column;
+  margin-top: pxToRem($grid-unit * 4);
+  margin-bottom: pxToRem($grid-unit * 8);
+  justify-content: space-between;
+
+  @media screen and (min-width: $screen-med) {
+    flex-direction: row;
+  }
 }
 
-.learnHub__cta {
-  @include text_link;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: pxToRem(30);
+.infoButton {
+  @include chip_button_base();
+  border-color: var(--fretboard-toggle-button-border-color);
+  margin-bottom: pxToRem($grid-unit * 2);
+  height: pxToRem(44);
+  justify-content: space-between;
+  align-content: center;
+
+  @media screen and (min-width: $screen-med) {
+    margin-bottom: 0;
+    height: unset;
+  }
 }
+
+.infoButton--withChevron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+
+.infoButton__svgContainer {
+  height: pxToRem($grid-unit * 1.5);
+  display: inline-block;
+  margin-left: pxToRem($grid-unit / 2);
+}
+
+.infoBlock {
+  background-color: var(--black);
+  margin: pxToRem($grid-unit * 4) pxToRem($grid-unit * -4);
+  padding: pxToRem($grid-unit * 4);
+  display: flex;
+  flex-direction: column;
+}
+
+.infoBlock__title {
+  @include font_medium;
+  color: var(--peach);
+  padding-bottom: pxToRem($grid-unit * 2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoBlock__close {
+  border-width: 0;
+  background-color: transparent;
+  height: pxToRem(44);
+  width: pxToRem(44);
+  padding: pxToRem($grid-unit);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--grey);
+}
+
+.infoBlock__copy {
+  @include font_bodyCopy;
+  color: var(--offwhite);
+  margin-top: pxToRem($grid-unit * 2);
+  margin-bottom: pxToRem($grid-unit * 2);
+}
+
+.infoBlock__list {
+
+}
+
+.infoBlock__listItem {
+  @include font_bodyCopy;
+  color: var(--yellow);
+  margin-bottom: pxToRem($grid-unit * 1);
+}
+
+.actionButton {
+  @include hard_button_base();
+  margin-bottom: pxToRem($grid-unit * 2);
+  align-self: flex-start;
+}
+

@@ -9,62 +9,8 @@ exports[`HomeIndexComponent should create 1`] = `
       <h1
         class="hero__title"
       >
-        
-        <span>
-          How to use the Fretonator
-        </span>
-        
+         Fretonator: the ultimate interactive free guitar theory tool 
       </h1>
-      <ol
-        aria-expanded="true"
-        class="hero__grid"
-        id="howToList"
-      >
-        <li
-          class="hero__block hero__text--step1"
-          data-step="1"
-        >
-          Choose a starting note
-        </li>
-        <li
-          class="hero__block hero__text--step2"
-          data-step="2"
-        >
-          Pick a mode
-        </li>
-        <li
-          class="hero__block hero__text--step3"
-          data-step="3"
-        >
-          Check out the fretboard
-        </li>
-        <li
-          class="hero__block hero__text--step4"
-          data-step="4"
-        >
-          Have a jam!
-        </li>
-        <li
-          class="hero__block hero__text--step5"
-          data-step="5"
-        >
-          Learn the theory
-        </li>
-      </ol>
-      <button
-        aria-checked="true"
-        aria-controls="howToList"
-        aria-label="Toggle visibility of Fretonator guide"
-        class="hero__toggleHowTo"
-        role="switch"
-        type="button"
-      >
-        
-        <span>
-          Hide
-        </span>
-        
-      </button>
     </div>
     <div
       class="modeSelector__container"
@@ -348,48 +294,6 @@ exports[`HomeIndexComponent should create 1`] = `
           
           
           <div
-            class="fretboard__toggle"
-          >
-            <button
-              class="fretboard__toggleButton fretboard__toggleButton--left fretboard__toggleButton--active"
-            >
-              12 frets 
-            </button>
-            <button
-              class="fretboard__toggleButton fretboard__toggleButton--middle-left"
-            >
-              24 frets 
-            </button>
-            <button
-              class="fretboard__toggleButton fretboard__toggleButton--middle-right"
-            >
-              <span
-                class="toggle__shortLabel"
-              >
-                LH
-              </span>
-              <span
-                class="toggle__longLabel"
-              >
-                Left handed
-              </span>
-            </button>
-            <button
-              class="fretboard__toggleButton fretboard__toggleButton--right fretboard__toggleButton--active"
-            >
-              <span
-                class="toggle__shortLabel"
-              >
-                RH
-              </span>
-              <span
-                class="toggle__longLabel"
-              >
-                Right handed
-              </span>
-            </button>
-          </div>
-          <div
             class="arrowHint"
           >
             <span
@@ -410,6 +314,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="0"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
                 data-string-name="e"
@@ -420,6 +325,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="1"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -427,6 +333,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="2"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -436,6 +343,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="3"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -443,6 +351,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="4"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -452,6 +361,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="5"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -459,6 +369,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="6"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -468,6 +379,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="7"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -477,6 +389,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="8"
+                data-highlight="true"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -484,6 +397,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="9"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -493,6 +407,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="10"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -500,6 +415,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -509,6 +425,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="12"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -521,6 +438,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="0"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
                 data-string-name="B"
@@ -531,6 +449,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="1"
+                data-highlight="true"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -538,6 +457,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="2"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -547,6 +467,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="3"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -554,6 +475,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="4"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -563,6 +485,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="5"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -572,6 +495,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="6"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -579,6 +503,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="7"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -588,6 +513,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="8"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -595,6 +521,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="9"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -604,6 +531,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="10"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -611,6 +539,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -620,6 +549,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="12"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
               />
@@ -632,6 +562,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="0"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
                 data-string-name="G"
@@ -640,6 +571,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="1"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -649,6 +581,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="2"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -656,6 +589,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="3"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -665,6 +599,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="4"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -674,6 +609,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="5"
+                data-highlight="true"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -681,6 +617,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="6"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -690,6 +627,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="7"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -697,6 +635,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="8"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -706,6 +645,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="9"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -715,6 +655,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="10"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -722,6 +663,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -731,6 +673,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="12"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
               />
@@ -743,6 +686,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="0"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
                 data-string-name="D"
@@ -751,6 +695,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="1"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -760,6 +705,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="2"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -769,6 +715,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="3"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -776,6 +723,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="4"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -785,6 +733,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="5"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -792,6 +741,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="6"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -801,6 +751,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="7"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -808,6 +759,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="8"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -817,6 +769,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="9"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -826,6 +779,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="10"
+                data-highlight="true"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -833,6 +787,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -842,6 +797,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="12"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
               />
@@ -854,6 +810,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="0"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
                 data-string-name="A"
@@ -862,6 +819,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="1"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -871,6 +829,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="2"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -880,6 +839,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="3"
+                data-highlight="true"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -887,6 +847,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="4"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -896,6 +857,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="5"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -903,6 +865,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="6"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -912,6 +875,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="7"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -921,6 +885,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="8"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -928,6 +893,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="9"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -937,6 +903,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="10"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -944,6 +911,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -953,6 +921,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="12"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
               />
@@ -965,6 +934,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="0"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
                 data-string-name="E"
@@ -975,6 +945,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="subdominant"
                 data-display-note="F"
                 data-fret="1"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -982,6 +953,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="2"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -991,6 +963,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="dominant"
                 data-display-note="G"
                 data-fret="3"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -998,6 +971,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="4"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -1007,6 +981,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="submediant"
                 data-display-note="A"
                 data-fret="5"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -1014,6 +989,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="6"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -1023,6 +999,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="leadingTone"
                 data-display-note="B"
                 data-fret="7"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -1032,6 +1009,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="tonic"
                 data-display-note="C"
                 data-fret="8"
+                data-highlight="true"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -1039,6 +1017,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="9"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -1048,6 +1027,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="supertonic"
                 data-display-note="D"
                 data-fret="10"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -1055,6 +1035,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="fretboard__cell"
                 data-fret="11"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -1064,6 +1045,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-degree="mediant"
                 data-display-note="E"
                 data-fret="12"
+                data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
               />
@@ -1142,40 +1124,104 @@ exports[`HomeIndexComponent should create 1`] = `
               
             </div>
           </div>
-          <p
-            class="fretonator__playCta"
+          <div
+            class="controlPanel"
           >
-            <span
-              class="fretonator__playCtaIcon"
+            <div
+              class="controlPanel__section"
             >
-              <app-speaker-svg>
-                <svg
-                  aria-hidden="true"
-                  class="svg"
-                  role="img"
-                  viewBox="0 0 576 512"
-                  xmlns="http://www.w3.org/2000/svg"
+              
+              
+              <span
+                class="controlPanel__title"
+              >
+                Highlight scale degrees
+              </span>
+              
+              <app-scale-degrees>
+                <div
+                  class="degreesDisplay"
                 >
-                  <path
-                    d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zm233.32-51.08c-11.17-7.33-26.18-4.24-33.51 6.95-7.34 11.17-4.22 26.18 6.95 33.51 66.27 43.49 105.82 116.6 105.82 195.58 0 78.98-39.55 152.09-105.82 195.58-11.17 7.32-14.29 22.34-6.95 33.5 7.04 10.71 21.93 14.56 33.51 6.95C528.27 439.58 576 351.33 576 256S528.27 72.43 448.35 19.97zM480 256c0-63.53-32.06-121.94-85.77-156.24-11.19-7.14-26.03-3.82-33.12 7.46s-3.78 26.21 7.41 33.36C408.27 165.97 432 209.11 432 256s-23.73 90.03-63.48 115.42c-11.19 7.14-14.5 22.07-7.41 33.36 6.51 10.36 21.12 15.14 33.12 7.46C447.94 377.94 480 319.54 480 256zm-141.77-76.87c-11.58-6.33-26.19-2.16-32.61 9.45-6.39 11.61-2.16 26.2 9.45 32.61C327.98 228.28 336 241.63 336 256c0 14.38-8.02 27.72-20.92 34.81-11.61 6.41-15.84 21-9.45 32.61 6.43 11.66 21.05 15.8 32.61 9.45 28.23-15.55 45.77-45 45.77-76.88s-17.54-61.32-45.78-76.86z"
-                  />
-                </svg>
-              </app-speaker-svg>
-            </span>
-             Tap notes on the fretboard for sound!
-  
-          </p>
+                  <button
+                    aria-label="Highlight tonic notes on the fretboard"
+                    class="degreesDisplay__degree tonic degreesDisplay__degree--tonic"
+                  >
+                    1
+                  </button>
+                  <button
+                    aria-label="Highlight mediant notes on the fretboard"
+                    class="degreesDisplay__degree mediant"
+                  >
+                    3
+                  </button>
+                  <button
+                    aria-label="Highlight dominant notes on the fretboard"
+                    class="degreesDisplay__degree dominant"
+                  >
+                    5
+                  </button>
+                </div>
+              </app-scale-degrees>
+              <div
+                class="button__group"
+              >
+                <button
+                  class="fretboard__toggleButton fretboard__toggleButton--active"
+                >
+                  Note names 
+                </button>
+                <button
+                  class="fretboard__toggleButton"
+                >
+                  Note numbers 
+                </button>
+              </div>
+            </div>
+            <div
+              class="controlPanel__section"
+            >
+              <span
+                class="controlPanel__title controlPanel__title--right"
+              >
+                Configure fretboard
+              </span>
+              <app-fretboard-config>
+                <div
+                  class="configure__controls"
+                >
+                  <div
+                    class="button__group"
+                  >
+                    <button
+                      class="fretboard__toggleButton twelve fretboard__toggleButton--active"
+                    >
+                      12 frets 
+                    </button>
+                    <button
+                      class="fretboard__toggleButton twentyFour"
+                    >
+                      24 frets 
+                    </button>
+                  </div>
+                  <div
+                    class="button__group"
+                  >
+                    <button
+                      class="fretboard__toggleButton left"
+                    >
+                       Left handed 
+                    </button>
+                    <button
+                      class="fretboard__toggleButton right fretboard__toggleButton--active"
+                    >
+                       Right handed 
+                    </button>
+                  </div>
+                </div>
+              </app-fretboard-config>
+            </div>
+          </div>
         </app-fretboard>
-        <div
-          class="cta__row"
-        >
-          <a
-            class="learnHub__cta"
-            href="/learn/patterns"
-          >
-             Learn how to break this down into patterns in our learning hub → 
-          </a>
-        </div>
         
         
         <app-video-loader>
@@ -1293,76 +1339,45 @@ exports[`HomeIndexComponent should create 1`] = `
                      B 
                   </p>
                 </div>
-                <div
-                  class="buttonRow"
-                >
-                  <button
-                    aria-label="Play this scale"
-                    class="button__playScale"
-                    type="button"
-                  >
-                    <span
-                      class="button__playScale__svg"
-                    >
-                      <app-play-svg>
-                        <svg
-                          aria-hidden="true"
-                          class="svg"
-                          role="img"
-                          viewBox="0 0 512 512"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"
-                          />
-                        </svg>
-                      </app-play-svg>
-                    </span>
-                     Play scale 
-                  </button>
-                  
-                </div>
-              </div>
-              
-              <div
-                class="scaleMap__degrees"
-              >
-                <h4
-                  class="scaleMap__title"
-                >
-                  Degrees
-                </h4>
-                <div
-                  class="degreesDisplay"
-                >
-                  <span
-                    class="degreesDisplay__degree degreesDisplay__degree--tonic"
-                  >
-                    1
-                  </span>
-                  <span
-                    class="degreesDisplay__degree degreesDisplay__degree--mediant"
-                  >
-                    3
-                  </span>
-                  <span
-                    class="degreesDisplay__degree degreesDisplay__degree--dominant"
-                  >
-                    5
-                  </span>
-                </div>
-                <button
-                  aria-label="Scale Degrees Info Toggle"
-                  class="button__infoToggle button__infoToggle--scaleDegrees"
-                  type="button"
-                >
-                  What is this? 
-                </button>
               </div>
             </div>
-            
-            
           </app-scale-map>
+          <div
+            class="infoButtonRow"
+          >
+            <button
+              aria-expanded="false"
+              aria-label="Scale Degrees Info Toggle"
+              class="infoButton infoButton--scaleMapInfo"
+              type="button"
+            >
+              About scale degrees
+            </button>
+            
+            <a
+              class="infoButton infoButton--withChevron"
+              href="/learn/patterns"
+            >
+               Break modes down into patterns 
+              <span
+                class="infoButton__svgContainer"
+              >
+                <app-chevron-right-svg>
+                  <svg
+                    class="svg"
+                    viewBox="0 0 320 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                    />
+                  </svg>
+                </app-chevron-right-svg>
+              </span>
+            </a>
+          </div>
+          
+          
           <app-interval-map>
             <div
               class="intervalMap"

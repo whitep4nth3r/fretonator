@@ -22,7 +22,6 @@ export class HomeIndexComponent implements OnInit, AfterViewInit {
   mode: Mode = Mode.ionian;
   modeSelectorObjects = ModeSelectorObjects;
   octave = Octave;
-  showHowTo;
 
   constructor(
     private title: Title,
@@ -38,18 +37,6 @@ export class HomeIndexComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(() => this.onRouteChange());
     this.setHomePageMeta();
-
-    const _showHowTo = this.localStorage.getItem('showHowTo');
-    switch (_showHowTo) {
-      case false:
-        this.showHowTo = false;
-        break;
-      case true:
-        this.showHowTo = true;
-        break;
-      default:
-        this.showHowTo = true;
-    }
   }
 
   ngAfterViewInit(): void {
@@ -75,11 +62,6 @@ export class HomeIndexComponent implements OnInit, AfterViewInit {
     }
 
     this.setHomePageMeta();
-  }
-
-  toggleHowTo() {
-    this.showHowTo = !this.showHowTo;
-    this.localStorage.setItem('showHowTo', this.showHowTo);
   }
 
   setHomePageMeta() {

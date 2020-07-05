@@ -17,7 +17,7 @@ import {
   ModeSelectorObjects,
   NoteToStringAndFretMap,
   Octave,
-  ScaleDegrees,
+  ScaleDegreeNames,
   StandardModePatterns
 } from '../../util/constants';
 import { JamTracksData } from '../../data/jamTracks';
@@ -330,16 +330,17 @@ export class FretMapService {
 
     const modeMap = origModeMap.map((noteObject, index) => ({
       ...noteObject,
-      degree: ScaleDegrees[index]
+      degree: ScaleDegreeNames[index],
     }));
 
     return modeMap
-      .map((note) =>
+      .map((note, index) =>
         NoteToStringAndFretMap[this.convertNoteToFretMapKey(note)]
           .map((thisNote: NoteObject) => ({
             ...thisNote,
             displayName: note.displayName,
-            degree: note.degree
+            degree: note.degree,
+            degreeNumber: index + 1
           })))
       .flat()
       .reduce((acc, curr) => [...acc, curr], [])

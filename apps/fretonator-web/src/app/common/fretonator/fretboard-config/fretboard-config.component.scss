@@ -1,0 +1,47 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/functions";
+@import "../../../../styles/mixins";
+@import "../../../../styles/typography";
+
+.configure__controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.button__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: pxToRem($grid-unit * 2);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $screen-med) {
+    justify-content: flex-end;
+  }
+}
+
+.fretboard__toggleButton {
+  @include chip_button_base();
+  padding: pxToRem($grid-unit * 1.5);
+  border-color: var(--fretboard-toggle-button-border-color);
+}
+
+.fretboard__toggleButton--active {
+  background-color: var(--chip-background-color-active);
+  color: var(--chip-foreground-color-active);
+}
+
+.fretboard__toggleButton:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: calc(var(--border-width-button) / 2);
+}
+
+.fretboard__toggleButton:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: calc(var(--border-width-button) / 2);
+}

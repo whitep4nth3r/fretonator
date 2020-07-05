@@ -2,15 +2,21 @@ import { Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, 
 import { FretMap, Mode } from '../../../util/types';
 import { NotePlaybackService } from '../../playback/note-playback.service';
 import { AbstractDataService } from '../../abstract-data/abstract-data.service';
+import { ScaleDegrees } from '../../../util/constants';
 
-export enum FretMode {
+export enum FretModes {
   twelve = 'twelve',
   twentyFour = 'twentyFour',
 }
 
-export enum Orientation {
+export enum Orientations {
   left = 'left',
   right = 'right',
+}
+
+export enum NoteDisplays {
+  numbers = 'numbers',
+  noteNames = 'noteNames'
 }
 
 const FretReturner = {
@@ -20,8 +26,9 @@ const FretReturner = {
 
 const StorageKeys = {
   fretMode: 'fretonator_fretMode',
-  orientation: 'fretonator_orientation'
-}
+  orientation: 'fretonator_orientation',
+  noteNameDisplay: 'fretonator_noteNameDisplay'
+};
 
 @Component({
   selector: 'app-fretboard',
@@ -39,69 +46,72 @@ export class FretboardComponent implements OnChanges, OnInit {
   orientation;
   fretMode;
   frets;
+  highlightedDegrees = new Set<ScaleDegrees>();
+  noteNameDisplay = NoteDisplays.noteNames;
 
   constructor(public playbackService: NotePlaybackService,
               private localStorage: AbstractDataService) {
   }
 
   ngOnInit() {
-    const _fretMode = this.localStorage.getItem(StorageKeys.fretMode);
-    switch (_fretMode) {
-      case 'twelve':
-        this.fretMode = FretMode.twelve;
-        break;
-      case 'twentyFour':
-        this.fretMode = FretMode.twentyFour;
-        break;
-      default:
-        this.fretMode = FretMode.twelve;
-    }
+    this.loadPropFromStorage(StorageKeys.fretMode, 'fretMode', FretModes.twelve);
+    this.loadPropFromStorage(StorageKeys.orientation, 'orientation', Orientations.right);
+    this.loadPropFromStorage(StorageKeys.noteNameDisplay, 'noteNameDisplay', NoteDisplays.noteNames);
 
-    const _orientation = this.localStorage.getItem(StorageKeys.orientation);
-    switch (_orientation) {
-      case 'right':
-        this.orientation = Orientation.right;
-        break;
-      case 'left':
-        this.orientation = Orientation.left;
-        break;
-      default:
-        this.orientation = Orientation.right;
-    }
-
+    this.toggleHighlight(ScaleDegrees.tonic);
     this.configureFretboard();
   }
 
-
   ngOnChanges(): void {
     if (this.loadExpanded) {
-      this.setFretMode(FretMode.twentyFour);
+      this.setFretMode(FretModes.twentyFour);
     }
   }
 
-  get fretModes() {
-    return FretMode;
+  get FretModes() {
+    return FretModes;
   }
 
-  get orientations() {
-    return Orientation;
+  get Orientations() {
+    return Orientations;
+  }
+
+  get ScaleDegrees() {
+    return ScaleDegrees;
+  }
+
+  get NoteDisplays() {
+    return NoteDisplays;
   }
 
   configureFretboard() {
     this.frets = FretReturner[this.fretMode];
-    this.loadExpandedChange.emit(this.fretMode === FretMode.twentyFour);
+    this.loadExpandedChange.emit(this.fretMode === FretModes.twentyFour);
   }
 
-  setOrientation(orientation: Orientation) {
+  setOrientation(orientation: Orientations) {
     this.orientation = orientation;
     this.localStorage.setItem(StorageKeys.orientation, this.orientation);
-
     this.configureFretboard();
   }
 
-  setFretMode(fretMode: FretMode) {
+  setFretMode(fretMode: FretModes) {
     this.fretMode = fretMode;
     this.localStorage.setItem(StorageKeys.fretMode, this.fretMode);
     this.configureFretboard();
+  }
+
+  toggleHighlight(degree: ScaleDegrees) {
+    this.highlightedDegrees.has(degree) ? this.highlightedDegrees.delete(degree) : this.highlightedDegrees.add(degree);
+  }
+
+  toggleNoteDisplay(displayType: NoteDisplays) {
+    this.noteNameDisplay = displayType;
+    this.localStorage.setItem(StorageKeys.noteNameDisplay, displayType);
+  }
+
+  loadPropFromStorage<T>(storageKey: string, propName: string, defaultValue: T) {
+    const value = this.localStorage.getItem(storageKey);
+    this[propName] = value || defaultValue;
   }
 }

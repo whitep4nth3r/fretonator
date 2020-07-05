@@ -1,17 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Mode, ModeMap } from '../../../util/types';
-import { NotePlaybackService } from '../../playback/note-playback.service';
-import { GlobalService } from '../../../global.service';
-
-enum ScaleDegreesToggleText {
-  hidden = 'What is this?',
-  visible = 'Hide info'
-}
-
-enum TheoreticalScalesToggleText {
-  hidden = 'About theoretical scales',
-  visible = 'Hide info'
-}
 
 @Component({
   selector: 'app-scale-map',
@@ -25,32 +13,4 @@ export class ScaleMapComponent {
   @Input() modeMap: ModeMap;
   @Input() isTheoretical: boolean;
   @Input() modeDisplayString: string;
-
-  showScaleMapInfo = false;
-  showTheoreticalScalesInfo = false;
-  scaleDegreesToggleText = ScaleDegreesToggleText.hidden;
-  theoreticalScalesToggleText = TheoreticalScalesToggleText.hidden;
-
-  constructor(public playbackService: NotePlaybackService,
-              private globalService: GlobalService) {
-  }
-
-  toggleScaleMapInfo() {
-    this.showScaleMapInfo = !this.showScaleMapInfo;
-    this.scaleDegreesToggleText = this.showScaleMapInfo ? ScaleDegreesToggleText.visible : ScaleDegreesToggleText.hidden;
-  }
-
-  toggleTheoreticalScaleInfo() {
-    this.showTheoreticalScalesInfo = !this.showTheoreticalScalesInfo;
-    this.theoreticalScalesToggleText = this.showTheoreticalScalesInfo ? TheoreticalScalesToggleText.visible : TheoreticalScalesToggleText.hidden;
-  }
-
-  linkClick() {
-    this.toggleTheoreticalScaleInfo();
-    this.globalService.getScrollTarget().scrollIntoView();
-  }
-
-  playScale(modeMap: ModeMap) {
-    this.playbackService.playMode(modeMap);
-  }
 }
