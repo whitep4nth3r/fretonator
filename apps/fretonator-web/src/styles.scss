@@ -80,6 +80,7 @@
   --fretboard-play-cta-color: var(--grey);
 
   --fret-marker-url: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23dbdae0' /%3E%3C/svg%3E");
+  --fretboard-arrow-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 512 512'%3E%3Cpath fill='%233993dd' d='M319.1 217c20.2 20.2 19.9 53.2-.6 73.7s-53.5 20.8-73.7.6l-190-190c-20.1-20.2-19.8-53.2.7-73.7S109 6.8 129.1 27l190 190z'/%3E%3Cpath fill='%233993dd' d='M319.1 290.5c20.2-20.2 19.9-53.2-.6-73.7s-53.5-20.8-73.7-.6l-190 190c-20.2 20.2-19.9 53.2.6 73.7s53.5 20.8 73.7.6l190-190z'/%3E%3C/svg%3E");;
 
   --note-color: var(--yellow);
   --note-background: var(--black);
@@ -159,6 +160,7 @@
   --fretboard-play-cta-color: #d3d3d3;
 
   --fret-marker-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23474350'/%3E%3C/svg%3E");
+  --fretboard-arrow-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 512 512'%3E%3Cpath fill='%23ee9198' d='M319.1 217c20.2 20.2 19.9 53.2-.6 73.7s-53.5 20.8-73.7.6l-190-190c-20.1-20.2-19.8-53.2.7-73.7S109 6.8 129.1 27l190 190z'/%3E%3Cpath fill='%23ee9198' d='M319.1 290.5c20.2-20.2 19.9-53.2-.6-73.7s-53.5-20.8-73.7-.6l-190 190c-20.2 20.2-19.9 53.2.6 73.7s53.5 20.8 73.7.6l190-190z'/%3E%3C/svg%3E");
 
   --note-color: var(--black);
   --note-background: var(--offwhite);
