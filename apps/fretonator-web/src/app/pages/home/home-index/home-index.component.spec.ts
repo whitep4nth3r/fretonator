@@ -10,15 +10,6 @@ import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 
 describe('HomeIndexComponent', () => {
-  const selectors = {
-    howToToggle: By.css('.hero__toggleHowTo'),
-    howToList: By.css('.hero__grid')
-  };
-
-  const classNames = {
-    hideHowTo: 'hidden'
-  };
-
   @Component({
     selector: 'app-home-index-spec',
     template: `
@@ -65,13 +56,5 @@ describe('HomeIndexComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
     expect(fixture).toMatchSnapshot();
-  });
-
-  it('should toggle the how-to section', () => {
-    const howToToggle = fixture.debugElement.query(selectors.howToToggle);
-    const howToList = fixture.debugElement.query(selectors.howToList);
-    howToToggle.nativeElement.click();
-    fixture.detectChanges();
-    expect(howToList.classes[classNames.hideHowTo]).toBeTruthy();
   });
 });

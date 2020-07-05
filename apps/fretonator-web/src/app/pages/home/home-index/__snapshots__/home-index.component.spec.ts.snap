@@ -9,62 +9,8 @@ exports[`HomeIndexComponent should create 1`] = `
       <h1
         class="hero__title"
       >
-        
-        <span>
-          How to use the Fretonator
-        </span>
-        
+         Fretonator: the ultimate interactive free guitar theory tool 
       </h1>
-      <ol
-        aria-expanded="true"
-        class="hero__grid"
-        id="howToList"
-      >
-        <li
-          class="hero__block hero__text--step1"
-          data-step="1"
-        >
-          Choose a starting note
-        </li>
-        <li
-          class="hero__block hero__text--step2"
-          data-step="2"
-        >
-          Pick a mode
-        </li>
-        <li
-          class="hero__block hero__text--step3"
-          data-step="3"
-        >
-          Check out the fretboard
-        </li>
-        <li
-          class="hero__block hero__text--step4"
-          data-step="4"
-        >
-          Have a jam!
-        </li>
-        <li
-          class="hero__block hero__text--step5"
-          data-step="5"
-        >
-          Learn the theory
-        </li>
-      </ol>
-      <button
-        aria-checked="true"
-        aria-controls="howToList"
-        aria-label="Toggle visibility of Fretonator guide"
-        class="hero__toggleHowTo"
-        role="switch"
-        type="button"
-      >
-        
-        <span>
-          Hide
-        </span>
-        
-      </button>
     </div>
     <div
       class="modeSelector__container"

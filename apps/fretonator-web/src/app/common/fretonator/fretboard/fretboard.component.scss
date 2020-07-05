@@ -407,7 +407,7 @@ $note-height: 36;
   display: block;
   margin-top: pxToRem($grid-unit * 4);
 
-  @media screen and (min-width: 712px) {
+  @media screen and (min-width: 1324px) {
     display: none;
   }
 }
