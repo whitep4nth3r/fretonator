@@ -537,7 +537,6 @@ $note-height: 36;
   flex-direction: row;
   justify-content: center;
   margin-bottom: pxToRem($grid-unit * 2);
-  margin-top: pxToRem($grid-unit * 2);
 
   &:last-of-type {
     margin-bottom: 0;
