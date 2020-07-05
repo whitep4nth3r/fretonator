@@ -1,6 +1,15 @@
 import { Component, Input } from '@angular/core';
 import { ChordMap, FretMap, Mode, ModeMap } from '../../util/types';
 
+enum ScaleDegreesToggleText {
+  hidden = 'About scale degrees',
+  visible = 'Hide scale degrees info'
+}
+
+enum TheoreticalScalesToggleText {
+  hidden = 'About theoretical scales',
+  visible = 'Hide theoretical info'
+}
 
 @Component({
   selector: 'app-fretonator',
@@ -17,4 +26,18 @@ export class FretonatorComponent {
   @Input() note: string;
   @Input() noteExtenderString: string;
   @Input() noteExtender: string;
+  showScaleMapInfo = false;
+  scaleDegreesToggleText = ScaleDegreesToggleText.hidden;
+  showTheoreticalScalesInfo = false;
+  theoreticalScalesToggleText = TheoreticalScalesToggleText.hidden;
+
+  toggleScaleMapInfo() {
+    this.showScaleMapInfo = !this.showScaleMapInfo;
+    this.scaleDegreesToggleText = this.showScaleMapInfo ? ScaleDegreesToggleText.visible : ScaleDegreesToggleText.hidden;
+  }
+
+  toggleTheoreticalScaleInfo() {
+    this.showTheoreticalScalesInfo = !this.showTheoreticalScalesInfo;
+    this.theoreticalScalesToggleText = this.showTheoreticalScalesInfo ? TheoreticalScalesToggleText.visible : TheoreticalScalesToggleText.hidden;
+  }
 }

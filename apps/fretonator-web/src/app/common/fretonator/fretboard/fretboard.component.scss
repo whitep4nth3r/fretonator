@@ -30,7 +30,7 @@ $note-height: 36;
 
 .fretboard__help {
   text-align: center;
-  padding-top: pxToRem($grid-unit * 4);
+  padding-top: pxToRem($grid-unit * 2);
 
   &[data-fret="3"],
   &[data-fret="5"],
@@ -490,7 +490,7 @@ $note-height: 36;
   align-items: flex-start;
   max-width: $screen-med;
   margin-top: pxToRem($grid-unit * 2);
-  margin-bottom: pxToRem($grid-unit * 8);
+  margin-bottom: pxToRem($grid-unit * 2);
   background-color: var(--background-color-light);
   padding: pxToRem($grid-unit * 4);
   border-radius: pxToRem($grid-unit * 4);

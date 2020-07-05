@@ -3,14 +3,6 @@
 <app-fretboard [fretMap]="fretMap"
                [mode]="mode"></app-fretboard>
 
-<div class="cta__row">
-  <a [routerLink]="['/','learn','patterns']"
-     [state]="{scrollToTop: true}"
-     class="learnHub__cta">
-    Learn how to break down modes into patterns in our learning hub &#8594;
-  </a>
-</div>
-
 <ng-container *ngIf="note | symbolToNoteObj: noteExtender | getJamTrack: mode">
   <app-video-loader [jamTrack]="note | symbolToNoteObj: noteExtender | getJamTrack: mode"></app-video-loader>
 </ng-container>
@@ -25,6 +17,87 @@
                  [note]="note"
                  [noteExtenderString]="noteExtenderString"></app-scale-map>
 
+  <div class="infoButtonRow">
+    <button class="infoButton"
+            aria-label="Scale Degrees Info Toggle"
+            type="button"
+            [attr.aria-expanded]="showScaleMapInfo"
+            (click)="toggleScaleMapInfo()">{{scaleDegreesToggleText}}</button>
+    <button class="infoButton"
+            aria-label="Theoretical Scales Info Toggle"
+            type="button"
+            *ngIf="modeMap | isTheoreticalScale"
+            [attr.aria-expanded]="showTheoreticalScalesInfo"
+            (click)="toggleTheoreticalScaleInfo()">{{theoreticalScalesToggleText}}</button>
+    <a [routerLink]="['/','learn','patterns']"
+       [state]="{scrollToTop: true}"
+       class="infoButton infoButton--withChevron">
+      Break modes down into patterns
+      <span class="infoButton__svgContainer">
+        <app-chevron-right-svg></app-chevron-right-svg>
+      </span>
+    </a>
+  </div>
+
+  <div class="infoBlock infoBlock--scaleDegrees"
+       [attr.aria-expanded]="showScaleMapInfo"
+       *ngIf="showScaleMapInfo">
+    <h3 class="infoBlock__title">About Scale Degrees
+      <button class="infoBlock__close"
+              aria-label="Scale Degrees Info Close"
+              type="button"
+              (click)="toggleScaleMapInfo()">
+        <app-cross-svg></app-cross-svg>
+      </button>
+    </h3>
+    <p class="infoBlock__copy">
+      Each of the 7 notes of a mode or scale is called a <em>scale degree</em>, and has a specific name.
+    </p>
+    <ol class="infoBlock__list">
+      <li class="infoBlock__listItem">Tonic</li>
+      <li class="infoBlock__listItem">Supertonic</li>
+      <li class="infoBlock__listItem">Mediant</li>
+      <li class="infoBlock__listItem">Subdominant</li>
+      <li class="infoBlock__listItem">Dominant</li>
+      <li class="infoBlock__listItem">Submediant</li>
+      <li class="infoBlock__listItem">Leading note</li>
+    </ol>
+    <p class="infoBlock__copy">
+      Notes 1, 3 and 5 of a scale make up the <em>tonic triad</em>, which is simply a chord of three notes built on
+      the first note of the scale. This is the the most important chord to learn when jamming as it is the <em>home</em>
+      chord - meaning it's usually the chord that the jam track starts on and returns to often.
+    </p>
+    <p class="infoBlock__copy">
+      Scale degrees 1, 3, and 5 can be highlighted on the fretboard to give you a helpful point of reference when
+      learning
+      the mode.
+    </p>
+  </div>
+
+  <div class="infoBlock infoBlock--theoreticalScales"
+       [attr.aria-expanded]="showTheoreticalScalesInfo"
+       *ngIf="showTheoreticalScalesInfo">
+    <h3 class="infoBlock__title">About Theoretical Scales
+      <button class="infoBlock__close"
+              aria-label="Theoretical Scales Info Close"
+              type="button"
+              (click)="toggleTheoreticalScaleInfo()">
+        <app-cross-svg></app-cross-svg>
+      </button>
+    </h3>
+    <p class="infoBlock__copy">A theoretical scale or <em>impossible key</em> is a key whose key signature has at least
+      one double flat (𝄫) or double sharp (x).</p>
+    <p class="infoBlock__copy">{{modeDisplayString}} is a theoretical scale and looks unnecessarily complicated. We can
+      make things simpler!</p>
+    <p class="infoBlock__copy">Switch to the enharmonic equivalent note
+      of {{modeMap[0].displayName | getEnharmonicEquivalent }} to make
+      the notes easier to read. (It'll sound exactly the same!)</p>
+    <a class="actionButton"
+       (click)="linkClick()"
+       [routerLink]="note | getEnharmonicRouterLink: noteExtenderString: mode"
+    >Switch to {{modeMap[0].displayName | getEnharmonicEquivalent }}</a>
+  </div>
+
   <app-interval-map [intervalMap]="intervalMap"></app-interval-map>
 
   <app-chord-map [chordMap]="chordMap"></app-chord-map>
@@ -33,5 +106,4 @@
                      [similarModes]="modeMap | getSimilarModes : mode"
                      [isTheoretical]="modeMap | isTheoreticalScale">
   </app-similar-modes>
-
 </div>

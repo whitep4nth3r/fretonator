@@ -12,6 +12,10 @@ import { SymbolToNoteObjPipe } from './symbol-to-note-obj.pipe';
 import { GetJamTrackPipe } from './get-jam-track.pipe';
 import { FretboardModule } from './fretboard/fretboard.module';
 import { RouterModule } from '@angular/router';
+import { CrossModule } from '../svgs/cross/cross.module';
+import { GetEnharmonicEquivalentPipe } from './get-enharmonic-equivalent.pipe';
+import { GetEnharmonicRouterLinkPipe } from './get-enharmonic-router-link.pipe';
+import { ChevronRightModule } from '../svgs/chevron-right/chevron-right.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,8 @@ import { RouterModule } from '@angular/router';
     GetSimilarModesPipe,
     SymbolToNoteObjPipe,
     GetJamTrackPipe,
+    GetEnharmonicEquivalentPipe,
+    GetEnharmonicRouterLinkPipe
   ],
   imports: [
     CommonModule,
@@ -29,7 +35,9 @@ import { RouterModule } from '@angular/router';
     SimilarModesModule,
     VideoLoaderModule,
     FretboardModule,
-    RouterModule
+    RouterModule,
+    CrossModule,
+    ChevronRightModule
   ],
   exports: [
     FretonatorComponent,

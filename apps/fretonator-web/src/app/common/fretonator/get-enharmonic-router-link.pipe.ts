@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Enharmonics } from '../../../util/constants';
+import { Enharmonics } from '../../util/constants';
 
 @Pipe({
   name: 'getEnharmonicRouterLink'
