@@ -78,7 +78,7 @@
 </div>
 
 <div class="control__panel">
-  <div class="control__panel__section">
+  <div class="control__panel__section" *ngIf="mode | displayScaleDegrees">
     <span class="control__panel__title">Highlight scale degrees</span>
     <app-scale-degrees
       [tonicActive]="highlightedDegrees.has(scaleDegree.tonic)"

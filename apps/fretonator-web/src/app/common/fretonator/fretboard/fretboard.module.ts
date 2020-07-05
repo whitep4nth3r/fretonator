@@ -5,6 +5,7 @@ import { GetFretFromFretMapPipe } from './get-fret-from-fret-map.pipe';
 import { SpeakerModule } from '../../svgs/speaker/speaker.module';
 import { ScaleDegreesModule } from '../scale-degrees/scale-degrees.module';
 import { FretboardConfigModule } from '../fretboard-config/fretboard-config.module';
+import { ScaleMapModule } from '../scale-map/scale-map.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { FretboardConfigModule } from '../fretboard-config/fretboard-config.modu
     SpeakerModule,
     ScaleDegreesModule,
     FretboardConfigModule,
+    ScaleMapModule
   ],
   exports: [
     FretboardComponent

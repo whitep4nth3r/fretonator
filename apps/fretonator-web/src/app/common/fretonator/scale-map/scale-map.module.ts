@@ -13,7 +13,8 @@ import { ScaleDegreesModule } from '../scale-degrees/scale-degrees.module';
 @NgModule({
   declarations: [ScaleMapComponent, DisplayScaleDegreesPipe, GetEnharmonicEquivalentPipe, GetEnharmonicRouterLinkPipe],
   exports: [
-    ScaleMapComponent
+    ScaleMapComponent,
+    DisplayScaleDegreesPipe
   ],
   imports: [
     CommonModule,
