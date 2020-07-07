@@ -1,4 +1,4 @@
-<ng-template #string let-stringName="stringName" let-string="string">
+<ng-template #string let-stringName="stringName" let-stringNote="stringNote">
   <ng-container *ngFor="let fret of frets">
     <div
       class="fretboard__cell"
@@ -6,7 +6,7 @@
       [class.fretboard__cell--string]="fret === 0"
       [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive"
       [attr.data-string-name]="fret === 0 ? stringName : null"
-      [attr.data-string]="string"
+      [attr.data-string]="stringNote"
       [attr.data-fret]="fret"
       [attr.data-degree]="(fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degree"
       [attr.data-display-note]="noteNameDisplay === NoteDisplays.noteNames ? ((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.displayName) : ((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degreeNumber)"
@@ -36,35 +36,12 @@
        [class.fretboard__leftHanded]="orientation === Orientations.left"
        [class.fretboard__24]="fretMode === FretModes.twentyFour">
 
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="strings[5]"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="strings[4]"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="strings[3]"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="strings[2]"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="strings[1]"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="strings[0]"
-    ></ng-container>
+    <ng-container *ngFor="let item of reverseStrings$ | async">
+      <ng-container
+        [ngTemplateOutlet]="string"
+        [ngTemplateOutletContext]="item"
+      ></ng-container>
+    </ng-container>
   </div>
 
   <div class="fretboard"
@@ -76,7 +53,9 @@
   </div>
 </div>
 
+
 <div class="controlPanel">
+
   <div class="controlPanel__section">
     <span class="controlPanel__title" *ngIf="!(mode | displayScaleDegrees)">Configure scale degrees</span>
     <span class="controlPanel__title" *ngIf="mode | displayScaleDegrees">Highlight scale degrees</span>
@@ -111,10 +90,16 @@
       (setOrientation)="setOrientation($event)"
     ></app-fretboard-config>
   </div>
+</div>
 
-  <div>
-    <button (click)="setTuning(Tunings.standard)">standard</button>
-    <button (click)="setTuning(Tunings.dropD)">drop d</button>
-  </div>
-
+<div class="fretboard__tuningGroup">
+  <button class="fretboard__changeTuning"
+          [class.tuning--active]="tuning === Tunings.standard"
+          (click)="setTuning(Tunings.standard)">Standard</button>
+  <button class="fretboard__changeTuning"
+          [class.tuning--active]="tuning === Tunings.dropd"
+          (click)="setTuning(Tunings.dropd)">Drop D</button>
+  <button class="fretboard__changeTuning"
+          [class.tuning--active]="tuning === Tunings.dadgad"
+          (click)="setTuning(Tunings.dadgad)">DADGAD</button>
 </div>

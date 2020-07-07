@@ -547,6 +547,25 @@ $note-height: 36;
   }
 }
 
+.fretboard__tuningGroup {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $screen-med;
+  text-align: center;
+}
+
+.fretboard__changeTuning {
+  @include chip_button_base;
+  margin-left: pxToRem($grid-unit / 2);
+  margin-right: pxToRem($grid-unit / 2);
+}
+
+.tuning--active {
+  background-color: var(--chip-background-color-active);
+  color: var(--chip-foreground-color-active);
+  border-color: var(--chip-border-color-active);
+}
+
 .fretboard__toggleButton {
   @include chip_button_base();
   padding: pxToRem($grid-unit * 1.5);

@@ -13,6 +13,8 @@ import { FretMap, Mode } from '../../../util/types';
 import { NotePlaybackService } from '../../playback/note-playback.service';
 import { AbstractDataService } from '../../abstract-data/abstract-data.service';
 import { ScaleDegrees } from '../../../util/constants';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 export enum FretModes {
   twelve = 'twelve',
@@ -31,25 +33,34 @@ export enum NoteDisplays {
 
 enum Tunings {
   standard = 'standard',
-  dropD = 'dropD'
+  dropd = 'dropd',
+  dadgad = 'dadgad'
 }
 
 const TuningReturner = {
   'standard': [
-    { stringName: 'E', string: 'E' },
-    { stringName: 'A', string: 'A' },
-    { stringName: 'D', string: 'D' },
-    { stringName: 'G', string: 'G' },
-    { stringName: 'B', string: 'B' },
-    { stringName: 'e', string: 'E' }
+    { stringName: 'E', stringNote: 'E' },
+    { stringName: 'A', stringNote: 'A' },
+    { stringName: 'D', stringNote: 'D' },
+    { stringName: 'G', stringNote: 'G' },
+    { stringName: 'B', stringNote: 'B' },
+    { stringName: 'e', stringNote: 'E' }
   ],
-  'dropD': [
-    { stringName: 'D', string: 'D' },
-    { stringName: 'A', string: 'A' },
-    { stringName: 'D', string: 'D' },
-    { stringName: 'G', string: 'G' },
-    { stringName: 'B', string: 'B' },
-    { stringName: 'e', string: 'E' }
+  'dropd': [
+    { stringName: 'D', stringNote: 'D' },
+    { stringName: 'A', stringNote: 'A' },
+    { stringName: 'D', stringNote: 'D' },
+    { stringName: 'G', stringNote: 'G' },
+    { stringName: 'B', stringNote: 'B' },
+    { stringName: 'e', stringNote: 'E' }
+  ],
+  'dadgad': [
+    { stringName: 'D', stringNote: 'D' },
+    { stringName: 'A', stringNote: 'A' },
+    { stringName: 'D', stringNote: 'D' },
+    { stringName: 'G', stringNote: 'G' },
+    { stringName: 'A', stringNote: 'A' },
+    { stringName: 'd', stringNote: 'D' }
   ]
 };
 
@@ -81,14 +92,16 @@ export class FretboardComponent implements OnChanges, OnInit {
   orientation;
   fretMode;
   frets;
-  strings;
-  tuning;
+  tuning = Tunings.standard;
   highlightedDegrees = new Set<ScaleDegrees>();
   noteNameDisplay = NoteDisplays.noteNames;
+  strings$ = new BehaviorSubject<any[]>(TuningReturner[Tunings.standard]);
+  reverseStrings$ = this.strings$.pipe(
+    map(str => str.reverse())
+  )
 
   constructor(public playbackService: NotePlaybackService,
-              private localStorage: AbstractDataService,
-              private cd: ChangeDetectorRef) {
+              private localStorage: AbstractDataService) {
   }
 
   ngOnInit() {
@@ -129,7 +142,7 @@ export class FretboardComponent implements OnChanges, OnInit {
   }
 
   configureStrings() {
-    this.strings = TuningReturner[this.tuning];
+    this.strings$.next(TuningReturner[this.tuning]);
   }
 
   configureFretboard() {
