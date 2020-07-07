@@ -38,32 +38,32 @@
 
     <ng-container
       [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'e', string: 'E' }"
+      [ngTemplateOutletContext]="strings[5]"
     ></ng-container>
 
     <ng-container
       [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'B', string: 'B' }"
+      [ngTemplateOutletContext]="strings[4]"
     ></ng-container>
 
     <ng-container
       [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'G', string: 'G' }"
+      [ngTemplateOutletContext]="strings[3]"
     ></ng-container>
 
     <ng-container
       [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'D', string: 'D' }"
+      [ngTemplateOutletContext]="strings[2]"
     ></ng-container>
 
     <ng-container
       [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'A', string: 'A' }"
+      [ngTemplateOutletContext]="strings[1]"
     ></ng-container>
 
     <ng-container
       [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'E', string: 'E' }"
+      [ngTemplateOutletContext]="strings[0]"
     ></ng-container>
   </div>
 
@@ -111,4 +111,10 @@
       (setOrientation)="setOrientation($event)"
     ></app-fretboard-config>
   </div>
+
+  <div>
+    <button (click)="setTuning(Tunings.standard)">standard</button>
+    <button (click)="setTuning(Tunings.dropD)">drop d</button>
+  </div>
+
 </div>
