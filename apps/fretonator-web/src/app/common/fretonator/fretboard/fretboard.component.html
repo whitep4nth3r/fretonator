@@ -1,28 +1,3 @@
-<ng-template #string let-stringName="stringName" let-string="string">
-  <ng-container *ngFor="let fret of frets">
-    <div
-      class="fretboard__cell"
-      [class.learn__theme]="configuration === 'learn'"
-      [class.fretboard__cell--string]="fret === 0"
-      [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive"
-      [attr.data-string-name]="fret === 0 ? stringName : null"
-      [attr.data-string]="string"
-      [attr.data-fret]="fret"
-      [attr.data-degree]="(fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degree"
-      [attr.data-display-note]="noteNameDisplay === NoteDisplays.noteNames ? ((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.displayName) : ((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degreeNumber)"
-      [attr.data-mode]="mode"
-      [attr.data-highlight]="highlightedDegrees.has((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degree)"
-      (click)="playbackService.playNote(stringName, fret)"
-    ></div>
-  </ng-container>
-</ng-template>
-
-<ng-template #fretboardHelp>
-  <ng-container *ngFor="let fret of frets">
-    <span class="fretboard__help" [attr.data-fret]="fret"></span>
-  </ng-container>
-</ng-template>
-
 <div class="arrowHint">
   <span class="arrowHint__arrow"
         [class.fretboard__flip]="orientation === Orientations.left"></span>
@@ -36,79 +11,89 @@
        [class.fretboard__leftHanded]="orientation === Orientations.left"
        [class.fretboard__24]="fretMode === FretModes.twentyFour">
 
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'e', string: 'E' }"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'B', string: 'B' }"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'G', string: 'G' }"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'D', string: 'D' }"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'A', string: 'A' }"
-    ></ng-container>
-
-    <ng-container
-      [ngTemplateOutlet]="string"
-      [ngTemplateOutletContext]="{ stringName: 'E', string: 'E' }"
-    ></ng-container>
+    <ng-container *ngFor="let string of strings, let stringIndex = index">
+      <ng-container *ngFor="let fret of frets">
+        <div
+          class="fretboard__cell"
+          [class.learn__theme]="configuration === FretboardConfigurations.learn"
+          [class.fretboard__cell--string]="fret === 0"
+          [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive"
+          [attr.data-string-name]="fret === 0 ? string.name : null"
+          [attr.data-string]="string.note"
+          [attr.data-fret]="fret"
+          [attr.data-string-number]="stringIndex + 1"
+          [attr.data-degree]="(fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive)?.degree"
+          [attr.data-display-note]="noteNameDisplay === NoteDisplays.noteNames ? ((fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive)?.displayName) : ((fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive)?.degreeNumber)"
+          [attr.data-mode]="mode"
+          [attr.data-highlight]="highlightedDegrees.has((fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive)?.degree)"
+          (click)="playbackService.playNote(string.frequencyMarker, fret)"
+        ></div>
+      </ng-container>
+    </ng-container>
   </div>
 
   <div class="fretboard"
        [class.fretboard__leftHanded]="orientation === Orientations.left"
        [class.fretboard__24]="fretMode === FretModes.twentyFour">
-    <ng-container
-      [ngTemplateOutlet]="fretboardHelp"
-    ></ng-container>
+    <ng-container *ngFor="let fret of frets">
+      <span class="fretboard__help" [attr.data-fret]="fret"></span>
+    </ng-container>
   </div>
 </div>
 
 <div class="controlPanel">
-  <div class="controlPanel__section">
-    <span class="controlPanel__title" *ngIf="!(mode | displayScaleDegrees)">Configure scale degrees</span>
-    <span class="controlPanel__title" *ngIf="mode | displayScaleDegrees">Highlight scale degrees</span>
-    <app-scale-degrees
-      *ngIf="mode | displayScaleDegrees"
-      [tonicActive]="highlightedDegrees.has(ScaleDegrees.tonic)"
-      [mediantActive]="highlightedDegrees.has(ScaleDegrees.mediant)"
-      [dominantActive]="highlightedDegrees.has(ScaleDegrees.dominant)"
-      (setTonicHighlight)="toggleHighlight(ScaleDegrees.tonic)"
-      (setMediantHighlight)="toggleHighlight(ScaleDegrees.mediant)"
-      (setDominantHighlight)="toggleHighlight(ScaleDegrees.dominant)"
-    ></app-scale-degrees>
+  <div class="controlPanel__row" *ngIf="configuration !== FretboardConfigurations.learn">
+    <div class="controlPanel__section">
+      <h4 class="controlPanel__title">Highlight scale degrees</h4>
+      <app-scale-degrees
+        [tonicActive]="highlightedDegrees.has(ScaleDegrees.tonic)"
+        [mediantActive]="highlightedDegrees.has(ScaleDegrees.mediant)"
+        [dominantActive]="highlightedDegrees.has(ScaleDegrees.dominant)"
+        (setTonicHighlight)="toggleHighlight(ScaleDegrees.tonic)"
+        (setMediantHighlight)="toggleHighlight(ScaleDegrees.mediant)"
+        (setDominantHighlight)="toggleHighlight(ScaleDegrees.dominant)"
+      ></app-scale-degrees>
+    </div>
+    <div class="controlPanel__section">
+      <h4 class="controlPanel__title">Scale degrees display</h4>
+      <div class="button__group button__group--right">
+        <button class="fretboard__toggleButton"
+                [class.fretboard__toggleButton--active]="noteNameDisplay === NoteDisplays.noteNames"
+                (click)="toggleNoteDisplay(NoteDisplays.noteNames)">Note names
+        </button>
+        <button (click)="toggleNoteDisplay(NoteDisplays.numbers)"
+                class="fretboard__toggleButton"
+                [class.fretboard__toggleButton--active]="noteNameDisplay === NoteDisplays.numbers">Note numbers
+        </button>
+      </div>
 
-    <div class="button__group">
-      <button class="fretboard__toggleButton"
-              [class.fretboard__toggleButton--active]="noteNameDisplay === NoteDisplays.noteNames"
-              (click)="toggleNoteDisplay(NoteDisplays.noteNames)">Note names
-      </button>
-      <button (click)="toggleNoteDisplay(NoteDisplays.numbers)"
-              class="fretboard__toggleButton"
-              [class.fretboard__toggleButton--active]="noteNameDisplay === NoteDisplays.numbers">Note numbers
-      </button>
     </div>
   </div>
-
-  <div class="controlPanel__section">
-    <span class="controlPanel__title controlPanel__title--right">Configure fretboard</span>
+  <div class="controlPanel__column">
+    <h4 class="controlPanel__title">Fretboard</h4>
     <app-fretboard-config
       [fretMode]="fretMode"
       [orientation]="orientation"
       (setFretMode)="setFretMode($event)"
       (setOrientation)="setOrientation($event)"
     ></app-fretboard-config>
+  </div>
+
+  <div class="controlPanel__column" *ngIf="configuration !== FretboardConfigurations.learn">
+    <h4 class="controlPanel__title">Guitar tuning</h4>
+    <div class="fretboard__tuningGroup">
+      <button class="fretboard__changeTuning"
+              [class.fretboard__changeTuning--active]="tuning === Tunings.standard"
+              (click)="setTuning(Tunings.standard)">Standard
+      </button>
+      <button class="fretboard__changeTuning"
+              [class.fretboard__changeTuning--active]="tuning === Tunings.dropd"
+              (click)="setTuning(Tunings.dropd)">Drop D
+      </button>
+      <button class="fretboard__changeTuning"
+              [class.fretboard__changeTuning--active]="tuning === Tunings.dadgad"
+              (click)="setTuning(Tunings.dadgad)">DADGAD
+      </button>
+    </div>
   </div>
 </div>

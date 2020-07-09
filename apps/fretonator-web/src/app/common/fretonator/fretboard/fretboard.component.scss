@@ -215,32 +215,32 @@ $note-height: 36;
     }
   }
 
-  &[data-string="G"][data-fret="3"],
-  &[data-string="G"][data-fret="5"],
-  &[data-string="G"][data-fret="7"],
-  &[data-string="G"][data-fret="9"],
-  &[data-string="G"][data-fret="15"],
-  &[data-string="G"][data-fret="17"],
-  &[data-string="G"][data-fret="19"],
-  &[data-string="G"][data-fret="21"],
-  &[data-string="B"][data-fret="12"],
-  &[data-string="D"][data-fret="12"] {
+  &[data-string-number="3"][data-fret="3"],
+  &[data-string-number="3"][data-fret="5"],
+  &[data-string-number="3"][data-fret="7"],
+  &[data-string-number="3"][data-fret="9"],
+  &[data-string-number="3"][data-fret="15"],
+  &[data-string-number="3"][data-fret="17"],
+  &[data-string-number="3"][data-fret="19"],
+  &[data-string-number="3"][data-fret="21"],
+  &[data-string-number="2"][data-fret="12"],
+  &[data-string-number="4"][data-fret="12"] {
     background-image: var(--fret-marker-url);
     background-repeat: no-repeat;
     background-position: center calc(var(--string-height-base) - 15px);
     background-size: 30px 30px;
   }
 
-  &[data-string="D"][data-fret="3"],
-  &[data-string="D"][data-fret="5"],
-  &[data-string="D"][data-fret="7"],
-  &[data-string="D"][data-fret="9"],
-  &[data-string="D"][data-fret="15"],
-  &[data-string="D"][data-fret="17"],
-  &[data-string="D"][data-fret="19"],
-  &[data-string="D"][data-fret="21"],
-  &[data-string="G"][data-fret="12"],
-  &[data-string="A"][data-fret="12"] {
+  &[data-string-number="4"][data-fret="3"],
+  &[data-string-number="4"][data-fret="5"],
+  &[data-string-number="4"][data-fret="7"],
+  &[data-string-number="4"][data-fret="9"],
+  &[data-string-number="4"][data-fret="15"],
+  &[data-string-number="4"][data-fret="17"],
+  &[data-string-number="4"][data-fret="19"],
+  &[data-string-number="4"][data-fret="21"],
+  &[data-string-number="3"][data-fret="12"],
+  &[data-string-number="5"][data-fret="12"] {
     background-image: var(--fret-marker-url);
     background-repeat: no-repeat;
     background-position: center -15px;
@@ -324,14 +324,6 @@ $note-height: 36;
     &:after {
       background-color: var(--note-bg-dominant);
       color: var(--note-color-dominant);
-    }
-  }
-
-  &[data-mode="majorPentatonic"],
-  &[data-mode="minorPentatonic"] {
-    &:after {
-      background-color: var(--note-background) !important;
-      color: var(--note-color) !important;
     }
   }
 }
@@ -484,34 +476,34 @@ $note-height: 36;
 
 .controlPanel {
   @include content_wrapper();
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
   max-width: $screen-med;
   margin-top: pxToRem($grid-unit * 2);
-  margin-bottom: pxToRem($grid-unit * 2);
+  margin-bottom: pxToRem($grid-unit * 8);
   background-color: var(--background-color-light);
   padding: pxToRem($grid-unit * 4);
   border-radius: pxToRem($grid-unit * 4);
   box-shadow: 0 pxToRem(1) pxToRem(3) rgba(26, 26, 26, 0.12), 0 pxToRem(1) pxToRem(2) rgba(26, 26, 26, 0.24);
+}
+
+.controlPanel__row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: pxToRem($grid-unit * 4);
+  justify-content: center;
 
   @media screen and (min-width: $screen-med) {
+    justify-content: space-between;
     flex-direction: row;
   }
 }
 
-.controlPanel__section {
+.controlPanel__column {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-bottom: pxToRem($grid-unit * 4);
+  margin-bottom: pxToRem($grid-unit * 8);
+  justify-content: center;
 
   &:last-of-type {
-    margin-bottom: 0;
-  }
-
-  @media screen and (min-width: $screen-med) {
     margin-bottom: 0;
   }
 }
@@ -519,10 +511,6 @@ $note-height: 36;
 .controlPanel__title {
   @include info_container_title;
   text-align: center;
-
-  @media screen and (min-width: $screen-med) {
-    text-align: left;
-  }
 }
 
 .controlPanel__title--right {
@@ -545,6 +533,33 @@ $note-height: 36;
   @media screen and (min-width: $screen-med) {
     justify-content: flex-start;
   }
+}
+
+.button__group--right {
+  @media screen and (min-width: $screen-med) {
+    justify-content: flex-end;
+  }
+}
+
+.fretboard__tuningGroup {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $screen-med;
+  text-align: center;
+}
+
+.fretboard__changeTuning {
+  @include chip_button_base;
+  margin-left: pxToRem($grid-unit);
+  margin-right: pxToRem($grid-unit);
+  margin-bottom: pxToRem($grid-unit);
+  border-color: var(--fretboard-toggle-button-border-color);
+}
+
+.fretboard__changeTuning--active {
+  background-color: var(--chip-background-color-active);
+  color: var(--chip-foreground-color-active);
+  border-color: var(--chip-border-color-active);
 }
 
 .fretboard__toggleButton {

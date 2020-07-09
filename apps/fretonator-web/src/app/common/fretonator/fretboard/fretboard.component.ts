@@ -4,6 +4,10 @@ import { NotePlaybackService } from '../../playback/note-playback.service';
 import { AbstractDataService } from '../../abstract-data/abstract-data.service';
 import { ScaleDegrees } from '../../../util/constants';
 
+export enum FretboardConfigurations {
+  learn = 'learn'
+}
+
 export enum FretModes {
   twelve = 'twelve',
   twentyFour = 'twentyFour',
@@ -19,6 +23,40 @@ export enum NoteDisplays {
   noteNames = 'noteNames'
 }
 
+enum Tunings {
+  standard = 'standard',
+  dropd = 'dropd',
+  dadgad = 'dadgad'
+}
+
+//strings are in reverse order
+const TuningReturner = {
+  'standard': [
+    { name: 'e', note: 'E', frequencyMarker: 'e' },
+    { name: 'B', note: 'B', frequencyMarker: 'B' },
+    { name: 'G', note: 'G', frequencyMarker: 'G' },
+    { name: 'D', note: 'D', frequencyMarker: 'D' },
+    { name: 'A', note: 'A', frequencyMarker: 'A' },
+    { name: 'E', note: 'E', frequencyMarker: 'E' }
+  ],
+  'dropd': [
+    { name: 'e', note: 'E', frequencyMarker: 'e' },
+    { name: 'B', note: 'B', frequencyMarker: 'B' },
+    { name: 'G', note: 'G', frequencyMarker: 'G' },
+    { name: 'D', note: 'D', frequencyMarker: 'D' },
+    { name: 'A', note: 'A', frequencyMarker: 'A' },
+    { name: 'D', note: 'D', frequencyMarker: 'D_' }
+  ],
+  'dadgad': [
+    { name: 'd', note: 'D', frequencyMarker: 'd' },
+    { name: 'A', note: 'A', frequencyMarker: 'A' },
+    { name: 'G', note: 'G', frequencyMarker: 'G' },
+    { name: 'D', note: 'D', frequencyMarker: 'D' },
+    { name: 'A', note: 'A', frequencyMarker: 'A' },
+    { name: 'D', note: 'D', frequencyMarker: 'D_' }
+  ]
+};
+
 const FretReturner = {
   'twelve': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
   'twentyFour': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
@@ -27,7 +65,8 @@ const FretReturner = {
 const StorageKeys = {
   fretMode: 'fretonator_fretMode',
   orientation: 'fretonator_orientation',
-  noteNameDisplay: 'fretonator_noteNameDisplay'
+  noteNameDisplay: 'fretonator_noteNameDisplay',
+  tuning: 'fretonator_tuning'
 };
 
 @Component({
@@ -43,11 +82,14 @@ export class FretboardComponent implements OnChanges, OnInit {
   @Input() stringNamesAreCaseSensitive = false;
   @Input() loadExpanded = false;
   @Input() configuration;
+  @Input() standardTuningOnly;
   orientation;
   fretMode;
   frets;
+  tuning = Tunings.standard;
   highlightedDegrees = new Set<ScaleDegrees>();
   noteNameDisplay = NoteDisplays.noteNames;
+  strings = TuningReturner[Tunings.standard];
 
   constructor(public playbackService: NotePlaybackService,
               private localStorage: AbstractDataService) {
@@ -58,7 +100,12 @@ export class FretboardComponent implements OnChanges, OnInit {
     this.loadPropFromStorage(StorageKeys.orientation, 'orientation', Orientations.right);
     this.loadPropFromStorage(StorageKeys.noteNameDisplay, 'noteNameDisplay', NoteDisplays.noteNames);
 
+    if (this.configuration !== FretboardConfigurations.learn) {
+      this.loadPropFromStorage(StorageKeys.tuning, 'tuning', Tunings.standard);
+    }
+
     this.toggleHighlight(ScaleDegrees.tonic);
+    this.configureStrings();
     this.configureFretboard();
   }
 
@@ -66,6 +113,10 @@ export class FretboardComponent implements OnChanges, OnInit {
     if (this.loadExpanded) {
       this.setFretMode(FretModes.twentyFour);
     }
+  }
+
+  get FretboardConfigurations() {
+    return FretboardConfigurations;
   }
 
   get FretModes() {
@@ -84,6 +135,14 @@ export class FretboardComponent implements OnChanges, OnInit {
     return NoteDisplays;
   }
 
+  get Tunings() {
+    return Tunings;
+  }
+
+  configureStrings() {
+    this.strings = TuningReturner[this.tuning];
+  }
+
   configureFretboard() {
     this.frets = FretReturner[this.fretMode];
     this.loadExpandedChange.emit(this.fretMode === FretModes.twentyFour);
@@ -99,6 +158,12 @@ export class FretboardComponent implements OnChanges, OnInit {
     this.fretMode = fretMode;
     this.localStorage.setItem(StorageKeys.fretMode, this.fretMode);
     this.configureFretboard();
+  }
+
+  setTuning(tuning: Tunings) {
+    this.tuning = tuning;
+    this.localStorage.setItem(StorageKeys.tuning, this.tuning);
+    this.configureStrings();
   }
 
   toggleHighlight(degree: ScaleDegrees) {

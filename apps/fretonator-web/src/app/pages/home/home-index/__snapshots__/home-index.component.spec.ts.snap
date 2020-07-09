@@ -291,8 +291,6 @@ exports[`HomeIndexComponent should create 1`] = `
           Check out the fretboard
         </h2>
         <app-fretboard>
-          
-          
           <div
             class="arrowHint"
           >
@@ -309,6 +307,7 @@ exports[`HomeIndexComponent should create 1`] = `
               
               
               
+              
               <div
                 class="fretboard__cell fretboard__cell--string fretboard__cell--selected"
                 data-degree="mediant"
@@ -318,6 +317,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-mode="ionian"
                 data-string="E"
                 data-string-name="e"
+                data-string-number="1"
               />
               
               <div
@@ -328,6 +328,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               <div
@@ -336,6 +337,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               <div
@@ -346,6 +348,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               <div
@@ -354,6 +357,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               <div
@@ -364,6 +368,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               <div
@@ -372,6 +377,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               <div
@@ -382,6 +388,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               <div
@@ -392,6 +399,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="true"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               <div
@@ -400,6 +408,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               <div
@@ -410,6 +419,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               <div
@@ -418,6 +428,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               <div
@@ -428,6 +439,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="1"
               />
               
               
@@ -442,6 +454,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-mode="ionian"
                 data-string="B"
                 data-string-name="B"
+                data-string-number="2"
               />
               
               <div
@@ -452,6 +465,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="true"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               <div
@@ -460,6 +474,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               <div
@@ -470,6 +485,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               <div
@@ -478,6 +494,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               <div
@@ -488,6 +505,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               <div
@@ -498,6 +516,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               <div
@@ -506,6 +525,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               <div
@@ -516,6 +536,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               <div
@@ -524,6 +545,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               <div
@@ -534,6 +556,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               <div
@@ -542,6 +565,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               <div
@@ -552,6 +576,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="B"
+                data-string-number="2"
               />
               
               
@@ -566,6 +591,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-mode="ionian"
                 data-string="G"
                 data-string-name="G"
+                data-string-number="3"
               />
               
               <div
@@ -574,6 +600,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               <div
@@ -584,6 +611,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               <div
@@ -592,6 +620,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               <div
@@ -602,6 +631,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               <div
@@ -612,6 +642,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="true"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               <div
@@ -620,6 +651,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               <div
@@ -630,6 +662,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               <div
@@ -638,6 +671,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               <div
@@ -648,6 +682,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               <div
@@ -658,6 +693,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               <div
@@ -666,6 +702,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               <div
@@ -676,6 +713,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="G"
+                data-string-number="3"
               />
               
               
@@ -690,6 +728,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-mode="ionian"
                 data-string="D"
                 data-string-name="D"
+                data-string-number="4"
               />
               
               <div
@@ -698,6 +737,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               <div
@@ -708,6 +748,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               <div
@@ -718,6 +759,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               <div
@@ -726,6 +768,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               <div
@@ -736,6 +779,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               <div
@@ -744,6 +788,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               <div
@@ -754,6 +799,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               <div
@@ -762,6 +808,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               <div
@@ -772,6 +819,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               <div
@@ -782,6 +830,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="true"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               <div
@@ -790,6 +839,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               <div
@@ -800,6 +850,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="D"
+                data-string-number="4"
               />
               
               
@@ -814,6 +865,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-mode="ionian"
                 data-string="A"
                 data-string-name="A"
+                data-string-number="5"
               />
               
               <div
@@ -822,6 +874,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               <div
@@ -832,6 +885,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               <div
@@ -842,6 +896,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="true"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               <div
@@ -850,6 +905,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               <div
@@ -860,6 +916,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               <div
@@ -868,6 +925,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               <div
@@ -878,6 +936,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               <div
@@ -888,6 +947,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               <div
@@ -896,6 +956,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               <div
@@ -906,6 +967,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               <div
@@ -914,6 +976,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               <div
@@ -924,6 +987,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="A"
+                data-string-number="5"
               />
               
               
@@ -938,6 +1002,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-mode="ionian"
                 data-string="E"
                 data-string-name="E"
+                data-string-number="6"
               />
               
               <div
@@ -948,6 +1013,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
               <div
@@ -956,6 +1022,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
               <div
@@ -966,6 +1033,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
               <div
@@ -974,6 +1042,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
               <div
@@ -984,6 +1053,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
               <div
@@ -992,6 +1062,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
               <div
@@ -1002,6 +1073,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
               <div
@@ -1012,6 +1084,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="true"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
               <div
@@ -1020,6 +1093,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
               <div
@@ -1030,6 +1104,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
               <div
@@ -1038,6 +1113,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
               <div
@@ -1048,13 +1124,13 @@ exports[`HomeIndexComponent should create 1`] = `
                 data-highlight="false"
                 data-mode="ionian"
                 data-string="E"
+                data-string-number="6"
               />
               
             </div>
             <div
               class="fretboard"
             >
-              
               
               
               <span
@@ -1121,70 +1197,80 @@ exports[`HomeIndexComponent should create 1`] = `
                 class="fretboard__help"
                 data-fret="12"
               />
-              
             </div>
           </div>
           <div
             class="controlPanel"
           >
+            
             <div
-              class="controlPanel__section"
+              class="controlPanel__row"
             >
-              
-              
-              <span
-                class="controlPanel__title"
+              <div
+                class="controlPanel__section"
               >
-                Highlight scale degrees
-              </span>
-              
-              <app-scale-degrees>
+                <h4
+                  class="controlPanel__title"
+                >
+                  Highlight scale degrees
+                </h4>
+                <app-scale-degrees>
+                  <div
+                    class="degreesDisplay"
+                  >
+                    <button
+                      aria-label="Highlight tonic notes on the fretboard"
+                      class="degreesDisplay__degree tonic degreesDisplay__degree--tonic"
+                    >
+                      1
+                    </button>
+                    <button
+                      aria-label="Highlight mediant notes on the fretboard"
+                      class="degreesDisplay__degree mediant"
+                    >
+                      3
+                    </button>
+                    <button
+                      aria-label="Highlight dominant notes on the fretboard"
+                      class="degreesDisplay__degree dominant"
+                    >
+                      5
+                    </button>
+                  </div>
+                </app-scale-degrees>
+              </div>
+              <div
+                class="controlPanel__section"
+              >
+                <h4
+                  class="controlPanel__title"
+                >
+                  Scale degrees display
+                </h4>
                 <div
-                  class="degreesDisplay"
+                  class="button__group button__group--right"
                 >
                   <button
-                    aria-label="Highlight tonic notes on the fretboard"
-                    class="degreesDisplay__degree tonic degreesDisplay__degree--tonic"
+                    class="fretboard__toggleButton fretboard__toggleButton--active"
                   >
-                    1
+                    Note names 
                   </button>
                   <button
-                    aria-label="Highlight mediant notes on the fretboard"
-                    class="degreesDisplay__degree mediant"
+                    class="fretboard__toggleButton"
                   >
-                    3
-                  </button>
-                  <button
-                    aria-label="Highlight dominant notes on the fretboard"
-                    class="degreesDisplay__degree dominant"
-                  >
-                    5
+                    Note numbers 
                   </button>
                 </div>
-              </app-scale-degrees>
-              <div
-                class="button__group"
-              >
-                <button
-                  class="fretboard__toggleButton fretboard__toggleButton--active"
-                >
-                  Note names 
-                </button>
-                <button
-                  class="fretboard__toggleButton"
-                >
-                  Note numbers 
-                </button>
               </div>
             </div>
             <div
-              class="controlPanel__section"
+              class="controlPanel__column"
             >
-              <span
-                class="controlPanel__title controlPanel__title--right"
+              <h4
+                class="controlPanel__title"
               >
-                Configure fretboard
-              </span>
+                Fretboard
+              </h4>
               <app-fretboard-config>
                 <div
                   class="configure__controls"
@@ -1202,10 +1288,6 @@ exports[`HomeIndexComponent should create 1`] = `
                     >
                       24 frets 
                     </button>
-                  </div>
-                  <div
-                    class="button__group"
-                  >
                     <button
                       class="fretboard__toggleButton left"
                     >
@@ -1219,6 +1301,35 @@ exports[`HomeIndexComponent should create 1`] = `
                   </div>
                 </div>
               </app-fretboard-config>
+            </div>
+            
+            <div
+              class="controlPanel__column"
+            >
+              <h4
+                class="controlPanel__title"
+              >
+                Guitar tuning
+              </h4>
+              <div
+                class="fretboard__tuningGroup"
+              >
+                <button
+                  class="fretboard__changeTuning fretboard__changeTuning--active"
+                >
+                  Standard 
+                </button>
+                <button
+                  class="fretboard__changeTuning"
+                >
+                  Drop D 
+                </button>
+                <button
+                  class="fretboard__changeTuning"
+                >
+                  DADGAD 
+                </button>
+              </div>
             </div>
           </div>
         </app-fretboard>

@@ -640,11 +640,13 @@ export const Enharmonics = [
 
 export const StringFrequencies = {
   'e': 329.63,
+  'd': 293.66,
   'B': 246.94,
   'G': 196.00,
   'D': 146.83,
   'A': 110.00,
-  'E': 82.41
+  'E': 82.41,
+  'D_': 73.42,
 };
 
 export const StandardModePatterns = [

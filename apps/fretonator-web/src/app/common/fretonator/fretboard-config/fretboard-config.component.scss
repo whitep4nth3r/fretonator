@@ -17,16 +17,14 @@
   &:last-of-type {
     margin-bottom: 0;
   }
-
-  @media screen and (min-width: $screen-med) {
-    justify-content: flex-end;
-  }
 }
 
 .fretboard__toggleButton {
   @include chip_button_base();
-  padding: pxToRem($grid-unit * 1.5);
   border-color: var(--fretboard-toggle-button-border-color);
+  border-radius: 0;
+  padding: pxToRem($grid-unit * 1.5);
+  border-right-width: 0;
 }
 
 .fretboard__toggleButton--active {
@@ -35,13 +33,14 @@
 }
 
 .fretboard__toggleButton:first-of-type {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-left-radius: var(--border-radius-chip);
+  border-bottom-left-radius: var(--border-radius-chip);
   border-right-width: calc(var(--border-width-button) / 2);
 }
 
 .fretboard__toggleButton:last-of-type {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: var(--border-radius-chip);
+  border-bottom-right-radius: var(--border-radius-chip);
   border-left-width: calc(var(--border-width-button) / 2);
+  border-right-width: var(--border-width-button);
 }

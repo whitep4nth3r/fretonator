@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PatternFretMaps, PatternModeSelectors } from '../../../util/constants';
 import { Mode } from '../../../util/types';
 import { MetaService } from '../../../common/meta/meta.service';
+import { FretboardConfigurations } from '../../../common/fretonator/fretboard/fretboard.component';
 
 @Component({
   selector: 'app-patterns-index',
@@ -27,6 +28,10 @@ export class PatternsIndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaService.updateAllGenericMeta(this.pageUrl, this.pageTitle, this.pageDescription);
+  }
+
+  get FretboardConfigurations() {
+    return FretboardConfigurations;
   }
 
   setPattern(mode: Mode) {
