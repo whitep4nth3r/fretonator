@@ -1196,77 +1196,94 @@ export const dIonianFretMappings: FretMap = [
 export const cMajorPentatonicChordMap = [
   {
     note: 'C',
-    type: ChordType.major
+    type: ChordType.major,
+    romanNumeral: '',
   },
   {
     note: 'D',
-    type: ChordType.minor
+    type: ChordType.minor,
+    romanNumeral: '',
   },
   {
     note: 'E',
-    type: ChordType.minor
+    type: ChordType.minor,
+    romanNumeral: '',
   },
   {
     note: 'G',
-    type: ChordType.major
+    type: ChordType.major,
+    romanNumeral: '',
   },
   {
     note: 'A',
-    type: ChordType.minor
+    type: ChordType.minor,
+    romanNumeral: '',
   }
 ];
 
 export const cMinorPentatonicChordMap = [
   {
     note: 'C',
-    type: ChordType.minor
+    type: ChordType.minor,
+    romanNumeral: '',
   },
   {
     note: 'E♭',
-    type: ChordType.major
+    type: ChordType.major,
+    romanNumeral: '',
   },
   {
     note: 'F',
-    type: ChordType.major
+    type: ChordType.major,
+    romanNumeral: '',
   },
   {
     note: 'G',
-    type: ChordType.minor
+    type: ChordType.minor,
+    romanNumeral: '',
   },
   {
     note: 'B♭',
-    type: ChordType.major
+    type: ChordType.major,
+    romanNumeral: '',
   }
 ];
 
 export const cIonianChordMap = [
   {
     note: 'C',
-    type: ChordType.major
+    type: ChordType.major,
+    romanNumeral: 'I'
   },
   {
     note: 'D',
-    type: ChordType.minor
+    type: ChordType.minor,
+    romanNumeral: 'ii'
   },
   {
     note: 'E',
-    type: ChordType.minor
+    type: ChordType.minor,
+    romanNumeral: 'iii'
   },
   {
     note: 'F',
-    type: ChordType.major
+    type: ChordType.major,
+    romanNumeral: 'IV'
   },
   {
     note: 'G',
-    type: ChordType.major
+    type: ChordType.major,
+    romanNumeral: 'V'
   },
   {
     note: 'A',
-    type: ChordType.minor
+    type: ChordType.minor,
+    romanNumeral: 'vi'
   },
   {
     note: 'B',
-    type: ChordType.diminished
+    type: ChordType.diminished,
+    romanNumeral: 'vii'
   }
 ];
 

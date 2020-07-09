@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
-  ChordMap,
+  ChordMap, ChordType,
   Fret,
   FretMap,
   JamTrack,
@@ -16,7 +16,7 @@ import {
   ModePatterns,
   ModeSelectorObjects,
   NoteToStringAndFretMap,
-  Octave,
+  Octave, RomanNumerals,
   ScaleDegreeNames,
   StandardModePatterns
 } from '../../util/constants';
@@ -330,7 +330,7 @@ export class FretMapService {
 
     const modeMap = origModeMap.map((noteObject, index) => ({
       ...noteObject,
-      degree: ScaleDegreeNames[index],
+      degree: ScaleDegreeNames[index]
     }));
 
     return modeMap
@@ -371,7 +371,7 @@ export class FretMapService {
       doubleFlat: false,
       doubleSharp: false
     };
-  }
+  };
 
   convertNoteObjectToNoteSymbol = (noteObject: NoteObject): NoteSymbol | false => {
     let suffix = '';
@@ -413,13 +413,21 @@ export class FretMapService {
     return found ? found : false;
   };
 
-  getChordMap = (startingNote: NoteObject, mode: string): ChordMap => {
+  getRomanNumeralForChord = (chordType: ChordType, index: number, mode: Mode) => {
+    if (mode === Mode.minorPentatonic || mode === Mode.majorPentatonic) {
+      return '';
+    }
+    return RomanNumerals[index][chordType];
+  };
+
+  getChordMap = (startingNote: NoteObject, mode: Mode): ChordMap => {
     const origModeMap = this.generateMode(startingNote, mode);
     const chordPattern = ChordPatterns[mode];
 
     return origModeMap.map((noteObject, index) => ({
       note: this.convertNoteObjectToHumanReadable(noteObject),
-      type: chordPattern[index]
+      type: chordPattern[index],
+      romanNumeral: this.getRomanNumeralForChord(chordPattern[index], index, mode)
     }));
   };
 
