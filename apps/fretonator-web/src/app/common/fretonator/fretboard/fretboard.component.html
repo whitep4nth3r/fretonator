@@ -42,7 +42,7 @@
 </div>
 
 <div class="controlPanel">
-  <div class="controlPanel__row">
+  <div class="controlPanel__row" *ngIf="configuration !== 'learn'">
     <div class="controlPanel__section">
       <h4 class="controlPanel__title">Highlight scale degrees</h4>
       <app-scale-degrees
@@ -79,7 +79,7 @@
     ></app-fretboard-config>
   </div>
 
-  <div class="controlPanel__column">
+  <div class="controlPanel__column" *ngIf="configuration !== 'learn'">
     <h4 class="controlPanel__title">Guitar tuning</h4>
     <div class="fretboard__tuningGroup">
       <button class="fretboard__changeTuning"

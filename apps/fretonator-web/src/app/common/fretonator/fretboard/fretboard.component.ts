@@ -45,7 +45,7 @@ const TuningReturner = {
     { name: 'G', note: 'G', frequencyMarker: 'G' },
     { name: 'D', note: 'D', frequencyMarker: 'D' },
     { name: 'A', note: 'A', frequencyMarker: 'A' },
-    { name: 'E', note: 'E', frequencyMarker: 'E' },
+    { name: 'E', note: 'E', frequencyMarker: 'E' }
   ],
   'dropd': [
     { name: 'e', note: 'E', frequencyMarker: 'e' },
@@ -53,7 +53,7 @@ const TuningReturner = {
     { name: 'G', note: 'G', frequencyMarker: 'G' },
     { name: 'D', note: 'D', frequencyMarker: 'D' },
     { name: 'A', note: 'A', frequencyMarker: 'A' },
-    { name: 'D', note: 'D', frequencyMarker: 'D_' },
+    { name: 'D', note: 'D', frequencyMarker: 'D_' }
   ],
   'dadgad': [
     { name: 'd', note: 'D', frequencyMarker: 'd' },
@@ -61,7 +61,7 @@ const TuningReturner = {
     { name: 'G', note: 'G', frequencyMarker: 'G' },
     { name: 'D', note: 'D', frequencyMarker: 'D' },
     { name: 'A', note: 'A', frequencyMarker: 'A' },
-    { name: 'D', note: 'D', frequencyMarker: 'D_' },
+    { name: 'D', note: 'D', frequencyMarker: 'D_' }
   ]
 };
 
@@ -90,6 +90,7 @@ export class FretboardComponent implements OnChanges, OnInit {
   @Input() stringNamesAreCaseSensitive = false;
   @Input() loadExpanded = false;
   @Input() configuration;
+  @Input() standardTuningOnly;
   orientation;
   fretMode;
   frets;
@@ -106,7 +107,10 @@ export class FretboardComponent implements OnChanges, OnInit {
     this.loadPropFromStorage(StorageKeys.fretMode, 'fretMode', FretModes.twelve);
     this.loadPropFromStorage(StorageKeys.orientation, 'orientation', Orientations.right);
     this.loadPropFromStorage(StorageKeys.noteNameDisplay, 'noteNameDisplay', NoteDisplays.noteNames);
-    this.loadPropFromStorage(StorageKeys.tuning, 'tuning', Tunings.standard);
+
+    if (this.configuration !== 'learn') {
+      this.loadPropFromStorage(StorageKeys.tuning, 'tuning', Tunings.standard);
+    }
 
     this.toggleHighlight(ScaleDegrees.tonic);
     this.configureStrings();
