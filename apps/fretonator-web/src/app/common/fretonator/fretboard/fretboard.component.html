@@ -1,28 +1,3 @@
-<ng-template #string let-stringName="stringName" let-stringNote="stringNote">
-  <ng-container *ngFor="let fret of frets">
-    <div
-      class="fretboard__cell"
-      [class.learn__theme]="configuration === 'learn'"
-      [class.fretboard__cell--string]="fret === 0"
-      [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive"
-      [attr.data-string-name]="fret === 0 ? stringName : null"
-      [attr.data-string]="stringNote"
-      [attr.data-fret]="fret"
-      [attr.data-degree]="(fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degree"
-      [attr.data-display-note]="noteNameDisplay === NoteDisplays.noteNames ? ((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.displayName) : ((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degreeNumber)"
-      [attr.data-mode]="mode"
-      [attr.data-highlight]="highlightedDegrees.has((fretMap | getFretFromFretMap: stringName:fret:stringNamesAreCaseSensitive)?.degree)"
-      (click)="playbackService.playNote(stringName, fret)"
-    ></div>
-  </ng-container>
-</ng-template>
-
-<ng-template #fretboardHelp>
-  <ng-container *ngFor="let fret of frets">
-    <span class="fretboard__help" [attr.data-fret]="fret"></span>
-  </ng-container>
-</ng-template>
-
 <div class="arrowHint">
   <span class="arrowHint__arrow"
         [class.fretboard__flip]="orientation === Orientations.left"></span>
@@ -36,20 +11,33 @@
        [class.fretboard__leftHanded]="orientation === Orientations.left"
        [class.fretboard__24]="fretMode === FretModes.twentyFour">
 
-    <ng-container *ngFor="let item of reverseStrings$ | async">
-      <ng-container
-        [ngTemplateOutlet]="string"
-        [ngTemplateOutletContext]="item"
-      ></ng-container>
+    <ng-container *ngFor="let string of strings, let stringIndex = index">
+      <ng-container *ngFor="let fret of frets">
+        <div
+          class="fretboard__cell"
+          [class.learn__theme]="configuration === 'learn'"
+          [class.fretboard__cell--string]="fret === 0"
+          [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive"
+          [attr.data-string-name]="fret === 0 ? string.name : null"
+          [attr.data-string]="string.note"
+          [attr.data-fret]="fret"
+          [attr.data-string-number]="stringIndex + 1"
+          [attr.data-degree]="(fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive)?.degree"
+          [attr.data-display-note]="noteNameDisplay === NoteDisplays.noteNames ? ((fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive)?.displayName) : ((fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive)?.degreeNumber)"
+          [attr.data-mode]="mode"
+          [attr.data-highlight]="highlightedDegrees.has((fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive)?.degree)"
+          (click)="playbackService.playNote(string.name, fret)"
+        ></div>
+      </ng-container>
     </ng-container>
   </div>
 
   <div class="fretboard"
        [class.fretboard__leftHanded]="orientation === Orientations.left"
        [class.fretboard__24]="fretMode === FretModes.twentyFour">
-    <ng-container
-      [ngTemplateOutlet]="fretboardHelp"
-    ></ng-container>
+      <ng-container *ngFor="let fret of frets">
+        <span class="fretboard__help" [attr.data-fret]="fret"></span>
+      </ng-container>
   </div>
 </div>
 
@@ -95,11 +83,14 @@
 <div class="fretboard__tuningGroup">
   <button class="fretboard__changeTuning"
           [class.tuning--active]="tuning === Tunings.standard"
-          (click)="setTuning(Tunings.standard)">Standard</button>
+          (click)="setTuning(Tunings.standard)">Standard
+  </button>
   <button class="fretboard__changeTuning"
           [class.tuning--active]="tuning === Tunings.dropd"
-          (click)="setTuning(Tunings.dropd)">Drop D</button>
+          (click)="setTuning(Tunings.dropd)">Drop D
+  </button>
   <button class="fretboard__changeTuning"
           [class.tuning--active]="tuning === Tunings.dadgad"
-          (click)="setTuning(Tunings.dadgad)">DADGAD</button>
+          (click)="setTuning(Tunings.dadgad)">DADGAD
+  </button>
 </div>

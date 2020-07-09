@@ -37,30 +37,31 @@ enum Tunings {
   dadgad = 'dadgad'
 }
 
+//string are in reverse order
 const TuningReturner = {
   'standard': [
-    { stringName: 'E', stringNote: 'E' },
-    { stringName: 'A', stringNote: 'A' },
-    { stringName: 'D', stringNote: 'D' },
-    { stringName: 'G', stringNote: 'G' },
-    { stringName: 'B', stringNote: 'B' },
-    { stringName: 'e', stringNote: 'E' }
+    { name: 'e', note: 'E' },
+    { name: 'B', note: 'B' },
+    { name: 'G', note: 'G' },
+    { name: 'D', note: 'D' },
+    { name: 'A', note: 'A' },
+    { name: 'E', note: 'E' },
   ],
   'dropd': [
-    { stringName: 'D', stringNote: 'D' },
-    { stringName: 'A', stringNote: 'A' },
-    { stringName: 'D', stringNote: 'D' },
-    { stringName: 'G', stringNote: 'G' },
-    { stringName: 'B', stringNote: 'B' },
-    { stringName: 'e', stringNote: 'E' }
+    { name: 'e', note: 'E' },
+    { name: 'B', note: 'B' },
+    { name: 'G', note: 'G' },
+    { name: 'D', note: 'D' },
+    { name: 'A', note: 'A' },
+    { name: 'D', note: 'D' },
   ],
   'dadgad': [
-    { stringName: 'D', stringNote: 'D' },
-    { stringName: 'A', stringNote: 'A' },
-    { stringName: 'D', stringNote: 'D' },
-    { stringName: 'G', stringNote: 'G' },
-    { stringName: 'A', stringNote: 'A' },
-    { stringName: 'd', stringNote: 'D' }
+    { name: 'd', note: 'D' },
+    { name: 'A', note: 'A' },
+    { name: 'G', note: 'G' },
+    { name: 'D', note: 'D' },
+    { name: 'A', note: 'A' },
+    { name: 'D', note: 'D' },
   ]
 };
 
@@ -95,10 +96,7 @@ export class FretboardComponent implements OnChanges, OnInit {
   tuning = Tunings.standard;
   highlightedDegrees = new Set<ScaleDegrees>();
   noteNameDisplay = NoteDisplays.noteNames;
-  strings$ = new BehaviorSubject<any[]>(TuningReturner[Tunings.standard]);
-  reverseStrings$ = this.strings$.pipe(
-    map(str => str.reverse())
-  )
+  strings = TuningReturner[Tunings.standard];
 
   constructor(public playbackService: NotePlaybackService,
               private localStorage: AbstractDataService) {
@@ -142,7 +140,7 @@ export class FretboardComponent implements OnChanges, OnInit {
   }
 
   configureStrings() {
-    this.strings$.next(TuningReturner[this.tuning]);
+    this.strings = TuningReturner[this.tuning];
   }
 
   configureFretboard() {
