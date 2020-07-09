@@ -215,32 +215,32 @@ $note-height: 36;
     }
   }
 
-  &[data-string="G"][data-fret="3"],
-  &[data-string="G"][data-fret="5"],
-  &[data-string="G"][data-fret="7"],
-  &[data-string="G"][data-fret="9"],
-  &[data-string="G"][data-fret="15"],
-  &[data-string="G"][data-fret="17"],
-  &[data-string="G"][data-fret="19"],
-  &[data-string="G"][data-fret="21"],
-  &[data-string="B"][data-fret="12"],
-  &[data-string="D"][data-fret="12"] {
+  &[data-string-number="3"][data-fret="3"],
+  &[data-string-number="3"][data-fret="5"],
+  &[data-string-number="3"][data-fret="7"],
+  &[data-string-number="3"][data-fret="9"],
+  &[data-string-number="3"][data-fret="15"],
+  &[data-string-number="3"][data-fret="17"],
+  &[data-string-number="3"][data-fret="19"],
+  &[data-string-number="3"][data-fret="21"],
+  &[data-string-number="2"][data-fret="12"],
+  &[data-string-number="4"][data-fret="12"] {
     background-image: var(--fret-marker-url);
     background-repeat: no-repeat;
     background-position: center calc(var(--string-height-base) - 15px);
     background-size: 30px 30px;
   }
 
-  &[data-string="D"][data-fret="3"],
-  &[data-string="D"][data-fret="5"],
-  &[data-string="D"][data-fret="7"],
-  &[data-string="D"][data-fret="9"],
-  &[data-string="D"][data-fret="15"],
-  &[data-string="D"][data-fret="17"],
-  &[data-string="D"][data-fret="19"],
-  &[data-string="D"][data-fret="21"],
-  &[data-string="G"][data-fret="12"],
-  &[data-string="A"][data-fret="12"] {
+  &[data-string-number="4"][data-fret="3"],
+  &[data-string-number="4"][data-fret="5"],
+  &[data-string-number="4"][data-fret="7"],
+  &[data-string-number="4"][data-fret="9"],
+  &[data-string-number="4"][data-fret="15"],
+  &[data-string-number="4"][data-fret="17"],
+  &[data-string-number="4"][data-fret="19"],
+  &[data-string-number="4"][data-fret="21"],
+  &[data-string-number="3"][data-fret="12"],
+  &[data-string-number="5"][data-fret="12"] {
     background-image: var(--fret-marker-url);
     background-repeat: no-repeat;
     background-position: center -15px;
