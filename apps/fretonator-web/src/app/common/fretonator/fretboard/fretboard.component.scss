@@ -326,14 +326,6 @@ $note-height: 36;
       color: var(--note-color-dominant);
     }
   }
-
-  &[data-mode="majorPentatonic"],
-  &[data-mode="minorPentatonic"] {
-    &:after {
-      background-color: var(--note-background) !important;
-      color: var(--note-color) !important;
-    }
-  }
 }
 
 .fretboard__cell--string {

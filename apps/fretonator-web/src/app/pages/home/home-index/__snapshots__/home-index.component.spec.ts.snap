@@ -1208,13 +1208,11 @@ exports[`HomeIndexComponent should create 1`] = `
               <div
                 class="controlPanel__section"
               >
-                
                 <h4
                   class="controlPanel__title"
                 >
                   Highlight scale degrees
                 </h4>
-                
                 <app-scale-degrees>
                   <div
                     class="degreesDisplay"
