@@ -1202,6 +1202,7 @@ exports[`HomeIndexComponent should create 1`] = `
           <div
             class="controlPanel"
           >
+            
             <div
               class="controlPanel__row"
             >
@@ -1301,6 +1302,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 </div>
               </app-fretboard-config>
             </div>
+            
             <div
               class="controlPanel__column"
             >
@@ -1313,7 +1315,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 class="fretboard__tuningGroup"
               >
                 <button
-                  class="fretboard__changeTuning tuning--active"
+                  class="fretboard__changeTuning fretboard__changeTuning--active"
                 >
                   Standard 
                 </button>
