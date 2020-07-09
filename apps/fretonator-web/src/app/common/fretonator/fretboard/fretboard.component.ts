@@ -37,31 +37,31 @@ enum Tunings {
   dadgad = 'dadgad'
 }
 
-//string are in reverse order
+//strings are in reverse order
 const TuningReturner = {
   'standard': [
-    { name: 'e', note: 'E' },
-    { name: 'B', note: 'B' },
-    { name: 'G', note: 'G' },
-    { name: 'D', note: 'D' },
-    { name: 'A', note: 'A' },
-    { name: 'E', note: 'E' },
+    { name: 'e', note: 'E', frequencyMarker: 'e' },
+    { name: 'B', note: 'B', frequencyMarker: 'B' },
+    { name: 'G', note: 'G', frequencyMarker: 'G' },
+    { name: 'D', note: 'D', frequencyMarker: 'D' },
+    { name: 'A', note: 'A', frequencyMarker: 'A' },
+    { name: 'E', note: 'E', frequencyMarker: 'E' },
   ],
   'dropd': [
-    { name: 'e', note: 'E' },
-    { name: 'B', note: 'B' },
-    { name: 'G', note: 'G' },
-    { name: 'D', note: 'D' },
-    { name: 'A', note: 'A' },
-    { name: 'D', note: 'D' },
+    { name: 'e', note: 'E', frequencyMarker: 'e' },
+    { name: 'B', note: 'B', frequencyMarker: 'B' },
+    { name: 'G', note: 'G', frequencyMarker: 'G' },
+    { name: 'D', note: 'D', frequencyMarker: 'D' },
+    { name: 'A', note: 'A', frequencyMarker: 'A' },
+    { name: 'D', note: 'D', frequencyMarker: 'D_' },
   ],
   'dadgad': [
-    { name: 'd', note: 'D' },
-    { name: 'A', note: 'A' },
-    { name: 'G', note: 'G' },
-    { name: 'D', note: 'D' },
-    { name: 'A', note: 'A' },
-    { name: 'D', note: 'D' },
+    { name: 'd', note: 'D', frequencyMarker: 'd' },
+    { name: 'A', note: 'A', frequencyMarker: 'A' },
+    { name: 'G', note: 'G', frequencyMarker: 'G' },
+    { name: 'D', note: 'D', frequencyMarker: 'D' },
+    { name: 'A', note: 'A', frequencyMarker: 'A' },
+    { name: 'D', note: 'D', frequencyMarker: 'D_' },
   ]
 };
 

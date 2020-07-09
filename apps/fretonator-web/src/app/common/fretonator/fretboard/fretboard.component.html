@@ -26,7 +26,7 @@
           [attr.data-display-note]="noteNameDisplay === NoteDisplays.noteNames ? ((fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive)?.displayName) : ((fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive)?.degreeNumber)"
           [attr.data-mode]="mode"
           [attr.data-highlight]="highlightedDegrees.has((fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive)?.degree)"
-          (click)="playbackService.playNote(string.name, fret)"
+          (click)="playbackService.playNote(string.frequencyMarker, fret)"
         ></div>
       </ng-container>
     </ng-container>

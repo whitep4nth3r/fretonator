@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { StringFrequencies } from '../../util/constants';
-import { ModeMap } from '../../util/types';
 
 const SYNTH_BUFFER_SIZE = 4096;
 const SYNTH_PLAY_DURATION = 2000;
@@ -14,7 +13,7 @@ export class NotePlaybackService {
   constructor() {
   }
 
-  playNote(stringName, fret) {
+  playNote(stringFrequencyMarker, fret) {
     if (!this.context) {
       try {
         // Feature sniff for web audio API
@@ -24,19 +23,14 @@ export class NotePlaybackService {
       }
     }
     if (this.context) {
-      const noteFrequency = this.getFrequency(stringName, fret);
+      const noteFrequency = this.getFrequency(stringFrequencyMarker, fret);
       this.pluckString(noteFrequency);
     }
   }
 
-  playMode(modeMap: ModeMap) {
-    console.log('playMode called!');
-    console.log(modeMap);
-  }
-
-  private getFrequency(stringName, fret) {
-    // We're using stringName here, the case sensitive alt to string, to differentiate E/e strings.
-    const stringFrequency = StringFrequencies[stringName];
+  private getFrequency(stringFrequencyMarker, fret) {
+    // We're using stringFrequencyMarker here, the case sensitive alt to string, to differentiate E/e strings.
+    const stringFrequency = StringFrequencies[stringFrequencyMarker];
     const fretCents = fret * 100;
     return stringFrequency * Math.pow(2, (fretCents / 1200));
   }
