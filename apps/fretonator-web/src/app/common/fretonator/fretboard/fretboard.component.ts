@@ -1,20 +1,12 @@
-import {
-  ChangeDetectorRef,
-  Component,
-  ElementRef,
-  EventEmitter,
-  Input,
-  OnChanges,
-  OnInit,
-  Output,
-  ViewChild
-} from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild } from '@angular/core';
 import { FretMap, Mode } from '../../../util/types';
 import { NotePlaybackService } from '../../playback/note-playback.service';
 import { AbstractDataService } from '../../abstract-data/abstract-data.service';
 import { ScaleDegrees } from '../../../util/constants';
-import { BehaviorSubject, Subject } from 'rxjs';
-import { map } from 'rxjs/operators';
+
+export enum FretboardConfigurations {
+  learn = 'learn'
+}
 
 export enum FretModes {
   twelve = 'twelve',
@@ -108,7 +100,7 @@ export class FretboardComponent implements OnChanges, OnInit {
     this.loadPropFromStorage(StorageKeys.orientation, 'orientation', Orientations.right);
     this.loadPropFromStorage(StorageKeys.noteNameDisplay, 'noteNameDisplay', NoteDisplays.noteNames);
 
-    if (this.configuration !== 'learn') {
+    if (this.configuration !== FretboardConfigurations.learn) {
       this.loadPropFromStorage(StorageKeys.tuning, 'tuning', Tunings.standard);
     }
 
@@ -121,6 +113,10 @@ export class FretboardComponent implements OnChanges, OnInit {
     if (this.loadExpanded) {
       this.setFretMode(FretModes.twentyFour);
     }
+  }
+
+  get FretboardConfigurations() {
+    return FretboardConfigurations;
   }
 
   get FretModes() {

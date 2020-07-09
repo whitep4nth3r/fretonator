@@ -2,7 +2,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeIndexComponent } from './home-index.component';
 import { Component } from '@angular/core';
 import { HomeModule } from '../home.module';
-import { By } from '@angular/platform-browser';
 import { BrowserTestingModule } from '@angular/platform-browser/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';

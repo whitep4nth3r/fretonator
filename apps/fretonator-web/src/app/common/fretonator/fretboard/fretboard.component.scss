@@ -556,7 +556,7 @@ $note-height: 36;
   border-color: var(--fretboard-toggle-button-border-color);
 }
 
-.tuning--active {
+.fretboard__changeTuning--active {
   background-color: var(--chip-background-color-active);
   color: var(--chip-foreground-color-active);
   border-color: var(--chip-border-color-active);

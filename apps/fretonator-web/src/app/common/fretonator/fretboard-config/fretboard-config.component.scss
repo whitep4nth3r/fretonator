@@ -24,6 +24,7 @@
   border-color: var(--fretboard-toggle-button-border-color);
   border-radius: 0;
   padding: pxToRem($grid-unit * 1.5);
+  border-right-width: 0;
 }
 
 .fretboard__toggleButton--active {
@@ -41,4 +42,5 @@
   border-top-right-radius: var(--border-radius-chip);
   border-bottom-right-radius: var(--border-radius-chip);
   border-left-width: calc(var(--border-width-button) / 2);
+  border-right-width: var(--border-width-button);
 }

@@ -15,7 +15,7 @@
       <ng-container *ngFor="let fret of frets">
         <div
           class="fretboard__cell"
-          [class.learn__theme]="configuration === 'learn'"
+          [class.learn__theme]="configuration === FretboardConfigurations.learn"
           [class.fretboard__cell--string]="fret === 0"
           [class.fretboard__cell--selected]="fretMap | getFretFromFretMap: string.name:fret:stringNamesAreCaseSensitive"
           [attr.data-string-name]="fret === 0 ? string.name : null"
@@ -42,7 +42,7 @@
 </div>
 
 <div class="controlPanel">
-  <div class="controlPanel__row" *ngIf="configuration !== 'learn'">
+  <div class="controlPanel__row" *ngIf="configuration !== FretboardConfigurations.learn">
     <div class="controlPanel__section">
       <h4 class="controlPanel__title">Highlight scale degrees</h4>
       <app-scale-degrees
@@ -79,23 +79,21 @@
     ></app-fretboard-config>
   </div>
 
-  <div class="controlPanel__column" *ngIf="configuration !== 'learn'">
+  <div class="controlPanel__column" *ngIf="configuration !== FretboardConfigurations.learn">
     <h4 class="controlPanel__title">Guitar tuning</h4>
     <div class="fretboard__tuningGroup">
       <button class="fretboard__changeTuning"
-              [class.tuning--active]="tuning === Tunings.standard"
+              [class.fretboard__changeTuning--active]="tuning === Tunings.standard"
               (click)="setTuning(Tunings.standard)">Standard
       </button>
       <button class="fretboard__changeTuning"
-              [class.tuning--active]="tuning === Tunings.dropd"
+              [class.fretboard__changeTuning--active]="tuning === Tunings.dropd"
               (click)="setTuning(Tunings.dropd)">Drop D
       </button>
       <button class="fretboard__changeTuning"
-              [class.tuning--active]="tuning === Tunings.dadgad"
+              [class.fretboard__changeTuning--active]="tuning === Tunings.dadgad"
               (click)="setTuning(Tunings.dadgad)">DADGAD
       </button>
     </div>
   </div>
 </div>
-
-
