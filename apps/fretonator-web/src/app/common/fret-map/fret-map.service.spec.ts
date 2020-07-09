@@ -33,7 +33,7 @@ import {
 import { JamTracksData } from '../../data/jamTracks';
 
 import { FretMapService } from './fret-map.service';
-import { Mode, NoteExtenderString, NoteSymbol } from '../../util/types';
+import { ChordType, Mode, NoteExtenderString, NoteSymbol } from '../../util/types';
 
 describe('GenerateFretMapService', () => {
   let service: FretMapService;
@@ -1253,12 +1253,12 @@ describe('FretMapService:getChords', () => {
         doubleSharp: false,
         doubleFlat: false
       },
-      'ionian');
+      Mode.ionian);
 
     expect(result).toStrictEqual(cIonianChordMap);
   });
 
-  it('returns the correct pattern for c minor pentatonic', () => {
+  fit('returns the correct pattern for c minor pentatonic', () => {
     const result = service.getChordMap({
         name: 'c',
         flat: false,
@@ -1266,12 +1266,12 @@ describe('FretMapService:getChords', () => {
         doubleSharp: false,
         doubleFlat: false
       },
-      'minorPentatonic');
+      Mode.minorPentatonic);
 
     expect(result).toStrictEqual(cMinorPentatonicChordMap);
   });
 
-  it('returns the correct pattern for c major pentatonic', () => {
+  fit('returns the correct pattern for c major pentatonic', () => {
     const result = service.getChordMap({
         name: 'c',
         flat: false,
@@ -1279,7 +1279,7 @@ describe('FretMapService:getChords', () => {
         doubleSharp: false,
         doubleFlat: false
       },
-      'majorPentatonic');
+      Mode.majorPentatonic);
 
     expect(result).toStrictEqual(cMajorPentatonicChordMap);
   });
@@ -1488,5 +1488,19 @@ describe('FretMapService:convertSymbolToNoteObject', () => {
       doubleFlat: false,
       doubleSharp: false
     });
+  });
+});
+
+describe('FretMapService:getRomanNumeralForChord', () => {
+  let service: FretMapService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(FretMapService);
+  });
+
+  it('returns a roman numeral for a given chord', () => {
+    const result = service.getRomanNumeralForChord(ChordType.major, 0, Mode.ionian);
+    expect(result).toBe('I');
   });
 });

@@ -1608,7 +1608,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <h5
                   class="chordMap__chord"
                 >
-                   Cmaj 
+                   Cmaj (I) 
                 </h5>
                 
                 <span
@@ -1621,7 +1621,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <h5
                   class="chordMap__chord"
                 >
-                   Dmin 
+                   Dmin (ii) 
                 </h5>
                 
                 <span
@@ -1634,7 +1634,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <h5
                   class="chordMap__chord"
                 >
-                   Emin 
+                   Emin (iii) 
                 </h5>
                 
                 <span
@@ -1647,7 +1647,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <h5
                   class="chordMap__chord"
                 >
-                   Fmaj 
+                   Fmaj (IV) 
                 </h5>
                 
                 <span
@@ -1660,7 +1660,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <h5
                   class="chordMap__chord"
                 >
-                   Gmaj 
+                   Gmaj (V) 
                 </h5>
                 
                 <span
@@ -1673,7 +1673,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <h5
                   class="chordMap__chord"
                 >
-                   Amin 
+                   Amin (vi) 
                 </h5>
                 
                 <span
@@ -1686,7 +1686,7 @@ exports[`HomeIndexComponent should create 1`] = `
                 <h5
                   class="chordMap__chord"
                 >
-                   Bdim 
+                   Bdim (vii) 
                 </h5>
                 
                 

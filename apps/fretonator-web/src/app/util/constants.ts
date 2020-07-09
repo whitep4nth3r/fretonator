@@ -553,6 +553,51 @@ export const ChordPatterns = {
 
 export const Octave = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
 
+export const RomanNumerals = [
+  {
+    [ChordType.major]: 'I',
+    [ChordType.minor]: 'i',
+    [ChordType.diminished]: 'i',
+    [ChordType.augmented]: 'I'
+  },
+  {
+    [ChordType.major]: 'II',
+    [ChordType.minor]: 'ii',
+    [ChordType.diminished]: 'ii',
+    [ChordType.augmented]: 'II'
+  },
+  {
+    [ChordType.major]: 'III',
+    [ChordType.minor]: 'iii',
+    [ChordType.diminished]: 'iii',
+    [ChordType.augmented]: 'III'
+  },
+  {
+    [ChordType.major]: 'IV',
+    [ChordType.minor]: 'iv',
+    [ChordType.diminished]: 'iv',
+    [ChordType.augmented]: 'IV'
+  },
+  {
+    [ChordType.major]: 'V',
+    [ChordType.minor]: 'v',
+    [ChordType.diminished]: 'v',
+    [ChordType.augmented]: 'V'
+  },
+  {
+    [ChordType.major]: 'VI',
+    [ChordType.minor]: 'vi',
+    [ChordType.diminished]: 'vi',
+    [ChordType.augmented]: 'VI'
+  },
+  {
+    [ChordType.major]: 'VII',
+    [ChordType.minor]: 'vii',
+    [ChordType.diminished]: 'vii',
+    [ChordType.augmented]: 'VII'
+  },
+];
+
 export enum ScaleDegrees {
   tonic = 'tonic',
   supertonic = 'supertonic',
@@ -646,7 +691,7 @@ export const StringFrequencies = {
   'D': 146.83,
   'A': 110.00,
   'E': 82.41,
-  'D_': 73.42,
+  'D_': 73.42
 };
 
 export const StandardModePatterns = [

@@ -18,6 +18,7 @@ export enum ChordType {
 export interface Chord {
   note: string;
   type: ChordType;
+  romanNumeral: string;
 }
 
 export type FretMap = Fret[];
