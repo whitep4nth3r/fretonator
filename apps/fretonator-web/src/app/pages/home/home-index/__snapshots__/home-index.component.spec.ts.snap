@@ -263,6 +263,17 @@ exports[`HomeIndexComponent should create 1`] = `
               selectedcolor="default"
             >
               <a
+                aria-label="C Aeolian Dominant"
+                class="chip"
+                href="/c/natural/aeolianDominant"
+              >
+                Aeolian Dominant
+              </a>
+            </app-chip>
+            <app-chip
+              selectedcolor="default"
+            >
+              <a
                 aria-label="C Major Pentatonic"
                 class="chip"
                 href="/c/natural/majorPentatonic"

@@ -1071,5 +1071,125 @@ export const JamTracksData: JamTracks = [
     youTubeId: '2RErzig1Xco',
     title: 'Phrygian Dominant Backing Track for Guitar in B',
     creator: 'Sean Armitage Music'
+  },
+
+  {
+    key: NoteSymbol.c,
+    mode: Mode.aeolianDominant,
+    youTubeId: '9E4XOh-vWHE',
+    title: 'C Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.cSharp,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'zUb5nNep8qE',
+    title: 'C# Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.dFlat,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'zUb5nNep8qE',
+    title: 'C# Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.d,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'jkJfDYJLq_U',
+    title: 'D Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.dSharp,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'vXE2-Fh4OgA',
+    title: 'D# Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.eFlat,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'vXE2-Fh4OgA',
+    title: 'D# Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.e,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'NF9xKWZD_wg',
+    title: 'E Hindu Scale Backing Track (Mixolydian b6)',
+    creator: 'Quist'
+  },
+  {
+    key: NoteSymbol.f,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'AqSPiwVZt1M',
+    title: 'F Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.fSharp,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'bgZurgUl2Cs',
+    title: 'F# Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.gFlat,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'bgZurgUl2Cs',
+    title: 'F# Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.g,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'yVBeU9MvQSw',
+    title: 'G Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.gSharp,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'GtiANEt21P8',
+    title: 'G# Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.aFlat,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'GtiANEt21P8',
+    title: 'G# Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.a,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'xqtjqzSD6Ko',
+    title: 'A Mixolydian b6 Groove Backing Track',
+    creator: 'Quist'
+  },
+  {
+    key: NoteSymbol.aSharp,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'bL-KVJL46Bk',
+    title: 'Bb Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.bFlat,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'bL-KVJL46Bk',
+    title: 'Bb Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
+  },
+  {
+    key: NoteSymbol.b,
+    mode: Mode.aeolianDominant,
+    youTubeId: 'dJOqoIJdj14',
+    title: 'B Mixolydian b6 Backing Track',
+    creator: 'EffectiveMusicPractice'
   }
 ];

@@ -17,7 +17,7 @@ import {
   cLydianSimilarModes,
   cMajorPentatonicChordMap,
   cMinorPentatonicChordMap,
-  cPhrygianMode,
+  cPhrygianMode, dAeolianDominant,
   dDorianMode,
   dFlatMajorPentatonic,
   dHarmonicMinor,
@@ -668,6 +668,21 @@ describe('FretMapService:generateMode', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(FretMapService);
+  });
+
+  it('returns the D aeolian dominant', () => {
+    const result = service.generateMode(
+      {
+        name: 'd',
+        sharp: false,
+        flat: false,
+        doubleFlat: false,
+        doubleSharp: false
+      },
+      'aeolianDominant'
+    );
+
+    expect(result).toEqual(dAeolianDominant);
   });
 
   it('returns the G flat Pentatonic Minor', () => {
