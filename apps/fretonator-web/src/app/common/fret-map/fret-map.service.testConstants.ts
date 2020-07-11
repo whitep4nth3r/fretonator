@@ -1037,6 +1037,66 @@ export const aSharpMajor: ModeMap = [
   }
 ];
 
+export const dAeolianDominant: ModeMap = [
+  {
+    name: 'd',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'D'
+  },
+  {
+    name: 'e',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'E'
+  },
+  {
+    name: 'f',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'F#'
+  },
+  {
+    name: 'g',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'G'
+  },
+  {
+    name: 'a',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'A'
+  },
+  {
+    name: 'b',
+    sharp: false,
+    flat: true,
+    doubleFlat: false,
+    doubleSharp: true,
+    displayName: 'B♭'
+  },
+  {
+    name: 'c',
+    sharp: false,
+    flat: false,
+    doubleFlat: false,
+    doubleSharp: false,
+    displayName: 'C'
+  }
+];
+
+
 export const cIonianFretMappings: FretMap = [
   { string: 'A', fret: 0, displayName: 'A', degree: ScaleDegrees.submediant, degreeNumber: 6 },
   { string: 'A', fret: 2, displayName: 'B', degree: ScaleDegrees.leadingTone, degreeNumber: 7 },

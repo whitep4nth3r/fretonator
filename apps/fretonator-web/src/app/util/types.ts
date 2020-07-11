@@ -55,6 +55,7 @@ export enum Mode {
   locrian = 'locrian',
   harmonicMinor = 'harmonicMinor',
   phrygianDominant = 'phrygianDominant',
+  aeolianDominant = 'aeolianDominant',
   majorPentatonic = 'majorPentatonic',
   minorPentatonic = 'minorPentatonic'
 }
