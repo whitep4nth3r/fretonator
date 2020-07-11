@@ -9,11 +9,11 @@
   margin-right: auto;
   padding-top: pxToRem($grid-unit * 2);
   padding-bottom: pxToRem($grid-unit * 4);
+  margin-bottom: pxToRem($grid-unit * 2);
 }
 
 .videoLoader__meta {
   display: block;
-  margin-top: pxToRem($grid-unit * 4);
   margin-bottom: pxToRem($grid-unit * 4);
 }
 

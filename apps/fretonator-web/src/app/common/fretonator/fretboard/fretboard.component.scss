@@ -478,7 +478,7 @@ $note-height: 36;
   @include content_wrapper();
   max-width: $screen-med;
   margin-top: pxToRem($grid-unit * 2);
-  margin-bottom: pxToRem($grid-unit * 8);
+  margin-bottom: pxToRem($grid-unit * 2);
   background-color: var(--background-color-light);
   padding: pxToRem($grid-unit * 4);
   border-radius: pxToRem($grid-unit * 4);
