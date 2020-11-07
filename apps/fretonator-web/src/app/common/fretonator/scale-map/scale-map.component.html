@@ -1,7 +1,7 @@
 <div class="scaleMap__row">
   <div class="scaleDisplay">
     <h3 class="scaleDisplay__title"
-        [class.infoHighlight]="isTheoretical"><span *ngIf="isTheoretical">Theoretical &nbsp;</span>{{ modeDisplayString }} Scale</h3>
+        [class.infoHighlight]="isTheoretical">{{ modeDisplayString }} <span *ngIf="isTheoretical">&nbsp;(Theoretical Scale)</span></h3>
     <div class="scaleDisplay__notes">
       <ng-container *ngFor="let note of modeMap; let i = index">
         <p class="scaleDisplay__note">
