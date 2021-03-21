@@ -48,7 +48,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -68,7 +67,10 @@
               "serviceWorker": true,
               "ngswConfigPath": "apps/fretonator-web/ngsw-config.json"
             }
-          }
+          },
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -96,7 +98,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!apps/fretonator-web/**"
+              "!apps/fretonator-web/**/*"
             ]
           }
         },
@@ -104,10 +106,11 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/fretonator-web/jest.config.js",
-            "tsConfig": "apps/fretonator-web/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "apps/fretonator-web/src/test-setup.ts"
-          }
+            "passWithNoTests": true
+          },
+          "outputs": [
+            "coverage/apps/fretonator-web"
+          ]
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
@@ -184,7 +187,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!apps/fretonator-web-e2e/**"
+              "!apps/fretonator-web-e2e/**/*"
             ]
           }
         }
