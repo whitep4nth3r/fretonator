@@ -5,7 +5,7 @@ exports[`HeaderComponent should match snapshot 1`] = `
   darkColorMode={[Function Boolean]}
   isMenuVisible="false"
   localStorage={[Function AbstractDataService]}
-  setDarkColorMode={[Function EventEmitter]}
+  setDarkColorMode={[Function EventEmitter_]}
 >
   <header
     class="header"
