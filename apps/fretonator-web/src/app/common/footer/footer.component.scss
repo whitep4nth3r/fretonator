@@ -1,7 +1,7 @@
-@import '../../../styles/vars';
-@import '../../../styles/functions';
-@import '../../../styles/mixins';
-@import '../../../styles/typography';
+@import "../../../styles/vars";
+@import "../../../styles/functions";
+@import "../../../styles/mixins";
+@import "../../../styles/typography";
 
 .footer {
   background-color: var(--footer-background);
@@ -144,6 +144,13 @@
 
   @media screen and (min-width: $screen-med) {
     align-self: flex-start;
+  }
+}
+
+.footer__bigButton--website {
+  margin-top: 3rem;
+  @media screen and (min-width: $screen-med) {
+    align-self: flex-end;
   }
 }
 
