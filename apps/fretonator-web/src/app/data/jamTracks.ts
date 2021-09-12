@@ -786,62 +786,6 @@ export const JamTracksData: JamTracks = [
     creator: 'Quist'
   },
   {
-    key: NoteSymbol.aSharp,
-    mode: Mode.ionian,
-    youTubeId: 'ZHXwR9efA5w',
-    title: 'Acoustic Pop Backing Track - Key of A#',
-    creator: 'Best Backing Tracks'
-  },
-  {
-    key: NoteSymbol.aSharp,
-    mode: Mode.dorian,
-    youTubeId: 'BN2dMY7VTmk',
-    title: 'Jam Track - 30 Minute - Dorian Rock in Bb',
-    creator: 'Fusion Jam Tracks'
-  },
-  {
-    key: NoteSymbol.aSharp,
-    mode: Mode.phrygian,
-    youTubeId: 'MggD0gpcQDo',
-    title: 'A#/Bb Phrygian Mode Backing Track',
-    creator: 'EffectiveMusicPractice'
-  },
-  {
-    key: NoteSymbol.aSharp,
-    mode: Mode.lydian,
-    youTubeId: 'ubFfsxoUlDw',
-    title: 'Bb Lydian Mode Backing Track',
-    creator: 'EffectiveMusicPractice'
-  },
-  {
-    key: NoteSymbol.aSharp,
-    mode: Mode.mixolydian,
-    youTubeId: 'cGl9aA35Fc4',
-    title: 'Fusion Jam Track - 30 Minute - Funky Mixolydian in Bb',
-    creator: 'Fusion Jam Tracks'
-  },
-  {
-    key: NoteSymbol.aSharp,
-    mode: Mode.aeolian,
-    youTubeId: 'GsC474JU6iA',
-    title: 'Bb Aeolian Mode Backing Track',
-    creator: 'EffectiveMusicPractice'
-  },
-  {
-    key: NoteSymbol.aSharp,
-    mode: Mode.locrian,
-    youTubeId: '18ILVTX_zkk',
-    title: 'A# Locrian - Backing Track',
-    creator: 'Allan Haapalainen'
-  },
-  {
-    key: NoteSymbol.aSharp,
-    mode: Mode.harmonicMinor,
-    youTubeId: 'TMOldqhpocQ',
-    title: 'Backing track: Bb harmonic minor',
-    creator: 'Jorgen Jensen'
-  },
-  {
     key: NoteSymbol.bFlat,
     mode: Mode.ionian,
     youTubeId: 'ZHXwR9efA5w',
@@ -1052,13 +996,6 @@ export const JamTracksData: JamTracks = [
     creator: 'Chusss Music'
   },
   {
-    key: NoteSymbol.aSharp,
-    mode: Mode.phrygianDominant,
-    youTubeId: 'gG3hIWg_lO8',
-    title: 'Bb Phrygian Dominant Backing Track',
-    creator: 'EffectiveMusicPractice'
-  },
-  {
     key: NoteSymbol.bFlat,
     mode: Mode.phrygianDominant,
     youTubeId: 'gG3hIWg_lO8',
@@ -1170,13 +1107,6 @@ export const JamTracksData: JamTracks = [
     youTubeId: 'xqtjqzSD6Ko',
     title: 'A Mixolydian b6 Groove Backing Track',
     creator: 'Quist'
-  },
-  {
-    key: NoteSymbol.aSharp,
-    mode: Mode.aeolianDominant,
-    youTubeId: 'bL-KVJL46Bk',
-    title: 'Bb Mixolydian b6 Backing Track',
-    creator: 'EffectiveMusicPractice'
   },
   {
     key: NoteSymbol.bFlat,
