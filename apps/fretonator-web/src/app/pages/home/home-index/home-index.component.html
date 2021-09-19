@@ -33,7 +33,7 @@
                 rounded="true"
                 selectedColor="muted">{{note | titlecase}}</app-chip>
 
-      <app-chip *ngIf="!(note === 'b' || note === 'e')"
+      <app-chip *ngIf="!(note === 'b' || note === 'e' || note === 'a')"
                 [note]="note"
                 [noteExtender]="'sharp'"
                 [mode]="mode"

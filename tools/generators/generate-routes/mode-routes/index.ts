@@ -36,7 +36,6 @@ const Octave = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
 enum NoteSymbol {
   aFlat = 'a_',
   a = 'a',
-  aSharp = 'a#',
   bFlat = 'b_',
   b = 'b',
   c = 'c',

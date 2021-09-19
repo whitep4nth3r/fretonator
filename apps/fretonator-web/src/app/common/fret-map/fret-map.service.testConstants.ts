@@ -1,49 +1,6 @@
 import { ChordType, FretMap, ModeMap } from '../../util/types';
 import { ScaleDegrees } from '../../util/constants';
 
-export const aSharpPentatonicMajor: ModeMap = [
-  {
-    name: 'a',
-    sharp: true,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-    displayName: 'A#'
-  },
-  {
-    name: 'b',
-    sharp: true,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-    displayName: 'B#'
-  },
-  {
-    name: 'c',
-    sharp: false,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: true,
-    displayName: 'Cx'
-  },
-  {
-    name: 'e',
-    sharp: true,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-    displayName: 'E#'
-  },
-  {
-    name: 'f',
-    sharp: false,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: true,
-    displayName: 'Fx'
-  }
-];
-
 export const dFlatMajorPentatonic: ModeMap = [
   {
     name: 'd',
@@ -975,65 +932,6 @@ export const bFlatLocrian: ModeMap = [
     doubleFlat: false,
     doubleSharp: false,
     displayName: 'A♭'
-  }
-];
-
-export const aSharpMajor: ModeMap = [
-  {
-    name: 'a',
-    sharp: true,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-    displayName: 'A#'
-  },
-  {
-    name: 'b',
-    sharp: true,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-    displayName: 'B#'
-  },
-  {
-    name: 'c',
-    sharp: false,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: true,
-    displayName: 'Cx'
-  },
-  {
-    name: 'd',
-    sharp: true,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-    displayName: 'D#'
-  },
-  {
-    name: 'e',
-    sharp: true,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: false,
-    displayName: 'E#'
-  },
-  {
-    name: 'f',
-    sharp: false,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: true,
-    displayName: 'Fx'
-  },
-  {
-    name: 'g',
-    sharp: false,
-    flat: false,
-    doubleFlat: false,
-    doubleSharp: true,
-    displayName: 'Gx'
   }
 ];
 

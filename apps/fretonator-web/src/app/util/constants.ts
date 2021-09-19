@@ -693,8 +693,7 @@ export const Enharmonics = [
   ['C#', 'D♭'],
   ['D#', 'E♭'],
   ['F#', 'G♭'],
-  ['G#', 'A♭'],
-  ['A#', 'B♭']
+  ['G#', 'A♭']
 ];
 
 export const StringFrequencies = {

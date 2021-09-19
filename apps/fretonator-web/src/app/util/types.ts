@@ -28,7 +28,6 @@ export type ChordMap = Chord[];
 export enum NoteSymbol {
   aFlat = 'a_',
   a = 'a',
-  aSharp = 'a#',
   bFlat = 'b_',
   b = 'b',
   c = 'c',

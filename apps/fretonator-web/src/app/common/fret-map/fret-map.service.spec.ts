@@ -4,8 +4,6 @@ import {
   aFlatPhrygian,
   aMajorPentatonic,
   aMinorPentatonic,
-  aSharpMajor,
-  aSharpPentatonicMajor,
   bFlatLocrian,
   bFlatPhrygian,
   cHarmonicMinor,
@@ -805,21 +803,6 @@ describe('FretMapService:generateMode', () => {
     expect(result).toEqual(dFlatMajorPentatonic);
   });
 
-  it('returns the A sharp Pentatonic Major', () => {
-    const result = service.generateMode(
-      {
-        name: 'a',
-        sharp: true,
-        flat: false,
-        doubleFlat: false,
-        doubleSharp: false
-      },
-      'majorPentatonic'
-    );
-
-    expect(result).toEqual(aSharpPentatonicMajor);
-  });
-
   it('returns the C ionian mode', () => {
     const result = service.generateMode(
       {
@@ -944,20 +927,6 @@ describe('FretMapService:generateMode', () => {
       'harmonicMinor'
     );
     expect(result).toEqual(fSharpHarmonicMinor);
-  });
-
-  it('returns the a sharp ionian mode', () => {
-    const result = service.generateMode(
-      {
-        name: 'a',
-        sharp: true,
-        flat: false,
-        doubleFlat: false,
-        doubleSharp: false
-      },
-      'ionian'
-    );
-    expect(result).toEqual(aSharpMajor);
   });
 });
 
@@ -1144,18 +1113,6 @@ describe('FretMapService:convertNoteObjectToNoteSymbol', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(FretMapService);
-  });
-
-  it('returns the correct note symbol for A sharp', () => {
-    const result = service.convertNoteObjectToNoteSymbol({
-      name: 'a',
-      flat: false,
-      sharp: true,
-      doubleSharp: false,
-      doubleFlat: false
-    });
-
-    expect(result).toBe(NoteSymbol.aSharp);
   });
 
   it('returns the correct note symbol for A flat', () => {
