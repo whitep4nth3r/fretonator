@@ -20,7 +20,6 @@
             "main": "apps/fretonator-web/src/main.ts",
             "polyfills": "apps/fretonator-web/src/polyfills.ts",
             "tsConfig": "apps/fretonator-web/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "apps/fretonator-web/src/favicon.ico",
               "apps/fretonator-web/src/assets",
@@ -34,7 +33,13 @@
             "styles": [
               "apps/fretonator-web/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -70,7 +75,8 @@
           },
           "outputs": [
             "{options.outputPath}"
-          ]
+          ],
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -117,7 +123,9 @@
           "options": {
             "outputPath": "dist/fretonator-web/server",
             "main": "apps/fretonator-web/server.ts",
-            "tsConfig": "apps/fretonator-web/tsconfig.server.json"
+            "tsConfig": "apps/fretonator-web/tsconfig.server.json",
+            "sourceMap": true,
+            "optimization": false
           },
           "configurations": {
             "production": {
@@ -131,7 +139,8 @@
               "sourceMap": false,
               "optimization": true
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
