@@ -3,7 +3,7 @@ import { Mode, NoteExtenderString, NoteExtenderSymbol, NoteSymbol } from '../../
 import { ModeSelectorObjects, Octave } from '../../../util/constants';
 import { Meta, Title } from '@angular/platform-browser';
 import { AbstractDataService } from '../../../common/abstract-data/abstract-data.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FretMapService } from '../../../common/fret-map/fret-map.service';
 import { MetaService } from '../../../common/meta/meta.service';
 import { GlobalService } from '../../../global.service';
@@ -30,8 +30,10 @@ export class HomeIndexComponent implements OnInit, AfterViewInit {
     private activatedRoute: ActivatedRoute,
     private fretMapService: FretMapService,
     private metaService: MetaService,
-    private globalService: GlobalService
+    private globalService: GlobalService,
+    private router: Router
   ) {
+
   }
 
   ngOnInit(): void {
@@ -70,5 +72,46 @@ export class HomeIndexComponent implements OnInit, AfterViewInit {
     const pageUrl = this.metaService.generateHomePageUrl(this.note, this.noteExtenderString, this.mode);
 
     this.metaService.updateAllGenericMeta(pageUrl, pageTitle, pageDescription);
+  }
+
+  noteHasFlatExtender(note: string) {
+    return !(note === NoteSymbol.f || note === NoteSymbol.c);
+  }
+
+  noteHasSharpExtender(note: string) {
+    return !(note === NoteSymbol.b || note === NoteSymbol.e || note == NoteSymbol.a);
+  }
+
+  randomize() {
+    const note = this.getRandomNote();
+    const mode = this.getRandomMode();
+    const extender = this.getRandomNoteExtenderString(note);
+
+    this.router.navigate([note, extender, mode]);
+  }
+
+  getRandomNote() {
+    let randomIndex = Math.floor(Math.random() * Octave.length);
+    return Octave[randomIndex];
+  }
+
+  getRandomMode() {
+    const modeCount = Object.keys(Mode).length;
+    const randomIndex = Math.floor(Math.random() * modeCount);
+
+    return Object.values(Mode)[randomIndex];
+  }
+
+  getRandomNoteExtenderString(note: string) {
+    const noteExtenderStrings = [NoteExtenderString.natural];
+    if (this.noteHasFlatExtender(note)) {
+      noteExtenderStrings.push(NoteExtenderString.flat);
+    }
+    if (this.noteHasSharpExtender(note)) {
+      noteExtenderStrings.push(NoteExtenderString.sharp);
+    }
+
+    const randomIndex = Math.floor(Math.random() * noteExtenderStrings.length);
+    return noteExtenderStrings[randomIndex];
   }
 }

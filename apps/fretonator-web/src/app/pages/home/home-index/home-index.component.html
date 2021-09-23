@@ -19,7 +19,7 @@
     </app-chips>
 
     <app-chips>
-      <app-chip *ngIf="!(note === 'f' || note === 'c')"
+      <app-chip *ngIf="noteHasFlatExtender(note)"
                 [note]="note"
                 [noteExtender]="'flat'"
                 [mode]="mode"
@@ -33,7 +33,7 @@
                 rounded="true"
                 selectedColor="muted">{{note | titlecase}}</app-chip>
 
-      <app-chip *ngIf="!(note === 'b' || note === 'e' || note === 'a')"
+      <app-chip *ngIf="noteHasSharpExtender(note)"
                 [note]="note"
                 [noteExtender]="'sharp'"
                 [mode]="mode"
@@ -53,7 +53,16 @@
                 [mode]="thisMode.name"
                 selectedColor="default">{{thisMode.displayName}}</app-chip>
     </app-chips>
+  </div>
 
+  <div class="modeSelector__randomizeContainer">
+    <button
+      (click)="randomize()"
+      class="modeSelector__button"
+      title="Get a random note and mode"
+    >
+      Or get a random one
+    </button>
   </div>
 
   <app-fretonator [modeMap]="note | symbolToNoteObj: noteExtender | generateModeMap: mode"
