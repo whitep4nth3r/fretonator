@@ -1,7 +1,7 @@
-@import '../../../../styles/vars';
-@import '../../../../styles/mixins';
-@import '../../../../styles/typography';
-@import '../../../../styles/content';
+@import "../../../../styles/vars";
+@import "../../../../styles/mixins";
+@import "../../../../styles/typography";
+@import "../../../../styles/content";
 
 .learn__container {
   @include content_container;
@@ -9,6 +9,7 @@
 
 .learn__title {
   @include content_title;
+  text-align: center;
 }
 
 .learn__subtitle {
@@ -22,7 +23,7 @@
 .grid {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: 1fr;
   gap: pxToRem($grid-unit * 3);
   justify-items: stretch;
   align-items: stretch;
@@ -62,9 +63,9 @@
 
 .grid__item__button {
   @include hard_button_base(
-      var(--card-button-foreground),
-      var(--card-button-backgorund),
-      var(--card-button-hover)
+    var(--card-button-foreground),
+    var(--card-button-backgorund),
+    var(--card-button-hover)
   );
   margin-bottom: pxToRem($grid-unit * 4);
 }
@@ -83,4 +84,3 @@
   margin-right: pxToRem($grid-unit);
   border-width: 0;
 }
-

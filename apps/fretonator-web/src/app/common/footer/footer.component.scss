@@ -18,111 +18,6 @@
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-
-  @media screen and (min-width: $screen-med) {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-}
-
-.footer__leftColumn {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media screen and (min-width: $screen-med) {
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-basis: 40%;
-  }
-}
-
-.footer__rightColumn {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media screen and (min-width: $screen-med) {
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-basis: 35%;
-  }
-}
-
-.footer__copy {
-  @include font_bodyCopy;
-  font-size: pxToRem(15);
-  line-height: pxToRem(22);
-  color: var(--footer-copy-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: pxToRem($grid-unit * 2);
-
-  @media screen and (min-width: $screen-med) {
-    justify-content: flex-start;
-    text-align: left;
-  }
-}
-
-.footer__copy--right {
-  @media screen and (min-width: $screen-med) {
-    justify-content: flex-end;
-    align-self: flex-end;
-    text-align: right;
-  }
-}
-
-.footer__copy--link {
-  @include text_link();
-  color: var(--footer-link-color);
-  border-color: var(--footer-link-color);
-}
-
-.footer__sectionTitle {
-  @include font_medium;
-  font-size: pxToRem(18);
-  line-height: pxToRem(28);
-  margin-top: pxToRem($grid-unit);
-  margin-bottom: pxToRem($grid-unit);
-  color: var(--footer-title-color);
-  font-weight: var(--font-weight-bold);
-  display: flex;
-  text-align: center;
-
-  @media screen and (min-width: $screen-med) {
-    text-align: left;
-  }
-}
-
-.footer__list {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  margin-bottom: pxToRem($grid-unit * 4);
-
-  @media screen and (min-width: $screen-med) {
-    text-align: left;
-  }
-}
-
-.footer__listItem {
-  @include font_bodyCopy;
-  font-size: pxToRem(15);
-  line-height: pxToRem(26);
-  color: var(--footer-copy-color);
-}
-
-.footer__listItemLink {
-  @include text_link();
-  color: var(--footer-list-link-color);
-  border-color: var(--footer-list-link-color);
-
-  @include focus_accessible();
 }
 
 .footer__copyright {
@@ -138,20 +33,7 @@
 
 .footer__bigButton {
   @include hard_button_base();
-  display: inline-flex;
-  align-self: center;
-  margin-bottom: pxToRem($grid-unit * 6);
-
-  @media screen and (min-width: $screen-med) {
-    align-self: flex-start;
-  }
-}
-
-.footer__bigButton--website {
-  margin-top: 3rem;
-  @media screen and (min-width: $screen-med) {
-    align-self: flex-end;
-  }
+  margin-bottom: pxToRem($grid-unit * 4);
 }
 
 .footer__smallButton {
@@ -175,15 +57,4 @@
   height: pxToRem(20);
   width: pxToRem(20);
   margin-right: pxToRem($grid-unit / 2);
-}
-
-.footer__twitchButton {
-  background-color: #9147ff;
-  color: #ffffff;
-  padding: pxToRem($grid-unit * 2);
-  font-family: var(--font-family-main);
-  font-weight: var(--font-weight-bold);
-  border-radius: pxToRem(6);
-  text-decoration: none;
-  margin-top: pxToRem($grid-unit * 4);
 }

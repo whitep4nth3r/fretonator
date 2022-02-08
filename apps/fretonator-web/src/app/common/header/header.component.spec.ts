@@ -1,34 +1,30 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { By } from '@angular/platform-browser';
-import { HeaderComponent } from './header.component';
-import { Component, DebugElement } from '@angular/core';
-import { HeaderModule } from './header.module';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
+import { By } from "@angular/platform-browser";
+import { HeaderComponent } from "./header.component";
+import { Component, DebugElement } from "@angular/core";
+import { HeaderModule } from "./header.module";
 
-describe('HeaderComponent', () => {
-
+describe("HeaderComponent", () => {
   const selectors = {
-    logo: By.css('.header__siteLogo'),
-    links: By.css('.header__linksItemLink'),
+    logo: By.css(".header__siteLogo"),
+    links: By.css(".header__linksItemLink"),
     hamburger: By.css(`.hamburger`),
-    menu: By.css('.header__links'),
-    themeToggleButton: By.css('.theme__toggle')
+    menu: By.css(".header__links"),
+    themeToggleButton: By.css(".theme__toggle"),
   };
 
   const classNames = {
-    menuHide: 'header__links--hide',
-    isDark: 'isDark',
-    isLight: 'isLight'
+    menuHide: "header__links--hide",
+    isDark: "isDark",
+    isLight: "isLight",
   };
 
   @Component({
-    selector: 'app-header-spec',
-    template: `
-      <app-header></app-header>
-    `
+    selector: "app-header-spec",
+    template: ` <app-header></app-header> `,
   })
-  class HeaderComponentSpec {
-  }
+  class HeaderComponentSpec {}
 
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
@@ -36,7 +32,7 @@ describe('HeaderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderComponentSpec],
-      imports: [RouterTestingModule, HeaderModule]
+      imports: [RouterTestingModule, HeaderModule],
     }).compileComponents();
   }));
 
@@ -46,54 +42,41 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 
-  it('should match snapshot', () => {
+  it("should match snapshot", () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  describe('Logo', () => {
-    it('should have a link to the home page on the logo', () => {
+  describe("Logo", () => {
+    it("should have a link to the home page on the logo", () => {
       const logoElem = fixture.debugElement.query(selectors.logo);
-      expect(logoElem.properties.href).toBe('/');
+      expect(logoElem.properties.href).toBe("/");
     });
   });
 
-  describe('Links', () => {
-
+  describe("Links", () => {
     let home: DebugElement;
     let learn: DebugElement;
-    let about: DebugElement;
-    let contact: DebugElement;
 
     beforeEach(() => {
       const links = fixture.debugElement.queryAll(selectors.links);
       home = links[0];
       learn = links[1];
-      about = links[2];
-      contact = links[3];
     });
 
-    it('Home should link to /', () => {
-      expect(home.properties.href).toBe('/');
+    it("Home should link to /", () => {
+      expect(home.properties.href).toBe("/");
     });
 
-    it('Learn should link to /learn', () => {
-      expect(learn.properties.href).toBe('/learn');
-    });
-
-    it('About should link to /about', () => {
-      expect(about.properties.href).toBe('/about');
-    });
-
-    it('Contact should link to /contact', () => {
-      expect(contact.properties.href).toBe('/contact');
+    it("Learn should link to /learn", () => {
+      expect(learn.properties.href).toBe("/learn");
     });
   });
 
-  describe('toggleMenu()', () => {
+  describe("toggleMenu()", () => {
     let hamburger: DebugElement;
     let menu: DebugElement;
 
@@ -104,27 +87,29 @@ describe('HeaderComponent', () => {
       fixture.detectChanges();
     });
 
-    it('removes the hidden links modifier', () => {
+    it("removes the hidden links modifier", () => {
       expect(menu.classes[classNames.menuHide]).toBeFalsy();
     });
   });
 
-  describe('toggleTheme()', () => {
+  describe("toggleTheme()", () => {
     let themeToggleButton: DebugElement;
 
     beforeEach(() => {
-      themeToggleButton = fixture.debugElement.query(selectors.themeToggleButton);
+      themeToggleButton = fixture.debugElement.query(
+        selectors.themeToggleButton
+      );
       fixture.detectChanges();
     });
 
-    it('has the dark class by default', () => {
+    it("has the dark class by default", () => {
       expect(themeToggleButton.classes[classNames.isDark]).toBeTruthy();
-    })
+    });
 
-    it('switches the class to isLight when clicked', () => {
+    it("switches the class to isLight when clicked", () => {
       themeToggleButton.nativeElement.click();
       fixture.detectChanges();
       expect(themeToggleButton.classes[classNames.isLight]).toBeTruthy();
-    })
+    });
   });
 });
