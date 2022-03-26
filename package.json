@@ -11,7 +11,7 @@
     "dev:ssr": "ng run fretonator-web:serve-ssr",
     "serve:ssr": "node dist/fretonator-web/server/main.js",
     "build:ssr": "ng build && ng run fretonator-web:server",
-    "prerender": "run-p prerender:*",
+    "prerender": "run-s prerender:*",
     "prerender:routes": "nx workspace-schematic generate-routes",
     "prerender:build": "ng run fretonator-web:prerender"
   },
