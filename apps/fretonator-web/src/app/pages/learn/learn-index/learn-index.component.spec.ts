@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LearnIndexComponent } from './learn-index.component';
 import { Component } from '@angular/core';
 import { LearnModule } from '../learn.module';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -12,14 +11,14 @@ describe('LearnIndexComponent', () => {
       <app-learn-index></app-learn-index>
     `
   })
-  class LearnIndexComponentSpec {
+  class LearnIndexSpecComponent {
   }
-  let component: LearnIndexComponentSpec;
-  let fixture: ComponentFixture<LearnIndexComponentSpec>;
+  let component: LearnIndexSpecComponent;
+  let fixture: ComponentFixture<LearnIndexSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LearnIndexComponentSpec ],
+      declarations: [ LearnIndexSpecComponent ],
       imports: [
         LearnModule,
         RouterTestingModule
@@ -29,13 +28,12 @@ describe('LearnIndexComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LearnIndexComponentSpec);
+    fixture = TestBed.createComponent(LearnIndexSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(component).toMatchSnapshot();
   });
 });

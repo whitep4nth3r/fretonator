@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PatternsIndexComponent } from './patterns-index.component';
 import { Component, DebugElement } from '@angular/core';
 import { LearnModule } from '../learn.module';
 import { By } from '@angular/platform-browser';
@@ -20,15 +19,15 @@ describe('PatternsIndexComponent', () => {
       <app-patterns-index></app-patterns-index>
     `
   })
-  class PatternsIndexComponentSpec {
+  class PatternsIndexSpecComponent {
   }
 
-  let component: PatternsIndexComponentSpec;
-  let fixture: ComponentFixture<PatternsIndexComponentSpec>;
+  let component: PatternsIndexSpecComponent;
+  let fixture: ComponentFixture<PatternsIndexSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PatternsIndexComponentSpec],
+      declarations: [PatternsIndexSpecComponent],
       imports: [
         LearnModule,
         RouterTestingModule
@@ -38,14 +37,13 @@ describe('PatternsIndexComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PatternsIndexComponentSpec);
+    fixture = TestBed.createComponent(PatternsIndexSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(component).toMatchSnapshot();
   });
 
   describe('setPattern,', () => {

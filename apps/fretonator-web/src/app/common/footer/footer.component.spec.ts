@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FooterComponent } from './footer.component';
 import { Component } from '@angular/core';
 import { FooterModule } from './footer.module';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -12,27 +11,26 @@ describe('FooterComponent', () => {
       <app-footer></app-footer>
     `
   })
-  class FooterComponentSpec {
+  class FooterSpecComponent {
   }
 
-  let component: FooterComponentSpec;
-  let fixture: ComponentFixture<FooterComponentSpec>;
+  let component: FooterSpecComponent;
+  let fixture: ComponentFixture<FooterSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FooterComponentSpec],
+      declarations: [FooterSpecComponent],
       imports: [FooterModule, RouterTestingModule]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FooterComponentSpec);
+    fixture = TestBed.createComponent(FooterSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(component).toMatchSnapshot();
   });
 });

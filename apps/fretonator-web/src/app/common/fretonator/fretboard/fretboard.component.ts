@@ -76,8 +76,8 @@ const StorageKeys = {
 })
 export class FretboardComponent implements OnChanges, OnInit {
   @ViewChild('fretboardContainer') fretboardContainer: ElementRef<HTMLElement>;
-  @Output() loadExpandedChange = new EventEmitter<Boolean>();
-  @Input() fretMap: FretMap;
+  @Output() loadExpandedChange = new EventEmitter<boolean>();
+  @Input() fretMap!: FretMap;
   @Input() mode: Mode;
   @Input() stringNamesAreCaseSensitive = false;
   @Input() loadExpanded = false;

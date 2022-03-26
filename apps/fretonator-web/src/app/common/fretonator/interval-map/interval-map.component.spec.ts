@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IntervalMapComponent } from './interval-map.component';
 import { Component } from '@angular/core';
 import { IntervalMapModule } from './interval-map.module';
 
@@ -12,22 +11,22 @@ describe('IntervalMapComponent', () => {
       <app-interval-map></app-interval-map>
     `
   })
-  class IntervalMapComponentSpec {
+  class IntervalMapSpecComponent {
   }
 
-  let component: IntervalMapComponentSpec;
-  let fixture: ComponentFixture<IntervalMapComponentSpec>;
+  let component: IntervalMapSpecComponent;
+  let fixture: ComponentFixture<IntervalMapSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [IntervalMapComponentSpec],
+      declarations: [IntervalMapSpecComponent],
       imports: [IntervalMapModule]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IntervalMapComponentSpec);
+    fixture = TestBed.createComponent(IntervalMapSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -26,57 +26,25 @@ import { JamTracksData } from '../../data/jamTracks';
   providedIn: 'root'
 })
 export class FretMapService {
-  constructor() {
-  }
 
   isNatural = (note: NoteObject, noteName: string): boolean => {
-    return (
-      note.name === noteName &&
-      note.sharp === false &&
-      note.flat === false &&
-      note.doubleFlat === false &&
-      note.doubleSharp === false
-    );
+    return (note.name === noteName && !note.sharp && !note.flat && !note.doubleFlat && !note.doubleSharp);
   };
 
   isSharp = (note: NoteObject, noteName: string): boolean => {
-    return (
-      note.name === noteName &&
-      note.sharp === true &&
-      note.flat === false &&
-      note.doubleFlat === false &&
-      note.doubleSharp === false
-    );
+    return (note.name === noteName && note.sharp && !note.flat && !note.doubleFlat && !note.doubleSharp);
   };
 
   isFlat = (note: NoteObject, noteName: string): boolean => {
-    return (
-      note.name === noteName &&
-      note.sharp === false &&
-      note.flat === true &&
-      note.doubleFlat === false &&
-      note.doubleSharp === false
-    );
+    return (note.name === noteName && !note.sharp && note.flat && !note.doubleFlat && !note.doubleSharp);
   };
 
   isDoubleFlat = (note: NoteObject, noteName: string): boolean => {
-    return (
-      note.name === noteName &&
-      note.sharp === false &&
-      note.flat === false &&
-      note.doubleFlat === true &&
-      note.doubleSharp === false
-    );
+    return (note.name === noteName && !note.sharp && !note.flat && note.doubleFlat && !note.doubleSharp);
   };
 
   isDoubleSharp = (note: NoteObject, noteName: string): boolean => {
-    return (
-      note.name === noteName &&
-      note.sharp === false &&
-      note.flat === false &&
-      note.doubleFlat === false &&
-      note.doubleSharp === true
-    );
+    return (note.name === noteName && !note.sharp && !note.flat && !note.doubleFlat && note.doubleSharp);
   };
 
   getNextOctaveNote = (noteName: string, interval: number): string => {
@@ -440,9 +408,9 @@ export class FretMapService {
       return NoteExtenderString.flat;
     }
 
-    if (this.isNatural(noteObject, noteObject.name)) {
+    // if (this.isNatural(noteObject, noteObject.name)) {
       return NoteExtenderString.natural;
-    }
+    // }
   };
 
   getStandardModesInOrder = (startModeIndex: number): Mode[] => {

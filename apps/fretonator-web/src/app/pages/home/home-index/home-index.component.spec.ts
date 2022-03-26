@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HomeIndexComponent } from './home-index.component';
 import { Component } from '@angular/core';
 import { HomeModule } from '../home.module';
 import { BrowserTestingModule } from '@angular/platform-browser/testing';
@@ -15,15 +14,15 @@ describe('HomeIndexComponent', () => {
       <app-home-index></app-home-index>
     `
   })
-  class HomeIndexComponentSpec {
+  class HomeIndexSpecComponent {
   }
 
-  let component: HomeIndexComponentSpec;
-  let fixture: ComponentFixture<HomeIndexComponentSpec>;
+  let component: HomeIndexSpecComponent;
+  let fixture: ComponentFixture<HomeIndexSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeIndexComponentSpec],
+      declarations: [HomeIndexSpecComponent],
       imports: [
         HomeModule,
         BrowserTestingModule,
@@ -47,7 +46,7 @@ describe('HomeIndexComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeIndexComponentSpec);
+    fixture = TestBed.createComponent(HomeIndexSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

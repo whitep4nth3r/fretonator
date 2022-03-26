@@ -13,11 +13,13 @@ export class ScrollToGuard implements CanActivate {
 
   canActivate(): true {
     const scrollToTarget = this.globalService.getGlobalScrollTarget();
-    const { extras } = this.router.getCurrentNavigation();
-    const { state } = extras;
+    const navigation = this.router.getCurrentNavigation();
 
-    if (state && state.scrollToTop && scrollToTarget) {
-      scrollToTarget.scrollIntoView();
+    if(navigation?.extras) {
+      const { state } = navigation.extras;
+      if (state && state['scrollToTop'] && scrollToTarget) {
+        scrollToTarget.scrollIntoView();
+      }
     }
 
     return true;

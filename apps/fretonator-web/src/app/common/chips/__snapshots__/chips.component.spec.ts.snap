@@ -2,6 +2,8 @@
 
 exports[`ChipsComponent should match the snapshot 1`] = `
 <app-chips-spec
+  Mode={[Function Object]}
+  __ngContext__={[Function LRootView]}
   selectedColor={[Function String]}
 >
   <app-chips>

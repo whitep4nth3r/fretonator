@@ -15,10 +15,10 @@ import { GlobalService } from '../../../global.service';
 })
 
 export class HomeIndexComponent implements OnInit, AfterViewInit {
-  @ViewChild('scrollTarget') scrollTarget: ElementRef<HTMLElement>;
+  @ViewChild('scrollTarget') scrollTarget!: ElementRef<HTMLElement>;
   note: NoteSymbol = NoteSymbol.c;
-  noteExtender: NoteExtenderSymbol;
-  noteExtenderString: NoteExtenderString;
+  noteExtender!: NoteExtenderSymbol;
+  noteExtenderString!: NoteExtenderString;
   mode: Mode = Mode.ionian;
   modeSelectorObjects = ModeSelectorObjects;
   octave = Octave;
@@ -46,7 +46,7 @@ export class HomeIndexComponent implements OnInit, AfterViewInit {
   }
 
   onRouteChange() {
-    const routeData = this.activatedRoute.snapshot.data.selected;
+    const routeData = this.activatedRoute.snapshot.data['selected'];
     this.note = routeData.note;
     this.noteExtenderString = routeData.noteExtender;
     this.mode = routeData.mode;
@@ -91,7 +91,7 @@ export class HomeIndexComponent implements OnInit, AfterViewInit {
   }
 
   getRandomNote() {
-    let randomIndex = Math.floor(Math.random() * Octave.length);
+    const randomIndex = Math.floor(Math.random() * Octave.length);
     return Octave[randomIndex];
   }
 

@@ -17,7 +17,7 @@ describe('GetChordMapPipe', () => {
   });
 
   it('calls FretMapService.getChords', () => {
-    const spy = spyOn(pipe.generateFretMapService, 'getChordMap');
+    const spy = jest.spyOn(pipe.generateFretMapService, 'getChordMap');
 
     const note = {
       name: 'c',

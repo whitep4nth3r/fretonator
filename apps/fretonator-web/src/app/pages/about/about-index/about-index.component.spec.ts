@@ -12,15 +12,15 @@ describe('AboutIndexComponent', () => {
       <app-about-index></app-about-index>
     `
   })
-  class AboutIndexComponentSpec {
+  class AboutIndexSpecComponent {
   }
 
-  let component: AboutIndexComponentSpec;
-  let fixture: ComponentFixture<AboutIndexComponentSpec>;
+  let component: AboutIndexSpecComponent;
+  let fixture: ComponentFixture<AboutIndexSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AboutIndexComponentSpec],
+      declarations: [AboutIndexSpecComponent],
       imports: [
         AboutModule,
         BrowserTestingModule

@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChordMapComponent } from './chord-map.component';
 import { Component } from '@angular/core';
 import { ChordMapModule } from './chord-map.module';
 
@@ -12,22 +11,22 @@ describe('ChordMapComponent', () => {
       <app-chord-map></app-chord-map>
     `
   })
-  class ChordMapComponentSpec {
+  class ChordMapSpecComponent {
   }
 
-  let component: ChordMapComponentSpec;
-  let fixture: ComponentFixture<ChordMapComponentSpec>;
+  let component: ChordMapSpecComponent;
+  let fixture: ComponentFixture<ChordMapSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ChordMapComponentSpec],
+      declarations: [ChordMapSpecComponent],
       imports: [ChordMapModule]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChordMapComponentSpec);
+    fixture = TestBed.createComponent(ChordMapSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

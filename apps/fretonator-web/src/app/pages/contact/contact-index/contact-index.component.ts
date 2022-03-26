@@ -1,16 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FormService } from '../form.service';
-import { tap } from 'rxjs/operators';
-import { Router } from '@angular/router';
-import { GlobalService } from '../../../global.service';
-import { FormErrorMessages } from '../../../util/constants';
-import { MetaService } from '../../../common/meta/meta.service';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormService} from '../form.service';
+import {tap} from 'rxjs/operators';
+import {Router} from '@angular/router';
+import {GlobalService} from '../../../global.service';
+import {FormErrorMessages} from '../../../util/constants';
+import {MetaService} from '../../../common/meta/meta.service';
+
+
+interface GlobalErrors {
+  name: true | undefined,
+  email: true | undefined,
+  message: true | undefined,
+  any: true | undefined,
+}
 
 @Component({
   selector: 'app-contact-index',
   templateUrl: './contact-index.component.html',
-  styleUrls: ['./contact-index.component.scss']
+  styleUrls: ['./contact-index.component.scss'],
 })
 export class ContactIndexComponent implements OnInit {
   pageDescription = 'Noticed a bug? Got an idea for a feature? Want to collaborate? Or just want to say hello? I\'d love to hear from you. Send me a message!';
@@ -18,37 +26,38 @@ export class ContactIndexComponent implements OnInit {
   pageUrl = 'https://www.fretonator.com/contact';
   formName = 'Contact';
   formSubmitError = false;
-  globalErrors = {
-    name: false,
-    email: false,
-    message: false,
-    any: false
+  globalErrors: GlobalErrors = {
+    name: undefined,
+    email: undefined,
+    message: undefined,
+    any: undefined,
   };
+
   form = new FormGroup({
     honeypot: new FormControl('', [
-      Validators.maxLength(0)
+      Validators.maxLength(0),
     ]),
     name: new FormControl('', [
       Validators.required,
       Validators.maxLength(81),
-      Validators.pattern(/[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)/)
+      Validators.pattern(/[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)/),
     ]),
     email: new FormControl('', [
-      Validators.email
+      Validators.email,
     ]),
     message: new FormControl('', [
       Validators.required,
-      Validators.minLength(30)
+      Validators.minLength(30),
     ]),
-    submit: new FormControl('Submit', [])
+    submit: new FormControl('Submit', []),
   }, {
-    updateOn: 'change'
+    updateOn: 'change',
   });
 
   constructor(private formService: FormService,
-              private router: Router,
-              private globalService: GlobalService,
-              private metaService: MetaService) {
+    private router: Router,
+    private globalService: GlobalService,
+    private metaService: MetaService) {
   }
 
   ngOnInit(): void {
@@ -65,25 +74,26 @@ export class ContactIndexComponent implements OnInit {
     }
 
     this.formSubmitError = false;
-    this.submit.disable();
+    this.submit?.disable();
 
     const form = {
-      Name: this.name.value,
-      Email: this.email.value,
-      Message: this.message.value,
+      Name: this.name?.value,
+      Email: this.email?.value,
+      Message: this.message?.value,
       'form-name': this.formName,
-      'bot-field': this.honeypot.value
+      'bot-field': this.honeypot?.value,
     };
 
-    this.formService.submit('/contact/success', form)
-      .pipe(tap(() => this.submit.enable()))
+    this.formService
+      .submit('/contact/success', form)
+      .pipe(tap(() => this.submit?.enable()))
       .subscribe(
         () => this.onSuccess(),
-        (err) => this.onFail());
+        () => this.onFail());
   }
 
   async onSuccess() {
-    await (this.router.navigate(['/', 'contact', 'success'], { state: { scrollToTop: true } }));
+    await (this.router.navigate(['/', 'contact', 'success'], {state: {scrollToTop: true}}));
   }
 
   onFail() {
@@ -112,32 +122,29 @@ export class ContactIndexComponent implements OnInit {
 
   resetGlobalErrors() {
     this.globalErrors = {
-      name: false,
-      email: false,
-      message: false,
-      any: false
+      name: undefined,
+      email: undefined,
+      message: undefined,
+      any: undefined,
     };
   }
 
-  getNameError() {
-    if (!this.name.errors) {
-      return;
-    }
-    return true;
+  getNameError(): GlobalErrors['name'] {
+    return this.name?.errors
+      ? true
+      : undefined;
   }
 
-  getEmailError() {
-    if (!this.email.errors) {
-      return;
-    }
-    return true;
+  getEmailError(): GlobalErrors['email'] {
+    return this.email?.errors
+      ? true
+      : undefined;
   }
 
-  getMessageError() {
-    if (!this.message.errors) {
-      return;
-    }
-    return true;
+  getMessageError(): GlobalErrors['message'] {
+    return this.message?.errors
+      ? true
+      : undefined;
   }
 
   calculateGlobalErrors() {
@@ -145,12 +152,13 @@ export class ContactIndexComponent implements OnInit {
       name: this.getNameError(),
       email: this.getEmailError(),
       message: this.getMessageError(),
-      any: this.getNameError() || this.getEmailError() || this.getMessageError()
+      any: this.getNameError() || this.getEmailError() || this.getMessageError(),
     };
   }
 
-  getErrorMessage(field: string, type: string) {
-    return FormErrorMessages[field][type];
+  getErrorMessage(field: any, type: any) {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    return FormErrorMessages[field][type]!;
   }
 
 }

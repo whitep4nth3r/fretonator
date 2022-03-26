@@ -59,13 +59,13 @@
               name="Message"
               formControlName="message"
               class="form__input form__input--textArea"></textarea>
-      <span class="form__validIcon form__validIcon--textArea" *ngIf="message.valid">
+      <span class="form__validIcon form__validIcon--textArea" *ngIf="message?.valid">
         <app-tick-svg></app-tick-svg>
       </span>
     </div>
     <ng-container *ngIf="message.touched">
-      <p class="form__error" *ngIf="message.errors?.required">{{getErrorMessage('message', 'required')}}</p>
-      <p class="form__error" *ngIf="message.errors?.minlength">{{getErrorMessage('message', 'minLength')}}</p>
+      <p class="form__error" *ngIf="message?.errors?.['required']">{{getErrorMessage('message', 'required')}}</p>
+      <p class="form__error" *ngIf="message?.errors?.['minlength']">{{getErrorMessage('message', 'minLength')}}</p>
     </ng-container>
 
     <div class="form__honeypot">

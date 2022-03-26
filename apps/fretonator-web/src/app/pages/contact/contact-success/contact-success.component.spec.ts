@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactSuccessComponent } from './contact-success.component';
 import { Component } from '@angular/core';
 import { ContactModule } from '../contact.module';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -13,15 +12,15 @@ describe('ContactSuccessComponent', () => {
       <app-contact-success></app-contact-success>
     `
   })
-  class ContactSuccessComponentSpec {
+  class ContactSuccessSpecComponent {
   }
 
-  let component: ContactSuccessComponentSpec;
-  let fixture: ComponentFixture<ContactSuccessComponentSpec>;
+  let component: ContactSuccessSpecComponent;
+  let fixture: ComponentFixture<ContactSuccessSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ContactSuccessComponentSpec],
+      declarations: [ContactSuccessSpecComponent],
       imports: [
         ContactModule,
         RouterTestingModule,
@@ -31,13 +30,12 @@ describe('ContactSuccessComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContactSuccessComponentSpec);
+    fixture = TestBed.createComponent(ContactSuccessSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(component).toMatchSnapshot();
   });
 });

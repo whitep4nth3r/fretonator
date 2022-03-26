@@ -10,9 +10,6 @@ const SYNTH_PLAY_DURATION = 2000;
 export class NotePlaybackService {
   private context: AudioContext;
 
-  constructor() {
-  }
-
   playNote(stringFrequencyMarker, fret) {
     if (!this.context) {
       try {
@@ -28,7 +25,7 @@ export class NotePlaybackService {
     }
   }
 
-  private getFrequency(stringFrequencyMarker, fret) {
+  private getFrequency(stringFrequencyMarker: string, fret: number) {
     // We're using stringFrequencyMarker here, the case sensitive alt to string, to differentiate E/e strings.
     const stringFrequency = StringFrequencies[stringFrequencyMarker];
     const fretCents = fret * 100;

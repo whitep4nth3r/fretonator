@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NotFoundIndexComponent should create 1`] = `
-<app-not-found-index-spec>
+<app-not-found-index-spec
+  __ngContext__={[Function LRootView]}
+>
   <app-not-found-index>
     <main
       class="notFound__container"

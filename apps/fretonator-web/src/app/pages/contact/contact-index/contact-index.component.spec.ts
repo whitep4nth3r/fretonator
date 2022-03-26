@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactIndexComponent } from './contact-index.component';
 import { Component } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ContactModule } from '../contact.module';
@@ -12,15 +11,15 @@ describe('ContactIndexComponent', () => {
       <app-contact-index></app-contact-index>
     `
   })
-  class ContactIndexComponentSpec {
+  class ContactIndexSpecComponent {
   }
 
-  let component: ContactIndexComponentSpec;
-  let fixture: ComponentFixture<ContactIndexComponentSpec>;
+  let component: ContactIndexSpecComponent;
+  let fixture: ComponentFixture<ContactIndexSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ContactIndexComponentSpec],
+      declarations: [ContactIndexSpecComponent],
       imports: [
         ContactModule,
         RouterTestingModule
@@ -29,13 +28,12 @@ describe('ContactIndexComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContactIndexComponentSpec);
+    fixture = TestBed.createComponent(ContactIndexSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(component).toMatchSnapshot();
   });
 });

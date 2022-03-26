@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotFoundIndexComponent } from './not-found-index.component';
 import { Component } from '@angular/core';
 import { NotFoundModule } from '../not-found.module';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -12,15 +11,15 @@ describe('NotFoundIndexComponent', () => {
       <app-not-found-index></app-not-found-index>
     `
   })
-  class NotFoundIndexComponentSpec {
+  class NotFoundIndexSpecComponent {
   }
 
-  let component: NotFoundIndexComponentSpec;
-  let fixture: ComponentFixture<NotFoundIndexComponentSpec>;
+  let component: NotFoundIndexSpecComponent;
+  let fixture: ComponentFixture<NotFoundIndexSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NotFoundIndexComponentSpec],
+      declarations: [NotFoundIndexSpecComponent],
       imports: [
         RouterTestingModule,
         NotFoundModule
@@ -30,7 +29,7 @@ describe('NotFoundIndexComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NotFoundIndexComponentSpec);
+    fixture = TestBed.createComponent(NotFoundIndexSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

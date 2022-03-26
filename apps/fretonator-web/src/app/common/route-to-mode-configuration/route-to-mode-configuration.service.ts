@@ -15,9 +15,9 @@ export class RouteToModeConfigurationService implements Resolve<ModeRouteData> {
 
   resolve(route: ActivatedRouteSnapshot): ModeRouteData {
     return {
-      note: route.params.note || NoteSymbol.c,
-      noteExtender: route.params.noteExtender || NoteExtenderString.natural,
-      mode: route.params.mode || Mode.ionian
+      note: route.params['note'] || NoteSymbol.c,
+      noteExtender: route.params['noteExtender'] || NoteExtenderString.natural,
+      mode: route.params['mode'] || Mode.ionian
     };
   }
 }

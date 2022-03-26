@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { PatternFretMaps, PatternModeSelectors } from '../../../util/constants';
-import { Mode } from '../../../util/types';
-import { MetaService } from '../../../common/meta/meta.service';
-import { FretboardConfigurations } from '../../../common/fretonator/fretboard/fretboard.component';
+import {Component, OnInit} from '@angular/core';
+import {PatternFretMaps, PatternModeSelectors} from '../../../util/constants';
+import {FretMap, Mode} from '../../../util/types';
+import {MetaService} from '../../../common/meta/meta.service';
+import {FretboardConfigurations} from '../../../common/fretonator/fretboard/fretboard.component';
 
 @Component({
   selector: 'app-patterns-index',
   templateUrl: './patterns-index.component.html',
-  styleUrls: ['./patterns-index.component.scss']
+  styleUrls: ['./patterns-index.component.scss'],
 })
 export class PatternsIndexComponent implements OnInit {
   pageDescription = 'In order to play and Jam in all 7 of the standard modes, you only need to learn 7 patterns. These patterns always appear in the exact same order across the fretboard, regardless of the key or mode.';
@@ -15,12 +15,12 @@ export class PatternsIndexComponent implements OnInit {
   pageUrl = 'https://www.fretonator.com/learn/patterns';
   modeSelectors = PatternModeSelectors;
   selectedMode = Mode.ionian;
-  selectedFretMap = PatternFretMaps.ionian;
+  selectedFretMap: FretMap = PatternFretMaps.ionian;
   shouldExpand = true;
   modesRequiringExpansion = [
     Mode.mixolydian,
     Mode.aeolian,
-    Mode.locrian
+    Mode.locrian,
   ];
 
   constructor(private metaService: MetaService) {

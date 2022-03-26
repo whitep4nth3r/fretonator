@@ -11,7 +11,7 @@ describe('VideoServerComponent', () => {
       <app-video-server [youTubeId]="'123'"></app-video-server>
     `
   })
-  class VideoServerComponentSpec {
+  class VideoServerSpecComponent {
   }
 
   let component: VideoServerComponent;
@@ -19,7 +19,7 @@ describe('VideoServerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [VideoServerComponentSpec],
+      declarations: [VideoServerSpecComponent],
       imports: [VideoLoaderModule]
     })
       .compileComponents();

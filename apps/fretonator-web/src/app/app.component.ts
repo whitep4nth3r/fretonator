@@ -12,7 +12,7 @@ export const ColorModes = {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  @ViewChild('globalScrollTarget') globalScrollTarget: ElementRef<HTMLElement>;
+  @ViewChild('globalScrollTarget') globalScrollTarget!: ElementRef<HTMLElement>;
   colorMode = ColorModes.dark;
 
   constructor(private globalService: GlobalService) {
@@ -22,7 +22,7 @@ export class AppComponent implements AfterViewInit {
     this.globalService.setGlobalScrollTarget(this.globalScrollTarget.nativeElement);
   }
 
-  setDarkColorMode(dark: Boolean) {
+  setDarkColorMode(dark: boolean) {
     this.colorMode = dark ? ColorModes.dark : ColorModes.light;
   }
 }

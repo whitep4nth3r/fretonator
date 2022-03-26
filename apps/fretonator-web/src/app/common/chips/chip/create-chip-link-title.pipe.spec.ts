@@ -18,7 +18,7 @@ describe('CreateChipLinkTitlePipe', () => {
   });
 
   it('calls the fret map service', () => {
-    const spy = spyOn(
+    const spy = jest.spyOn(
       pipe.generateFretMapService,
       'convertFretMapConfigurationToDisplayString'
     );

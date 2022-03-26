@@ -2,7 +2,7 @@ import { Tree } from '@angular-devkit/schematics';
 
 export default (tree: Tree, routes: string[]) => {
   const flatRoutes = routes.join('\n');
-  const outFile = '_routes.txt';
+  const outFile = './tmp/_routes.txt';
 
   if(!tree.exists(outFile)) {
     tree.create(outFile, flatRoutes);

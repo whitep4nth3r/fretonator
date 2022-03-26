@@ -38,8 +38,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Routes
-_routes.txt
-
-# Local Netlify folder
-.netlify
+.angular

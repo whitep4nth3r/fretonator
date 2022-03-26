@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FretonatorComponent } from './fretonator.component';
 import { FretonatorModule } from './fretonator.module';
 import { Component, DebugElement } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -29,28 +28,27 @@ describe('FretonatorComponent', () => {
       </app-fretonator>
     `
   })
-  class FretonatorComponentSpec {
+  class FretonatorSpecComponent {
   }
 
-  let component: FretonatorComponentSpec;
-  let fixture: ComponentFixture<FretonatorComponentSpec>;
+  let component: FretonatorSpecComponent;
+  let fixture: ComponentFixture<FretonatorSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FretonatorComponentSpec],
+      declarations: [FretonatorSpecComponent],
       imports: [FretonatorModule, RouterTestingModule]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FretonatorComponentSpec);
+    fixture = TestBed.createComponent(FretonatorSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(component).toMatchSnapshot();
   });
 
   describe('toggleScaleMapInfo()', () => {

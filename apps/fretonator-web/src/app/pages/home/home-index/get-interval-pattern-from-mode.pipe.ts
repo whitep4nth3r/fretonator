@@ -6,7 +6,7 @@ import { ModePatterns } from '../../../util/constants';
   name: 'getIntervalPatternFromMode'
 })
 export class GetIntervalPatternFromModePipe implements PipeTransform {
-  transform(modeName: Mode): any {
+  transform(modeName: Mode): Array<number> {
     return ModePatterns[modeName];
   }
 }

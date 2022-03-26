@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FretboardConfigComponent } from './fretboard-config.component';
 import { Component } from '@angular/core';
 import { FretboardConfigModule } from './fretboard-config.module';
 
@@ -10,22 +9,22 @@ describe('FretboardConfigComponent', () => {
       <app-fretboard-config></app-fretboard-config>
     `
   })
-  class FretboardConfigComponentSpec {
+  class FretboardConfigSpecComponent {
   }
 
-  let component: FretboardConfigComponentSpec;
-  let fixture: ComponentFixture<FretboardConfigComponentSpec>;
+  let component: FretboardConfigSpecComponent;
+  let fixture: ComponentFixture<FretboardConfigSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FretboardConfigComponentSpec ],
+      declarations: [ FretboardConfigSpecComponent ],
       imports: [FretboardConfigModule]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FretboardConfigComponentSpec);
+    fixture = TestBed.createComponent(FretboardConfigSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

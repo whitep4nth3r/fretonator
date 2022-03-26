@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/fretonator-web",
+  "sourceRoot": "apps/fretonator-web/src",
+  "prefix": "fretonator",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/fretonator-web",
+        "index": "apps/fretonator-web/src/index.html",
+        "main": "apps/fretonator-web/src/main.ts",
+        "polyfills": "apps/fretonator-web/src/polyfills.ts",
+        "tsConfig": "apps/fretonator-web/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/fretonator-web/src/favicon.ico",
+          "apps/fretonator-web/src/assets"
+        ],
+        "styles": ["apps/fretonator-web/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/fretonator-web/src/environments/environment.ts",
+              "with": "apps/fretonator-web/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "fretonator-web:build:production"
+        },
+        "development": {
+          "browserTarget": "fretonator-web:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "fretonator-web:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/fretonator-web/src/**/*.ts",
+          "apps/fretonator-web/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/fretonator-web"],
+      "options": {
+        "jestConfig": "apps/fretonator-web/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

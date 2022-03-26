@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { ChipsModule } from './chips.module';
-import { ChipsComponent } from './chips.component';
 import { SelectedColor } from './chip/chip.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute } from '@angular/router';
+import {Mode} from '../../util/types';
 
 describe('ChipsComponent', () => {
   @Component({
@@ -14,35 +14,36 @@ describe('ChipsComponent', () => {
         <app-chip
           [note]="'a'"
           [noteExtender]="'natural'"
-          [mode]="'ionian'"
+          [mode]="Mode.ionian"
           [selectedColor]="selectedColor">One
         </app-chip>
         <app-chip
           [note]="'b'"
           [noteExtender]="'flat'"
-          [mode]="'mixolydian'"
+          [mode]="Mode.mixolydian"
           [rounded]="true">Two
         </app-chip>
         <app-chip
           [note]="'f'"
           [noteExtender]="'sharp'"
-          [mode]="'minorPentatonic'"
+          [mode]="Mode.minorPentatonic"
         >Two
         </app-chip>
       </app-chips>
     `
   })
-  class ChipsComponentSpec {
+  class ChipsSpecComponent {
+    Mode = Mode;
     selectedColor: SelectedColor = SelectedColor.default;
   }
 
-  let component: ChipsComponentSpec;
-  let fixture: ComponentFixture<ChipsComponentSpec>;
+  let component: ChipsSpecComponent;
+  let fixture: ComponentFixture<ChipsSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        ChipsComponentSpec
+        ChipsSpecComponent
       ],
       imports: [
         ChipsModule,
@@ -64,7 +65,7 @@ describe('ChipsComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChipsComponentSpec);
+    fixture = TestBed.createComponent(ChipsSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

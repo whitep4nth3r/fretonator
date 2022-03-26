@@ -35,15 +35,16 @@ Want to contribute to the Fretonator? Here's now in 12 simple steps...
 ```
 Node 14
 NPM
+YARN
 ```
 
 ### Build Instructions
 
-[1] Ensure Node Package Manager (NPM) and Angular CLI (NG) are installed.
+[1] Ensure Node Package Manager (NPM), Yarn and Angular CLI (NG) are installed.
 
 ```
 npm -v
-npm install -g @angular/cli
+npm install -g @angular/cli yarn
 ```
 
 [2] Fork the repository.
@@ -60,7 +61,7 @@ cd fretonator
 
 [5] Install the dependencies.
 ```
-npm install
+yarn
 ```
 
 [6] Run your local development server. 
@@ -68,7 +69,7 @@ npm install
 The `--open` flag opens the application in your browser automatically and is not required.
 
 ```
-ng serve --open
+yarn start --open
 ```
 
 [7] Navigate to http://localhost:4200/ in your browser.
