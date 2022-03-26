@@ -156,7 +156,7 @@ export class ContactIndexComponent implements OnInit {
     };
   }
 
-  getErrorMessage(field: any, type: any) {
+  getErrorMessage(field: string, type: string) {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     return FormErrorMessages[field][type]!;
   }
