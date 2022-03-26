@@ -11,7 +11,7 @@
       ],
       "options": {
         "outputPath": "dist/fretonator-web/browser",
-        "index": "apps/fretonator-web/src/index.html",
+        "index": "apps/fretonator-web/src/index-dev.html",
         "main": "apps/fretonator-web/src/main.ts",
         "polyfills": "apps/fretonator-web/src/polyfills.ts",
         "tsConfig": "apps/fretonator-web/tsconfig.app.json",
@@ -47,6 +47,7 @@
           ],
           "outputHashing": "all"
         },
+        "index": "apps/fretonator-web/src/index.html",
         "development": {
           "buildOptimizer": false,
           "optimization": false,
