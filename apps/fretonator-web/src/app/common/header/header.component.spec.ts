@@ -65,15 +65,11 @@ describe('HeaderComponent', () => {
 
     let home: DebugElement;
     let learn: DebugElement;
-    let about: DebugElement;
-    let contact: DebugElement;
 
     beforeEach(() => {
       const links = fixture.debugElement.queryAll(selectors.links);
       home = links[0];
       learn = links[1];
-      about = links[2];
-      contact = links[3];
     });
 
     it('Home should link to /', () => {
@@ -82,14 +78,6 @@ describe('HeaderComponent', () => {
 
     it('Learn should link to /learn', () => {
       expect(learn.attributes['href']).toBe('/learn');
-    });
-
-    it('About should link to /about', () => {
-      expect(about.attributes['href']).toBe('/about');
-    });
-
-    it('Contact should link to /contact', () => {
-      expect(contact.attributes['href']).toBe('/contact');
     });
   });
 

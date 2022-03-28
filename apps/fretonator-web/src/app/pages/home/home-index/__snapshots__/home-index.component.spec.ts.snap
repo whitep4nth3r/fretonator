@@ -1346,11 +1346,11 @@ exports[`HomeIndexComponent should create 1`] = `
               class="infoButton infoButton--scaleMapInfo"
               type="button"
             >
-              About scale degrees
+               About scale degrees 
             </button>
             <a
               class="infoButton infoButton--withChevron"
-              href="/learn/patterns"
+              href="/learn"
             >
                Break modes down into patterns 
               <span
@@ -1542,7 +1542,7 @@ exports[`HomeIndexComponent should create 1`] = `
               <p
                 class="similarModes__copy"
               >
-                If you know the notes of C Ionian (Major), you can play the modes below, which use the exact same notes.
+                 If you know the notes of C Ionian (Major), you can play the modes below, which use the exact same notes. 
               </p>
               <div
                 class="chipsContainer"
@@ -1611,12 +1611,12 @@ exports[`HomeIndexComponent should create 1`] = `
               <p
                 class="similarModes__copy"
               >
-                What's more, if you know the Ionian pattern, you can play the Ionian mode in any key. Just play the pattern starting on your chosen starting note (root note).
+                 What's more, if you know the Ionian pattern, you can play the Ionian mode in any key. Just play the pattern starting on your chosen starting note (root note). 
               </p>
               <p
                 class="similarModes__copy"
               >
-                In order to play and jam in all 7 of the main modes, you 
+                 In order to play and jam in all 7 of the main modes, you 
                 <span
                   class="emphasis"
                 >
@@ -1627,30 +1627,30 @@ exports[`HomeIndexComponent should create 1`] = `
               <p
                 class="similarModes__copy"
               >
-                These patterns always appear in 
+                 These patterns always appear in 
                 <span
                   class="emphasis"
                 >
                   the exact same order
                 </span>
-                 across the fretboard, regardless of the starting note or mode.
+                 across the fretboard, regardless of the starting note or mode. 
               </p>
               <p
                 class="similarModes__copy"
               >
-                You might have heard this named as the 
+                 You might have heard this named as the 
                 <span
                   class="emphasis"
                 >
                   3 note per string
                 </span>
-                 method. Learn more about this and the 7 standard modes of the major scale in our learning hub.
+                 method. Learn more about this and the 7 standard modes of the major scale in our learning hub. 
               </p>
               <a
                 class="similarModes__cta"
-                href="/learn/patterns"
+                href="/learn"
               >
-                Go to the Hub
+                Learn about the 7 patterns
               </a>
             </div>
           </app-similar-modes>

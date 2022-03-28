@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
-@import "./styles/vars";
-@import "./styles/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import './styles/vars';
+@import './styles/mixins';
 
 :root {
   --black: #202124;
@@ -21,7 +21,7 @@
   --font-weight-display: 700;
   --letter-spacing-display: 2px;
   --letter-spacing-mega: 4px;
-  --font-family-main: "Montserrat", sans-serif;
+  --font-family-main: 'Montserrat', sans-serif;
 
   --fret-width-base: 2px;
   --fretboard-height: 100px;
@@ -58,7 +58,7 @@
   --info-highlight-background-color: var(--peach);
 }
 
-[color-mode="light"] {
+[color-mode='light'] {
   --error-bg: #d64045;
   --error-fg: var(--offwhite);
 
@@ -139,7 +139,7 @@
   --fretboard-toggle-button-border-color: var(--black);
 }
 
-[color-mode="dark"] {
+[color-mode='dark'] {
   --error-bg: #d64045;
   --error-fg: var(--offwhite);
 
@@ -218,9 +218,13 @@
   --fretboard-toggle-button-border-color: var(--peach);
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-normal);
 
