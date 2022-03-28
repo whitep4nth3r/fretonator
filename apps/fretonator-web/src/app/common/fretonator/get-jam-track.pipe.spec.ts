@@ -17,7 +17,7 @@ describe('GetJamTrackPipe', () => {
   });
 
   it('calls GenerateFretMapService.getJamTrack', () => {
-    const spy = spyOn(pipe.generateFretMapService, 'getJamTrack');
+    const spy = jest.spyOn(pipe.generateFretMapService, 'getJamTrack');
 
     const note = {
       name: 'c',

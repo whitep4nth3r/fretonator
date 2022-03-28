@@ -18,15 +18,15 @@ enum TheoreticalScalesToggleText {
   styleUrls: ['./fretonator.component.scss']
 })
 export class FretonatorComponent {
-  @Input() fretMap: FretMap;
-  @Input() modeMap: ModeMap;
-  @Input() intervalMap: [];
-  @Input() chordMap: ChordMap;
-  @Input() mode: Mode;
-  @Input() modeDisplayString: string;
-  @Input() note: string;
-  @Input() noteExtenderString: string;
-  @Input() noteExtender: string;
+  @Input() fretMap: FretMap = [];
+  @Input() modeMap: ModeMap = [];
+  @Input() intervalMap: Array<number> = [];
+  @Input() chordMap: ChordMap = [];
+  @Input() mode!: Mode;
+  @Input() modeDisplayString!: string;
+  @Input() note!: string;
+  @Input() noteExtenderString!: string;
+  @Input() noteExtender!: string;
   showScaleMapInfo = false;
   scaleDegreesToggleText = ScaleDegreesToggleText.hidden;
   showTheoreticalScalesInfo = false;

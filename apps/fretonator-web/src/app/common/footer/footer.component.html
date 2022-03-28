@@ -1,16 +1,17 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__leftColumn">
-      <h5 class="footer__sectionTitle">
-        Fretonator is open source
-      </h5>
+      <h5 class="footer__sectionTitle">Fretonator is open source</h5>
+
       <p class="footer__copy">
         Thank you to the following generous contributors:
       </p>
+
       <ul class="footer__list">
         <li class="footer__listItem">
           Richard Naylor - ideas, direction and usability testing
         </li>
+
         <li class="footer__listItem">
           <a
             href="http://drozar.io"
@@ -22,77 +23,69 @@
           </a>
           - design & UX
         </li>
+
         <li class="footer__listItem">
           <a
             href="https://github.com/geometricpanda"
             rel="nofollow noopener noreferrer"
             target="_blank"
             class="footer__listItemLink"
-            >Jim Drury</a
           >
+            Jim Drury
+          </a>
           - all things Angular
         </li>
+
         <li class="footer__listItem">
           <a
             href="https://ell.io.tt/"
             rel="nofollow noopener noreferrer"
             target="_blank"
             class="footer__listItemLink"
-            >Elliot Brooks</a
           >
+            Elliot Brooks
+          </a>
           - audio playback
         </li>
       </ul>
+
       <a
         class="footer__bigButton"
         href="https://github.com/whitep4nth3r/fretonator"
         rel="nofollow noopener noreferrer"
         target="_blank"
-        >View on GitHub</a
       >
+        View on GitHub
+      </a>
     </div>
 
     <div class="footer__rightColumn">
-      <h6 class="footer__sectionTitle">Who made this?</h6>
-      <p class="footer__copy footer__copy--right">
-        Hey there, I'm Salma.
+      <h6 class="footer__sectionTitle">About</h6>
+
+      <p class="footer__copy">Hi friends, I'm Salma!</p>
+
+      <p class="footer__copy">
+        I help developers build stuff, learn things, and love what they do. I'm
+        a Staff Developer Experience engineer at Netlify. I'm also a Microsoft
+        MVP for developer technologies, a partnered live streamer on Twitch, and
+        a qualified music teacher. I love helping people get into music and
+        tech.
       </p>
-      <p class="footer__copy footer__copy--right">
-        I'm a musician in Manchester, UK, and I currently work as a Developer
-        Evangelist for Contentful. My goal with the Fretonator is to crowdsource
-        feedback and ideas to create the ultimate guitar learning hub that's
-        simple, easy and enjoyable to use.
-      </p>
-      <a
-        [routerLink]="['/', 'contact']"
-        [state]="{ scrollToTop: true }"
-        class="footer__copy footer__copy--right footer__copy--link"
-        >Submit your feedback</a
-      >
+
       <p class="footer__copy footer__copy--right">
         The Fretonator is free and always will be!
       </p>
-      <a
-        href="https://www.buymeacoffee.com/whitep4nth3r"
-        rel="nofollow noopener noreferrer"
-        target="_blank"
-        class="footer__smallButton"
-      >
-        <span class="footer__support__svg">
-          <app-coffee-svg></app-coffee-svg>
-        </span>
-        Buy me a coffee
-      </a>
 
       <a
         href="https://whitep4nth3r.com"
         rel="nofollow noopener"
         target="_blank"
-        class="footer__bigButton footer__bigButton--website"
-        >Visit my website</a
+        class="footer__bigButton"
       >
+        Visit my website
+      </a>
     </div>
   </div>
 
-  <p class="footer__copyright">&copy; {{ date | date: "yyyy" }} Fretonator</p>
+  <p class="footer__copyright">&copy; {{ date | date: 'yyyy' }} Fretonator</p>
 </footer>

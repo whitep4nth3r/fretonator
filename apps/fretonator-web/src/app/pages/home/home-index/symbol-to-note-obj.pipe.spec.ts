@@ -16,7 +16,7 @@ describe('SymbolToNoteObjPipe', () => {
   });
 
   it('calls FretMapService.convertSymbolToNoteObject', () => {
-    const spy = spyOn(pipe.fretMapService, 'convertSymbolToNoteObject');
+    const spy = jest.spyOn(pipe.fretMapService, 'convertSymbolToNoteObject');
 
     pipe.transform('d', '_');
     expect(spy).toHaveBeenCalledWith('d', '_');

@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ScaleMapComponent } from './scale-map.component';
 import { Component } from '@angular/core';
 import { ScaleMapModule } from './scale-map.module';
 
@@ -11,22 +10,22 @@ describe('ScaleMapComponent', () => {
       <app-scale-map></app-scale-map>
     `
   })
-  class ScaleMapComponentSpec {
+  class ScaleMapSpecComponent {
   }
 
-  let component: ScaleMapComponentSpec;
-  let fixture: ComponentFixture<ScaleMapComponentSpec>;
+  let component: ScaleMapSpecComponent;
+  let fixture: ComponentFixture<ScaleMapSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ScaleMapComponentSpec],
+      declarations: [ScaleMapSpecComponent],
       imports: [ScaleMapModule]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ScaleMapComponentSpec);
+    fixture = TestBed.createComponent(ScaleMapSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

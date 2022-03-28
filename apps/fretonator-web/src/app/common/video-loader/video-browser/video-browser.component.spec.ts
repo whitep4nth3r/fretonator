@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VideoBrowserComponent } from './video-browser.component';
 import { VideoLoaderModule } from '../video-loader.module';
 import { Component } from '@angular/core';
 import { BrowserTestingModule } from '@angular/platform-browser/testing';
@@ -13,18 +12,18 @@ describe('VideoBrowserComponent', () => {
       <app-video-browser [youTubeId]="youTubeId" [title]="title"></app-video-browser>
     `
   })
-  class VideoBrowserComponentSpec {
+  class VideoBrowserSpecComponent {
     youTubeId = 'test123';
     title = 'testTitle';
   }
 
-  let component: VideoBrowserComponentSpec;
-  let fixture: ComponentFixture<VideoBrowserComponentSpec>;
+  let component: VideoBrowserSpecComponent;
+  let fixture: ComponentFixture<VideoBrowserSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        VideoBrowserComponentSpec
+        VideoBrowserSpecComponent
       ],
       imports: [
         VideoLoaderModule,
@@ -36,7 +35,7 @@ describe('VideoBrowserComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VideoBrowserComponentSpec);
+    fixture = TestBed.createComponent(VideoBrowserSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

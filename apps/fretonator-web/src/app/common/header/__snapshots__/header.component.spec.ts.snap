@@ -2,6 +2,7 @@
 
 exports[`HeaderComponent should match snapshot 1`] = `
 <app-header
+  __ngContext__={[Function LRootView]}
   darkColorMode={[Function Boolean]}
   isMenuVisible="false"
   localStorage={[Function AbstractDataService]}
@@ -71,7 +72,6 @@ exports[`HeaderComponent should match snapshot 1`] = `
           aria-label="Toggle dark/light mode"
           class="theme__toggle isDark"
         >
-          
           <app-moon-svg>
             <svg
               class="svg"
@@ -83,7 +83,6 @@ exports[`HeaderComponent should match snapshot 1`] = `
               />
             </svg>
           </app-moon-svg>
-          
         </button>
       </div>
     </div>
@@ -100,7 +99,7 @@ exports[`HeaderComponent should match snapshot 1`] = `
           href="/"
           routerlinkactive="header__linksItemLink--active"
         >
-          Home
+           Home 
         </a>
       </li>
       <li
@@ -111,29 +110,7 @@ exports[`HeaderComponent should match snapshot 1`] = `
           href="/learn"
           routerlinkactive="header__linksItemLink--active"
         >
-          Learn
-        </a>
-      </li>
-      <li
-        class="header__linksItem"
-      >
-        <a
-          class="header__linksItemLink"
-          href="/about"
-          routerlinkactive="header__linksItemLink--active"
-        >
-          About
-        </a>
-      </li>
-      <li
-        class="header__linksItem"
-      >
-        <a
-          class="header__linksItemLink"
-          href="/contact"
-          routerlinkactive="header__linksItemLink--active"
-        >
-          Contact
+           Learn 
         </a>
       </li>
     </ul>

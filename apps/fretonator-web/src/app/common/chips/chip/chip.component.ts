@@ -13,10 +13,10 @@ export enum SelectedColor {
   styleUrls: ['./chip.component.scss']
 })
 export class ChipComponent implements DoCheck {
-  @Input() note: string;
-  @Input() noteExtender: string;
-  @Input() mode: Mode;
-  @Input() selectedColor: SelectedColor = SelectedColor.default;
+  @Input() note!: string;
+  @Input() noteExtender!: string;
+  @Input() mode!: Mode;
+  @Input() selectedColor: 'default' | 'muted' = SelectedColor.default;
   @Input() rounded = false;
   @Input() isBaseNote = false;
   @Output() chipClick = new EventEmitter<MouseEvent>();
@@ -30,8 +30,8 @@ export class ChipComponent implements DoCheck {
     this.selected = this.isSelected(this.activatedRoute);
   }
 
-  isSelected(activatedRoute) {
-    const data = activatedRoute.snapshot.data.selected;
+  isSelected(activatedRoute: ActivatedRoute) {
+    const data = activatedRoute.snapshot.data['selected'];
 
     if (data.note !== this.note) {
       return false;

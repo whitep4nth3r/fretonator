@@ -3,84 +3,102 @@
 @import '../../../../styles/typography';
 @import '../../../../styles/content';
 
-.learn__container {
+.patterns__container {
   @include content_container;
+  margin-bottom: pxToRem($grid-unit * 6);
 }
 
-.learn__title {
+.patterns__intro {
+  margin-bottom: pxToRem($grid-unit * 6);
+  margin-top: pxToRem($grid-unit * 6);
+}
+
+.patterns__title {
   @include content_title;
 }
 
-.learn__subtitle {
-  @include fretonator_section_title;
-}
-
-.learn__introCopy {
-  @include content_intro_copy;
-}
-
-.grid {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: pxToRem($grid-unit * 3);
-  justify-items: stretch;
-  align-items: stretch;
-  justify-content: center;
-  align-content: stretch;
-  margin-top: pxToRem($grid-unit * 8);
-  margin-bottom: pxToRem($grid-unit * 8);
-}
-
-.grid__item {
-  @include card;
-}
-
-.grid__item--link {
-  cursor: pointer;
-  transition: transform 0.2s;
-
-  &:hover,
-  &:active {
-    transform: scale(1.03);
-  }
-}
-
-.grid__item__title {
-  @include fretonator_section_title;
-}
-
-.grid__item__image {
-  width: 100%;
-  border: pxToRem($grid-unit) solid var(--card-image-border-color);
-}
-
-.grid__item__copy {
-  @include font_bodyCopy;
-  margin-bottom: pxToRem($grid-unit);
-}
-
-.grid__item__button {
-  @include hard_button_base(
-      var(--card-button-foreground),
-      var(--card-button-backgorund),
-      var(--card-button-hover)
-  );
+.patterns__subtitle {
+  @include content_subtitle;
   margin-bottom: pxToRem($grid-unit * 4);
-}
-
-.tagRow {
-  display: flex;
-  flex-direction: row;
   margin-top: pxToRem($grid-unit * 4);
 }
 
-.tag {
-  @include chip_tag(
-    $bgColor: var(--chip-tag-background-color),
-    $fgColor: var(--chip-tag-foreground-color)
-  );
-  margin-right: pxToRem($grid-unit);
-  border-width: 0;
+.patterns__smallTitle {
+  @include fretonator_section_title;
+  text-align: center;
 }
 
+.patterns__copy {
+  @include content_copy;
+}
+
+.emphasis {
+  font-weight: var(--font-weight-bold);
+  font-style: italic;
+}
+
+.chips {
+  @include chips_group;
+  margin-bottom: pxToRem($grid-unit * 4);
+  margin-top: pxToRem($grid-unit * 2);
+}
+
+.chip {
+  @include chip_button_base;
+  display: flex;
+  margin: pxToRem($grid-unit / 2);
+}
+
+.chip--active {
+  background-color: var(--chip-background-color-active);
+  color: var(--chip-foreground-color-active);
+  border-color: var(--chip-border-color-active);
+}
+
+.fretboard__container {
+  margin-bottom: pxToRem($grid-unit * 6);
+}
+
+.card {
+  @include card;
+  margin-top: pxToRem($grid-unit * 4);
+  margin-bottom: pxToRem($grid-unit * 4);
+}
+
+.card__title {
+  @include fretonator_section_title;
+}
+
+.patterns__list {
+  @include content_ordered_list;
+}
+
+.patterns__listItem {
+}
+
+.patterns__list--mnemonic {
+  max-width: 320px;
+  padding-left: 0;
+}
+
+.patterns__listItem--mnemonic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .left {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .right {
+    font-style: italic;
+  }
+}
+
+.patterns__cta {
+  @include hard_button_base(
+    var(--card-button-foreground),
+    var(--card-button-backgorund),
+    var(--card-button-hover)
+  );
+}

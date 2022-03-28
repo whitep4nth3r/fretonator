@@ -27,7 +27,7 @@ describe('HeaderComponent', () => {
       <app-header></app-header>
     `
   })
-  class HeaderComponentSpec {
+  class HeaderSpecComponent {
   }
 
   let component: HeaderComponent;
@@ -35,7 +35,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderComponentSpec],
+      declarations: [HeaderSpecComponent],
       imports: [RouterTestingModule, HeaderModule]
     }).compileComponents();
   }));
@@ -57,7 +57,7 @@ describe('HeaderComponent', () => {
   describe('Logo', () => {
     it('should have a link to the home page on the logo', () => {
       const logoElem = fixture.debugElement.query(selectors.logo);
-      expect(logoElem.properties.href).toBe('/');
+      expect(logoElem.attributes['href']).toBe('/');
     });
   });
 
@@ -65,31 +65,19 @@ describe('HeaderComponent', () => {
 
     let home: DebugElement;
     let learn: DebugElement;
-    let about: DebugElement;
-    let contact: DebugElement;
 
     beforeEach(() => {
       const links = fixture.debugElement.queryAll(selectors.links);
       home = links[0];
       learn = links[1];
-      about = links[2];
-      contact = links[3];
     });
 
     it('Home should link to /', () => {
-      expect(home.properties.href).toBe('/');
+      expect(home.attributes['href']).toBe('/');
     });
 
     it('Learn should link to /learn', () => {
-      expect(learn.properties.href).toBe('/learn');
-    });
-
-    it('About should link to /about', () => {
-      expect(about.properties.href).toBe('/about');
-    });
-
-    it('Contact should link to /contact', () => {
-      expect(contact.properties.href).toBe('/contact');
+      expect(learn.attributes['href']).toBe('/learn');
     });
   });
 

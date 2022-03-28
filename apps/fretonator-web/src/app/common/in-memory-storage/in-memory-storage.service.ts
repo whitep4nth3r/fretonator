@@ -1,18 +1,22 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+
+interface LocalStore {
+  [key: string]: string | number | boolean;
+}
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class InMemoryStorageService {
-  localStore: any = {};
+  localStore: LocalStore = {};
 
-  setItem(key: string, value: any) {
-    this.localStore[key] = JSON.stringify(value);
+  setItem(key: string, value: string | number | boolean) {
+    this.localStore[key] = value;
   }
 
   getItem(key: string) {
     const data = this.localStore[key];
-    return data ? JSON.parse(data) : undefined;
+    return data || undefined;
   }
 
   removeItem(key: string) {

@@ -1,8 +1,9 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc-server",
-    "target": "es2016",
+    "outDir": "../../out-tsc/server",
+    "target": "es2019",
     "types": [
       "node"
     ]

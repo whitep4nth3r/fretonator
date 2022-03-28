@@ -18,7 +18,7 @@ describe('GenerateModeMapPipe', () => {
 
 
   it('calls GenerateFretMapService.generateMode', () => {
-    const spy = spyOn(pipe.generateFretMapService, 'generateMode');
+    const spy = jest.spyOn(pipe.generateFretMapService, 'generateMode');
 
     const note = {
       name: 'c',

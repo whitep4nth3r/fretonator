@@ -1,15 +1,17 @@
 <header class="header">
   <div class="header__topRow">
-    <button class="hamburger"
-            [class.is__open]="isMenuVisible"
-            (click)="toggleMenu()"
-            [attr.aria-expanded]="isMenuVisible"
-            aria-label="Menu Toggle"
-            aria-controls="headerLinks"
-            type="button">
-    <span class="hamburger__box">
-      <span class="hamburger__inner"></span>
-    </span>
+    <button
+      class="hamburger"
+      [class.is__open]="isMenuVisible"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuVisible"
+      aria-label="Menu Toggle"
+      aria-controls="headerLinks"
+      type="button"
+    >
+      <span class="hamburger__box">
+        <span class="hamburger__inner"></span>
+      </span>
     </button>
 
     <a
@@ -20,58 +22,52 @@
       <span class="header__siteLogo__text">
         <app-logo-with-text></app-logo-with-text>
       </span>
+
       <span class="header__siteLogo__noText">
         <app-logo-no-text></app-logo-no-text>
       </span>
     </a>
 
     <div class="toggle__container">
-      <button class="theme__toggle"
-              [class.isDark]="darkColorMode"
-              [class.isLight]="!darkColorMode"
-              aria-label="Toggle dark/light mode"
-              (click)="toggleTheme()">
+      <button
+        class="theme__toggle"
+        [class.isDark]="darkColorMode"
+        [class.isLight]="!darkColorMode"
+        aria-label="Toggle dark/light mode"
+        (click)="toggleTheme()"
+      >
         <app-moon-svg *ngIf="darkColorMode"></app-moon-svg>
+
         <app-sun-svg *ngIf="!darkColorMode"></app-sun-svg>
       </button>
     </div>
   </div>
 
-  <ul class="header__links"
-      id="headerLinks"
-      [attr.aria-expanded]="isMenuVisible"
-      [class.header__links--hide]="!isMenuVisible">
+  <ul
+    class="header__links"
+    id="headerLinks"
+    [attr.aria-expanded]="isMenuVisible"
+    [class.header__links--hide]="!isMenuVisible"
+  >
     <li class="header__linksItem">
-      <a [routerLink]="['/']"
-         [routerLinkActiveOptions]="{exact:true}"
-         routerLinkActive="header__linksItemLink--active"
-         class="header__linksItemLink"
-      >Home</a
+      <a
+        [routerLink]="['/']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="header__linksItemLink--active"
+        class="header__linksItemLink"
       >
+        Home
+      </a>
     </li>
+
     <li class="header__linksItem">
-      <a [routerLink]="['/', 'learn']"
-         [state]="{scrollToTop: true}"
-         routerLinkActive="header__linksItemLink--active"
-         class="header__linksItemLink"
-      >Learn</a
+      <a
+        [routerLink]="['/', 'learn']"
+        routerLinkActive="header__linksItemLink--active"
+        class="header__linksItemLink"
       >
-    </li>
-    <li class="header__linksItem">
-      <a [routerLink]="['/', 'about']"
-         [state]="{scrollToTop: true}"
-         routerLinkActive="header__linksItemLink--active"
-         class="header__linksItemLink"
-      >About</a
-      >
-    </li>
-    <li class="header__linksItem">
-      <a [routerLink]="['/', 'contact']"
-         [state]="{scrollToTop: true}"
-         routerLinkActive="header__linksItemLink--active"
-         class="header__linksItemLink"
-      >Contact</a
-      >
+        Learn
+      </a>
     </li>
   </ul>
 </header>

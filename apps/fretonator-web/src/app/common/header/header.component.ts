@@ -11,7 +11,7 @@ const StorageKeys = {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Output() setDarkColorMode = new EventEmitter<any>();
+  @Output() setDarkColorMode = new EventEmitter<boolean>();
   isMenuVisible = false;
   darkColorMode = true;
 

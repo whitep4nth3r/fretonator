@@ -16,5 +16,7 @@ export class GetEnharmonicEquivalentPipe implements PipeTransform {
         return group[0];
       }
     }
+
+    return '';
   }
 }

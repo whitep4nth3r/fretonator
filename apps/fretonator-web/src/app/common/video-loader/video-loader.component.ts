@@ -7,7 +7,7 @@ import { JamTrack } from '../../util/types';
   styleUrls: ['./video-loader.component.scss']
 })
 export class VideoLoaderComponent {
-  @Input() jamTrack: JamTrack;
+  @Input() jamTrack!: JamTrack;
   showVideo = false;
 
   @HostListener('window:scroll')

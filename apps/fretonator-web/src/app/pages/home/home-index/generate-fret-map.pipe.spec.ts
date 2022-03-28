@@ -18,7 +18,7 @@ describe('GenerateFretMapPipe', () => {
   });
 
   it('calls GenerateFretMapService.getFretMapping', () => {
-    const spy = spyOn(pipe.generateFretMapService, 'getFretMapping');
+    const spy = jest.spyOn(pipe.generateFretMapService, 'getFretMapping');
 
     const note = {
       name: 'c',

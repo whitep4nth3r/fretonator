@@ -19,7 +19,7 @@ describe('GetSimilarModesPipe', () => {
 
 
   it('calls GenerateFretMapService.getSimilarModes', () => {
-    const spy = spyOn(pipe.generateFretMapService, 'getSimilarModes');
+    const spy = jest.spyOn(pipe.generateFretMapService, 'getSimilarModes');
 
     pipe.transform(cIonianMode, 'ionian' as Mode);
     expect(spy).toHaveBeenCalledWith(cIonianMode, 'ionian');

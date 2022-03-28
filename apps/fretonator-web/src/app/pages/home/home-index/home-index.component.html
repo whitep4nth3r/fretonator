@@ -14,7 +14,7 @@
                 [noteExtender]="'natural'"
                 [mode]="mode"
                 [isBaseNote]="true"
-                rounded="true"
+                [rounded]="true"
                 selectedColor="default">{{thisNote | titlecase}}</app-chip>
     </app-chips>
 
@@ -23,21 +23,21 @@
                 [note]="note"
                 [noteExtender]="'flat'"
                 [mode]="mode"
-                rounded="true"
+                [rounded]="true"
                 selectedColor="muted">{{note | titlecase}}♭
       </app-chip>
 
       <app-chip [note]="note"
                 [noteExtender]="'natural'"
                 [mode]="mode"
-                rounded="true"
+                [rounded]="true"
                 selectedColor="muted">{{note | titlecase}}</app-chip>
 
       <app-chip *ngIf="noteHasSharpExtender(note)"
                 [note]="note"
                 [noteExtender]="'sharp'"
                 [mode]="mode"
-                rounded="true"
+                [rounded]="true"
                 selectedColor="muted">{{note | titlecase}}#
       </app-chip>
     </app-chips>

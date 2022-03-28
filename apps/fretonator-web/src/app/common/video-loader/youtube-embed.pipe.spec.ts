@@ -1,12 +1,12 @@
-import { YouTubeEmbedPipe } from './youtube-embed.pipe';
-import { async, TestBed } from '@angular/core/testing';
+import {YouTubeEmbedPipe} from './youtube-embed.pipe';
+import {async, TestBed} from '@angular/core/testing';
 
 describe('YoutubeEmbedPipe', () => {
   let pipe: YouTubeEmbedPipe;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      providers: [YouTubeEmbedPipe]
+      providers: [YouTubeEmbedPipe],
     });
     TestBed.compileComponents();
   }));
@@ -20,12 +20,12 @@ describe('YoutubeEmbedPipe', () => {
   });
 
   it('returns a SafeResourceUrl', () => {
-    const result = pipe.transform('123') as any;
+    const result = pipe.transform('123') as { getTypeName: () => string };
     expect(result.getTypeName()).toBe('ResourceURL');
   });
 
   it('returns the correct resource', () => {
-    const result = pipe.transform('123') as any;
+    const result = pipe.transform('123') as { changingThisBreaksApplicationSecurity: string };
     expect(result.changingThisBreaksApplicationSecurity).toBe('https://www.youtube.com/embed/123');
   });
 

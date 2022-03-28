@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ScaleDegreesComponent } from './scale-degrees.component';
 import { Component, DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { ScaleDegreesModule } from './scale-degrees.module';
@@ -24,22 +23,22 @@ describe('ScaleDegreesComponent', () => {
       <app-scale-degrees></app-scale-degrees>
     `
   })
-  class ScaleDegreesComponentSpec {
+  class ScaleDegreesSpecComponent {
   }
 
-  let component: ScaleDegreesComponentSpec;
-  let fixture: ComponentFixture<ScaleDegreesComponentSpec>;
+  let component: ScaleDegreesSpecComponent;
+  let fixture: ComponentFixture<ScaleDegreesSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ScaleDegreesComponentSpec],
+      declarations: [ScaleDegreesSpecComponent],
       imports: [ScaleDegreesModule]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ScaleDegreesComponentSpec);
+    fixture = TestBed.createComponent(ScaleDegreesSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

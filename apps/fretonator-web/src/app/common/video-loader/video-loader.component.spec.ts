@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { VideoLoaderComponent } from './video-loader.component';
-import { Component } from '@angular/core';
-import { VideoLoaderModule } from './video-loader.module';
+import {Component} from '@angular/core';
+import {VideoLoaderModule} from './video-loader.module';
+import {Mode, NoteSymbol} from '../../util/types';
 
 describe('VideoLoaderComponent', () => {
 
@@ -10,26 +10,26 @@ describe('VideoLoaderComponent', () => {
     selector: 'app-video-loader-spec',
     template: `
       <app-video-loader
-        [jamTrack]="{key: 'c', mode: 'ionian', youTubeId: 'oMZz2FeV8q4', title: 'C Ionian (Major) Jam Track', creator: 'Tom Strahle'}">
+        [jamTrack]="{key: ${NoteSymbol.c}, mode: ${Mode.ionian}, youTubeId: 'oMZz2FeV8q4', title: 'C Ionian (Major) Jam Track', creator: 'Tom Strahle'}">
       </app-video-loader>
-    `
+    `,
   })
-  class VideoLoaderComponentSpec {
+  class VideoLoaderSpecComponent {
   }
 
-  let component: VideoLoaderComponentSpec;
-  let fixture: ComponentFixture<VideoLoaderComponentSpec>;
+  let component: VideoLoaderSpecComponent;
+  let fixture: ComponentFixture<VideoLoaderSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [VideoLoaderComponentSpec],
-      imports: [VideoLoaderModule]
+      declarations: [VideoLoaderSpecComponent],
+      imports: [VideoLoaderModule],
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VideoLoaderComponentSpec);
+    fixture = TestBed.createComponent(VideoLoaderSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

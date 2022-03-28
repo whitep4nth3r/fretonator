@@ -1,36 +1,178 @@
-<div class="learn__container">
-  <h1 class="learn__title">Learn Guitar Theory</h1>
-  <h2 class="learn__subtitle">Fretonator Learning Hub</h2>
-  <p class="learn__introCopy">Welcome to the Fretonator learning hub, where you can learn music theory tailored to the
-    guitar, guitar techniques and essential maintenance skills.</p>
-  <p class="learn__introCopy">We'll be adding new content regularly, so please keep checking back!</p>
+<div class="patterns__container">
+  <div class="patterns__intro">
+    <h1 class="patterns__title">Learn the 7 scale patterns on the guitar</h1>
+  </div>
+</div>
+<div class="patterns__container">
+  <h5 class="patterns__subtitle">You only need to learn 7 patterns</h5>
+  <p class="patterns__copy">
+    In order to play and jam in all 7 of the main modes, you
+    <span class="emphasis">only need to learn 7 patterns</span>.
+  </p>
+  <p class="patterns__copy">
+    These patterns always appear in
+    <span class="emphasis">the exact same order</span> across the fretboard,
+    regardless of the starting note or mode.
+  </p>
+  <p class="patterns__copy">
+    Use the fretboard below to explore the patterns of each mode (shown in
+    black). Notice that each pattern is made of
+    <span class="emphasis">3 notes per string</span>.
+  </p>
+</div>
 
-  <div class="grid">
-    <a class="grid__item grid__item--link"
-       [routerLink]="['/', 'learn', 'patterns']"
-       [state]="{scrollToTop: true}"
-       aria-label="Learn patterns">
-      <img src="/assets/img/3nps.png" class="grid__item__image"
-           alt="Close up of guitar next and player's hand"/>
-      <h2 class="grid__item__title">Patterns</h2>
-      <p class="grid__item__copy">There are only 7 patterns you need to learn on the guitar. Once you've memorised
-        those patterns, you can play any of the 7 standard modes from any starting note, anywhere on the fretboard.</p>
+<div class="patterns__container">
+  <h5 class="patterns__smallTitle">Choose a pattern</h5>
 
-      <div class="tagRow">
-        <span class="tag">Theory</span>
-        <span class="tag">Scales</span>
-        <span class="tag">Modes</span>
-        <span class="tag">3NPS</span>
-      </div>
-    </a>
-    <div class="grid__item">
-      <h2 class="grid__item__title">More content coming soon!</h2>
-      <p class="grid__item__copy">We're working hard on creating more content for you. If you have any questions about guitar
-        theory, technique or maintenance, or if you'd like to submit some content, let us know via the contact form.</p>
-      <a [routerLink]="['/', 'contact']"
-         [state]="{scrollToTop: true}"
-         class="grid__item__button">Submit a request</a>
-    </div>
+  <div class="chips">
+    <button
+      *ngFor="let mode of modeSelectors"
+      class="chip"
+      [class.chip--active]="selectedMode === mode"
+      (click)="setPattern(mode)"
+    >
+      {{ mode | titlecase }}
+    </button>
+  </div>
+</div>
+
+<div class="fretboard__container">
+  <app-fretboard
+    [configuration]="FretboardConfigurations.learn"
+    [fretMap]="selectedFretMap"
+    [stringNamesAreCaseSensitive]="true"
+    [(loadExpanded)]="shouldExpand"
+  ></app-fretboard>
+</div>
+
+<div class="patterns__container">
+  <p class="patterns__copy">
+    For this example, we are using the notes of F Ionian (major) - but the great
+    thing about this is that you can start on any fret on the low E string and
+    shift the whole pattern along the fretboard.
+  </p>
+  <p class="patterns__copy">
+    Tap each mode above the fretboard to highlight the
+    <span class="emphasis">root position pattern</span> for each mode. You'll
+    notice that each pattern shifts up one or two frets, and the patterns
+    overlap.
+  </p>
+  <p class="patterns__copy">
+    You can also jam using the purple notes - they're all part of the same mode,
+    just using different positions.
+  </p>
+  <p class="patterns__copy">
+    Once you have learned the 7 patterns and how they fit together,
+    <span class="emphasis"
+      >you can play in any key and any mode across the whole fretboard.</span
+    >
+  </p>
+  <p class="patterns__copy">
+    For example, you want to jam in C Mixolydian? Move the Mixolydian pattern to
+    the 8th fret on the low E string (C) and the whole 7-mode pattern moves with
+    it - you can now use all of those notes!
+  </p>
+  <p class="patterns__copy">
+    Want to play in F# Locrian? Use the Locrian pattern on the 2nd fret on the
+    low E string (F#) and the whole 7-mode pattern moves with it.
+  </p>
+  <p class="patterns__subtitle">
+    This works for ANY key and ANY of the 7 modes.
+  </p>
+  <p class="patterns__copy">
+    Try it out! Use the Fretonator on the home page and see how these patterns
+    fit together.
+    <span class="emphasis"
+      >You'll soon realise that there's a lot less to memorise than you
+      think!</span
+    >
+  </p>
+  <p class="patterns__copy">
+    Don't worry if it takes some time to learn the different patterns. The most
+    important thing to remember is to have fun, and just jam on your guitar!
+  </p>
+  <p class="patterns__copy">
+    If you want to write some songs using these modes, check out the chords that
+    work with your chosen mode underneath the Fretonator for some inspiration.
+  </p>
+
+  <a [routerLink]="['/']" [state]="{ scrollToTop: true }" class="patterns__cta"
+    >Return to the Fretonator</a
+  >
+</div>
+
+<div class="patterns__container">
+  <h2 class="patterns__subtitle">
+    And finally: the theory behind the standard modes
+  </h2>
+  <h3 class="patterns__copy">
+    The 7 standard modes are generated by starting on different notes of the
+    major scale (which is, in fact, called the Ionian mode).
+  </h3>
+  <div class="card">
+    <h4 class="card__title">Modes of the major scale</h4>
+    <p class="patterns__copy">The 7 modes of the major scale, in order are:</p>
+    <ol class="patterns__list">
+      <li class="patterns__listItem">Ionian (this is the major scale)</li>
+      <li class="patterns__listItem">Dorian</li>
+      <li class="patterns__listItem">Phrygian</li>
+      <li class="patterns__listItem">Lydian</li>
+      <li class="patterns__listItem">Mixolydian</li>
+      <li class="patterns__listItem">Aeolian (this is the minor scale)</li>
+      <li class="patterns__listItem">Locrian</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h5 class="card__title">An example</h5>
+    <p class="patterns__copy">
+      The 7 standard modes of C Major (C, D, E, F, G, A, B) are:
+    </p>
+    <ol class="patterns__list">
+      <li class="patterns__listItem">C Ionian</li>
+      <li class="patterns__listItem">D Dorian</li>
+      <li class="patterns__listItem">E Phrygian</li>
+      <li class="patterns__listItem">F Lydian</li>
+      <li class="patterns__listItem">G Mixolydian</li>
+      <li class="patterns__listItem">A Aeolian</li>
+      <li class="patterns__listItem">B Locrian</li>
+    </ol>
   </div>
 
+  <div class="card">
+    <h5 class="card__title">A fun mnemonic</h5>
+    <p class="patterns__copy">
+      Want an easy way to remember the order of the modes above? Just say:
+    </p>
+    <ol class="patterns__list patterns__list--mnemonic">
+      <li class="patterns__listItem patterns__listItem--mnemonic">
+        <span class="left">I</span><span class="right">Ionian</span>
+      </li>
+      <li class="patterns__listItem patterns__listItem--mnemonic">
+        <span class="left">Don't</span><span class="right">Dorian</span>
+      </li>
+      <li class="patterns__listItem patterns__listItem--mnemonic">
+        <span class="left">Particularly</span
+        ><span class="right">Phrygian</span>
+      </li>
+      <li class="patterns__listItem patterns__listItem--mnemonic">
+        <span class="left">Like</span><span class="right">Lydian</span>
+      </li>
+      <li class="patterns__listItem patterns__listItem--mnemonic">
+        <span class="left">Modes</span><span class="right">Mixolydian</span>
+      </li>
+      <li class="patterns__listItem patterns__listItem--mnemonic">
+        <span class="left">A</span><span class="right">Aeolian</span>
+      </li>
+      <li class="patterns__listItem patterns__listItem--mnemonic">
+        <span class="left">Lot!</span><span class="right">Locrian</span>
+      </li>
+    </ol>
+    <p class="patterns__copy">
+      What other ways have you used to remember the order of the 7 modes of the
+      major scale?
+    </p>
+  </div>
+  <a [routerLink]="['/']" [state]="{ scrollToTop: true }" class="patterns__cta"
+    >Return to the Fretonator</a
+  >
 </div>

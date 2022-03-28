@@ -1,5 +1,5 @@
-import { async, TestBed } from '@angular/core/testing';
-import { YouTubeLinkPipe } from './youtube-link.pipe';
+import {async, TestBed} from '@angular/core/testing';
+import {YouTubeLinkPipe} from './youtube-link.pipe';
 
 describe('YoutubeLinkPipe', () => {
 
@@ -7,7 +7,7 @@ describe('YoutubeLinkPipe', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      providers: [YouTubeLinkPipe]
+      providers: [YouTubeLinkPipe],
     });
     TestBed.compileComponents();
   }));
@@ -21,12 +21,12 @@ describe('YoutubeLinkPipe', () => {
   });
 
   it('returns a URL', () => {
-    const result = pipe.transform('123') as any;
+    const result = pipe.transform('123') as { getTypeName: () => string };
     expect(result.getTypeName()).toBe('URL');
   });
 
   it('returns the correct resource', () => {
-    const result = pipe.transform('123') as any;
+    const result = pipe.transform('123') as { changingThisBreaksApplicationSecurity: string };
     expect(result.changingThisBreaksApplicationSecurity).toBe('https://www.youtube.com/watch?v=123');
   });
 

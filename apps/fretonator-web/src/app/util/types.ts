@@ -4,8 +4,8 @@ export interface Fret {
   string: string;
   fret: number;
   displayName: string;
-  degree: ScaleDegrees;
-  degreeNumber: number;
+  degree: ScaleDegrees | string;
+  degreeNumber?: number;
 }
 
 export enum ChordType {

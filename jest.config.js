@@ -1,3 +1,5 @@
+const { getJestProjects } = require('@nrwl/jest');
+
 module.exports = {
-  projects: ["<rootDir>/apps/fretonator-web"],
+  projects: getJestProjects(),
 };
