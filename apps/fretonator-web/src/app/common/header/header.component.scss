@@ -101,7 +101,7 @@
 
 .hamburger__inner {
   display: block;
-  top: $hamburger_layer-height / 2;
+  top: calc($hamburger-layer-height / 2);
   margin-top: calc($hamburger-layer-height / -2);
   background-color: var(--hamburger_layer-color);
   transition: background-color 0s 0.13s linear;
