@@ -2,29 +2,6 @@
 @import '../../../../styles/mixins';
 @import '../../../../styles/typography';
 
-.hero {
-  background-color: var(--hero-background-color);
-  display: block;
-  width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero__title {
-  font-family: var(--font-family-main);
-  display: block;
-  color: var(--hero-title-color);
-  letter-spacing: var(--letter-spacing-display);
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  text-align: center;
-  font-weight: var(--font-weight-bold);
-  position: relative;
-}
-
 .modeSelector__container {
   @include content_wrapper;
   max-width: none;

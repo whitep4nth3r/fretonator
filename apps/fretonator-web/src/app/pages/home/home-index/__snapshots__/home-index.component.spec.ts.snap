@@ -6,15 +6,6 @@ exports[`HomeIndexComponent should create 1`] = `
 >
   <app-home-index>
     <div
-      class="hero"
-    >
-      <h1
-        class="hero__title"
-      >
-         Fretonator: the ultimate interactive free guitar theory tool 
-      </h1>
-    </div>
-    <div
       class="modeSelector__container"
     >
       <div

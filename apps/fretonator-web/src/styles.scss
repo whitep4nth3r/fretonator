@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 @import './styles/vars';
 @import './styles/mixins';
 
@@ -16,7 +16,9 @@
   --coral: #ee9198;
   --mint: #d9f9a5;
 
-  --font-weight-normal: 300;
+  --focus-box-shadow-color: #fecdaa;
+
+  --font-weight-normal: 400;
   --font-weight-bold: 500;
   --font-weight-display: 700;
   --letter-spacing-display: 2px;
@@ -59,6 +61,8 @@
 }
 
 [color-mode='light'] {
+  --focus-box-shadow-color: #3993dd;
+
   --error-bg: #d64045;
   --error-fg: var(--offwhite);
 

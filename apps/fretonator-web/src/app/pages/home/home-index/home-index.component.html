@@ -1,44 +1,48 @@
-<div class="hero">
-  <h1 class="hero__title">
-    Fretonator: the ultimate interactive free guitar theory tool
-  </h1>
-</div>
-
 <div class="modeSelector__container">
   <div class="modeSelector__chipsContainer">
     <h2 class="modeSelector__label" #scrollTarget>Choose a starting note</h2>
 
     <app-chips>
-      <app-chip *ngFor="let thisNote of octave"
-                [note]="thisNote"
-                [noteExtender]="'natural'"
-                [mode]="mode"
-                [isBaseNote]="true"
-                [rounded]="true"
-                selectedColor="default">{{thisNote | titlecase}}</app-chip>
+      <app-chip
+        *ngFor="let thisNote of octave"
+        [note]="thisNote"
+        [noteExtender]="'natural'"
+        [mode]="mode"
+        [isBaseNote]="true"
+        [rounded]="true"
+        selectedColor="default"
+        >{{ thisNote | titlecase }}</app-chip
+      >
     </app-chips>
 
     <app-chips>
-      <app-chip *ngIf="noteHasFlatExtender(note)"
-                [note]="note"
-                [noteExtender]="'flat'"
-                [mode]="mode"
-                [rounded]="true"
-                selectedColor="muted">{{note | titlecase}}♭
+      <app-chip
+        *ngIf="noteHasFlatExtender(note)"
+        [note]="note"
+        [noteExtender]="'flat'"
+        [mode]="mode"
+        [rounded]="true"
+        selectedColor="muted"
+        >{{ note | titlecase }}♭
       </app-chip>
 
-      <app-chip [note]="note"
-                [noteExtender]="'natural'"
-                [mode]="mode"
-                [rounded]="true"
-                selectedColor="muted">{{note | titlecase}}</app-chip>
+      <app-chip
+        [note]="note"
+        [noteExtender]="'natural'"
+        [mode]="mode"
+        [rounded]="true"
+        selectedColor="muted"
+        >{{ note | titlecase }}</app-chip
+      >
 
-      <app-chip *ngIf="noteHasSharpExtender(note)"
-                [note]="note"
-                [noteExtender]="'sharp'"
-                [mode]="mode"
-                [rounded]="true"
-                selectedColor="muted">{{note | titlecase}}#
+      <app-chip
+        *ngIf="noteHasSharpExtender(note)"
+        [note]="note"
+        [noteExtender]="'sharp'"
+        [mode]="mode"
+        [rounded]="true"
+        selectedColor="muted"
+        >{{ note | titlecase }}#
       </app-chip>
     </app-chips>
   </div>
@@ -47,11 +51,14 @@
     <h2 class="modeSelector__label">Pick a mode</h2>
 
     <app-chips>
-      <app-chip *ngFor="let thisMode of modeSelectorObjects"
-                [note]="note"
-                [noteExtender]="noteExtenderString"
-                [mode]="thisMode.name"
-                selectedColor="default">{{thisMode.displayName}}</app-chip>
+      <app-chip
+        *ngFor="let thisMode of modeSelectorObjects"
+        [note]="note"
+        [noteExtender]="noteExtenderString"
+        [mode]="thisMode.name"
+        selectedColor="default"
+        >{{ thisMode.displayName }}</app-chip
+      >
     </app-chips>
   </div>
 
@@ -65,14 +72,17 @@
     </button>
   </div>
 
-  <app-fretonator [modeMap]="note | symbolToNoteObj: noteExtender | generateModeMap: mode"
-                  [fretMap]="note | symbolToNoteObj: noteExtender | generateFretMap: mode"
-                  [intervalMap]="mode | getIntervalPatternFromMode"
-                  [chordMap]="note | symbolToNoteObj: noteExtender | getChordMap: mode"
-                  [mode]="mode"
-                  [note]="note"
-                  [noteExtenderString]="noteExtenderString"
-                  [noteExtender]="noteExtender"
-                  [modeDisplayString]="note | createModeDisplayString: noteExtenderString : mode"></app-fretonator>
-
+  <app-fretonator
+    [modeMap]="note | symbolToNoteObj: noteExtender | generateModeMap: mode"
+    [fretMap]="note | symbolToNoteObj: noteExtender | generateFretMap: mode"
+    [intervalMap]="mode | getIntervalPatternFromMode"
+    [chordMap]="note | symbolToNoteObj: noteExtender | getChordMap: mode"
+    [mode]="mode"
+    [note]="note"
+    [noteExtenderString]="noteExtenderString"
+    [noteExtender]="noteExtender"
+    [modeDisplayString]="
+      note | createModeDisplayString: noteExtenderString:mode
+    "
+  ></app-fretonator>
 </div>

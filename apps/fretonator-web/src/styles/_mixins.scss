@@ -8,10 +8,10 @@
   padding-right: 1.5rem;
 }
 
-@mixin focus_accessible($shadow_color: $focus_box_shadow_color) {
+@mixin focus_accessible($shadow_color: var(--focus-box-shadow-color)) {
   &:focus {
     outline-width: 0;
-    box-shadow: transparentize($shadow_color, 0.1) 0 0 0 0.25rem;
+    box-shadow: $shadow_color 0 0 0 0.25rem;
     transition: box-shadow 0.2s ease 0s;
   }
 }
@@ -45,12 +45,10 @@
 }
 
 @mixin chips_group {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin: -0.5rem;
+  gap: 0.75rem;
 
   @media screen and (min-width: 400px) {
     justify-content: center;
@@ -64,11 +62,11 @@
   border-color: var(--chip-border-color);
   background-color: var(--chip-background-color);
   border-radius: var(--border-radius-chip);
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
   font-weight: var(--font-weight-bold);
   font-family: var(--font-family-main);
-  font-size: 0.875rem;
+  font-size: 1rem;
   text-decoration: none;
   color: var(--chip-foreground-color);
 

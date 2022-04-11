@@ -85,7 +85,7 @@
     }
   }
 
-  @include focus_accessible($focus_box_shadow_color);
+  @include focus_accessible();
 
   @media screen and (min-width: $screen-med) {
     display: none;

@@ -3,3 +3,7 @@
 .chips {
   @include chips_group;
 }
+
+.chips--rounded {
+  margin-top: 0.75rem;
+}
