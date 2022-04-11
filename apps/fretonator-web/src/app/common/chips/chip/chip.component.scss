@@ -1,13 +1,12 @@
-@import '../../../../styles/functions';
 @import '../../../../styles/mixins';
 
 :host {
-  margin: pxToRem($grid-unit / 2);
+  margin: 0.25rem;
   display: flex;
 }
 
 .chip {
-  @include chip_button_base()
+  @include chip_button_base();
 }
 
 .chip--muted {
@@ -17,8 +16,8 @@
 }
 
 .chip--round {
-  height: pxToRem(44);
-  width: pxToRem(44);
+  height: 2.75rem;
+  width: 2.75rem;
   border-radius: 50%;
   display: flex;
   align-items: center;

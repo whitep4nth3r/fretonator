@@ -1,5 +1,3 @@
-@import './functions';
-
 $grid-unit: 8 !default;
 
 $screen-sm: 600px !default;
@@ -16,7 +14,7 @@ $fretonator_max_width: 980px !default;
 $fretonator_max_width-wide: 1400px !default;
 $mode_selector_max_width: 800px !default;
 
-$infoContainer_info_row_height: pxToRem($grid-unit * 8);
+$infoContainer_info_row_height: 4rem;
 
 $hamburger_padding-x: 16px;
 $hamburger_padding-y: 24px;

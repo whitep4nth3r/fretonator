@@ -4,17 +4,16 @@
 
 $top_block_max_width: $screen-med;
 
-
 @mixin content_container {
   @include content_wrapper();
   max-width: $screen-med;
-  margin-top: pxToRem($grid-unit * 4);
+  margin-top: 2rem;
 }
 
 @mixin content_title {
   @include font_large();
-  margin-bottom: pxToRem($grid-unit * 4);
-  margin-top: pxToRem($grid-unit * 4);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
   max-width: $top_block_max_width;
   color: var(--foreground-color-base);
 }
@@ -27,19 +26,19 @@ $top_block_max_width: $screen-med;
 
 @mixin content_intro_copy {
   @include font_bodyCopy();
-  margin-bottom: pxToRem($grid-unit * 4);
+  margin-bottom: 2rem;
   max-width: $top_block_max_width;
   color: var(--foreground-color-base);
 }
 
 @mixin content_copy {
   @include font_bodyCopy();
-  margin-bottom: pxToRem($grid-unit * 2);
+  margin-bottom: 1rem;
   color: var(--foreground-color-base);
 }
 
 @mixin content_ordered_list {
   @include font_bodyCopy();
-  padding: pxToRem($grid-unit * 3);
+  padding: 1.5rem;
   color: var(--foreground-color-base);
 }

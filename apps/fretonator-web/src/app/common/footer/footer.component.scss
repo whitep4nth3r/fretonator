@@ -1,13 +1,12 @@
 @import '../../../styles/vars';
-@import '../../../styles/functions';
 @import '../../../styles/mixins';
 @import '../../../styles/typography';
 
 .footer {
   background-color: var(--footer-background);
   box-sizing: border-box;
-  padding: pxToRem($grid-unit * 6);
-  border-top: pxToRem($grid-unit) solid var(--footer-border-color);
+  padding: 3rem;
+  border-top: 0.5rem solid var(--footer-border-color);
 }
 
 .footer__inner {
@@ -49,7 +48,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  margin-bottom: pxToRem($grid-unit * 2);
+  margin-bottom: 1rem;
 
   @media screen and (min-width: $screen-med) {
     justify-content: flex-start;
@@ -64,10 +63,10 @@
 
 .footer__sectionTitle {
   @include font_medium;
-  font-size: pxToRem(18);
-  line-height: pxToRem(28);
-  margin-top: pxToRem($grid-unit);
-  margin-bottom: pxToRem($grid-unit);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   color: var(--footer-title-color);
   font-weight: var(--font-weight-bold);
   display: flex;
@@ -78,7 +77,7 @@
   list-style: none;
   text-align: left;
   padding: 0;
-  margin-bottom: pxToRem($grid-unit * 4);
+  margin-bottom: 2rem;
 }
 
 .footer__listItem {
@@ -98,19 +97,19 @@
 
 .footer__copyright {
   color: var(--footer-copy-color);
-  font-size: pxToRem(12);
+  font-size: 0.75rem;
   letter-spacing: var(--letter-spacing-display);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   display: block;
-  margin-top: pxToRem($grid-unit * 6);
+  margin-top: 3rem;
   text-align: center;
 }
 
 .footer__bigButton {
   @include hard_button_base();
   display: inline-flex;
-  margin-bottom: pxToRem($grid-unit * 6);
+  margin-bottom: 3rem;
   align-self: flex-start;
 }
 
@@ -121,8 +120,8 @@
   justify-content: center;
   align-items: center;
   background-color: var(--footer-background);
-  margin-top: pxToRem($grid-unit * 4);
-  padding: pxToRem($grid-unit / 2) pxToRem($grid-unit * 2);
+  margin-top: 2rem;
+  padding: 0.25rem 1rem;
   color: var(--footer-small-button-accent-color);
   border-color: var(--footer-small-button-accent-color);
 

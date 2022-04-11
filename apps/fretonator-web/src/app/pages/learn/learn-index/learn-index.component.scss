@@ -5,12 +5,12 @@
 
 .patterns__container {
   @include content_container;
-  margin-bottom: pxToRem($grid-unit * 6);
+  margin-bottom: 3rem;
 }
 
 .patterns__intro {
-  margin-bottom: pxToRem($grid-unit * 6);
-  margin-top: pxToRem($grid-unit * 6);
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .patterns__title {
@@ -19,8 +19,8 @@
 
 .patterns__subtitle {
   @include content_subtitle;
-  margin-bottom: pxToRem($grid-unit * 4);
-  margin-top: pxToRem($grid-unit * 4);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .patterns__smallTitle {
@@ -39,14 +39,14 @@
 
 .chips {
   @include chips_group;
-  margin-bottom: pxToRem($grid-unit * 4);
-  margin-top: pxToRem($grid-unit * 2);
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .chip {
   @include chip_button_base;
   display: flex;
-  margin: pxToRem($grid-unit / 2);
+  margin: 0.25rem;
 }
 
 .chip--active {
@@ -56,13 +56,13 @@
 }
 
 .fretboard__container {
-  margin-bottom: pxToRem($grid-unit * 6);
+  margin-bottom: 3rem;
 }
 
 .card {
   @include card;
-  margin-top: pxToRem($grid-unit * 4);
-  margin-bottom: pxToRem($grid-unit * 4);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .card__title {

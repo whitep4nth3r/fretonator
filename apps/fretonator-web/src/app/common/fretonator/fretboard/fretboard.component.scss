@@ -1,19 +1,18 @@
-@import "../../../../styles/vars";
-@import "../../../../styles/functions";
-@import "../../../../styles/mixins";
-@import "../../../../styles/typography";
+@import '../../../../styles/vars';
+@import '../../../../styles/mixins';
+@import '../../../../styles/typography';
 
 $note-height: 36;
 
 .fretboard__container {
-  margin-top: pxToRem($grid-unit * 1);
+  margin-top: 0.5rem;
   max-width: $fretonator_max_width;
   margin-left: auto;
   margin-right: auto;
   padding-right: 0;
-  padding-left: pxToRem($grid-unit * 5);
-  padding-bottom: pxToRem($grid-unit * 4);
-  padding-top: pxToRem($grid-unit * 7);
+  padding-left: 2.5rem;
+  padding-bottom: 2rem;
+  padding-top: 3.5rem;
   overflow-x: auto;
   transition: max-width 0.09s ease-in-out;
 
@@ -23,32 +22,32 @@ $note-height: 36;
 
   &.fretboard__flip {
     padding-left: 0;
-    padding-right: pxToRem($grid-unit * 5);
+    padding-right: 2.5rem;
     direction: rtl;
   }
 }
 
 .fretboard__help {
   text-align: center;
-  padding-top: pxToRem($grid-unit * 2);
+  padding-top: 1rem;
 
-  &[data-fret="3"],
-  &[data-fret="5"],
-  &[data-fret="7"],
-  &[data-fret="9"],
-  &[data-fret="12"],
-  &[data-fret="15"],
-  &[data-fret="17"],
-  &[data-fret="19"],
-  &[data-fret="21"],
-  &[data-fret="24"] {
+  &[data-fret='3'],
+  &[data-fret='5'],
+  &[data-fret='7'],
+  &[data-fret='9'],
+  &[data-fret='12'],
+  &[data-fret='15'],
+  &[data-fret='17'],
+  &[data-fret='19'],
+  &[data-fret='21'],
+  &[data-fret='24'] {
     &:after {
       content: attr(data-fret);
       font-family: var(--font-family-main);
       font-style: italic;
       font-weight: var(--font-weight-bold);
       color: var(--fretboard-help-text-color);
-      font-size: pxToRem(14);
+      font-size: 0.875rem;
       opacity: 0.5;
     }
   }
@@ -159,8 +158,8 @@ $note-height: 36;
 .fretboard {
   display: grid;
   grid-template-columns: 32px repeat(12, minmax(50px, 1fr));
-  padding-top: pxToRem($grid-unit * 3);
-  padding-bottom: pxToRem($grid-unit * 3);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 
   &.fretboard__24 {
     grid-template-columns: 32px repeat(24, minmax(50px, 1fr));
@@ -174,7 +173,7 @@ $note-height: 36;
   pointer-events: none;
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 50%;
     left: calc(var(--fret-width-base) * -1);
@@ -215,32 +214,32 @@ $note-height: 36;
     }
   }
 
-  &[data-string-number="3"][data-fret="3"],
-  &[data-string-number="3"][data-fret="5"],
-  &[data-string-number="3"][data-fret="7"],
-  &[data-string-number="3"][data-fret="9"],
-  &[data-string-number="3"][data-fret="15"],
-  &[data-string-number="3"][data-fret="17"],
-  &[data-string-number="3"][data-fret="19"],
-  &[data-string-number="3"][data-fret="21"],
-  &[data-string-number="2"][data-fret="12"],
-  &[data-string-number="4"][data-fret="12"] {
+  &[data-string-number='3'][data-fret='3'],
+  &[data-string-number='3'][data-fret='5'],
+  &[data-string-number='3'][data-fret='7'],
+  &[data-string-number='3'][data-fret='9'],
+  &[data-string-number='3'][data-fret='15'],
+  &[data-string-number='3'][data-fret='17'],
+  &[data-string-number='3'][data-fret='19'],
+  &[data-string-number='3'][data-fret='21'],
+  &[data-string-number='2'][data-fret='12'],
+  &[data-string-number='4'][data-fret='12'] {
     background-image: var(--fret-marker-url);
     background-repeat: no-repeat;
     background-position: center calc(var(--string-height-base) - 15px);
     background-size: 30px 30px;
   }
 
-  &[data-string-number="4"][data-fret="3"],
-  &[data-string-number="4"][data-fret="5"],
-  &[data-string-number="4"][data-fret="7"],
-  &[data-string-number="4"][data-fret="9"],
-  &[data-string-number="4"][data-fret="15"],
-  &[data-string-number="4"][data-fret="17"],
-  &[data-string-number="4"][data-fret="19"],
-  &[data-string-number="4"][data-fret="21"],
-  &[data-string-number="3"][data-fret="12"],
-  &[data-string-number="5"][data-fret="12"] {
+  &[data-string-number='4'][data-fret='3'],
+  &[data-string-number='4'][data-fret='5'],
+  &[data-string-number='4'][data-fret='7'],
+  &[data-string-number='4'][data-fret='9'],
+  &[data-string-number='4'][data-fret='15'],
+  &[data-string-number='4'][data-fret='17'],
+  &[data-string-number='4'][data-fret='19'],
+  &[data-string-number='4'][data-fret='21'],
+  &[data-string-number='3'][data-fret='12'],
+  &[data-string-number='5'][data-fret='12'] {
     background-image: var(--fret-marker-url);
     background-repeat: no-repeat;
     background-position: center -15px;
@@ -253,9 +252,9 @@ $note-height: 36;
 
   &:after {
     content: attr(data-display-note);
-    height: pxToRem($note-height);
-    width: pxToRem($note-height);
-    line-height: pxToRem($note-height);
+    height: 2.25rem;
+    width: 2.25rem;
+    line-height: 2.25rem;
     left: 50%;
     right: unset;
     box-sizing: border-box;
@@ -266,7 +265,7 @@ $note-height: 36;
     text-align: center;
     font-weight: var(--font-weight-bold);
     font-family: var(--font-family-main);
-    font-size: pxToRem(12);
+    font-size: 0.75rem;
     transition-duration: 0.1s;
     transition-property: line-height, height, width, opacity;
     transition-timing-function: ease-in-out;
@@ -278,7 +277,7 @@ $note-height: 36;
       background-color: var(--note-background-learn-theme);
     }
 
-    &[data-degree="ghost"] {
+    &[data-degree='ghost'] {
       &:after {
         background-color: var(--note-bg-ghost);
       }
@@ -300,27 +299,27 @@ $note-height: 36;
     font-size: 80px;
   }
 
-  &[data-degree="ghost"] {
+  &[data-degree='ghost'] {
     &:after {
       background-color: var(--note-bg-ghost);
     }
   }
 
-  &[data-degree="tonic"][data-highlight="true"] {
+  &[data-degree='tonic'][data-highlight='true'] {
     &:after {
       background-color: var(--note-bg-tonic);
       color: var(--note-color-tonic);
     }
   }
 
-  &[data-degree="mediant"][data-highlight="true"] {
+  &[data-degree='mediant'][data-highlight='true'] {
     &:after {
       background-color: var(--note-bg-mediant);
       color: var(--note-color-mediant);
     }
   }
 
-  &[data-degree="dominant"][data-highlight="true"] {
+  &[data-degree='dominant'][data-highlight='true'] {
     &:after {
       background-color: var(--note-bg-dominant);
       color: var(--note-color-dominant);
@@ -329,23 +328,23 @@ $note-height: 36;
 }
 
 .fretboard__cell--string {
-  border-right: pxToRem(6) solid var(--nut-color);
+  border-right: 0.375rem solid var(--nut-color);
 
   &:after {
     content: attr(data-string-name);
-    height: pxToRem($note-height);
-    width: pxToRem($note-height);
+    height: 2.25rem;
+    width: 2.25rem;
     left: 0;
     right: unset;
     box-sizing: border-box;
     border-radius: 50%;
     transform: translate(-50%, 50%);
     color: var(--string-color);
-    line-height: pxToRem($note-height);
+    line-height: 2.25rem;
     text-align: center;
     font-weight: var(--font-weight-bold);
     font-family: var(--font-family-main);
-    font-size: pxToRem(16);
+    font-size: 1rem;
   }
 
   &:nth-child(-n + 13):after {
@@ -362,30 +361,30 @@ $note-height: 36;
     &:after {
       content: attr(data-display-note);
       color: var(--note-color);
-      font-size: pxToRem(12);
+      font-size: 0.75rem;
     }
 
-    &[data-degree="ghost"] {
+    &[data-degree='ghost'] {
       &:after {
         background-color: var(--note-bg-ghost);
       }
     }
 
-    &[data-degree="tonic"][data-highlight="true"] {
+    &[data-degree='tonic'][data-highlight='true'] {
       &:after {
         background-color: var(--note-bg-tonic);
         color: var(--note-color-tonic);
       }
     }
 
-    &[data-degree="mediant"][data-highlight="true"] {
+    &[data-degree='mediant'][data-highlight='true'] {
       &:after {
         background-color: var(--note-bg-mediant);
         color: var(--note-color-mediant);
       }
     }
 
-    &[data-degree="dominant"][data-highlight="true"] {
+    &[data-degree='dominant'][data-highlight='true'] {
       &:after {
         background-color: var(--note-bg-dominant);
         color: var(--note-color-dominant);
@@ -397,7 +396,7 @@ $note-height: 36;
 .arrowHint {
   position: relative;
   display: block;
-  margin-top: pxToRem($grid-unit * 4);
+  margin-top: 2rem;
 
   @media screen and (min-width: 1324px) {
     display: none;
@@ -416,7 +415,6 @@ $note-height: 36;
     content: var(--fretboard-arrow-svg);
   }
 
-
   &.fretboard__flip {
     right: unset;
     left: 0;
@@ -426,26 +424,26 @@ $note-height: 36;
 
 .fretonator__playCta {
   @include font_bodyCopy;
-  font-size: pxToRem(12);
+  font-size: 0.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: pxToRem($grid-unit * 2);
+  margin-bottom: 1rem;
   color: var(--fretboard-play-cta-color);
   line-height: 1;
   margin-left: auto;
   margin-right: auto;
 
   @media screen and (min-width: $screen-sm) {
-    font-size: pxToRem(14);
+    font-size: 0.875rem;
   }
 }
 
 .fretonator__playCtaIcon {
   display: flex;
-  height: pxToRem($grid-unit * 2);
-  width: pxToRem($grid-unit * 2);
-  margin-right: pxToRem($grid-unit);
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
 }
 
 .fretboard__leftHanded {
@@ -455,7 +453,7 @@ $note-height: 36;
   }
 
   .fretboard__cell--string {
-    border-left: pxToRem(6) solid var(--nut-color);
+    border-left: 0.375rem solid var(--nut-color);
     border-right: unset;
 
     &:after {
@@ -477,18 +475,18 @@ $note-height: 36;
 .controlPanel {
   @include content_wrapper();
   max-width: $screen-med;
-  margin-top: pxToRem($grid-unit * 2);
-  margin-bottom: pxToRem($grid-unit * 2);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   background-color: var(--background-color-light);
-  padding: pxToRem($grid-unit * 4);
-  border-radius: pxToRem($grid-unit * 4);
-  box-shadow: 0 pxToRem(1) pxToRem(3) rgba(26, 26, 26, 0.12), 0 pxToRem(1) pxToRem(2) rgba(26, 26, 26, 0.24);
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.12), 0 1px 2px rgba(26, 26, 26, 0.24);
 }
 
 .controlPanel__row {
   display: flex;
   flex-direction: column;
-  margin-bottom: pxToRem($grid-unit * 4);
+  margin-bottom: 2rem;
   justify-content: center;
 
   @media screen and (min-width: $screen-med) {
@@ -500,7 +498,7 @@ $note-height: 36;
 .controlPanel__column {
   display: flex;
   flex-direction: column;
-  margin-bottom: pxToRem($grid-unit * 8);
+  margin-bottom: 4rem;
   justify-content: center;
 
   &:last-of-type {
@@ -524,7 +522,7 @@ $note-height: 36;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: pxToRem($grid-unit * 2);
+  margin-bottom: 1rem;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -550,9 +548,9 @@ $note-height: 36;
 
 .fretboard__changeTuning {
   @include chip_button_base;
-  margin-left: pxToRem($grid-unit);
-  margin-right: pxToRem($grid-unit);
-  margin-bottom: pxToRem($grid-unit);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   border-color: var(--fretboard-toggle-button-border-color);
 }
 
@@ -564,7 +562,7 @@ $note-height: 36;
 
 .fretboard__toggleButton {
   @include chip_button_base();
-  padding: pxToRem($grid-unit * 1.5);
+  padding: 0.75rem;
   border-color: var(--fretboard-toggle-button-border-color);
 }
 

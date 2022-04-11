@@ -1,41 +1,40 @@
 @import './vars';
-@import './functions';
 
 @mixin font_large {
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-display);
   text-transform: uppercase;
-  font-size: pxToRem(28);
-  line-height: pxToRem(36);
+  font-size: 1.75rem;
+  line-height: 2.25rem;
 
   @media screen and (min-width: $screen-med) {
-    font-size: pxToRem(36);
-    line-height: pxToRem(44);
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
 }
 
 @mixin font_medium {
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-normal);
-  font-size: pxToRem(24);
-  line-height: pxToRem(40);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   text-transform: uppercase;
 }
 
 @mixin font_bodyCopy {
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-normal);
-  font-size: pxToRem(18);
-  line-height: pxToRem(30);
+  font-size: 1.125rem;
+  line-height: 1.875rem;
 }
 
 @mixin info_container_title {
   font-family: var(--font-family-main);
   letter-spacing: var(--letter-spacing-display);
-  font-size: pxToRem(14);
+  font-size: 0.875rem;
   text-transform: uppercase;
-  margin-bottom: pxToRem($grid-unit * 2);
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   color: var(--foreground-color-base);
@@ -43,10 +42,9 @@
 
 @mixin fretonator_section_title {
   @include font_medium;
-  font-size: pxToRem(16);
+  font-size: 1rem;
   font-weight: var(--font-weight-bold);
-  margin-top: pxToRem($grid-unit * 1);
-  margin-bottom: pxToRem($grid-unit * 1);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   color: var(--foreground-color-base);
 }
-
