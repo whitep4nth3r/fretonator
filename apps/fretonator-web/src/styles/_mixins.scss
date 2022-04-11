@@ -1,12 +1,11 @@
 @import './vars';
-@import './functions';
 
 @mixin content_wrapper {
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
-  padding-left: pxToRem($grid-unit * 3);
-  padding-right: pxToRem($grid-unit * 3);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 @mixin focus_accessible($shadow_color: $focus_box_shadow_color) {
@@ -23,8 +22,8 @@
   font-size: inherit;
   color: var(--text-link-color);
   cursor: pointer;
-  border-bottom: pxToRem(2) solid var(--text-link-color);
-  padding-bottom: pxToRem(1);
+  border-bottom: 0.125rem solid var(--text-link-color);
+  padding-bottom: 1px; // TODO
   transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 
   &:focus,
@@ -36,22 +35,22 @@
 }
 
 @mixin divider($color: var(--peach)) {
-  border-width: pxToRem(2);
+  border-width: 0.125rem;
   border-color: $color;
   border-style: solid;
-  margin-top: pxToRem($grid-unit * 4);
-  margin-bottom: pxToRem($grid-unit * 4);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   margin-right: auto;
   margin-left: auto;
 }
 
 @mixin chips_group {
-  padding-top: pxToRem($grid-unit);
-  padding-bottom: pxToRem($grid-unit);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin: pxToRem($grid-unit * -1);
+  margin: -0.5rem;
 
   @media screen and (min-width: 400px) {
     justify-content: center;
@@ -65,11 +64,11 @@
   border-color: var(--chip-border-color);
   background-color: var(--chip-background-color);
   border-radius: var(--border-radius-chip);
-  padding: pxToRem(4) pxToRem(8);
+  padding: 0.25rem 0.5rem;
   cursor: pointer;
   font-weight: var(--font-weight-bold);
   font-family: var(--font-family-main);
-  font-size: pxToRem(14);
+  font-size: 0.875rem;
   text-decoration: none;
   color: var(--chip-foreground-color);
 
@@ -78,46 +77,45 @@
 
 @mixin chip_tag(
   $bgColor: var(--background-color-base),
-  $fgColor: var(--foreground-color-base)) {
-
+  $fgColor: var(--foreground-color-base)
+) {
   border-width: var(--border-width-button);
   border-style: solid;
   border-color: $fgColor;
   background-color: $bgColor;
   color: $fgColor;
-  padding: pxToRem(4) pxToRem(8);
+  padding: 0.25rem 0.5rem;
   font-weight: var(--font-weight-bold);
   font-family: var(--font-family-main);
-  font-size: pxToRem(14);
+  font-size: 0.875rem;
   text-decoration: none;
   border-radius: var(--border-radius-chip);
 }
 
-@mixin hard_box_shadow(
-  $color: var(--black),
-  $size: pxToRem($grid-unit)) {
+@mixin hard_box_shadow($color: var(--black), $size: 0.5rem) {
   box-shadow: $size $size 0 0 $color;
 }
 
 @mixin hard_button_base(
   $foregroundColor: var(--offwhite),
   $backgroundColor: var(--black),
-  $hoverColor: var(--yellow)) {
+  $hoverColor: var(--yellow)
+) {
   border-radius: var(--border-radius-button);
-  border: pxToRem(2) solid $foregroundColor;
+  border: 0.125rem solid $foregroundColor;
   text-transform: uppercase;
   font-family: var(--font-family-main);
-  font-size: pxToRem(16);
+  font-size: 1rem;
   display: inline-block;
   background-color: $backgroundColor;
-  padding: pxToRem($grid-unit * 2);
+  padding: 1rem;
   color: $foregroundColor;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-display);
-  margin-top: pxToRem($grid-unit * 3);
+  margin-top: 1.5rem;
 
   @include hard_box_shadow($foregroundColor, 8px);
 
@@ -135,11 +133,11 @@
   border-color: var(--black);
   background-color: var(--black);
   border-radius: var(--border-radius-button);
-  padding: pxToRem($grid-unit * 2) pxToRem($grid-unit * 4);
+  padding: 1rem 2rem;
   cursor: pointer;
   font-weight: var(--font-weight-bold);
   font-family: var(--font-family-main);
-  font-size: pxToRem(20);
+  font-size: 1.25rem;
   text-decoration: none;
   color: var(--offwhite);
   text-transform: uppercase;
@@ -157,8 +155,8 @@
 
 @mixin card {
   background-color: var(--card-background-color);
-  padding: pxToRem($grid-unit * 2);
-  border: pxToRem(2) solid var(--card-border-color);
+  padding: 1rem;
+  border: 0.125rem solid var(--card-border-color);
   text-decoration: none;
   color: var(--foreground-color-base);
   @include hard_box_shadow(var(--card-box-shadow-color));

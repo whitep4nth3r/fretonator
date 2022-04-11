@@ -1,6 +1,5 @@
-@import "../../../styles/vars";
-@import "../../../styles/functions";
-@import "../../../styles/mixins";
+@import '../../../styles/vars';
+@import '../../../styles/mixins';
 
 .header {
   background-color: var(--header-background);
@@ -9,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  border-top: pxToRem($grid-unit / 2) solid var(--header-border-color);
+  border-top: 0.25rem solid var(--header-border-color);
 }
 
 .header__topRow {
@@ -28,15 +27,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: pxToRem(60);
+  width: 3.75rem;
   cursor: pointer;
   color: var(--header-logo-color);
 
   @include focus_accessible();
 
   @media screen and (min-width: $screen-med) {
-    height: pxToRem(140);
-    width: pxToRem(140);
+    height: 8.75rem;
+    width: 8.75rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -73,7 +72,7 @@
   text-transform: none;
   background-color: transparent;
   border: 0;
-  margin: pxToRem($grid-unit / 2);
+  margin: 0.25rem;
   overflow: visible;
 
   &:hover {
@@ -103,7 +102,7 @@
 .hamburger__inner {
   display: block;
   top: $hamburger_layer-height / 2;
-  margin-top: $hamburger_layer-height / -2;
+  margin-top: calc($hamburger-layer-height / -2);
   background-color: var(--hamburger_layer-color);
   transition: background-color 0s 0.13s linear;
 
@@ -125,13 +124,13 @@
   &:before {
     top: $hamburger_layer-height + $hamburger_layer-spacing;
     transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
   &:after {
     top: ($hamburger_layer-height * 2) + ($hamburger_layer-spacing * 2);
     transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 }
 
@@ -143,15 +142,25 @@
     &:before {
       top: 0;
       transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-      transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
-      transform: translate3d(0, $hamburger_layer-spacing + $hamburger_layer-height, 0) rotate(45deg);
+        transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(
+          0,
+          $hamburger_layer-spacing + $hamburger_layer-height,
+          0
+        )
+        rotate(45deg);
     }
 
     &:after {
       top: 0;
       transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-      transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
-      transform: translate3d(0, $hamburger_layer-spacing + $hamburger_layer-height, 0) rotate(-45deg);
+        transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(
+          0,
+          $hamburger_layer-spacing + $hamburger_layer-height,
+          0
+        )
+        rotate(-45deg);
     }
   }
 }
@@ -161,7 +170,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  padding: pxToRem($grid-unit) pxToRem($grid-unit) pxToRem($grid-unit * 2) pxToRem($grid-unit);
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
   text-align: center;
   display: block;
 }
@@ -179,7 +188,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: pxToRem($grid-unit * 2) pxToRem($grid-unit);
+  padding: 1rem 0.5rem;
 
   @media screen and (min-width: $screen-med) {
     display: inline-block;
@@ -188,7 +197,7 @@
 
 .header__linksItemLink {
   color: var(--header-link-color);
-  font-size: pxToRem(14);
+  font-size: 0.875rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-display);
   text-decoration: none;
@@ -204,16 +213,16 @@
 }
 
 .header__linksItemLink--active {
-  border-bottom: pxToRem(2) solid var(--peach);
+  border-bottom: 0.125rem solid var(--peach);
 }
 
 .toggle__container {
-  padding-left: pxToRem($grid-unit * 2);
-  padding-right: pxToRem($grid-unit * 2);
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   @media screen and (min-width: $screen-med) {
     position: absolute;
-    top: pxToRem($grid-unit * 2);
+    top: 1rem;
     right: 0;
   }
 }
@@ -223,10 +232,9 @@
   appearance: none;
   background-color: transparent;
   border: 0;
-  height: pxToRem($grid-unit * 5);
-  width: pxToRem($grid-unit * 5);
+  height: 2.5rem;
+  width: 2.5rem;
   color: var(--theme-toggle-color);
 
   @include focus_accessible;
 }
-

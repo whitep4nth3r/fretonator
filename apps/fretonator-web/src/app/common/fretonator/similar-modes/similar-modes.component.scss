@@ -1,11 +1,10 @@
-@import "../../../../styles/vars";
-@import "../../../../styles/functions";
-@import "../../../../styles/mixins";
-@import "../../../../styles/typography";
+@import '../../../../styles/vars';
+@import '../../../../styles/mixins';
+@import '../../../../styles/typography';
 
 .chipsContainer {
-  margin-top: pxToRem($grid-unit * 2);
-  margin-bottom: pxToRem($grid-unit * 4);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -13,10 +12,10 @@
 
 .similarModes {
   background-color: var(--similar-modes-background-color);
-  padding: pxToRem($grid-unit * 4);
-  margin-left: pxToRem($grid-unit * -4);
-  margin-right: pxToRem($grid-unit * -4);
-  margin-top: pxToRem($grid-unit * 4);
+  padding: 2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +31,7 @@
 
 .similarModes__copy {
   @include font_bodyCopy;
-  margin-bottom: pxToRem($grid-unit * 2);
+  margin-bottom: 1rem;
   color: var(--foreground-color-base);
 
   &:last-of-type {

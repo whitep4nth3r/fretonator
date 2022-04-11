@@ -1,18 +1,17 @@
-@import "../../../../styles/vars";
-@import "../../../../styles/functions";
-@import "../../../../styles/mixins";
-@import "../../../../styles/typography";
+@import '../../../../styles/vars';
+@import '../../../../styles/mixins';
+@import '../../../../styles/typography';
 
 .degreesDisplay {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: pxToRem($grid-unit * 2);
+  margin-bottom: 1rem;
 
   @media screen and (min-width: $screen-med) {
     justify-content: flex-start;
-    height: pxToRem(46);
+    height: 2.875rem;
   }
 }
 
@@ -20,14 +19,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: pxToRem(16);
-  height: pxToRem($grid-unit * 4);
-  width: pxToRem($grid-unit * 4);
+  font-size: 1rem;
+  height: 2rem;
+  width: 2rem;
   border-radius: 50%;
   font-weight: var(--font-weight-bold);
   font-family: var(--font-family-main);
-  margin-left: pxToRem($grid-unit);
-  margin-right: pxToRem($grid-unit);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   cursor: pointer;
   background-color: var(--note-background);
   color: var(--note-color);

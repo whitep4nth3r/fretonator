@@ -1,14 +1,13 @@
 @import '../../../../styles/vars';
 @import '../../../../styles/mixins';
-@import '../../../../styles/functions';
 @import '../../../../styles/typography';
 
 .hero {
   background-color: var(--hero-background-color);
   display: block;
   width: 100%;
-  padding-top: pxToRem($grid-unit * 4);
-  padding-bottom: pxToRem($grid-unit * 4);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -18,9 +17,9 @@
   display: block;
   color: var(--hero-title-color);
   letter-spacing: var(--letter-spacing-display);
-  font-size: pxToRem(14);
+  font-size: 0.875rem;
   text-transform: uppercase;
-  margin-bottom: pxToRem($grid-unit * 2);
+  margin-bottom: 1rem;
   text-align: center;
   font-weight: var(--font-weight-bold);
   position: relative;
@@ -29,12 +28,12 @@
 .modeSelector__container {
   @include content_wrapper;
   max-width: none;
-  margin-top: pxToRem($grid-unit * 4);
-  margin-bottom: pxToRem($grid-unit * 4);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .modeSelector__chipsContainer {
-  margin-bottom: pxToRem($grid-unit * 4);
+  margin-bottom: 2rem;
   max-width: $mode_selector_max_width;
   margin-left: auto;
   margin-right: auto;
@@ -48,7 +47,7 @@
 .modeSelector__randomizeContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: pxToRem($grid-unit * 4);
+  margin-bottom: 2rem;
   max-width: $mode_selector_max_width;
   margin-left: auto;
   margin-right: auto;
@@ -58,9 +57,9 @@
   @include fretonator_section_title;
   @include chip_button_base;
   text-align: center;
-  margin-left: pxToRem($grid-unit);
-  margin-right: pxToRem($grid-unit);
-  margin-bottom: pxToRem($grid-unit);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 0 25px;
   border-color: var(--fretboard-toggle-button-border-color);
 }

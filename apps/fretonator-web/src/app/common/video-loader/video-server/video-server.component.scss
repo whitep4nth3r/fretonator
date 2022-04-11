@@ -1,4 +1,3 @@
-@import '../../../../styles/functions';
 @import '../../../../styles/typography';
 
 .videoServer__container {
@@ -12,10 +11,10 @@
 .videoServer__title {
   @include font_large;
   color: var(--offwhite);
-  margin-bottom: pxToRem($grid-unit * 4);
+  margin-bottom: 2rem;
 }
 
 .videoServer__link {
   color: var(--offwhite);
-  font-size: pxToRem(26);
+  font-size: 1.625rem;
 }
