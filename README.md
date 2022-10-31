@@ -1,4 +1,3 @@
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/87d9f619-8f13-47e8-99cc-5167db7294a6/deploy-status)](https://app.netlify.com/sites/fretonator/deploys)
 
 <img src="https://www.fretonator.com/assets/img/og_twitter.png">
@@ -11,7 +10,7 @@ I am gratefully welcoming feedback from musicians, pull requests from software e
 
 Thank you and happy jamming!
 
-___
+---
 
 ## Technical
 
@@ -24,7 +23,7 @@ Angular Prerender
 Netlify
 ```
 
-## The Fretonator is open source! 
+## The Fretonator is open source!
 
 [Apache License, v2.0](https://github.com/ishythefishy/fretonator/blob/master/LICENSE)
 
@@ -50,21 +49,24 @@ npm install -g @angular/cli yarn
 [2] Fork the repository.
 
 [3] Clone your fork to your local development environment.
+
 ```
 git clone [url]
 ```
 
 [4] Navigate to the Fretonator directory.
+
 ```
 cd fretonator
 ```
 
 [5] Install the dependencies.
+
 ```
 yarn
 ```
 
-[6] Run your local development server. 
+[6] Run your local development server.
 
 The `--open` flag opens the application in your browser automatically and is not required.
 
@@ -180,9 +182,10 @@ Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 Converts Jpegs to WebP (do this before optimising jpegs)
 
 Dependencies
+
 - cwebp `brew install webp`
 
-`cd` into the images folder and run 
+`cd` into the images folder and run
 
 ```shell script
 find ./ -type f -name '*.jpg' -exec sh -c 'cwebp -q 75 $1 -o "${1%.jpg}.webp"' _ {} \;
@@ -193,9 +196,10 @@ find ./ -type f -name '*.jpg' -exec sh -c 'cwebp -q 75 $1 -o "${1%.jpg}.webp"' _
 Optimises JPEG to 75% compression
 
 Dependencies
+
 - jpegoptim `brew install jpegoptim`
 
-`cd` into the images folder and run 
+`cd` into the images folder and run
 
 ```shell script
 jpegoptim -m75 *.jpg --overwrite
