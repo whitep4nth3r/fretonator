@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 1,
   "projects": {
     "fretonator-web": "apps/fretonator-web",
     "fretonator-web-e2e": "apps/fretonator-web-e2e"
