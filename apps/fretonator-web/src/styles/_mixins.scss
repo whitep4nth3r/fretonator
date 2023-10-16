@@ -18,19 +18,17 @@
 
 @mixin text_link {
   font-weight: var(--font-weight-bold);
-  text-decoration: none;
+  text-decoration: underline;
   font-size: inherit;
   color: var(--text-link-color);
   cursor: pointer;
-  border-bottom: 0.125rem solid var(--text-link-color);
-  padding-bottom: 1px; // TODO
+  text-underline-offset: 0.25rem;
   transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 
   &:focus,
   &:hover,
   &:active {
     color: var(--text-link-hover-color);
-    border-color: var(--text-link-hover-color);
   }
 }
 

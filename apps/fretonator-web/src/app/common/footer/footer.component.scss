@@ -55,6 +55,10 @@
   }
 }
 
+.footer__copyLink {
+  @include text_link();
+}
+
 .footer__copy--link {
   @include text_link();
   color: var(--footer-link-color);
